@@ -1,0 +1,64 @@
+.checkbox_bkg_white
+{
+    .checkbox__box {
+        background: gray;
+
+        &:before {
+            background: #fff;
+        }
+
+        &:after
+        {
+            background-image: url(../../bkg/_white/tip.svg);
+        }
+    }
+
+    &.checkbox_checked
+    {
+        .checkbox__box
+        {
+            background: gray;
+
+            &:before
+            {
+                background: #fff;
+            }
+        }
+    }
+
+    &.checkbox_focused
+    {
+        .checkbox__box
+        {
+            background: rgba(0, 212, 150, 0.4);
+        }
+    }
+
+    &.checkbox_hovered
+    {
+        .checkbox__box
+        {
+            background: darken(gray, 10%);
+        }
+
+        &.checkbox_checked .checkbox__box
+        {
+            background: darken(gray, 10%);
+        }
+    }
+
+    &.checkbox_disabled
+    {
+        color: #999;
+
+        .checkbox__box
+        {
+            background: rgba(0, 0, 0, 0.08);
+        }
+
+        &.checkbox_checked .checkbox__box:after
+        {
+            opacity: 0.4;
+        }
+    }
+}

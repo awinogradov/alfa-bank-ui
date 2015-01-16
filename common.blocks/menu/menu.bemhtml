@@ -1,0 +1,14 @@
+block('menu')(
+    def()(function() {
+        applyNext({
+            _menuMods : {
+                theme : this.mods.theme,
+                bkg : this.mods.bkg,
+                disabled : this.mods.disabled
+            }
+        });
+
+        delete this._menuTheme;
+        delete this._menuBkg;
+    })
+);

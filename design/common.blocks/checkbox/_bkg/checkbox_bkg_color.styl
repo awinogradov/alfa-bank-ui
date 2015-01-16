@@ -1,0 +1,79 @@
+.checkbox_bkg_color
+{
+    .checkbox__box {
+        transition: all 200ms ease;
+
+        background: transparent;
+
+        border-width: 1px;
+        border-style: solid;
+        border-color: #fff;
+        border-color: rgba(255,255,255,0.5);
+
+        &:before {
+            background: transparent;
+        }
+
+        &:after
+        {
+            background-image: url(../../bkg/_color/tip.svg);
+        }
+    }
+
+    &.checkbox_checked
+    {
+        .checkbox__box
+        {
+            border-color: #fff;
+            border-color: rgba(255,255,255,1);
+
+            &:before
+            {
+                background: transparent;
+            }
+        }
+    }
+
+    &.checkbox_focused
+    {
+        .checkbox__box
+        {
+            border-color: #fff;
+            border-color: rgba(255,255,255,1);
+
+            background: rgba(255,255,255,0.2);
+        }
+    }
+
+    &.checkbox_hovered
+    {
+        .checkbox__box
+        {
+            border-color: #fff;
+            border-color: rgba(255,255,255,1);
+
+            background: rgba(255,255,255,0.2);
+        }
+
+        &.checkbox_checked .checkbox__box
+        {
+            background: rgba(255,255,255,0.2);
+        }
+    }
+
+    &.checkbox_disabled
+    {
+        color: #fff;
+        color: rgba(255,255,255,0.2)
+
+        .checkbox__box
+        {
+            background: rgba(255,255,255,0.1);
+        }
+
+        &.checkbox_checked .checkbox__box:after
+        {
+            opacity: 0.4;
+        }
+    }
+}

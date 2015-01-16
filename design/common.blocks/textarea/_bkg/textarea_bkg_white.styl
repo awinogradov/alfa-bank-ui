@@ -1,0 +1,35 @@
+.textarea_bkg_white
+{
+    background: gray;
+
+    &:before
+    {
+        background: #fff;
+    }
+
+    &::-webkit-input-placeholder
+    {
+        color: #999;
+    }
+
+    &::-moz-placeholder
+    {
+        color: #999;
+    }
+
+    &.textarea_focused
+    {
+        /*background: rgba(178, 142, 0, 0.6);*/
+        /*box-shadow: 0 0 0 1px green, inset 0 0 0 1px darken(green, 5%);*/
+    }
+
+    &.textarea_disabled
+    {
+        background: rgba(0, 0, 0, 0.08);
+
+        .textarea__control
+        {
+            color: rgba(0, 0, 0, 0.4);
+        }
+    }
+}

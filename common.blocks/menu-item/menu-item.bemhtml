@@ -1,0 +1,7 @@
+block('menu-item')(
+    match(this._menuMods).def()(function() {
+        var mods = this.mods;
+        mods.bkg = mods.bkg || this._menuMods.bkg;
+        applyNext();
+    })
+);

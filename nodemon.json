@@ -1,0 +1,14 @@
+{
+    "restartable": "rs",
+    "ignore": [
+    ],
+    "verbose": true,
+    "watch": [
+        "blocks",
+        "design"
+    ],
+    "env": {
+        "NODE_ENV": "development"
+    },
+    "ext": "browser.js node.js deps.js styl"
+}

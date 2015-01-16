@@ -1,0 +1,5 @@
+block('hint')(
+    content()(function() {
+        return { elem : 'inner', tag : 'span', content : applyNext() }
+    })
+);

@@ -1,0 +1,11 @@
+block('label')(
+    tag()('label'),
+    attrs()(function() {
+        var id = this.ctx.for || this._currentId;
+
+        return this.extend(this.attrs, { for : id });
+    }),
+    content()(function() {
+        return { elem : 'inner', tag : 'span', content : applyNext() };
+    })
+);

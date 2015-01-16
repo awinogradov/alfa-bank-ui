@@ -1,0 +1,29 @@
+block('radio-group')(
+    content()(function() {
+        var mods = this.mods,
+            ctx = this.ctx;
+
+        return (ctx.options || []).map(function(option, i) {
+            return [
+                !!i && !mods.type && { tag : 'br' },
+                {
+                    block : 'radio',
+                    mods : {
+                        type : mods.type,
+                        mode : mods.mode,
+                        theme : mods.theme,
+                        bkg : mods.bkg,
+                        size : mods.size,
+                        checked : option.checked,
+                        disabled : option.disabled || mods.disabled
+                    },
+                    name : ctx.name,
+                    val : option.val,
+                    text : option.text,
+                    title : option.title,
+                    icon : option.icon
+                }
+            ];
+        });
+    })
+);

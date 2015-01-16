@@ -1,0 +1,52 @@
+.input_bkg_white
+{
+    background: gray;
+
+    .input__control
+    {
+        color: #000;
+    }
+
+    &:before
+    {
+        background: #fff;
+    }
+
+    &::-webkit-input-placeholder
+    {
+        color: #999;
+    }
+
+    &::-moz-placeholder
+    {
+        opacity: 1;
+    }
+
+    &.input_focused
+    {
+
+    }
+
+    &.input_disabled
+    {
+        background: rgba(0, 0, 0, 0.08);
+
+        .input__box,
+        .input__control
+        {
+            color: rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    &.input_size_s .input__clear,
+    &.input_size_m .input__clear
+    {
+        background-image: url('_white/clear_size_s.svg');
+    }
+
+    &.input_size_l .input__clear,
+    &.input_size_xl .input__clear
+    {
+        background-image: url('_white/clear_size_l.svg');
+    }
+}

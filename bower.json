@@ -1,0 +1,28 @@
+{
+  "name": "nyc-public",
+  "version": "1.0.0",
+  "description": "NYC Public Library of UI components",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git/man/nyc-public.git"
+  },
+  "bugs": "",
+  "ignore": [
+    ".bem/cache",
+    "node_modules",
+    "libs"
+  ],
+  "dependencies": {
+    "bem-core": "2.5.0",
+    "bem-components": "7329bcb78aaee74ab3372d93a026205d7c0ae77e",
+    "bem-grid": "4e90941837f3f7e3153d0d6c5555a342ba3f033e",
+    "bem-content": "9f8c549d201fe5b0e538d3fb696d8b78e3681ee6"
+  },
+  "devDependencies": {
+    "bem-pr": "~0.10.0"
+  },
+  "resolutions": {
+    "bem-core": "2.5.0",
+    "bem-components": "7329bcb78aaee74ab3372d93a026205d7c0ae77e"
+  }
+}

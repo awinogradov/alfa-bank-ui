@@ -1,0 +1,68 @@
+.input_bkg_color
+{
+    background: transparent;
+
+    .input__control
+    {
+        color: #fff;
+    }
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff;
+    border-color: rgba(255,255,255,0.5);
+
+
+    &:before
+    {
+        background: transparent;
+    }
+
+    &::-webkit-input-placeholder
+    {
+        /*color: #fff;*/
+        /*color: rgba(255,255,255,0.4);*/
+    }
+
+    &::-moz-placeholder
+    {
+        opacity: 1;
+    }
+
+    &.input_hovered
+    {
+        border-color: rgba(255,255,255,1);
+    }
+
+    &.input_focused
+    {
+        border-color: rgba(255,255,255,1);
+
+        background-color: rgba(0,0,0,.3);
+    }
+
+    &.input_disabled
+    {
+        border-color: transparent;
+
+        background: rgba(255,255,255, 0.1);
+
+        .input__box,
+        .input__control
+        {
+            color: rgba(255, 255, 255, 0.4);
+        }
+    }
+
+    &.input_size_s .input__clear,
+    &.input_size_m .input__clear
+    {
+        background-image: url('_color/clear_size_s.svg');
+    }
+
+    &.input_size_l .input__clear,
+    &.input_size_xl .input__clear
+    {
+        background-image: url('_color/clear_size_l.svg');
+    }
+}

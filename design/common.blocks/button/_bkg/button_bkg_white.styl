@@ -1,0 +1,104 @@
+.button_bkg_white
+{
+    color: #000;
+
+    font-weight: btns_font_weight;
+
+    background: gray;
+
+    &:before
+    {
+        background: #fff;
+    }
+
+    &.button_disabled
+    {
+        background: rgba(0, 0, 0, 0.08);
+    }
+
+    &.button_hovered
+    {
+        background: red_another;
+        background: red_another_rgba;
+        color:      red_another;
+    }
+
+    &.button_focused-hard
+    {
+        z-index: 1;
+
+        background: rgba(0, 212, 150, 0.4);
+    }
+
+    &.button_pressed:before
+    {
+        background: #f6f5f3;
+    }
+
+    &.button_view_action
+    {
+        background:  green;
+        color:       #fff;
+
+        &:before
+        {
+            background: green;
+        }
+
+        &.button_pressed:before
+        {
+            background: green;
+        }
+
+        &.button_hovered
+        {
+            background: lighten(green, 5%);
+
+            &:before
+            {
+                background: lighten(green, 5%);
+            }
+        }
+    }
+
+    &.button_view_pseudo
+    {
+        background: #fff;
+
+        &:before
+        {
+            border: gray dotted btns_border_size;
+        }
+
+        &.button_hovered:before
+        {
+
+            border-color: red_another_rgba;
+        }
+    }
+}
+
+.control-group
+{
+    {ctx}.button_checked
+    {
+        background:  gray;
+        color:       #fff;
+
+        &:before
+        {
+            background:  green;
+        }
+
+        &.button_pressed
+        {
+            &:before
+            {
+            }
+        }
+
+        &.button_hovered
+        {
+        }
+    }
+}

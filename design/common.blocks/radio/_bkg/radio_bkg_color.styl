@@ -1,0 +1,75 @@
+.radio_bkg_color
+{
+
+    .radio__box
+    {
+        transition: all 200ms ease;
+
+        background: transparent;
+
+        border-width: 1px;
+        border-style: solid;
+        border-color: #fff;
+        border-color: rgba(255,255,255,0.5);
+
+        &:before
+        {
+            background: transparent;
+        }
+    }
+
+    &.radio_focused
+    {
+        .radio__box
+        {
+            background: rgba(255,255,255,0.2);
+        }
+    }
+
+    &.radio_hovered
+    {
+        .radio__box
+        {
+            border-color: #fff;
+            border-color: rgba(255,255,255,1);
+        }
+
+        &.radio_checked .radio__box
+        {
+            background: rgba(255,255,255,0.2);
+        }
+    }
+
+    &.radio_checked
+    {
+        .radio__box
+        {
+            background: transparent;
+
+            &:before
+            {
+                background: transparent;
+            }
+
+            &:after
+            {
+                background: #fff;
+            }
+        }
+    }
+
+    &.radio_disabled
+    {
+        color: #999;
+
+        .radio__box
+        {
+            background: rgba(0, 0, 0, 0.08);
+
+            &:after
+            {
+                background: rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+}

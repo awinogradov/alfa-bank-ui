@@ -1,0 +1,112 @@
+.select_theme_alfa
+{
+    max-width: 100%;
+
+    display: inline-block;
+
+    vertical-align: top;
+
+    .select__button
+    {
+        width: 100%;
+
+        text-align:     left;
+        vertical-align: top;
+
+        .button__text
+        {
+            display: block;
+
+            &:empty:before
+            {
+                content: '\00a0';
+            }
+        }
+
+        &.button_size_s
+        {
+            .button__text
+            {
+                padding-right: 27px;
+                margin-left:   inputs_padding_s;
+            }
+
+            .icon
+            {
+                width: 25px;
+            }
+        }
+
+
+        &.button_size_m
+        {
+            .button__text
+            {
+                padding-right: 28px;
+                margin-left:   inputs_padding_m;
+            }
+
+            .icon
+            {
+                width: 29px;
+            }
+        }
+
+        &.button_size_l
+        {
+            .button__text
+            {
+                padding-right: 32px;
+                margin-left:   inputs_padding_l;
+            }
+
+            .icon
+            {
+                width: 33px;
+            }
+        }
+
+        &.button_size_xl
+        {
+            .button__text
+            {
+                padding-right: 38px;
+                margin-left:   inputs_padding_xl;
+            }
+
+            .icon
+            {
+                width: 39px;
+            }
+        }
+    }
+
+    .select__tick
+    {
+        position: absolute;
+        top:      0;
+        right:    0;
+
+        transition: transform 0.1s ease-out;
+    }
+
+    &.select_opened .select__tick
+    {
+        transform: rotate(-180deg);
+    }
+
+    &.select_width_available
+    {
+        width: 100%;
+    }
+}
+
+
+marginTop = (5px -5px -15px -25px);
+
+for sizeVal, i in (s m l xl) {
+    .popup_visible.select__popup_size_{sizeVal} {
+        margin-top: (marginTop[i])!important;
+        margin-left: 8px!important;
+    }
+}

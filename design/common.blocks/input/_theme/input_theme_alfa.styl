@@ -1,0 +1,266 @@
+ctx = '.input_theme_alfa'
+{ctx} {
+    font-family: font_family;
+
+    position: relative;
+    display:  inline-block;
+
+    vertical-align: top;
+
+    border-radius: inputs_radius;
+
+    transition: all 200ms ease;
+
+    /* Decorative element (inner background) */
+    &:before
+    {
+        position: absolute;
+        top:      inputs_border_size;
+        right:    inputs_border_size;
+        bottom:   inputs_border_size;
+        left:     inputs_border_size;
+
+        content: '';
+
+        border-radius: inputs_radius - inputs_border_size;
+    }
+
+    .input__box
+    {
+        position: relative;
+        display:  block;
+
+        -webkit-touch-callout: none;
+
+        user-select: none;
+    }
+
+    .input__control
+    {
+        font:        inherit;
+        line-height: inherit;
+
+        position: relative;
+        display:  inline-block;
+
+        box-sizing: border-box;
+        padding:    0;
+        width:      100%;
+
+        border:     0;
+        outline:    none;
+        background: none;
+
+        -webkit-appearance:          none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+        /* лишние отступы у текста */
+        &::-webkit-search-decoration
+        {
+            -webkit-appearance: none;
+        }
+
+        /* нативный крестик */
+        &::-webkit-search-cancel-button
+        {
+            display: none;
+        }
+
+        &::-webkit-input-placeholder
+        {
+            text-indent: 0;
+        }
+
+        &::-moz-placeholder
+        {
+            opacity: 1;
+        }
+
+        &::-ms-clear
+        {
+            display: none;
+        }
+    }
+
+    &.input_has-clear .input__control
+    {
+        text-overflow: ellipsis;
+    }
+
+    .input__clear
+    {
+        position: absolute;
+        top:      0;
+        right:    0;
+
+        cursor:     text;
+        transition: opacity 0.1s ease-out;
+
+        opacity:    0;
+        background: 50% 50% no-repeat;
+
+        &_visible
+        {
+            opacity: 0.3;
+
+            &:hover
+            {
+                cursor: pointer;
+
+                opacity: 1;
+            }
+        }
+    }
+
+    &.input_focused
+    {
+        z-index: 1;
+    }
+
+    &.input_disabled
+    {
+        &:before,
+        .input__clear
+        {
+            display: none;
+        }
+
+        .input__box,
+        .input__control
+        {
+            cursor: default;
+        }
+    }
+
+    &.input_size_s
+    {
+        font-size: inputs_font_size_s;
+
+        .input__control
+        {
+            height:       control_size_s;
+            padding-left: inputs_padding_s;
+        }
+
+        &.input_has-clear .input__box
+        {
+            padding-right: 20px;
+        }
+
+        .input__clear
+        {
+            width:  20px;
+            height: @width;
+
+            background-position: 2px 8px;
+        }
+
+    }
+
+    &.input_size_m
+    {
+        font-size: inputs_font_size_m;
+
+        .input__control
+        {
+            height:       control_size_m;
+            padding-left: inputs_padding_m;
+        }
+
+        &.input_has-clear .input__box
+        {
+            padding-right: 34px;
+        }
+
+        .input__clear
+        {
+            width:  34px;
+            height: @width;
+
+            background-position: 10px 13px;
+        }
+    }
+
+    &.input_size_l
+    {
+        font-size: inputs_font_size_l;
+
+        .input__control
+        {
+            height:       control_size_l;
+            padding-left: inputs_padding_l;
+        }
+
+        &.input_has-clear .input__box
+        {
+            padding-right: 38px;
+        }
+
+        .input__clear
+        {
+            width:  38px;
+            height: @width;
+
+            background-position: 10px 15px;
+        }
+    }
+
+    &.input_size_xl
+    {
+        font-size:   inputs_font_size_xl;
+        line-height: @font-size + 4;
+
+        .input__control
+        {
+            height:       control_size_xl;
+            padding-left: inputs_padding_xl;
+        }
+
+        &.input_has-clear .input__box
+        {
+            padding-right: 42px;
+        }
+
+        .input__clear
+        {
+            width:  42px;
+            height: @width;
+
+            background-position: 12px 20px;
+        }
+    }
+
+    &.input_width_available
+    {
+        width: 100%;
+    }
+
+    &.input_type_password .input__control
+    {
+        text-overflow: clip;
+    }
+}
+
+.control-group
+{
+    {ctx} {
+        &:before
+        {
+            right: 0;
+        }
+
+        &.input_focused:before
+        {
+            right: 1px;
+        }
+    }
+
+    > {ctx}:last-child,
+    > :last-child {ctx}
+    {
+        &:before
+        {
+            right: 1px;
+        }
+    }
+}

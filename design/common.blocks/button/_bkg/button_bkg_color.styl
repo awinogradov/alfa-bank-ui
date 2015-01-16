@@ -1,0 +1,148 @@
+.button_bkg_color
+{
+    color: #fff;
+    color: rgba(255,255,255,0.8);
+
+    font-weight: btns_font_weight;
+
+    background: transparent;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff;
+    border-color: rgba(255,255,255,0.5);
+
+    &:before
+    {
+        background: transparent;
+    }
+
+    &.button_disabled
+    {
+        border-color: transparent;
+
+        background: rgba(255,255,255,0.1);
+
+        .button__text
+        {
+            color: #fff;
+            color: rgba(255,255,255,0.5)
+        }
+    }
+
+    &.button_hovered
+    {
+        color: #fff;
+
+        border-color: #fff;
+    }
+
+    &.button_focused-hard
+    {
+        z-index: 1;
+
+        background: rgba(255, 255, 255, 0.4);
+    }
+
+    &.button_pressed:before
+    {
+        background: #fff;
+    }
+
+    &.button_view_action
+    {
+        border-color: transparent;
+
+        font-weight: 200;
+        color:       #fff;
+
+        background: rgba(255,255,255,0.5);
+
+        &:before
+        {
+            background: transparent;
+        }
+
+        &.button_pressed:before
+        {
+            background: #fff;
+        }
+
+        &.button_hovered
+        {
+            background: #fff;
+            background: rgba(255,255,255,0.7);
+        }
+    }
+
+    &.button_view_pseudo
+    {
+        border-style: dashed;
+    }
+}
+
+.control-group
+{
+
+    > :first-child
+    {
+
+        .button_bkg_color
+        {
+            border-right-width: 1px;
+            border-right-style: solid;
+            border-right-color: transparent;
+
+            &.button_checked
+            {
+                border-right-color: rgba(0,0,0,0.2);
+            }
+
+        }
+    }
+
+
+    > :last-child
+    {
+        .button_bkg_color
+        {
+            border-left-width: 1px;
+            border-left-style: solid;
+            border-left-color: transparent;
+
+            &.button_checked
+            {
+                border-left-color: rgba(0,0,0,0.2);
+            }
+        }
+    }
+
+
+    .button_bkg_color.button_hovered {
+        background: rgba(255,255,255,0.2);
+    }
+
+    .button_bkg_color.button_checked
+    {
+        background:   #fff;
+        border-color: transparent;
+
+        color:        #000;
+
+        &:before
+        {
+            background: transparent;
+        }
+
+        &.button_pressed
+        {
+            &:before
+            {
+            }
+        }
+
+        &.button_hovered
+        {
+        }
+    }
+}

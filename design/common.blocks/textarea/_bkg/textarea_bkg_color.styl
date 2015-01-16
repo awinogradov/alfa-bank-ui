@@ -1,0 +1,38 @@
+.textarea_bkg_color
+{
+    background: transparent;
+
+    transition: all 200ms ease;
+
+    .textarea__control
+    {
+        color: #fff;
+    }
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff;
+    border-color: rgba(255,255,255,0.5);
+
+    &::-webkit-input-placeholder
+    {
+        /*color: #999;*/
+    }
+
+    &::-moz-placeholder
+    {
+        /*color: #999;*/
+    }
+
+    &.textarea_hovered
+    {
+        border-color: rgba(255,255,255,1);
+    }
+
+    &.textarea_focused
+    {
+        border-color: rgba(255,255,255,1);
+
+        background-color: rgba(0,0,0,.3);
+    }
+}

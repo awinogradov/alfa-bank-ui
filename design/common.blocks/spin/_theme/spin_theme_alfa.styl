@@ -1,0 +1,81 @@
+.spin_theme_alfa
+{
+    display: inline-block;
+
+    .spin__bounce
+    {
+        display:             inline-block;
+        border-radius:       100%;
+        animation:           bouncedelay 1.4s infinite ease-in-out;
+        animation-fill-mode: both;
+
+        &_pos_1
+        {
+            animation-delay: -0.32s;
+        }
+
+        &_pos_2
+        {
+            animation-delay: -0.16s;
+        }
+    }
+
+    &.spin_size_s
+    {
+        padding-left: 10px;
+
+        .spin__bounce
+        {
+            margin-right: 3px;
+            width:        10px;
+            height:       10px;
+        }
+    }
+
+
+    &.spin_size_m
+    {
+        padding-left: 12px;
+
+        .spin__bounce
+        {
+            margin-right: 4px;
+            width:        15px;
+            height:       15px;
+        }
+    }
+
+    &.spin_size_l
+    {
+        padding-left: 14px;
+
+        .spin__bounce
+        {
+            margin-right: 5px;
+            width:        20px;
+            height:       20px;
+        }
+    }
+
+    &.spin_size_xl
+    {
+        padding-left: 16px;
+
+        .spin__bounce
+        {
+            margin-right: 6px;
+            width:        25px;
+            height:       25px;
+        }
+    }
+}
+
+@keyframes bouncedelay
+{
+    0%, 80%, 100% {
+        transform: scale(0.0);
+    }
+    40% {
+        transform: scale(1.0);
+    }
+}
