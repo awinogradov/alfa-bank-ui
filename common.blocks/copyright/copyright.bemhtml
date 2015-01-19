@@ -5,9 +5,49 @@ block('copyright')(
   mod('theme', 'alfa')(
     content()(function() {
       return [
-        'Генеральная лицензия Банка России №1325 от 5 марта 2012г. ',
-        'ОАО "Альфа-Банк" не имеет аффилированности с компанией "Alfa Insurance", ',
-        'США. Альфа-Банк является частью консорциума "Альфа-Групп".'
+        {
+          elem : 'social-links',
+          content : [
+            {
+              block : 'link',
+              content : [
+                {
+                  block : 'icon',
+                  mods : { social : 'vk' }
+                },
+              ],
+              url : 'https://vk.com/alfabank'
+            },
+            {
+              block : 'link',
+              content : [
+                {
+                  block : 'icon',
+                  mods : { social : 'facebook' }
+                },
+              ],
+              url : 'https://facebook.com/alfabank'
+            },
+            {
+              block : 'link',
+              content : [
+                {
+                  block : 'icon',
+                  mods : { social : 'twitter' }
+                },
+              ],
+              url : 'https://twitter.com/alfabank'
+            }
+          ]
+        },
+        {
+          elem : 'notice',
+          content : [
+            'Генеральная лицензия Банка России №1325 от 5 марта 2012г. ',
+            'ОАО "Альфа-Банк" не имеет аффилированности с компанией "Alfa Insurance", ',
+            'США. Альфа-Банк является частью консорциума "Альфа-Групп".'
+          ]
+        }
       ];
     })
   )
