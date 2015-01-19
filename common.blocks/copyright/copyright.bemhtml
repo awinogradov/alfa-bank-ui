@@ -10,33 +10,39 @@ block('copyright')(
           content : [
             {
               block : 'link',
+              mods : { theme : 'alfa', bkg : 'color' },
               content : [
                 {
                   block : 'icon',
                   mods : { social : 'vk' }
                 },
+                'VK'
               ],
               url : 'https://vk.com/alfabank'
             },
             {
               block : 'link',
+              mods : { theme : 'alfa', bkg : 'color' },
               content : [
                 {
                   block : 'icon',
                   mods : { social : 'facebook' }
                 },
+                'FB'
               ],
               url : 'https://facebook.com/alfabank'
             },
             {
               block : 'link',
+              mods : { theme : 'alfa', bkg : 'color' },
               content : [
                 {
                   block : 'icon',
                   mods : { social : 'twitter' }
                 },
+                'Twitter'
               ],
-              url : 'https://twitter.com/alfabank'
+              url : 'https://twitter.com/alfa_bank'
             }
           ]
         },
