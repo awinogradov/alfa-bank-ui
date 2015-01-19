@@ -5,6 +5,6 @@ block('spin')(
             { elem : 'bounce', mods : { pos : 1 } },
             { elem : 'bounce', mods : { pos : 2 } },
             { elem : 'bounce', mods : { pos : 3 } }
-        ]
+        ];
     })
 );
