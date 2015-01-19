@@ -10,39 +10,34 @@ block('copyright')(
           content : [
             {
               block : 'link',
-              mods : { theme : 'alfa', bkg : 'color' },
+              mods : { theme : 'alfa', bkg : 'color', icon : true, size : 'xl' },
               content : [
-                {
-                  block : 'icon',
-                  mods : { social : 'vk' }
-                },
-                'VK'
+                { block : 'icon', mods : { fa : true, social : 'vk' } }
               ],
               url : 'https://vk.com/alfabank'
             },
             {
               block : 'link',
-              mods : { theme : 'alfa', bkg : 'color' },
+              mods : { theme : 'alfa', bkg : 'color', icon : true, size : 'xl' },
               content : [
-                {
-                  block : 'icon',
-                  mods : { social : 'facebook' }
-                },
-                'FB'
+                { block : 'icon', mods : { fa : true, social : 'facebook' } }
               ],
               url : 'https://facebook.com/alfabank'
             },
             {
               block : 'link',
-              mods : { theme : 'alfa', bkg : 'color' },
+              mods : { theme : 'alfa', bkg : 'color', icon : true, size : 'xl'  },
               content : [
-                {
-                  block : 'icon',
-                  mods : { social : 'twitter' }
-                },
-                'Twitter'
+                { block : 'icon', mods : { fa : true, social : 'twitter' } }
               ],
               url : 'https://twitter.com/alfa_bank'
+            },
+            {
+              block : 'link',
+              mods : { theme : 'alfa', bkg : 'color', pseudo : true },
+              content : [
+                'Мы в соцмедиа'
+              ]
             }
           ]
         },
