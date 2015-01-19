@@ -9,7 +9,6 @@
   ],
   styles : [
     { elem : 'css', url : 'index.min.css' },
-    { elem : 'css', url : 'http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,900&subset=latin,cyrillic' }
   ],
   scripts: [
     { elem : 'js', url : 'index.min.js' }

@@ -1,0 +1,10 @@
+block('page').mod('theme', 'alfa')(function() {
+  var fontCss = {
+    elem : 'css',
+    url : 'http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,900&subset=latin,cyrillic'
+  };
+  var ctx = this.ctx;
+  ctx.styles = ctx.styles || [];
+  ctx.styles.push(fontCss);
+  applyCtx(ctx);
+});
