@@ -1962,7 +1962,15 @@
         {
             elem : 'footer',
             content : [
-
+                {
+                    block : 'copyright',
+                    links : {
+                      vk: 'https://vk.com/alfabank',
+                      facebook: 'https://facebook.com/alfabank',
+                      twitter: 'https://twitter.com/alfabank'
+                    },
+                    mods : { theme : 'alfa', bkg : 'color' }
+                }
             ]
         }
     ]
