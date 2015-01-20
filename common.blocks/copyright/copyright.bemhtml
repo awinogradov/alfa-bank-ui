@@ -5,42 +5,7 @@ block('copyright')(
   mod('theme', 'alfa')(
     content()(function() {
       return [
-        {
-          elem : 'social-links',
-          content : [
-            {
-              block : 'link',
-              mods : { theme : 'alfa', bkg : 'color', icon : true, size : 'xl' },
-              content : [
-                { block : 'icon', mods : { fa : true, social : 'vk' } }
-              ],
-              url : 'https://vk.com/alfabank'
-            },
-            {
-              block : 'link',
-              mods : { theme : 'alfa', bkg : 'color', icon : true, size : 'xl' },
-              content : [
-                { block : 'icon', mods : { fa : true, social : 'facebook' } }
-              ],
-              url : 'https://facebook.com/alfabank'
-            },
-            {
-              block : 'link',
-              mods : { theme : 'alfa', bkg : 'color', icon : true, size : 'xl'  },
-              content : [
-                { block : 'icon', mods : { fa : true, social : 'twitter' } }
-              ],
-              url : 'https://twitter.com/alfa_bank'
-            },
-            {
-              block : 'link',
-              mods : { theme : 'alfa', bkg : 'color', pseudo : true },
-              content : [
-                'Мы в соцмедиа'
-              ]
-            }
-          ]
-        },
+        { block : 'social-links', mods : { theme : 'alfa' } },
         {
           elem : 'notice',
           content : [
