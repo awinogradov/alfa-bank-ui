@@ -9,34 +9,34 @@ mod('theme', 'alfa')(
      */
     content()(function() { return [{
         block : 'link',
-        mods : { theme : 'alfa', bkg : 'color', icon : true, size : 'xl' },
+        mods : { theme : this.mods.theme, bkg : this.mods.bkg, icon : true, size : 'xl' },
         content : [{
             block : 'icon',
-            mods : { image : 'vk', bkg : 'color' },
+            mods : { image : 'vk', bkg : this.mods.bkg },
             mix : { block : 'social-links', elem : 'icon' }
         }],
         url : 'https://vk.com/alfabank'
     }, {
         block : 'link',
-        mods : { theme : 'alfa', bkg : 'color', icon : true, size : 'xl' },
+        mods : { theme : this.mods.theme, bkg : this.mods.bkg, icon : true, size : 'xl' },
         content : [{
             block : 'icon',
-            mods : { image : 'facebook', bkg : 'color' },
+            mods : { image : 'facebook', bkg : this.mods.bkg },
             mix : { block : 'social-links', elem : 'icon' }
         }],
         url : 'https://facebook.com/alfabank'
     }, {
         block : 'link',
-        mods : { theme : 'alfa', bkg : 'color', icon : true, size : 'xl'  },
+        mods : { theme : this.mods.theme, bkg : this.mods.bkg, icon : true, size : 'xl'  },
         content : [{
             block : 'icon',
-            mods : { image : 'twitter', bkg : 'color' },
+            mods : { image : 'twitter', bkg : this.mods.bkg },
             mix : { block : 'social-links', elem : 'icon' }
         }],
         url : 'https://twitter.com/alfa_bank'
     }, {
         block : 'link',
-        mods : { theme : 'alfa', bkg : 'color', pseudo : true },
+        mods : { theme : this.mods.theme, bkg : this.mods.bkg, pseudo : true },
         content : [
             'Мы в соцмедиа'
         ]
