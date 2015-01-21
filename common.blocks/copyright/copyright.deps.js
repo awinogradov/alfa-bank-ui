@@ -1,3 +1,0 @@
-{
-    mustDeps: { block: 'social-links' }
-}

@@ -1971,18 +1971,34 @@
       ]
     },
     {
-      elem : 'footer',
-      content : [
-        {
-          block : 'copyright',
-          links : {
-            vk: 'https://vk.com/alfabank',
-            facebook: 'https://facebook.com/alfabank',
-            twitter: 'https://twitter.com/alfabank'
-          },
-          mods : { theme : 'alfa', bkg : 'color' }
-        }
-      ]
+        elem : 'footer',
+        content : [
+            {
+                block : 'copyright',
+                mods : { theme : 'alfa', bkg : 'color' },
+                content : [
+                    {
+                        block : 'social-links',
+                        mods : { theme : 'alfa', bkg : 'color' },
+                        content : [
+                            { network : 'vk', url : 'https://vk.com/alfabank' },
+                            { network : 'facebook', url : 'https://facebook.com/alfabank' },
+                            { network : 'twitter', url : 'https://twitter.com/alfabank' }
+                        ]
+                    },
+                    {
+                        block : 'link',
+                        mods : { theme : 'alfa', bkg : 'color', pseudo : true },
+                        url : '#',
+                        content : 'Мы в соцмедиа'
+                    },
+                    {
+                        block : 'paragraph',
+                        content : 'Copyright @ ' + new Date().getFullYear() + ' Alfabank'
+                    }
+                ]
+            }
+        ]
     }
   ]
 })

@@ -1,46 +1,22 @@
 block('social-links')(
-
-/*
- * Theme Alfa
- */
-mod('theme', 'alfa')(
-    /*
-     * Content mode
-     */
-    content()(function() { return [{
-        block : 'link',
-        mods : { theme : this.mods.theme, bkg : this.mods.bkg, icon : true, size : 'xl' },
-        content : [{
-            block : 'icon',
-            mods : { image : 'vk', bkg : this.mods.bkg },
-            mix : { block : 'social-links', elem : 'icon' }
-        }],
-        url : 'https://vk.com/alfabank'
-    }, {
-        block : 'link',
-        mods : { theme : this.mods.theme, bkg : this.mods.bkg, icon : true, size : 'xl' },
-        content : [{
-            block : 'icon',
-            mods : { image : 'facebook', bkg : this.mods.bkg },
-            mix : { block : 'social-links', elem : 'icon' }
-        }],
-        url : 'https://facebook.com/alfabank'
-    }, {
-        block : 'link',
-        mods : { theme : this.mods.theme, bkg : this.mods.bkg, icon : true, size : 'xl'  },
-        content : [{
-            block : 'icon',
-            mods : { image : 'twitter', bkg : this.mods.bkg },
-            mix : { block : 'social-links', elem : 'icon' }
-        }],
-        url : 'https://twitter.com/alfa_bank'
-    }, {
-        block : 'link',
-        mods : { theme : this.mods.theme, bkg : this.mods.bkg, pseudo : true },
-        content : [
-            'Мы в соцмедиа'
-        ]
-    }];})
-)
-
+    tag()('span'),
+    content()(function() {
+        var content = [];
+        var ctx = this.ctx;
+        for(var i = 0, len = ctx.content.length; i < len; i++) {
+            content.push({
+                block : 'link',
+                mods : { theme : ctx.mods.theme, bkg : ctx.mods.bkg, icon : true },
+                url : ctx.content[i].url,
+                content : [
+                    {
+                        block : 'icon',
+                        mods : { image : ctx.content[i].network, bkg : ctx.mods.bkg, theme : ctx.mods.theme },
+                        mix : { block : ctx.block, elem : 'icon' }
+                    }
+                ]
+            });
+        }
+        return content;
+    })
 );
