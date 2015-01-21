@@ -1351,9 +1351,12 @@
                       content : [
                         {
                           block : 'dropdown',
-                          mods : { switcher : 'button', theme : 'islands', size : 's' },
-                          switcher : 'dropdown',
-                          popup : { block : 'popup', mods : { theme : 'islands' }, content : 'popup' }
+                          switcher : {
+                              block : 'link',
+                              mods : { pseudo : true, theme : 'alfa', bkg : 'color' },
+                              content : 'dropdown'
+                          },
+                          popup : { block : 'popup', mods : { theme : 'alfa' }, content : 'popup' }
                         }
                       ]
                     },
@@ -1403,9 +1406,13 @@
                       content : [
                         {
                           block : 'dropdown',
-                          mods : { switcher : 'button', theme : 'islands', size : 'm' },
+                          mods : { switcher : 'link', theme : 'alfa', size : 'm' },
                           switcher : 'dropdown',
-                          popup : { block : 'popup', mods : { theme : 'islands' }, content : 'popup' }
+                          popup : {
+                              block : 'popup',
+                              mods : { theme : 'alfa', column : true, bkg : 'color' },
+                              content : 'popup'
+                          }
                         }
                       ]
                     },
