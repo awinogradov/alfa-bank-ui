@@ -12,7 +12,12 @@ block('social-links')(
                 content : [
                     {
                         block : 'icon',
-                        mods : { network : link.network, bkg : ctx.mods.bkg, theme : ctx.mods.theme },
+                        mods : {
+                            network : link.network,
+                            bkg : ctx.mods.bkg,
+                            size : ctx.mods.size,
+                            theme : ctx.mods.theme
+                        },
                         mix : { block : 'link', elem : 'icon' }
                     }
                 ]
