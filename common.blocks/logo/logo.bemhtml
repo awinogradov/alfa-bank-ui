@@ -1,0 +1,9 @@
+block('logo')(
+    content()(function() {
+        return [
+            {
+                elem : 'icon'
+            }
+        ];
+    })
+);

@@ -1,0 +1,10 @@
+block('logo').mod('view', 'full')(
+    content()(function() {
+        return [
+            applyNext(),
+            {
+                elem : 'text'
+            }
+        ];
+    })
+);
