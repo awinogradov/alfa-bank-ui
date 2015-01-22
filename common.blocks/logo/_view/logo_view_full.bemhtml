@@ -1,9 +1,9 @@
-block('logo')(
-    tag()('span'),
+block('logo').mod('view', 'full')(
     content()(function() {
         return [
+            applyNext(),
             {
-                elem : 'icon'
+                elem : 'text'
             }
         ];
     })
