@@ -1,22 +1,26 @@
 block('social-links')(
-    tag()('span'),
     content()(function() {
         var content = [];
         var ctx = this.ctx;
-        for(var i = 0, len = ctx.content.length; i < len; i++) {
+
+        ctx.links.forEach(function(link) {
             content.push({
                 block : 'link',
                 mods : { theme : ctx.mods.theme, bkg : ctx.mods.bkg, icon : true },
-                url : ctx.content[i].url,
+                mix : { block : ctx.block, elem : 'item' },
+                url : link.url,
                 content : [
                     {
                         block : 'icon',
-                        mods : { image : ctx.content[i].network, bkg : ctx.mods.bkg, theme : ctx.mods.theme },
-                        mix : { block : ctx.block, elem : 'icon' }
+                        mods : { network : link.network, bkg : ctx.mods.bkg, theme : ctx.mods.theme },
+                        mix : { block : 'link', elem : 'icon' }
                     }
                 ]
             });
-        }
+        });
+
+        content.push(ctx.content);
+
         return content;
     })
 );
