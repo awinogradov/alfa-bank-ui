@@ -8,7 +8,7 @@
         { elem : 'meta', attrs : { name : 'viewport', content : 'width=device-width, initial-scale=1' } }
     ],
     styles : [
-        { elem : 'css', url : 'index.min.css' },
+        { elem : 'css', url : 'index.min.css' }
     ],
     scripts: [
         { elem : 'js', url : 'index.min.js' }
@@ -1889,6 +1889,64 @@
                             ]
                         },
                         {
+                          block : 'link',
+                          mods : { theme : 'alfa', bkg : 'color', size : 'xl', pseudo : true },
+                          title : 'pseudo mod',
+                          content : 'link'
+                        }
+                      ]
+                    },
+                {
+                    block : 'section',
+                    content : [
+                        {
+                            block : 'heading',
+                            mix : [{ block : 'section', elem : 'title' }],
+                            lvl : 2,
+                            content : 'Пример формы'
+                        },
+                        {
+                            elem: 'examples',
+                            content: []
+                        }
+                    ]
+                },
+                {
+                    block : 'section',
+                    content : [
+                        {
+                            block : 'heading',
+                            mix : [{ block : 'section', elem : 'title' }],
+                            lvl : 2,
+                            content : 'Иконки'
+                        },
+                        {
+                            block : 'row',
+                            mix : [{ block : 'section', elem : 'sizes' }],
+                            content : [
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : 'S'
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : 'M'
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : 'L'
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : 'XL'
+                                }
+                            ]
+                        },
+                        {
                             block: 'row',
                             mix: [{ block: 'section', elem: 'examples' }],
                             content: [
@@ -1899,19 +1957,10 @@
                                         {
                                             block : 'controls',
                                             content : [
-
-                                            ]
-                                        },
-                                        {
-                                            block : 'controls',
-                                            content : [
-
-                                            ]
-                                        },
-                                        {
-                                            block : 'controls',
-                                            content : [
-
+                                                {
+                                                    block : 'icon',
+                                                    mods : { bkg : 'color', theme : 'alfa', size: 's', network : 'facebook' }
+                                                }
                                             ]
                                         }
                                     ]
@@ -1923,19 +1972,10 @@
                                         {
                                             block : 'controls',
                                             content : [
-
-                                            ]
-                                        },
-                                        {
-                                            block : 'controls',
-                                            content : [
-
-                                            ]
-                                        },
-                                        {
-                                            block : 'controls',
-                                            content : [
-
+                                                {
+                                                    block : 'icon',
+                                                    mods : { bkg : 'color', theme : 'alfa', size: 'm', network : 'facebook' }
+                                                }
                                             ]
                                         }
                                     ]
@@ -1947,19 +1987,10 @@
                                         {
                                             block : 'controls',
                                             content : [
-
-                                            ]
-                                        },
-                                        {
-                                            block : 'controls',
-                                            content : [
-
-                                            ]
-                                        },
-                                        {
-                                            block : 'controls',
-                                            content : [
-
+                                                {
+                                                    block : 'icon',
+                                                    mods : { bkg : 'color', theme : 'alfa', size: 'l', network : 'facebook' }
+                                                }
                                             ]
                                         }
                                     ]
@@ -1971,19 +2002,137 @@
                                         {
                                             block : 'controls',
                                             content : [
-
+                                                {
+                                                    block : 'icon',
+                                                    mods : { bkg : 'color', theme : 'alfa', size: 'xl', network : 'facebook' }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    block : 'section',
+                    content : [
+                        {
+                            block : 'heading',
+                            mix : [{ block : 'section', elem : 'title' }],
+                            lvl : 2,
+                            content : 'Что-то еще'
+                        },
+                        {
+                            block : 'row',
+                            mix : [{ block : 'section', elem : 'sizes' }],
+                            content : [
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : 'S'
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : 'M'
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : 'L'
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : 'XL'
+                                }
+                            ]
+                        },
+                        {
+                            block: 'row',
+                            mix: [{ block: 'section', elem: 'examples' }],
+                            content: [
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
                                             ]
                                         },
                                         {
                                             block : 'controls',
                                             content : [
-
                                             ]
                                         },
                                         {
                                             block : 'controls',
                                             content : [
-
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
                                             ]
                                         }
                                     ]
@@ -1998,13 +2147,31 @@
             elem : 'footer',
             content : [
                 {
-                    block : 'copyright',
-                    links : {
-                        vk: 'https://vk.com/alfabank',
-                        facebook: 'https://facebook.com/alfabank',
-                        twitter: 'https://twitter.com/alfabank'
-                    },
-                    mods : { theme : 'alfa', bkg : 'white' }
+                    block: 'copyright',
+                    mods: { theme: 'alfa', bkg: 'color' },
+                    content: [
+                        {
+                            block: 'social-links',
+                            mods: { theme: 'alfa', bkg: 'color', size: 's' },
+                            links: [
+                                { network: 'vk', url: 'https://vk.com/alfabank' },
+                                { network: 'facebook', url: 'https://facebook.com/alfabank' },
+                                { network: 'twitter', url: 'https://twitter.com/alfabank' }
+                            ],
+                            content: [
+                                {
+                                    block: 'link',
+                                    mods: { theme: 'alfa', bkg: 'color', pseudo: true },
+                                    url: '#',
+                                    content: 'Мы в соцмедиа'
+                                }
+                            ]
+                        },
+                        {
+                            block: 'paragraph',
+                            content: 'Copyright @ ' + new Date().getFullYear() + ' Alfabank'
+                        }
+                    ]
                 }
             ]
         }
