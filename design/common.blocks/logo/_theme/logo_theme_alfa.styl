@@ -1,35 +1,68 @@
 .logo_theme_alfa
-{   
-    &.logo_size_s
+{
+    display: inline-block;
+    line-height: 0;
+
+    &.logo_size_s .logo__icon
     {
-        width: 100px;
+        width: 20px;
+        height: 32px;
     }
-    
-    &.logo_size_m
+
+    &.logo_size_s .logo__text
+    {
+        width: 75px;
+        height: 31px;
+        margin-left: 8px;
+    }
+
+    &.logo_size_m .logo__icon
+    {
+        width: 30px;
+        height: 48px;
+    }
+
+    &.logo_size_m .logo__text
+    {
+        width: 112px;
+        height: 47px;
+        margin-left: 12px;
+    }
+
+    &.logo_size_l .logo__icon
+    {
+        width: 40px;
+        height: 64px;
+    }
+
+    &.logo_size_l .logo__text
     {
         width: 150px;
+        height: 63px;
+        margin-left: 16px;
     }
-    
-    &.logo_size_l
+
+    &.logo_size_xl .logo__icon
     {
-        width: 200px;
+        width: 60px;
+        height: 96px;
     }
-    
-    &.logo_size_xl
+
+    &.logo_size_xl .logo__text
     {
-        width: 300px;
+        width: 225px;
+        height: 94px;
+        margin-left: 24px;
     }
 }
 
-.container__logo
+.logo__icon
 {
-    width: 19%;
     display: inline-block;
+
 }
 
-.container__litters
+.logo__text
 {
-    width: 73%;
     display: inline-block;
-    padding-left: 7%;
 }
