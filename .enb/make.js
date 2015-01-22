@@ -1,5 +1,5 @@
 var DEFAULT_LANGS = ['ru', 'en'],
-    BEM_TEMPLATE_ENGINE = process.env.BEM_TEMPLATE_ENGINE || 'BH',
+    BEM_TEMPLATE_ENGINE = process.env.BEM_TEMPLATE_ENGINE || 'BEMHTML',
     fs = require('fs'),
     path = require('path'),
     naming = require('bem-naming'),
@@ -269,11 +269,11 @@ module.exports = function(config) {
                         }
                     },
                     'bemhtml-dev' : {
-                        tech : 'enb-bemxjst/techs/bemhtml-old',
+                        tech : 'enb-bemxjst/techs/bemhtml',
                         options : { devMode : true }
                     },
                     'bemhtml-prod' : {
-                        tech : 'enb-bemxjst/techs/bemhtml-old',
+                        tech : 'enb-bemxjst/techs/bemhtml',
                         options : { devMode : false }
                     }
                 }

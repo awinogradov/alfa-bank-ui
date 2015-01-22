@@ -1,5 +1,4 @@
 block('logo')(
-    tag()('span'),
     content()(function() {
         return [
             {
