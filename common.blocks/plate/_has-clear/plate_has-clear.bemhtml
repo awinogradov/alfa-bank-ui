@@ -1,0 +1,6 @@
+block('plate').mod('has-clear', true)(
+    js()(true),
+    content()(function() {
+        return [this.ctx.content, { elem : 'clear' }];
+    })
+);
