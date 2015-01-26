@@ -1356,7 +1356,7 @@
                               mods : { pseudo : true, theme : 'alfa', bkg : 'color' },
                               content : 'dropdown'
                           },
-                          popup : { block : 'popup', mods : { theme : 'alfa' }, content : 'popup' }
+                          popup : { block : 'popup', mods : { theme : 'alfa', column: true }, content : 'popup' }
                         }
                       ]
                     },

@@ -1,4 +1,4 @@
-.popup_theme_alfa
+.popup_theme_alfa {
     display:    none;
     visibility: hidden;
 
@@ -7,23 +7,29 @@
     border-radius: popup_radius;
     box-sizing: border-box;
 
-    &.popup_js_inited
+    &.popup_js_inited {
         display: block;
+    }
 
-    &.popup_visible
+    &.popup_visible {
         visibility: visible;
         margin: 0;
+    }
 
-    &.popup_column
-        &.popup_visible
+    &.popup_column {
+        background-color: rgba(0, 0, 0, 0.6);
+        &.popup_visible {
             margin: 0 0 0 -35px;
             opacity: 1;
             transition: opacity 0.5s, visibility 0.5s, margin 0.5s step-start;
+        }
+        bottom: 0;
         min-width: 300px;
         position: fixed;
         top: 0 !important;
-        height: 100%;
         padding: 20px 35px;
         border-radius: 0;
         opacity: 0;
         transition: opacity 0.5s, visibility 0.5s, margin 0.5s step-end;
+    }
+}
