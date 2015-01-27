@@ -1351,6 +1351,7 @@
                       content : [
                         {
                           block : 'dropdown',
+                          mods : { switcher : 'link', mode : 'hover' },
                           switcher : {
                               block : 'link',
                               mods : { pseudo : true, theme : 'alfa', bkg : 'color' },
@@ -1406,7 +1407,7 @@
                       content : [
                         {
                           block : 'dropdown',
-                          mods : { switcher : 'link', theme : 'alfa', size : 'm' },
+                          mods : { switcher : 'link', theme : 'alfa', size : 'm', mode : 'hover' },
                           switcher : 'dropdown',
                           popup : {
                               block : 'popup',
