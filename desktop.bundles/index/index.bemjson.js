@@ -1377,7 +1377,7 @@
                                                     block : 'dropdown',
                                                     mods : { switcher : 'link', theme : 'alfa', bkg : 'color', size : 's', mode : 'hover' },
                                                     switcher : 'hover column dropdown',
-                                                    popup : { block : 'popup', mods : { theme : 'alfa', bkg : 'color', column : true }, content : 'popup' }
+                                                    popup : { block : 'popup', mods : { theme : 'alfa', bkg : 'color', view : 'column' }, content : 'popup' }
                                                 }
                                             ]
                                         },
@@ -1429,7 +1429,7 @@
                                                     block : 'dropdown',
                                                     mods : { switcher : 'link', theme : 'alfa', bkg : 'color', size : 's', mode : 'hover' },
                                                     switcher : 'hover column dropdown',
-                                                    popup : { block : 'popup', mods : { theme : 'alfa', bkg : 'color', column : true }, content : 'popup' }
+                                                    popup : { block : 'popup', mods : { theme : 'alfa', bkg : 'color', view : 'column' }, content : 'popup' }
                                                 }
                                             ]
                                         },
