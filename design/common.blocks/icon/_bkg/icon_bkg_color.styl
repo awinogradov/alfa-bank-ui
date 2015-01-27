@@ -1,0 +1,12 @@
+networks = ( 'twitter' 'vk' 'facebook' )
+
+.icon_bkg_color
+{
+    for $name in networks
+    {
+        &.icon_network_{$name}
+        {
+            background-image: url(../assets/_bkg/_color/$name.svg);
+        }
+    }
+}

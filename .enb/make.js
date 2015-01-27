@@ -1,5 +1,5 @@
 var DEFAULT_LANGS = ['ru', 'en'],
-    BEM_TEMPLATE_ENGINE = process.env.BEM_TEMPLATE_ENGINE || 'BH',
+    BEM_TEMPLATE_ENGINE = process.env.BEM_TEMPLATE_ENGINE || 'BEMHTML',
     fs = require('fs'),
     path = require('path'),
     naming = require('bem-naming'),
@@ -175,7 +175,7 @@ module.exports = function(config) {
         config.mode('development', function() {
             config.nodes(nodes, function(nodeConfig) {
                 nodeConfig.addTechs([
-                    [copyFile, { source : '?.css', target : '?.min.css' }],
+                    [borschik, { source : '?.css', target : '?.min.css', freeze : true }],
                     [borschik, { source : '?.js', target :  '?.borschik.js', minify : false, freeze : false }],
                     [copyFile, { source : '?.borschik.js', target :  '?.min.js' }]
                 ]);
@@ -269,11 +269,11 @@ module.exports = function(config) {
                         }
                     },
                     'bemhtml-dev' : {
-                        tech : 'enb-bemxjst/techs/bemhtml-old',
+                        tech : 'enb-bemxjst/techs/bemhtml',
                         options : { devMode : true }
                     },
                     'bemhtml-prod' : {
-                        tech : 'enb-bemxjst/techs/bemhtml-old',
+                        tech : 'enb-bemxjst/techs/bemhtml',
                         options : { devMode : false }
                     }
                 }

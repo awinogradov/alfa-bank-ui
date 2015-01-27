@@ -4,7 +4,8 @@
   "name": "nyc-public",
   "description": "NYC Public Library of UI components",
   "dependencies": {
-    "bem-environ": "1.4.0"
+    "bem-environ": "1.4.0",
+    "enb-bem-examples": "^0.5.9"
   },
   "devDependencies": {
     "bem": "~0.9.0",
