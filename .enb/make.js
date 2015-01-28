@@ -26,12 +26,12 @@ var DEFAULT_LANGS = ['ru', 'en'],
     borschik = require('enb-borschik/techs/borschik'),
     PLATFORMS = {
         'desktop' : ['common', 'desktop'],
-        'touch-phone' : ['common'],
-        'touch-pad' : ['common']
+        'touch-phone' : ['common', 'touch'],
+        'touch-pad' : ['common', 'touch']
     },
     SETS = {
         'desktop' : ['common', 'desktop'],
-        'touch' : ['common']
+        'touch' : ['common', 'touch']
     };
 
 module.exports = function(config) {

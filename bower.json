@@ -15,8 +15,8 @@
   "dependencies": {
     "bem-core": "2.5.0",
     "bem-components": "7329bcb78aaee74ab3372d93a026205d7c0ae77e",
-    "bem-grid": "4e90941837f3f7e3153d0d6c5555a342ba3f033e",
-    "bem-content": "9f8c549d201fe5b0e538d3fb696d8b78e3681ee6"
+    "bem-grid": "65b7b781b951c544f4d379bc7dd125f8e40d595f",
+    "bem-content": "9181707084d6114c5144db2501cb799d93960572"
   },
   "devDependencies": {
     "bem-pr": "~0.10.0"

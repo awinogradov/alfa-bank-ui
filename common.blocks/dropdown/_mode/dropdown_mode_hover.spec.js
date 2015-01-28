@@ -1,6 +1,8 @@
-modules.define('spec', ['i-bem__dom', 'dropdown', 'jquery', 'BEMHTML'], function(provide, BEMDOM, Dropdown, $, BEMHTML) {
+modules.define('spec',
+    ['i-bem__dom', 'dropdown', 'jquery', 'BEMHTML'],
+    function(provide, BEMDOM, Dropdown, $, BEMHTML) {
 
-    describe('dropdown with { mode : \'hover\' }', function() {
+    describe('dropdown_mode_hover', function() {
         var bemjson = {
             block : 'dropdown',
             mods : { switcher : 'link', mode : 'hover' },

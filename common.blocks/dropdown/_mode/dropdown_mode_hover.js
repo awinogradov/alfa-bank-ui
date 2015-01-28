@@ -5,13 +5,14 @@ modules.define('dropdown', [], function(provide, Dropdown) {
                 'inited' : function() {
                     this.__base.apply(this, arguments);
 
-                    var _this = this;
-                    var block = this.getSwitcher();
-                    block && block.bindTo('mouseenter', function() {
+                    var _this = this,
+                        switcher = _this.getSwitcher(),
+                        popup = _this.getPopup();
+
+                    switcher && switcher.bindTo('mouseenter', function() {
                         _this.setMod('opened', true);
                     });
 
-                    var popup = _this.getPopup();
                     popup && popup.bindTo('mouseleave', function() {
                         _this.setMod('opened', false);
                     });
