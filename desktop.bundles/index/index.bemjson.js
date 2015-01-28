@@ -1375,9 +1375,9 @@
                                             content : [
                                                 {
                                                     block : 'dropdown',
-                                                    mods : { switcher : 'button', theme : 'islands', size : 's' },
-                                                    switcher : 'dropdown',
-                                                    popup : { block : 'popup', mods : { theme : 'islands' }, content : 'popup' }
+                                                    mods : { switcher : 'link', theme : 'alfa', bkg : 'color', size : 's', mode : 'hover' },
+                                                    switcher : 'hover column dropdown',
+                                                    popup : { block : 'popup', mods : { theme : 'alfa', bkg : 'color', view : 'column' }, content : 'popup' }
                                                 }
                                             ]
                                         },
@@ -1427,9 +1427,9 @@
                                             content : [
                                                 {
                                                     block : 'dropdown',
-                                                    mods : { switcher : 'button', theme : 'islands', size : 'm' },
-                                                    switcher : 'dropdown',
-                                                    popup : { block : 'popup', mods : { theme : 'islands' }, content : 'popup' }
+                                                    mods : { switcher : 'link', theme : 'alfa', bkg : 'color', size : 's', mode : 'hover' },
+                                                    switcher : 'hover column dropdown',
+                                                    popup : { block : 'popup', mods : { theme : 'alfa', bkg : 'color', view : 'column' }, content : 'popup' }
                                                 }
                                             ]
                                         },

@@ -1,87 +1,37 @@
-.popup_theme_alfa
-{
+.popup_theme_alfa {
     display:    none;
     visibility: hidden;
 
     margin: -9999px 0 0 -9999px;
 
-    animation-duration:        0.1s;
-    animation-timing-function: ease-out;
-    animation-fill-mode:       forwards;
-
     border-radius: popup_radius;
+    box-sizing: border-box;
 
-    &.popup_js_inited
-    {
+    &.popup_js_inited {
         display: block;
     }
 
-    &.popup_visible
-    {
+    &.popup_visible {
         visibility: visible;
-
         margin: 0;
     }
 
-    /* Divided into two parts for better optimization */
-    for rule in ((bottom (left center right)) (top (left center right)) (right (top center bottom)) (left (top center bottom))) {
-        for secondary in rule[1] {
-            &.popup_direction_{rule[0]}-{secondary} {
-                animation-name: popup_theme_alfa_ + rule[0];
-            }
-        }
-        for secondary in rule[1] {
-            &.popup_direction_{rule[0]}-{secondary}.popup_visible {
-                animation-name: popup_theme_alfa_ + rule[0] + _visible;
-            }
-        }
-    }
-}
+    &.popup_view_column {
+        background-color: rgba(0, 0, 0, 0.6);
 
-for rule in ((bottom Y 10) (top Y -10) (right X 10) (left X -10)) {
-    @keyframes popup_theme_islands_{rule[0]}
-    {
-        0%
-        {
-            visibility: visible;
-
-            margin: 0;
-
-            transform: translate + rule[1] + '(0)';
-
+        &.popup_visible {
+            margin: 0 0 0 -35px;
             opacity: 1;
+//            transition: opacity 0.5s, visibility 0.5s, margin 0.5s step-start;
         }
 
-        99%
-        {
-            margin: 0;
-
-            transform: translate + rule[1] + unquote('(' + rule[2] + 'px)');
-        }
-
-        100%
-        {
-            visibility: hidden;
-
-            margin: -9999px 0 0 -9999px;
-
-            opacity: 0;
-        }
-    }
-
-    @keyframes popup_theme_islands_{rule[0]}_visible {
-        0%
-        {
-            opacity: 0;
-
-            transform: translate + rule[1] + unquote('(' + rule[2] + 'px)');
-        }
-
-        100%
-        {
-            opacity: 1;
-
-            transform: translate + rule[1] + '(0)';
-        }
+        bottom: 0;
+        min-width: 300px;
+        position: fixed;
+        top: 0 !important;
+        padding: 20px 35px;
+        border-radius: 0;
+        opacity: 0;
+//        transition: opacity 0.5s, visibility 0.5s, margin 0.5s step-end;
     }
 }
