@@ -770,6 +770,16 @@
                                                     placeholder : 'текст'
                                                 }
                                             ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'input',
+                                                    mods : { theme : 'alfa', bkg : 'color', size: 's', 'type' : 'inplace' },
+                                                    val : 'Простой inplace'
+                                                }
+                                            ]
                                         }
                                     ]
                                 },
@@ -832,6 +842,16 @@
                                                     block : 'textarea',
                                                     mods : { theme : 'alfa', bkg : 'color', size: 'm' },
                                                     placeholder : 'текст'
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'input',
+                                                    mods : { theme : 'alfa', bkg : 'color', size: 'm', 'type' : 'inplace' },
+                                                    val : 'Простой inplace'
                                                 }
                                             ]
                                         }
@@ -898,6 +918,16 @@
                                                     placeholder : 'текст'
                                                 }
                                             ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'input',
+                                                    mods : { theme : 'alfa', bkg : 'color', size: 'l', 'type' : 'inplace' },
+                                                    val : 'Простой inplace'
+                                                }
+                                            ]
                                         }
                                     ]
                                 },
@@ -960,6 +990,16 @@
                                                     block : 'textarea',
                                                     mods : { theme : 'alfa', bkg : 'color', size: 'xl' },
                                                     placeholder : 'текст'
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'input',
+                                                    mods : { theme : 'alfa', bkg : 'color', size: 'xl', 'type' : 'inplace' },
+                                                    val : 'Простой inplace'
                                                 }
                                             ]
                                         }

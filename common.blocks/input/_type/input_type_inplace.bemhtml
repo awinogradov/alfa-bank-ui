@@ -1,0 +1,19 @@
+block('input').mod('type', 'inplace')(
+    js()(true),
+    content()(function() {
+        return [
+            {
+                elem : 'box',
+                content : [
+                    {
+                        block : 'link',
+                        mods : { theme : 'alfa', bkg : 'color', pseudo : true },
+                        mix : { block : 'input', elem : 'trigger' },
+                        content : this.ctx.val
+                    },
+                    { elem : 'control'}
+                ]
+            }
+        ];
+    })
+);
