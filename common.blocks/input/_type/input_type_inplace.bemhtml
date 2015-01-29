@@ -1,19 +1,23 @@
 block('input').mod('type', 'inplace')(
-    js()(true),
-    content()(function() {
-        return [
-            {
-                elem : 'box',
-                content : [
-                    {
-                        block : 'link',
-                        mods : { theme : 'alfa', bkg : 'color', pseudo : true },
-                        mix : { block : 'input', elem : 'trigger' },
-                        content : this.ctx.val
+    def()(function() {
+        applyNext({ _inplace : this.ctx });
+    }),
+
+    elem('box')(
+        content()(function() {
+            return [
+                {
+                    block : 'link',
+                    mix : { block : this.block, elem : 'trigger' },
+                    mods : {
+                        theme : this._inplace.mods.theme,
+                        bkg : this._inplace.mods.bkg,
+                        pseudo : true
                     },
-                    { elem : 'control'}
-                ]
-            }
-        ];
-    })
+                    content : this._inplace.val
+                },
+                applyNext()
+            ]
+        })
+    )
 );

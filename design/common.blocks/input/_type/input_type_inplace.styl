@@ -1,25 +1,16 @@
 .input_type_inplace
 {
     border-color: transparent;
-    cursor: pointer;
-    max-width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
 
-    &.input_focused
-    {
-        cursor: text;
-    }
-
-    &.input_focused .link
+    &.input_focused .input__trigger
     {
         display: none;
     }
 
     .input__box
     {
-        display: table-cell;
-        vertical-align middle;
+        display:        table-cell;
+        vertical-align: middle;
     }
 
     &.input_focused .input__box
@@ -27,25 +18,25 @@
         padding-right: 0;
     }
 
-
     &.input_focused .input__control
     {
-        display: block;
+        display: inherit;
     }
 
     .input__control
     {
         display: none;
-        padding-left: 0 !important;
 
+        padding-left: 0 !important;
     }
 
     &.input_size_s
     {
         .input__box
         {
-            height:       control_size_s;
-            padding-left: inputs_padding_s;
+            height:        control_size_s;
+
+            padding-left:  inputs_padding_s;
             padding-right: inputs_padding_s;
         }
     }
@@ -54,8 +45,9 @@
     {
         .input__box
         {
-            height:       control_size_m;
-            padding-left: inputs_padding_m;
+            height:        control_size_m;
+
+            padding-left:  inputs_padding_m;
             padding-right: inputs_padding_m;
         }
     }
@@ -64,8 +56,9 @@
     {
         .input__box
         {
-            height:       control_size_l;
-            padding-left: inputs_padding_l;
+            height:        control_size_l;
+
+            padding-left:  inputs_padding_l;
             padding-right: inputs_padding_l;
         }
     }
@@ -74,8 +67,9 @@
     {
         .input__box
         {
-            height:       control_size_xl;
-            padding-left: inputs_padding_xl;
+            height:        control_size_xl;
+
+            padding-left:  inputs_padding_xl;
             padding-right: inputs_padding_xl;
         }
     }
