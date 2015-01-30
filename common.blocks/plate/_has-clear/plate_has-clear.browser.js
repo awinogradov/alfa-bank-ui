@@ -3,7 +3,6 @@
  */
 
 modules.define('plate', function(provide, Plate) {
-
     Plate.decl({ modName : 'has-clear', modVal : true },
 
         /** @lends plate_has-clear.prototype */
