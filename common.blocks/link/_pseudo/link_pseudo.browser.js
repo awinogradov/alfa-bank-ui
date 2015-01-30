@@ -19,7 +19,6 @@ Link.decl({ modName : 'pseudo', modVal : true },{
             }
         }
     },
-
     /**
      * Returns val
      * @returns {String}
@@ -27,13 +26,18 @@ Link.decl({ modName : 'pseudo', modVal : true },{
     getVal : function() {
         return this._val;
     },
-
     /**
      * Sets val
      * @param {String} val
      */
     setVal : function(val) {
         this._val = val;
+        this.domElem.text(this._val);
+    },
+    /**
+     * Update text on link
+     */
+    updateContent : function() {
         this.domElem.text(this._val);
     }
 });

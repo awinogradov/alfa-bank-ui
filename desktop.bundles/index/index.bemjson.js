@@ -776,7 +776,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 's', 'type' : 'inplace' },
+                                                    mods : { theme : 'alfa', bkg : 'color', size: 's', 'type' : 'link' },
                                                     val : 'Простой inplace'
                                                 }
                                             ]
@@ -850,7 +850,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 'm', 'type' : 'inplace' },
+                                                    mods : { theme : 'alfa', bkg : 'color', size: 'm', 'type' : 'link' },
                                                     val : 'Простой inplace'
                                                 }
                                             ]
@@ -924,7 +924,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 'l', 'type' : 'inplace' },
+                                                    mods : { theme : 'alfa', bkg : 'color', size: 'l', 'type' : 'link' },
                                                     val : 'Простой inplace'
                                                 }
                                             ]
@@ -998,7 +998,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 'xl', 'type' : 'inplace' },
+                                                    mods : { theme : 'alfa', bkg : 'color', size: 'xl', 'type' : 'link' },
                                                     val : 'Простой inplace'
                                                 }
                                             ]

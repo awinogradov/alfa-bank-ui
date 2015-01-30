@@ -1,26 +1,11 @@
-.input_type_inplace
+.input_type_link
 {
     border-color: transparent;
-
-    &.input_focused .input__trigger
-    {
-        display: none;
-    }
 
     .input__box
     {
         display:        table-cell;
         vertical-align: middle;
-    }
-
-    &.input_focused .input__box
-    {
-        padding-right: 0;
-    }
-
-    &.input_focused .input__control
-    {
-        display: inherit;
     }
 
     .input__control
@@ -71,6 +56,24 @@
 
             padding-left:  inputs_padding_xl;
             padding-right: inputs_padding_xl;
+        }
+    }
+
+    &.input_focused {
+
+        .input__trigger
+        {
+            display: none;
+        }
+
+        .input__box
+        {
+            padding-right: 0;
+        }
+
+        .input__control
+        {
+            display: inherit;
         }
     }
 }

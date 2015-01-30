@@ -1,6 +1,6 @@
-block('input').mod('type', 'inplace')(
+block('input').mod('type', 'link')(
     def()(function() {
-        applyNext({ _inplace : this.ctx });
+        applyNext({ _input : this.ctx });
     }),
 
     elem('box')(
@@ -10,11 +10,11 @@ block('input').mod('type', 'inplace')(
                     block : 'link',
                     mix : { block : this.block, elem : 'trigger' },
                     mods : {
-                        theme : this._inplace.mods.theme,
-                        bkg : this._inplace.mods.bkg,
+                        theme : this._input.mods.theme,
+                        bkg : this._input.mods.bkg,
                         pseudo : true
                     },
-                    content : this._inplace.val
+                    content : this._input.val
                 },
                 applyNext()
             ]
