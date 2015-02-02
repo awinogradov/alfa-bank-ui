@@ -1571,7 +1571,7 @@
                                                     }
                                                 }
                                             ]
-                                        },
+                                        }
                                     ]
                                 }
                             ]
@@ -2005,6 +2005,291 @@
                                                 {
                                                     block : 'icon',
                                                     mods : { bkg : 'color', theme : 'alfa', size: 'xl', network : 'facebook' }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    block : 'section',
+                    content : [
+                        {
+                            block : 'heading',
+                            mix : [{ block : 'section', elem : 'title' }],
+                            lvl : 2,
+                            content : 'Меню'
+                        },
+                        {
+                            block : 'row',
+                            content : [
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 2 },
+                                    content : 'S'
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 5 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'menu',
+                                                    mods : { bkg : 'white', theme : 'alfa', size : 's', horizontal : true },
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 1,
+                                                            content : 'Море'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 2,
+                                                            content : 'Горы'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'link'},
+                                                            val : 3,
+                                                            content : 'Небо'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'dropdown'},
+                                                            val : 4,
+                                                            content : 'Солнце'
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 5 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'menu',
+                                                    mods : { bkg : 'color', theme : 'alfa', size : 's', horizontal : true },
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 1,
+                                                            content : 'Море'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 2,
+                                                            content : 'Горы'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'link'},
+                                                            val : 3,
+                                                            content : 'Небо'
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            block : 'row',
+                            content : [
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 2 },
+                                    content : 'M'
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 5 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'menu',
+                                                    mods : { bkg : 'white', theme : 'alfa', size : 'm', horizontal : true },
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 1,
+                                                            content : 'Море'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 2,
+                                                            content : 'Горы'
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 5 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'menu',
+                                                    mods : { bkg : 'color', theme : 'alfa', size : 'm', horizontal : true },
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 1,
+                                                            content : 'Море'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 2,
+                                                            content : 'Горы'
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            block : 'row',
+                            content : [
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 2 },
+                                    content : 'L'
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 5 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'menu',
+                                                    mods : { bkg : 'white', theme : 'alfa', size : 'l', horizontal : true },
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 1,
+                                                            content : 'Море'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 2,
+                                                            content : 'Горы'
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 5 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'menu',
+                                                    mods : { bkg : 'color', theme : 'alfa', size : 'l', horizontal : true },
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 1,
+                                                            content : 'Море'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 2,
+                                                            content : 'Горы'
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            block : 'row',
+                            content : [
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 2 },
+                                    content : 'XL'
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 5 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'menu',
+                                                    mods : { bkg : 'white', theme : 'alfa', size : 'xl', horizontal : true },
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 1,
+                                                            content : 'Море'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 2,
+                                                            content : 'Горы'
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 5 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'menu',
+                                                    mods : { bkg : 'color', theme : 'alfa', size : 'xl', horizontal : true },
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 1,
+                                                            content : 'Море'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 2,
+                                                            content : 'Горы'
+                                                        }
+                                                    ]
                                                 }
                                             ]
                                         }
