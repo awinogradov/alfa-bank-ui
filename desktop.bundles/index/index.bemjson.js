@@ -1426,28 +1426,28 @@
                                             content : [
                                                 {
                                                     block : 'dropdown',
-                                                    mods : { switcher : 'button', theme : 'islands', size : 's' },
+                                                    mods : { switcher : 'button', theme : 'alfa', size : 's' },
                                                     switcher : 'dropdown',
                                                     popup : {
                                                         block : 'popup',
-                                                        mods : { theme : 'islands' },
+                                                        mods : { theme : 'alfa', bkg : 'color' },
                                                         content : {
                                                             block : 'menu',
-                                                            mods : { theme : 'islands', size : 's' },
+                                                            mods : { theme : 'alfa', size : 's' },
                                                             content : [
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'islands', size : 's' },
+                                                                    mods : { theme : 'alfa', size : 's' },
                                                                     content : 'Раз'
                                                                 },
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'islands', size : 's' },
+                                                                    mods : { theme : 'alfa', size : 's' },
                                                                     content : 'Два'
                                                                 },
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'islands', size : 's' },
+                                                                    mods : { theme : 'alfa', size : 's' },
                                                                     content : 'Три'
                                                                 }
                                                             ]
@@ -1478,28 +1478,28 @@
                                             content : [
                                                 {
                                                     block : 'dropdown',
-                                                    mods : { switcher : 'button', theme : 'islands', size : 'm' },
+                                                    mods : { switcher : 'button', theme : 'alfa', size : 'm' },
                                                     switcher : 'dropdown',
                                                     popup : {
                                                         block : 'popup',
-                                                        mods : { theme : 'islands' },
+                                                        mods : { theme : 'alfa' },
                                                         content : {
                                                             block : 'menu',
-                                                            mods : { theme : 'islands', size : 'm' },
+                                                            mods : { theme : 'alfa', size : 'm' },
                                                             content : [
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'islands', size : 'm' },
+                                                                    mods : { theme : 'alfa', size : 'm' },
                                                                     content : 'Раз'
                                                                 },
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'islands', size : 'm' },
+                                                                    mods : { theme : 'alfa', size : 'm' },
                                                                     content : 'Два'
                                                                 },
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'islands', size : 'm' },
+                                                                    mods : { theme : 'alfa', size : 'm' },
                                                                     content : 'Три'
                                                                 }
                                                             ]
@@ -1519,9 +1519,9 @@
                                             content : [
                                                 {
                                                     block : 'dropdown',
-                                                    mods : { switcher : 'button', theme : 'islands', size : 'l' },
+                                                    mods : { switcher : 'button', theme : 'alfa', size : 'l' },
                                                     switcher : 'dropdown',
-                                                    popup : { block : 'popup', mods : { theme : 'islands' }, content : 'popup' }
+                                                    popup : { block : 'popup', mods : { theme : 'alfa' }, content : 'popup' }
                                                 }
                                             ]
                                         },
@@ -1530,28 +1530,28 @@
                                             content : [
                                                 {
                                                     block : 'dropdown',
-                                                    mods : { switcher : 'button', theme : 'islands', size : 'l' },
+                                                    mods : { switcher : 'button', theme : 'alfa', size : 'l' },
                                                     switcher : 'dropdown',
                                                     popup : {
                                                         block : 'popup',
-                                                        mods : { theme : 'islands' },
+                                                        mods : { theme : 'alfa' },
                                                         content : {
                                                             block : 'menu',
-                                                            mods : { theme : 'islands', size : 'l' },
+                                                            mods : { theme : 'alfa', size : 'l' },
                                                             content : [
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'islands', size : 'l' },
+                                                                    mods : { theme : 'alfa', size : 'l' },
                                                                     content : 'Раз'
                                                                 },
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'islands', size : 'l' },
+                                                                    mods : { theme : 'alfa', size : 'l' },
                                                                     content : 'Два'
                                                                 },
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'islands', size : 'l' },
+                                                                    mods : { theme : 'alfa', size : 'l' },
                                                                     content : 'Три'
                                                                 }
                                                             ]
@@ -1571,9 +1571,9 @@
                                             content : [
                                                 {
                                                     block : 'dropdown',
-                                                    mods : { switcher : 'button', theme : 'islands', size : 'xl' },
+                                                    mods : { switcher : 'button', theme : 'alfa', size : 'xl' },
                                                     switcher : 'dropdown',
-                                                    popup : { block : 'popup', mods : { theme : 'islands' }, content : 'popup' }
+                                                    popup : { block : 'popup', mods : { theme : 'alfa' }, content : 'popup' }
                                                 }
                                             ]
                                         },
@@ -1582,28 +1582,28 @@
                                             content : [
                                                 {
                                                     block : 'dropdown',
-                                                    mods : { switcher : 'button', theme : 'islands', size : 'xl' },
+                                                    mods : { switcher : 'button', theme : 'alfa', size : 'xl' },
                                                     switcher : 'dropdown',
                                                     popup : {
                                                         block : 'popup',
-                                                        mods : { theme : 'islands' },
+                                                        mods : { theme : 'alfa' },
                                                         content : {
                                                             block : 'menu',
-                                                            mods : { theme : 'islands', size : 'xl' },
+                                                            mods : { theme : 'alfa', size : 'xl' },
                                                             content : [
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'islands', size : 'xl' },
+                                                                    mods : { theme : 'alfa', size : 'xl' },
                                                                     content : 'Раз'
                                                                 },
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'islands', size : 'xl' },
+                                                                    mods : { theme : 'alfa', size : 'xl' },
                                                                     content : 'Два'
                                                                 },
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'islands', size : 'xl' },
+                                                                    mods : { theme : 'alfa', size : 'xl' },
                                                                     content : 'Три'
                                                                 }
                                                             ]
@@ -1611,7 +1611,7 @@
                                                     }
                                                 }
                                             ]
-                                        },
+                                        }
                                     ]
                                 }
                             ]
@@ -2045,6 +2045,549 @@
                                                 {
                                                     block : 'icon',
                                                     mods : { bkg : 'color', theme : 'alfa', size: 'xl', network : 'facebook' }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    block : 'section',
+                    content : [
+                        {
+                            block : 'heading',
+                            mix : [{ block : 'section', elem : 'title' }],
+                            lvl : 2,
+                            content : 'Меню'
+                        },
+                        {
+                            block : 'row',
+                            content : [
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 2 },
+                                    content : 'S'
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 5 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'menu',
+                                                    mods : { bkg : 'white', theme : 'alfa', size : 's', horizontal : true },
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 1,
+                                                            content : 'Море'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 2,
+                                                            content : 'Горы'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'link'},
+                                                            val : 3,
+                                                            url : '#',
+                                                            content : 'Небо'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'dropdown'},
+                                                            val : 4,
+                                                            content: 'Солнце',
+                                                            popup : [
+                                                                {
+                                                                    block: 'menu',
+                                                                    mods: {theme: 'alfa', size: 's'},
+                                                                    content: [
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            mods: {theme: 'alfa', size: 's'},
+                                                                            content: 'Раз'
+                                                                        },
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            mods: {theme: 'alfa', size: 's'},
+                                                                            content: 'Два'
+                                                                        },
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            mods: {theme: 'alfa', size: 's'},
+                                                                            content: 'Три'
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 5 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'menu',
+                                                    mods : { bkg : 'color', theme : 'alfa', size : 's', horizontal : true },
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 1,
+                                                            content : 'Море'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 2,
+                                                            content : 'Горы'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'link'},
+                                                            val : 3,
+                                                            url : '#',
+                                                            content : 'Небо'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'dropdown'},
+                                                            val : 4,
+                                                            content: 'Солнце',
+                                                            popup : [
+                                                                {
+                                                                    block: 'menu',
+                                                                    mods: {theme: 'alfa', size: 's'},
+                                                                    content: [
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            mods: {theme: 'alfa', size: 's'},
+                                                                            content: 'Раз'
+                                                                        },
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            mods: {theme: 'alfa', size: 's'},
+                                                                            content: 'Два'
+                                                                        },
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            mods: {theme: 'alfa', size: 's'},
+                                                                            content: 'Три'
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            block : 'row',
+                            content : [
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 2 },
+                                    content : 'M'
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 5 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'menu',
+                                                    mods : { bkg : 'white', theme : 'alfa', size : 'm', horizontal : true },
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 1,
+                                                            content : 'Море'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 2,
+                                                            content : 'Горы'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'link'},
+                                                            val : 3,
+                                                            url : '#',
+                                                            content : 'Небо'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'dropdown'},
+                                                            val : 4,
+                                                            content: 'Солнце',
+                                                            popup : [
+                                                                {
+                                                                    block: 'menu',
+                                                                    mods: {theme: 'alfa', size: 's'},
+                                                                    content: [
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            mods: {theme: 'alfa', size: 's'},
+                                                                            content: 'Раз'
+                                                                        },
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            mods: {theme: 'alfa', size: 's'},
+                                                                            content: 'Два'
+                                                                        },
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            mods: {theme: 'alfa', size: 's'},
+                                                                            content: 'Три'
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 5 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'menu',
+                                                    mods : { bkg : 'color', theme : 'alfa', size : 'm', horizontal : true },
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 1,
+                                                            content : 'Море'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 2,
+                                                            content : 'Горы'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'link'},
+                                                            val : 3,
+                                                            url : '#',
+                                                            content : 'Небо'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'dropdown'},
+                                                            val : 4,
+                                                            content: 'Солнце',
+                                                            popup : [
+                                                                {
+                                                                    block: 'menu',
+                                                                    mods: {theme: 'alfa', size: 's'},
+                                                                    content: [
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            mods: {theme: 'alfa', size: 's'},
+                                                                            content: 'Раз'
+                                                                        },
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            mods: {theme: 'alfa', size: 's'},
+                                                                            content: 'Два'
+                                                                        },
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            mods: {theme: 'alfa', size: 's'},
+                                                                            content: 'Три'
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            block : 'row',
+                            content : [
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 2 },
+                                    content : 'L'
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 5 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'menu',
+                                                    mods : { bkg : 'white', theme : 'alfa', size : 'l', horizontal : true },
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 1,
+                                                            content : 'Море'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 2,
+                                                            content : 'Горы'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'link'},
+                                                            val : 3,
+                                                            url : '#',
+                                                            content : 'Небо'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'dropdown'},
+                                                            val : 4,
+                                                            content: 'Солнце',
+                                                            popup : [
+                                                                {
+                                                                    block: 'menu',
+                                                                    mods: {theme: 'alfa', size: 's'},
+                                                                    content: [
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            mods: {theme: 'alfa', size: 's'},
+                                                                            content: 'Раз'
+                                                                        },
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            mods: {theme: 'alfa', size: 's'},
+                                                                            content: 'Два'
+                                                                        },
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            mods: {theme: 'alfa', size: 's'},
+                                                                            content: 'Три'
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 5 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'menu',
+                                                    mods : { bkg : 'color', theme : 'alfa', size : 'l', horizontal : true },
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 1,
+                                                            content : 'Море'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 2,
+                                                            content : 'Горы'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'link'},
+                                                            val : 3,
+                                                            url : '#',
+                                                            content : 'Небо'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'dropdown'},
+                                                            val : 4,
+                                                            content: 'Солнце',
+                                                            popup : [
+                                                                {
+                                                                    block: 'menu',
+                                                                    content: [
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            content: 'Раз'
+                                                                        },
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            content: 'Два'
+                                                                        },
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            content: 'Три'
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            block : 'row',
+                            content : [
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 2 },
+                                    content : 'XL'
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 5 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'menu',
+                                                    mods : { bkg : 'white', theme : 'alfa', size : 'xl', horizontal : true },
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 1,
+                                                            content : 'Море'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 2,
+                                                            content : 'Горы'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'link'},
+                                                            val : 3,
+                                                            url : '#',
+                                                            content : 'Небо'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'dropdown'},
+                                                            val : 4,
+                                                            content: 'Солнце',
+                                                            popup : [
+                                                                {
+                                                                    block: 'menu',
+                                                                    content: [
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            content: 'Раз'
+                                                                        },
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            content: 'Два'
+                                                                        },
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            content: 'Три'
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 5 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'menu',
+                                                    mods : { bkg : 'color', theme : 'alfa', size : 'xl', horizontal : true },
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 1,
+                                                            content : 'Море'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            val : 2,
+                                                            content : 'Горы'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'link'},
+                                                            val : 3,
+                                                            url : '#',
+                                                            content : 'Небо'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods: {type: 'dropdown'},
+                                                            val : 4,
+                                                            content: 'Солнце',
+                                                            popup : [
+                                                                {
+                                                                    block: 'menu',
+                                                                    content: [
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            content: 'Раз'
+                                                                        },
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            content: 'Два'
+                                                                        },
+                                                                        {
+                                                                            block: 'menu-item',
+                                                                            content: 'Три'
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
                                                 }
                                             ]
                                         }

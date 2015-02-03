@@ -29,7 +29,8 @@ block('select').elem('menu')(
                 theme : mods.theme,
                 bkg : mods.bkg,
                 disabled : mods.disabled,
-                mode : mods.mode
+                mode : mods.mode,
+                view : 'dropdown'
             },
             attrs : { tabindex : undefined },
             content : this._select.options.map(function(optionOrGroup) {

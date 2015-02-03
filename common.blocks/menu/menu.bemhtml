@@ -1,14 +1,13 @@
 block('menu')(
     def()(function() {
         applyNext({
-            _menuMods : {
-                theme : this.mods.theme,
+            _alfaMods : {
                 bkg : this.mods.bkg,
-                disabled : this.mods.disabled
+                horizontal : this.mods.horizontal,
+                theme : this.mods.theme,
+                size : this.mods.size
             }
         });
 
-        delete this._menuTheme;
-        delete this._menuBkg;
     })
 );

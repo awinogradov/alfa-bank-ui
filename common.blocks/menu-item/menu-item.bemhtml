@@ -1,7 +1,15 @@
 block('menu-item')(
-    match(this._menuMods).def()(function() {
+    match(this._alfaMods).def()(function() {
         var mods = this.mods;
-        mods.bkg = mods.bkg || this._menuMods.bkg;
-        applyNext();
+        mods.bkg = mods.bkg || this._alfaMods.bkg;
+        mods.horizontal = mods.horizontal || this._alfaMods.horizontal;
+        mods.theme = mods.theme || this._alfaMods.theme;
+        mods.size = mods.size || this._alfaMods.size;
+        applyNext({
+            _alfaMods : {
+                theme : this.mods.theme,
+                size : this.mods.size
+            }
+        });
     })
 );
