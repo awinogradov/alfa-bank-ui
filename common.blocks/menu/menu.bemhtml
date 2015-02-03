@@ -3,7 +3,9 @@ block('menu')(
         applyNext({
             _alfaMods : {
                 bkg : this.mods.bkg,
-                horizontal : this.mods.horizontal
+                horizontal : this.mods.horizontal,
+                theme : this.mods.theme,
+                size : this.mods.size
             }
         });
 

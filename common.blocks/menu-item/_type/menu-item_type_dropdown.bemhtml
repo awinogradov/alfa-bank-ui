@@ -1,0 +1,25 @@
+block('menu-item').mod('type', 'dropdown').match(this._alfaMods)(
+    content()(function() {
+        return [{
+            block : 'dropdown',
+            mods : {
+                theme : this.mods.theme || this._alfaMods.theme,
+                bkg : this.mods.bkg || this._alfaMods.bkg,
+                size : this.mods.size || this._alfaMods.size,
+                switcher : 'link',
+                mode : 'hover',
+                target : 'anchor'
+            },
+            switcher : this.ctx.content,
+            popup : {
+                block : 'popup',
+                mods : {
+                    theme : this.mods.theme || this._alfaMods.theme,
+                    bkg : this.mods.bkg || this._alfaMods.bkg,
+                    view : 'column'
+                },
+                content : this.ctx.popup
+            }
+        }];
+    })
+);

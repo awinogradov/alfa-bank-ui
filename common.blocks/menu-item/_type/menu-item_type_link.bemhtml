@@ -1,0 +1,14 @@
+block('menu-item').mod('type', 'link').match(this._alfaMods)(
+    content()(function() {
+        return [{
+            block : 'link',
+            mods : {
+                theme : this.mods.theme || this._alfaMods.theme,
+                bkg : this.mods.bkg || this._alfaMods.bkg,
+                size : this.mods.size || this._alfaMods.size
+            },
+            url : this.ctx.url,
+            content : applyNext()
+        }];
+    })
+);
