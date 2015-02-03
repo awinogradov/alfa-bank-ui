@@ -34,4 +34,37 @@
         opacity: 0;
 //        transition: opacity 0.5s, visibility 0.5s, margin 0.5s step-end;
     }
+
+    &.message__control {
+        color: white;
+        background-color: rgb(252, 92, 94);
+    }
+
+    &.popup_visible.popup_direction_right-center.message__control {
+        padding: 10px 15px 10px 0px;
+        margin: 0 0 0 12px;
+    }
+
+    &.popup_visible.popup_direction_left-center.message__control {
+        padding: 10px 0px 10px 15px;
+        margin: 0 0 0 -12px;
+    }
+
+    &.popup_visible.message__control.popup_direction_right-center::before {
+        display: inline-block;
+        content: url('../../assets/_theme/_alfa/ducky.png');
+        margin-left: -7px;
+        margin-right: 15px;
+        width: 7px;
+        height: 15px;
+    }
+
+    &.popup_visible.message__control.popup_direction_left-center::after {
+        display: inline-block;
+        content: url('../../assets/_theme/_alfa/ducky_left.png');
+        margin-right: -7px;
+        margin-left: 15px;
+        width: 7px;
+        height: 15px;
+    }
 }
