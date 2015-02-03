@@ -299,7 +299,8 @@ function getSourceLevels(platform) {
             { path : path.join('libs', 'bem-core', name + '.blocks'), check : false },
             { path : path.join('libs', 'bem-components', name + '.blocks'), check : false },
             { path : path.join('libs', 'bem-grid', name + '.blocks'), check : false },
-            { path : path.join('libs', 'bem-content', name + '.blocks'), check : false }
+            { path : path.join('libs', 'bem-content', name + '.blocks'), check : false },
+            { path : path.join('libs', 'bem-forms', name + '.blocks'), check : true }
         );
     });
 

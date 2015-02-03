@@ -16,7 +16,8 @@
     "bem-core": "2.5.0",
     "bem-components": "7329bcb78aaee74ab3372d93a026205d7c0ae77e",
     "bem-grid": "65b7b781b951c544f4d379bc7dd125f8e40d595f",
-    "bem-content": "9181707084d6114c5144db2501cb799d93960572"
+    "bem-content": "9181707084d6114c5144db2501cb799d93960572",
+    "bem-forms": "http://git/scm/man/bem-forms.git#dev"
   },
   "devDependencies": {
     "bem-pr": "~0.10.0"
