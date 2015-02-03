@@ -1,4 +1,4 @@
-    modules.define('spec',
+modules.define('spec',
     ['i-bem__dom', 'dropdown', 'jquery', 'BEMHTML'],
     function(provide, BEMDOM, Dropdown, $, BEMHTML) {
 

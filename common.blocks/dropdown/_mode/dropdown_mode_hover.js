@@ -8,7 +8,6 @@ modules.define('dropdown', [], function(provide, Dropdown) {
                     var _this = this,
                         switcher = _this.getSwitcher(),
                         popup = _this.getPopup();
-                        //popup.setAnchor();
 
                     switcher && switcher.bindTo('mouseenter', function() {
                         _this.setMod('opened', true);
