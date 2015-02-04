@@ -1,14 +1,15 @@
 block('message').mod('type', 'popup')(
-    js()(true),
     content()(function() {
         var ctx = this.ctx;
 
         return [
             {
                 block : 'popup',
-                directions : ['left-center', 'right-center'],
-                mods : { target : 'anchor', theme : ctx.mods.theme, size : ctx.mods.size, bkg : ctx.mods.bkg },
-                mix : { block : 'message', elem : 'control' }
+                directions : ['left-top', 'right-top'],
+                mainOffset : 8,
+                mods : { target : 'anchor', theme : ctx.mods.theme, size : ctx.mods.size },
+                mix : { block : 'message', elem : 'control' },
+                content : ctx.content
             }
         ];
     })

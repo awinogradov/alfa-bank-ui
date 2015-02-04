@@ -65,7 +65,7 @@
                         {
                             block : 'label',
                             mods : { theme : 'alfa', bkg : 'color', size : 'm' },
-                            content : 'Label'
+                            content : 'Loooooong looooong looong looooong Label'
                         },
                         {
                             block : 'input',
