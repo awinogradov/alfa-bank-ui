@@ -19,6 +19,7 @@
             content : [
                 {
                     block : 'heading',
+                    mods : { theme : 'alfa', bkg : 'color' },
                     mix : [{ block : 'align', mods : { hor : 'center' }    }],
                     content : 'Компоненты интерфейса'
                 }
