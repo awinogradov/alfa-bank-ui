@@ -8,7 +8,11 @@ block('message').mod('type', 'popup')(
                 directions : ['left-top', 'right-top'],
                 mainOffset : 8,
                 mods : { target : 'anchor', theme : ctx.mods.theme, size : ctx.mods.size },
-                mix : { block : 'message', elem : 'control' },
+                mix : {
+                    block : 'message',
+                    elem : 'control',
+                    mods : { error : ctx.mods.error }
+                },
                 content : ctx.content
             }
         ];
