@@ -13,17 +13,17 @@
     "libs"
   ],
   "dependencies": {
-    "bem-core": "2.5.0",
+    "bem-core": "2.5.1",
     "bem-components": "7329bcb78aaee74ab3372d93a026205d7c0ae77e",
     "bem-grid": "65b7b781b951c544f4d379bc7dd125f8e40d595f",
-    "bem-content": "9181707084d6114c5144db2501cb799d93960572",
+    "bem-content": "24a5ac955ac408a691f5d15991538244ffec8263"
     "bem-forms": "http://git/scm/man/bem-forms.git#dev"
   },
   "devDependencies": {
     "bem-pr": "~0.10.0"
   },
   "resolutions": {
-    "bem-core": "2.5.0",
+    "bem-core": "2.5.1",
     "bem-components": "7329bcb78aaee74ab3372d93a026205d7c0ae77e"
   }
 }
