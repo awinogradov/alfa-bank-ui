@@ -1,23 +1,24 @@
-&.popup_visible.message__control {
+&.popup_visible.message {
     & {
-        padding: 12px 15px;
+        padding: 15px 15px 0px 15px;
         color: white;
         background-color: #000;
         background-color: rgba(0, 0, 0, 0.6);
         max-width: 220px;
+        min-height: 44px;
     }
 
-    &.message__control_error {
+    &.message_error {
         background-color: #fc5c5e;
         box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
     }
 
     &.popup_direction_right-top {
-        margin: -4px 0 0 5px;
+        margin: -4px 0 0 10px;
     }
 
     &.popup_direction_left-top {
-        margin: -4px 0 0 -5px;
+        margin: -4px 0 0 -10px;
     }
 
     &.popup_direction_right-top::before,
@@ -45,11 +46,11 @@
         border-bottom: 7px solid transparent;
     }
 
-    &.message__control_error.popup_direction_right-top::before {
+    &.message_error.popup_direction_right-top::before {
         border-right-color: #fc5c5e;
     }
 
-    &.message__control_error.popup_direction_left-top::after {
+    &.message_error.popup_direction_left-top::after {
         border-left-color: #fc5c5e;
     }
 }
