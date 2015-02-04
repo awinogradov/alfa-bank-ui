@@ -1,0 +1,55 @@
+&.popup_visible.message__control {
+    & {
+        padding: 12px 15px;
+        color: white;
+        background-color: #000;
+        background-color: rgba(0, 0, 0, 0.6);
+        max-width: 220px;
+    }
+
+    &.message__control_error {
+        background-color: #fc5c5e;
+        box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    &.popup_direction_right-top {
+        margin: -4px 0 0 5px;
+    }
+
+    &.popup_direction_left-top {
+        margin: -4px 0 0 -5px;
+    }
+
+    &.popup_direction_right-top::before,
+    &.popup_direction_left-top::after {
+        display: inline-block;
+        content: '';
+        width: 0;
+        height: 0;
+        vertical-align: middle;
+    }
+
+    &.popup_direction_right-top::before {
+        margin: -2px 15px 0px -22px;
+        border-top: 7px solid transparent;
+        border-right: 7px solid #000;
+        border-right-color: rgba(0, 0, 0, 0.6);
+        border-bottom: 7px solid transparent;
+    }
+
+    &.popup_direction_left-top::after {
+        margin: -2px -22px 0px 15px;
+        border-top: 7px solid transparent;
+        border-left: 7px solid #000;
+        border-left-color: rgba(0, 0, 0, 0.6);
+        border-bottom: 7px solid transparent;
+    }
+
+    &.message__control_error.popup_direction_right-top::before {
+        border-right-color: #fc5c5e;
+    }
+
+    &.message__control_error.popup_direction_left-top::after {
+        border-left-color: #fc5c5e;
+    }
+}

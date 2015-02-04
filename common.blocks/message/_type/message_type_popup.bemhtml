@@ -5,13 +5,12 @@ block('message').mod('type', 'popup')(
         return [
             {
                 block : 'popup',
-                directions : ['left-top', 'right-top'],
+                directions : ['right-top'],
                 mainOffset : 8,
                 mods : { target : 'anchor', theme : ctx.mods.theme, size : ctx.mods.size },
                 mix : {
                     block : 'message',
-                    elem : 'control',
-                    mods : { error : ctx.mods.error }
+                    elem : 'control'
                 },
                 content : ctx.content
             }
