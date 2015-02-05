@@ -13,6 +13,12 @@
     border-color: rgba(255,255,255,0.5);
 
 
+    &.input_invalid
+    {
+        border-color: #fc5c5e;
+        border-color: rgba(252, 92, 94, 0.6);
+    }
+
     &:before
     {
         background: transparent;
@@ -39,6 +45,12 @@
         border-color: rgba(255,255,255,1);
 
         background-color: rgba(0,0,0,.3);
+    }
+
+    &.input_focused.input_invalid,
+    &.input_hovered.input_invalid
+    {
+        border-color: rgba(252, 92, 94, 1);
     }
 
     &.input_disabled

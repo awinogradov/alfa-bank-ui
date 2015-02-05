@@ -49,4 +49,17 @@
     {
         background-image: url('../../assets/_bkg/_white/clear_size_l.svg');
     }
+
+    &.input_invalid
+    {
+        background: #fc5c5e;
+        background: rgba(252, 92, 94, 0.6);
+    }
+
+    &.input_focused.input_invalid,
+    &.input_hovered.input_invalid
+    {
+        background: rgba(252, 92, 94, 1);
+    }
+
 }
