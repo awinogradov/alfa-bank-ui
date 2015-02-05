@@ -5,6 +5,8 @@ paddingHor = (10 13 15 20);
 
 .menu_theme_alfa
 {
+    overflow: visible;
+
     font-weight: font_weight;
     font-family: font_family;
 
@@ -20,7 +22,6 @@ paddingHor = (10 13 15 20);
         &.menu_size_{sizeVal}
         {
             font-size:   (fontSize[i]);
-            line-height: (lineHeight[i]);
 
             /* Using pseudo-elements intead of paddings because of Firefox bug with bottom padding (#1158):
              * https://bugzilla.mozilla.org/show_bug.cgi?id=748518 */
