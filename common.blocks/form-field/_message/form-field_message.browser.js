@@ -13,6 +13,16 @@ modules.define('form-field',
  */
 FormField.decl({ block : this.name, modName : 'message' }, /** @lends form-field.prototype */{
 
+    onSetMod : {
+        'js' : {
+            'inited' : function() {
+                this.__base.apply(this, arguments);
+
+                this._message = this._getMessage();
+            }
+        }
+    },
+
     /**
      * Set message value
      * @public
