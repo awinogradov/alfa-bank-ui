@@ -6,7 +6,12 @@ block('message').mod('type', 'popup')(
             {
                 block : 'popup',
                 directions : ['right-top'],
-                mods : { target : 'anchor', theme : ctx.mods.theme, size : ctx.mods.size },
+                mods : {
+                    target : 'anchor',
+                    theme : ctx.mods.theme,
+                    size : ctx.mods.size,
+                    view : 'hint'
+                },
                 mix : { block : ctx.block, mods : ctx.mods }
             }
         ]);

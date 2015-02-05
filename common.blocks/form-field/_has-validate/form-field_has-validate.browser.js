@@ -14,7 +14,7 @@ FormField.decl({ block : this.name, modName : 'has-validate', modVal : true }, /
         this.__base.apply(this, arguments);
         if (this.hasMod('message')) {
             this.setMessageVal(this._status);
-            this._getMessage().setMod('error', true);
+            this._getMessage().setMod('error');
         }
     }
 });
