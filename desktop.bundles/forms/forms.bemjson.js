@@ -69,7 +69,16 @@
                         },
                         {
                             block : 'input',
-                            mods : { theme : 'alfa', bkg : 'color', size : 'm' },
+                            mods : {
+                                theme : 'alfa',
+                                bkg : 'color',
+                                size : 'm',
+                                autocomplete : true
+                            },
+                            options : [
+                                { val : 'MSC', content : 'Moscow' },
+                                { val : 'NYC', content : 'New York' }
+                            ],
                             name : 'lastName'
                         }
                     ]
