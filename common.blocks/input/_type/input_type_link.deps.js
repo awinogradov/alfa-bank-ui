@@ -9,6 +9,6 @@
 {
     tech : 'spec.js',
     mustDeps : [
-        { tech : 'bemhtml', block : 'input', mods : { type: 'link'} }
+        { tech : 'bemhtml', block : 'input', mods : { type : 'link' } }
     ]
 }]

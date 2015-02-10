@@ -1,6 +1,6 @@
 modules.define(
     'spec',
-    ['input', 'i-bem__dom','jquery', 'BEMHTML'],
+    ['input', 'i-bem__dom', 'jquery', 'BEMHTML'],
     function(provide, Input, BEMDOM, $, BEMHTML) {
 
 describe('input_type_link', function() {
@@ -25,7 +25,7 @@ describe('input_type_link', function() {
         return BEMDOM.init(
             $(BEMHTML.apply({
                 block : 'input',
-                mods : { type : 'link'},
+                mods : { type : 'link' },
                 val : 'inplace'
             })))
             .appendTo('body')
