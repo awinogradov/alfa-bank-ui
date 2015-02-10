@@ -69,7 +69,28 @@
                         },
                         {
                             block : 'input',
-                            mods : { theme : 'alfa', bkg : 'color', size : 'm' },
+                            mods : {
+                                theme : 'alfa',
+                                bkg : 'color',
+                                size : 'm',
+                                autocomplete : true
+                            },
+                            options : [
+                                {
+                                    title : 'Russia',
+                                    group : [
+                                        { val : 'MSC', content : 'Moscow' },
+                                        { val : 'SPB', content : 'Saint-Petersburg' }
+                                    ]
+                                },
+                                {
+                                    title : 'USA',
+                                    group : [
+                                        { val : 'NYC', content : 'New York' },
+                                        { val : 'BST', content : 'Boston' }
+                                    ]
+                                }
+                            ],
                             name : 'lastName'
                         }
                     ]
