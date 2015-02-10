@@ -27,3 +27,5 @@ libs
 /*.tests
 /*.sets
 /*.tmpl-specs
+
+*.log
