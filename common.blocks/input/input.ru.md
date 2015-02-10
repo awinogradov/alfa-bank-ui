@@ -25,7 +25,7 @@
     block : 'input',
     mods : { autocomplete : true },
     options : [
-        { val : 'MSC', content : 'Moscow' },
-        { val : 'NYC', content : 'New York' }
+        { val : 'MSC', text : 'Moscow' },
+        { val : 'NYC', text : 'New York' }
     ]
 }

@@ -9,7 +9,7 @@ block('input').mod('autocomplete', true)(
                 items.push({
                     block : 'menu-item',
                     val : item.val,
-                    content : item.content
+                    content : item.text
                 });
             });
             return [

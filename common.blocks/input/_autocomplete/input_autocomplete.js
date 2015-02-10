@@ -1,4 +1,6 @@
-modules.define('input', ['popup', 'menu', 'dom', 'jquery'], function(provide, _, _, dom, $, Input) {
+modules.define('input',
+    ['popup', 'menu', 'dom', 'jquery'],
+    function(provide, Popup, Menu, dom, $, Input) {
 
     provide(Input.decl({ modName : 'autocomplete' }, {
         onSetMod : {
@@ -9,10 +11,7 @@ modules.define('input', ['popup', 'menu', 'dom', 'jquery'], function(provide, _,
                     this._popup.setAnchor(this);
                     this._menu = this._popup.findBlockInside('menu');
 
-                    this._menu.on('item-click', function(_, data) {
-                        this.setVal(data.item.getVal());
-                        this._popup.delMod('visible');
-                    }.bind(this));
+                    this._menu.on({ 'item-click' : this._onMenuItemClick }, this);
 
                     this._isPointerPressInProgress = false;
                     this._updateMenuWidth();
@@ -56,6 +55,11 @@ modules.define('input', ['popup', 'menu', 'dom', 'jquery'], function(provide, _,
 
         _isEventInPopup : function(e) {
             return dom.contains(this._popup.domElem, $(e.target));
+        },
+
+        _onMenuItemClick : function(_, data) {
+            this.setVal(data.item.getVal());
+            this._popup.delMod('visible');
         },
 
         _updateMenuWidth : function() {
