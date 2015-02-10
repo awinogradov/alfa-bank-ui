@@ -16,8 +16,8 @@ modules.define('plate', function(provide, Plate) {
             }
         },
         /** @lends plate_has-clear */{
-            live: function () {
-                this.liveBindTo('clear', 'pointerclick', function () {
+            live : function() {
+                this.liveBindTo('clear', 'pointerclick', function() {
                     this._onClick();
                 });
             }

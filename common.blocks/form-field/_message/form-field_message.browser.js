@@ -31,7 +31,7 @@ FormField.decl({ block : this.name, modName : 'message' }, /** @lends form-field
     setMessageVal : function(val) {
         this.__base.apply(this, arguments);
 
-        if (this.getMod('message') === 'popup') {
+        if(this.getMod('message') === 'popup') {
             // anchor on input instead of 'message' block
             var input = this.findBlockInside(this.getMod('type') || 'input');
             input && this._getMessage()._popup.setAnchor(input);
