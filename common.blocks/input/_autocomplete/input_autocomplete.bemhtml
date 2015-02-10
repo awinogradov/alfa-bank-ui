@@ -4,14 +4,23 @@ block('input').mod('autocomplete', true)(
     }),
     elem('box')(
         content()(function() {
-            var items = [];
-            this._input.options && this._input.options.forEach(function(item) {
-                items.push({
-                    block : 'menu-item',
-                    val : item.val,
-                    content : item.content
-                });
-            });
+
+            function mapItems(item) {
+                if (item.group) {
+                    return {
+                        elem : 'group',
+                        title : item.title,
+                        content : item.group.map(mapItems)
+                    };
+                } else {
+                    return {
+                        block : 'menu-item',
+                        val : item.val,
+                        content : item.content
+                    };
+                }
+            }
+
             return [
                 applyNext(),
                 {
@@ -22,7 +31,7 @@ block('input').mod('autocomplete', true)(
                         bkg : this._input.mods.bkg,
                         size : this._input.mods.size
                     },
-                    directions : ['bottom-left', 'bottom-right', 'top-left', 'top-right'],
+                    directions : ['bottom-left', 'bottom-right'],
                     content : [
                         {
                             block : 'menu',
@@ -33,7 +42,7 @@ block('input').mod('autocomplete', true)(
                                 bkg : this._input.mods.bkg,
                                 size : this._input.mods.size
                             },
-                            content : items
+                            content : this._input.options.map(mapItems)
                         }
                     ]
                 }

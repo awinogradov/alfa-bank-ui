@@ -76,8 +76,20 @@
                                 autocomplete : true
                             },
                             options : [
-                                { val : 'MSC', text : 'Moscow' },
-                                { val : 'NYC', text : 'New York' }
+                                {
+                                    title : 'Russia',
+                                    group : [
+                                        { val : 'MSC', content : 'Moscow' },
+                                        { val : 'SPB', content : 'Saint-Petersburg' }
+                                    ]
+                                },
+                                {
+                                    title : 'USA',
+                                    group : [
+                                        { val : 'NYC', content : 'New York' },
+                                        { val : 'BST', content : 'Boston' }
+                                    ]
+                                }
                             ],
                             name : 'lastName'
                         }

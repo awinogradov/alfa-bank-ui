@@ -29,3 +29,28 @@
         { val : 'NYC', content : 'New York' }
     ]
 }
+
+Элементы списка могут быть объединены в группы:
+
+```bemjson
+{
+    block : 'input',
+    mods : { autocomplete : true },
+    options : [
+        {
+            title : 'Russia',
+            group : [
+                { val : 'MSC', content : 'Moscow' },
+                { val : 'SPB', content : 'Saint-Petersburg' }
+            ]
+        },
+        {
+            title : 'USA',
+            group : [
+                { val : 'NYC', content : 'New York' },
+                { val : 'BST', content : 'Boston' }
+            ]
+        }
+    ]
+}
+```

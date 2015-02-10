@@ -1,8 +1,6 @@
 var expect = chai.expect;
 
-modules.define('spec',
-    ['i-bem__dom', 'input', 'jquery', 'BEMHTML'],
-    function(provide, BEMDOM, Dropdown, $, BEMHTML) {
+modules.define('spec', ['i-bem__dom', 'input', 'jquery', 'BEMHTML'], function(provide, BEMDOM, Dropdown, $, BEMHTML) {
 
     describe('input_autocomplete', function() {
         var bemjson = {
@@ -152,6 +150,47 @@ modules.define('spec',
             menu.findBlocksInside('menu-item')[1].domElem.click();
 
             popup.getMod('visible').should.equal('');
+        });
+
+        it('should render groups with `group` element in `menu`', function() {
+            bemjson.options = [
+                {
+                    title : 'Russia',
+                    group : [
+                        { val : 'MSC', content : 'Moscow' },
+                        { val : 'SPB', content : 'Saint-Petersburg' }
+                    ]
+                },
+                {
+                    group : [
+                        { val : 'PAR', content : 'Paris' },
+                        { val : 'MAR', content : 'Marseille' }
+                    ]
+                },
+                {
+                    title : 'Austria',
+                    group : []
+                },
+                { val : 'NYC', content : 'New York' },
+            ];
+            block = build(bemjson);
+            var menu = block.findBlockInside('menu');
+
+            expect(menu.elem('group')).to.not.be.null;
+            menu.elem('group').length.should.equal(3);
+
+            var items = menu.findBlocksInside('group', 'menu-item'),
+                titles = menu.elem('group-title');
+
+            titles.length.should.equal(2);
+            $(titles[0]).html().should.equal('Russia');
+            $(titles[1]).html().should.equal('Austria');
+
+            items.length.should.equal(4);
+            items[0].params.val.should.equal('MSC');
+            items[0].domElem.text().should.equal('Moscow');
+            items[3].params.val.should.equal('MAR');
+            items[3].domElem.text().should.equal('Marseille');
         });
     });
 
