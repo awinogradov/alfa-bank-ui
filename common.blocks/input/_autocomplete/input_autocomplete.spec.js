@@ -1,6 +1,8 @@
 var expect = chai.expect;
 
-modules.define('spec', ['i-bem__dom', 'input', 'jquery', 'BEMHTML'], function(provide, BEMDOM, Dropdown, $, BEMHTML) {
+modules.define('spec', ['jquery', 'spec-helper'], function(provide, $, helper) {
+
+    var build = helper.buildBlock;
 
     describe('input_autocomplete', function() {
         var bemjson = {
@@ -12,17 +14,17 @@ modules.define('spec', ['i-bem__dom', 'input', 'jquery', 'BEMHTML'], function(pr
         var block;
 
         afterEach(function() {
-            BEMDOM.destruct(block.domElem);
+            helper.destruct(block);
         });
 
         it('should have `control` and `box` elements', function() {
-            block = build(bemjson);
+            block = build('input', bemjson);
             expect(block.elem('box')).to.not.be.null;
             expect(block.elem('control')).to.not.be.null;
         });
 
         it('should add `popup` block to `box` element', function() {
-            block = build(bemjson);
+            block = build('input', bemjson);
             var popup = block.findBlockInside('popup');
 
             expect(popup).to.not.be.null;
@@ -32,7 +34,7 @@ modules.define('spec', ['i-bem__dom', 'input', 'jquery', 'BEMHTML'], function(pr
             bemjson.mods.theme = 'xxx';
             bemjson.mods.bkg = 'yyy';
             bemjson.mods.size = 'm';
-            block = build(bemjson);
+            block = build('input', bemjson);
             var popup = block.findBlockInside('popup');
 
             popup.getMod('theme').should.equal('xxx');
@@ -44,7 +46,7 @@ modules.define('spec', ['i-bem__dom', 'input', 'jquery', 'BEMHTML'], function(pr
             bemjson.mods.theme = 'xxx';
             bemjson.mods.bkg = 'yyy';
             bemjson.mods.size = 'm';
-            block = build(bemjson);
+            block = build('input', bemjson);
             var menu = block.findBlockInside('menu');
 
             menu.getMod('theme').should.equal('xxx');
@@ -53,14 +55,14 @@ modules.define('spec', ['i-bem__dom', 'input', 'jquery', 'BEMHTML'], function(pr
         });
 
         it('should set popup`s anchor', function() {
-            block = build(bemjson);
+            block = build('input', bemjson);
             var popup = block.findBlockInside('popup');
 
             popup._anchor.should.equal(block.domElem);
         });
 
         it('should add block `menu` in `popup`', function() {
-            block = build(bemjson);
+            block = build('input', bemjson);
             var menu = block.findBlockInside('popup').findBlockInside('menu');
 
             expect(menu).to.not.be.null;
@@ -69,7 +71,7 @@ modules.define('spec', ['i-bem__dom', 'input', 'jquery', 'BEMHTML'], function(pr
         it('should pass `theme` and `bkg` mods to `menu`', function() {
             bemjson.mods.theme = 'xxx';
             bemjson.mods.bkg = 'yyy';
-            block = build(bemjson);
+            block = build('input', bemjson);
             var menu = block.findBlockInside('popup').findBlockInside('menu');
 
             menu.getMod('theme').should.equal('xxx');
@@ -81,7 +83,7 @@ modules.define('spec', ['i-bem__dom', 'input', 'jquery', 'BEMHTML'], function(pr
                 { val : 'value 1', content : 'item 1' },
                 { val : 'value 2', content : 'item 2' }
             ];
-            block = build(bemjson);
+            block = build('input', bemjson);
             var menu = block.findBlockInside('popup').findBlockInside('menu');
             var items = menu.findBlocksInside('menu-item');
 
@@ -98,7 +100,7 @@ modules.define('spec', ['i-bem__dom', 'input', 'jquery', 'BEMHTML'], function(pr
                 { val : 'value 1', content : 'item 1' },
                 { val : 'value 2', content : 'item 2' }
             ];
-            block = build(bemjson);
+            block = build('input', bemjson);
 
             block.getMod('opened').should.equal('');
             block.elem('control').trigger('focus');
@@ -112,7 +114,7 @@ modules.define('spec', ['i-bem__dom', 'input', 'jquery', 'BEMHTML'], function(pr
                 { val : 'value 1', content : 'item 1' },
                 { val : 'value 2', content : 'item 2' }
             ];
-            block = build(bemjson);
+            block = build('input', bemjson);
             var popup = block.findBlockInside('popup');
             popup.getMod('visible').should.equal('');
             block.setMod('opened');
@@ -126,7 +128,7 @@ modules.define('spec', ['i-bem__dom', 'input', 'jquery', 'BEMHTML'], function(pr
                 { val : 'value 1', content : 'item 1' },
                 { val : 'value 2', content : 'item 2' }
             ];
-            block = build(bemjson);
+            block = build('input', bemjson);
             block.setVal('value 0');
             var menu = block.findBlockInside('menu');
             // click on item
@@ -140,7 +142,7 @@ modules.define('spec', ['i-bem__dom', 'input', 'jquery', 'BEMHTML'], function(pr
                 { val : 'value 1', content : 'item 1' },
                 { val : 'value 2', content : 'item 2' }
             ];
-            block = build(bemjson);
+            block = build('input', bemjson);
             var menu = block.findBlockInside('menu'),
                 popup = block.findBlockInside('popup');
 
@@ -173,7 +175,7 @@ modules.define('spec', ['i-bem__dom', 'input', 'jquery', 'BEMHTML'], function(pr
                 },
                 { val : 'NYC', content : 'New York' },
             ];
-            block = build(bemjson);
+            block = build('input', bemjson);
             var menu = block.findBlockInside('menu');
 
             expect(menu.elem('group')).to.not.be.null;
@@ -195,9 +197,5 @@ modules.define('spec', ['i-bem__dom', 'input', 'jquery', 'BEMHTML'], function(pr
     });
 
     provide();
-
-    function build(bemjson) {
-        return BEMDOM.init($(BEMHTML.apply(bemjson)).appendTo('body')).bem('input');
-    }
 
 });
