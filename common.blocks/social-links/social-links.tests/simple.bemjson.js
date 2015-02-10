@@ -1,12 +1,12 @@
 ({
-    block: 'page',
-    title: 'nyc-public: social-links',
-    mods: { theme: 'alfa', bkg : 'color' },
-    head: [
-        { elem: 'css', url: '_simple.css' },
-        { elem: 'js', url: '_simple.js' }
+    block : 'page',
+    title : 'nyc-public: social-links',
+    mods : { theme : 'alfa', bkg : 'color' },
+    head : [
+        { elem : 'css', url : '_simple.css' },
+        { elem : 'js', url : '_simple.js' }
     ],
-    content: [
+    content : [
         {
             block : 'social-links',
             mods : { theme : 'alfa', bkg : 'color', size : 's' },

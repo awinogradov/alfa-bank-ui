@@ -6,7 +6,7 @@ modules.define('spec', ['input', 'spec-helper'], function(provide, _, helper) {
         beforeEach(function() {
             input = helper.buildBlock('input', {
                 block : 'input',
-                mods : { type : 'link'},
+                mods : { type : 'link' },
                 val : 'inplace'
             });
         });

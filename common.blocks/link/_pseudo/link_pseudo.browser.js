@@ -10,7 +10,7 @@ modules.define('link', function(provide, Link) {
  * @augments control
  * @bem
  */
-Link.decl({ modName : 'pseudo', modVal : true },{
+Link.decl({ modName : 'pseudo', modVal : true }, {
 
     onSetMod : {
         'js' : {

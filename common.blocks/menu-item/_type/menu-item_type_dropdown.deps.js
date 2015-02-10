@@ -1,5 +1,5 @@
 ({
     shouldDeps : [
-        { block : 'dropdown', mods : { view : 'column' }}
+        { block : 'dropdown', mods : { view : 'column' } }
     ]
 })

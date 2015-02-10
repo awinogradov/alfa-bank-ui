@@ -781,6 +781,18 @@
                                                     val : 'Простой inplace'
                                                 }
                                             ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'input',
+                                                    mods : { theme : 'alfa', bkg : 'color', size : 's', 'type' : 'money' },
+                                                    val : 'Простой',
+                                                    placeholder : 'placeholder',
+                                                    sym : 'P'
+                                                }
+                                            ]
                                         }
                                     ]
                                 },
