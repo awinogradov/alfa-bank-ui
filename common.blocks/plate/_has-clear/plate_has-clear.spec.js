@@ -12,7 +12,7 @@ describe('plate_has-clear', function() {
     });
 
     it('should hide plate on click', function() {
-        plate.elem('clear').trigger('pointerclick');
+        plate.elem('clear').click();
         plate.hasMod('hidden').should.be.true;
     });
 });

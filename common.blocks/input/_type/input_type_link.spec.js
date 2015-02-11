@@ -17,9 +17,9 @@ modules.define('spec', ['input', 'spec-helper'], function(provide, _, helper) {
 
         // TODO fix test
         it.skip('should show input on click', function() {
-            input.trigger('click');
-            input.elem('box').elem('link').hasMod('hidden').should.be.true;
-            input.elem('box').elem('input').hasMod('hidden').should.be.false;
+            //input.hasMod('focused').should.be.false;
+            input._trigger.domElem.click();
+            //input.elem('control').bem('control').hasMod('focused').should.be.true;
         });
 
     });
