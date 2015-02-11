@@ -1,6 +1,4 @@
-modules.define('spec',
-    ['i-bem__dom', 'dropdown', 'jquery', 'BEMHTML'],
-    function(provide, BEMDOM, Dropdown, $, BEMHTML) {
+modules.define('spec', ['dropdown', 'spec-helper'], function(provide, _, helper) {
 
     describe('dropdown_mode_hover', function() {
         var bemjson = {
@@ -13,11 +11,11 @@ modules.define('spec',
         var dropdown;
 
         beforeEach(function() {
-            dropdown = buildDropdown(bemjson);
+            dropdown = helper.buildBlock('dropdown', bemjson);
         });
 
         afterEach(function() {
-            BEMDOM.destruct(dropdown.domElem);
+            helper.destruct(dropdown);
         });
 
         it('should add mod "opened" on hover', function() {
@@ -34,9 +32,5 @@ modules.define('spec',
     });
 
     provide();
-
-    function buildDropdown(bemjson) {
-        return BEMDOM.init($(BEMHTML.apply(bemjson)).appendTo('body')).bem('dropdown');
-    }
 
 });
