@@ -1,0 +1,76 @@
+.input_type_symbol {
+
+    .input__symbol {
+        transition: all 200ms ease;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center;
+        border-left: 1px solid;
+        border-color: rgba(255, 255, 255, .5);
+    }
+
+    &.input_size_s {
+
+        .input__box {
+            padding-right: control_size_s;
+        }
+
+        .input__symbol
+        {
+            width: control_size_s;
+            height: control_size_s;
+            line-height: control_size_s;
+        }
+    }
+
+    &.input_size_m {
+
+        .input__box {
+            padding-right: control_size_m;
+        }
+
+        .input__symbol
+        {
+            width: control_size_m;
+            height: control_size_m;
+            line-height: control_size_m;
+            font-size: 14px;
+        }
+    }
+
+    &.input_size_l {
+
+        .input__box {
+            padding-right: control_size_l;
+        }
+
+        .input__symbol
+        {
+            width: control_size_l;
+            height: control_size_l;
+            line-height: control_size_l;
+            font-size: 20px;
+        }
+    }
+
+    &.input_size_xl {
+
+        .input__box {
+            padding-right: control_size_xl;
+        }
+
+        .input__symbol
+        {
+            width: control_size_xl;
+            height: control_size_xl;
+            line-height: control_size_xl;
+            font-size: 30px;
+        }
+    }
+
+    .input__control
+    {
+        text-overflow: ellipsis;
+    }
+}

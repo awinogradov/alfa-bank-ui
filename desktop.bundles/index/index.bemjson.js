@@ -787,10 +787,9 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 's', 'type' : 'money' },
-                                                    val : 'Простой',
-                                                    placeholder : 'placeholder',
-                                                    sym : 'P'
+                                                    mods : { theme : 'alfa', bkg : 'color', size: 's', 'type' : 'symbol' },
+                                                    val : 'Простой символ',
+                                                    symbol : '₽'
                                                 }
                                             ]
                                         }
@@ -867,6 +866,17 @@
                                                     val : 'Простой inplace'
                                                 }
                                             ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'input',
+                                                    mods : { theme : 'alfa', bkg : 'color', size: 'm', 'type' : 'symbol' },
+                                                    val : 'Простой символ',
+                                                    symbol : '₽'
+                                                }
+                                            ]
                                         }
                                     ]
                                 },
@@ -941,6 +951,17 @@
                                                     val : 'Простой inplace'
                                                 }
                                             ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'input',
+                                                    mods : { theme : 'alfa', bkg : 'color', size: 'l', 'type' : 'symbol' },
+                                                    val : 'Простой символ',
+                                                    symbol : '₽'
+                                                }
+                                            ]
                                         }
                                     ]
                                 },
@@ -1013,6 +1034,17 @@
                                                     block : 'input',
                                                     mods : { theme : 'alfa', bkg : 'color', size: 'xl', 'type' : 'link' },
                                                     val : 'Простой inplace'
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'input',
+                                                    mods : { theme : 'alfa', bkg : 'color', size: 'xl', 'type' : 'symbol' },
+                                                    val : 'Простой символ',
+                                                    symbol : '₽'
                                                 }
                                             ]
                                         }
