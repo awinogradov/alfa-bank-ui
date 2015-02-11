@@ -27,11 +27,6 @@ modules.define('input',
 
                     this.on('change', _this._onChange);
                     this.bindTo('keyup', _this._onSubmit);
-
-console.log('fucking bem_link inited');
-                    //this._trigger.domElem.click();
-                    //console.log(this.elem('control').bem('control').hasMod('focused'));
-                    //this._trigger.click();
                 }
             },
             'focused' : {
