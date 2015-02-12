@@ -1,9 +1,46 @@
 .input_type_result
 {
-    border: transparent;
+    border-color: transparent !important;
 
     .input__box
     {
         user-select: inherit;
     }
+
+    &.input_size_s {
+        .input__result
+        {
+            height: control_size_s;
+            line-height: control_size_s + 2px;
+            font-size: control_result_font_size_s;
+        }
+    }
+
+    &.input_size_m {
+        .input__result
+        {
+            height: control_size_m;
+            line-height: control_size_m + 2px;
+            font-size: control_result_font_size_m;
+        }
+    }
+
+    &.input_size_l {
+        .input__result
+        {
+            height: control_size_l;
+            line-height: control_size_l + 2px;
+            font-size: control_result_font_size_l;
+        }
+    }
+
+    &.input_size_xl {
+        .input__result
+        {
+            height: control_size_xl;
+            line-height: control_size_xl + 2px;
+            font-size: control_result_font_size_xl;
+        }
+    }
+
 }
