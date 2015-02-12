@@ -1,4 +1,3 @@
-fontSize = (links_font_size_s links_font_size_m links_font_size_l links_font_size_xl);
 lineHeight = (control_size_s control_size_m control_size_l control_size_xl)
 paddingVert = (3 4 5 6);
 paddingHor = (10 13 15 20);
@@ -21,7 +20,6 @@ paddingHor = (10 13 15 20);
     for sizeVal, i in (s m l xl) {
         &.menu_size_{sizeVal}
         {
-            font-size:   (fontSize[i]);
 
             /* Using pseudo-elements intead of paddings because of Firefox bug with bottom padding (#1158):
              * https://bugzilla.mozilla.org/show_bug.cgi?id=748518 */
@@ -44,7 +42,7 @@ paddingHor = (10 13 15 20);
 
                 &-title
                 {
-                    padding: 0 (paddingHor[i])px;
+                    padding: (paddingVert[i])px (paddingHor[i])px;
                 }
             }
         }
@@ -77,8 +75,7 @@ paddingHor = (10 13 15 20);
         }
     }
 
-    &.menu_view_dropdown
-    {
-        background: rgba(0,0,0,0.8);
+    &.menu_view_dropdown {
+        color: #666;
     }
 }

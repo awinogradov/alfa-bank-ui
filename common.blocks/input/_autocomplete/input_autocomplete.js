@@ -63,7 +63,7 @@ modules.define('input',
         },
 
         _updateMenuWidth : function() {
-            this._menu.domElem.css('min-width', this.elem('control').outerWidth());
+            this._menu.domElem.css('min-width', this.domElem.outerWidth());
 
             this._popup.redraw();
         }

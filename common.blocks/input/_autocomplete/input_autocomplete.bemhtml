@@ -6,7 +6,7 @@ block('input').mod('autocomplete', true)(
         content()(function() {
 
             function mapItems(item) {
-                if (item.group) {
+                if(item.group) {
                     return {
                         elem : 'group',
                         title : item.title,
@@ -29,7 +29,8 @@ block('input').mod('autocomplete', true)(
                         target : 'anchor',
                         theme : this._input.mods.theme,
                         bkg : this._input.mods.bkg,
-                        size : this._input.mods.size
+                        size : this._input.mods.size,
+                        view : 'dropdown'
                     },
                     directions : ['bottom-left', 'bottom-right'],
                     content : [
@@ -37,10 +38,10 @@ block('input').mod('autocomplete', true)(
                             block : 'menu',
                             mods : {
                                 mode : 'radio-check',
-                                view : 'dropdown',
                                 theme : this._input.mods.theme,
                                 bkg : this._input.mods.bkg,
-                                size : this._input.mods.size
+                                size : this._input.mods.size,
+                                view : 'dropdown'
                             },
                             content : this._input.options.map(mapItems)
                         }
