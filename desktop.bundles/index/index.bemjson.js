@@ -792,6 +792,16 @@
                                                     symbol : '₽'
                                                 }
                                             ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'input',
+                                                    mods : { theme : 'alfa', bkg : 'color', size: 's', 'type' : 'result' },
+                                                    val : 'Простой result'
+                                                }
+                                            ]
                                         }
                                     ]
                                 },
@@ -875,6 +885,16 @@
                                                     mods : { theme : 'alfa', bkg : 'color', size: 'm', 'type' : 'symbol' },
                                                     val : 'Простой символ',
                                                     symbol : '₽'
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'input',
+                                                    mods : { theme : 'alfa', bkg : 'color', size: 'm', 'type' : 'result' },
+                                                    val : 'Простой result'
                                                 }
                                             ]
                                         }
@@ -962,6 +982,16 @@
                                                     symbol : '₽'
                                                 }
                                             ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'input',
+                                                    mods : { theme : 'alfa', bkg : 'color', size: 'l', 'type' : 'result' },
+                                                    val : 'Простой result'
+                                                }
+                                            ]
                                         }
                                     ]
                                 },
@@ -1045,6 +1075,16 @@
                                                     mods : { theme : 'alfa', bkg : 'color', size: 'xl', 'type' : 'symbol' },
                                                     val : 'Простой символ',
                                                     symbol : '₽'
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'input',
+                                                    mods : { theme : 'alfa', bkg : 'color', size: 'xl', 'type' : 'result' },
+                                                    val : 'Простой result'
                                                 }
                                             ]
                                         }
