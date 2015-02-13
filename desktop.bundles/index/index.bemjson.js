@@ -799,7 +799,7 @@
                                                 {
                                                     block : 'input',
                                                     mods : { theme : 'alfa', bkg : 'color', size: 's', 'type' : 'result' },
-                                                    val : 'Простой result'
+                                                    val : 'Result'
                                                 }
                                             ]
                                         }
@@ -894,7 +894,7 @@
                                                 {
                                                     block : 'input',
                                                     mods : { theme : 'alfa', bkg : 'color', size: 'm', 'type' : 'result' },
-                                                    val : 'Простой result'
+                                                    val : 'Result'
                                                 }
                                             ]
                                         }
@@ -989,7 +989,7 @@
                                                 {
                                                     block : 'input',
                                                     mods : { theme : 'alfa', bkg : 'color', size: 'l', 'type' : 'result' },
-                                                    val : 'Простой result'
+                                                    val : 'Result'
                                                 }
                                             ]
                                         }
@@ -1084,7 +1084,7 @@
                                                 {
                                                     block : 'input',
                                                     mods : { theme : 'alfa', bkg : 'color', size: 'xl', 'type' : 'result' },
-                                                    val : 'Простой result'
+                                                    val : 'Result'
                                                 }
                                             ]
                                         }
