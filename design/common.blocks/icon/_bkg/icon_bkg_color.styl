@@ -1,4 +1,5 @@
 networks = ( 'twitter' 'vk' 'facebook' )
+cards = ( 'visa' 'visaelectron' 'mastercard' 'maestro' )
 
 .icon_bkg_color
 {
@@ -7,6 +8,14 @@ networks = ( 'twitter' 'vk' 'facebook' )
         &.icon_network_{$name}
         {
             background-image: url(../assets/_bkg/_color/$name.svg);
+        }
+    }
+
+    for $name in cards
+    {
+        &.icon_card_{$name}
+        {
+            background-image: url(../assets/_bkg/_color/card/$name.svg);
         }
     }
 }
