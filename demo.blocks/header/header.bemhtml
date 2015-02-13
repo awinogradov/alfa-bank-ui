@@ -1,0 +1,93 @@
+block('header')(
+
+    content()(function() {
+
+        return [
+            {
+                elem : 'logo',
+                content : [
+                    {
+                        block : 'logo',
+                        mods : { theme : 'alfa', bkg : 'color', size : 's', view : 'full' }
+                    }
+                ]
+            },
+            {
+                elem : 'content',
+                content : [
+                    {
+                        elem : 'menu',
+                        content : [
+                            {
+                                block : 'menu',
+                                mods : { bkg : 'color', theme : 'alfa', size : 'm', horizontal : true },
+                                content : [
+                                    {
+                                        block : 'menu-item',
+                                        mods: { type : 'link' },
+                                        content : [
+                                            {
+                                                block : 'link',
+                                                mods : { bkg : 'color', theme : 'alfa' },
+                                                url : '#',
+                                                content : 'Логотипы'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        block : 'menu-item',
+                                        mods: { type : 'link' },
+                                        content : [
+                                            {
+                                                block : 'link',
+                                                mods : { bkg : 'color', theme : 'alfa' },
+                                                url : '#',
+                                                content : 'Инпуты'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        block : 'menu-item',
+                                        mods: { type : 'link' },
+                                        content : [
+                                            {
+                                                block : 'link',
+                                                mods : { bkg : 'color', theme : 'alfa' },
+                                                url : '#',
+                                                content : 'Кнопки'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        block : 'menu-item',
+                                        mods: { type : 'link' },
+                                        content : [
+                                            {
+                                                block : 'link',
+                                                mods : { bkg : 'color', theme : 'alfa' },
+                                                url : '#',
+                                                content : 'Формы'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        block : 'menu-item',
+                                        mods: { type : 'link' },
+                                        content : [
+                                            {
+                                                block : 'link',
+                                                mods : { bkg : 'color', theme : 'alfa' },
+                                                url : '#',
+                                                content : 'Типографика'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ];
+    })
+);

@@ -1,0 +1,188 @@
+block('logos')(
+    content()(function() {
+
+        return [
+            {
+                elem : 'size-section',
+                content : [
+                    {
+                        block : 'row',
+                        content : [
+                            {
+                                elem : 'col',
+                                mods : { 's' : true },
+                                content : [
+                                    {
+                                        elem : 'sidebar',
+                                        content : 'S'
+                                    },
+                                    {
+                                        elem : 'content',
+                                        content : [
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'logo',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 's', view : 'icon' }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'logo',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 's', view : 'full' }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                tag : 'hr'
+            },
+            {
+                elem : 'size-section',
+                content: [
+                    {
+                        block : 'row',
+                        content : [
+                            {
+                                elem : 'col',
+                                mods : { 's' : true },
+                                content : [
+                                    {
+                                        elem : 'sidebar',
+                                        content : 'M'
+                                    },
+                                    {
+                                        elem : 'content',
+                                        content : [
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'logo',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', view : 'icon' }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'logo',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', view : 'full' }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                tag : 'hr'
+            },
+            {
+                elem : 'size-section',
+                content: [
+                    {
+                        block : 'row',
+                        content : [
+                            {
+                                elem : 'col',
+                                mods : { 's' : true },
+                                content : [
+                                    {
+                                        elem : 'sidebar',
+                                        content : 'L'
+                                    },
+                                    {
+                                        elem : 'content',
+                                        content : [
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'logo',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', view : 'icon' }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'logo',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', view : 'full' }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                tag : 'hr'
+            },
+            {
+                elem : 'size-section',
+                content: [
+                    {
+                        block : 'row',
+                        content : [
+                            {
+                                elem : 'col',
+                                mods : { 's' : true },
+                                content : [
+                                    {
+                                        elem : 'sidebar',
+                                        content : 'XL'
+                                    },
+                                    {
+                                        elem : 'content',
+                                        content : [
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'logo',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xl', view : 'icon' }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'logo',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xl', view : 'full' }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    })
+);

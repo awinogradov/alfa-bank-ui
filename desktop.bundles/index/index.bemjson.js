@@ -2170,7 +2170,7 @@
                                                         {
                                                             block : 'menu-item',
                                                             val : 1,
-                                                            content : 'Море'
+                                                            content : 'Море1'
                                                         },
                                                         {
                                                             block : 'menu-item',
@@ -2233,7 +2233,7 @@
                                                         {
                                                             block : 'menu-item',
                                                             val : 1,
-                                                            content : 'Море'
+                                                            content : 'Море2'
                                                         },
                                                         {
                                                             block : 'menu-item',

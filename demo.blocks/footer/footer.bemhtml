@@ -1,0 +1,23 @@
+block('footer')(
+    content()(function() {
+
+        return [
+            {
+                elem : 'menu',
+                content : [
+                    {
+                        block : 'menu',
+                        mods : { bkg : 'color', theme : 'alfa', size : 'm', horizontal : true },
+                        content : 'menu'
+                    }
+                ]
+            },
+            {
+                elem : 'copyright',
+                content : [
+                    { block : 'copyright' }
+                ]
+            }
+        ]
+    })
+);

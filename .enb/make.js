@@ -308,12 +308,16 @@ function getSourceLevels(platform) {
         levels.push({ path : name + '.blocks', check : true });
     });
 
+    levels.push({ path : 'demo.blocks', check : true });
+
     platformNames.forEach(function(name) {
         levels.push(
             { path : path.join('libs', 'bem-content', 'design', name + '.blocks'), check : false },
             { path : path.join('design', name + '.blocks'), check : true }
         );
     });
+
+    levels.push({ path : 'design/demo.blocks', check : true });
 
     return levels;
 }
