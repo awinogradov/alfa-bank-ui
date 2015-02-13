@@ -2,6 +2,7 @@ block('menu-item').mod('type', 'link').match(this._alfaMods)(
     content()(function() {
         return [{
             block : 'link',
+            mix : { block : 'menu-item', elem : 'link' },
             mods : {
                 theme : this.mods.theme || this._alfaMods.theme,
                 bkg : this.mods.bkg || this._alfaMods.bkg,
