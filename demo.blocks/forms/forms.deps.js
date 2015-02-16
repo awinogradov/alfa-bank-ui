@@ -13,5 +13,8 @@
             block : 'input',
             mods : { theme : 'alfa', bkg : 'color' }
         },
+        {
+            block : 'row'
+        }
     ]
 }]
