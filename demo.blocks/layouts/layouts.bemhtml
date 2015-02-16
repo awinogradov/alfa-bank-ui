@@ -1,0 +1,35 @@
+block('layouts')(
+    content()(function() {
+        return [
+
+            {
+                block : 'heading',
+                lvl : 3,
+                content : 'Плашка'
+            },
+            {
+                block : 'plate',
+                mods : { theme : 'alfa', bkg : 'color' },
+                content : [
+                    {
+                        block : 'logo',
+                        mods : { theme : 'alfa', bkg : 'white', view : 'full', size : 's' }
+                    }
+                ]
+            },
+            {
+                tag : 'hr'
+            },
+            {
+                block : 'plate',
+                mods : { theme : 'alfa', bkg : 'color', 'has-clear' : true },
+                content : [
+                    {
+                        block : 'logo',
+                        mods : { theme : 'alfa', bkg : 'white', view : 'full', size : 's' }
+                    }
+                ]
+            }
+        ]
+    })
+);

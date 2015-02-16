@@ -8,10 +8,10 @@
         {elem: 'meta', attrs: {name: 'viewport', content: 'width=device-width, initial-scale=1'}}
     ],
     styles: [
-        {elem: 'css', url: 'forms.min.css'}
+        {elem: 'css', url: 'layouts.min.css'}
     ],
     scripts: [
-        {elem: 'js', url: 'forms.min.js'}
+        {elem: 'js', url: 'layouts.min.js'}
     ],
     content : [
         {
@@ -32,10 +32,10 @@
                                 {
                                     block : 'heading',
                                     mods : { theme : 'alfa', bkg : 'color' },
-                                    content : 'Форма'
+                                    content : 'Layouts'
                                 },
                                 {
-                                    block : 'forms'
+                                    block : 'layouts'
                                 }
                             ]
                         }

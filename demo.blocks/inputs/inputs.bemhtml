@@ -466,6 +466,464 @@ block('inputs')(
                         ]
                     }
                 ]
+            },
+            {
+                tag : 'hr'
+            },
+            {
+                block : 'heading',
+                lvl : 3,
+                content : 'Чекбоксы'
+            },
+            {
+                elem : 'size-section',
+                content: [
+                    {
+                        block : 'row',
+                        content : [
+                            {
+                                elem : 'col',
+                                mods : { 's' : true },
+                                content : [
+                                    {
+                                        elem : 'sidebar',
+                                        content : 'S'
+                                    },
+                                    {
+                                        elem : 'content',
+                                        content : [
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'checkbox-group',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 's', type : 'button' },
+                                                        name : 'checkbox-sizes-s',
+                                                        options : [
+                                                            { val : 1, text : 'Один' },
+                                                            { val : 2, text : 'Два', checked : true },
+                                                            { val : 3, text : 'Три' }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                tag : 'hr'
+            },
+            {
+                elem : 'size-section',
+                content: [
+                    {
+                        block : 'row',
+                        content : [
+                            {
+                                elem : 'col',
+                                mods : { 's' : true },
+                                content : [
+                                    {
+                                        elem : 'sidebar',
+                                        content : 'M'
+                                    },
+                                    {
+                                        elem : 'content',
+                                        content : [
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'checkbox-group',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', type : 'button' },
+                                                        name : 'checkbox-sizes-m',
+                                                        options : [
+                                                            { val : 1, text : 'Один' },
+                                                            { val : 2, text : 'Два', checked : true },
+                                                            { val : 3, text : 'Три' }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'checkbox',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', checked : true },
+                                                        val : 1,
+                                                        text : 'чекбокс'
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'checkbox-group',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm' },
+                                                        name : 'checkbox-sizes-m',
+                                                        options : [
+                                                            { val : 1, text : 'Один' },
+                                                            { val : 2, text : 'Два', checked : true },
+                                                            { val : 3, text : 'Три' }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                tag : 'hr'
+            },
+            {
+                elem : 'size-section',
+                content: [
+                    {
+                        block : 'row',
+                        content : [
+                            {
+                                elem : 'col',
+                                mods : { 's' : true },
+                                content : [
+                                    {
+                                        elem : 'sidebar',
+                                        content : 'L'
+                                    },
+                                    {
+                                        elem : 'content',
+                                        content : [
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'checkbox-group',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', type : 'button' },
+                                                        name : 'checkbox-sizes-m',
+                                                        options : [
+                                                            { val : 1, text : 'Один' },
+                                                            { val : 2, text : 'Два', checked : true },
+                                                            { val : 3, text : 'Три' }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'checkbox',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', checked : true },
+                                                        val : 1,
+                                                        text : 'чекбокс'
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'checkbox-group',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l' },
+                                                        name : 'checkbox-sizes-m',
+                                                        options : [
+                                                            { val : 1, text : 'Один' },
+                                                            { val : 2, text : 'Два', checked : true },
+                                                            { val : 3, text : 'Три' }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                tag : 'hr'
+            },
+            {
+                elem : 'size-section',
+                content: [
+                    {
+                        block : 'row',
+                        content : [
+                            {
+                                elem : 'col',
+                                mods : { 's' : true },
+                                content : [
+                                    {
+                                        elem : 'sidebar',
+                                        content : 'XL'
+                                    },
+                                    {
+                                        elem : 'content',
+                                        content : [
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'checkbox-group',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xl', type : 'button' },
+                                                        name : 'checkbox-sizes-s',
+                                                        options : [
+                                                            { val : 1, text : 'Один' },
+                                                            { val : 2, text : 'Два', checked : true },
+                                                            { val : 3, text : 'Три' }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                tag : 'hr'
+            },
+            {
+                block : 'heading',
+                lvl : 3,
+                content : 'Радио'
+            },
+            {
+                elem : 'size-section',
+                content: [
+                    {
+                        block : 'row',
+                        content : [
+                            {
+                                elem : 'col',
+                                mods : { 's' : true },
+                                content : [
+                                    {
+                                        elem : 'sidebar',
+                                        content : 'S'
+                                    },
+                                    {
+                                        elem : 'content',
+                                        content : [
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'radio-group',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 's', type : 'button' },
+                                                        name : 'radio-sizes-s',
+                                                        options : [
+                                                            { val : 1, text : 'Один' },
+                                                            { val : 2, text : 'Два', checked : true },
+                                                            { val : 3, text : 'Три' }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                tag : 'hr'
+            },
+            {
+                elem : 'size-section',
+                content: [
+                    {
+                        block : 'row',
+                        content : [
+                            {
+                                elem : 'col',
+                                mods : { 's' : true },
+                                content : [
+                                    {
+                                        elem : 'sidebar',
+                                        content : 'M'
+                                    },
+                                    {
+                                        elem : 'content',
+                                        content : [
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'radio-group',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', type : 'button' },
+                                                        name : 'radio-sizes-m',
+                                                        options : [
+                                                            { val : 1, text : 'Один' },
+                                                            { val : 2, text : 'Два', checked : true },
+                                                            { val : 3, text : 'Три' }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'radio',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', checked : true },
+                                                        val : 1,
+                                                        text : 'радио'
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'radio-group',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm' },
+                                                        name : 'radio-sizes-m',
+                                                        options : [
+                                                            { val : 1, text : 'Один' },
+                                                            { val : 2, text : 'Два', checked : true },
+                                                            { val : 3, text : 'Три' }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                tag : 'hr'
+            },
+            {
+                elem : 'size-section',
+                content: [
+                    {
+                        block : 'row',
+                        content : [
+                            {
+                                elem : 'col',
+                                mods : { 's' : true },
+                                content : [
+                                    {
+                                        elem : 'sidebar',
+                                        content : 'L'
+                                    },
+                                    {
+                                        elem : 'content',
+                                        content : [
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'radio-group',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', type : 'button' },
+                                                        name : 'radio-sizes-m',
+                                                        options : [
+                                                            { val : 1, text : 'Один' },
+                                                            { val : 2, text : 'Два', checked : true },
+                                                            { val : 3, text : 'Три' }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'radio',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', checked : true },
+                                                        val : 1,
+                                                        text : 'радио'
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'radio-group',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l' },
+                                                        name : 'radio-sizes-m',
+                                                        options : [
+                                                            { val : 1, text : 'Один' },
+                                                            { val : 2, text : 'Два', checked : true },
+                                                            { val : 3, text : 'Три' }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                tag : 'hr'
+            },
+            {
+                elem : 'size-section',
+                content: [
+                    {
+                        block : 'row',
+                        content : [
+                            {
+                                elem : 'col',
+                                mods : { 's' : true },
+                                content : [
+                                    {
+                                        elem : 'sidebar',
+                                        content : 'XL'
+                                    },
+                                    {
+                                        elem : 'content',
+                                        content : [
+                                            {
+                                                block : 'controls',
+                                                content : [
+                                                    {
+                                                        block : 'radio-group',
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xl', type : 'button' },
+                                                        name : 'radio-sizes-m',
+                                                        options : [
+                                                            { val : 1, text : 'Один' },
+                                                            { val : 2, text : 'Два', checked : true },
+                                                            { val : 3, text : 'Три' }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     })

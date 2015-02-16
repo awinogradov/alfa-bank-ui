@@ -19,6 +19,22 @@
         {
             block : 'textarea',
             mods : { theme : 'alfa', bkg : 'color' }
+        },
+        {
+            block : 'checkbox-group',
+            mods : { theme : 'alfa', bkg : 'color', type : 'button' }
+        },
+        {
+            block : 'checkbox',
+            mods : { theme : 'alfa', bkg : 'color', checked : true }
+        },
+        {
+            block : 'radio-group',
+            mods : { theme : 'alfa', bkg : 'color', type : 'button' }
+        },
+        {
+            block : 'radio',
+            mods : { theme : 'alfa', bkg : 'color', checked : true }
         }
     ]
 }]

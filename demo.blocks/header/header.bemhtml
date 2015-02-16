@@ -65,7 +65,7 @@ block('header')(
                                             {
                                                 block : 'link',
                                                 mods : { bkg : 'color', theme : 'alfa' },
-                                                url : '../form/form.html',
+                                                url : '../forms/forms.html',
                                                 content : 'Формы'
                                             }
                                         ]
@@ -79,6 +79,30 @@ block('header')(
                                                 mods : { bkg : 'color', theme : 'alfa' },
                                                 url : '../typography/typography.html',
                                                 content : 'Типографика'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        block : 'menu-item',
+                                        mods: { type : 'link' },
+                                        content : [
+                                            {
+                                                block : 'link',
+                                                mods : { bkg : 'color', theme : 'alfa' },
+                                                url : '../layouts/layouts.html',
+                                                content : 'Layouts'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        block : 'menu-item',
+                                        mods: { type : 'link' },
+                                        content : [
+                                            {
+                                                block : 'link',
+                                                mods : { bkg : 'color', theme : 'alfa' },
+                                                url : '../menus/menus.html',
+                                                content : 'Меню'
                                             }
                                         ]
                                     }

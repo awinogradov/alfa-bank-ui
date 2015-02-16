@@ -1,6 +1,7 @@
 [{
     shouldDeps : [
         { block : 'inputs' },
-        { block : 'buttons' }
+        { block : 'buttons' },
+        { block : 'typography' }
     ]
 }]
