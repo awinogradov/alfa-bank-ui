@@ -8,10 +8,10 @@
         {elem: 'meta', attrs: {name: 'viewport', content: 'width=device-width, initial-scale=1'}}
     ],
     styles: [
-        {elem: 'css', url: 'input.min.css'}
+        {elem: 'css', url: 'button.min.css'}
     ],
     scripts: [
-        {elem: 'js', url: 'input.min.js'}
+        {elem: 'js', url: 'button.min.js'}
     ],
     content : [
         {
@@ -32,10 +32,10 @@
                                 {
                                     block : 'heading',
                                     mods : { theme : 'alfa', bkg : 'color' },
-                                    content : 'Инпуты'
+                                    content : 'Кнопки'
                                 },
                                 {
-                                    block : 'inputs'
+                                    block : 'buttons'
                                 }
                             ]
                         }

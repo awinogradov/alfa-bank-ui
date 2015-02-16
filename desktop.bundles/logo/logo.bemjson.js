@@ -8,10 +8,10 @@
         {elem: 'meta', attrs: {name: 'viewport', content: 'width=device-width, initial-scale=1'}}
     ],
     styles: [
-        {elem: 'css', url: 'demo.min.css'}
+        {elem: 'css', url: 'logo.min.css'}
     ],
     scripts: [
-        {elem: 'js', url: 'demo.min.js'}
+        {elem: 'js', url: 'logo.min.js'}
     ],
     content : [
         {

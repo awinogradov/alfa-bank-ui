@@ -1,6 +1,6 @@
 [{
     shouldDeps : [
-        { block : 'header' },
-        { block : 'footer' }
+        { block : 'inputs' },
+        { block : 'buttons' }
     ]
 }]

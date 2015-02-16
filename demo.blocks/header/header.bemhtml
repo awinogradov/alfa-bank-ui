@@ -29,7 +29,7 @@ block('header')(
                                             {
                                                 block : 'link',
                                                 mods : { bkg : 'color', theme : 'alfa' },
-                                                url : '#',
+                                                url : '../logo/logo.html',
                                                 content : 'Логотипы'
                                             }
                                         ]
@@ -41,7 +41,7 @@ block('header')(
                                             {
                                                 block : 'link',
                                                 mods : { bkg : 'color', theme : 'alfa' },
-                                                url : '#',
+                                                url : '../input/input.html',
                                                 content : 'Инпуты'
                                             }
                                         ]
@@ -53,7 +53,7 @@ block('header')(
                                             {
                                                 block : 'link',
                                                 mods : { bkg : 'color', theme : 'alfa' },
-                                                url : '#',
+                                                url : '../button/button.html',
                                                 content : 'Кнопки'
                                             }
                                         ]
@@ -65,7 +65,7 @@ block('header')(
                                             {
                                                 block : 'link',
                                                 mods : { bkg : 'color', theme : 'alfa' },
-                                                url : '#',
+                                                url : '../form/form.html',
                                                 content : 'Формы'
                                             }
                                         ]
@@ -77,7 +77,7 @@ block('header')(
                                             {
                                                 block : 'link',
                                                 mods : { bkg : 'color', theme : 'alfa' },
-                                                url : '#',
+                                                url : '../typography/typography.html',
                                                 content : 'Типографика'
                                             }
                                         ]
