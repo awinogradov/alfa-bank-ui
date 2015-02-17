@@ -59,6 +59,7 @@ modules.define('input',
 
         _onMenuItemClick : function(_, data) {
             this.setVal(data.item.getVal());
+            this.emit('select', data.item.params);
             this._popup.delMod('visible');
         },
 

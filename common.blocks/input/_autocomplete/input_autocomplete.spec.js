@@ -194,6 +194,30 @@ modules.define('spec', ['jquery', 'spec-helper'], function(provide, $, helper) {
             items[3].params.val.should.equal('MAR');
             items[3].domElem.text().should.equal('Marseille');
         });
+
+        it('should emit event `select` when item selected', function() {
+            bemjson.options = [
+                { val : 'value 1', data: 'xxx', content : 'item 1' },
+                { val : 'value 2', data: 'yyy', content : 'item 2' }
+            ];
+            block = build('input', bemjson);
+            block.setVal('value 0');
+            var menu = block.findBlockInside('menu');
+            var eventCatched = false;
+
+            block.on('select', function(_, item) {
+                item.val.should.equal('value 2');
+                item.data.should.equal('yyy');
+                eventCatched = true;
+            });
+
+            // click on item
+            menu.findBlocksInside('menu-item')[1].domElem.click();
+
+            eventCatched.should.be.true;
+
+            block.getVal().should.equal('value 2');
+        });
     });
 
     provide();
