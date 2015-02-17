@@ -1,4 +1,5 @@
 banks = ( 'alfa-bank' 'baltijsky' 'bank_moskvy' 'bank_saint-peterburg' 'beeline' 'binbank' 'credit_evropa_bank' 'home_credit' 'mdm' 'moscow_credit_bank' 'mts' 'otkrytie' 'otp' 'promsvyazbank' 'qiwi' 'raiffeisenbank' 'rocketbank' 'rosbank' 'russkii_standart' 'sberbank' 'skb' 'tinkoff' 'trast' 'ubrr' 'unicredit' 'uralsib' 'vozrogdenie' 'vtb24' 'yandex_money' )
+cards = ( 'visa' 'visaelectron' 'mastercard' 'maestro' )
 
 .icon_theme_alfa
 {
@@ -37,6 +38,14 @@ banks = ( 'alfa-bank' 'baltijsky' 'bank_moskvy' 'bank_saint-peterburg' 'beeline'
         &.icon_bank_{$name}
         {
             background-image: url(../assets/_theme/_alfa/bank/$name.svg);
+        }
+    }
+
+    for $name in cards
+    {
+        &.icon_card_{$name}
+        {
+            background-image: url(../assets/_bkg/_color/card/$name.svg);
         }
     }
 }
