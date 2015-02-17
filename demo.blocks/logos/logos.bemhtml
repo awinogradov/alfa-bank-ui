@@ -1,39 +1,178 @@
 block('logos')(
     content()(function() {
-
         return [
             {
-                elem : 'size-section',
+                block : 'row',
                 content : [
                     {
-                        block : 'row',
+                        elem : 'col',
+                        mods : { 's' : true },
                         content : [
                             {
-                                elem : 'col',
-                                mods : { 's' : true },
+                                elem : 'size-section',
                                 content : [
                                     {
-                                        elem : 'sidebar',
-                                        content : 'S'
-                                    },
-                                    {
-                                        elem : 'content',
+                                        block : 'row',
                                         content : [
                                             {
-                                                block : 'controls',
+                                                elem : 'col',
+                                                mods : { 's' : true },
                                                 content : [
                                                     {
-                                                        block : 'logo',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 's', view : 'icon' }
+                                                        elem : 'sidebar',
+                                                        content : 'S'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'logo',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 's', view : 'icon' }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'logo',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 's', view : 'full' }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
                                                     }
                                                 ]
-                                            },
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
                                             {
-                                                block : 'controls',
+                                                elem : 'col',
+                                                mods : { 's' : true },
                                                 content : [
                                                     {
-                                                        block : 'logo',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 's', view : 'full' }
+                                                        elem : 'sidebar',
+                                                        content : 'M'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'logo',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', view : 'icon' }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'logo',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', view : 'full' }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'L'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'logo',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', view : 'icon' }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'logo',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', view : 'full' }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'XL'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'logo',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xl', view : 'icon' }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'logo',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xl', view : 'full' }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
                                                     }
                                                 ]
                                             }
@@ -42,136 +181,177 @@ block('logos')(
                                 ]
                             }
                         ]
-                    }
-                ]
-            },
-            {
-                tag : 'hr'
-            },
-            {
-                elem : 'size-section',
-                content: [
+                    },
                     {
-                        block : 'row',
+                        elem : 'col',
+                        mods : { 's' : true },
+                        mix : { elem : 'white' },
                         content : [
                             {
-                                elem : 'col',
-                                mods : { 's' : true },
+                                elem : 'size-section',
                                 content : [
                                     {
-                                        elem : 'sidebar',
-                                        content : 'M'
-                                    },
-                                    {
-                                        elem : 'content',
+                                        block : 'row',
                                         content : [
                                             {
-                                                block : 'controls',
+                                                elem : 'col',
+                                                mods : { 's' : true },
                                                 content : [
                                                     {
-                                                        block : 'logo',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', view : 'icon' }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                block : 'controls',
-                                                content : [
+                                                        elem : 'sidebar',
+                                                        content : 'S'
+                                                    },
                                                     {
-                                                        block : 'logo',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', view : 'full' }
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'logo',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 's', view : 'icon' }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'logo',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 's', view : 'full' }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
                                                     }
                                                 ]
                                             }
                                         ]
                                     }
                                 ]
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                tag : 'hr'
-            },
-            {
-                elem : 'size-section',
-                content: [
-                    {
-                        block : 'row',
-                        content : [
+                            },
                             {
-                                elem : 'col',
-                                mods : { 's' : true },
-                                content : [
+                                elem : 'size-section',
+                                content: [
                                     {
-                                        elem : 'sidebar',
-                                        content : 'L'
-                                    },
-                                    {
-                                        elem : 'content',
+                                        block : 'row',
                                         content : [
                                             {
-                                                block : 'controls',
+                                                elem : 'col',
+                                                mods : { 's' : true },
                                                 content : [
                                                     {
-                                                        block : 'logo',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', view : 'icon' }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                block : 'controls',
-                                                content : [
+                                                        elem : 'sidebar',
+                                                        content : 'M'
+                                                    },
                                                     {
-                                                        block : 'logo',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', view : 'full' }
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'logo',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm', view : 'icon' }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'logo',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm', view : 'full' }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
                                                     }
                                                 ]
                                             }
                                         ]
                                     }
                                 ]
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                tag : 'hr'
-            },
-            {
-                elem : 'size-section',
-                content: [
-                    {
-                        block : 'row',
-                        content : [
+                            },
                             {
-                                elem : 'col',
-                                mods : { 's' : true },
-                                content : [
+                                elem : 'size-section',
+                                content: [
                                     {
-                                        elem : 'sidebar',
-                                        content : 'XL'
-                                    },
-                                    {
-                                        elem : 'content',
+                                        block : 'row',
                                         content : [
                                             {
-                                                block : 'controls',
+                                                elem : 'col',
+                                                mods : { 's' : true },
                                                 content : [
                                                     {
-                                                        block : 'logo',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xl', view : 'icon' }
+                                                        elem : 'sidebar',
+                                                        content : 'L'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'logo',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'l', view : 'icon' }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'logo',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'l', view : 'full' }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
                                                     }
                                                 ]
-                                            },
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
                                             {
-                                                block : 'controls',
+                                                elem : 'col',
+                                                mods : { 's' : true },
                                                 content : [
                                                     {
-                                                        block : 'logo',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xl', view : 'full' }
+                                                        elem : 'sidebar',
+                                                        content : 'XL'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'logo',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'xl', view : 'icon' }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'logo',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'xl', view : 'full' }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
                                                     }
                                                 ]
                                             }
