@@ -19,11 +19,6 @@ inputFontSize = (inputs_font_size_s inputs_font_size_m inputs_font_size_l inputs
         cursor: default;
     }
 
-    &.menu-item_hovered
-    {
-        cursor: pointer;
-    }
-
     &.menu-item_type_link
     {
         .menu-item__link
@@ -36,6 +31,11 @@ inputFontSize = (inputs_font_size_s inputs_font_size_m inputs_font_size_l inputs
             .menu-item__link
             {
                 border: 0;
+
+                cursor: inherit;
+
+                color: #fff;
+                color: rgba(255,255,255,0.7);
             }
         }
     }
@@ -46,12 +46,12 @@ inputFontSize = (inputs_font_size_s inputs_font_size_m inputs_font_size_l inputs
 
         &:first-child
         {
-            padding-left: 0!important;
+            padding-left: 0;
         }
 
         &:last-child
         {
-            padding-right: 0!important;
+            padding-right: 0;
         }
     }
 }
