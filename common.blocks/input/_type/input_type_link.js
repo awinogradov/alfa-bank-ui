@@ -24,6 +24,7 @@ modules.define('input',
                     this._trigger.bindTo('click', function() {
                         _this.setMod('focused');
                     });
+                    this._placeholder = this.elem('control').attr('placeholder') || '';
 
                     this.on('change', _this._onChange);
                     this.bindTo('keyup', _this._onSubmit);
@@ -34,20 +35,25 @@ modules.define('input',
                     this.elem('control').val(this.getVal()).focus();
                 },
                 '' : function() {
-                    this._trigger.setVal(this.getVal());
+                    this._trigger.setVal(this.getVal() || this.getPlaceholder());
                     this._trigger.updateContent();
                     this.emit('submit');
                 }
             }
         },
 
+        getPlaceholder : function() {
+            return this._placeholder;
+        },
+
         _onChange : function() {
-            this._trigger.setVal(this.getVal());
+            this._trigger.setVal(this.getVal() || this.getPlaceholder());
+            this.getVal() ? this.delMod('empty') : this.setMod('empty');
         },
 
         _onSubmit : function(e) {
             if(e.keyCode === keyCodes.ENTER) {
-                this.delMod('focused');
+                this.toggleMod('focused');
             }
         }
     });

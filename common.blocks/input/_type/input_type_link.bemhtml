@@ -1,5 +1,6 @@
 block('input').mod('type', 'link')(
     def()(function() {
+        if(!this.ctx.val) this.ctx.mods.empty = true;
         applyNext({ _input : this.ctx });
     }),
 
@@ -14,10 +15,10 @@ block('input').mod('type', 'link')(
                         bkg : this._input.mods.bkg,
                         pseudo : true
                     },
-                    content : this._input.val
+                    content : this._input.val || this._input.placeholder
                 },
                 applyNext()
-            ]
+            ];
         })
     )
 );
