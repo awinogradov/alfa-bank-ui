@@ -16,6 +16,7 @@ block('input').mod('autocomplete', true)(
                     return {
                         block : 'menu-item',
                         val : item.val,
+                        data : item.data,
                         content : item.content
                     };
                 }

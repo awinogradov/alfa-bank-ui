@@ -12,6 +12,11 @@ modules.define('input', ['jquery__mask'], function(provide, $, Input) {
                     );
                 }
             }
+        },
+
+        getVal : function() {
+            var base = this.__base.apply(this, arguments);
+            return base.replace(/ /g, '');
         }
 
     }));
