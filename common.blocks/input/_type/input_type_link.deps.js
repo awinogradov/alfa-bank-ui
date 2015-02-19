@@ -3,7 +3,9 @@
     shouldDeps : [
         { block : 'keyboard', elem : 'codes' },
         { block : 'link' },
-        { block : 'link', mod : 'pseudo' }
+        { block : 'link', mod : 'pseudo' },
+        { block : 'link', mods : { theme : 'alfa', bkg : 'color' } },
+        { block : 'link', mods : { theme : 'alfa', bkg : 'white' } }
     ]
 },
 {
