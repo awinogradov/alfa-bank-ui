@@ -21,7 +21,8 @@
     "jQuery-Mask-Plugin": "~1.11.3"
   },
   "devDependencies": {
-    "bem-pr": "~0.10.0"
+    "bem-pr": "~0.10.0",
+    "jquery": "~2.1.3"
   },
   "resolutions": {
     "bem-core": "2.5.1",
