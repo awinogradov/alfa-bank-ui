@@ -1,0 +1,11 @@
+#!/bin/bash
+
+./node_modules/.bin/enb make specs
+
+if [ $? -ne 0 ]
+then
+    echo -e "\n\033[31mTESTS FAILED !!!\033[0m\n"
+    exit 1
+else
+    echo -e "\n\033[32mTESTS PASSED\033[0m\n"
+fi
