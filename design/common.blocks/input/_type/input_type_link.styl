@@ -4,8 +4,10 @@
 
     .input__box
     {
-        display:        table-cell;
-        vertical-align: middle;
+        padding-right: 0px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .input__control
@@ -22,7 +24,8 @@
             height:        control_size_s;
             line-height:   control_size_s;
             padding-left:  inputs_padding_s;
-            padding-right: inputs_padding_s;
+            margin-right: inputs_padding_s;
+            max-width: 112px;
         }
     }
 
@@ -33,7 +36,8 @@
             height:        control_size_m;
             line-height:   control_size_m;
             padding-left:  inputs_padding_m;
-            padding-right: inputs_padding_m;
+            margin-right: inputs_padding_m;
+            max-width: 110px;
         }
     }
 
@@ -44,7 +48,8 @@
             height:        control_size_l;
             line-height:   control_size_l;
             padding-left:  inputs_padding_l;
-            padding-right: inputs_padding_l;
+            margin-right: inputs_padding_l;
+            max-width: 130px;
         }
     }
 
@@ -55,7 +60,8 @@
             height:        control_size_xl;
             line-height:   control_size_xl;
             padding-left:  inputs_padding_xl;
-            padding-right: inputs_padding_xl;
+            margin-right: inputs_padding_xl;
+            max-width: 232px;
         }
     }
 
@@ -69,6 +75,8 @@
         .input__box
         {
             padding-right: 0;
+            max-width: inherit;
+            margin-right: 0px;
         }
 
         .input__control
