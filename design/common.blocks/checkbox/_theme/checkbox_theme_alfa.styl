@@ -1,6 +1,6 @@
 .checkbox_theme_alfa
 {
-    font-family: font_family;
+    font-family: $font_family;
 
     &:hover
     {
@@ -22,19 +22,19 @@
         position: relative;
         display:  inline-block;
 
-        border-radius: checkbox_radius;
+        border-radius: $checkbox_radius;
 
         &:before
         {
             position: absolute;
-            top:      checkbox_border_width;
-            right:    checkbox_border_width;
-            bottom:   checkbox_border_width;
-            left:     checkbox_border_width;
+            top:      $checkbox_border_width;
+            right:    $checkbox_border_width;
+            bottom:   $checkbox_border_width;
+            left:     $checkbox_border_width;
 
             content: '';
 
-            border-radius: checkbox_radius - 1;
+            border-radius: $checkbox_radius - 1;
         }
 
         &:after
@@ -56,50 +56,50 @@
 
     &.checkbox_size_m
     {
-        font-size: inputs_font_size_m;
+        font-size: $inputs_font_size_m;
 
         .checkbox__box
         {
-            line-height: checkbox_size_m;
+            line-height: $checkbox_size_m;
 
             top: 2px;
 
-            width:  checkbox_size_m;
-            height: checkbox_size_m;
+            width:  $checkbox_size_m;
+            height: $checkbox_size_m;
 
-            margin-right: checkbox_margin_m;
+            margin-right: $checkbox_margin_m;
 
             &:after
             {
-                width:  checkbox_control_size_m;
-                height: checkbox_control_size_m;
+                width:  $checkbox_control_size_m;
+                height: $checkbox_control_size_m;
 
-                transform: translateY(- checkbox_margin_m);
+                transform: translateY(- $checkbox_margin_m);
             }
         }
     }
 
     &.checkbox_size_l
     {
-        font-size: inputs_font_size_l;
+        font-size: $inputs_font_size_l;
 
         .checkbox__box
         {
-            line-height: checkbox_size_l;
+            line-height: $checkbox_size_l;
 
             top: 3px;
 
-            width:  checkbox_size_l;
-            height: checkbox_size_l;
+            width:  $checkbox_size_l;
+            height: $checkbox_size_l;
 
-            margin-right: checkbox_margin_l;
+            margin-right: $checkbox_margin_l;
 
             &:after
             {
-                width:  checkbox_control_size_l;
-                height: checkbox_control_size_l;
+                width:  $checkbox_control_size_l;
+                height: $checkbox_control_size_l;
 
-                transform: translateY(- checkbox_margin_l);
+                transform: translateY(- $checkbox_margin_l);
             }
         }
     }

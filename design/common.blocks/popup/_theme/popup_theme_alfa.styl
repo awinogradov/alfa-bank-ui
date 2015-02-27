@@ -4,7 +4,7 @@
 
     margin: -9999px 0 0 -9999px;
 
-    border-radius: popup_radius;
+    border-radius: $popup_radius;
     box-sizing: border-box;
 
     &.popup_js_inited {
@@ -36,15 +36,15 @@
     }
 
     &.popup_view_dropdown {
-        border-radius: 0 0 popup_radius popup_radius;
+        border-radius: 0 0 $popup_radius $popup_radius;
         margin-top: -3px;
     }
 
     &.popup_visible.popup_view_hint {
         & {
-            font-family: font_family;
-            font-weight: font_weight;
-            font-size: font_size;
+            font-family: $font_family;
+            font-weight: $font_weight;
+            font-size: $font_size;
             padding: 15px;
             color: white;
             background-color: #000;

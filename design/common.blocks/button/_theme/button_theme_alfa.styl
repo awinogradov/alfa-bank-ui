@@ -1,6 +1,6 @@
 ctx = '.button_theme_alfa'
 {ctx} {
-    font-family: font_family;
+    font-family: $font_family;
 
     position: relative;
     display:  inline-block;
@@ -11,7 +11,7 @@ ctx = '.button_theme_alfa'
     user-select: none;
 
     border:        0;
-    border-radius: btns_radius;
+    border-radius: $btns_radius;
 
     outline: 0;
 
@@ -60,14 +60,14 @@ ctx = '.button_theme_alfa'
     &:before
     {
         position: absolute;
-        top:      btns_border_size;
-        right:    btns_border_size;
-        bottom:   btns_border_size;
-        left:     btns_border_size;
+        top:      $btns_border_size;
+        right:    $btns_border_size;
+        bottom:   $btns_border_size;
+        left:     $btns_border_size;
 
         content: '';
 
-        border-radius: btns_radius - 1;
+        border-radius: $btns_radius - 1;
 
         transition: all 200ms ease;
     }
@@ -126,45 +126,45 @@ ctx = '.button_theme_alfa'
 
     &.button_size_s
     {
-        font-size:   btns_font_size_s;
-        line-height: control_size_s;
+        font-size:   $btns_font_size_s;
+        line-height: $control_size_s;
 
         .button__text
         {
-            margin: 0 btns_padding_s;
+            margin: 0 $btns_padding_s;
         }
     }
 
     &.button_size_m
     {
-        font-size:   btns_font_size_m;
-        line-height: control_size_m;
+        font-size:   $btns_font_size_m;
+        line-height: $control_size_m;
 
         .button__text
         {
-            margin: 0 btns_padding_s;
+            margin: 0 $btns_padding_s;
         }
     }
 
     &.button_size_l
     {
-        font-size:   btns_font_size_l;
-        line-height: control_size_l;
+        font-size:   $btns_font_size_l;
+        line-height: $control_size_l;
 
         .button__text
         {
-            margin: 0 btns_padding_l;
+            margin: 0 $btns_padding_l;
         }
     }
 
     &.button_size_xl
     {
-        font-size:   btns_font_size_xl;
-        line-height: control_size_xl;
+        font-size:   $btns_font_size_xl;
+        line-height: $control_size_xl;
 
         .button__text
         {
-            margin: 0 btns_padding_xl;
+            margin: 0 $btns_padding_xl;
         }
     }
 
@@ -201,13 +201,13 @@ ctx = '.button_theme_alfa'
     > {ctx}:first-child,
     > :first-child {ctx}
     {
-        border-radius: btns_radius 0 0 btns_radius;
+        border-radius: $btns_radius 0 0 $btns_radius;
 
         border-right: 0;
 
         &:before
         {
-            border-radius: btns_radius - 1 0 0 btns_radius - 1;
+            border-radius: $btns_radius - 1 0 0 $btns_radius - 1;
 
             right: 0;
         }
@@ -216,13 +216,13 @@ ctx = '.button_theme_alfa'
     > {ctx}:last-child,
     > :last-child {ctx}
     {
-        border-radius: 0 btns_radius btns_radius 0;
+        border-radius: 0 $btns_radius $btns_radius 0;
 
         border-left: 0;
 
         &:before
         {
-            border-radius: 0 btns_radius - 1 btns_radius - 1 0;
+            border-radius: 0 $btns_radius - 1 $btns_radius - 1 0;
 
             left: 0;
         }
@@ -230,11 +230,11 @@ ctx = '.button_theme_alfa'
 
     > :only-child {ctx}
     {
-        border-radius: btns_radius;
+        border-radius: $btns_radius;
 
         &:before
         {
-            border-radius: btns_radius - 1;
+            border-radius: $btns_radius - 1;
         }
     }
 }

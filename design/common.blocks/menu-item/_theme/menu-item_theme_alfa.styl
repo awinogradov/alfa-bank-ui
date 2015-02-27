@@ -1,7 +1,7 @@
 paddingVert = (3 4 5 6);
-paddingHor = (inputs_padding_s inputs_padding_m inputs_padding_l inputs_padding_xl);
-fontSize = (links_font_size_s links_font_size_m links_font_size_l links_font_size_xl);
-inputFontSize = (inputs_font_size_s inputs_font_size_m inputs_font_size_l inputs_font_size_xl);
+paddingHor = ($inputs_padding_s $inputs_padding_m $inputs_padding_l $inputs_padding_xl);
+fontSize = ($links_font_size_s $links_font_size_m $links_font_size_l $links_font_size_xl);
+inputFontSize = ($inputs_font_size_s $inputs_font_size_m $inputs_font_size_l $inputs_font_size_xl);
 
 .menu-item_theme_alfa
 {
@@ -76,11 +76,11 @@ for sizeVal, i in s m l xl {
 {
     .menu-item:first-child
     {
-        margin-top: popup_radius;
+        margin-top: $popup_radius;
     }
     .menu-item:last-child
     {
-        margin-bottom: popup_radius;
+        margin-bottom: $popup_radius;
     }
 
     .menu__group

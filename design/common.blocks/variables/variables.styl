@@ -1,156 +1,156 @@
 /*
 * BASE FONT
 */
-font_family      = 'Roboto', sans-serif;
-font_weight      = 300;
-font_size        = 15px;
+$font_family      = 'Roboto', sans-serif;
+$font_weight      = 300;
+$font_size        = 15px;
 
 /*
 * HEADINGS
 */
-h_font_family    = font_family;
-h_font_weight    = 100;
+$h_font_family    = font_family;
+$h_font_weight    = 100;
 
 /*
 * PALETTE
 */
-gray             = #b0afb4;
-green            = #00d496;
-green_rgba       = rgba(0, 212, 150, 1);
-red              = #e4330b;
-red_another      = #ef3124;
-red_another_rgba = rgba(239,49,36,.4);
-error            = #fc5e62;
-blue             = #356b8d;
+$gray             = #b0afb4;
+$green            = #00d496;
+$green_rgba       = rgba(0, 212, 150, 1);
+$red              = #e4330b;
+$red_another      = #ef3124;
+$red_another_rgba = rgba(239,49,36,.4);
+$error            = #fc5e62;
+$blue             = #356b8d;
 
 /*
 * OUTLINES
 */
-outline_green    = darken(green, 10%);
+$outline_green    = darken($green, 10%);
 
 /*
 * CONTROLS SIZES
 */
-control_size_s  = 25px;
-control_size_m  = 35px;
-control_size_l  = 45px;
-control_size_xl = 55px;
+$control_size_s  = 25px;
+$control_size_m  = 35px;
+$control_size_l  = 45px;
+$control_size_xl = 55px;
 
-control_result_font_size_s  = 25px;
-control_result_font_size_m  = 48px;
-control_result_font_size_l  = 62px;
-control_result_font_size_xl = 76px;
+$control_result_font_size_s  = 25px;
+$control_result_font_size_m  = 48px;
+$control_result_font_size_l  = 62px;
+$control_result_font_size_xl = 76px;
 
 /*
 * OPACITY
 */
-opacity_disabled = 0.4;
+$opacity_disabled = 0.4;
 
 /*
 * BUTTONS
 */
-btns_font_family = font_family;
-btns_font_weight = 300;
-btns_radius      = 6px;
-btns_border_size = 1px;
+$btns_font_family = $font_family;
+$btns_font_weight = 300;
+$btns_radius      = 6px;
+$btns_border_size = 1px;
 
-btns_font_size_s  = 12px;
-btns_font_size_m  = 12px;
-btns_font_size_l  = 14px;
-btns_font_size_xl = 16px;
+$btns_font_size_s  = 12px;
+$btns_font_size_m  = 12px;
+$btns_font_size_l  = 14px;
+$btns_font_size_xl = 16px;
 
-btns_padding_s  = 20px;
-btns_padding_m  = 30px;
-btns_padding_l  = 40px;
-btns_padding_xl = 50px;
+$btns_padding_s  = 20px;
+$btns_padding_m  = 30px;
+$btns_padding_l  = 40px;
+$btns_padding_xl = 50px;
 
 /*
 * INPUTS
 */
-inputs_radius      = 6px;
-inputs_border_size = 1px;
-inputs_font_weight = 100;
+$inputs_radius      = 6px;
+$inputs_border_size = 1px;
+$inputs_font_weight = 100;
 
-inputs_font_size_s  = 12px;
-inputs_font_size_m  = 12px;
-inputs_font_size_l  = 15px;
-inputs_font_size_xl = 25px;
+$inputs_font_size_s  = 12px;
+$inputs_font_size_m  = 12px;
+$inputs_font_size_l  = 15px;
+$inputs_font_size_xl = 25px;
 
-inputs_padding_s  = 13px;
-inputs_padding_m  = 15px;
-inputs_padding_l  = 17px;
-inputs_padding_xl = 19px;
+$inputs_padding_s  = 13px;
+$inputs_padding_m  = 15px;
+$inputs_padding_l  = 17px;
+$inputs_padding_xl = 19px;
 
 /*
  * LINKS
  */
-links_font_size_s  = 12px;
-links_font_size_m  = 15px;
-links_font_size_l  = 20px;
-links_font_size_xl = 35px;
+$links_font_size_s  = 12px;
+$links_font_size_m  = 15px;
+$links_font_size_l  = 20px;
+$links_font_size_xl = 35px;
 
 /*
  * ICONS
  */
-icon_size_s = 19px;
-icon_size_m = 28px;
-icon_size_l = 42px;
-icon_size_xl = 56px;
+$icon_size_s = 19px;
+$icon_size_m = 28px;
+$icon_size_l = 42px;
+$icon_size_xl = 56px;
 
 /*
 * TEXTAREA
 */
-textarea_font_size_s  = 15px;
-textarea_font_size_m  = 15px;
-textarea_font_size_l  = 15px;
-textarea_font_size_xl = 15px;
+$textarea_font_size_s  = 15px;
+$textarea_font_size_m  = 15px;
+$textarea_font_size_l  = 15px;
+$textarea_font_size_xl = 15px;
 
-textarea_padding_s  = 4px inputs_padding_s;
-textarea_padding_m  = 4px inputs_padding_m;
-textarea_padding_l  = 4px inputs_padding_l;
-textarea_padding_xl = 4px inputs_padding_xl;
+$textarea_padding_s  = 4px $inputs_padding_s;
+$textarea_padding_m  = 4px $inputs_padding_m;
+$textarea_padding_l  = 4px $inputs_padding_l;
+$textarea_padding_xl = 4px $inputs_padding_xl;
 
-textarea_min_height_s  = 2em;
-textarea_min_height_m  = 4em;
-textarea_min_height_l  = 6em;
-textarea_min_height_xl = 8em;
+$textarea_min_height_s  = 2em;
+$textarea_min_height_m  = 4em;
+$textarea_min_height_l  = 6em;
+$textarea_min_height_xl = 8em;
 
 /*
 * RADIO
 */
-radio_size_m = 14px;
-radio_size_l = 17px;
+$radio_size_m = 14px;
+$radio_size_l = 17px;
 
-radio_control_size_m = 8px;
-radio_control_size_l = 9px;
+$radio_control_size_m = 8px;
+$radio_control_size_l = 9px;
 
-radio_margin_m = 5px;
-radio_margin_l = 7px;
+$radio_margin_m = 5px;
+$radio_margin_l = 7px;
 
-radio_border_width = 1px;
+$radio_border_width = 1px;
 
 /*
 * CHECKBOX
 */
-checkbox_radius = 3px;
+$checkbox_radius = 3px;
 
-checkbox_size_m = radio_size_m;
-checkbox_size_l = radio_size_l;
+$checkbox_size_m = radio_size_m;
+$checkbox_size_l = radio_size_l;
 
-checkbox_margin_m = radio_margin_m;
-checkbox_margin_l = radio_margin_l;
+$checkbox_margin_m = radio_margin_m;
+$checkbox_margin_l = radio_margin_l;
 
-checkbox_control_size_m = 15px;
-checkbox_control_size_l = 18px;
+$checkbox_control_size_m = 15px;
+$checkbox_control_size_l = 18px;
 
-checkbox_border_width = 1px;
+$checkbox_border_width = 1px;
 
 /*
 * POPUP
 */
-popup_radius = 6px;
+$popup_radius = 6px;
 
 /*
 * MENU
 */
-menu_radius = 6px;
+$menu_radius = 6px;
