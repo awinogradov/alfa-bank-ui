@@ -2,9 +2,9 @@
 {
     color: #000;
 
-    font-weight: btns_font_weight;
+    font-weight: $btns_font_weight;
 
-    background: gray;
+    background: $gray;
 
     &:before
     {
@@ -18,9 +18,9 @@
 
     &.button_hovered
     {
-        background: green;
-        background: green_rgba;
-        color:      green;
+        background: $green;
+        background: $green_rgba;
+        color:      $green;
     }
 
     &.button_focused-hard
@@ -37,26 +37,26 @@
 
     &.button_view_action
     {
-        background:  green;
+        background:  $green;
         color:       #fff;
 
         &:before
         {
-            background: green;
+            background: $green;
         }
 
         &.button_pressed:before
         {
-            background: green;
+            background: $green;
         }
 
         &.button_hovered
         {
-            background: lighten(green, 5%);
+            background: lighten($green, 5%);
 
             &:before
             {
-                background: lighten(green, 5%);
+                background: lighten($green, 5%);
             }
         }
     }
@@ -67,13 +67,13 @@
 
         &:before
         {
-            border: gray dotted btns_border_size;
+            border: $gray dotted $btns_border_size;
         }
 
         &.button_hovered:before
         {
 
-            border-color: green_rgba;
+            border-color: $green_rgba;
         }
     }
 }
@@ -82,12 +82,12 @@
 {
     {ctx}.button_checked
     {
-        background:  gray;
+        background:  $gray;
         color:       #fff;
 
         &:before
         {
-            background:  green;
+            background:  $green;
         }
 
         &.button_pressed

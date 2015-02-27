@@ -1,12 +1,12 @@
 ctx = '.input_theme_alfa'
 {ctx} {
-    font-family: font_family;
-    font-weight: font_weight;
+    font-family: $font_family;
+    font-weight: $font_weight;
 
     position: relative;
     display:  inline-block;
 
-    border-radius: inputs_radius;
+    border-radius: $inputs_radius;
 
     transition: all 200ms ease;
 
@@ -14,14 +14,14 @@ ctx = '.input_theme_alfa'
     &:before
     {
         position: absolute;
-        top:      inputs_border_size;
-        right:    inputs_border_size;
-        bottom:   inputs_border_size;
-        left:     inputs_border_size;
+        top:      $inputs_border_size;
+        right:    $inputs_border_size;
+        bottom:   $inputs_border_size;
+        left:     $inputs_border_size;
 
         content: '';
 
-        border-radius: inputs_radius - inputs_border_size;
+        border-radius: $inputs_radius - $inputs_border_size;
     }
 
     .input__box
@@ -133,12 +133,12 @@ ctx = '.input_theme_alfa'
 
     &.input_size_s
     {
-        font-size: inputs_font_size_s;
+        font-size: $inputs_font_size_s;
 
         .input__control
         {
-            height:       control_size_s;
-            padding-left: inputs_padding_s;
+            height:       $control_size_s;
+            padding-left: $inputs_padding_s;
         }
 
         &.input_has-clear .input__box
@@ -157,12 +157,12 @@ ctx = '.input_theme_alfa'
 
     &.input_size_m
     {
-        font-size: inputs_font_size_m;
+        font-size: $inputs_font_size_m;
 
         .input__control
         {
-            height:       control_size_m;
-            padding-left: inputs_padding_m;
+            height:       $control_size_m;
+            padding-left: $inputs_padding_m;
         }
 
         &.input_has-clear .input__box
@@ -181,12 +181,12 @@ ctx = '.input_theme_alfa'
 
     &.input_size_l
     {
-        font-size: inputs_font_size_l;
+        font-size: $inputs_font_size_l;
 
         .input__control
         {
-            height:       control_size_l;
-            padding-left: inputs_padding_l;
+            height:       $control_size_l;
+            padding-left: $inputs_padding_l;
         }
 
         &.input_has-clear .input__box
@@ -205,13 +205,13 @@ ctx = '.input_theme_alfa'
 
     &.input_size_xl
     {
-        font-size:   inputs_font_size_xl;
+        font-size:   $inputs_font_size_xl;
         line-height: @font-size + 4;
 
         .input__control
         {
-            height:       control_size_xl;
-            padding-left: inputs_padding_xl;
+            height:       $control_size_xl;
+            padding-left: $inputs_padding_xl;
         }
 
         &.input_has-clear .input__box
