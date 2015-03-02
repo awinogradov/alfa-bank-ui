@@ -1,6 +1,8 @@
 #!/bin/bash
 
-./node_modules/.bin/enb make specs
+# Run tests
+
+ISTANBUL_COVERAGE=yes ./node_modules/.bin/enb make specs
 
 if [ $? -ne 0 ]
 then
@@ -8,4 +10,17 @@ then
     exit 1
 else
     echo -e "\n\033[32mTESTS PASSED\033[0m\n"
+fi
+
+# Check coverage
+
+./node_modules/.bin/istanbul report --include coverage.json text-summary
+./node_modules/.bin/istanbul check-coverage --include coverage.json --statement 100 --branch 100
+
+if [ $? -ne 0 ]
+then
+    echo -e "\n\033[31mNOT ENOUGH TEST COVERAGE !!!\033[0m\n"
+    exit 1
+else
+    echo -e "\n\033[32mTEST COVERAGE OK\033[0m\n"
 fi
