@@ -24,7 +24,11 @@ modules.define('spec', ['form-field', 'spec-helper'], function(provide, _, helpe
         it('should allow to change value', function() {
             block.setVal('new val');
             block.getVal().should.equal('new val');
-        })
+        });
+
+        it('should get name from params', function() {
+            block.getName().should.equal('field name');
+        });
     });
 
     provide();

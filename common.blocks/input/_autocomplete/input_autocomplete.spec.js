@@ -218,6 +218,36 @@ modules.define('spec', ['jquery', 'spec-helper'], function(provide, $, helper) {
 
             block.getVal().should.equal('value 2');
         });
+
+        it('should close the popup when user clicked outside', function() {
+            block = build('input', bemjson);
+            var popup = block.findBlockInside('popup');
+
+            block.elem('control').focus();
+            popup.getMod('visible').should.be.true;
+
+            var x = popup.domElem.position().left - 1, y = popup.domElem.position().top - 1;
+            $(document).trigger(new $.Event('pointerpress', { pageX: x, pageY: y }));
+            block._isPointerPressInProgress.should.be.false;
+            $(document).trigger(new $.Event('pointerrelease', { pageX: x, pageY: y }));
+
+            popup.getMod('visible').should.equal('');
+        });
+
+        it('should not close the popup when user clicked inside', function() {
+            block = build('input', bemjson);
+            var popup = block.findBlockInside('popup');
+
+            block.elem('control').focus();
+            popup.getMod('visible').should.be.true;
+
+            var x = popup.domElem.position().left + 1, y = popup.domElem.position().top + 1;
+            popup.domElem.trigger(new $.Event('pointerpress', { pageX: x, pageY: y }));
+            block._isPointerPressInProgress.should.be.true;
+            popup.domElem.trigger(new $.Event('pointerrelease', { pageX: x, pageY: y }));
+
+            popup.getMod('visible').should.be.true;
+        });
     });
 
     provide();
