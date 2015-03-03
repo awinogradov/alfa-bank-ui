@@ -5,8 +5,7 @@
   "description": "NYC Public Library of UI components",
   "dependencies": {
     "bem-environ": "1.4.0",
-    "enb-bem-examples": "^0.5.9",
-    "jquery": "^2.1.3"
+    "enb-bem-examples": "^0.5.9"
   },
   "devDependencies": {
     "bem": "~0.9.0",
