@@ -778,7 +778,8 @@
                                                 {
                                                     block : 'input',
                                                     mods : { theme : 'alfa', bkg : 'color', size: 's', 'type' : 'link' },
-                                                    val : 'Простой inplace'
+                                                    val : null,
+                                                    placeholder : 'Добавьте название'
                                                 }
                                             ]
                                         },
