@@ -1,4 +1,4 @@
-modules.define('input', ['jquery__mask', 'jquery__numeric'], function(provide, $, Input) {
+modules.define('input', ['jquery__mask', 'jquery__numeric'], function(provide, $, $, Input) {
 
     provide(Input.decl({ modName : 'type', modVal : 'card' }, {
 
