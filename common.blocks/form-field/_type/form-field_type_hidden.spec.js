@@ -29,6 +29,18 @@ modules.define('spec', ['form-field', 'spec-helper'], function(provide, _, helpe
         it('should get name from params', function() {
             block.getName().should.equal('field name');
         });
+
+        it('should return empty string, when there is no value', function() {
+            var b = helper.buildBlock('form-field', {
+                block : 'form-field',
+                mods : { type : 'hidden' },
+                name : 'field name'
+            });
+
+            b.getVal().should.equal('');
+
+            helper.destruct(b);
+        });
     });
 
     provide();

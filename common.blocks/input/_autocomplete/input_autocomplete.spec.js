@@ -244,6 +244,7 @@ modules.define('spec', ['jquery', 'spec-helper'], function(provide, $, helper) {
             var x = popup.domElem.position().left + 1, y = popup.domElem.position().top + 1;
             popup.domElem.trigger(new $.Event('pointerpress', { pageX: x, pageY: y }));
             block._isPointerPressInProgress.should.be.true;
+            block.elem('control').blur();
             popup.domElem.trigger(new $.Event('pointerrelease', { pageX: x, pageY: y }));
 
             popup.getMod('visible').should.be.true;

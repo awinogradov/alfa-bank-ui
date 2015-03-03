@@ -32,13 +32,30 @@ modules.define('spec', ['input', 'link', 'spec-helper'], function(provide, _, li
         });
 
         it('should set placeholder text to link when val is empty', function() {
-            var link = input.findBlockInside('link');
+            var link = input._trigger.domElem;
             input.setVal('');
-            link.domElem.text().should.equal('placeholder');
+            link.text().should.equal('placeholder');
             input.setVal('some val');
-            link.domElem.text().should.equal('some val');
+            link.text().should.equal('some val');
             input.setVal('');
-            link.domElem.text().should.equal('placeholder');
+            link.text().should.equal('placeholder');
+
+            // blur should not reset link text
+            input.setMod('focused');
+            input.delMod('focused');
+            link.text().should.equal('placeholder');
+        });
+
+        it('should set placeholder text to empty string, when placeholder is not specified', function() {
+            var input = helper.buildBlock('input', {
+                block : 'input',
+                mods : { type : 'link' },
+                val : 'inplace'
+            });
+
+            input.getPlaceholder().should.equal('');
+
+            helper.destruct(input);
         });
 
         it('should set mod `empty` when val is empty', function() {
@@ -47,6 +64,19 @@ modules.define('spec', ['input', 'link', 'spec-helper'], function(provide, _, li
             input.getMod('empty').should.be.true;
             input.setVal('xxx');
             (!!input.getMod('empty')).should.be.false;
+        });
+
+        it('should toggle focused mod on ENTER key', function() {
+            var link = input._trigger.domElem;
+            link.focus();
+            input.getMod('focused').should.equal('');
+            link.trigger($.Event('keyup', { keyCode : 13 }));
+            input.getMod('focused').should.equal(true);
+            link.trigger($.Event('keyup', { keyCode : 13 }));
+            input.getMod('focused').should.equal('');
+            // other random key
+            link.trigger($.Event('keyup', { keyCode : 67 }));
+            input.getMod('focused').should.equal('');
         });
     });
 
