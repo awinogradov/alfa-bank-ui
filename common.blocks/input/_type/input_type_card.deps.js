@@ -1,5 +1,5 @@
 [{
     mustDeps : [
-        { block : 'jquery', elem : 'mask' }
+        { block : 'jquery', elems : ['mask', 'numeric'] }
     ]
 }]
