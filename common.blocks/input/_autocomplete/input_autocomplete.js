@@ -44,13 +44,14 @@ modules.define('input',
             if (this._isEventInPopup(e)) {
                 this._isPointerPressInProgress = true;
                 this.bindToDoc('pointerrelease', this._onDocPointerRelease);
+            } else {
+                this.delMod('opened');
             }
         },
 
         _onDocPointerRelease : function(e) {
             this._isPointerPressInProgress = false;
             this.unbindFromDoc('pointerrelease', this._onDocPointerRelease);
-            this.delMod('opened');
         },
 
         _isEventInPopup : function(e) {
@@ -60,7 +61,7 @@ modules.define('input',
         _onMenuItemClick : function(_, data) {
             this.setVal(data.item.getVal());
             this.emit('select', data.item.params);
-            this._popup.delMod('visible');
+            this.delMod('opened');
         },
 
         _updateMenuWidth : function() {

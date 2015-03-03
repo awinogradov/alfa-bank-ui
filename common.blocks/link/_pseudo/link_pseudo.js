@@ -32,7 +32,7 @@ modules.define('link', function(provide, Link) {
          */
         setVal : function(val) {
             this._val = val;
-            this.domElem.text(this._val);
+            this.updateContent();
         },
         /**
          * Update text on link
