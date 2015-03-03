@@ -1,4 +1,4 @@
 modules.define('jquery', function(provide) {
-    /*borschik:include:../../libs/jquery/dist/jquery.min.js*/
+    /*borschik:include:../../node_modules/jquery/dist/jquery.min.js*/
     provide($);
 });
