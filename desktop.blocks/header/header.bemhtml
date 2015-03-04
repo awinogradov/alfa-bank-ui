@@ -3,12 +3,14 @@ block('header')(
     js()(true),
 
     content()(function() {
+        var _this = this;
+
         return [
             {
                 elem : 'inner',
                 content : applyNext({
-                    _headerMods : this.mods,
-                    _header : this.ctx
+                    _headerMods : _this.mods,
+                    _header : _this.ctx
                 })
             }
         ];

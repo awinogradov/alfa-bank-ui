@@ -1,5 +1,7 @@
 block('header').elem('inner')(
     content()(function() {
+        var _this = this;
+
         return [
             {
                 elem : 'logo',
@@ -7,8 +9,8 @@ block('header').elem('inner')(
                     {
                         block : 'logo',
                         mods : {
-                            theme : this._headerMods.theme,
-                            bkg : this._headerMods.bkg,
+                            theme : _this._headerMods.theme,
+                            bkg : _this._headerMods.bkg,
                             size : 's',
                             view : 'full'
                         }
