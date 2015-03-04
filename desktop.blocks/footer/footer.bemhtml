@@ -1,5 +1,12 @@
 block('footer')(
 
+    def()(function() {
+        applyNext({
+            _footerMods : this.mods,
+            _footer : this.ctx
+        });
+    }),
+
     content()(function() {
         return [
             {

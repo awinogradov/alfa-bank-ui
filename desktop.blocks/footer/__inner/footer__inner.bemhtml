@@ -1,13 +1,6 @@
-block('footer')(
+block('header').elem('inner')(
     content()(function() {
-        var menu = data.settings.menu_footer.items.map(function(item) {
-            return {
-                block : 'menu-item',
-                mods : { type : 'link' },
-                url : item.url,
-                content : item.title
-            };
-        });
+        var _this = this;
 
         return [
             {
@@ -26,6 +19,6 @@ block('footer')(
                     { block : 'copyright' }
                 ]
             }
-        ]
+        ];
     })
 );

@@ -1,5 +1,6 @@
 [{
     shouldDeps : [
+        { elems : ['inner', 'menu'] },
         { block : 'copyright' },
         { block : 'menu', mods : {  horizontal : true } }
     ].concat([
