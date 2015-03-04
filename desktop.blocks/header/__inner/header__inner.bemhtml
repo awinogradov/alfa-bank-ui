@@ -27,29 +27,7 @@ block('header').elem('inner')(
                         elem : 'user'
                     },
                     {
-                        elem : 'helper',
-                        content : [
-                            {
-                                elem : 'helper-city',
-                                content : [
-                                    {
-                                        block : 'link',
-                                        mods : { theme : 'alfa', bkg : 'color', pseudo : true, size : 'm' },
-                                        url : '#',
-                                        content : 'Москва'
-                                    }
-                                ]
-                            },
-                            {
-                                elem : 'helper-phone',
-                                content : {
-                                    block : 'link',
-                                    mods : { theme : 'alfa', bkg : 'color', pseudo : true, size : 'm' },
-                                    url : '#',
-                                    content : '+7 (777) 777-77-77'
-                                }
-                            }
-                        ]
+                        elem : 'support'
                     }
                 ]
             }

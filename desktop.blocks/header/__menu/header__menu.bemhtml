@@ -5,8 +5,13 @@ block('header').elem('menu')(
         return [
             {
                 block : 'menu',
-                mods : { bkg : 'color', theme : 'alfa', size : 'm', horizontal : true },
-                content : _this._header.ctx.menu.map(function(item) {
+                mods : {
+                    theme : _this._headerMods.theme,
+                    bkg : _this._headerMods.bkg,
+                    size : 'm',
+                    horizontal : true
+                },
+                content : _this._header.menu.map(function(item) {
                     return {
                         block : 'menu-item',
                         mods : { type : 'link' },

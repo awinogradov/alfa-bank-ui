@@ -1,0 +1,38 @@
+block('header').elem('support')(
+    content()(function() {
+        var _this = this;
+
+        return [
+            {
+                elem : 'support-city',
+                content : [
+                    {
+                        block : 'link',
+                        mods : {
+                            theme : _this._headerMods.theme,
+                            bkg : _this._headerMods.bkg,
+                            pseudo : true,
+                            size : 'm'
+                        },
+                        url : '#',
+                        content : 'Москва'
+                    }
+                ]
+            },
+            {
+                elem : 'support-phone',
+                content : {
+                    block : 'link',
+                    mods : {
+                        theme : _this._headerMods.theme,
+                        bkg : _this._headerMods.bkg,
+                        pseudo : true,
+                        size : 'm'
+                    },
+                    url : '#',
+                    content : '+7 (777) 777-77-77'
+                }
+            }
+        ];
+    })
+);

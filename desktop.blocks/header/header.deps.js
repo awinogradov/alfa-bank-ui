@@ -1,6 +1,6 @@
 [{
     shouldDeps : [
-        { elems : ['inner', 'menu', 'user'] },
+        { elems : ['inner', 'menu', 'user', 'support'] },
         { block : 'logo', mods : { view : 'full' } },
         { block : 'menu', mods : { horizontal : true } },
         { block : 'menu-item', mods : { type : 'link' } },

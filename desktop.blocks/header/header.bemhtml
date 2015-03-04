@@ -2,16 +2,18 @@ block('header')(
 
     js()(true),
 
-    content()(function() {
-        var _this = this;
+    def()(function() {
+        applyNext({
+            _headerMods : this.mods,
+            _header : this.ctx
+        });
+    }),
 
+    content()(function() {
         return [
             {
                 elem : 'inner',
-                content : applyNext({
-                    _headerMods : _this.mods,
-                    _header : _this.ctx
-                })
+                content : this.ctx.content
             }
         ];
     })
