@@ -1,0 +1,19 @@
+block('header').elem('user')(
+    content()(function() {
+        var _this = this;
+
+        return [
+            {
+                block : 'link',
+                mods : {
+                    theme : _this._headerMods.theme,
+                    bkg : _this._headerMods.bkg,
+                    pseudo : true,
+                    size : 'm'
+                },
+                url : '#',
+                content : 'Виноградов А.'
+            }
+        ];
+    })
+);

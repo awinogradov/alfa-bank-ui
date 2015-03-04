@@ -1,0 +1,36 @@
+block('header').elem('inner')(
+    content()(function() {
+        var _this = this;
+
+        return [
+            {
+                elem : 'logo',
+                content : [
+                    {
+                        block : 'logo',
+                        mods : {
+                            theme : _this._headerMods.theme,
+                            bkg : _this._headerMods.bkg,
+                            size : 's',
+                            view : 'full'
+                        }
+                    }
+                ]
+            },
+            {
+                elem : 'content',
+                content : [
+                    {
+                        elem : 'menu'
+                    },
+                    {
+                        elem : 'user'
+                    },
+                    {
+                        elem : 'support'
+                    }
+                ]
+            }
+        ];
+    })
+);
