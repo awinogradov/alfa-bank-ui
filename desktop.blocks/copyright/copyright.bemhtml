@@ -1,0 +1,25 @@
+block('copyright')(
+
+    content()(function() {
+        var _copyrightMods = this.mods;
+
+        return [
+            '© 2001 - ' + new Date().getFullYear() +
+            ' Альфа-Банк Генеральная лицензия Банка России №1326 от 5 марта 2012 г',
+            {
+                block : 'social-links',
+                mods : {
+                    theme : _copyrightMods.theme,
+                    bkg : _copyrightMods.bkg,
+                    size : 's'
+                },
+                links : [
+                    { network : 'vk', url : 'https://vk.com/alfabank' },
+                    { network : 'facebook', url : 'https://facebook.com/alfabank' },
+                    { network : 'twitter', url : 'https://twitter.com/alfabank' }
+                ]
+            }
+        ];
+    })
+
+);

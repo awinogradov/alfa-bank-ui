@@ -1,0 +1,31 @@
+block('footer')(
+    content()(function() {
+        var menu = data.settings.menu_footer.items.map(function(item) {
+            return {
+                block : 'menu-item',
+                mods : { type : 'link' },
+                url : item.url,
+                content : item.title
+            };
+        });
+
+        return [
+            {
+                elem : 'menu',
+                content : [
+                    {
+                        block : 'menu',
+                        mods : { bkg : 'color', theme : 'alfa', size : 'm', horizontal : true },
+                        content : menu
+                    }
+                ]
+            },
+            {
+                elem : 'copyright',
+                content : [
+                    { block : 'copyright' }
+                ]
+            }
+        ]
+    })
+);

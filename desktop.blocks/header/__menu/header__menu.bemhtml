@@ -1,0 +1,20 @@
+block('header').elem('menu')(
+    content()(function() {
+        var _this = this;
+
+        return [
+            {
+                block : 'menu',
+                mods : { bkg : 'color', theme : 'alfa', size : 'm', horizontal : true },
+                content : _this._header.ctx.menu.map(function(item) {
+                    return {
+                        block : 'menu-item',
+                        mods : { type : 'link' },
+                        url : item.url,
+                        content : item.title
+                    };
+                })
+            }
+        ];
+    })
+);
