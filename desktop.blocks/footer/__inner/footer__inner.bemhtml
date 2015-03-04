@@ -1,17 +1,8 @@
-block('header').elem('inner')(
+block('footer').elem('inner')(
     content()(function() {
-        var _this = this;
-
         return [
             {
-                elem : 'menu',
-                content : [
-                    {
-                        block : 'menu',
-                        mods : { bkg : 'color', theme : 'alfa', size : 'm', horizontal : true },
-                        content : menu
-                    }
-                ]
+                elem : 'menu'
             },
             {
                 elem : 'copyright',
