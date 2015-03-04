@@ -14,17 +14,13 @@
   ],
   "dependencies": {
     "bem-core": "2.5.1",
-    "bem-components": "7329bcb78aaee74ab3372d93a026205d7c0ae77e",
+    "bem-components": "2.0.0",
     "bem-grid": "1619ae829b5702bb01997d35168ec609563dd79a",
     "bem-content": "24a5ac955ac408a691f5d15991538244ffec8263",
     "bem-forms": "ssh://git@git/man/bem-forms.git#dev",
-    "jQuery-Mask-Plugin": "~1.11.3"
+    "jQuery-Mask-Plugin": "1.11.3"
   },
   "devDependencies": {
     "bem-pr": "~0.10.0"
-  },
-  "resolutions": {
-    "bem-core": "2.5.1",
-    "bem-components": "7329bcb78aaee74ab3372d93a026205d7c0ae77e"
   }
 }
