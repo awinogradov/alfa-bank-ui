@@ -5,9 +5,16 @@
         background-image: url(../../assets/_bkg/_white/arrow.svg);
     }
 
-    &.select_size_s .select__tick
+    &.select_size_s .select__tick,
+    &.select_size_m .select__tick
     {
-        background-image: url(../../assets/_bkg/_white/arrow.svg);
+        background-size: 11px;
+    }
+
+    &.select_size_l .select__tick,
+    &.select_size_xl .select__tick
+    {
+        background-size: 16px;
     }
 
     .select__button

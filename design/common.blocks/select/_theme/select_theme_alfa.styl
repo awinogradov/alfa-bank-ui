@@ -91,7 +91,16 @@
         top:      0;
         right:    0;
 
-        transition: transform 0.1s ease-out;
+        transition: all 0.1s ease-out;
+        opacity: 0.3;
+    }
+
+    &:hover
+    {
+        .select__tick
+        {
+            opacity: 1;
+        }
     }
 
     &.select_opened .select__tick
