@@ -1,12 +1,12 @@
 modules.define('spec', ['input', 'spec-helper'], function(provide, _, helper) {
 
-    describe('input_type_result', function() {
+    describe('input_mode_result', function() {
         var input;
 
         beforeEach(function() {
             input = helper.buildBlock('input', {
                 block : 'input',
-                mods : { type : 'result' },
+                mods : { mode : 'result' },
                 val : 'result_before'
             });
         });
@@ -22,7 +22,7 @@ modules.define('spec', ['input', 'spec-helper'], function(provide, _, helper) {
         it('should work setVal()', function() {
             input.setVal('new_val');
             input.getVal().should.equal('new_val');
-            input.elem('result').text().should.equal('new_val');
+            input.elem('inner').text().should.equal('new_val');
         });
 
     });

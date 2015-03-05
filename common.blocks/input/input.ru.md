@@ -4,7 +4,7 @@
 
 ## Модификаторы блока
 
-### _type
+### _mode
 
 - инпут выглядит как ссылка и трансформируется в редактируемое поле только в фокусе, в качестве ссылки используется
 блок `link_pseudo`.
@@ -12,17 +12,7 @@
 ``` bemjson
 {
     block : 'input',
-    mods : { type  : 'link' }
-}
-```
-
-- в конец поля инпута добавляется блок с произвольным символом.
-
-``` bemjson
-{
-    block : 'input',
-    mods : { type  : 'symbol' },
-    symbol : '₽'
+    mods : { mode  : 'link' }
 }
 ```
 
@@ -31,18 +21,73 @@
 ``` bemjson
 {
     block : 'input',
-    mods : { type  : 'result' }
+    mods : { mode  : 'result' }
 }
 ```
 
-### _autocomplete
+### _type
+
+- поле для ввода email
+
+``` bemjson
+{
+    block : 'input',
+    mods : { type  : 'email' }
+}
+```
+
+- поле для ввода номера телефона
+
+``` bemjson
+{
+    block : 'input',
+    mods : { type  : 'tel' }
+}
+```
+
+- скрытое поле
+
+``` bemjson
+{
+    block : 'input',
+    mods : { type  : 'hidden' }
+}
+```
+
+### _has-addon
+
+- в конец поля инпута добавляется блок с произвольным дополнением.
+
+``` bemjson
+{
+    block : 'input',
+    mods : { 'has-addon'  : true },
+    addon : '₽'
+}
+```
+
+### _has-mask
+
+- маскирует значение в инпуте
+
+``` bemjson
+{
+    block : 'input',
+    mods : { 'has-mask'  : true },
+    js : {
+        mask : '00/00'
+    }
+}
+```
+
+### _has-autocomplete
 
 - к полю ввода добавляется выпадающий список, из которого можно выбрать значение, элементы списка задаются дополнительным полем `options` так же, как в блоке `select`.
 
 ```bemjson
 {
     block : 'input',
-    mods : { autocomplete : true },
+    mods : { 'has-autocomplete' : true },
     options : [
         { val : 'MSC', content : 'Moscow' },
         { val : 'NYC', content : 'New York' }

@@ -1,4 +1,4 @@
-block('input').mod('type', 'result')(
+block('input').mod('mode', 'result')(
     def()(function() {
         applyNext({ _input : this.ctx });
     }),
@@ -7,7 +7,7 @@ block('input').mod('type', 'result')(
         content()(function() {
             return [
                 {
-                    elem : 'result',
+                    elem : 'inner',
                     mods : {
                         theme : this._input.mods.theme,
                         bkg : this._input.mods.bkg

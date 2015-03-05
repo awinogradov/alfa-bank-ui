@@ -1,4 +1,4 @@
-block('input').mod('autocomplete', true)(
+block('input').mod('has-autocomplete', true)(
     def()(function() {
         applyNext({ _input : this.ctx });
     }),
