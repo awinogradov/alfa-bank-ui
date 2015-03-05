@@ -1,4 +1,0 @@
-block('input').mod('view', 'symbol').elem('box')
-    .content()(function() {
-    return [this.ctx.content, { elem : 'symbol', content : this._input.symbol }];
-});

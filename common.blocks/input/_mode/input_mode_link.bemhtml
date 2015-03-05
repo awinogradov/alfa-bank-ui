@@ -1,4 +1,4 @@
-block('input').mod('type', 'link')(
+block('input').mod('mode', 'link')(
     def()(function() {
         if(!this.ctx.val) this.ctx.mods.empty = true;
         applyNext({ _input : this.ctx });

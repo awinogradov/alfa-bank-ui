@@ -1,19 +1,17 @@
-.input_type_link
+.input_mode_link
 {
-    border-color: transparent;
-
     .input__box
     {
-        padding-right: 0px;
-        white-space: nowrap;
-        overflow: hidden;
+        padding-right: 0;
+
+        white-space:   nowrap;
+        overflow:      hidden;
         text-overflow: ellipsis;
     }
 
     .input__control
     {
         display: none;
-
         padding-left: 0 !important;
     }
 
@@ -21,10 +19,12 @@
     {
         .input__box
         {
-            height:        $control_size_s;
-            line-height:   $control_size_s;
-            padding-left:  $inputs_padding_s;
+            height:      $control_size_s;
+            line-height: $control_size_s;
+
+            padding-left: $inputs_padding_s;
             margin-right: $inputs_padding_s;
+
             max-width: 112px;
         }
     }
@@ -33,10 +33,12 @@
     {
         .input__box
         {
-            height:        $control_size_m;
-            line-height:   $control_size_m;
-            padding-left:  $inputs_padding_m;
+            height:      $control_size_m;
+            line-height: $control_size_m;
+
+            padding-left: $inputs_padding_m;
             margin-right: $inputs_padding_m;
+
             max-width: 110px;
         }
     }
@@ -45,10 +47,12 @@
     {
         .input__box
         {
-            height:        $control_size_l;
-            line-height:   $control_size_l;
-            padding-left:  $inputs_padding_l;
+            height:      $control_size_l;
+            line-height: $control_size_l;
+
+            padding-left: $inputs_padding_l;
             margin-right: $inputs_padding_l;
+
             max-width: 130px;
         }
     }
@@ -57,10 +61,12 @@
     {
         .input__box
         {
-            height:        $control_size_xl;
-            line-height:   $control_size_xl;
-            padding-left:  $inputs_padding_xl;
+            height:      $control_size_xl;
+            line-height: $control_size_xl;
+
+            padding-left: $inputs_padding_xl;
             margin-right: $inputs_padding_xl;
+
             max-width: 232px;
         }
     }
@@ -75,8 +81,9 @@
         .input__box
         {
             padding-right: 0;
+            margin-right:  0;
+
             max-width: inherit;
-            margin-right: 0px;
         }
 
         .input__control
@@ -86,6 +93,6 @@
     }
 
     &.input_empty .input__trigger {
-        opacity: 0.5;
+        opacity: .5;
     }
 }

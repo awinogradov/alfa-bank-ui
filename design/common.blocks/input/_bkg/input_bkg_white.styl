@@ -3,16 +3,6 @@
     background: $gray;
     color: #000;
 
-    .input__control
-    {
-        color: #000;
-    }
-
-    &.input_type_link
-    {
-        background: white;
-    }
-
     &:before
     {
         background: #fff;
@@ -26,6 +16,16 @@
     &::-moz-placeholder
     {
         opacity: 1;
+    }
+
+    .input__control
+    {
+        color: #000;
+    }
+
+    &.input_mode_link
+    {
+        background: white;
     }
 
     &.input_focused
@@ -69,16 +69,18 @@
         background: rgba(252, 92, 94, 0.6);
     }
 
-    &.input_type_symbol .input__symbol
+    &.input_has-addon .input__addon
     {
         border-color: $gray;
     }
 
     &.input_hovered, &.input_focused
     {
-        .input__symbol {
+        &.input_has-addon .input__addon
+        {
             border-color: $green;
         }
+
     }
 
     &.input_focused.input_invalid,

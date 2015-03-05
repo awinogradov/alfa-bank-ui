@@ -3,36 +3,10 @@
     background: transparent;
     color: #fff;
 
-    .input__control
-    {
-        color: #fff;
-    }
-
-    .input__symbol
-    {
-        color: #fff;
-    }
-
-    .input__result
-    {
-        color: #fff;
-    }
-
     border-width: 1px;
     border-style: solid;
     border-color: #fff;
     border-color: rgba(255,255,255,0.5);
-
-
-    &.input_invalid
-    {
-        border-color: #fc5c5e;
-        border-color: rgba(252, 92, 94, 0.6);
-
-        .input__symbol {
-            border-color: rgba(252, 92, 94, 0.6);
-        }
-    }
 
     &:before
     {
@@ -45,22 +19,51 @@
         /*color: rgba(255,255,255,0.4);*/
     }
 
-    &.input_view_symbol .input__symbol
-    {
-        border-color: rgba(255, 255, 255, .5);
-    }
-
     &::-moz-placeholder
     {
         opacity: 1;
+    }
+
+    .input__control
+    {
+        color: #fff;
+    }
+
+    &.input_has-addon .input__addon
+    {
+        color: #fff;
+
+        border-color: rgba(255, 255, 255, .5);
+    }
+
+    &.input_mode_link
+    {
+        border-color: transparent;
+    }
+
+    &.input_mode_result .input__inner
+    {
+        color: #fff;
+    }
+
+    &.input_invalid
+    {
+        border-color: #fc5c5e;
+        border-color: rgba(252, 92, 94, 0.6);
+
+        &.input_has-addon .input__addon
+        {
+            border-color: rgba(252, 92, 94, 0.6);
+        }
     }
 
     &.input_hovered
     {
         border-color: rgba(255,255,255,1);
 
-        .input__symbol {
-            border-color: rgba(255,255,255,1);
+        &.input_has-addon .input__addon
+        {
+            border-color: rgba(255, 255, 255, 1);
         }
     }
 
@@ -70,8 +73,9 @@
 
         background-color: rgba(0,0,0,.3);
 
-        .input__symbol {
-            border-color: rgba(255,255,255,1);
+        &.input_has-addon .input__addon
+        {
+            border-color: rgba(255, 255, 255, 1);
         }
     }
 
@@ -80,7 +84,8 @@
     {
         border-color: rgba(252, 92, 94, 1);
 
-        .input__symbol {
+        &.input_has-addon .input__addon
+        {
             border-color: rgba(252, 92, 94, 1);
         }
     }
