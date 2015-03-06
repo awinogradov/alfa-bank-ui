@@ -5,6 +5,9 @@ cards = ( 'visa' 'visaelectron' 'mastercard' 'maestro' )
 {
     vertical-align: middle;
 
+    background-repeat: no-repeat;
+    background-size:   contain;
+
     &.icon_size_s
     {
         width:  $icon_size_s;
@@ -29,24 +32,19 @@ cards = ( 'visa' 'visaelectron' 'mastercard' 'maestro' )
         height: $icon_size_xl;
     }
 
-    &.icon_tool_print
+    for $name in tools
     {
-        background-image: url(../assets/_theme/_alfa/print.svg);
+        &.icon_tool_{$name}
+        {
+            background-image: url(../assets/_theme/_alfa/icon/_tool/icon_tool_$name.svg);
+        }
     }
-
-    &.icon_tool_pdf
-    {
-        background-image: url(../assets/_theme/_alfa/pdf.svg);
-    }
-
-    background-repeat: no-repeat;
-    background-size:   contain;
 
     for $name in banks
     {
         &.icon_bank_{$name}
         {
-            background-image: url(../assets/_theme/_alfa/bank/$name.svg);
+            background-image: url(../assets/_theme/_alfa/icon/_bank/icon_bank_$name.svg);
         }
     }
 
@@ -54,7 +52,7 @@ cards = ( 'visa' 'visaelectron' 'mastercard' 'maestro' )
     {
         &.icon_card_{$name}
         {
-            background-image: url(../assets/_bkg/_color/card/$name.svg);
+            background-image: url(../assets/_bkg/_color/icon/_card/icon_card_$name.svg);
         }
     }
 }
