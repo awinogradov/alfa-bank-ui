@@ -1,4 +1,4 @@
-modules.define('spec', ['spec-helper'], function(provide, helper) {
+modules.define('spec', ['spec__utils'], function(provide, helper) {
 
     describe('link_pseudo', function() {
 

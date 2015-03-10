@@ -1,4 +1,4 @@
-modules.define('spec', ['form-field', 'spec-helper'], function(provide, _, helper) {
+modules.define('spec', ['form-field', 'spec__utils'], function(provide, _, helper) {
 
     describe('form-field_type_hidden', function() {
 

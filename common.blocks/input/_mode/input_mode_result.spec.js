@@ -1,4 +1,4 @@
-modules.define('spec', ['input', 'spec-helper'], function(provide, _, helper) {
+modules.define('spec', ['input', 'spec__utils'], function(provide, _, helper) {
 
     describe('input_mode_result', function() {
         var input;

@@ -1,6 +1,6 @@
 modules.define('spec',
-    ['input', 'link', 'spec-helper'],
-    function(provide, _, link,  helper) {
+    ['input', 'link', 'spec__utils', 'jquery'],
+    function(provide, _, link, helper, $) {
 
 describe('input_mode_link', function() {
     var input;
