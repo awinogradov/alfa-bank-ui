@@ -21,6 +21,6 @@
     "jQuery-Mask-Plugin": "1.11.3"
   },
   "devDependencies": {
-    "bem-pr": "ssh://git@git/man/bem-pr.git#feature/spec__utils"
+    "bem-pr": "ssh://git@git/man/bem-pr.git"
   }
 }
