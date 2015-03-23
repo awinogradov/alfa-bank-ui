@@ -12,7 +12,7 @@ block('header').elem('user')(
                     size : 'm'
                 },
                 url : '#',
-                content : 'Виноградов А.'
+                content : _this._header.customer || 'Виноградов А.'
             }
         ];
     })
