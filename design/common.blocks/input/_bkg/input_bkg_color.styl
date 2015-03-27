@@ -13,17 +13,6 @@
         background: transparent;
     }
 
-    &::-webkit-input-placeholder
-    {
-        /*color: #fff;*/
-        /*color: rgba(255,255,255,0.4);*/
-    }
-
-    &::-moz-placeholder
-    {
-        opacity: 1;
-    }
-
     .input__control
     {
         color: #fff;
@@ -32,8 +21,6 @@
     &.input_has-addon .input__addon
     {
         color: #fff;
-
-        border-color: rgba(255, 255, 255, .5);
     }
 
     &.input_mode_link
@@ -50,21 +37,11 @@
     {
         border-color: #fc5c5e;
         border-color: rgba(252, 92, 94, 0.6);
-
-        &.input_has-addon .input__addon
-        {
-            border-color: rgba(252, 92, 94, 0.6);
-        }
     }
 
     &.input_hovered
     {
         border-color: rgba(255,255,255,1);
-
-        &.input_has-addon .input__addon
-        {
-            border-color: rgba(255, 255, 255, 1);
-        }
     }
 
     &.input_focused
@@ -72,22 +49,12 @@
         border-color: rgba(255,255,255,1);
 
         background-color: rgba(0,0,0,.3);
-
-        &.input_has-addon .input__addon
-        {
-            border-color: rgba(255, 255, 255, 1);
-        }
     }
 
     &.input_focused.input_invalid,
     &.input_hovered.input_invalid
     {
         border-color: rgba(252, 92, 94, 1);
-
-        &.input_has-addon .input__addon
-        {
-            border-color: rgba(252, 92, 94, 1);
-        }
     }
 
     &.input_disabled
