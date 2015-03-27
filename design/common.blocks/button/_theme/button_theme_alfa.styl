@@ -124,53 +124,43 @@ ctx = '.button_theme_alfa'
         }
     }
 
+    > :last-child
+    {
+        padding-right: 0;
+    }
+
+    & .button__icon
+    {
+        padding-right: 10px;
+    }
+
     &.button_size_s
     {
         font-size:   $btns_font_size_s;
         line-height: $control_size_s;
 
-        .button__text
-        {
-            margin: 0 $btns_padding_s;
-        }
+        padding: 0 $btns_padding_s;
     }
 
     &.button_size_m
     {
         font-size:   $btns_font_size_m;
         line-height: $control_size_m;
-
-        .button__text
-        {
-            margin: 0 $btns_padding_s;
-        }
+        padding: 0 $btns_padding_s;
     }
 
     &.button_size_l
     {
         font-size:   $btns_font_size_l;
         line-height: $control_size_l;
-
-        .button__text
-        {
-            margin: 0 $btns_padding_l;
-        }
+        padding: 0 $btns_padding_l;
     }
 
     &.button_size_xl
     {
         font-size:   $btns_font_size_xl;
         line-height: $control_size_xl;
-
-        .button__text
-        {
-            margin: 0 $btns_padding_xl;
-        }
-    }
-
-    & .icon + .button__text
-    {
-        margin-left: 0;
+        padding: 0 $btns_padding_xl;
     }
 }
 
