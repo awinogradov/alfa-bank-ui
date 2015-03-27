@@ -24,6 +24,15 @@ provide(Input.decl({ modName : 'type', modVal : 'money' }, {
                 $(this.elem('control')).select();
             }
         }
+    },
+
+    /**
+     * Returns control value
+     * @returns {String}
+     * @override
+     */
+    getVal : function() {
+        return this._val.replace(',', '.');
     }
 
 }));
