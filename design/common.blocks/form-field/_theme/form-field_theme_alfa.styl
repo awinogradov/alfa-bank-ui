@@ -1,4 +1,48 @@
 .form-field_theme_alfa
 {
     padding-bottom: 20px;
+
+    &.form-field_view_line
+    {
+        .form-field__label
+        {
+            padding-right: 15px;
+
+            min-width: 100px;
+            width:     100px;
+
+            float: left;
+        }
+
+        .form-field__control
+        {
+            padding-left: 115px;
+        }
+    }
+
+    &.form-field_view_compact
+    {
+        .form-field__label
+        {
+            padding-bottom: 10px;
+        }
+    }
+
+    &.form-field_size_l
+    {
+        .form-field__label
+        {
+            padding-top: round($control_size_l / 4);
+        }
+
+        .form-field__control
+        {
+            line-height: $control_size_l;
+        }
+    }
+
+    &.form-field_disabled
+    {
+        opacity: 0.4;
+    }
 }
