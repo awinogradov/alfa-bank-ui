@@ -1,103 +1,136 @@
-.popup_theme_alfa {
+.popup_theme_alfa
+{
     display:    none;
     visibility: hidden;
 
     margin: -9999px 0 0 -9999px;
 
     border-radius: $popup_radius;
+
     box-sizing: border-box;
 
-    &.popup_js_inited {
+    &.popup_js_inited
+    {
         display: block;
     }
 
-    &.popup_visible {
+    &.popup_visible
+    {
         visibility: visible;
+
         margin: 0;
     }
 
-    &.popup_view_column {
+    &.popup_view_column
+    {
         background-color: rgba(0, 0, 0, 0.6);
 
-        &.popup_visible {
+        &.popup_visible
+        {
             margin: 0 0 0 -35px;
+
             opacity: 1;
-//            transition: opacity 0.5s, visibility 0.5s, margin 0.5s step-start;
         }
 
         bottom: 0;
+        top:    0 !important;
+
         min-width: 300px;
+
         position: fixed;
-        top: 0 !important;
-        padding: 20px 35px;
+        padding:  20px 35px;
+
         border-radius: 0;
+
         opacity: 0;
-//        transition: opacity 0.5s, visibility 0.5s, margin 0.5s step-end;
     }
 
-    &.popup_view_dropdown {
+    &.popup_view_dropdown
+    {
         border-radius: 0 0 $popup_radius $popup_radius;
+
         margin-top: -3px;
+
         overflow-y: auto;
+
         max-height: 400px;
     }
 
-    &.popup_visible.popup_view_hint {
-        & {
-            font-family: $font_family;
-            font-weight: $font_weight;
-            font-size: $font_size;
+    &.popup_visible
+    {
+        font-family: $font_family;
+        font-weight: $font_weight;
+        font-size:   $font_size;
+        color:       white;
+
+        background-color: #000;
+        background-color: rgba(0, 0, 0, 0.8);
+
+        &.popup_view_hint
+        {
             padding: 15px;
-            color: white;
-            background-color: #000;
-            background-color: rgba(0, 0, 0, 0.6);
-            max-width: 220px;
+
+            max-width:  220px;
             min-height: 44px;
         }
 
-        &.popup_error {
+        &.popup_error
+        {
             background-color: #fc5c5e;
+
             box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
         }
 
-        &.popup_direction_right-top {
+        &.popup_direction_right-top
+        {
             margin: -4px 0 0 10px;
         }
 
-        &.popup_direction_left-top {
+        &.popup_direction_left-top
+        {
             margin: -4px 0 0 -10px;
         }
 
         &.popup_direction_right-top::before,
-        &.popup_direction_left-top::after {
+        &.popup_direction_left-top::after
+        {
             display: inline-block;
-            content: '';
-            width: 0;
-            height: 0;
+
             vertical-align: middle;
+
+            content: '';
+
+            width:  0;
+            height: 0;
         }
 
-        &.popup_direction_right-top::before {
+        &.popup_direction_right-top::before
+        {
             margin: -2px 15px 0px -22px;
-            border-top: 7px solid transparent;
-            border-right: 7px solid #000;
+
+            border-top:         7px solid transparent;
+            border-right:       7px solid #000;
             border-right-color: rgba(0, 0, 0, 0.6);
-            border-bottom: 7px solid transparent;
+            border-bottom:      7px solid transparent;
         }
 
-        &.popup_direction_left-top::after {
-            margin: -2px -22px 0px 15px;
-            border-top: 7px solid transparent;
-            border-left: 7px solid #000;
+        &.popup_direction_left-top::after
+        {
+            margin: -2px -22px 0 15px;
+
+            border-top:        7px solid transparent;
+            border-left:       7px solid #000;
             border-left-color: rgba(0, 0, 0, 0.6);
-            border-bottom: 7px solid transparent;
+            border-bottom:     7px solid transparent;
         }
 
-        &.popup_error.popup_direction_right-top::before {
+        &.popup_error.popup_direction_right-top::before
+        {
             border-right-color: #fc5c5e;
         }
 
-        &.popup_error.popup_direction_left-top::after {
+        &.popup_error.popup_direction_left-top::after
+        {
             border-left-color: #fc5c5e;
         }
     }
