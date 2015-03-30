@@ -83,66 +83,40 @@
 
 .control-group
 {
-
-    > :first-child
+    .button_bkg_color
     {
+        border-width: 1px;
+        border-style: solid;
 
-        .button_bkg_color
+        border-right-color: transparent;
+
+        &.button_hovered
         {
-            border-right-width: 1px;
-            border-right-style: solid;
+            background: rgba(255,255,255,0.2);
+
+            border-color: rgba(255,255,255,0.5);
+
             border-right-color: transparent;
-
-            &.button_checked
-            {
-                border-right-color: rgba(0,0,0,0.2);
-            }
-
         }
     }
-
 
     > :last-child
     {
         .button_bkg_color
         {
-            border-left-width: 1px;
-            border-left-style: solid;
-            border-left-color: transparent;
-
-            &.button_checked
-            {
-                border-left-color: rgba(0,0,0,0.2);
-            }
+            border-right-color: rgba(255,255,255,0.5);
         }
-    }
-
-
-    .button_bkg_color.button_hovered {
-        background: rgba(255,255,255,0.2);
     }
 
     .button_bkg_color.button_checked
     {
         background:   #fff;
-        border-color: transparent;
 
         color:        #000;
 
         &:before
         {
             background: transparent;
-        }
-
-        &.button_pressed
-        {
-            &:before
-            {
-            }
-        }
-
-        &.button_hovered
-        {
         }
     }
 }
