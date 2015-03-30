@@ -98,6 +98,18 @@
 
             border-right-color: transparent;
         }
+
+        &.button_checked
+        {
+            background:   #fff;
+
+            color:        #000;
+
+            &:before
+            {
+                background: transparent;
+            }
+        }
     }
 
     > :last-child
@@ -105,18 +117,6 @@
         .button_bkg_color
         {
             border-right-color: rgba(255,255,255,0.5);
-        }
-    }
-
-    .button_bkg_color.button_checked
-    {
-        background:   #fff;
-
-        color:        #000;
-
-        &:before
-        {
-            background: transparent;
         }
     }
 }
