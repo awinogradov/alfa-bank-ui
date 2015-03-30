@@ -1,5 +1,6 @@
 [{
     mustDeps : [
-        { block : 'i-bem' }
+        { block : 'i-bem' },
+        { block : 'link' }
     ]
 }]
