@@ -9,6 +9,8 @@ inputFontSize = ($inputs_font_size_s $inputs_font_size_m $inputs_font_size_l $in
 
     white-space: nowrap;
 
+    cursor: pointer;
+
     &.menu-item_disabled
     {
         opacity: 0.3;
@@ -78,6 +80,7 @@ for sizeVal, i in s m l xl {
     {
         margin-top: $popup_radius;
     }
+
     .menu-item:last-child
     {
         margin-bottom: $popup_radius;
@@ -91,8 +94,9 @@ for sizeVal, i in s m l xl {
             margin-top:    0;
         }
     }
+
     .menu-item_hovered
     {
-        background-color: rgba(0, 0, 0, 0.1);
+        opacity: .8;
     }
 }
