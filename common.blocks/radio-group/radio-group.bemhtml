@@ -5,7 +5,7 @@ block('radio-group')(
 
         return (ctx.options || []).map(function(option, i) {
             return [
-                !!i && !mods.type && { tag : 'br' },
+                !!i && !mods.view && { tag : 'br' },
                 {
                     block : 'radio',
                     mods : {
