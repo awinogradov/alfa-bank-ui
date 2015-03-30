@@ -10,6 +10,7 @@ block('radio-group')(
                     block : 'radio',
                     mods : {
                         type : mods.type,
+                        view : mods.view,
                         mode : mods.mode,
                         theme : mods.theme,
                         bkg : mods.bkg,

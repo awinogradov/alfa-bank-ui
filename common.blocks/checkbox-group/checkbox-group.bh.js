@@ -14,6 +14,7 @@ module.exports = function(bh) {
                     block : 'checkbox',
                     mods : {
                         type : mods.type,
+                        view : mods.view,
                         theme : mods.theme,
                         bkg : mods.bkg,
                         size : mods.size,

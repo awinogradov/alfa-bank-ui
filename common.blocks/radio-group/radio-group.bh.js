@@ -9,6 +9,7 @@ module.exports = function(bh) {
                     block : 'radio',
                     mods : {
                         type : mods.type,
+                        view : mods.view,
                         mode : mods.mode,
                         theme : mods.theme,
                         bkg : mods.bkg,
