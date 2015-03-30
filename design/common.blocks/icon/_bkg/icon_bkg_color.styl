@@ -1,4 +1,5 @@
 networks = ( 'twitter' 'vk' 'facebook' )
+tools = ( 'print' 'pdf' 'email' )
 
 .icon_bkg_color
 {
@@ -14,4 +15,20 @@ networks = ( 'twitter' 'vk' 'facebook' )
             background-image: url('../assets/_bkg/_color/icon/_network/icon_network_' + $name + '.svg');
         }
     }
+
+    for $name in tools
+    {
+        &.icon_tool_{$name}
+        {
+            background-image: url('../assets/_bkg/_color/icon/_tool/icon_tool_' + $name + '.svg');
+        }
+    }
+}
+
+.icon_bkg_color.icon_tool_pdf.icon_size_s,
+.icon_bkg_color.icon_tool_email.icon_size_s {
+    width:  ($icon_size_s - 4);
+    height: ($icon_size_s - 4);
+    margin-right: 4px;
+    display: inline-block;
 }
