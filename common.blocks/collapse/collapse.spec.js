@@ -1,8 +1,9 @@
 modules.define('spec', ['collapse', 'spec__utils'], function(provide, collapse, utils) {
 
     var el = 'Скрыть подробности',
-        cl = 'Подробнее',
-        bemjson = {
+        cl = 'Подробнее';
+
+    var bemjson = {
         block : 'collapse',
         mods : { theme : 'alfa', bkg : 'color' },
         expandedLabel : el,
