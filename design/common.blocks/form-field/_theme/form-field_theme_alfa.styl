@@ -6,11 +6,6 @@
     {
         .form-field__label
         {
-            padding-right: 15px;
-
-            min-width: 100px;
-            width:     100px;
-
             float: left;
         }
 
@@ -38,6 +33,29 @@
         .form-field__control
         {
             line-height: $control_size_l;
+        }
+
+        &.form-field_view_line
+        {
+            .form-field__label
+            {
+                padding-right: 15px;
+
+                width: 100px;
+            }
+        }
+    }
+
+    &.form-field_size_m
+    {
+        .form-field__label
+        {
+            padding-top: 18px;
+        }
+
+        .form-field__control
+        {
+            line-height: $control_size_m;
         }
     }
 
