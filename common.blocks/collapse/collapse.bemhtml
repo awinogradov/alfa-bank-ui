@@ -1,0 +1,24 @@
+block('collapse')(
+    js()(function() {
+        return {
+            collapsedLabel : this.ctx.collapsedLabel || 'Expand',
+            expandedLabel : this.ctx.expandedLabel || 'Collapse'
+        };
+    }),
+    content()(function() {
+        return [
+            {
+                elem : 'content',
+                content : applyNext()
+            },
+            {
+                block : 'link',
+                mix : { block : 'collapse', elem : 'link' },
+                mods : { theme : this.ctx.mods.theme, bkg : this.ctx.mods.bkg },
+                content : this.ctx.mods.expanded?
+                    (this.ctx.expandedLabel || 'Collapse') :
+                    (this.ctx.collapsedLabel || 'Expand')
+            }
+        ];
+    })
+);
