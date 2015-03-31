@@ -9,11 +9,12 @@ module.exports = function(bh) {
         var mods = ctx.mods();
         ctx.content((json.options || []).map(function(option, i) {
             return [
-                !!i && !mods.type && { tag : 'br' },
+                !!i && !mods.view && { tag : 'br' },
                 {
                     block : 'checkbox',
                     mods : {
                         type : mods.type,
+                        view : mods.view,
                         theme : mods.theme,
                         bkg : mods.bkg,
                         size : mods.size,
