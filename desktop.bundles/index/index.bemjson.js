@@ -446,7 +446,8 @@
                                                     mods : { theme: 'alfa', bkg : 'color', size : 's' },
                                                     icon : {
                                                         block : 'spin',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xs', visible : true }
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xs', visible : true },
+                                                        mix : { block : 'button', elem : 'icon' }
                                                     },
                                                     text : 'Loading...'
                                                 }
@@ -517,7 +518,8 @@
                                                     mods : { theme: 'alfa', bkg : 'color', size : 'm' },
                                                     icon : {
                                                         block : 'spin',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 's', visible : true }
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 's', visible : true },
+                                                        mix : { block : 'button', elem : 'icon' }
                                                     },
                                                     text : 'Loading...'
                                                 }
@@ -588,7 +590,8 @@
                                                     mods : { theme: 'alfa', bkg : 'color', size : 'l' },
                                                     icon : {
                                                         block : 'spin',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', visible : true }
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', visible : true },
+                                                        mix : { block : 'button', elem : 'icon' }
                                                     },
                                                     text : 'Loading...'
                                                 }
@@ -659,7 +662,8 @@
                                                     mods : { theme: 'alfa', bkg : 'color', size : 'xl' },
                                                     icon : {
                                                         block : 'spin',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', visible : true }
+                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', visible : true },
+                                                        mix : { block : 'button', elem : 'icon' }
                                                     },
                                                     text : 'Loading...'
                                                 }

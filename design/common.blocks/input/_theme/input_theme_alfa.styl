@@ -1,16 +1,16 @@
-ctx = '.input_theme_alfa'
-{ctx} {
+.input_theme_alfa
+{
     font-family: $font_family;
     font-weight: $font_weight;
 
     position: relative;
     display:  inline-block;
+    width:    100%;
 
     border-radius: $inputs_radius;
 
     transition: all 200ms ease;
 
-    /* Decorative element (inner background) */
     &:before
     {
         position: absolute;
@@ -50,13 +50,11 @@ ctx = '.input_theme_alfa'
         -webkit-appearance:          none;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-        /* лишние отступы у текста */
         &::-webkit-search-decoration
         {
             -webkit-appearance: none;
         }
 
-        /* нативный крестик */
         &::-webkit-search-cancel-button
         {
             display: none;
@@ -111,6 +109,14 @@ ctx = '.input_theme_alfa'
     &.input_focused
     {
         z-index: 1;
+
+        &.input_mode_link
+        {
+            .input__control
+            {
+                padding-left: 0;
+            }
+        }
     }
 
     &.input_disabled
@@ -126,6 +132,18 @@ ctx = '.input_theme_alfa'
         {
             cursor: default;
         }
+    }
+
+    &.input_mode_result
+    {
+        border: none;
+        display: inline-block;
+        background: none;
+    }
+
+    &.input_mode_link
+    {
+        padding-left: 0;
     }
 
     &.input_size_s
@@ -224,11 +242,6 @@ ctx = '.input_theme_alfa'
         }
     }
 
-    &.input_width_available
-    {
-        width: 100%;
-    }
-
     &.input_type_password .input__control
     {
         text-overflow: clip;
@@ -237,7 +250,8 @@ ctx = '.input_theme_alfa'
 
 .control-group
 {
-    {ctx} {
+    .input_theme_alfa
+    {
         &:before
         {
             right: 0;
@@ -249,8 +263,8 @@ ctx = '.input_theme_alfa'
         }
     }
 
-    > {ctx}:last-child,
-    > :last-child {ctx}
+    > .input_theme_alfa:last-child,
+    > :last-child .input_theme_alfa
     {
         &:before
         {

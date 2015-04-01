@@ -124,77 +124,54 @@ ctx = '.button_theme_alfa'
         }
     }
 
+    > :last-child
+    {
+        padding-right: 0;
+    }
+
+    & .button__icon
+    {
+        padding-right: 10px;
+    }
+
     &.button_size_s
     {
         font-size:   $btns_font_size_s;
         line-height: $control_size_s;
 
-        .button__text
-        {
-            margin: 0 $btns_padding_s;
-        }
+        padding: 0 $btns_padding_s;
     }
 
     &.button_size_m
     {
         font-size:   $btns_font_size_m;
         line-height: $control_size_m;
-
-        .button__text
-        {
-            margin: 0 $btns_padding_s;
-        }
+        padding: 0 $btns_padding_s;
     }
 
     &.button_size_l
     {
         font-size:   $btns_font_size_l;
         line-height: $control_size_l;
-
-        .button__text
-        {
-            margin: 0 $btns_padding_l;
-        }
+        padding: 0 $btns_padding_l;
     }
 
     &.button_size_xl
     {
         font-size:   $btns_font_size_xl;
         line-height: $control_size_xl;
-
-        .button__text
-        {
-            margin: 0 $btns_padding_xl;
-        }
-    }
-
-    & .icon + .button__text
-    {
-        margin-left: 0;
+        padding: 0 $btns_padding_xl;
     }
 }
 
 .control-group
 {
-    .radio_checked + .radio {ctx}:before
-    .checkbox_checked + .checkbox_checked
-    {
-
-    }
-
     {ctx} {
         border-radius: 0;
 
         &:before
         {
             border-radius: 0;
-        }
-
-        &.button_focused-hard.button /* Weight of selector should be greater for focused button (#1170) */
-        {
-            &:before
-            {
-            }
         }
     }
 
@@ -203,13 +180,9 @@ ctx = '.button_theme_alfa'
     {
         border-radius: $btns_radius 0 0 $btns_radius;
 
-        border-right: 0;
-
         &:before
         {
             border-radius: $btns_radius - 1 0 0 $btns_radius - 1;
-
-            right: 0;
         }
     }
 
@@ -218,13 +191,9 @@ ctx = '.button_theme_alfa'
     {
         border-radius: 0 $btns_radius $btns_radius 0;
 
-        border-left: 0;
-
         &:before
         {
             border-radius: 0 $btns_radius - 1 $btns_radius - 1 0;
-
-            left: 0;
         }
     }
 

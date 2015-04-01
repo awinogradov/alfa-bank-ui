@@ -12,67 +12,54 @@
     .input__control
     {
         display: none;
-        padding-left: 0 !important;
     }
 
-    &.input_size_s
+    &.input_size_s .input__box
     {
-        .input__box
-        {
-            height:      $control_size_s;
-            line-height: $control_size_s;
+        height:      $control_size_s;
+        line-height: $control_size_s;
 
-            padding-left: $inputs_padding_s;
-            margin-right: $inputs_padding_s;
+        padding-left: $inputs_padding_s;
+        margin-right: $inputs_padding_s;
 
-            max-width: 112px;
-        }
+        max-width: 112px;
     }
 
-    &.input_size_m
+    &.input_size_m .input__box
     {
-        .input__box
-        {
-            height:      $control_size_m;
-            line-height: $control_size_m;
+        height:      $control_size_m;
+        line-height: $control_size_m;
 
-            padding-left: $inputs_padding_m;
-            margin-right: $inputs_padding_m;
+        padding-left: $inputs_padding_m;
+        margin-right: $inputs_padding_m;
 
-            max-width: 110px;
-        }
+        max-width: 110px;
     }
 
-    &.input_size_l
+    &.input_size_l .input__box
     {
-        .input__box
-        {
-            height:      $control_size_l;
-            line-height: $control_size_l;
+        height:      $control_size_l;
+        line-height: $control_size_l;
 
-            padding-left: $inputs_padding_l;
-            margin-right: $inputs_padding_l;
+        padding-left: $inputs_padding_l;
+        margin-right: $inputs_padding_l;
 
-            max-width: 130px;
-        }
+        max-width: 130px;
     }
 
-    &.input_size_xl
+    &.input_size_xl .input__box
     {
-        .input__box
-        {
-            height:      $control_size_xl;
-            line-height: $control_size_xl;
+        height:      $control_size_xl;
+        line-height: $control_size_xl;
 
-            padding-left: $inputs_padding_xl;
-            margin-right: $inputs_padding_xl;
+        padding-left: $inputs_padding_xl;
+        margin-right: $inputs_padding_xl;
 
-            max-width: 232px;
-        }
+        max-width: 232px;
     }
 
-    &.input_focused {
-
+    &.input_focused
+    {
         .input__trigger
         {
             display: none;
@@ -92,7 +79,8 @@
         }
     }
 
-    &.input_empty .input__trigger {
+    &.input_empty .input__trigger
+    {
         opacity: .5;
     }
 }
