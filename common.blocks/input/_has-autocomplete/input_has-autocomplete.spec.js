@@ -251,6 +251,77 @@ describe('input_has-autocomplete', function() {
 
         popup.getMod('visible').should.be.true;
     });
+
+    it('should support setting options on runtime', function() {
+        block = build('input', bemjson);
+        block.setOptions.should.be.a('function');
+
+        block.setOptions([
+            { val : 'value 1', content : 'item 1' },
+            { val : 'value 2', content : 'item 2' }
+        ]);
+
+        var menu = block.findBlockInside('popup').findBlockInside('menu');
+        var items = menu.findBlocksInside('menu-item');
+
+        expect(items).to.not.be.null;
+        items.length.should.equal(2);
+        items[0].getVal().should.equal('value 1');
+        items[0].domElem.text().should.equal('item 1');
+        items[1].getVal().should.equal('value 2');
+        items[1].domElem.text().should.equal('item 2');
+
+        block.setOptions([]);
+
+        menu = block.findBlockInside('popup').findBlockInside('menu');
+        items = menu.findBlocksInside('menu-item');
+
+        items.length.should.equal(0);
+    });
+
+    it('should support setting options with groups on runtime', function() {
+        block = build('input', bemjson);
+        block.setOptions.should.be.a('function');
+
+        block.setOptions([
+            {
+                title : 'Russia',
+                group : [
+                    { val : 'MSC', content : 'Moscow' },
+                    { val : 'SPB', content : 'Saint-Petersburg' }
+                ]
+            },
+            {
+                group : [
+                    { val : 'PAR', content : 'Paris' },
+                    { val : 'MAR', content : 'Marseille' }
+                ]
+            },
+            {
+                title : 'Austria',
+                group : []
+            },
+            { val : 'NYC', content : 'New York' }
+        ]);
+
+        var menu = block.findBlockInside('menu');
+
+        expect(menu.elem('group')).to.not.be.null;
+        menu.elem('group').length.should.equal(3);
+
+        var items = menu.findBlocksInside('group', 'menu-item'),
+            titles = menu.elem('group-title');
+
+        titles.length.should.equal(2);
+        $(titles[0]).html().should.equal('Russia');
+        $(titles[1]).html().should.equal('Austria');
+
+        items.length.should.equal(4);
+        items[0].params.val.should.equal('MSC');
+        items[0].domElem.text().should.equal('Moscow');
+        items[3].params.val.should.equal('MAR');
+        items[3].domElem.text().should.equal('Marseille');
+    });
 });
 
 provide();

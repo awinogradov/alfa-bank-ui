@@ -1,6 +1,24 @@
 modules.define('input',
-    ['popup', 'menu', 'dom', 'jquery'],
-    function(provide, Popup, Menu, dom, $, Input) {
+    ['popup', 'menu', 'dom', 'jquery', 'BEMHTML', 'i-bem__dom'],
+    function(provide, Popup, Menu, dom, $, BEMHTML, BEMDOM, Input) {
+
+    function mapItems(item) {
+        if(item.group) {
+            return {
+                block : 'menu',
+                elem : 'group',
+                title : item.title,
+                content : item.group.map(mapItems)
+            };
+        } else {
+            return {
+                block : 'menu-item',
+                val : item.val,
+                data : item.data,
+                content : item.content
+            };
+        }
+    }
 
 provide(Input.decl({ modName : 'has-autocomplete' }, {
     onSetMod : {
@@ -38,6 +56,15 @@ provide(Input.decl({ modName : 'has-autocomplete' }, {
                 this.unbindFromDoc('pointerpress', this._onDocPointerPress);
             }
         }
+    },
+
+    /**
+     * Set new autocomplete options
+     *
+     * @param {Array} opts new options
+     */
+    setOptions : function(opts) {
+        BEMDOM.update(this._menu.domElem, BEMHTML.apply(opts.map(mapItems)));
     },
 
     _onDocPointerPress : function(e) {
