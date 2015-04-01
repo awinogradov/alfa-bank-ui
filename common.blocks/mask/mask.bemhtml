@@ -1,40 +1,10 @@
 block('mask')(
+    tag()('span'),
+    js()(true),
     content()(function() {
-        var val = this.ctx.val;
-        if(!val) {
-            return null;
+        if(this.ctx.val){
+            return this.ctx.val.replace(/\*/g, '●');
         }
-
-        var maskedVal = val.split(/\*+/);
-        var maskSymbol = '*',
-            maskStart = val.indexOf(maskSymbol),
-            maskEnd = val.lastIndexOf(maskSymbol)+1,
-            mask;
-
-        if(maskStart >= 0 && maskEnd >= 0) {
-            mask = val.substring(maskStart, maskEnd).replace(/\*/g, '●');
-        } else {
-            return val;
-        }
-
-        var content = [];
-
-        maskedVal[0] && content.push({
-            elem : 'premask',
-            content : maskedVal[0],
-            tag : 'span'
-        });
-        mask && content.push({
-            elem : 'mask',
-            content : mask,
-            tag : 'span'
-        });
-        maskedVal[1] && content.push({
-            elem : 'premask',
-            content : maskedVal[1],
-            tag : 'span'
-        });
-
-        return content;
+        return this.ctx.content;
     })
 );
