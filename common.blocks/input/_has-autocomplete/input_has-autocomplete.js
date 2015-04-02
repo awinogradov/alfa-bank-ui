@@ -2,24 +2,6 @@ modules.define('input',
     ['popup', 'menu', 'dom', 'jquery', 'BEMHTML', 'i-bem__dom'],
     function(provide, Popup, Menu, dom, $, BEMHTML, BEMDOM, Input) {
 
-    function mapItems(item) {
-        if(item.group) {
-            return {
-                block : 'menu',
-                elem : 'group',
-                title : item.title,
-                content : item.group.map(mapItems)
-            };
-        } else {
-            return {
-                block : 'menu-item',
-                val : item.val,
-                data : item.data,
-                content : item.content
-            };
-        }
-    }
-
 provide(Input.decl({ modName : 'has-autocomplete' }, {
     onSetMod : {
         'js' : {
@@ -64,6 +46,29 @@ provide(Input.decl({ modName : 'has-autocomplete' }, {
      * @param {Array} opts new options
      */
     setOptions : function(opts) {
+        var mapItems = function(item) {
+            if(item.group) {
+                return {
+                    block : 'menu',
+                    elem : 'group',
+                    title : item.title,
+                    content : item.group.map(mapItems)
+                };
+            } else {
+                return {
+                    block : 'menu-item',
+                    mods : {
+                        theme : this.getMod('theme'),
+                        bkg : this.getMod('bkg'),
+                        size : this.getMod('size')
+                    },
+                    val : item.val,
+                    data : item.data,
+                    content : item.content
+                };
+            }
+        }.bind(this);
+
         BEMDOM.update(this._menu.domElem, BEMHTML.apply(opts.map(mapItems)));
     },
 

@@ -253,6 +253,9 @@ describe('input_has-autocomplete', function() {
     });
 
     it('should support setting options on runtime', function() {
+        bemjson.mods.theme = 'XXX';
+        bemjson.mods.bkg = 'YYY';
+        bemjson.mods.size = 'ZZZ';
         block = build('input', bemjson);
         block.setOptions.should.be.a('function');
 
@@ -270,6 +273,10 @@ describe('input_has-autocomplete', function() {
         items[0].domElem.text().should.equal('item 1');
         items[1].getVal().should.equal('value 2');
         items[1].domElem.text().should.equal('item 2');
+
+        items[0].getMod('theme').should.equal('XXX');
+        items[0].getMod('bkg').should.equal('YYY');
+        items[0].getMod('size').should.equal('ZZZ');
 
         block.setOptions([]);
 
