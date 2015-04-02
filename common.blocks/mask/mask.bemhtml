@@ -3,7 +3,8 @@ block('mask')(
     js()(true),
     content()(function() {
         if(this.ctx.val){
-            return this.ctx.val.replace(/\*/g, '●');
+            var num = this.ctx.val.split(/\*+/);
+            return num[0] + '●●●●' + num[1];
         }
         return this.ctx.content;
     })
