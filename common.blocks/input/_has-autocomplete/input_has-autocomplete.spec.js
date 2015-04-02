@@ -252,6 +252,22 @@ describe('input_has-autocomplete', function() {
         popup.getMod('visible').should.be.true;
     });
 
+    it('should not close the popup when user clicked on input (AFT-132)', function() {
+        block = build('input', bemjson);
+        var popup = block.findBlockInside('popup');
+
+        block.elem('control').focus();
+        block.getMod('opened').should.be.true;
+
+        var x = block.domElem.position().left + 1, y = block.domElem.position().top + 1;
+        block.domElem.trigger(new $.Event('pointerpress', { pageX: x, pageY: y }));
+        block._isPointerPressInProgress.should.be.true;
+        block.elem('control').blur();
+        block.domElem.trigger(new $.Event('pointerrelease', { pageX: x, pageY: y }));
+
+        block.getMod('opened').should.be.true;
+    });
+
     it('should support setting options on runtime', function() {
         bemjson.mods.theme = 'XXX';
         bemjson.mods.bkg = 'YYY';
