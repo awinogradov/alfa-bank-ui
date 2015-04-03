@@ -1,4 +1,31 @@
-banks = ( 'alfa-bank' 'baltijsky' 'bank_moskvy' 'bank_saint-peterburg' 'beeline' 'binbank' 'credit_evropa_bank' 'home_credit' 'mdm' 'moscow_credit_bank' 'mts' 'otkrytie' 'otp' 'promsvyazbank' 'qiwi' 'raiffeisenbank' 'rocketbank' 'rosbank' 'russkii_standart' 'sberbank' 'skb' 'tinkoff' 'trast' 'ubrr' 'unicredit' 'uralsib' 'vozrogdenie' 'vtb24' 'yandex_money' )
+banks = {
+    '2449' : 'alfa-bank',
+    '3308' : 'baltijsky',
+    '5475' : 'bank_moskvy',
+    '285'  : 'bank_saint-peterburg',
+    '10223': 'credit_evropa_bank',
+    '439'  : 'home_credit',
+    '9908' : 'mdm',
+    '3001' : 'moscow_credit_bank',
+    '1490' : 'mts',
+    '4267' : 'otkrytie',
+    '7311' : 'otp',
+    '1516' : 'promsvyazbank',
+    '1309' : 'qiwi',
+    '8967' : 'raiffeisenbank',
+    '351'  : 'rosbank',
+    '6415' : 'russkii_standart',
+    '4924' : 'sberbank',
+    '5030' : 'skb',
+    '256'  : 'tinkoff',
+    '1415' : 'trast',
+    '2377' : 'ubrr',
+    '7687' : 'unicredit',
+    '7686' : 'uralsib',
+    '244'  : 'vozrogdenie',
+    '404'  : 'vtb24'
+}
+
 cards = ( 'visa' 'visa-white' 'visaelectron' 'mastercard' 'mastercard-white' 'maestro' 'maestro-white' )
 tools = ( 'print' 'pdf' )
 actions = ( 'ok' 'fail' 'repeat' )
@@ -46,7 +73,7 @@ actions = ( 'ok' 'fail' 'repeat' )
     {
         &.icon_bank_{$name}
         {
-            background-image: url('../assets/_theme/_alfa/icon/_bank/icon_bank_' + $name + '.svg');
+            background-image: url('../assets/_theme/_alfa/icon/_bank/icon_bank_' + banks[$name] + '.svg');
         }
     }
 
