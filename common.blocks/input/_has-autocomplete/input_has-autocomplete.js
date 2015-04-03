@@ -87,7 +87,9 @@ provide(Input.decl({ modName : 'has-autocomplete' }, {
     },
 
     _isEventInPopup : function(e) {
-        return dom.contains(this._popup.domElem, $(e.target));
+        var $target = $(e.target);
+        return dom.contains(this._popup.domElem, $target)
+            || dom.contains(this.domElem, $target);
     },
 
     _onMenuItemClick : function(_, data) {
