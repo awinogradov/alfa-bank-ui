@@ -93,3 +93,14 @@ actions = ( 'ok' 'fail' 'repeat' )
         }
     }
 }
+
+.icon_bkg_color
+{
+    for $name in banks
+    {
+        &.icon_bank_{$name}
+        {
+            background-image: url('../assets/_bkg/_color/icon/_bank/icon_bank_' + banks[$name] + '.svg');
+        }
+    }
+}
