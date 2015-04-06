@@ -4,14 +4,6 @@ function(provide, Popup, Menu, dom, $, BEMHTML, BEMDOM, Select) {
 
     provide(Select.decl({
 
-        onSetMod : {
-            'js' : {
-                'inited' : function() {
-                    this.__base.apply(this, arguments);
-                }
-            }
-        },
-
         getPopup: function() {
             // FIXME @spanferov private field access
             return this._popup;
