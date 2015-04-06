@@ -1,6 +1,7 @@
 block('select')(
     content()(function() {
         return [
+            { elem : 'button' },
             {
                 block : 'popup',
                 mix : { block : this.block, elem : 'popup', mods : { size : this.mods.size } },
@@ -13,8 +14,7 @@ block('select')(
                 },
                 directions : ['bottom-left'],
                 content : { block : this.block, mods : this.mods, elem : 'menu' }
-            },
-            applyNext()
+            }
         ];
     })
 );
