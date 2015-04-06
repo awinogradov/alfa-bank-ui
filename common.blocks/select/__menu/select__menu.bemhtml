@@ -33,7 +33,7 @@ block('select').elem('menu')(
                 view : 'dropdown'
             },
             attrs : { tabindex : undefined },
-            content : this._select.options.map(function(optionOrGroup) {
+            content : (this.ctx.options || this._select.options || []).map(function(optionOrGroup) {
                 return optionOrGroup.group?
                     {
                         elem : 'group',

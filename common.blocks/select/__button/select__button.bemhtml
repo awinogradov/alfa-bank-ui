@@ -16,7 +16,7 @@ block('select').elem('button')(
             id : this._select.id,
             textMaxWidth : this._select.textMaxWidth,
             content : [
-                apply('content'),
+                { elem : 'text', content : (this._checkedOptions[0] || this._select).text },
                 { block : 'icon', mix : { block : 'select', elem : 'tick' } }
             ]
         });
