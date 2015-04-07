@@ -1,6 +1,6 @@
 modules.define('header',
-    ['i-bem__dom'],
-    function(provide, BEMDOM) {
+    ['i-bem__dom', 'jquery'],
+    function(provide, BEMDOM, $) {
 
 provide(BEMDOM.decl(this.name, {
 
@@ -18,7 +18,7 @@ provide(BEMDOM.decl(this.name, {
         }
     },
     _colorize : function() {
-        window.scrollY > 10 ?
+        $(window).scrollTop() > 10 ?
             this.setMod('fixed') :
             this.delMod('fixed');
     }
