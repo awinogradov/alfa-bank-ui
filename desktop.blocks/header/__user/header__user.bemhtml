@@ -11,8 +11,9 @@ block('header').elem('user')(
                     pseudo : true,
                     size : 'm'
                 },
+                mix : { block : 'header', elem : 'user-link' },
                 url : '#',
-                content : _this._header.customer || 'Виноградов А.'
+                content : _this._header.customer
             }
         ];
     })
