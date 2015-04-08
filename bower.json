@@ -17,7 +17,7 @@
     "bem-components": "2.0.0",
     "bem-grid": "1.2.3",
     "bem-content": "24a5ac955ac408a691f5d15991538244ffec8263",
-    "bem-forms": "ssh://git@git/man/bem-forms.git#dev",
+    "bem-forms": "git@github.com:bem/bem-forms.git#d13d14851bc2cfc25a9cc171d243057326f91d35",
     "jQuery-Mask-Plugin": "1.11.3"
   },
   "devDependencies": {
