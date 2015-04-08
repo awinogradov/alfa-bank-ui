@@ -50,7 +50,12 @@
                         },
                         {
                             block : 'input',
-                            mods : { theme : 'alfa', bkg : 'color', size : 'm' },
+                            mods : {
+                                'has-mask' : true,
+                                theme : 'alfa', bkg : 'color', size : 'm' },
+                            js : {
+                                mask : '00-00-00'
+                            },
                             name : 'firstName'
                         }
                     ]
@@ -83,7 +88,7 @@
                                 theme : 'alfa',
                                 bkg : 'color',
                                 size : 'm',
-                                autocomplete : true
+                                'has-autocomplete' : true
                             },
                             options : [
                                 {

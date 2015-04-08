@@ -345,6 +345,177 @@ describe('input_has-autocomplete', function() {
         items[3].params.val.should.equal('MAR');
         items[3].domElem.text().should.equal('Marseille');
     });
+
+    describe('keyboard navigation', function() {
+        it('should set focused item on up/down', function() {
+            block = build('input', bemjson);
+            block.setOptions([
+                {
+                    title : 'Russia',
+                    group : [
+                        { val : 'MSC', content : 'Moscow' },
+                        { val : 'SPB', content : 'Saint-Petersburg' }
+                    ]
+                },
+                {
+                    group : [
+                        { val : 'PAR', content : 'Paris' },
+                        { val : 'MAR', content : 'Marseille' }
+                    ]
+                },
+                {
+                    title : 'Austria',
+                    group : []
+                },
+                { val : 'NYC', content : 'New York' }
+            ]);
+
+            var menu = block.findBlockInside('menu'),
+                menuItems = menu.findBlocksInside('menu-item');
+
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            menuItems[0].hasMod('focused').should.be.true;
+
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            menuItems[0].hasMod('focused').should.be.false;
+            menuItems[1].hasMod('focused').should.be.true;
+
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 38 })); // UP
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 38 })); // UP
+            menuItems[0].hasMod('focused').should.be.true;
+            menuItems[1].hasMod('focused').should.be.false;
+
+            // overflow test
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 38 })); // UP
+            menuItems[0].hasMod('focused').should.be.true;
+            menuItems[1].hasMod('focused').should.be.false;
+
+            // overflow test 2
+            for(var i = 0; i < 7; i++) {
+                block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            }
+            menuItems[3].hasMod('focused').should.be.false;
+            menuItems[4].hasMod('focused').should.be.true;
+        });
+
+        it('should skip hidden', function() {
+            bemjson.options = [
+                { val : 'value 1', data: 'xxx', content : 'item 1' },
+                { val : 'value 2', data: 'xxx', content : 'item 2' },
+                { val : 'value 3', data: 'xxx', content : 'item 3' },
+                { val : 'value 4', data: 'yyy', content : 'item 4' },
+                { val : 'value 5', data: 'yyy', content : 'item 5' }
+            ];
+            block = build('input', bemjson);
+
+            var menu = block.findBlockInside('menu'),
+                menuItems = menu.findBlocksInside('menu-item');
+
+            menuItems[0].setMod('hidden');
+            menuItems[2].setMod('hidden');
+            menuItems[4].setMod('hidden');
+
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            menuItems[0].hasMod('focused').should.be.false;
+            menuItems[1].hasMod('focused').should.be.true;
+
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 38 })); // UP
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 38 })); // UP
+            menuItems[0].hasMod('focused').should.be.false;
+            menuItems[1].hasMod('focused').should.be.true;
+
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            menuItems[2].hasMod('focused').should.be.false;
+            menuItems[3].hasMod('focused').should.be.true;
+
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            menuItems[3].hasMod('focused').should.be.true;
+            menuItems[4].hasMod('focused').should.be.false;
+        });
+
+        it('should handle all hidden', function() {
+            bemjson.options = [
+                { val : 'value 1', data: 'xxx', content : 'item 1' },
+                { val : 'value 2', data: 'xxx', content : 'item 2' }
+            ];
+            block = build('input', bemjson);
+
+            var menu = block.findBlockInside('menu'),
+                menuItems = menu.findBlocksInside('menu-item');
+
+            menuItems[0].setMod('hidden');
+            menuItems[1].setMod('hidden');
+
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            menuItems[0].hasMod('focused').should.be.false;
+            menuItems[1].hasMod('focused').should.be.false;
+            block._focusedItem.should.equal(-1);
+        });
+
+        it('should select focused item on ENTER', function() {
+            bemjson.options = [
+                { val : 'value 1', data: 'xxx', content : 'item 1' },
+                { val : 'value 2', data: 'xxx', content : 'item 2' }
+            ];
+            block = build('input', bemjson);
+
+            var menu = block.findBlockInside('menu'),
+                menuItems = menu.findBlocksInside('menu-item');
+
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 13 })); // ENTER
+
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 13 })); // ENTER
+
+            block.getVal().should.equal('value 2');
+
+            (typeof block._focusedItem).should.equal('undefined');
+            (typeof block._menuItems).should.equal('undefined');
+        });
+
+        it('should reset on setOptions', function() {
+            bemjson.options = [
+                { val : 'value 1', data: 'xxx', content : 'item 1' },
+                { val : 'value 2', data: 'xxx', content : 'item 2' }
+            ];
+            block = build('input', bemjson);
+
+            var menu = block.findBlockInside('menu'),
+                menuItems = menu.findBlocksInside('menu-item');
+
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            block._focusedItem.should.equal(0);
+
+            block.setOptions([]);
+
+            (typeof block._focusedItem).should.equal('undefined');
+            (typeof block._menuItems).should.equal('undefined');
+
+            menuItems[0].hasMod('focused').should.be.false;
+        });
+
+        it('should reset on select', function() {
+            bemjson.options = [
+                { val : 'value 1', data: 'xxx', content : 'item 1' },
+                { val : 'value 2', data: 'xxx', content : 'item 2' }
+            ];
+            block = build('input', bemjson);
+
+            var menu = block.findBlockInside('menu'),
+                menuItems = menu.findBlocksInside('menu-item');
+
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            block._focusedItem.should.equal(0);
+
+            menuItems[1].domElem.click();
+
+            (typeof block._focusedItem).should.equal('undefined');
+            (typeof block._menuItems).should.equal('undefined');
+        });
+    });
 });
 
 provide();
