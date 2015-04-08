@@ -21,7 +21,7 @@ block('header').elem('menu')(
                                 {
                                     block: 'menu',
                                     mix : { elem : 'additional' },
-                                    content: item.items.map(function(item){
+                                    content: item.items.map(function(item) {
                                         return {
                                             block : 'menu-item',
                                             mods : { type : 'link', theme : 'alfa', bkg: 'color' },
@@ -29,10 +29,10 @@ block('header').elem('menu')(
                                             url : item.url,
                                             content : item.title
                                         }
-                                    })
+                                    });
                                 }
                             ]
-                        }
+                        };
                     }
                     return {
                         block : 'menu-item',

@@ -10,7 +10,7 @@
     styles : [
         { elem : 'css', url : 'forms.min.css' }
     ],
-    scripts: [
+    scripts : [
         { elem : 'js', url : 'forms.min.js' }
     ],
     content : [
@@ -37,6 +37,11 @@
                         theme : 'alfa',
                         bkg : 'color'
                     },
+                    js : {
+                        required : {
+                            message : 'Super required field 1'
+                        }
+                    },
                     content : [
                         {
                             block : 'label',
@@ -60,6 +65,11 @@
                         required : true,
                         theme : 'alfa',
                         bkg : 'color'
+                    },
+                    js : {
+                        required : {
+                            message : 'Super required field 2'
+                        }
                     },
                     content : [
                         {

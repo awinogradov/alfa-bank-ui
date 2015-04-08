@@ -17,7 +17,7 @@
     "bem-components": "2.0.0",
     "bem-grid": "1.2.3",
     "bem-content": "24a5ac955ac408a691f5d15991538244ffec8263",
-    "bem-forms": "ssh://git@git/man/bem-forms.git#dev"
+    "bem-forms": "git@github.com:bem/bem-forms.git#e39012d45dc72de27b7ec0d129ac8f6c140bc931"
   },
   "devDependencies": {
     "bem-pr": "ssh://git@git/man/bem-pr.git"
