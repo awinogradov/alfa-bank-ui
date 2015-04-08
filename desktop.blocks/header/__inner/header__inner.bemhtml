@@ -25,9 +25,6 @@ block('header').elem('inner')(
                     },
                     {
                         elem : 'user'
-                    },
-                    {
-                        elem : 'support'
                     }
                 ]
             }

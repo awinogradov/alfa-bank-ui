@@ -12,6 +12,28 @@ block('header').elem('menu')(
                     horizontal : true
                 },
                 content : _this._header.menu.map(function(item) {
+                    if(item.items){
+                        return {
+                            block : 'menu-item',
+                            mods: {type: 'dropdown'},
+                            content: item.title,
+                            popup : [
+                                {
+                                    block: 'menu',
+                                    mix : { elem : 'additional' },
+                                    content: item.items.map(function(item) {
+                                        return {
+                                            block : 'menu-item',
+                                            mods : { type : 'link', theme : 'alfa', bkg: 'color' },
+                                            mix : { elem : 'additional' },
+                                            url : item.url,
+                                            content : item.title
+                                        }
+                                    });
+                                }
+                            ]
+                        };
+                    }
                     return {
                         block : 'menu-item',
                         mods : { type : 'link' },
