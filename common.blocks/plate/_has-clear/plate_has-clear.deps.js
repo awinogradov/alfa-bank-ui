@@ -1,6 +1,6 @@
 [{
     tech : 'spec.js',
     mustDeps : [
-        { tech : 'bemhtml', block : 'plate', mod : 'has-clear' }
+        { tech : 'bemhtml', block : 'plate', mods : { 'has-clear' : true } }
     ]
 }]

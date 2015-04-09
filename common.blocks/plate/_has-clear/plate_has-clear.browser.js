@@ -14,6 +14,7 @@ modules.define('plate', function(provide, Plate) {
             onSetMod : {
                 'js' : {
                     'inited' : function() {
+                        this.__base.apply(this.arguments);
                         this.bindTo('clear', 'click', function (){
                             this._onClick();
                         });
