@@ -1,6 +1,20 @@
 modules.define('input',
-    ['popup', 'menu', 'dom', 'jquery', 'BEMHTML', 'i-bem__dom'],
-    function(provide, Popup, Menu, dom, $, BEMHTML, BEMDOM, Input) {
+    ['popup', 'menu', 'dom', 'jquery', 'BEMHTML', 'i-bem__dom', 'keyboard__codes'],
+    function(provide, Popup, Menu, dom, $, BEMHTML, BEMDOM, KeyCodes, Input) {
+
+function nextNotHidden(items, index) {
+    var i = index;
+    if(i < items.length - 1) i++;
+    while(i < items.length - 1 && items[i].hasMod('hidden')) i++;
+    return items[i].hasMod('hidden') ? index : i;
+}
+
+function previousNotHidden(items, index) {
+    var i = index;
+    if(i > 0) i--;
+    while(i > 0 && items[i].hasMod('hidden')) i--;
+    return items[i].hasMod('hidden') ? index : i;
+}
 
 provide(Input.decl({ modName : 'has-autocomplete' }, {
     onSetMod : {
@@ -12,6 +26,8 @@ provide(Input.decl({ modName : 'has-autocomplete' }, {
                 this._menu = this._popup.findBlockInside('menu');
 
                 this._menu.on({ 'item-click' : this._onMenuItemClick }, this);
+
+                this.bindTo('keydown', this._handleKey.bind(this));
 
                 this._isPointerPressInProgress = false;
                 this._updateMenuWidth();
@@ -70,6 +86,7 @@ provide(Input.decl({ modName : 'has-autocomplete' }, {
         }.bind(this);
 
         BEMDOM.update(this._menu.domElem, BEMHTML.apply(opts.map(mapItems)));
+        this._resetFocusedItem();
     },
 
     _onDocPointerPress : function(e) {
@@ -96,12 +113,54 @@ provide(Input.decl({ modName : 'has-autocomplete' }, {
         this.setVal(data.item.getVal());
         this.emit('select', data.item.params);
         this.delMod('opened');
+        this._resetFocusedItem();
     },
 
     _updateMenuWidth : function() {
         this._menu.domElem.css('min-width', this.domElem.outerWidth());
 
         this._popup.redraw();
+    },
+
+    _resetFocusedItem : function() {
+        if (this._menuItems && (typeof this._focusedItem !== 'undefined') && this._menuItems[this._focusedItem]) {
+            this._menuItems[this._focusedItem].delMod('focused');
+        }
+        delete this._menuItems;
+        delete this._focusedItem;
+    },
+
+    _handleKey : function(e) {
+
+        if(e.keyCode === KeyCodes.DOWN && !this.getMod('opened')) {
+            this.setMod('opened');
+        }
+
+        if(e.keyCode === KeyCodes.UP || e.keyCode === KeyCodes.DOWN) {
+
+            if(!this._menuItems) this._menuItems = this._menu.findBlocksInside('menu-item');
+
+            if(typeof this._focusedItem === 'undefined') {
+                this._focusedItem = -1;
+            }
+
+            if(this._focusedItem != -1) this._menuItems[this._focusedItem].delMod('focused');
+
+            this._focusedItem = e.keyCode === KeyCodes.DOWN ?
+                nextNotHidden(this._menuItems, this._focusedItem) :
+                previousNotHidden(this._menuItems, this._focusedItem);
+
+            if(this._focusedItem != -1) this._menuItems[this._focusedItem].setMod('focused');
+        }
+
+        if (e.keyCode === KeyCodes.ENTER) {
+            if (typeof this._focusedItem !== 'undefined' && this._focusedItem != -1) {
+                this._onMenuItemClick(null, { item : this._menuItems[this._focusedItem] });
+                e.preventDefault();
+                return true;
+            }
+        }
+
     }
 
 }));
