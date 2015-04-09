@@ -16,6 +16,22 @@ function previousNotHidden(items, index) {
     return items[i].hasMod('hidden') ? index : i;
 }
 
+/* istanbul ignore next: hard to test, depends on styles */
+function reveal(parent, item) {
+    var pos = item.position().top,
+        margin = 20,
+        newScroll = null;
+    if (pos < 0) {
+        newScroll = parent.scrollTop() + pos - margin;
+    } else if(pos + item.outerHeight() >= parent.height()) {
+        newScroll = parent.scrollTop() + pos + item.outerHeight() + margin - parent.height();
+    }
+    if(newScroll != null) {
+        // TODO animate
+        parent.scrollTop(newScroll);
+    }
+}
+
 provide(Input.decl({ modName : 'has-autocomplete' }, {
     onSetMod : {
         'js' : {
@@ -150,7 +166,10 @@ provide(Input.decl({ modName : 'has-autocomplete' }, {
                 nextNotHidden(this._menuItems, this._focusedItem) :
                 previousNotHidden(this._menuItems, this._focusedItem);
 
-            if(this._focusedItem != -1) this._menuItems[this._focusedItem].setMod('focused');
+            if(this._focusedItem != -1) {
+                this._menuItems[this._focusedItem].setMod('focused');
+                reveal(this._popup.domElem, this._menuItems[this._focusedItem].domElem);
+            }
         }
 
         if (e.keyCode === KeyCodes.ENTER) {
