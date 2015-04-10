@@ -24,11 +24,37 @@ modules.define('input', [], function(provide, Input) {
         },
 
         /**
-         * Set custom filter function.
+         * Set custom filter function
          * @param {Function} filter function(item, val) which should return whether item should be shown
          */
         setFilter : function(filter) {
             this._filter = filter;
+        },
+
+        /**
+         * Filter autocomplete items
+         * Use to manually trigger filtering when needed
+         */
+        filter : function(val) {
+            var menu = this.getMenu();
+
+            if(!val) val = this.elem('control').val();
+
+            // TODO cache menu-item's
+            menu.findBlocksInside('menu-item').forEach(function(item) {
+                if(this._filter(item, val)) {
+                    item.delMod('hidden');
+                } else {
+                    item.setMod('hidden');
+                }
+            }.bind(this));
+
+            // hide empty groups
+            var $groups = menu.domElem.children('.menu__group');
+            $groups.hide();
+            $groups.has('.menu-item:not(.menu-item_hidden)').show();
+
+            this._lastVal = val;
         }
 
     }));
@@ -49,16 +75,7 @@ modules.define('input', [], function(provide, Input) {
         var val = this.elem('control').val();
 
         if(val != this._lastVal) {
-            // TODO cache menu-item's
-            this.getMenu().findBlocksInside('menu-item').forEach(function(item) {
-                if(this._filter(item, val)) {
-                    item.delMod('hidden');
-                } else {
-                    item.setMod('hidden');
-                }
-            }.bind(this));
-
-            this._lastVal = val;
+            this.filter(val);
         }
     }
 

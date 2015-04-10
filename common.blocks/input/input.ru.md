@@ -119,3 +119,37 @@
     ]
 }
 ```
+
+Элементы списка, также могут содержать поле data, содержимым которого может быть javascript объект. Этот объект передается в событие `select`.
+```bemjson
+{
+    block : 'input',
+    mods : { autocomplete : true },
+    options : [
+        {
+            title : 'Russia',
+            group : [
+                { val : 'MSC', data: { title : 'Moscow', code : 'MSC' }, content : 'Moscow' },
+                { val : 'SPB', data: { title : 'Saint-Petersburg', code : 'SPB' }, content : 'Saint-Petersburg' }
+            ]
+        },
+        {
+            title : 'USA',
+            group : [
+                { val : 'NYC', data : { title : 'New York', code : 'NYC' }, content : 'New York' }
+            ]
+        }
+    ]
+}
+```
+
+### _has-filter
+
+Включает возможность фильтрации элементов autocomplete. Работает только с `has-autocomplete`. По умолчанию ищет введенную подстроку в содержимом каждого menu-item. Функцию фильтрации можно переопределить так:
+```
+    ...
+    block.setFilter(function(item, val) {
+        // item is a block
+        return item.params.data.title.match(val);
+    });
+```

@@ -69,6 +69,10 @@ modules.define('spec', ['spec__utils', 'input'], function(provide, utils) {
             block.emit('change');
 
             called.should.be.false;
+
+            // manually trigger filter
+            block.filter();
+            called.should.be.true;
         });
 
         it('should not throw without has-autocomplete', function() {
