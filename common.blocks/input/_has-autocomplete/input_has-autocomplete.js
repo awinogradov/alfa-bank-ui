@@ -105,6 +105,10 @@ provide(Input.decl({ modName : 'has-autocomplete' }, {
         this._resetFocusedItem();
     },
 
+    getMenu : function() {
+        return this._menu;
+    },
+
     _onDocPointerPress : function(e) {
         if (this._isEventInPopup(e)) {
             this._isPointerPressInProgress = true;
