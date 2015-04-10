@@ -24,7 +24,7 @@ provide(Input.decl({ modName : 'type', modVal : 'card' }, {
 
     getVal : function() {
         var base = this.__base.apply(this, arguments);
-        return base.replace(/ /g, '');
+        return typeof base === 'string' && base.replace(/ /g, '');
     }
 
 }));

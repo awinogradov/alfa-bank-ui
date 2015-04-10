@@ -38,7 +38,8 @@ provide(Input.decl({ modName : 'type', modVal : 'money' }, {
      * @override
      */
     getVal : function() {
-        return this._val.replace(',', '.');
+        var base = this.__base.apply(this, arguments);
+        return typeof base === 'string' && base.replace(',', '.');
     }
 
 }));
