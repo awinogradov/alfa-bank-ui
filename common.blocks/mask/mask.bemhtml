@@ -4,7 +4,13 @@ block('mask')(
     content()(function() {
         if(this.ctx.val){
             var num = this.ctx.val.split(/\*+/);
-            return num[0] + '●●●●' + num[1];
+            if(num[0]){
+                num[0] = num[0].trim().substring(0, 4);
+            }
+            if(num[1]){
+                num[1] = num[1].trim().substring(0, 4);
+            }
+            return num[0] + ' ●●●● ' + num[1];
         }
         return this.ctx.content;
     })
