@@ -1,10 +1,89 @@
-networks = ( 'twitter' 'vk' 'facebook' )
-tools = ( 'print' 'pdf' 'email' )
-arrow = ( 'left' 'right' 'up' 'down' )
+$banks = {
+    '2449' : 'alfa-bank',
+    '3308' : 'baltijsky',
+    '5475' : 'bank_moskvy',
+    '285'  : 'bank_saint-peterburg',
+    '10223': 'credit_evropa_bank',
+    '439'  : 'home_credit',
+    '9908' : 'mdm',
+    '3001' : 'moscow_credit_bank',
+    '1490' : 'mts',
+    '4267' : 'otkrytie',
+    '7311' : 'otp',
+    '1516' : 'promsvyazbank',
+    '1309' : 'qiwi',
+    '8967' : 'raiffeisenbank',
+    '351'  : 'rosbank',
+    '6415' : 'russkii_standart',
+    '4924' : 'sberbank',
+    '5030' : 'skb',
+    '256'  : 'tinkoff',
+    '1415' : 'trast',
+    '2377' : 'ubrr',
+    '7687' : 'unicredit',
+    '7686' : 'uralsib',
+    '244'  : 'vozrogdenie',
+    '404'  : 'vtb24'
+}
+$networks = ( 'twitter' 'vk' 'facebook' )
+$tools = ( 'print' 'pdf' 'email' )
+$arrow = ( 'left' 'right' 'up' 'down' )
+$cards = ( 'visa' 'visa-white' 'visaelectron' 'mastercard' 'mastercard-white' 'maestro' 'maestro-white' )
+$actions = ( 'ok' 'fail' 'repeat' )
 
-.icon_bkg_white {
-    color: red;
-    &.icon_currency_rub {
-        background-image: url('../assets/_bkg/_white/icon/_currency/icon_currency_rub.svg');
+.icon_bkg_white
+{
+
+    &.icon_currency_rub
+    {
+        background-image: url('../_currency/icon_currency_rub-white.svg');
+    }
+
+    for $name in $cards
+    {
+        &.icon_card_{$name}
+        {
+            background-image: url('../_card/icon_card_' + $name + '.svg');
+        }
+    }
+
+    for $name in $actions
+    {
+        &.icon_action_{$name}
+        {
+            background-image: url('../_action/icon_action_' + $name + '.svg');
+        }
+    }
+
+    for $name in $banks
+    {
+        &.icon_bank_{$name}
+        {
+            background-image: url('../_bank/icon_bank_' + $banks[$name] + '.svg');
+        }
+    }
+
+    for $name in $networks
+    {
+        &.icon_network_{$name}
+        {
+            background-image: url('../_network/icon_network_' + $name + '.svg');
+        }
+    }
+
+    for $name in $tools
+    {
+        &.icon_tool_{$name}
+        {
+            background-image: url('../_tool/icon_tool_' + $name + '.svg');
+        }
+    }
+
+    for $name in $arrow
+    {
+        &.icon_arrow_{$name}
+        {
+            background-image: url('../_arrow/icon_arrow_' + $name + '.svg');
+        }
     }
 }

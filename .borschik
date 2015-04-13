@@ -1,5 +1,6 @@
 {
   "freeze_paths": {
-    "**/*.svg": ":base64:"
-  }
+    "**/*": "assets.bundles/"
+  },
+  "freeze_nesting_level": 3
 }
