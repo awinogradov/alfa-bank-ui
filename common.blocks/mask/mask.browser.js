@@ -4,7 +4,13 @@ modules.define('mask', ['i-bem__dom'], function(provide, BEMDOM) {
 
         setVal : function(newVal) {
             var num = newVal.split(/\*+/);
-            this._val = num[0] + '●●●●' + num[1];
+            if(num[0]){
+                num[0] = num[0].trim().substring(0, 4);
+            }
+            if(num[1]){
+                num[1] = num[1].trim().substring(0, 4);
+            }
+            this._val = num[0] + ' ●●●● ' + num[1];
             this.domElem.html(this._val);
         },
 
