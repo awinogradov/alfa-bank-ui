@@ -19,9 +19,9 @@
 		</i:pgfRef>
 	</foreignObject>
 	<g i:extraneous="self">
-		<polygon opacity="0.4" fill="#FFFFFF" enable-background="new    " points="1,1.2 1,14.9 5.8,14.9 5.8,14.1 23.6,14.1 23.6,14.9 
+		<polygon opacity="0.4" fill="#d5d5d5" enable-background="new    " points="1,1.2 1,14.9 5.8,14.9 5.8,14.1 23.6,14.1 23.6,14.9
 			28.4,14.9 28.4,1.2 		"/>
-		<polygon fill="#FFFFFF" points="1,28.6 1,14.9 5.8,14.9 5.8,15.7 23.6,15.7 23.6,14.9 28.4,14.9 28.4,28.6 		"/>
+		<polygon fill="#d5d5d5" points="1,28.6 1,14.9 5.8,14.9 5.8,15.7 23.6,15.7 23.6,14.9 28.4,14.9 28.4,28.6 		"/>
 	</g>
 </switch>
 <i:pgf  id="adobe_illustrator_pgf">
