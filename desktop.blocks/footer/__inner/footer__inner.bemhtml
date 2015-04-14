@@ -5,6 +5,13 @@ block('footer').elem('inner')(
                 elem : 'menu'
             },
             {
+                elem : 'additional',
+                content : [
+                    'Сделано <br>',
+                    'в Альфа-Лаборатории'
+                ]
+            },
+            {
                 elem : 'copyright',
                 content : [
                     { block : 'copyright' }
