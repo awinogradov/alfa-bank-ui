@@ -26,9 +26,9 @@ $banks = {
     '404'  : 'vtb24'
 }
 $networks = ( 'twitter' 'vk' 'facebook' )
-$tools = ( 'print-white' 'pdf-white' 'email-white' )
+$tools = ( 'print' 'pdf' 'email' )
+$cards = ( 'visa' 'mastercard' 'maestro' )
 $arrow = ( 'left' 'right' 'up' 'down' )
-$cards = ( 'visa-white' 'mastercard-white' 'maestro-white' )
 $actions = ( 'ok' 'fail' 'repeat' )
 
 .icon_bkg_white
@@ -43,7 +43,7 @@ $actions = ( 'ok' 'fail' 'repeat' )
     {
         &.icon_card_{$name}
         {
-            background-image: url('../_card/icon_card_' + $name + '.svg');
+            background-image: url('../_card/icon_card_' + $name + '-white.svg');
         }
     }
 
@@ -59,7 +59,7 @@ $actions = ( 'ok' 'fail' 'repeat' )
     {
         &.icon_bank_{$name}
         {
-            background-image: url('../_bank/icon_bank_' + $banks[$name] + '.svg');
+            background-image: url('../_bank/icon_bank_' + $banks[$name] + '-white.svg');
         }
     }
 
@@ -75,7 +75,7 @@ $actions = ( 'ok' 'fail' 'repeat' )
     {
         &.icon_tool_{$name}
         {
-            background-image: url('../_tool/icon_tool_' + $name + '.svg');
+            background-image: url('../_tool/icon_tool_' + $name + '-white.svg');
         }
     }
 
