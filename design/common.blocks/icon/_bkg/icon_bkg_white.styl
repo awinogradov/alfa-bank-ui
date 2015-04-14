@@ -1,33 +1,33 @@
 $banks = {
-    '2449' : 'alfa-bank-white',
-    '3308' : 'baltijsky-white',
-    '5475' : 'bank_moskvy-white',
-    '285'  : 'bank_saint-peterburg-white',
-    '10223': 'credit_evropa_bank-white',
-    '439'  : 'home_credit-white',
-    '9908' : 'mdm-white',
-    '3001' : 'moscow_credit_bank-white',
-    '1490' : 'mts-white',
-    '4267' : 'otkrytie-white',
-    '7311' : 'otp-white',
-    '1516' : 'promsvyazbank-white',
-    '1309' : 'qiwi-white',
-    '8967' : 'raiffeisenbank-white',
-    '351'  : 'rosbank-white',
-    '6415' : 'russkii_standart-white',
-    '4924' : 'sberbank-white',
-    '5030' : 'skb-white',
-    '256'  : 'tinkoff-white',
-    '1415' : 'trast-white',
-    '2377' : 'ubrr-white',
-    '7687' : 'unicredit-white',
-    '7686' : 'uralsib-white',
-    '244'  : 'vozrogdenie-white',
-    '404'  : 'vtb24-white'
+    '2449' : 'alfa-bank',
+    '3308' : 'baltijsky',
+    '5475' : 'bank_moskvy',
+    '285'  : 'bank_saint-peterburg',
+    '10223': 'credit_evropa_bank',
+    '439'  : 'home_credit',
+    '9908' : 'mdm',
+    '3001' : 'moscow_credit_bank',
+    '1490' : 'mts',
+    '4267' : 'otkrytie',
+    '7311' : 'otp',
+    '1516' : 'promsvyazbank',
+    '1309' : 'qiwi',
+    '8967' : 'raiffeisenbank',
+    '351'  : 'rosbank',
+    '6415' : 'russkii_standart',
+    '4924' : 'sberbank',
+    '5030' : 'skb',
+    '256'  : 'tinkoff',
+    '1415' : 'trast',
+    '2377' : 'ubrr',
+    '7687' : 'unicredit',
+    '7686' : 'uralsib',
+    '244'  : 'vozrogdenie',
+    '404'  : 'vtb24'
 }
 $networks = ( 'twitter' 'vk' 'facebook' )
-$tools = ( 'print-white' 'pdf-white' 'email-white' )
-$cards = ( 'visa-white' 'mastercard-white' 'maestro-white' )
+$tools = ( 'print' 'pdf' 'email' )
+$cards = ( 'visa' 'mastercard' 'maestro' )
 $arrow = ( 'left' 'right' 'up' 'down' )
 $actions = ( 'ok' 'fail' 'repeat' )
 
@@ -43,7 +43,7 @@ $actions = ( 'ok' 'fail' 'repeat' )
     {
         &.icon_card_{$name}
         {
-            background-image: url('../_card/icon_card_' + $name + '.svg');
+            background-image: url('../_card/icon_card_' + $name + '-white.svg');
         }
     }
 
@@ -59,7 +59,7 @@ $actions = ( 'ok' 'fail' 'repeat' )
     {
         &.icon_bank_{$name}
         {
-            background-image: url('../_bank/icon_bank_' + $banks[$name] + '.svg');
+            background-image: url('../_bank/icon_bank_' + $banks[$name] + '-white.svg');
         }
     }
 
@@ -75,7 +75,7 @@ $actions = ( 'ok' 'fail' 'repeat' )
     {
         &.icon_tool_{$name}
         {
-            background-image: url('../_tool/icon_tool_' + $name + '.svg');
+            background-image: url('../_tool/icon_tool_' + $name + '-white.svg');
         }
     }
 
