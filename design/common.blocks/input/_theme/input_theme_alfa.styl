@@ -1,3 +1,22 @@
+$placeholder_style(font_size, placeholder_font_size) {
+    &::-webkit-input-placeholder
+    {
+        font-size: placeholder_font_size;
+        padding-top: ((font_size - placeholder_font_size) / 2);
+    }
+
+    &:-ms-input-placeholder
+    {
+        font-size: placeholder_font_size;
+    }
+
+    &::-moz-placeholder
+    {
+        font-size: placeholder_font_size;
+        padding-top: ((font_size - placeholder_font_size) / 2);
+    }
+}
+
 .input_theme_alfa
 {
     font-family: $font_family;
@@ -149,12 +168,14 @@
 
     &.input_size_s
     {
-        font-size: $inputs_font_size_s;
+        font-size: 18px;
 
         .input__control
         {
-            height:       $control_size_s;
-            padding-left: $inputs_padding_s;
+            height:       35px;
+            padding-left: 12px;
+
+            $placeholder_style(18px, 16px);
         }
 
         &.input_has-clear .input__box
@@ -227,6 +248,8 @@
         {
             height:       $control_size_xl;
             padding-left: $inputs_padding_xl;
+
+            $placeholder_style($inputs_font_size_xl, 16px);
         }
 
         &.input_has-clear .input__box
