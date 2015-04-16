@@ -1,48 +1,14 @@
 .plate_theme_alfa
 {
-    display: inline-block;
-    line-height: 0;
+    position: relative;
+    display:  inline-block;
+
     padding: 10px;
+
     border-radius: 5px;
+
     box-shadow: 0 4px 4px rgba(0, 0, 0, .3);
 
-    margin-right: 7px;
+    margin-right:  7px;
     margin-bottom: 7px;
-
-    position: relative;
-
-    &.plate_hidden
-    {
-        display: none;
-    }
-
-    .plate__clear
-    {
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        width: 14px;
-        height 14px;
-        padding: 10px;
-
-        opacity: .3;
-
-        background-size: 14px;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        transition: opacity .1s ease-out;
-
-        &:hover
-        {
-            cursor: pointer;
-            opacity: 1;
-        }
-    }
-}
-
-.plate_has-clear
-{
-    padding-right: 34px;
 }
