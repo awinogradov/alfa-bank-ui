@@ -1,0 +1,32 @@
+block('app')(
+    content()(function() {
+        return [
+            { elem : 'title', content : this.ctx.title },
+            { elem : 'menu', content : this.ctx.menu },
+            { elem : 'content', content : applyNext() }
+        ];
+    }),
+
+    elem('title')(content()(function() {
+        return {
+            block : 'heading',
+            mods : { theme : 'alfa', bkg : 'color' },
+            content : applyNext()
+        };
+    })),
+
+    elem('menu')(content()(function() {
+        return {
+            block : 'menu',
+            mods : {
+                mode : 'radio',
+                bkg : 'color',
+                theme : 'alfa',
+                size : 'l',
+                horizontal : true
+            },
+            content : applyNext()
+        };
+    }))
+
+);
