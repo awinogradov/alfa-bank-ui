@@ -1,11 +1,4 @@
 block('app')(
-    content()(function() {
-        return [
-            { elem : 'title', content : this.ctx.title },
-            { elem : 'menu', content : this.ctx.menu },
-            { elem : 'content', content : applyNext() }
-        ];
-    }),
 
     elem('title')(content()(function() {
         return {
@@ -27,6 +20,9 @@ block('app')(
             },
             content : applyNext()
         };
-    }))
+    })),
 
+    elem('content')(content()(function() {
+        return applyNext();
+    }))
 );
