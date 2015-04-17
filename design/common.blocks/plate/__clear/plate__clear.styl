@@ -7,9 +7,18 @@
     width: 17px;
     height 17px;
 
+    opacity: .6;
+
     background-size: 17px;
     background-repeat: no-repeat;
     background-position: center;
+
+    transition: opacity .1s ease-out;
+
+    &:hover
+    {
+        opacity: 1;
+    }
 
     cursor: pointer;
 }
