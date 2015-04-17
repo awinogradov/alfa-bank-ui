@@ -28,7 +28,22 @@ block('card-number')(
             if(num[1]){
                 num[1] = num[1].trim().substring(0, 4);
             }
-            return num[0] + ' ●●●● ' + num[1];
+            return [
+                num[0],
+                {
+                    elem : 'dot'
+                },
+                {
+                    elem : 'dot'
+                },
+                {
+                    elem : 'dot'
+                },
+                {
+                    elem : 'dot'
+                },
+                num[1]
+            ];
         }
         return this.ctx.content;
     })
