@@ -1,5 +1,5 @@
 modules.define('input',
-    ['jquery__mask'],
+    ['jquery__formatter'],
     function(provide, $, Input) {
 
 provide(Input.decl({ modName : 'has-mask', modVal : true }, {
@@ -9,7 +9,9 @@ provide(Input.decl({ modName : 'has-mask', modVal : true }, {
             'inited' : function() {
                 this.__base.apply(this, arguments);
 
-                $(this.elem('control')).mask(this.params.mask, this.params.options);
+                $(this.elem('control')).formatter({
+                    pattern : this.params.mask
+                });
             }
         }
     }
