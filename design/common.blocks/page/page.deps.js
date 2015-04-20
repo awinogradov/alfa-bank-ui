@@ -1,5 +1,6 @@
 [{
-    shouldDeps : [
-        { block : 'variables' }
+    mustDeps : [
+        { block : 'variables' },
+        { block : 'typo' }
     ]
 }]
