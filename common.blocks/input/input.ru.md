@@ -68,14 +68,14 @@
 
 ### _has-mask
 
-- маскирует значение в инпуте
+- Маскирует значение в инпуте. Формат маски как в плагине [formatter](https://github.com/firstopinion/formatter.js).
 
 ``` bemjson
 {
     block : 'input',
     mods : { 'has-mask'  : true },
     js : {
-        mask : '00/00'
+        mask : '{{99}}/{{99}}'
     }
 }
 ```
