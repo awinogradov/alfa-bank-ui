@@ -5,9 +5,11 @@ block('app')(
     }),
 
     elem('title')(content()(function() {
+        var appMods = this._appMods;
+
         return {
             block : 'heading',
-            mods : { theme : 'alfa', bkg : 'color' },
+            mods : { theme : appMods.theme, bkg : appMods.bkg },
             content : applyNext()
         };
     })),
