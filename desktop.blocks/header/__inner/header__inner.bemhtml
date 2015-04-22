@@ -20,11 +20,14 @@ block('header').elem('inner')(
             {
                 elem : 'content',
                 content : [
-                    {
+                    (!!_this._header.menu) && {
                         elem : 'menu'
                     },
-                    {
+                    (!!_this._header.customer) && {
                         elem : 'user'
+                    },
+                    (!!_this._header.support) && {
+                        elem : 'support'
                     }
                 ]
             }
