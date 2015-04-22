@@ -25,6 +25,9 @@ block('header').elem('inner')(
                     },
                     (!!_this._header.customer) && {
                         elem : 'user'
+                    },
+                    (!!_this._header.support) && {
+                        elem : 'support'
                     }
                 ]
             }
