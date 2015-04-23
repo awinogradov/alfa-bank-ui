@@ -2960,6 +2960,145 @@
                             ]
                         }
                     ]
+                },
+                {
+                    block : 'section',
+                    content : [
+                        {
+                            block : 'heading',
+                            mix : [{ block : 'section', elem : 'title' }],
+                            lvl : 2,
+                            content : 'Уведомление'
+                        },
+                        {
+                            block : 'row',
+                            mix : [{ block : 'section', elem : 'sizes' }],
+                            content : [
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : 'S'
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : 'M'
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : 'L'
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : 'XL'
+                                }
+                            ]
+                        },
+                        {
+                            block: 'row',
+                            mix: [{ block: 'section', elem: 'examples' }],
+                            content: [
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'notification',
+                                                    mods : { theme : 'alfa', bkg : 'color' },
+                                                    message : 'Карта переименованна',
+                                                    status : 'ok'
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'notification',
+                                                    mods : { theme : 'alfa', bkg : 'color' },
+                                                    message : 'Карта переименованна',
+                                                    status : 'fail'
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
