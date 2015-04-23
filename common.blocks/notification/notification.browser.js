@@ -44,7 +44,6 @@ modules.define('notification', ['i-bem__dom', 'BEMHTML'], function(provide, BEMD
         },
 
         push : function(status, message) {
-            console.log('push notification');
             //update icon
             this.findBlockInside('icon').setMod('action', status);
             //update background-color
