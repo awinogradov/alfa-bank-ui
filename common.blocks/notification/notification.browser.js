@@ -50,7 +50,16 @@ modules.define('notification', ['i-bem__dom', 'BEMHTML'], function(provide, BEMD
             this.findBlockInside('notification__status').setMod('type', status);
             //update message
             this.elem('inner').html(message);
-            this.setMod('visible', true);
+            if(this.getMod('visible')){
+                this._stopEvade();
+                this._evade();
+                _this = this;
+                setTimeout(function() {
+                    _this.setMod('visible', true);
+                }, 200);
+            } else {
+                this.setMod('visible', true);
+            }
         }
 
     }));
