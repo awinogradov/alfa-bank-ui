@@ -19,7 +19,7 @@
     content: [
         {
             attrs: {
-                style: 'padding: 100px'
+                style: 'padding: 50px'
             },
             content: [{
                 block: 'input',
@@ -27,6 +27,22 @@
                     theme: 'alfa',
                     size: 'm',
                     bkg : 'white',
+                    'has-calendar': true
+                },
+                weekdays: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
+                months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+            }]
+        },
+        {
+            attrs: {
+                style: 'padding: 50px;background: blue'
+            },
+            content: [{
+                block: 'input',
+                mods: {
+                    theme: 'alfa',
+                    size: 'm',
+                    bkg : 'color',
                     'has-calendar': true
                 },
                 weekdays: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
