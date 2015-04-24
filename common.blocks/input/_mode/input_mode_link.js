@@ -21,7 +21,7 @@ Input.decl({ block : this.name, modName : 'mode', modVal : 'link' }, {
                 var _this = this;
 
                 this._trigger = this.findBlockOn('trigger', this.getMod('mode'));
-                this._trigger.bindTo('click', function() {
+                this.bindTo('click', function() {
                     _this.setMod('focused');
                 });
                 this._placeholder = this.elem('control').attr('placeholder') || '';
