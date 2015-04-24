@@ -15,8 +15,12 @@ FormField.decl({ block : this.name, modName : 'has-validate', modVal : true }, /
             'inited' : function() {
                 this.__base.apply(this, arguments);
 
-                this.getControl().elem('control').on('blur',
-                    this.validate.bind(this));
+                this.getControl().bindTo('control', 'blur', function(e) {
+                    this._dirty = this._dirty || (this.getVal() != this._initVal);
+                    this._dirty && this.validate();
+                }.bind(this));
+
+                this._initVal = this.getVal();
             }
         }
     },

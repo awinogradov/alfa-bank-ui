@@ -54,7 +54,7 @@
                                 'has-mask' : true,
                                 theme : 'alfa', bkg : 'color', size : 'm' },
                             js : {
-                                mask : '00-00-00'
+                                mask : '{{99}}-{{99}}-{{99}}'
                             },
                             name : 'firstName'
                         }
