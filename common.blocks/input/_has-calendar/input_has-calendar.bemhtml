@@ -3,16 +3,12 @@ block('input')(
         return this.extend(applyNext(), { readonly : 'readonly' });
     }),
     mod('has-calendar', true)(
-        elem('control').content()(function() { return [
-                applyNext(),
-                {
-                    elem : 'calendar'
-                }
-            ];
-        }),
         elem('box').content()(function() {
             return [
                 applyNext(),
+                {
+                    elem : 'calendar'
+                },
                 {
                     block : 'calendar',
                     mods : {
