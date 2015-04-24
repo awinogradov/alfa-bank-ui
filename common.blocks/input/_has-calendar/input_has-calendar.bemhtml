@@ -1,0 +1,31 @@
+block('input')(
+    mod('readonly', true).elem('control').attrs()(function() {
+        return this.extend(applyNext(), { readonly : 'readonly' });
+    }),
+    mod('has-calendar', true)(
+        elem('control').content()(function() { return [
+                applyNext(),
+                {
+                    elem : 'calendar'
+                }
+            ];
+        }),
+        elem('box').content()(function() {
+            return [
+                applyNext(),
+                {
+                    block : 'calendar',
+                    mods : {
+                        theme : 'alfa'
+                    },
+                    js : {
+                        earlierLimit : this._input.earlierLimit,
+                        laterLimit : this._input.laterLimit,
+                        weekdays : this._input.weekdays,
+                        months : this._input.months
+                    }
+                }
+            ];
+        })
+    )
+);
