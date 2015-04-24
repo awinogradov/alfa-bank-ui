@@ -30,6 +30,7 @@ $tools = ( 'print' 'pdf' 'email' )
 $cards = ( 'visa' 'visaelectron' 'mastercard' 'maestro' )
 $arrow = ( 'left' 'right' 'up' 'down' )
 $actions = ( 'ok' 'fail' 'repeat' )
+$user = ( 'out' )
 
 .icon_bkg_color
 {
@@ -83,6 +84,14 @@ $actions = ( 'ok' 'fail' 'repeat' )
         &.icon_arrow_{$name}
         {
             background-image: url('../_arrow/icon_arrow_' + $name + '.svg');
+        }
+    }
+
+    for $name in $user
+    {
+        &.icon_user_{$name}
+        {
+            background-image: url('../_user/icon_user_' + $name + '.svg');
         }
     }
 }
