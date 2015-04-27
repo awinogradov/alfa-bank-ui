@@ -1,52 +1,52 @@
 ({
-    block: 'page',
-    title: 'Datepicker',
-    styles: [
-        { elem: 'css', url: 'calendar.min.css' },
+    block : 'page',
+    title : 'Datepicker',
+    styles : [
+        { elem : 'css', url : 'calendar.min.css' },
         '<!--[if IE]>',
-            { elem: 'css', url: 'calendar.min.ie.css' },
+            { elem : 'css', url : 'calendar.min.ie.css' },
         '<![endif]-->',
         '<!--[if IE 8]>',
-            { elem: 'css', url: 'calendar.min.ie8.css' },
+            { elem : 'css', url : 'calendar.min.ie8.css' },
         '<![endif]-->',
         '<!--[if IE 9]>',
-            { elem: 'css', url: 'calendar.min.ie9.css' },
+            { elem : 'css', url : 'calendar.min.ie9.css' },
         '<![endif]-->'
     ],
-    scripts: [
-        { elem: 'js', url: 'calendar.min.js' }
+    scripts : [
+        { elem : 'js', url : 'calendar.min.js' }
     ],
-    content: [
+    content : [
         {
-            attrs: {
-                style: 'padding: 50px'
+            attrs : {
+                style : 'padding: 50px'
             },
-            content: [{
-                block: 'input',
-                mods: {
-                    theme: 'alfa',
-                    size: 'm',
+            content : [{
+                block : 'input',
+                mods : {
+                    theme : 'alfa',
+                    size : 'm',
                     bkg : 'white',
                     'has-calendar': true
                 },
-                weekdays: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
-                months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+                weekdays : ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+                months : ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
             }]
         },
         {
-            attrs: {
-                style: 'padding: 50px;background: blue'
+            attrs : {
+                style : 'padding: 50px;background: blue'
             },
             content: [{
-                block: 'input',
-                mods: {
-                    theme: 'alfa',
-                    size: 'm',
+                block : 'input',
+                mods : {
+                    theme : 'alfa',
+                    size : 'm',
                     bkg : 'color',
-                    'has-calendar': true
+                    'has-calendar' : true
                 },
-                weekdays: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
-                months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+                weekdays : ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+                months : ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
             }]
         }
     ]

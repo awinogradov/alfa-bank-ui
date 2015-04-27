@@ -1,4 +1,16 @@
 block('input')(
+    def()(function() {
+        var ctx = this.ctx;
+        applyNext({
+            _inputMods : ctx.mods,
+            _calendarParams : {
+                earlierLimit : ctx.earlierLimit,
+                laterLimit : ctx.laterLimit,
+                weekdays : ctx.weekdays,
+                months : ctx.months
+            }
+        });
+    }),
     mod('readonly', true).elem('control').attrs()(function() {
         return this.extend(applyNext(), { readonly : 'readonly' });
     }),
@@ -11,15 +23,8 @@ block('input')(
                 },
                 {
                     block : 'calendar',
-                    mods : {
-                        theme : 'alfa'
-                    },
-                    js : {
-                        earlierLimit : this._input.earlierLimit,
-                        laterLimit : this._input.laterLimit,
-                        weekdays : this._input.weekdays,
-                        months : this._input.months
-                    }
+                    mods : this._inputMods,
+                    js : this._calendarParams
                 }
             ];
         })

@@ -5,7 +5,7 @@
             elems : ['arrow', 'day', 'dayname']
         },
         {
-            mods : { theme : 'alfa' }
+            mods : { theme : 'alfa', bkg : ['white', 'color'] }
         },
         {
             block : 'popup',

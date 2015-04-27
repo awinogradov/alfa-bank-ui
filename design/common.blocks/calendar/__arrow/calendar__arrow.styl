@@ -1,10 +1,17 @@
 .calendar__arrow
 {
-    width: 8px;
-    height: 8px;
-    margin: 4px;
+    width: 15px;
+    height: 15px;
+    margin: 2px 4px;
+    opacity: 0.6;
 
     cursor: pointer;
+    transition: all 0.1s ease-out;
+}
+
+.calendar__arrow:hover
+{
+    opacity: 1;
 }
 
 .calendar__arrow_direction_left
@@ -23,10 +30,10 @@
 
 .ua_svg_no .calendar__arrow_direction_left
 {
-    background-image: url(calendar__arrow_direction_left.png);
+    /*background-image: url(calendar__arrow_direction_left.png);*/
 }
 
 .ua_svg_no .calendar__arrow_direction_right
 {
-    background-image: url(calendar__arrow_direction_right.png);
+    /*background-image: url(calendar__arrow_direction_right.png);*/
 }

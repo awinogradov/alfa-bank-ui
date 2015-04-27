@@ -1,15 +1,72 @@
-@media all and (min-width:0px)
+.calendar_theme_alfa
 {
-    /* :before — бордер */
-    .calendar_theme_alfa .calendar__day_state_current:before
+    color: rgba(128, 128, 128, 1);
+    background: rgba(255,255,255,1);
+
+    font-size: 16px;
+    font-family: $font_family;
+
+    padding: 0;
+
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
+                0 10px 20px -5px rgba(0, 0, 0, 0.4);
+    &.popup_direction_bottom-right
     {
-        border: 1px solid rgba(0, 0, 0, .2);
-        border-radius: 3px;
+        margin-top: 7px !important;
+        margin-left: 10px !important;
     }
 
-    /* :after — фон */
+    &.popup_direction_bottom-right::before
+    {
+        margin-top : -29px;
+        right : 15px;
+
+        border-top:        7px solid transparent;
+        border-left:       7px solid transparent;
+        border-right:      7px solid transparent;
+        border-bottom:     7px solid rgba(0,0,0,0.9);
+        content : ''
+        position: absolute;
+    }
+
+    .calendar__title,
+    .calendar__layout
+    {
+        padding: 12px;
+    }
+
+    .calendar__title
+    {
+        border-bottom: 1px solid rgba(217, 217, 219, 1);
+    }
+
+    .calendar__name
+    {
+
+    }
+
+    .calendar__dayname
+    {
+        line-height: 34px;
+        font-weight: 300;
+    }
+
+    .calendar__day
+    {
+        font-weight: 300;
+    }
+
+    .calendar__day_state_current
+    {
+        color: rgba(255,255,255,1);
+    }
+}
+
+
+@media all and (min-width:0px)
+{
     .calendar_theme_alfa .calendar__day_state_current:after
     {
-        background: #ffeca6;
+        background: rgba(0, 208, 126, 1);
     }
 }
