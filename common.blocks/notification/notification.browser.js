@@ -41,7 +41,7 @@ modules.define('notification', ['i-bem__dom', 'BEMHTML'], function(provide, BEMD
             var _this = this;
             this._outTimeOut = setTimeout(function() {
                 _this.delMod('visible');
-            }, 2000);
+            }, 5000);
         },
 
         _evade : function() {
