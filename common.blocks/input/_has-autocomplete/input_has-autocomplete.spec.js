@@ -515,6 +515,12 @@ describe('input_has-autocomplete', function() {
             (typeof block._focusedItem).should.equal('undefined');
             (typeof block._menuItems).should.equal('undefined');
         });
+
+        it('should not throw on empty list', function() {
+            block = build('input', bemjson);
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 38 })); // UP
+            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+        });
     });
 });
 

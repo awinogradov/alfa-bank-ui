@@ -54,6 +54,13 @@ modules.define('input', [], function(provide, Input) {
             $groups.hide();
             $groups.has('.menu-item:not(.menu-item_hidden)').show();
 
+            // reset focused item if it was filter out
+            if (this._menuItems && (typeof this._focusedItem !== 'undefined') &&
+                    this._menuItems[this._focusedItem] &&
+                    this._menuItems[this._focusedItem].hasMod('hidden')) {
+                this._resetFocusedItem();
+            }
+
             this._lastVal = val;
         }
 
