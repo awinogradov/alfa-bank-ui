@@ -29,6 +29,7 @@ FormField.decl({ block : this.name, modName : 'has-validate', modVal : true }, /
         this.__base.apply(this, arguments);
 
         this.setMessageVal(this._status);
+        this.hasMod('focused') && this.getMessage().show();
     }
 });
 
