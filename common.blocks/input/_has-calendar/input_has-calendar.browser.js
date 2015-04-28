@@ -19,9 +19,7 @@ provide(BEMDOM.decl({ block : this.name, modName: 'has-calendar' }, /** @lends i
             this._calendar
                 .setVal(this.getVal())
                 .setAnchor(this.domElem)
-                .on('change', function(e, data) {
-                    this.setVal(data.formated);
-                }.bind(this));
+                .on('change', this._onChangeCalendar, this);
 
             this.bindTo('control', 'focus pointerclick', this.showCalendar);
             this.bindTo('control', 'blur', this._onControlBlur);
@@ -35,6 +33,9 @@ provide(BEMDOM.decl({ block : this.name, modName: 'has-calendar' }, /** @lends i
                 .setVal(this.getVal())
                 .show();
         }
+    },
+    _onChangeCalendar : function(e, data) {
+        this.setVal(data.formated);
     },
     _onControlBlur : function(e) {
         if(this._ignoreBlur) {

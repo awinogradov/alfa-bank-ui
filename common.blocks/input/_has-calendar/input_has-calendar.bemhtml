@@ -23,9 +23,11 @@ block('input')(
             }
         });
     }),
+
     mod('readonly', true).elem('control').attrs()(function() {
         return this.extend(applyNext(), { readonly : 'readonly' });
     }),
+
     mod('has-calendar', true)(
 
         elem('box').content()(function() {
