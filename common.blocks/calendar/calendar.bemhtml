@@ -1,11 +1,20 @@
-block('calendar').mix()(function() {
-    var ctx = this.ctx;
-    return {
-        block : 'popup',
-        mods : this.extend(ctx.mods, {
-            'has-calendar' : true,
-            target : 'anchor',
-            bkg : false
-        })
-    };
-});
+block('calendar')(
+
+    mix()(function() {
+        var ctx = this.ctx;
+        return {
+            block : 'popup',
+            mods : this.extend(ctx.mods, {
+                'has-calendar' : true,
+                target : 'anchor',
+                bkg : false
+            }),
+            directions : ctx.directions
+        };
+    }),
+
+    elem('layout').tag()('table'),
+    elem('row').tag()('tr'),
+    elem('day').tag()('td'),
+    elem('dayname').tag()('th')
+);

@@ -19,7 +19,7 @@
     content : [
         {
             attrs : {
-                style : 'padding: 50px'
+                style : 'padding: 50px; width: 150px'
             },
             content : [{
                 block : 'input',
@@ -36,7 +36,7 @@
         },
         {
             attrs : {
-                style : 'padding: 50px; background: blue'
+                style : 'padding: 50px; background: blue; width: 150px'
             },
             content: [{
                 block : 'input',

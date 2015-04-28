@@ -23,44 +23,45 @@ provide(BEMDOM.decl({ block : this.name, modName: 'has-calendar' }, /** @lends i
                     this.setVal(data.formated);
                 }.bind(this));
 
-            this.bindTo('control', 'focus pointerclick', function() {
-                if(!this._calendar.isShown()) {
-                    this._calendar
-                        .setVal(this.getVal())
-                        .show();
-                }
-            }.bind(this));
+            this.bindTo('control', 'focus pointerclick', this.showCalendar);
+            this.bindTo('control', 'blur', this._onControlBlur);
+            this.bindTo('calendar', 'pointerclick', this._onPointerClickSwicher);
+            this.bindToDoc('pointerdown', this._onDocPointerDown);
+        }
+    },
+    showCalendar : function() {
+        if(!this._calendar.isShown()) {
+            this._calendar
+                .setVal(this.getVal())
+                .show();
+        }
+    },
+    _onControlBlur : function(e) {
+        if(this._ignoreBlur) {
+            this._ignoreBlur = false;
+        } else {
+            this._calendar.hide();
+        }
+    },
+    _onPointerClickSwicher : function(e) {
+        if(this._calendar.isShown()) {
+            this._calendar.hide();
+        } else {
+            this._calendar
+                .setVal(this.getVal())
+                .show();
+        }
+    },
+    _onDocPointerDown : function(e) {
+        var target = $(e.target),
+            insideCalendar = dom.contains(this._calendar.domElem, target);
 
-            this.bindTo('control', 'blur', function(e) {
-                    if(this._ignoreBlur) {
-                        this._ignoreBlur = false;
-                    } else {
-                        this._calendar.hide();
-                    }
-            }.bind(this));
+        if(insideCalendar) {
+            this._ignoreBlur = true;
+        }
 
-            this.bindTo('calendar', 'pointerclick', function(e) {
-                if(this._calendar.isShown()) {
-                    this._calendar.hide();
-                } else {
-                    this._calendar
-                        .setVal(this.getVal())
-                        .show();
-                }
-            }.bind(this));
-
-            this.bindToDoc('pointerdown', function(e) {
-                var target = $(e.target),
-                    insideCalendar = dom.contains(this._calendar.domElem, target);
-
-                if(insideCalendar) {
-                    this._ignoreBlur = true;
-                }
-
-                if(!insideCalendar && !dom.contains(this.domElem, target)) {
-                    this._calendar.hide();
-                }
-            });
+        if(!insideCalendar && !dom.contains(this.domElem, target)) {
+            this._calendar.hide();
         }
     },
     destruct: function() {

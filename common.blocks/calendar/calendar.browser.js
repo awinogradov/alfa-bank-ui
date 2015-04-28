@@ -259,11 +259,9 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
                 this._buildTitle(this._month),
                 {
                     elem: 'layout',
-                    tag: 'table',
                     content: rows.map(function(row) {
                         return {
                             elem: 'row',
-                            tag: 'tr',
                             content: row
                         };
                     })
@@ -311,7 +309,6 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
                     weekend = i > 4,
                     dayElem = {
                         elem: 'day',
-                        tag: 'td',
                         content: {
                             elem: 'inner',
                             content: day ? day.getDate() : ''
@@ -347,7 +344,6 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
         this.params.weekdays.forEach(function(name, i) {
             var dayname = {
                 elem: 'dayname',
-                tag: 'th',
                 content: name
             };
 
@@ -389,29 +385,33 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
                 }
             ]
         };
+    },
+
+    _changeMonthOnPointerClick : function(e) {
+        var elem = $(e.currentTarget);
+        if(!this.hasMod(elem, 'disabled')) {
+            this.switchMonth(this.hasMod(elem, 'direction', 'left') ? -1 : 1);
+        }
+    },
+
+    _changeDayOnPointerClick : function(e) {
+        var date = $(e.currentTarget).data('day');
+        if(date) {
+            this.setVal(date);
+            this.hide();
+
+            var val = this.getVal();
+            this.emit('change', {
+                value: val,
+                formated: this._formatDate(val)
+            });
+        }
     }
 },  /** @lends calendar */ {
     live: function() {
-        this.liveBindTo('arrow', 'pointerclick', function(e) {
-            var elem = $(e.currentTarget);
-            if(!this.hasMod(elem, 'disabled')) {
-                this.switchMonth(this.hasMod(elem, 'direction', 'left') ? -1 : 1);
-            }
-        });
+        this.liveBindTo('arrow', 'pointerclick', this.prototype._changeMonthOnPointerClick);
 
-        this.liveBindTo('day', 'pointerclick', function(e) {
-            var date = $(e.currentTarget).data('day');
-            if(date) {
-                this.setVal(date);
-                this.hide();
-
-                var val = this.getVal();
-                this.emit('change', {
-                    value: val,
-                    formated: this._formatDate(val)
-                });
-            }
-        });
+        this.liveBindTo('day', 'pointerclick', this.prototype._changeDayOnPointerClick);
 
         return false;
     }

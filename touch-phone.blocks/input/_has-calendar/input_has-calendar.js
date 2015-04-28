@@ -1,7 +1,7 @@
 /**
  * @module input
  */
-modules.define('input', ['i-bem__dom', 'jquery', 'ua'], function(provide, BEMDOM, $, ua) {
+modules.define('input', ['i-bem__dom', 'BEMHTML', 'jquery', 'ua'], function(provide, BEMDOM, BEMHTML, $, ua) {
 
 /**
  * @exports
@@ -40,13 +40,17 @@ provide(BEMDOM.decl({ block: this.name, modName: 'has-calendar' }, /** @lends in
         this.unbindFrom('control', 'pointerclick blur focus');
         this.unbindFrom('calendar', 'pointerclick');
 
-        this.domElem.append($('<input class="input__ios-calendar" type="date" value=""/>'));
+        BEMDOM.append(this.domElem, BEMHTML.apply({
+            block : 'input',
+            elem : 'ios-calendar'
+        }));
 
         // Forwarding date to base input
-        this.bindTo('ios-calendar', 'change', function() {
-            var val = this.elem('ios-calendar').val().split('-').reverse().join('.');
-            this.setVal(val);
-        });
+        this.bindTo('ios-calendar', 'change', this._onChangeIosNativeCalendar);
+    },
+    _onChangeIosNativeCalendar : function() {
+        var val = this.elem('ios-calendar').val().split('-').reverse().join('.');
+        this.setVal(val);
     }
 },
 {
