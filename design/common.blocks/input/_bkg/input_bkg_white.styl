@@ -1,6 +1,7 @@
 .input_bkg_white
 {
     background: $gray;
+
     color: #000;
 
     &:before
@@ -20,18 +21,24 @@
 
     &.input_mode_link
     {
-        background: white;
+        background: #fff;
     }
 
     &.input_focused
     {
-        background: $green;
+        background: #ff9900;
+
+        &:before
+        {
+            top:    2px;
+            right:  2px;
+            bottom: 2px;
+            left:   2px;
+        }
     }
 
     &.input_hovered
     {
-        background: $green;
-
         .input__trigger
         {
             border-bottom: none;
@@ -70,22 +77,6 @@
     &.input_invalid
     {
         background: #fc5c5e;
-        background: rgba(252, 92, 94, 0.6);
-    }
-
-    &.input_hovered, &.input_focused
-    {
-        &.input_has-addon .input__addon
-        {
-            border-color: $green;
-        }
-
-    }
-
-    &.input_focused.input_invalid,
-    &.input_hovered.input_invalid
-    {
-        background: rgba(252, 92, 94, 1);
     }
 
 }
