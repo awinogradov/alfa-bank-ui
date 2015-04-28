@@ -15,9 +15,13 @@ modules.define('notification', ['i-bem__dom', 'BEMHTML'], function(provide, BEMD
                         this._startEvade();
                     });
 
-                    this.bindTo('click', function(){
-                        this._evade();
-                    });
+                    var _this = this;
+
+                    //override to don't hide plate
+                    this.findBlockInside('plate')._onClick = function() {
+                        _this._evade();
+                    }
+
                 }
             },
 
@@ -33,6 +37,7 @@ modules.define('notification', ['i-bem__dom', 'BEMHTML'], function(provide, BEMD
         },
 
         _startEvade : function() {
+            this._stopEvade();
             var _this = this;
             this._outTimeOut = setTimeout(function() {
                 _this.delMod('visible');
@@ -40,6 +45,7 @@ modules.define('notification', ['i-bem__dom', 'BEMHTML'], function(provide, BEMD
         },
 
         _evade : function() {
+            this._stopEvade();
             this.delMod('visible');
         },
 
@@ -51,7 +57,6 @@ modules.define('notification', ['i-bem__dom', 'BEMHTML'], function(provide, BEMD
             //update message
             this.elem('inner').html(message);
             if(this.getMod('visible')){
-                this._stopEvade();
                 this._evade();
                 _this = this;
                 setTimeout(function() {
