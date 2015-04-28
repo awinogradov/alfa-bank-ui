@@ -12,14 +12,14 @@ module.exports = function(bh) {
         });
     });
 
-    bh.match('input_has-calendar__control', function(ctx) {
-        return [
-            ctx.json(),
-            {
-                elem: 'calendar'
-            }
-        ]
+    bh.match('input_has-calendar__addon', function(ctx) {
+        ctx.mix({
+            block : 'input',
+            elem : 'calendar'
+        });
     });
+
+
 
     bh.match('input_has-calendar__box', function(ctx) {
         return [

@@ -27,6 +27,7 @@
                     theme : 'alfa',
                     size : 'm',
                     bkg : 'white',
+                    'has-addon' : true,
                     'has-calendar': true
                 },
                 weekdays : ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
@@ -35,7 +36,7 @@
         },
         {
             attrs : {
-                style : 'padding: 50px;background: blue'
+                style : 'padding: 50px; background: blue'
             },
             content: [{
                 block : 'input',
@@ -43,6 +44,7 @@
                     theme : 'alfa',
                     size : 'm',
                     bkg : 'color',
+                    'has-addon' : true,
                     'has-calendar' : true
                 },
                 weekdays : ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
