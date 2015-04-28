@@ -1,5 +1,25 @@
 block('calendar')(
 
+    js()(function() {
+        return this.extend({
+            weekdays : ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+            months : [
+                'Январь',
+                'Февраль',
+                'Март',
+                'Апрель',
+                'Май',
+                'Июнь',
+                'Июль',
+                'Август',
+                'Сентябрь',
+                'Октябрь',
+                'Ноябрь',
+                'Декабрь'
+            ],
+        }, this.ctx.js);
+    }),
+
     mix()(function() {
         var ctx = this.ctx;
         return {

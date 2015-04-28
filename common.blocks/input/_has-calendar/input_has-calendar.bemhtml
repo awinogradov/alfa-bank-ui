@@ -2,6 +2,12 @@ block('input')(
     def()(function() {
         var ctx = this.ctx;
         var mods = ctx.mods;
+        var calendarParams = {};
+
+        if(ctx.earlierLimit) calendarParams.earlierLimit = ctx.earlierLimit;
+        if(ctx.laterLimit) calendarParams.laterLimit = ctx.laterLimit;
+        if(ctx.weekdays) calendarParams.weekdays = ctx.weekdays;
+        if(ctx.months) calendarParams.months = ctx.months;
 
         ctx.addon = {
             block : 'icon',
@@ -15,12 +21,7 @@ block('input')(
 
         applyNext({
             _inputMods : mods,
-            _calendarParams : {
-                earlierLimit : ctx.earlierLimit,
-                laterLimit : ctx.laterLimit,
-                weekdays : ctx.weekdays,
-                months : ctx.months
-            }
+            _calendarParams : calendarParams
         });
     }),
 
