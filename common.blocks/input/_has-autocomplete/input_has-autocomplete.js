@@ -6,14 +6,14 @@ function nextNotHidden(items, index) {
     var i = index;
     if(i < items.length - 1) i++;
     while(i < items.length - 1 && items[i].hasMod('hidden')) i++;
-    return items[i].hasMod('hidden') ? index : i;
+    return (items[i] && items[i].hasMod('hidden')) ? index : i;
 }
 
 function previousNotHidden(items, index) {
     var i = index;
     if(i > 0) i--;
     while(i > 0 && items[i].hasMod('hidden')) i--;
-    return items[i].hasMod('hidden') ? index : i;
+    return (items[i] && items[i].hasMod('hidden')) ? index : i;
 }
 
 /* istanbul ignore next: hard to test, depends on styles */

@@ -1,4 +1,4 @@
-modules.define('spec', ['spec__utils', 'input'], function(provide, utils) {
+modules.define('spec', ['spec__utils', 'jquery', 'input'], function(provide, utils, $) {
 
     describe('input_has-filter', function() {
 
@@ -84,6 +84,21 @@ modules.define('spec', ['spec__utils', 'input'], function(provide, utils) {
             });
 
             utils.destruct(block);
+        });
+
+        it('should reset focused item if it was filtered out', function() {
+            block.elem('control').trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            items[0].hasMod('focused').should.be.true;
+
+            block.elem('control').val('X');
+            block.emit('change');
+            items[0].hasMod('hidden').should.be.false;
+            items[0].hasMod('focused').should.be.true;
+
+            block.elem('control').val('Y');
+            block.emit('change');
+            items[0].hasMod('hidden').should.be.true;
+            items[0].hasMod('focused').should.be.false;
         });
 
     });
