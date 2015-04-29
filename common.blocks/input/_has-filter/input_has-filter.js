@@ -1,8 +1,6 @@
 /**
  * @module input
  */
-
-/* istanbul ignore next: FIXME */
 modules.define('input', [], function(provide, Input) {
 
     provide(Input.decl({ modName : 'has-filter' }, {
@@ -20,7 +18,7 @@ modules.define('input', [], function(provide, Input) {
                     this._lastVal = this.getVal();
                     this._filter = defaultFilter;
 
-                    this.on('change', handleChange.bind(this));
+                    this.on('change', handleChange, this);
                 }
             }
         },
@@ -82,10 +80,7 @@ modules.define('input', [], function(provide, Input) {
      */
     function handleChange(e) {
         var val = this.getVal();
-
-        if(val != this._lastVal) {
-            this.filter(val);
-        }
+        this.filter(val);
     }
 
 });

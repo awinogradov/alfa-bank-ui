@@ -1,4 +1,3 @@
-/* istanbul ignore next: FIXME */
 modules.define('spec', ['spec__utils', 'jquery', 'input'], function(provide, utils, $) {
 
     describe('input_has-filter', function() {
@@ -26,48 +25,42 @@ modules.define('spec', ['spec__utils', 'jquery', 'input'], function(provide, uti
             utils.destruct(block);
         });
 
-        it.skip('should call default filter function on change', function() {
-            block.elem('control').val('X');
-            block.emit('change');
+        it('should call default filter function on change', function() {
+            block.setVal('X');
             items[0].hasMod('hidden').should.be.false;
             items[1].hasMod('hidden').should.be.true;
 
-            block.elem('control').val('');
-            block.emit('change');
+            block.setVal('');
             items[0].hasMod('hidden').should.be.false;
             items[1].hasMod('hidden').should.be.false;
         });
 
-        it.skip('should use custom filter function', function() {
+        it('should use custom filter function', function() {
             block.setFilter(function(item, val) {
                 return item.params.data.text.match(val);
             });
 
-            block.elem('control').val('B');
-            block.emit('change');
+            block.setVal('B');
             items[0].hasMod('hidden').should.be.true;
             items[1].hasMod('hidden').should.be.false;
 
-            block.elem('control').val('');
-            block.emit('change');
+            block.setVal('');
             items[0].hasMod('hidden').should.be.false;
             items[1].hasMod('hidden').should.be.false;
         });
 
-        it.skip('should not call filter function on same value', function() {
+        it('should not call filter function on same value', function() {
             var called = false;
             block.setFilter(function(item, val) {
                 called = true;
                 return true;
             });
-            block.elem('control').val('A');
-            block.emit('change');
+            block.setVal('A');
 
             called.should.be.true;
 
             called = false;
-            block.elem('control').val('A');
-            block.emit('change');
+            block.setVal('A');
 
             called.should.be.false;
 
@@ -87,17 +80,15 @@ modules.define('spec', ['spec__utils', 'jquery', 'input'], function(provide, uti
             utils.destruct(block);
         });
 
-        it.skip('should reset focused item if it was filtered out', function() {
+        it('should reset focused item if it was filtered out', function() {
             block.elem('control').trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
             items[0].hasMod('focused').should.be.true;
 
-            block.elem('control').val('X');
-            block.emit('change');
+            block.setVal('X');
             items[0].hasMod('hidden').should.be.false;
             items[0].hasMod('focused').should.be.true;
 
-            block.elem('control').val('Y');
-            block.emit('change');
+            block.setVal('Y');
             items[0].hasMod('hidden').should.be.true;
             items[0].hasMod('focused').should.be.false;
         });
