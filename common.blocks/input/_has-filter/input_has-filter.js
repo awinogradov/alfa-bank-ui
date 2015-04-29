@@ -1,6 +1,8 @@
 /**
  * @module input
  */
+
+/* istanbul ignore next: FIXME */
 modules.define('input', [], function(provide, Input) {
 
     provide(Input.decl({ modName : 'has-filter' }, {
@@ -38,7 +40,7 @@ modules.define('input', [], function(provide, Input) {
         filter : function(val) {
             var menu = this.getMenu();
 
-            if(!val) val = this.elem('control').val();
+            if(!val) val = this.getVal();
 
             // TODO cache menu-item's
             menu.findBlocksInside('menu-item').forEach(function(item) {
@@ -79,7 +81,7 @@ modules.define('input', [], function(provide, Input) {
      * @private
      */
     function handleChange(e) {
-        var val = this.elem('control').val();
+        var val = this.getVal();
 
         if(val != this._lastVal) {
             this.filter(val);
