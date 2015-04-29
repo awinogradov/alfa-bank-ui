@@ -31,3 +31,5 @@ libs
 *.log
 
 .DS_Store
+
+__coverage-*
