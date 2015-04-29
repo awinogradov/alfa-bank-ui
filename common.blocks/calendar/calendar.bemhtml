@@ -1,0 +1,40 @@
+block('calendar')(
+
+    js()(function() {
+        return this.extend({
+            weekdays : ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+            months : [
+                'Январь',
+                'Февраль',
+                'Март',
+                'Апрель',
+                'Май',
+                'Июнь',
+                'Июль',
+                'Август',
+                'Сентябрь',
+                'Октябрь',
+                'Ноябрь',
+                'Декабрь'
+            ],
+        }, this.ctx.js);
+    }),
+
+    mix()(function() {
+        var ctx = this.ctx;
+        return {
+            block : 'popup',
+            mods : this.extend(ctx.mods, {
+                'has-calendar' : true,
+                target : 'anchor',
+                bkg : false
+            }),
+            directions : ctx.directions
+        };
+    }),
+
+    elem('layout').tag()('table'),
+    elem('row').tag()('tr'),
+    elem('day').tag()('td'),
+    elem('dayname').tag()('th')
+);

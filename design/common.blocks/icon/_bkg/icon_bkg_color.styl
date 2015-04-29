@@ -29,7 +29,7 @@ $networks = ( 'twitter' 'vk' 'facebook' )
 $tools = ( 'print' 'pdf' 'email' )
 $cards = ( 'visa' 'visaelectron' 'mastercard' 'maestro' )
 $arrow = ( 'left' 'right' 'up' 'down' )
-$actions = ( 'ok' 'fail' 'repeat' )
+$actions = ( 'ok' 'fail' 'repeat' 'error' )
 $user = ( 'out' )
 
 .icon_bkg_color
@@ -37,6 +37,11 @@ $user = ( 'out' )
     &.icon_currency_rub
     {
         background-image: url('../_currency/icon_currency_rub.svg');
+    }
+
+    &.icon_tool_calendar
+    {
+        background-image: url('../_tool/icon_tool_calendar.svg');
     }
 
     for $name in $cards

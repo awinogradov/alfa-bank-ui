@@ -1,4 +1,6 @@
-$height = 70px;
+$height = 109px;
+$width = 390px;
+$notifWidth = 80px;
 
 .notification_theme_alfa
 {
@@ -7,7 +9,7 @@ $height = 70px;
     transition: right 200ms ease;
     z-index: 3000;
     position: fixed;
-    top: 10px;
+    top: 17px;
     right: -500px;
 
     .notification__plate
@@ -16,12 +18,13 @@ $height = 70px;
         padding-left: 0 !important;
         padding-bottom: 0 !important;
         height: $height;
+        width: $width;
     }
 
     .notification__status
     {
         text-align: center;
-        width: 50px;
+        width: $notifWidth;
         height: $height;
         line-height: $height;
         position: absolute;
@@ -32,9 +35,9 @@ $height = 70px;
     {
         display: table;
         height: $height;
-        padding-left: 60px;
+        padding-left: $notifWidth + 21px;
         min-width: 200px;
-        max-width: 250px;
+        max-width: 360px;
     }
 
     .notification__inner
@@ -58,5 +61,10 @@ $height = 70px;
     .notification__status_type_fail
     {
         background-color: $red;
+    }
+
+    .notification__status_type_error
+    {
+        background-color: #de3c16;
     }
 }

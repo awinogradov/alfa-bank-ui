@@ -7,7 +7,8 @@ block('notification')(
             mix : { block : 'notification', elem : 'plate' },
             mods : {
                 theme : mods.theme,
-                bkg : mods.bkg
+                bkg : mods.bkg,
+                'has-clear' : true
             },
             content : [{
                 block : 'notification',
@@ -19,7 +20,7 @@ block('notification')(
                         theme : mods.theme,
                         bkg : 'color',
                         'action' : this.ctx.status,
-                        size : 'm'
+                        size : 'l'
                     }
                 }
             },
