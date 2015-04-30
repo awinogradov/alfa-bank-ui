@@ -1,0 +1,1804 @@
+block('inputs')(
+    content()(function() {
+        return [
+            {
+                block : 'row',
+                content : [
+                    {
+                        elem : 'col',
+                        mods : { 's' : true},
+                        content : [
+                            {
+                                elem : 'size-section',
+                                content : [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'S'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 's' },
+                                                                        val : 'Простой',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 's', disabled : true },
+                                                                        val : 'Недоступный',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 's', 'has-clear' : true },
+                                                                        val : 'С очисткой',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'select',
+                                                                        mods : { mode : 'radio-check', theme : 'alfa', bkg : 'color', size : 's' },
+                                                                        name : 'select',
+                                                                        text : 'first',
+                                                                        options : [
+                                                                            { val : 1, text : 'first', checked: true },
+                                                                            { val : 2, text : 'second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'textarea',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size: 's' },
+                                                                        placeholder : 'текст'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size: 's', 'type' : 'link' },
+                                                                        val : 'Простой inplace'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size: 's', 'type' : 'symbol' },
+                                                                        val : 'Простой символ',
+                                                                        symbol : '₽'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size: 's', 'type' : 'result' },
+                                                                        val : 'Result'
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'M'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm' },
+                                                                        val : 'Простой',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', disabled : true },
+                                                                        val : 'Недоступный',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', 'has-clear' : true },
+                                                                        val : 'С очисткой',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'select',
+                                                                        mods : { mode : 'radio-check', theme : 'alfa', bkg : 'color', size : 'm' },
+                                                                        name : 'select',
+                                                                        text : 'first',
+                                                                        options : [
+                                                                            { val : 1, text : 'first', checked: true },
+                                                                            { val : 2, text : 'second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'textarea',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size: 'm' },
+                                                                        placeholder : 'текст'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size: 'm', 'type' : 'link' },
+                                                                        val : 'Простой inplace'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size: 'm', 'type' : 'symbol' },
+                                                                        val : 'Простой символ',
+                                                                        symbol : '₽'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size: 'm', 'type' : 'result' },
+                                                                        val : 'Result'
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'L'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l' },
+                                                                        val : 'Простой',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', disabled : true },
+                                                                        val : 'Недоступный',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', 'has-clear' : true },
+                                                                        val : 'С очисткой',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'select',
+                                                                        mods : { mode : 'radio-check', theme : 'alfa', bkg : 'color', size : 'l' },
+                                                                        name : 'select',
+                                                                        text : 'first',
+                                                                        options : [
+                                                                            { val : 1, text : 'first', checked: true },
+                                                                            { val : 2, text : 'second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'textarea',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size: 'l' },
+                                                                        placeholder : 'текст'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size: 'l', 'type' : 'link' },
+                                                                        val : 'Простой inplace'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size: 'l', 'type' : 'symbol' },
+                                                                        val : 'Простой символ',
+                                                                        symbol : '₽'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size: 'l', 'type' : 'result' },
+                                                                        val : 'Result'
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'XL'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xl' },
+                                                                        val : 'Простой',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xl', disabled : true },
+                                                                        val : 'Недоступный',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xl', 'has-clear' : true },
+                                                                        val : 'С очисткой',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'select',
+                                                                        mods : { mode : 'radio-check', theme : 'alfa', bkg : 'color', size : 'xl' },
+                                                                        name : 'select',
+                                                                        text : 'first',
+                                                                        options : [
+                                                                            { val : 1, text : 'first', checked: true },
+                                                                            { val : 2, text : 'second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'textarea',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size: 'xl' },
+                                                                        placeholder : 'текст'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size: 'xl', 'type' : 'link' },
+                                                                        val : 'Простой inplace'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size: 'xl', 'type' : 'symbol' },
+                                                                        val : 'Простой символ',
+                                                                        symbol : '₽'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size: 'xl', 'type' : 'result' },
+                                                                        val : 'Result'
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                block : 'heading',
+                                lvl : 3,
+                                content : 'Чекбоксы'
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'S'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'checkbox-group',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 's', type : 'button' },
+                                                                        name : 'checkbox-sizes-s',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'M'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'checkbox-group',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', type : 'button' },
+                                                                        name : 'checkbox-sizes-m',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'checkbox',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', checked : true },
+                                                                        val : 1,
+                                                                        text : 'чекбокс'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'checkbox-group',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm' },
+                                                                        name : 'checkbox-sizes-m',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'L'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'checkbox-group',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', type : 'button' },
+                                                                        name : 'checkbox-sizes-m',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'checkbox',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', checked : true },
+                                                                        val : 1,
+                                                                        text : 'чекбокс'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'checkbox-group',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l' },
+                                                                        name : 'checkbox-sizes-m',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'XL'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'checkbox-group',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xl', type : 'button' },
+                                                                        name : 'checkbox-sizes-s',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                block : 'heading',
+                                lvl : 3,
+                                content : 'Радио'
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'S'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'radio-group',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 's', type : 'button' },
+                                                                        name : 'radio-sizes-s',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'M'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'radio-group',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', type : 'button' },
+                                                                        name : 'radio-sizes-m',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'radio',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', checked : true },
+                                                                        val : 1,
+                                                                        text : 'радио'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'radio-group',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm' },
+                                                                        name : 'radio-sizes-m',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'L'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'radio-group',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', type : 'button' },
+                                                                        name : 'radio-sizes-m',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'radio',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', checked : true },
+                                                                        val : 1,
+                                                                        text : 'радио'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'radio-group',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l' },
+                                                                        name : 'radio-sizes-m',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'XL'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'radio-group',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xl', type : 'button' },
+                                                                        name : 'radio-sizes-m',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem : 'col',
+                        mods : { 's' : true},
+                        mix : { elem : 'white' },
+                        content : [
+                            {
+                                elem : 'size-section',
+                                content : [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'S'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 's' },
+                                                                        val : 'Простой',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 's', disabled : true },
+                                                                        val : 'Недоступный',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 's', 'has-clear' : true },
+                                                                        val : 'С очисткой',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'select',
+                                                                        mods : { mode : 'radio-check', theme : 'alfa', bkg : 'white', size : 's' },
+                                                                        name : 'select',
+                                                                        text : 'first',
+                                                                        options : [
+                                                                            { val : 1, text : 'first', checked: true },
+                                                                            { val : 2, text : 'second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'textarea',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size: 's' },
+                                                                        placeholder : 'текст'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size: 's', 'type' : 'link' },
+                                                                        val : 'Простой inplace'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size: 's', 'type' : 'symbol' },
+                                                                        val : 'Простой символ',
+                                                                        symbol : '₽'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size: 's', 'type' : 'result' },
+                                                                        val : 'Result'
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'M'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm' },
+                                                                        val : 'Простой',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm', disabled : true },
+                                                                        val : 'Недоступный',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm', 'has-clear' : true },
+                                                                        val : 'С очисткой',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'select',
+                                                                        mods : { mode : 'radio-check', theme : 'alfa', bkg : 'white', size : 'm' },
+                                                                        name : 'select',
+                                                                        text : 'first',
+                                                                        options : [
+                                                                            { val : 1, text : 'first', checked: true },
+                                                                            { val : 2, text : 'second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'textarea',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size: 'm' },
+                                                                        placeholder : 'текст'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size: 'm', 'type' : 'link' },
+                                                                        val : 'Простой inplace'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size: 'm', 'type' : 'symbol' },
+                                                                        val : 'Простой символ',
+                                                                        symbol : '₽'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size: 'm', 'type' : 'result' },
+                                                                        val : 'Result'
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'L'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'l' },
+                                                                        val : 'Простой',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'l', disabled : true },
+                                                                        val : 'Недоступный',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'l', 'has-clear' : true },
+                                                                        val : 'С очисткой',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'select',
+                                                                        mods : { mode : 'radio-check', theme : 'alfa', bkg : 'white', size : 'l' },
+                                                                        name : 'select',
+                                                                        text : 'first',
+                                                                        options : [
+                                                                            { val : 1, text : 'first', checked: true },
+                                                                            { val : 2, text : 'second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'textarea',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size: 'l' },
+                                                                        placeholder : 'текст'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size: 'l', 'type' : 'link' },
+                                                                        val : 'Простой inplace'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size: 'l', 'type' : 'symbol' },
+                                                                        val : 'Простой символ',
+                                                                        symbol : '₽'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size: 'l', 'type' : 'result' },
+                                                                        val : 'Result'
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'XL'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'xl' },
+                                                                        val : 'Простой',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'xl', disabled : true },
+                                                                        val : 'Недоступный',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'xl', 'has-clear' : true },
+                                                                        val : 'С очисткой',
+                                                                        placeholder : 'placeholder'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'select',
+                                                                        mods : { mode : 'radio-check', theme : 'alfa', bkg : 'white', size : 'xl' },
+                                                                        name : 'select',
+                                                                        text : 'first',
+                                                                        options : [
+                                                                            { val : 1, text : 'first', checked: true },
+                                                                            { val : 2, text : 'second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'textarea',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size: 'xl' },
+                                                                        placeholder : 'текст'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size: 'xl', 'type' : 'link' },
+                                                                        val : 'Простой inplace'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size: 'xl', 'type' : 'symbol' },
+                                                                        val : 'Простой символ',
+                                                                        symbol : '₽'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size: 'xl', 'type' : 'result' },
+                                                                        val : 'Result'
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                block : 'heading',
+                                lvl : 3,
+                                content : 'Чекбоксы'
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'S'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'checkbox-group',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 's', type : 'button' },
+                                                                        name : 'checkbox-sizes-s',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'M'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'checkbox-group',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm', type : 'button' },
+                                                                        name : 'checkbox-sizes-m',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'checkbox',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm', checked : true },
+                                                                        val : 1,
+                                                                        text : 'чекбокс'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'checkbox-group',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm' },
+                                                                        name : 'checkbox-sizes-m',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'L'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'checkbox-group',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'l', type : 'button' },
+                                                                        name : 'checkbox-sizes-m',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'checkbox',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'l', checked : true },
+                                                                        val : 1,
+                                                                        text : 'чекбокс'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'checkbox-group',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'l' },
+                                                                        name : 'checkbox-sizes-m',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'XL'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'checkbox-group',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'xl', type : 'button' },
+                                                                        name : 'checkbox-sizes-s',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                block : 'heading',
+                                lvl : 3,
+                                content : 'Радио'
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'S'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'radio-group',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 's', type : 'button' },
+                                                                        name : 'radio-sizes-s',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'M'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'radio-group',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm', type : 'button' },
+                                                                        name : 'radio-sizes-m',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'radio',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm', checked : true },
+                                                                        val : 1,
+                                                                        text : 'радио'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'radio-group',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm' },
+                                                                        name : 'radio-sizes-m',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'L'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'radio-group',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'l', type : 'button' },
+                                                                        name : 'radio-sizes-m',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'radio',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'l', checked : true },
+                                                                        val : 1,
+                                                                        text : 'радио'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'radio-group',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'l' },
+                                                                        name : 'radio-sizes-m',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'XL'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'radio-group',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'xl', type : 'button' },
+                                                                        name : 'radio-sizes-m',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    })
+);

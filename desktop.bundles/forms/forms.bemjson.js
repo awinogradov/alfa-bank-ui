@@ -1,32 +1,35 @@
 ({
-    block : 'page',
-    mods : { theme : 'alfa', bkg : 'color' },
-    title : 'Alfa-Bank UI',
-    favicon : '/favicon.ico',
-    head : [
-        { elem : 'meta', attrs : { name : 'description', content : '' } },
-        { elem : 'meta', attrs : { name : 'viewport', content : 'width=device-width, initial-scale=1' } }
+    block: 'page',
+    mods: {theme: 'alfa', bkg: 'color'},
+    title: 'Demo Alfa-Bank UI',
+    favicon: '/favicon.ico',
+    head: [
+        {elem: 'meta', attrs: {name: 'description', content: ''}},
+        {elem: 'meta', attrs: {name: 'viewport', content: 'width=device-width, initial-scale=1'}}
     ],
-    styles : [
-        { elem : 'css', url : 'forms.min.css' }
+    styles: [
+        {elem: 'css', url: 'forms.min.css'}
     ],
     scripts : [
         { elem : 'js', url : 'forms.min.js' }
     ],
     content : [
         {
-            block : 'heading',
-            content : 'Forms test'
-        },
-        {
-            block : 'form',
-            mods : {
-                'has-validate' : true,
-                message : 'popup'
-            },
-            method : 'GET',
+            elem : 'inner',
             content : [
                 {
+                    elem : 'header',
+                    content : [
+                        { block : 'header' }
+                    ]
+                },
+                {
+                    elem : 'content',
+                    content : [
+                        {
+                            block : 'app',
+                            content : [
+                                {
                     block : 'form-field',
                     id : 'input',
                     mods : {
@@ -92,29 +95,23 @@
                             },
                             options : [
                                 {
-                                    title : 'Russia',
-                                    group : [
-                                        { val : 'MSC', content : 'Moscow' },
-                                        { val : 'SPB', content : 'Saint-Petersburg' }
-                                    ]
+                                    block : 'heading',
+                                    mods : { theme : 'alfa', bkg : 'color' },
+                                    content : 'Форма'
                                 },
                                 {
-                                    title : 'USA',
-                                    group : [
-                                        { val : 'NYC', content : 'New York' },
-                                        { val : 'BST', content : 'Boston' }
-                                    ]
+                                    block : 'forms'
                                 }
-                            ],
-                            name : 'lastName'
+                            ]
                         }
                     ]
-                },
-                {
-                    block : 'button',
-                    mods : { theme : 'alfa', bkg : 'color', type : 'submit', size : 'm' },
-                    text : 'Submit'
                 }
+            ]
+        },
+        {
+            elem : 'footer',
+            content : [
+                { block : 'footer' }
             ]
         }
     ]

@@ -11,7 +11,7 @@ block('header').elem('menu')(
                     size : 'm',
                     horizontal : true
                 },
-                content : _this._header.menu.map(function(item) {
+                content : _this._header.menu && _this._header.menu.map(function(item) {
                     if(item.items){
                         return {
                             block : 'menu-item',
@@ -24,11 +24,11 @@ block('header').elem('menu')(
                                     content : item.items.map(function(item) {
                                         return {
                                             block : 'menu-item',
-                                            mods : { type : 'link', theme : 'alfa', bkg: 'color' },
+                                            mods : { type : 'link', theme : 'alfa', bkg : 'color' },
                                             mix : { elem : 'additional' },
                                             url : item.url,
                                             content : item.title
-                                        }
+                                        };
                                     })
                                 }
                             ]

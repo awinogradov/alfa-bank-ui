@@ -11,7 +11,7 @@ block('footer').elem('menu')(
                     size : 'm',
                     horizontal : true
                 },
-                content : _this._footer.menu.map(function(item) {
+                content : _this._footer.menu && _this._footer.menu.map(function(item) {
                     return {
                         block : 'menu-item',
                         mods : { type : 'link' },

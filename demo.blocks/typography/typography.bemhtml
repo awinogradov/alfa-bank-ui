@@ -1,0 +1,1235 @@
+block('typography')(
+    content()(function() {
+        return [
+            {
+                block : 'row',
+                content : [
+                    {
+                        elem : 'col',
+                        mods : { 's' : true },
+                        content : [
+                            {
+                                elem : 'size-section',
+                                content : [
+                                    {
+                                        block : 'heading',
+                                        lvl : 3,
+                                        content : 'Заголовки'
+                                    },
+                                    {
+                                        elem : 'examples',
+                                        content : [
+                                            {
+                                                block : 'heading',
+                                                content : 'Заголовок h1'
+                                            },
+                                            {
+                                                block : 'heading',
+                                                lvl : 2,
+                                                content : 'Заголовок h2'
+                                            },
+                                            {
+                                                block : 'heading',
+                                                lvl : 3,
+                                                content : 'Заголовок h3'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content : [
+                                    {
+                                        block : 'heading',
+                                        lvl : 3,
+                                        content : 'Параграфы'
+                                    },
+                                    {
+                                        elem : 'examples',
+                                        content : [
+                                            {
+                                                block : 'paragraph',
+                                                mods : { type : 'lead' },
+                                                content : [
+                                                    'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
+                                                    'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
+                                                    'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
+                                                    'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
+                                                    'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
+                                                    'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
+                                                    'Это заглавный параграф, в котором абсолютно бестолковый текст.'
+                                                ]
+                                            },
+                                            {
+                                                block : 'paragraph',
+                                                content : [
+                                                    'Это обычный параграф, в котором такой же бестолковый текст. ',
+                                                    'Это обычный параграф, в котором такой же бестолковый текст. ',
+                                                    'Это обычный параграф, в котором такой же бестолковый текст. ',
+                                                    'Это обычный параграф, в котором такой же бестолковый текст. ',
+                                                    'Это обычный параграф, в котором такой же бестолковый текст. ',
+                                                    'Это обычный параграф, в котором такой же бестолковый текст. ',
+                                                    'Это обычный параграф, в котором такой же бестолковый текст.'
+                                                ]
+                                            },
+                                            {
+                                                block : 'paragraph',
+                                                mark : 'nb',
+                                                content : [
+                                                    'Это параграф с меткой NB, в котором еще более бестолковый текст. ',
+                                                    'Это параграф с меткой NB, в котором еще более бестолковый текст. ',
+                                                    'Это параграф с меткой NB, в котором еще более бестолковый текст. ',
+                                                    'Это параграф с меткой NB, в котором еще более бестолковый текст. ',
+                                                    'Это параграф с меткой NB, в котором еще более бестолковый текст. ',
+                                                    'Это параграф с меткой NB, в котором еще более бестолковый текст. ',
+                                                    'Это параграф с меткой NB, в котором еще более бестолковый текст.'
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content : [
+                                    {
+                                        block : 'heading',
+                                        lvl : 3,
+                                        content : 'Списки'
+                                    },
+                                    {
+                                        elem : 'elem',
+                                        content : 'Простой:'
+                                    },
+                                    {
+                                        elem : 'examples',
+                                        content : [
+                                            {
+                                                block : 'list',
+                                                mods : { theme : 'alfa', bkg : 'color' },
+                                                items : [
+                                                    'Пункт списка',
+                                                    'Пункт списка',
+                                                    'Пункт списка',
+                                                    'Пункт списка'
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem : 'elem',
+                                        content : 'Нумерованный:'
+                                    },
+                                    {
+                                        elem : 'examples',
+                                        content : [
+                                            {
+                                                block : 'list',
+                                                mods : { type : 'ordered' },
+                                                items : [
+                                                    'Пункт списка',
+                                                    'Пункт списка',
+                                                    'Пункт списка',
+                                                    'Пункт списка'
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                block : 'heading',
+                                lvl : 3,
+                                content : 'Загрузчики'
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'S'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block: 'controls',
+                                                                content: [
+                                                                    {
+                                                                        block : 'spin',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 's', visible : true }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'M'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'spin',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', visible : true }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'L'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'spin',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', visible : true }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'XL'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'spin',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xl', visible : true }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                block : 'heading',
+                                lvl : 3,
+                                content : 'Иконки'
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'S'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block: 'controls',
+                                                                content: [
+                                                                    {
+                                                                        block : 'icon',
+                                                                        mods : { bkg : 'color', theme : 'alfa', size: 's', network : 'facebook' }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'M'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'icon',
+                                                                        mods : { bkg : 'color', theme : 'alfa', size: 'm', network : 'facebook' }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'L'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'icon',
+                                                                        mods : { bkg : 'color', theme : 'alfa', size: 'l', network : 'facebook' }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'XL'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'icon',
+                                                                        mods : { bkg : 'color', theme : 'alfa', size: 'xl', network : 'facebook' }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                block : 'heading',
+                                lvl : 3,
+                                content : 'Ссылки'
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'S'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'link',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 's' },
+                                                                        url : '#',
+                                                                        content : 'Ссылка'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'link',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 's', pseudo : true },
+                                                                        title : 'pseudo mod',
+                                                                        content : 'link'
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'M'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'link',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm' },
+                                                                        url : '#',
+                                                                        content : 'Ссылка'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'link',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', pseudo : true },
+                                                                        title : 'pseudo mod',
+                                                                        content : 'link'
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'L'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'link',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l' },
+                                                                        url : '#',
+                                                                        content : 'Ссылка'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'link',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', pseudo : true },
+                                                                        title : 'pseudo mod',
+                                                                        content : 'link'
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'XL'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'link',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xl' },
+                                                                        url : '#',
+                                                                        content : 'Ссылка'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'link',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xl', pseudo : true },
+                                                                        title : 'pseudo mod',
+                                                                        content : 'link'
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        elem : 'col',
+                        mods : { 's' : true },
+                        mix : { elem : 'white' },
+                        content : [
+                            {
+                                elem : 'size-section',
+                                content : [
+                                    {
+                                        block : 'heading',
+                                        lvl : 3,
+                                        content : 'Заголовки'
+                                    },
+                                    {
+                                        elem : 'examples',
+                                        content : [
+                                            {
+                                                block : 'heading',
+                                                content : 'Заголовок h1'
+                                            },
+                                            {
+                                                block : 'heading',
+                                                lvl : 2,
+                                                content : 'Заголовок h2'
+                                            },
+                                            {
+                                                block : 'heading',
+                                                lvl : 3,
+                                                content : 'Заголовок h3'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content : [
+                                    {
+                                        block : 'heading',
+                                        lvl : 3,
+                                        content : 'Параграфы'
+                                    },
+                                    {
+                                        elem : 'examples',
+                                        content : [
+                                            {
+                                                block : 'paragraph',
+                                                mods : { type : 'lead' },
+                                                content : [
+                                                    'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
+                                                    'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
+                                                    'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
+                                                    'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
+                                                    'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
+                                                    'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
+                                                    'Это заглавный параграф, в котором абсолютно бестолковый текст.'
+                                                ]
+                                            },
+                                            {
+                                                block : 'paragraph',
+                                                content : [
+                                                    'Это обычный параграф, в котором такой же бестолковый текст. ',
+                                                    'Это обычный параграф, в котором такой же бестолковый текст. ',
+                                                    'Это обычный параграф, в котором такой же бестолковый текст. ',
+                                                    'Это обычный параграф, в котором такой же бестолковый текст. ',
+                                                    'Это обычный параграф, в котором такой же бестолковый текст. ',
+                                                    'Это обычный параграф, в котором такой же бестолковый текст. ',
+                                                    'Это обычный параграф, в котором такой же бестолковый текст.'
+                                                ]
+                                            },
+                                            {
+                                                block : 'paragraph',
+                                                mark : 'nb',
+                                                content : [
+                                                    'Это параграф с меткой NB, в котором еще более бестолковый текст. ',
+                                                    'Это параграф с меткой NB, в котором еще более бестолковый текст. ',
+                                                    'Это параграф с меткой NB, в котором еще более бестолковый текст. ',
+                                                    'Это параграф с меткой NB, в котором еще более бестолковый текст. ',
+                                                    'Это параграф с меткой NB, в котором еще более бестолковый текст. ',
+                                                    'Это параграф с меткой NB, в котором еще более бестолковый текст. ',
+                                                    'Это параграф с меткой NB, в котором еще более бестолковый текст.'
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content : [
+                                    {
+                                        block : 'heading',
+                                        lvl : 3,
+                                        content : 'Списки'
+                                    },
+                                    {
+                                        elem : 'elem',
+                                        content : 'Простой:'
+                                    },
+                                    {
+                                        elem : 'examples',
+                                        content : [
+                                            {
+                                                block : 'list',
+                                                mods : { theme : 'alfa', bkg : 'white' },
+                                                items : [
+                                                    'Пункт списка',
+                                                    'Пункт списка',
+                                                    'Пункт списка',
+                                                    'Пункт списка'
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem : 'elem',
+                                        content : 'Нумерованный:'
+                                    },
+                                    {
+                                        elem : 'examples',
+                                        content : [
+                                            {
+                                                block : 'list',
+                                                mods : { type : 'ordered' },
+                                                items : [
+                                                    'Пункт списка',
+                                                    'Пункт списка',
+                                                    'Пункт списка',
+                                                    'Пункт списка'
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                block : 'heading',
+                                lvl : 3,
+                                content : 'Загрузчики'
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'S'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block: 'controls',
+                                                                content: [
+                                                                    {
+                                                                        block : 'spin',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 's', visible : true }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'M'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'spin',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm', visible : true }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'L'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'spin',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'l', visible : true }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'XL'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'spin',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'xl', visible : true }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                block : 'heading',
+                                lvl : 3,
+                                content : 'Иконки'
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'S'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block: 'controls',
+                                                                content: [
+                                                                    {
+                                                                        block : 'icon',
+                                                                        mods : { bkg : 'white', theme : 'alfa', size: 's', network : 'facebook' }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'M'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'icon',
+                                                                        mods : { bkg : 'white', theme : 'alfa', size: 'm', network : 'facebook' }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'L'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'icon',
+                                                                        mods : { bkg : 'white', theme : 'alfa', size: 'l', network : 'facebook' }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'XL'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'icon',
+                                                                        mods : { bkg : 'white', theme : 'alfa', size: 'xl', network : 'facebook' }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                block : 'heading',
+                                lvl : 3,
+                                content : 'Ссылки'
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'S'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'link',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 's' },
+                                                                        url : '#',
+                                                                        content : 'Ссылка'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'link',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 's', pseudo : true },
+                                                                        title : 'pseudo mod',
+                                                                        content : 'link'
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'M'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'link',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm' },
+                                                                        url : '#',
+                                                                        content : 'Ссылка'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'link',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm', pseudo : true },
+                                                                        title : 'pseudo mod',
+                                                                        content : 'link'
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'L'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'link',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'l' },
+                                                                        url : '#',
+                                                                        content : 'Ссылка'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'link',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'l', pseudo : true },
+                                                                        title : 'pseudo mod',
+                                                                        content : 'link'
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                elem : 'size-section',
+                                content: [
+                                    {
+                                        block : 'row',
+                                        content : [
+                                            {
+                                                elem : 'col',
+                                                mods : { 's' : true },
+                                                content : [
+                                                    {
+                                                        elem : 'sidebar',
+                                                        content : 'XL'
+                                                    },
+                                                    {
+                                                        elem : 'content',
+                                                        content : [
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'link',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'xl' },
+                                                                        url : '#',
+                                                                        content : 'Ссылка'
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'link',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 'xl', pseudo : true },
+                                                                        title : 'pseudo mod',
+                                                                        content : 'link'
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+
+        ]
+    })
+);
