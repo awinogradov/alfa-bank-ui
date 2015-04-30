@@ -3,9 +3,8 @@ block('checkbox-group')(
         var mods = this.mods,
             ctx = this.ctx;
 
-        return (ctx.options || []).map(function(option, i) {
+        return (ctx.options || []).map(function(option) {
             return [
-                !!i && !mods.view && { tag : 'br' },
                 {
                     block : 'checkbox',
                     mods : {
