@@ -1,42 +1,27 @@
 .label_theme_alfa
 {
-    font-family: font_family;
+    font-family: $font_family;
 
+    font-weight: 100;
     display: inline-block;
-
-    padding-right: 15px;
-
-    &.label_right
-    {
-        font-weight: font_weight;
-
-        padding-right: 0;
-    }
-
-    .label__inner
-    {
-        display: inherit;
-
-        vertical-align: top;
-    }
 
     &.label_size_s
     {
-        font-size: inputs_font_size_s;
+        font-size: 15px;
     }
 
     &.label_size_m
     {
-        font-size: inputs_font_size_m;
+        font-size: 18px;
     }
 
     &.label_size_l
     {
-        font-size: inputs_font_size_l;
+        font-size: 22px;
     }
 
     &.label_size_xl
     {
-        font-size: inputs_font_size_xl;
+        font-size: $inputs_font_size_xl;
     }
 }

@@ -1,7 +1,7 @@
 .checkbox_bkg_white
 {
     .checkbox__box {
-        background: gray;
+        background: $gray;
 
         &:before {
             background: #fff;
@@ -9,7 +9,7 @@
 
         &:after
         {
-            background-image: url(../../assets/_bkg/_white/tip.svg);
+            background-image: url(../__box/_bkg/checkbox__box_bkg_white.svg);
         }
     }
 
@@ -17,7 +17,7 @@
     {
         .checkbox__box
         {
-            background: gray;
+            background: $gray;
 
             &:before
             {
@@ -38,12 +38,12 @@
     {
         .checkbox__box
         {
-            background: darken(gray, 10%);
+            background: darken($gray, 10%);
         }
 
         &.checkbox_checked .checkbox__box
         {
-            background: darken(gray, 10%);
+            background: darken($gray, 10%);
         }
     }
 

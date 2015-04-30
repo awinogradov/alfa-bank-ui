@@ -1,0 +1,39 @@
+block('header').elem('user')(
+    content()(function() {
+        var _this = this;
+
+        return [
+            {
+                block : 'link',
+                mods : {
+                    theme : _this._headerMods.theme,
+                    bkg : _this._headerMods.bkg,
+                    pseudo : true,
+                    size : 'm'
+                },
+                mix : { block : 'header', elem : 'user-link' },
+                url : '#',
+                content : _this._header.customer
+            },
+            !!_this._header.out && {
+                block : 'link',
+                mods : {
+                    theme : _this._headerMods.theme,
+                    bkg : _this._headerMods.bkg,
+                    size : 'm'
+                },
+                url : _this._header.out,
+                mix : { block : 'header', elem : 'user-out' },
+                content : {
+                    block : 'icon',
+                    mix : { block : 'header', elem : 'user-out-icon' },
+                    mods : {
+                        theme : _this._headerMods.theme,
+                        bkg : _this._headerMods.bkg,
+                        user : 'out'
+                    }
+                }
+            }
+        ];
+    })
+);

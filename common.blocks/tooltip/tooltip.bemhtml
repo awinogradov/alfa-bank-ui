@@ -1,0 +1,21 @@
+block('tooltip')(
+    js()(true),
+    content()(function() {
+        var mods = this.mods;
+        return [{
+            elem : 'icon',
+            content : this.ctx.icon
+        },
+        {
+            block : 'popup',
+            mix : { block : 'tooltip', elem : 'popup' },
+            mods : {
+                target : 'anchor',
+                theme : mods.theme,
+                bkg : mods.bkg
+            },
+            directions : this.ctx.directions,
+            content : applyNext()
+        }];
+    })
+);

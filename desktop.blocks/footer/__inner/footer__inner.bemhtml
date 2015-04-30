@@ -1,0 +1,22 @@
+block('footer').elem('inner')(
+    content()(function() {
+        return [
+            {
+                elem : 'menu'
+            },
+            {
+                elem : 'additional',
+                content : [
+                    'Сделано <br>',
+                    'в Альфа-Лаборатории'
+                ]
+            },
+            {
+                elem : 'copyright',
+                content : [
+                    { block : 'copyright' }
+                ]
+            }
+        ];
+    })
+);

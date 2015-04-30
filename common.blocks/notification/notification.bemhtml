@@ -1,0 +1,38 @@
+block('notification')(
+    js()(true),
+    content()(function() {
+        var mods = this.mods;
+        return [{
+            block : 'plate',
+            mix : { block : 'notification', elem : 'plate' },
+            mods : {
+                theme : mods.theme,
+                bkg : mods.bkg,
+                'has-clear' : true
+            },
+            content : [{
+                block : 'notification',
+                elem : 'status',
+                mods : { type : this.ctx.status },
+                content : {
+                    block : 'icon',
+                    mods : {
+                        theme : mods.theme,
+                        bkg : 'color',
+                        'action' : this.ctx.status,
+                        size : 'l'
+                    }
+                }
+            },
+            {
+                elem : 'message',
+                mix : { block : 'notification', elem : 'message' },
+                content : [{
+                    block : 'notification',
+                    elem : 'inner',
+                    content : this.ctx.message
+                }]
+            }]
+        }];
+    })
+);

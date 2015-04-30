@@ -1,61 +1,70 @@
+$placeholder_color = rgba(255,255,255,0.5)
+
 .input_bkg_color
 {
     background: transparent;
-
-    .input__control
-    {
-        color: #fff;
-    }
-
-    .input__symbol
-    {
-        color: #fff;
-    }
-
-    .input__result
-    {
-        color: #fff;
-    }
+    color: #fff;
 
     border-width: 1px;
     border-style: solid;
     border-color: #fff;
     border-color: rgba(255,255,255,0.5);
 
-
-    &.input_invalid
-    {
-        border-color: #fc5c5e;
-        border-color: rgba(252, 92, 94, 0.6);
-
-        .input__symbol {
-            border-color: rgba(252, 92, 94, 0.6);
-        }
-    }
-
     &:before
     {
         background: transparent;
     }
 
-    &::-webkit-input-placeholder
+    .input__control
     {
-        /*color: #fff;*/
-        /*color: rgba(255,255,255,0.4);*/
+        color: #fff;
+
+        &::-webkit-input-placeholder
+        {
+            color: $placeholder_color;
+        }
+
+        &:-ms-input-placeholder
+        {
+            color: $placeholder_color;
+        }
+
+        &::-moz-placeholder
+        {
+            color: $placeholder_color;
+        }
     }
 
-    &::-moz-placeholder
+    .input__clear
     {
-        opacity: 1;
+        background-image: url(../__clear/_bkg/input__clear_bkg_color.svg);
+    }
+
+    &.input_has-addon .input__addon
+    {
+        color: #fff;
+
+        opacity: .6
+    }
+
+    &.input_mode_link
+    {
+        border-color: transparent;
+    }
+
+    &.input_mode_result .input__inner
+    {
+        color: #fff;
+    }
+
+    &.input_invalid
+    {
+        border-color: #fc5c5e;
     }
 
     &.input_hovered
     {
         border-color: rgba(255,255,255,1);
-
-        .input__symbol {
-            border-color: rgba(255,255,255,1);
-        }
     }
 
     &.input_focused
@@ -63,20 +72,12 @@
         border-color: rgba(255,255,255,1);
 
         background-color: rgba(0,0,0,.3);
-
-        .input__symbol {
-            border-color: rgba(255,255,255,1);
-        }
     }
 
     &.input_focused.input_invalid,
     &.input_hovered.input_invalid
     {
         border-color: rgba(252, 92, 94, 1);
-
-        .input__symbol {
-            border-color: rgba(252, 92, 94, 1);
-        }
     }
 
     &.input_disabled
@@ -92,15 +93,15 @@
         }
     }
 
-    &.input_size_s .input__clear,
+    &.input_size_s ,
     &.input_size_m .input__clear
     {
-        background-image: url('../../assets/_bkg/_color/clear_size_s.svg');
+        background-size: 10px;
     }
 
     &.input_size_l .input__clear,
     &.input_size_xl .input__clear
     {
-        background-image: url('../../assets/_bkg/_color/clear_size_l.svg');
+        background-size: 14px;
     }
 }

@@ -1,30 +1,64 @@
 .input_bkg_white
 {
-    background: gray;
+    background: $gray;
 
-    .input__control
-    {
-        color: #000;
-    }
+    color: #000;
 
     &:before
     {
         background: #fff;
     }
 
-    &::-webkit-input-placeholder
+    .input__control
     {
-        color: #999;
+        color: #000;
     }
 
-    &::-moz-placeholder
+    .input__clear
     {
-        opacity: 1;
+        background-image: url(../__clear/_bkg/input__clear_bkg_white.svg);
+    }
+
+    &.input_mode_link
+    {
+        background: #fff;
+
+        &.input_hovered
+        {
+            background: #adadad;
+        }
+
+        &.input_focused
+        {
+            background: #ff9900;
+        }
     }
 
     &.input_focused
     {
+        background: #ff9900;
 
+        &:before
+        {
+            top:    2px;
+            right:  2px;
+            bottom: 2px;
+            left:   2px;
+        }
+    }
+
+    &.input_hovered
+    {
+        .input__trigger
+        {
+            border-bottom: none;
+        }
+    }
+
+    .input__trigger
+    {
+        color: #333333 !important;
+        border-bottom-color: #333333;
     }
 
     &.input_disabled
@@ -41,25 +75,18 @@
     &.input_size_s .input__clear,
     &.input_size_m .input__clear
     {
-        background-image: url('../../assets/_bkg/_white/clear_size_s.svg');
+        background-size: 10px;
     }
 
     &.input_size_l .input__clear,
     &.input_size_xl .input__clear
     {
-        background-image: url('../../assets/_bkg/_white/clear_size_l.svg');
+        background-size: 14px;
     }
 
     &.input_invalid
     {
         background: #fc5c5e;
-        background: rgba(252, 92, 94, 0.6);
-    }
-
-    &.input_focused.input_invalid,
-    &.input_hovered.input_invalid
-    {
-        background: rgba(252, 92, 94, 1);
     }
 
 }

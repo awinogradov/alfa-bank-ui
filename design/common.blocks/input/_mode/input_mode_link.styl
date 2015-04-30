@@ -1,0 +1,80 @@
+.input_mode_link
+{
+    .input__box
+    {
+        padding-right: 0;
+
+        white-space:   nowrap;
+        overflow:      hidden;
+        text-overflow: ellipsis;
+
+        width: 90%;
+    }
+
+    .input__control
+    {
+        display: none;
+    }
+
+    &.input_size_s .input__box
+    {
+        height:      $control_size_s;
+        line-height: $control_size_s;
+
+        padding-left: $inputs_padding_s;
+        margin-right: $inputs_padding_s;
+    }
+
+    &.input_size_m .input__box
+    {
+        height:      $control_size_m;
+        line-height: $control_size_m;
+
+        padding-left: $inputs_padding_m;
+        margin-right: $inputs_padding_m;
+    }
+
+    &.input_size_l .input__box
+    {
+        height:      $control_size_l;
+        line-height: $control_size_l;
+
+        padding-left: $inputs_padding_l;
+        margin-right: $inputs_padding_l;
+    }
+
+    &.input_size_xl .input__box
+    {
+        height:      $control_size_xl;
+        line-height: $control_size_xl;
+
+        padding-left: $inputs_padding_xl;
+        margin-right: $inputs_padding_xl;
+    }
+
+    &.input_focused
+    {
+        .input__trigger
+        {
+            display: none;
+        }
+
+        .input__box
+        {
+            padding-right: 0;
+            margin-right:  0;
+
+            max-width: inherit;
+        }
+
+        .input__control
+        {
+            display: inline-block;
+        }
+    }
+
+    &.input_empty .input__trigger
+    {
+        opacity: .7;
+    }
+}

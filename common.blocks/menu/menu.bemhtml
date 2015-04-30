@@ -8,6 +8,5 @@ block('menu')(
                 size : this.mods.size
             }
         });
-
     })
 );

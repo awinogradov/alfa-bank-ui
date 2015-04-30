@@ -299,10 +299,11 @@ function getSourceLevels(platform) {
             { path : path.join('libs', 'bem-core', name + '.blocks'), check : false },
             { path : path.join('libs', 'bem-components', name + '.blocks'), check : false },
             { path : path.join('libs', 'bem-grid', name + '.blocks'), check : false },
-            { path : path.join('libs', 'bem-content', name + '.blocks'), check : false },
-            { path : path.join('libs', 'bem-forms', name + '.blocks'), check : true }
+            { path : path.join('libs', 'bem-typography', name + '.blocks'), check : false }
         );
     });
+
+    levels.push({ path : path.join('libs', 'bem-forms', 'common.blocks'), check : true });
 
     platformNames.forEach(function(name) {
         levels.push({ path : name + '.blocks', check : true });
@@ -312,7 +313,7 @@ function getSourceLevels(platform) {
 
     platformNames.forEach(function(name) {
         levels.push(
-            { path : path.join('libs', 'bem-content', 'design', name + '.blocks'), check : false },
+            { path : path.join('libs', 'bem-typography', 'design', name + '.blocks'), check : false },
             { path : path.join('design', name + '.blocks'), check : true }
         );
     });
@@ -332,8 +333,7 @@ function getTestLevels(platform) {
 function getSpecLevels(platform) {
     return [].concat(
         { path : path.join('libs', 'bem-pr', 'spec.blocks'), check : false },
-        getSourceLevels(platform),
-        'spec.blocks'
+        getSourceLevels(platform)
     );
 }
 

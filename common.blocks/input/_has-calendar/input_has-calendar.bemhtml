@@ -1,0 +1,54 @@
+block('input')(
+    def()(function() {
+        var ctx = this.ctx;
+        var mods = ctx.mods;
+        var calendarParams = {};
+
+        if(ctx.earlierLimit) calendarParams.earlierLimit = ctx.earlierLimit;
+        if(ctx.laterLimit) calendarParams.laterLimit = ctx.laterLimit;
+        if(ctx.weekdays) calendarParams.weekdays = ctx.weekdays;
+        if(ctx.months) calendarParams.months = ctx.months;
+
+        ctx.addon = {
+            block : 'icon',
+            mods : {
+                theme : mods.theme,
+                bkg : mods.bkg,
+                size : mods.size,
+                tool : 'calendar'
+            }
+        };
+
+        applyNext({
+            _inputMods : mods,
+            _calendarParams : calendarParams
+        });
+    }),
+
+    mod('readonly', true).elem('control').attrs()(function() {
+        return this.extend(applyNext(), { readonly : 'readonly' });
+    }),
+
+    mod('has-calendar', true)(
+
+        elem('box').content()(function() {
+
+            var mods = this._inputMods;
+
+            return [
+                applyNext(),
+                {
+                    block : 'calendar',
+                    mods : {
+                        theme : mods.theme,
+                        size : mods.size,
+                        bkg : mods.bkg
+                    },
+                    js : this._calendarParams
+                }
+            ];
+        }),
+
+        elem('addon').mix()({ block : 'input', elem : 'calendar' })
+    )
+);

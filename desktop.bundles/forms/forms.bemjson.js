@@ -10,8 +10,8 @@
     styles: [
         {elem: 'css', url: 'forms.min.css'}
     ],
-    scripts: [
-        {elem: 'js', url: 'forms.min.js'}
+    scripts : [
+        { elem : 'js', url : 'forms.min.js' }
     ],
     content : [
         {
@@ -29,6 +29,71 @@
                         {
                             block : 'app',
                             content : [
+                                {
+                    block : 'form-field',
+                    id : 'input',
+                    mods : {
+                        type : 'input',
+                        'has-validate' : true,
+                        message : 'popup',
+                        required : true,
+                        theme : 'alfa',
+                        bkg : 'color'
+                    },
+                    js : {
+                        required : {
+                            message : 'Super required field 1'
+                        }
+                    },
+                    content : [
+                        {
+                            block : 'label',
+                            mods : { theme : 'alfa', bkg : 'color', size : 'm' },
+                            content : 'Label'
+                        },
+                        {
+                            block : 'input',
+                            mods : {
+                                'has-mask' : true,
+                                theme : 'alfa', bkg : 'color', size : 'm' },
+                            js : {
+                                mask : '{{99}}-{{99}}-{{99}}'
+                            },
+                            name : 'firstName'
+                        }
+                    ]
+                },
+                {
+                    block : 'form-field',
+                    id : 'input2',
+                    mods : {
+                        type : 'input',
+                        message : 'popup',
+                        'has-validate' : true,
+                        required : true,
+                        theme : 'alfa',
+                        bkg : 'color'
+                    },
+                    js : {
+                        required : {
+                            message : 'Super required field 2'
+                        }
+                    },
+                    content : [
+                        {
+                            block : 'label',
+                            mods : { theme : 'alfa', bkg : 'color', size : 'm' },
+                            content : 'Loooooong looooong looong looooong Label'
+                        },
+                        {
+                            block : 'input',
+                            mods : {
+                                theme : 'alfa',
+                                bkg : 'color',
+                                size : 'm',
+                                'has-autocomplete' : true
+                            },
+                            options : [
                                 {
                                     block : 'heading',
                                     mods : { theme : 'alfa', bkg : 'color' },

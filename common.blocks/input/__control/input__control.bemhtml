@@ -4,6 +4,7 @@ block('input').elem('control')(
     attrs()(function() {
         var input = this._input,
             attrs = {
+                type : 'text',
                 id : input.id || this._currentId,
                 name : input.name,
                 value : input.val,
@@ -12,7 +13,7 @@ block('input').elem('control')(
                 placeholder : input.placeholder
             };
 
-        input.autocomplete === false && (attrs.autocomplete = 'off');
+        input.autocomplete !== true && (attrs.autocomplete = 'off');
         this.mods.disabled && (attrs.disabled = 'disabled');
 
         return attrs;

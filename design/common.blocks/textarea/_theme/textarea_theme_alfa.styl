@@ -1,26 +1,26 @@
 .textarea_theme_alfa
 {
-    font-family: font_family;
+    font-family: $font_family;
 
     position: relative;
-    display:  inline-block;
+    display:  block;
 
     vertical-align: top;
 
-    border-radius: inputs_radius;
+    border-radius: $inputs_radius;
 
     /* Decorative element (inner background) */
     &:before
     {
         position: absolute;
-        top:      inputs_border_size;
-        right:    inputs_border_size;
-        bottom:   inputs_border_size;
-        left:     inputs_border_size;
+        top:      $inputs_border_size;
+        right:    $inputs_border_size;
+        bottom:   $inputs_border_size;
+        left:     $inputs_border_size;
 
         content: '';
 
-        border-radius: inputs_radius - inputs_border_size;
+        border-radius: $inputs_radius - $inputs_border_size;
     }
 
     .textarea__control
@@ -77,49 +77,49 @@
 
     &.textarea_size_s
     {
-        font-size: textarea_font_size_s;
+        font-size: $textarea_font_size_s;
 
         .textarea__control
         {
-            padding: textarea_padding_s;
+            padding: $textarea_padding_s;
 
-            min-height: textarea_min_height_s;
+            min-height: $textarea_min_height_s;
         }
     }
 
     &.textarea_size_m
     {
-        font-size: textarea_font_size_m;
+        font-size: $textarea_font_size_m;
 
         .textarea__control
         {
-            padding: textarea_padding_m;
+            padding: $textarea_padding_m;
 
-            min-height: textarea_min_height_m;
+            min-height: $textarea_min_height_m;
         }
     }
 
     &.textarea_size_l
     {
-        font-size: textarea_font_size_l;
+        font-size: $textarea_font_size_l;
 
         .textarea__control
         {
-            padding: textarea_padding_l;
+            padding: $textarea_padding_l;
 
-            min-height: textarea_min_height_l;
+            min-height: $textarea_min_height_l;
         }
     }
 
     &.textarea_size_xl
     {
-        font-size: textarea_font_size_xl;
+        font-size: $textarea_font_size_xl;
 
         .textarea__control
         {
-            padding: textarea_padding_xl;
+            padding: $textarea_padding_xl;
 
-            min-height: textarea_min_height_xl;
+            min-height: $textarea_min_height_xl;
         }
     }
 

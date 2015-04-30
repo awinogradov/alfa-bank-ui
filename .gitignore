@@ -29,3 +29,7 @@ libs
 /*.tmpl-specs
 
 *.log
+
+.DS_Store
+
+__coverage-*

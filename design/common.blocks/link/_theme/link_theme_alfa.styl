@@ -1,7 +1,7 @@
 .link_theme_alfa
 {
-    font-weight: font_weight;
-    font-family: font_family;
+    font-weight: $font_weight;
+    font-family: $font_family;
 
     cursor: pointer;
 
@@ -18,22 +18,22 @@
 
     &.link_size_s
     {
-        font-size: links_font_size_s;
+        font-size: $links_font_size_s;
     }
 
     &.link_size_m
     {
-        font-size: links_font_size_m;
+        font-size: $links_font_size_m;
     }
 
     &.link_size_l
     {
-        font-size: links_font_size_l;
+        font-size: $links_font_size_l;
     }
 
     &.link_size_xl
     {
-        font-size: links_font_size_xl;
+        font-size: $links_font_size_xl;
 
         padding-bottom: 1px;
     }
@@ -47,7 +47,8 @@
     {
         border: none;
 
-        .link__icon {
+        .link__icon
+        {
             margin-right: 5px;
             vertical-align: middle;
         }

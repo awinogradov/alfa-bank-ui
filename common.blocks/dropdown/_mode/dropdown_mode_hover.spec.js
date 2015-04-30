@@ -1,4 +1,4 @@
-modules.define('spec', ['dropdown', 'spec-helper'], function(provide, _, helper) {
+modules.define('spec', ['dropdown', 'spec__utils'], function(provide, _, helper) {
 
     describe('dropdown_mode_hover', function() {
         var bemjson = {

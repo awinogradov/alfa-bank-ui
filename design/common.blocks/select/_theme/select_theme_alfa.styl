@@ -2,7 +2,7 @@
 {
     max-width: 100%;
 
-    display: inline-block;
+    display: block;
 
     vertical-align: top;
 
@@ -12,6 +12,8 @@
 
         text-align:     left;
         vertical-align: top;
+
+        padding: 0;
 
         .button__text
         {
@@ -27,8 +29,9 @@
         {
             .button__text
             {
+                font-size: $inputs_font_size_s;
                 padding-right: 27px;
-                margin-left:   inputs_padding_s;
+                margin-left:   ($inputs_padding_s - 1);
             }
 
             .icon
@@ -42,8 +45,9 @@
         {
             .button__text
             {
+                font-size: $inputs_font_size_m;
                 padding-right: 28px;
-                margin-left:   inputs_padding_m;
+                margin-left:   ($inputs_padding_m - 1);
             }
 
             .icon
@@ -56,8 +60,9 @@
         {
             .button__text
             {
+                font-size: $inputs_font_size_l;
                 padding-right: 32px;
-                margin-left:   inputs_padding_l;
+                margin-left:   ($inputs_padding_l - 1);
             }
 
             .icon
@@ -70,8 +75,9 @@
         {
             .button__text
             {
+                font-size: $inputs_font_size_xl;
                 padding-right: 38px;
-                margin-left:   inputs_padding_xl;
+                margin-left:   ($inputs_padding_xl - 1);
             }
 
             .icon
@@ -87,7 +93,16 @@
         top:      0;
         right:    0;
 
-        transition: transform 0.1s ease-out;
+        transition: all 0.1s ease-out;
+        opacity: 0.3;
+    }
+
+    &:hover
+    {
+        .select__tick
+        {
+            opacity: 1;
+        }
     }
 
     &.select_opened .select__tick

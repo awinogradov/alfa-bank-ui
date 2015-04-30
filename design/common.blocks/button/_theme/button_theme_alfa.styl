@@ -1,17 +1,17 @@
 ctx = '.button_theme_alfa'
 {ctx} {
-    font-family: font_family;
+    font-family: $font_family;
 
     position: relative;
     display:  inline-block;
 
-    margin:  0;
     padding: 0;
+    margin: 0;
 
     user-select: none;
 
     border:        0;
-    border-radius: btns_radius;
+    border-radius: $btns_radius;
 
     outline: 0;
 
@@ -46,9 +46,10 @@ ctx = '.button_theme_alfa'
         display:  inline-block;
     }
 
-    .icon
+    .button__icon
     {
         position: relative;
+        vertical-align: middle;
     }
 
     &.button_type_link
@@ -60,14 +61,14 @@ ctx = '.button_theme_alfa'
     &:before
     {
         position: absolute;
-        top:      btns_border_size;
-        right:    btns_border_size;
-        bottom:   btns_border_size;
-        left:     btns_border_size;
+        top:      $btns_border_size;
+        right:    $btns_border_size;
+        bottom:   $btns_border_size;
+        left:     $btns_border_size;
 
         content: '';
 
-        border-radius: btns_radius - 1;
+        border-radius: $btns_radius - 1;
 
         transition: all 200ms ease;
     }
@@ -89,8 +90,6 @@ ctx = '.button_theme_alfa'
 
     &.button_view_pseudo
     {
-        overflow: hidden;
-
         background: 0;
 
         &:before
@@ -124,84 +123,51 @@ ctx = '.button_theme_alfa'
         }
     }
 
+    > :last-child
+    {
+        padding-right: 0;
+    }
+
+    & .button__icon
+    {
+        padding-right: 10px;
+    }
+
     &.button_size_s
     {
-        font-size:   btns_font_size_s;
-        line-height: control_size_s;
+        font-size:   $btns_font_size_s;
+        line-height: $control_size_s;
 
-        .icon
-        {
-            width: 24px;
-        }
-
-        .button__text
-        {
-            margin: 0 btns_padding_s;
-        }
+        padding: 0 $btns_padding_s;
     }
 
     &.button_size_m
     {
-        font-size:   btns_font_size_m;
-        line-height: control_size_m;
+        font-size:   $btns_font_size_m;
+        line-height: $control_size_m;
 
-        .icon
-        {
-            width: 28px;
-        }
-
-        .button__text
-        {
-            margin: 0 btns_padding_s;
-        }
+        padding: 0 $btns_padding_s;
     }
 
     &.button_size_l
     {
-        font-size:   btns_font_size_l;
-        line-height: control_size_l;
+        font-size:   $btns_font_size_l;
+        line-height: $control_size_l;
 
-        .icon
-        {
-            width: 32px;
-        }
-
-        .button__text
-        {
-            margin: 0 btns_padding_l;
-        }
+        padding: 0 $btns_padding_l;
     }
 
     &.button_size_xl
     {
-        font-size:   btns_font_size_xl;
-        line-height: control_size_xl;
+        font-size:   $btns_font_size_xl;
+        line-height: $control_size_xl;
 
-        .icon
-        {
-            width: 38px;
-        }
-
-        .button__text
-        {
-            margin: 0 btns_padding_xl;
-        }
-    }
-
-    & .icon + .button__text
-    {
-        margin-left: 0;
+        padding: 0 $btns_padding_xl;
     }
 }
 
 .control-group
 {
-    .radio_checked + .radio {ctx}:before
-    .checkbox_checked + .checkbox_checked
-    {
-
-    }
-
     {ctx} {
         border-radius: 0;
 
@@ -209,52 +175,37 @@ ctx = '.button_theme_alfa'
         {
             border-radius: 0;
         }
-
-        &.button_focused-hard.button /* Weight of selector should be greater for focused button (#1170) */
-        {
-            &:before
-            {
-            }
-        }
     }
 
     > {ctx}:first-child,
     > :first-child {ctx}
     {
-        border-radius: btns_radius 0 0 btns_radius;
-
-        border-right: 0;
+        border-radius: $btns_radius 0 0 $btns_radius;
 
         &:before
         {
-            border-radius: btns_radius - 1 0 0 btns_radius - 1;
-
-            right: 0;
+            border-radius: $btns_radius - 1 0 0 $btns_radius - 1;
         }
     }
 
     > {ctx}:last-child,
     > :last-child {ctx}
     {
-        border-radius: 0 btns_radius btns_radius 0;
-
-        border-left: 0;
+        border-radius: 0 $btns_radius $btns_radius 0;
 
         &:before
         {
-            border-radius: 0 btns_radius - 1 btns_radius - 1 0;
-
-            left: 0;
+            border-radius: 0 $btns_radius - 1 $btns_radius - 1 0;
         }
     }
 
     > :only-child {ctx}
     {
-        border-radius: btns_radius;
+        border-radius: $btns_radius;
 
         &:before
         {
-            border-radius: btns_radius - 1;
+            border-radius: $btns_radius - 1;
         }
     }
 }

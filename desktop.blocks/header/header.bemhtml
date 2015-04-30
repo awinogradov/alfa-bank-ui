@@ -1,0 +1,20 @@
+block('header')(
+
+    js()(true),
+
+    def()(function() {
+        applyNext({
+            _headerMods : this.mods,
+            _header : this.ctx
+        });
+    }),
+
+    content()(function() {
+        return [
+            {
+                elem : 'inner',
+                content : this.ctx.content
+            }
+        ];
+    })
+);

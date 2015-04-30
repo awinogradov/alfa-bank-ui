@@ -1,14 +1,14 @@
-fontSize = (links_font_size_s links_font_size_m links_font_size_l links_font_size_xl);
-lineHeight = (control_size_s control_size_m control_size_l control_size_xl)
-paddingVert = (3 4 5 6);
-paddingHor = (10 13 15 20);
+lineHeight = ($control_size_s $control_size_m $control_size_l $control_size_xl)
+paddingVert = (6px 8px 10px 12px);
+paddingHor = ($inputs_padding_s $inputs_padding_m $inputs_padding_l $inputs_padding_xl);
+fontSize = ($inputs_font_size_s $inputs_font_size_m $inputs_font_size_l $inputs_font_size_xl);
 
 .menu_theme_alfa
 {
     overflow: visible;
 
-    font-weight: font_weight;
-    font-family: font_family;
+    font-weight: $font_weight;
+    font-family: $font_family;
 
     box-sizing: border-box;
 
@@ -16,12 +16,11 @@ paddingHor = (10 13 15 20);
 
     outline: 0;
 
-    border-radius: menu_radius;
+    border-radius: $menu_radius;
 
     for sizeVal, i in (s m l xl) {
         &.menu_size_{sizeVal}
         {
-            font-size:   (fontSize[i]);
 
             /* Using pseudo-elements intead of paddings because of Firefox bug with bottom padding (#1158):
              * https://bugzilla.mozilla.org/show_bug.cgi?id=748518 */
@@ -33,18 +32,15 @@ paddingHor = (10 13 15 20);
                 content: '';
             }
 
-            .menu-item + .menu__group
-            {
-                margin-top: (paddingVert[i])px;
-            }
-
             .menu__group
             {
-                padding: (paddingVert[i])px 0;
-
                 &-title
                 {
-                    padding: 0 (paddingHor[i])px;
+                    font-size: (fontSize[i]);
+                    padding: (paddingVert[i]) (paddingHor[i]);
+                    background: #fafafa;
+                    border: 1px solid #e6e6e6;
+                    border-width: 1px 0;
                 }
             }
         }
@@ -54,7 +50,7 @@ paddingHor = (10 13 15 20);
     {
         &-title
         {
-            color: #999;
+            color: #333;
         }
 
         & + .menu__group
@@ -76,9 +72,11 @@ paddingHor = (10 13 15 20);
             border-top: 0;
         }
     }
+}
 
-    &.menu_view_dropdown
-    {
-        background: rgba(0,0,0,0.8);
-    }
+.menu__additional
+{
+    padding-top: 22px;
+    padding-bottom: 5px;
+    outline: none;
 }
