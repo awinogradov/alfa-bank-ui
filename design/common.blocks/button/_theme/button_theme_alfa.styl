@@ -20,6 +20,8 @@ ctx = '.button_theme_alfa'
 
     transition: all 200ms ease;
 
+    cursor: pointer;
+
     &::-moz-focus-inner
     {
         padding: 0;
@@ -57,27 +59,6 @@ ctx = '.button_theme_alfa'
         text-decoration: none;
     }
 
-    /* Decorative element (inner background) */
-    &:before
-    {
-        position: absolute;
-        top:      $btns_border_size;
-        right:    $btns_border_size;
-        bottom:   $btns_border_size;
-        left:     $btns_border_size;
-
-        content: '';
-
-        border-radius: $btns_radius - 1;
-
-        transition: all 200ms ease;
-    }
-
-    &.button_hovered
-    {
-        cursor: pointer;
-    }
-
     &.button_focused-hard
     {
         z-index: 1;
@@ -88,27 +69,12 @@ ctx = '.button_theme_alfa'
         font-weight: 500;
     }
 
-    &.button_view_pseudo
-    {
-        background: 0;
-
-        &:before
-        {
-            background: 0;
-        }
-    }
-
     &.button_disabled
     {
-        &:before
-        {
-            display: none;
-        }
+        border: none;
 
-        &.button_checked:before
+        &.button_checked
         {
-            display: block;
-
             background: #ffeba0;
         }
 
@@ -170,42 +136,22 @@ ctx = '.button_theme_alfa'
 {
     {ctx} {
         border-radius: 0;
-
-        &:before
-        {
-            border-radius: 0;
-        }
     }
 
     > {ctx}:first-child,
     > :first-child {ctx}
     {
         border-radius: $btns_radius 0 0 $btns_radius;
-
-        &:before
-        {
-            border-radius: $btns_radius - 1 0 0 $btns_radius - 1;
-        }
     }
 
     > {ctx}:last-child,
     > :last-child {ctx}
     {
         border-radius: 0 $btns_radius $btns_radius 0;
-
-        &:before
-        {
-            border-radius: 0 $btns_radius - 1 $btns_radius - 1 0;
-        }
     }
 
     > :only-child {ctx}
     {
         border-radius: $btns_radius;
-
-        &:before
-        {
-            border-radius: $btns_radius - 1;
-        }
     }
 }

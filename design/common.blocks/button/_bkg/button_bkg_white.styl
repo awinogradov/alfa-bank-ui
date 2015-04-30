@@ -1,80 +1,31 @@
 .button_bkg_white
 {
-    color: #000;
-
-    font-weight: $btns_font_weight;
-
-    background: $gray;
-
-    &:before
-    {
-        background: #fff;
-    }
-
-    &.button_disabled
-    {
-        background: #fff;
-    }
+    color:        black;
+    font-weight:  $btns_font_weight;
+    background:   white;
+    border:       1px solid $gray;
 
     &.button_hovered
     {
-        background: $green;
-        background: $green_rgba;
-        color:      $green;
-    }
-
-    &.button_focused-hard
-    {
-        z-index: 1;
-
-        background: rgba(0, 212, 150, 0.4);
-    }
-
-    &.button_pressed:before
-    {
-        background: #f6f5f3;
+        border-color: black;
     }
 
     &.button_view_action
     {
-        background:  $green;
-        color:       #fff;
+        background:   $green;
+        border-color: $green;
+        color:        white;
 
-        &:before
+        &.button_pressed, &.button_hovered, &.button_focused
         {
-            background: $green;
-        }
-
-        &.button_pressed:before
-        {
-            background: $green;
-        }
-
-        &.button_hovered
-        {
-            background: lighten($green, 5%);
-
-            &:before
-            {
-                background: lighten($green, 5%);
-            }
+            background: darken($green, 10%);
+            border-color: black;
         }
     }
 
     &.button_view_pseudo
     {
-        background: #fff;
-
-        &:before
-        {
-            border: $gray dotted $btns_border_size;
-        }
-
-        &.button_hovered:before
-        {
-
-            border-color: $green_rgba;
-        }
+        border-style: dashed;
     }
 }
 
@@ -82,12 +33,8 @@
 {
     {ctx}.button_checked
     {
-        background:  $gray;
-        color:       #fff;
-
-        &:before
-        {
-            background:  $green;
-        }
+        background:   $green;
+        border-color: $green;
+        color:        white;
     }
 }
