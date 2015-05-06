@@ -11,20 +11,22 @@ modules.define('input', ['i-bem__dom', 'jquery', 'dom'], function(provide, BEMDO
  */
 provide(BEMDOM.decl({ block : this.name, modName: 'has-calendar' }, /** @lends input.prototype */{
     onSetMod: {
-        js: function() {
-            this.__base.apply(this, arguments);
+        'js' : {
+            'inited' : function() {
+                this.__base.apply(this, arguments);
 
-            this._calendar = this.findBlockInside('calendar');
+                this._calendar = this.findBlockInside('calendar');
 
-            this._calendar
-                .setVal(this.getVal())
-                .setAnchor(this.domElem)
-                .on('change', this._onChangeCalendar, this);
+                this._calendar
+                    .setVal(this.getVal())
+                    .setAnchor(this.domElem)
+                    .on('change', this._onChangeCalendar, this);
 
-            this.bindTo('control', 'focus pointerclick', this.showCalendar);
-            this.bindTo('control', 'blur', this._onControlBlur);
-            this.bindTo('calendar', 'pointerclick', this._onPointerClickSwicher);
-            this.bindToDoc('pointerdown', this._onDocPointerDown);
+                this.bindTo('control', 'focus pointerclick', this.showCalendar);
+                this.bindTo('control', 'blur', this._onControlBlur);
+                this.bindTo('calendar', 'pointerclick', this._onPointerClickSwicher);
+                this.bindToDoc('pointerdown', this._onDocPointerDown);
+            }
         }
     },
     showCalendar : function() {
