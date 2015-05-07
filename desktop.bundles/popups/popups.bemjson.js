@@ -40,52 +40,57 @@
                             {
                                 elem : 'content',
                                 content : [
-                                    {
-                                        block : 'select',
-                                        mods : { mode : 'radio', theme : 'alfa', bkg : 'color', size : 'm' },
-                                        name : 'select1',
-                                        optionsMaxHeight : 200,
-                                        val : 2,
-                                        options : [
-                                            { val : 1, text : 'first' },
-                                            { val : 2, text : 'second' },
-                                            { val : 3, text : 'third' },
-                                            { val : 4, text : '4' },
-                                            { val : 5, text : '5' },
-                                            { val : 6, text : '6' },
-                                            { val : 7, text : '7' },
-                                            { val : 8, text : '8' },
-                                            { val : 9, text : '9' },
-                                            { val : 10, text : '10' },
-                                            { val : 11, text : '11' },
-                                            { val : 12, text : '12' },
-                                            { val : 13, text : '13' },
-                                            { val : 14, text : '14' }
-                                        ]
-                                    },
-                                    {
-                                        block : 'input',
-                                        mods : {
-                                            theme : 'alfa',
-                                            bkg : 'color',
-                                            size : 'm',
-                                            'has-autocomplete' : true
-                                        },
-                                        options : [
+                                    ['s', 'm', 'l', 'xl'].map(function(size) {
+                                        return [
                                             {
-                                                val : 'first',
-                                                content : 'first'
+                                                block : 'heading',
+                                                mods : { theme : 'alfa', bkg : 'color' },
+                                                lvl : 2,
+                                                content : 'Size ' + size
                                             },
                                             {
-                                                val : 'second',
-                                                content : 'second'
+                                                block : 'select',
+                                                mods : { mode : 'radio', theme : 'alfa', bkg : 'color', size : size },
+                                                name : 'select1',
+                                                optionsMaxHeight : 200,
+                                                val : 2,
+                                                options : [
+                                                    { val : 1, text : 'first' },
+                                                    { val : 2, text : 'second' },
+                                                    { val : 3, text : 'third' },
+                                                    { val : 4, text : '4' },
+                                                    { val : 5, text : '5' },
+                                                    { val : 6, text : '6' },
+                                                    { val : 7, text : '7' },
+                                                    { val : 8, text : '8' },
+                                                    { val : 9, text : '9' },
+                                                    { val : 10, text : '10' },
+                                                    { val : 11, text : '11' },
+                                                    { val : 12, text : '12' },
+                                                    { val : 13, text : '13' },
+                                                    { val : 14, text : '14' }
+                                                ]
                                             },
                                             {
-                                                val : 'third',
-                                                content : 'third'
+                                                block : 'input',
+                                                mods : { theme : 'alfa', bkg : 'color', size : size, 'has-autocomplete' : true },
+                                                options : [
+                                                    {
+                                                        val : 'first',
+                                                        content : 'first'
+                                                    },
+                                                    {
+                                                        val : 'second',
+                                                        content : 'second'
+                                                    },
+                                                    {
+                                                        val : 'third',
+                                                        content : 'third'
+                                                    }
+                                                ]
                                             }
-                                        ]
-                                    },
+                                        ];
+                                    }),
                                     {
                                         block : 'test-wrap',
                                         attrs : { style : 'position: relative; height: 400px;' },
