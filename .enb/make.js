@@ -175,7 +175,7 @@ module.exports = function(config) {
         config.mode('development', function() {
             config.nodes(nodes, function(nodeConfig) {
                 nodeConfig.addTechs([
-                    [borschik, { source : '?.css', target : '?.min.css', freeze : true }],
+                    [borschik, { source : '?.css', target : '?.min.css', minify : false, freeze : true }],
                     [borschik, { source : '?.js', target :  '?.borschik.js', minify : false, freeze : false }],
                     [copyFile, { source : '?.borschik.js', target :  '?.min.js' }]
                 ]);
