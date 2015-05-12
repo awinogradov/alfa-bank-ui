@@ -53,20 +53,22 @@ function parseDateParts(str) {
  */
 provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
     onSetMod: {
-        js: function() {
-            this.__base.apply(this, arguments);
+        'js' : {
+            'inited' : function() {
+                this.__base.apply(this, arguments);
 
-            this._val = null;
+                this._val = null;
 
-            this._popup = this.domElem.bem('popup');
+                this._popup = this.domElem.bem('popup');
 
-            this._month = this._getToday();
-            this._month.setDate(1);
+                this._month = this._getToday();
+                this._month.setDate(1);
 
-            this.setLimits(
-                this.params.earlierLimit,
-                this.params.laterLimit
-            );
+                this.setLimits(
+                    this.params.earlierLimit,
+                    this.params.laterLimit
+                );
+            }
         }
     },
 
