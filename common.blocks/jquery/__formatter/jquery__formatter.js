@@ -1,3 +1,4 @@
+/* istanbul ignore next */
 modules.define('jquery__formatter', ['jquery'], function(provide, $) {
 /*!
  * v0.1.5
