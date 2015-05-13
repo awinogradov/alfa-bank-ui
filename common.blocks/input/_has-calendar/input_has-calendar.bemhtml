@@ -15,6 +15,7 @@ block('input')(
             if(ctx.laterLimit) calendarParams.laterLimit = ctx.laterLimit;
             if(ctx.weekdays) calendarParams.weekdays = ctx.weekdays;
             if(ctx.months) calendarParams.months = ctx.months;
+            if(ctx.offDays) calendarParams.offDays = ctx.offDays;
 
             ctx.addon = {
                 block : 'icon',
