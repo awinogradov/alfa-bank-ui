@@ -4,6 +4,7 @@
 modules.define('calendar', ['i-bem__dom', 'BEMHTML', 'jquery'], function(provide, BEMDOM, BEMHTML, $) {
 
 function compareMonths(a, b) {
+
     if(a.getFullYear() > b.getFullYear()) {
         return 1;
     }
@@ -77,7 +78,7 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
      *
      * @returns {?Date}
      */
-    getVal: function() {
+    getVal : function() {
         return this._val;
     },
 
@@ -87,7 +88,7 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
      * @param {Date|string} val
      * @returns {calendar} this
      */
-    setVal: function(val) {
+    setVal : function(val) {
         var date = this.parseDate(val);
         this._val = this._isValidDate(date) ? date : null;
 
@@ -104,7 +105,7 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
      *
      * @returns {calendar} this
      */
-    show: function() {
+    show : function() {
         this._build();
 
         this._popup.setMod('visible', true);
@@ -117,7 +118,7 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
      *
      * @returns {calendar} this
      */
-    hide: function() {
+    hide : function() {
         this._popup.delMod('visible');
 
         return this;
@@ -128,7 +129,7 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
      *
      * @returns {boolean}
      */
-    isShown: function() {
+    isShown : function() {
         return this._popup.hasMod('visible');
     },
 
@@ -138,7 +139,7 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
      * @param {number} step
      * @returns {calendar} this
      */
-    switchMonth: function(step) {
+    switchMonth : function(step) {
         this._month.setMonth(this._month.getMonth() + step);
 
         this.nextTick(this._build);
@@ -152,7 +153,7 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
      * param {Date|string} val
      * @returns {?Date} this
      */
-    parseDate: function(val) {
+    parseDate : function(val) {
         if(val instanceof Date) {
             return val;
         }
@@ -182,7 +183,7 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
      * @param {jQuery|BEMDOM} anchor - DOM elem or anchor BEMDOM block.
      * @returns {calendar} this
      */
-    setAnchor: function(anchor) {
+    setAnchor : function(anchor) {
         this._popup.setAnchor(anchor);
 
         return this;
@@ -194,7 +195,7 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
      * @param {Array<string>} directions
      * @returns {calendar} this
      */
-    setDirections: function(directions) {
+    setDirections : function(directions) {
         this._popup.params.directions = directions;
 
         return this;
@@ -207,15 +208,15 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
      * @param {Date|String} later
      * @returns {calendar} this
      */
-    setLimits: function(earlier, later) {
+    setLimits : function(earlier, later) {
         this._earlierLimit = this.parseDate(earlier);
         this._laterLimit = this.parseDate(later);
 
-        if(earlier && compareMonths(this._month, earlier) < 0) {
+        if(earlier && compareMonths(this._month, this._earlierLimit) < 0) {
             this._month = new Date(earlier.getTime());
         }
 
-        if(later && compareMonths(later, this._month) < 0) {
+        if(later && compareMonths(this._laterLimit, this._month) < 0) {
             this._month = new Date(later.getTime());
         }
 
@@ -224,18 +225,58 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
         return this;
     },
 
-    destruct: function() {
+    /**
+     * Sets off days for calendar.
+     *
+     * @param {Array} days
+     * @returns {Array}
+     */
+    setOffDays : function(days) {
+        this.params.offDays = days;
+    },
+
+    /**
+     * Get off days for calendar.
+     *
+     * @returns {Array}
+     */
+    getOffDays : function() {
+        return this.params.offDays;
+    },
+
+    /**
+     * Check off days for calendar.
+     *
+     * @param {Date} date
+     * @returns {boolean}
+     */
+    _isOffDay : function(date) {
+
+        var offDays = this.getOffDays();
+
+        if(offDays && offDays.length) {
+            for(i in offDays){
+                if(new Date(date).getTime() == new Date(this.parseDate(offDays[i])).getTime()){
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    },
+
+    destruct : function() {
         this._popup && this._popup.destruct();
     },
 
-    _getToday: function() {
+    _getToday : function() {
         var today = new Date();
         today.setHours(0, 0, 0, 0);
 
         return today;
     },
 
-    _formatDate: function(date) {
+    _formatDate : function(date) {
         var year = date.getFullYear(),
             month = date.getMonth() + 1,
             day = date.getDate();
@@ -243,12 +284,12 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
         return [leadZero(day), leadZero(month), year].join('.');
     },
 
-    _isValidDate: function(date) {
+    _isValidDate : function(date) {
         return !(this._earlierLimit && date < this._earlierLimit ||
-            this._laterLimit && date > this._laterLimit);
+            this._laterLimit && date > this._laterLimit || this._isOffDay(date));
     },
 
-    _build: function() {
+    _build : function() {
         var rows = [];
 
         rows.push(this._buildShortWeekdays());
@@ -273,7 +314,14 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
         this._popup.setContent(calendar);
     },
 
-    _calcWeeks: function(month) {
+    /**
+     * ReBuild Calendar.
+     */
+    reBuild : function() {
+        this._build();
+    },
+
+    _calcWeeks : function(month) {
         var weekDay,
             weeks = [],
             countDays = 7,
@@ -299,13 +347,15 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
         return weeks;
     },
 
-    _buildMonth: function(month) {
+    _buildMonth : function(month) {
         var rows = [];
 
         this._calcWeeks(month).forEach(function(week) {
+
             var row = [],
                 _this = this;
             $.each(week, function(i, day) {
+
                 var off = !_this._isValidDate(day),
                     val = _this.getVal(),
                     weekend = i > 4,
@@ -340,7 +390,7 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
         return rows;
     },
 
-    _buildShortWeekdays: function() {
+    _buildShortWeekdays : function() {
         var row = [];
 
         this.params.weekdays.forEach(function(name, i) {
@@ -359,7 +409,7 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
         return row;
     },
 
-    _buildTitle: function(month) {
+    _buildTitle : function(month) {
         var prevMonth = !this._earlierLimit || compareMonths(month, this._earlierLimit) > 0,
             nextMonth = !this._laterLimit || compareMonths(this._laterLimit, month) > 0;
 
@@ -410,7 +460,7 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
         }
     }
 },  /** @lends calendar */ {
-    live: function() {
+    live : function() {
         this.liveBindTo('arrow', 'pointerclick', this.prototype._changeMonthOnPointerClick);
 
         this.liveBindTo('day', 'pointerclick', this.prototype._changeDayOnPointerClick);
