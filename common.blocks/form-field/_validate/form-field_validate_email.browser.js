@@ -19,9 +19,11 @@ FormField.decl({ modName : 'validate', modVal : 'email' }, /** @lends form-field
             'inited' : function() {
                 this.__base.apply(this, arguments);
 
-                var _this = this;
-
-                this.getValidator().push(validate_email(_this.params.email));
+                if (!this.hasMod('has-validate')) {
+                    console.error('mod "validate" should only be used with "has-validate"!');
+                } else {
+                    this.getValidator().push(validate_email(this.params.email));
+                }
             }
         }
     }
