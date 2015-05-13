@@ -1,4 +1,4 @@
-({
+[{
     shouldDeps: [
         {
             elem : 'calendar'
@@ -10,4 +10,10 @@
         'ua',
         'calendar'
     ]
-})
+},
+{
+    tech : 'spec.js',
+    shouldDeps : [
+        { tech : 'bemhtml', block : 'input', mods : { 'has-calendar' : true } }
+    ]
+}]
