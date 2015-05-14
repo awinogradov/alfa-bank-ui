@@ -3,6 +3,7 @@
   "author": "Anton Winogradov <winogradovaa@gmail.com>",
   "name": "nyc-public",
   "description": "NYC Public Library of UI components",
+  "version": "2.1.1",
   "dependencies": {
     "bem-environ": "1.4.0",
     "enb-bem-examples": "^0.5.9",
@@ -62,9 +63,9 @@
     "tmpls": "npm run test-tmpls",
     "unit": "npm run test-specs",
     "coverage": "ISTANBUL_COVERAGE=yes npm run specs && istanbul report --include coverage.json html text && istanbul check-coverage --include coverage.json --statement 100 --branch 100",
-    "release-patch": "bower version patch -m 'chore(ver): %s' -n && node changelog",
-    "release-minor": "bower version minor -m 'chore(ver): %s' -n && node changelog",
-    "release-major": "bower version major -m 'chore(ver): %s' -n && node changelog"
+    "release-patch": "mversion patch",
+    "release-minor": "mversion minor",
+    "release-major": "mversion major"
   },
   "engines": {
     "node": ">=0.10"
