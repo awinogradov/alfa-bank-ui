@@ -26,6 +26,8 @@ modules.define('spec', ['notification', 'spec__utils'], function(provide, _, uti
             notification.push('ok', 'test push');
             notification._setVisible(false);
             notification.hasMod('visible').should.be.false;
+            notification._setVisible(true);
+            notification.hasMod('visible').should.be.true;
         });
 
         it('should work close notification', function() {
