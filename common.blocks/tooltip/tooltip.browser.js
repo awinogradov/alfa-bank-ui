@@ -10,14 +10,12 @@ modules.define('tooltip',
                         this._icon = this.elem('icon');
                         this._popup = this.findBlockInside('popup');
                         this._popup.setAnchor(this._icon);
-
-                        this._popup.setMod('visible', true);
                     }
                 },
                 'hovered' : {
                     'true' : function() {
                         this.__base.apply(this, arguments);
-                        this._popup.setMod('visible', true);
+                        this._popup.setMod('visible');
                     },
                     '' : function() {
                         this.__base.apply(this, arguments);
