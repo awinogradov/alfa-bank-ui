@@ -1,3 +1,4 @@
+/* istanbul ignore next */
 modules.define('jquery__numeric', ['jquery'], function(provide, $) {
     var jQuery = $,
         window = {jQuery: jQuery};
