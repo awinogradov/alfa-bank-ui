@@ -7,8 +7,7 @@ block('footer').elem('inner')(
             {
                 elem : 'additional',
                 content : [
-                    'Сделано <br>',
-                    'в Альфа-Лаборатории'
+                    'Сделано в Альфа-Лаборатории'
                 ]
             },
             {

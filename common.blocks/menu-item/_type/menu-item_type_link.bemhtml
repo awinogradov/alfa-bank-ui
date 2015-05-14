@@ -10,6 +10,7 @@ block('menu-item').mod('type', 'link').match(this._alfaMods)(
                 pseudo : this.mods.pseudo
             },
             url : this.ctx.url,
+            target : this.ctx.target,
             content : applyNext()
         }];
     })

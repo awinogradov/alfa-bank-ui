@@ -16,7 +16,8 @@ block('footer').elem('menu')(
                         block : 'menu-item',
                         mods : { type : 'link' },
                         url : item.url,
-                        content : item.title
+                        content : item.title,
+                        target : item.target
                     };
                 })
             }
