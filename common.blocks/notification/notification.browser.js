@@ -38,8 +38,7 @@ modules.define('notification', ['i-bem__dom', 'BEMHTML', 'plate'], function(prov
 
         _startEvade : function() {
             this._stopEvade();
-            var _this = this;
-            this._outTimeOut = setTimeout(_this._setVisible(false), 5000);
+            this._outTimeOut = setTimeout(this._setVisible.bind(this, false), 5000);
         },
 
         _evade : function() {
@@ -56,8 +55,7 @@ modules.define('notification', ['i-bem__dom', 'BEMHTML', 'plate'], function(prov
             this.elem('inner').html(message);
             if(this.getMod('visible')){
                 this._evade();
-                _this = this;
-                setTimeout(_this._setVisible(true) , 200);
+                setTimeout(this._setVisible.bind(this, true) , 200);
             } else {
                 this.setMod('visible', true);
             }
