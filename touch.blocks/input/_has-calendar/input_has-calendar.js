@@ -1,6 +1,7 @@
 /**
  * @module input
  */
+/* istanbul ignore next: FIXME @voischev */
 modules.define('input', ['i-bem__dom'], function(provide, BEMDOM) {
 
 /**
