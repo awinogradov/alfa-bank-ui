@@ -4,7 +4,9 @@ block('header').elem('inner')(
 
         return [
             {
-                elem : 'logo',
+                block : 'link',
+                url : _this._header.logoUrl,
+                mix : { block : 'header', elem : 'logo' },
                 content : [
                     {
                         block : 'logo',
