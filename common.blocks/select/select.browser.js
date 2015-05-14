@@ -1,3 +1,4 @@
+/* istanbul ignore next: FIXME @spanferov */
 modules.define('select',
 ['popup', 'menu', 'dom', 'jquery', 'BEMHTML', 'i-bem__dom'],
 function(provide, Popup, Menu, dom, $, BEMHTML, BEMDOM, Select) {

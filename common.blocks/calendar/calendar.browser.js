@@ -1,6 +1,7 @@
 /**
  * @module calendar
  */
+/* istanbul ignore next: FIXME @voischev */
 modules.define('calendar', ['i-bem__dom', 'BEMHTML', 'jquery'], function(provide, BEMDOM, BEMHTML, $) {
 
 function compareMonths(a, b) {

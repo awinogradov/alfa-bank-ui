@@ -1,6 +1,7 @@
 /**
  * @module input
  */
+/* istanbul ignore next: FIXME @voischev */
 modules.define('input', ['i-bem__dom', 'jquery', 'dom'], function(provide, BEMDOM, $, dom) {
 
 /**
