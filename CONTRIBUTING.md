@@ -1,6 +1,16 @@
 Contribution Guide for Manhattan Project
 ========================================
 
+## How To Release A Version
+
+```
+npm run release-patch
+npm run release-minor
+npm run release-major
+```
+
+`package.json` contains scripts `release-*` to easily release a version, bump version number in `bower.json` and `package.json`, update ChangeLog, create git tag, and push it to remote. It uses `mversion`to handle version bump, and `changelog.js` script that uses `conventional-changelog` npm package.
+
 ## Git Commit Guidelines
 
 These guidelines have been copied from the [AngularJS](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines)
