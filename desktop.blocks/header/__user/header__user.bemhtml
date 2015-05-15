@@ -8,11 +8,11 @@ block('header').elem('user')(
                 mods : {
                     theme : _this._headerMods.theme,
                     bkg : _this._headerMods.bkg,
-                    pseudo : true,
+                    pseudo : !_this._header.customerUrl,
                     size : 'm'
                 },
                 mix : { block : 'header', elem : 'user-link' },
-                url : '#',
+                url : _this._header.customerUrl || '#',
                 content : _this._header.customer
             },
             !!_this._header.out && {
