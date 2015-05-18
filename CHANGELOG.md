@@ -1,3 +1,27 @@
+<a name"3.0.0"></a>
+## 3.0.0 (2015-05-18)
+
+
+#### Bug Fixes
+
+* **card-number:** this script is not used (and does not do anything useful anyway) ([a928645](http://git/projects/MAN/repos/nyc-public/commits/a92864507870b4022577968515f329f07676dee7))
+* **form-field:** throws error when `validate` is used without `has-validate` ([cbb6044](http://git/projects/MAN/repos/nyc-public/commits/cbb6044ac1319c068ba393ef705c221015a6f6be))
+
+
+#### Features
+
+* **CHANGELOG.md:** changelog for previous versions ([276b3fe](http://git/projects/MAN/repos/nyc-public/commits/276b3fe445c4240b1a1e26232f5a12c52f71ec67))
+* **i-bem:** escape tags in content strings in behtml templates ([dddecfe](http://git/projects/MAN/repos/nyc-public/commits/dddecfe6ea55f31f66c6dd648c2f40eec4bb81d7))
+* **input:** format sum for money input ([59f5eb2](http://git/projects/MAN/repos/nyc-public/commits/59f5eb2be21165942a0388c6b68c58e54664ddb2))
+
+
+#### Breaking Changes
+
+* html tags cannot be used now in bemhtml block's content
+
+ ([dddecfe](http://git/projects/MAN/repos/nyc-public/commits/dddecfe6ea55f31f66c6dd648c2f40eec4bb81d7))
+
+
 <a name"2.1.1"></a>
 ### 2.1.1 (2015-05-14)
 
