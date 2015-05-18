@@ -1,0 +1,3 @@
+content()(function() {
+    return typeof this.ctx.content === 'string'? this.xmlEscape(this.ctx.content) : this.ctx.content;
+});
