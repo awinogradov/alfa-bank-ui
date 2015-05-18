@@ -19,9 +19,7 @@ FormField.decl({ modName : 'validate', modVal : 'email' }, /** @lends form-field
             'inited' : function() {
                 this.__base.apply(this, arguments);
 
-                var _this = this;
-
-                this.getValidator().push(validate_email(_this.params.email));
+                this.getValidator().push(validate_email(this.params.email));
             }
         }
     }

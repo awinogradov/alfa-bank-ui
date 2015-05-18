@@ -1,4 +1,4 @@
-modules.define('notification', ['i-bem__dom', 'BEMHTML'], function(provide, BEMDOM, BEMHTML) {
+modules.define('notification', ['i-bem__dom', 'BEMHTML', 'plate'], function(provide, BEMDOM, BEMHTML) {
 
     provide(BEMDOM.decl(this.name, {
 
@@ -38,10 +38,7 @@ modules.define('notification', ['i-bem__dom', 'BEMHTML'], function(provide, BEMD
 
         _startEvade : function() {
             this._stopEvade();
-            var _this = this;
-            this._outTimeOut = setTimeout(function() {
-                _this.delMod('visible');
-            }, 5000);
+            this._outTimeOut = setTimeout(this._setVisible.bind(this, false), 5000);
         },
 
         _evade : function() {
@@ -58,12 +55,17 @@ modules.define('notification', ['i-bem__dom', 'BEMHTML'], function(provide, BEMD
             this.elem('inner').html(message);
             if(this.getMod('visible')){
                 this._evade();
-                _this = this;
-                setTimeout(function() {
-                    _this.setMod('visible', true);
-                }, 200);
+                setTimeout(this._setVisible.bind(this, true) , 200);
             } else {
                 this.setMod('visible', true);
+            }
+        },
+
+        _setVisible : function(visible) {
+            if(visible) {
+                this.setMod('visible', true);
+            } else {
+                this.delMod('visible');
             }
         }
 

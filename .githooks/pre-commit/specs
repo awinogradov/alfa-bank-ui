@@ -15,7 +15,7 @@ fi
 # Check coverage
 
 ./node_modules/.bin/istanbul report --include coverage.json text-summary
-./node_modules/.bin/istanbul check-coverage --include coverage.json --statement 100 --branch 100
+./node_modules/.bin/istanbul check-coverage --include coverage.json
 
 if [ $? -ne 0 ]
 then

@@ -17,7 +17,7 @@
     "bem-components": "2.0.0",
     "bem-grid": "1.2.3",
     "bem-typography": "1.0.1",
-    "bem-forms": "bem/bem-forms#e39012d45dc72de27b7ec0d129ac8f6c140bc931"
+    "bem-forms": "bem/bem-forms#19b868dbed68a3451f1398b7b831fc936248d504"
   },
   "devDependencies": {
     "bem-pr": "ssh://git@git/man/bem-pr.git"

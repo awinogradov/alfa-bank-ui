@@ -1,6 +1,5 @@
 block('card-number')(
     tag()('span'),
-    js()(true),
     content()(function() {
         if(this.ctx.val){
             var val = this.ctx.val.replace(/ /g, '');

@@ -1,0 +1,11 @@
+instrumentation:
+  excludes:
+    - common.blocks/jquery/**
+
+check:
+  global:
+    statements: 80
+    branches: 80
+  each:
+    statements: 80
+    branches: 80
