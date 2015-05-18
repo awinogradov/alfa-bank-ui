@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 51.98 52.025" enable-background="new 0 0 51.98 52.025" xml:space="preserve">
-<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="26.06" cy="25.963" r="25.346"/>
-<polygon fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" points="38.157,13.979 35.743,12.496 22.11,34.686 15.179,27.6 
-	13.154,29.582 22.748,38.981 "/>
+<svg id="Слой_1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 51.98 52.025" version="1.1" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 51.98 52.025">
+<circle cx="26.06" cy="25.963" stroke="#fff" r="25.346" stroke-miterlimit="10" fill="none"/>
+<polygon stroke="#fff" points="38.157 13.979 35.743 12.496 22.11 34.686 15.179 27.6 13.154 29.582 22.748 38.981" stroke-miterlimit="10" fill="#fff"/>
 </svg>
