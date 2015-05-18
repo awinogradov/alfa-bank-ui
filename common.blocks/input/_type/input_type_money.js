@@ -1,6 +1,6 @@
 modules.define('input',
-    ['jquery__numeric'],
-    function(provide, $, Input) {
+    ['jquery__numeric', 'utils__format'],
+    function(provide, $, formatUtils, Input) {
 
 provide(Input.decl({ modName : 'type', modVal : 'money' }, {
 
@@ -27,7 +27,12 @@ provide(Input.decl({ modName : 'type', modVal : 'money' }, {
         },
         'focused' : {
             'true' : function() {
+                this.setVal(this._val.replace(' ', ''));
                 $(this.elem('control')).select();
+
+            },
+            '' : function() {
+                this.setVal(formatUtils.formatSum(this._val));
             }
         }
     },
@@ -39,7 +44,7 @@ provide(Input.decl({ modName : 'type', modVal : 'money' }, {
      */
     getVal : function() {
         var base = this.__base.apply(this, arguments);
-        return typeof base === 'string' && base.replace(',', '.');
+        return typeof base === 'string' && base.replace(',', '.').replace(' ', '');
     }
 
 }));
