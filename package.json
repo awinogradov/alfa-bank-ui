@@ -3,7 +3,7 @@
   "author": "Anton Winogradov <winogradovaa@gmail.com>",
   "name": "nyc-public",
   "description": "NYC Public Library of UI components",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "dependencies": {
     "bem-environ": "1.4.0",
     "enb-bem-examples": "^0.5.9",

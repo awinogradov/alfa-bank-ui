@@ -1,3 +1,17 @@
+<a name"3.0.1"></a>
+### 3.0.1 (2015-05-19)
+
+
+#### Bug Fixes
+
+* **form:** getFieldByName ([958d4ea](http://git/projects/MAN/repos/nyc-public/commits/958d4eaa961f8951029437924af27d6854afe27b))
+
+
+#### Features
+
+* ***:** optimized SVG images ([8abf41c](http://git/projects/MAN/repos/nyc-public/commits/8abf41cb169d4bd95387491f3a2ccff2dc113a03))
+
+
 <a name"3.0.0"></a>
 ## 3.0.0 (2015-05-18)
 
