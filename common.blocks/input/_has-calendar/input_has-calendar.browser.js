@@ -47,13 +47,15 @@ provide(BEMDOM.decl({ block : this.name, modName: 'has-calendar' }, /** @lends i
             this._calendar.hide();
         }
     },
-    _onPointerClickSwicher : function(e) {
-        if(this._calendar.isShown()) {
-            this._calendar.hide();
-        } else {
-            this._calendar
-                .setVal(this.getVal())
-                .show();
+    _onPointerClickSwicher : function() {
+        if(!this.hasMod('disabled')) {
+            if(this._calendar.isShown()) {
+                this._calendar.hide();
+            } else {
+                this._calendar
+                    .setVal(this.getVal())
+                    .show();
+            }
         }
     },
     _onDocPointerDown : function(e) {
