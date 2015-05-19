@@ -23,6 +23,16 @@
             color: #fff;
             color: rgba(255,255,255,0.5)
         }
+
+        &.button_checked
+        {
+            background: rgba(255,255,255,0.3);
+
+            .button__text
+            {
+                color: #000;
+            }
+        }
     }
 
     &.button_hovered
@@ -92,6 +102,11 @@
         .button_bkg_color
         {
             border-right-color: rgba(255,255,255,0.5);
+
+            &.button_disabled
+            {
+                border-right-color: transparent;
+            }
         }
     }
 }

@@ -77,6 +77,21 @@ block('inputs')(
                                                                 block : 'controls',
                                                                 content : [
                                                                     {
+                                                                        block : 'select',
+                                                                        mods : { mode : 'radio-check', theme : 'alfa', bkg : 'color', size : 's', disabled : true },
+                                                                        name : 'select',
+                                                                        text : 'first',
+                                                                        options : [
+                                                                            { val : 1, text : 'first', checked: true },
+                                                                            { val : 2, text : 'second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
                                                                         block : 'textarea',
                                                                         mods : { theme : 'alfa', bkg : 'color', size: 's' },
                                                                         placeholder : 'текст'
@@ -178,6 +193,21 @@ block('inputs')(
                                                                     {
                                                                         block : 'select',
                                                                         mods : { mode : 'radio-check', theme : 'alfa', bkg : 'color', size : 'm' },
+                                                                        name : 'select',
+                                                                        text : 'first',
+                                                                        options : [
+                                                                            { val : 1, text : 'first', checked: true },
+                                                                            { val : 2, text : 'second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'select',
+                                                                        mods : { mode : 'radio-check', theme : 'alfa', bkg : 'color', size : 'm', disabled : true },
                                                                         name : 'select',
                                                                         text : 'first',
                                                                         options : [
@@ -305,6 +335,21 @@ block('inputs')(
                                                                 block : 'controls',
                                                                 content : [
                                                                     {
+                                                                        block : 'select',
+                                                                        mods : { mode : 'radio-check', theme : 'alfa', bkg : 'color', size : 'l', disabled : true },
+                                                                        name : 'select',
+                                                                        text : 'first',
+                                                                        options : [
+                                                                            { val : 1, text : 'first', checked: true },
+                                                                            { val : 2, text : 'second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
                                                                         block : 'textarea',
                                                                         mods : { theme : 'alfa', bkg : 'color', size: 'l' },
                                                                         placeholder : 'текст'
@@ -419,6 +464,21 @@ block('inputs')(
                                                                 block : 'controls',
                                                                 content : [
                                                                     {
+                                                                        block : 'select',
+                                                                        mods : { mode : 'radio-check', theme : 'alfa', bkg : 'color', size : 'xl', disabled : true },
+                                                                        name : 'select',
+                                                                        text : 'first',
+                                                                        options : [
+                                                                            { val : 1, text : 'first', checked: true },
+                                                                            { val : 2, text : 'second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
                                                                         block : 'textarea',
                                                                         mods : { theme : 'alfa', bkg : 'color', size: 'xl' },
                                                                         placeholder : 'текст'
@@ -492,6 +552,16 @@ block('inputs')(
                                                                     {
                                                                         block : 'checkbox-group',
                                                                         mods : { theme : 'alfa', bkg : 'color', size : 's', type : 'button' },
+                                                                        name : 'checkbox-sizes-s',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        block : 'checkbox-group',
+                                                                        mods : { theme : 'alfa', bkg : 'color', size : 's', type : 'button', disabled : true },
                                                                         name : 'checkbox-sizes-s',
                                                                         options : [
                                                                             { val : 1, text : 'Один' },
@@ -974,6 +1044,21 @@ block('inputs')(
                                                                 block : 'controls',
                                                                 content : [
                                                                     {
+                                                                        block : 'select',
+                                                                        mods : { mode : 'radio-check', theme : 'alfa', bkg : 'white', size : 's', disabled : true },
+                                                                        name : 'select',
+                                                                        text : 'first',
+                                                                        options : [
+                                                                            { val : 1, text : 'first', checked: true },
+                                                                            { val : 2, text : 'second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
                                                                         block : 'textarea',
                                                                         mods : { theme : 'alfa', bkg : 'white', size: 's' },
                                                                         placeholder : 'текст'
@@ -1075,6 +1160,21 @@ block('inputs')(
                                                                     {
                                                                         block : 'select',
                                                                         mods : { mode : 'radio-check', theme : 'alfa', bkg : 'white', size : 'm' },
+                                                                        name : 'select',
+                                                                        text : 'first',
+                                                                        options : [
+                                                                            { val : 1, text : 'first', checked: true },
+                                                                            { val : 2, text : 'second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'select',
+                                                                        mods : { mode : 'radio-check', theme : 'alfa', bkg : 'white', size : 'm', disabled : true },
                                                                         name : 'select',
                                                                         text : 'first',
                                                                         options : [
@@ -1202,6 +1302,21 @@ block('inputs')(
                                                                 block : 'controls',
                                                                 content : [
                                                                     {
+                                                                        block : 'select',
+                                                                        mods : { mode : 'radio-check', theme : 'alfa', bkg : 'white', size : 'l', disabled : true },
+                                                                        name : 'select',
+                                                                        text : 'first',
+                                                                        options : [
+                                                                            { val : 1, text : 'first', checked: true },
+                                                                            { val : 2, text : 'second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
                                                                         block : 'textarea',
                                                                         mods : { theme : 'alfa', bkg : 'white', size: 'l' },
                                                                         placeholder : 'текст'
@@ -1316,6 +1431,21 @@ block('inputs')(
                                                                 block : 'controls',
                                                                 content : [
                                                                     {
+                                                                        block : 'select',
+                                                                        mods : { mode : 'radio-check', theme : 'alfa', bkg : 'white', size : 'xl', disabled : true },
+                                                                        name : 'select',
+                                                                        text : 'first',
+                                                                        options : [
+                                                                            { val : 1, text : 'first', checked: true },
+                                                                            { val : 2, text : 'second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
                                                                         block : 'textarea',
                                                                         mods : { theme : 'alfa', bkg : 'white', size: 'xl' },
                                                                         placeholder : 'текст'
@@ -1389,6 +1519,16 @@ block('inputs')(
                                                                     {
                                                                         block : 'checkbox-group',
                                                                         mods : { theme : 'alfa', bkg : 'white', size : 's', type : 'button' },
+                                                                        name : 'checkbox-sizes-s',
+                                                                        options : [
+                                                                            { val : 1, text : 'Один' },
+                                                                            { val : 2, text : 'Два', checked : true },
+                                                                            { val : 3, text : 'Три' }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        block : 'checkbox-group',
+                                                                        mods : { theme : 'alfa', bkg : 'white', size : 's', type : 'button', disabled : true },
                                                                         name : 'checkbox-sizes-s',
                                                                         options : [
                                                                             { val : 1, text : 'Один' },
