@@ -74,6 +74,16 @@ describe('input_has-calendar', function() {
         expect(calendar.findElem('title')).to.not.be.null;
     });
 
+    it('should show calendar', function() {
+        block = build('input', bemjson);
+        var popup = block.findBlockInside('popup');
+
+        block.showCalendar();
+        popup.getMod('visible').should.be.true;
+        block.showCalendar();
+        popup.getMod('visible').should.be.true;
+    });
+
     it('should close calendar when item selected', function() {
 
         block = build('input', bemjson);
@@ -111,6 +121,17 @@ describe('input_has-calendar', function() {
 
         block.findElem('calendar').trigger(new $.Event('pointerclick'));
         popup.getMod('visible').should.equal('');
+    });
+
+    it('should not open calendar when input desabled', function() {
+
+        bemjson.mods.disabled = true;
+
+        block = build('input', bemjson);
+        var popup = block.findBlockInside('popup');
+
+        block.findElem('calendar').trigger(new $.Event('pointerclick'));
+        popup.getMod('visible').should.be.fale;
     });
 
     it('should emit event `change` on calendar when day selected', function() {

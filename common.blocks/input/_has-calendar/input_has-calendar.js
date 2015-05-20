@@ -24,7 +24,7 @@ provide(Input.decl({ modName: 'has-calendar' }, /** @lends input.prototype */{
 
                 this.bindTo('control', 'focus pointerclick', this.showCalendar);
                 this.bindTo('control', 'blur', this._onControlBlur);
-                this.bindTo('calendar', 'pointerclick', this._onPointerClickSwicher);
+                this.bindTo('calendar', 'pointerclick', this._onPointerClickSwitcher);
                 this.bindToDoc('pointerdown', this._onDocPointerDown);
             }
         }
@@ -46,7 +46,7 @@ provide(Input.decl({ modName: 'has-calendar' }, /** @lends input.prototype */{
             this._calendar.hide();
         }
     },
-    _onPointerClickSwicher : function() {
+    _onPointerClickSwitcher : function() {
         if(!this.hasMod('disabled')) {
             if(this._calendar.isShown()) {
                 this._calendar.hide();
