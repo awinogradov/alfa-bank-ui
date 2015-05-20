@@ -67,8 +67,66 @@ block('inputs')(
                                                                         name : 'select',
                                                                         text : 'first',
                                                                         options : [
-                                                                            { val : 1, text : 'first', checked: true },
-                                                                            { val : 2, text : 'second' }
+                                                                            { val : 1, text : 'first first first first first first first first first first first first first first first', checked: true },
+                                                                            { val : 2, text : 'second second second second second second second second second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'select',
+                                                                        mods : {
+                                                                            mode : 'radio-check',
+                                                                            theme : 'alfa',
+                                                                            bkg : 'color',
+                                                                            size : 's',
+                                                                            width : 'available'
+                                                                        },
+                                                                        name : 'select',
+                                                                        text : 'first',
+                                                                        options : [
+                                                                            { val : 1, text : 'first first first first first first first first first first first first first first first', checked: true },
+                                                                            { val : 2, text : 'second second second second second second second second second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : {
+                                                                            theme : 'alfa',
+                                                                            bkg : 'color',
+                                                                            size : 'm',
+                                                                            'has-autocomplete' : true
+                                                                        },
+                                                                        options : [
+                                                                            { val : 'value 1', content : 'first first first first first first first first first first first first first first first' },
+                                                                            { val : 'value 2', content : 'second second second second second second second second second' }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block : 'controls',
+                                                                content : [
+                                                                    {
+                                                                        block : 'input',
+                                                                        mods : {
+                                                                            theme : 'alfa',
+                                                                            bkg : 'color',
+                                                                            size : 'm',
+                                                                            'has-autocomplete' : true,
+                                                                            width : 'available'
+                                                                        },
+                                                                        options : [
+                                                                            { val : 'value 1', content : 'first first first first first first first first first first first first first first first' },
+                                                                            { val : 'value 2', content : 'second second second second second second second second second' }
                                                                         ]
                                                                     }
                                                                 ]
