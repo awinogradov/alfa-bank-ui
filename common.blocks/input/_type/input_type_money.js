@@ -23,6 +23,8 @@ provide(Input.decl({ modName : 'type', modVal : 'money' }, {
                     scale : _this.params.scale,
                     decimal : ','
                 });
+
+                this.setVal(formatUtils.formatSum(this._val));
             }
         },
         'focused' : {
