@@ -92,7 +92,6 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
     setVal : function(val) {
         var date = this.parseDate(val);
         this._val = this._isValidDate(date) ? date : null;
-
         if(this._val) {
             this._month = new Date(this._val.getTime());
             this._month.setDate(1);
@@ -264,10 +263,6 @@ provide(BEMDOM.decl({ block : this.name }, /** @lends calendar.prototype */{
         }
 
         return false;
-    },
-
-    destruct : function() {
-        this._popup && this._popup.destruct();
     },
 
     _getToday : function() {

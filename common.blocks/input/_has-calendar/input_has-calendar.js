@@ -1,8 +1,7 @@
 /**
  * @module input
  */
-/* istanbul ignore next: FIXME @voischev */
-modules.define('input', ['i-bem__dom', 'jquery', 'dom'], function(provide, BEMDOM, $, dom) {
+modules.define('input', ['i-bem__dom', 'jquery', 'dom'], function(provide, BEMDOM, $, dom, Input) {
 
 /**
  * @exports
@@ -10,7 +9,7 @@ modules.define('input', ['i-bem__dom', 'jquery', 'dom'], function(provide, BEMDO
  * @augments control
  * @bem
  */
-provide(BEMDOM.decl({ block : this.name, modName: 'has-calendar' }, /** @lends input.prototype */{
+provide(Input.decl({ modName: 'has-calendar' }, /** @lends input.prototype */{
     onSetMod: {
         'js' : {
             'inited' : function() {
@@ -59,6 +58,7 @@ provide(BEMDOM.decl({ block : this.name, modName: 'has-calendar' }, /** @lends i
         }
     },
     _onDocPointerDown : function(e) {
+
         var target = $(e.target),
             insideCalendar = dom.contains(this._calendar.domElem, target);
 
@@ -69,11 +69,6 @@ provide(BEMDOM.decl({ block : this.name, modName: 'has-calendar' }, /** @lends i
         if(!insideCalendar && !dom.contains(this.domElem, target)) {
             this._calendar.hide();
         }
-    },
-    destruct: function() {
-        this._calendar.destruct();
-
-        this.__base.apply(this, arguments);
     }
 }));
 });
