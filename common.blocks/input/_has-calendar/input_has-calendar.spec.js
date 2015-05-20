@@ -2,7 +2,7 @@ var expect = chai.expect;
 
 modules.define('spec',
     ['jquery', 'spec__utils', 'input', 'popup', 'calendar'],
-    function(provide, $, helper, popup, calendar) {
+    function(provide, $, helper, input, popup, calendar) {
 
 var build = helper.buildBlock;
 
@@ -104,11 +104,12 @@ describe('input_has-calendar', function() {
         block = build('input', bemjson);
         var popup = block.findBlockInside('popup');
 
-        block.elem('control').trigger('focus');
-        popup.getMod('visible').should.be.true;
-        // click on switcher
-        block.findElem('calendar').click();
+        expect(block.findElem('calendar')).to.not.be.null;
 
+        block.findElem('calendar').trigger(new $.Event('pointerclick'));
+        popup.getMod('visible').should.be.true;
+
+        block.findElem('calendar').trigger(new $.Event('pointerclick'));
         popup.getMod('visible').should.equal('');
     });
 
@@ -133,11 +134,15 @@ describe('input_has-calendar', function() {
     it('should not visible the popup when user set blur on input', function() {
         block = build('input', bemjson);
         var popup = block.findBlockInside('popup');
+
+        block.elem('control').focus();
+        popup.getMod('visible').should.be.true;
+
         block.elem('control').blur();
         popup.getMod('visible').should.equal('');
     });
 
-    it('should visible the popup when user pointerdown event on input', function() {
+    it('should visible the popup when user pointerdown event on input or calendar', function() {
         block = build('input', bemjson);
         var popup = block.findBlockInside('popup');
 
@@ -149,6 +154,18 @@ describe('input_has-calendar', function() {
         block._calendar.domElem.trigger(new $.Event('pointerdown'));
         popup.getMod('visible').should.be.true;
         block._ignoreBlur.should.be.true;
+        block.elem('control').blur();
+        block._ignoreBlur.should.be.false;
+    });
+
+    it('should hide popup when user pointerdown event outside', function() {
+        block = build('input', bemjson);
+        var popup = block.findBlockInside('popup');
+
+        block.elem('control').focus();
+        popup.getMod('visible').should.be.true;
+        $('body').trigger(new $.Event('pointerdown'));
+        block._calendar._popup.getMod('visible').should.equal('');
     });
 
     it('should close the popup when user clicked outside', function() {

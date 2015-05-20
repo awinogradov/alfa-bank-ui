@@ -69,11 +69,6 @@ provide(Input.decl({ modName: 'has-calendar' }, /** @lends input.prototype */{
         if(!insideCalendar && !dom.contains(this.domElem, target)) {
             this._calendar.hide();
         }
-    },
-    destruct: function() {
-        this._calendar.destruct();
-
-        this.__base.apply(this, arguments);
     }
 }));
 });
