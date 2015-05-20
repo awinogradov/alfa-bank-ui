@@ -1,7 +1,8 @@
 [{
     shouldDeps: [
         {
-            elem : 'calendar'
+            block : 'input',
+            mods : { 'has-addon' : true }
         },
         {
             block : 'icon',
@@ -13,7 +14,7 @@
 },
 {
     tech : 'spec.js',
-    shouldDeps : [
+    mustDeps : [
         { tech : 'bemhtml', block : 'input', mods : { 'has-calendar' : true } }
     ]
 }]
