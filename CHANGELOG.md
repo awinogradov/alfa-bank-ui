@@ -1,3 +1,13 @@
+<a name"3.0.2"></a>
+### 3.0.2 (2015-05-20)
+
+
+#### Bug Fixes
+
+* **form-field:** form-field size s label alignment fix ([7818e79](http://git/projects/MAN/repos/nyc-public/commits/7818e7919eb52cc136a52ea8dece22b8d0241cab))
+* **input-money:** format sum on load ([1113d4c](http://git/projects/MAN/repos/nyc-public/commits/1113d4ca0926a04a6598622c62fd230ec16e3f4d))
+
+
 <a name"3.0.1"></a>
 ### 3.0.1 (2015-05-19)
 
