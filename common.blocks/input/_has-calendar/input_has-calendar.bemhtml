@@ -27,6 +27,11 @@ block('input')(
                 }
             };
 
+            ctx.mods['has-mask'] = true;
+            ctx.js = {
+                mask : '{{99}}.{{99}}.{{9999}}'
+            };
+
             applyNext({
                 _inputMods : mods,
                 _calendarParams : calendarParams
