@@ -3,14 +3,14 @@
  */
 modules.define('input', [], function(provide, Input) {
 
-    provide(Input.decl({ modName : 'has-filter' }, {
+    provide(Input.decl({ modName: 'has-filter' }, {
 
-        onSetMod : {
-            'js' : {
-                'inited' : function() {
+        onSetMod: {
+            'js': {
+                'inited': function() {
                     this.__base.apply(this, arguments);
 
-                    if(!this.hasMod('has-autocomplete')) {
+                    if (!this.hasMod('has-autocomplete')) {
                         console.error('\'has-filter\' should only be used with \'has-autocomplete\'');
                         return;
                     }
@@ -27,7 +27,7 @@ modules.define('input', [], function(provide, Input) {
          * Set custom filter function
          * @param {Function} filter function(item, val) which should return whether item should be shown
          */
-        setFilter : function(filter) {
+        setFilter: function(filter) {
             this._filter = filter;
         },
 
@@ -35,14 +35,14 @@ modules.define('input', [], function(provide, Input) {
          * Filter autocomplete items
          * Use to manually trigger filtering when needed
          */
-        filter : function(val) {
+        filter: function(val) {
             var menu = this.getMenu();
 
-            if(!val) val = this.getVal();
+            if (!val) val = this.getVal();
 
             // TODO cache menu-item's
             menu.findBlocksInside('menu-item').forEach(function(item) {
-                if(this._filter(item, val)) {
+                if (this._filter(item, val)) {
                     item.delMod('hidden');
                 } else {
                     item.setMod('hidden');

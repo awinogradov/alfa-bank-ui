@@ -1,7 +1,7 @@
 /* istanbul ignore next */
 modules.define('jquery__numeric', ['jquery'], function(provide, $) {
     var jQuery = $,
-        window = {jQuery: jQuery};
+        window = { jQuery: jQuery };
 
     /*
      *
@@ -20,102 +20,98 @@ modules.define('jquery__numeric', ['jquery'], function(provide, $) {
          *      side-effect: Ctrl+A does not work, though you can still use the mouse to select (or double-click to select all)
          *
          * @name     numeric
-         * @param    config      { decimal : "." , negative : true }
+         * @param    config      { decimal : '.' , negative : true }
          * @param    callback     A function that runs if the number is not valid (fires onblur)
          * @author   Sam Collett (http://www.texotela.co.uk)
-         * @example  $(".numeric").numeric();
-         * @example  $(".numeric").numeric(","); // use , as separator
-         * @example  $(".numeric").numeric({ decimal : "," }); // use , as separator
-         * @example  $(".numeric").numeric({ negative : false }); // do not allow negative values
-         * @example  $(".numeric").numeric(null, callback); // use default values, pass on the 'callback' function
-         * @example  $(".numeric").numeric({ scale: 2 }); // allow only two numbers after the decimal point.
-         * @example  $(".numeric").numeric({ scale: 0 }); // Same as $(".numeric").numeric({ decimal : false });
-         * @example  $(".numeric").numeric({ precision: 2 }); // allow only two numbers.
-         * @example  $(".numeric").numeric({ precision: 4, scale: 2 }); // allow four numbers with two decimals. (99.99)
+         * @example  $('.numeric').numeric();
+         * @example  $('.numeric').numeric(','); // use , as separator
+         * @example  $('.numeric').numeric({ decimal : ',' }); // use , as separator
+         * @example  $('.numeric').numeric({ negative : false }); // do not allow negative values
+         * @example  $('.numeric').numeric(null, callback); // use default values, pass on the 'callback' function
+         * @example  $('.numeric').numeric({ scale: 2 }); // allow only two numbers after the decimal point.
+         * @example  $('.numeric').numeric({ scale: 0 }); // Same as $('.numeric').numeric({ decimal : false });
+         * @example  $('.numeric').numeric({ precision: 2 }); // allow only two numbers.
+         * @example  $('.numeric').numeric({ precision: 4, scale: 2 }); // allow four numbers with two decimals. (99.99)
          *
          */
         $.fn.numeric = function(config, callback)
         {
-            if(typeof config === 'boolean')
+            if (typeof config === 'boolean')
             {
                 config = { decimal: config };
             }
             config = config || {};
             // if config.negative undefined, set to true (default is to allow negative numbers)
-            if(typeof config.negative == "undefined") { config.negative = true; }
+            if (typeof config.negative == 'undefined') { config.negative = true; }
             // set decimal point
-            var decimal = (config.decimal === false) ? "" : config.decimal || ".";
+            var decimal = (config.decimal === false) ? '' : config.decimal || '.';
             // allow negatives
             var negative = (config.negative === true) ? true : false;
             // callback function
-            callback = (typeof(callback) == "function" ? callback : function() {});
+            callback = (typeof (callback) == 'function' ? callback : function() {});
             // scale
             var scale;
-            if ((typeof config.scale) == "number")
+            if ((typeof config.scale) == 'number')
             {
                 if (config.scale == 0)
                 {
                     decimal = false;
                     scale = -1;
-                }
-                else
+                } else
                     scale = config.scale;
-            }
-            else
+            } else
                 scale = -1;
             // precision
             var precision;
-            if ((typeof config.precision) == "number")
+            if ((typeof config.precision) == 'number')
             {
                 precision = config.precision;
-            }
-            else
+            } else
                 precision = 0;
             // set data and methods
-            return this.data("numeric.decimal", decimal).data("numeric.negative", negative).data("numeric.callback", callback).data("numeric.scale", scale).data("numeric.precision", precision).keypress($.fn.numeric.keypress).keyup($.fn.numeric.keyup).blur($.fn.numeric.blur);
+            return this.data('numeric.decimal', decimal).data('numeric.negative', negative).data('numeric.callback', callback).data('numeric.scale', scale).data('numeric.precision', precision).keypress($.fn.numeric.keypress).keyup($.fn.numeric.keyup).blur($.fn.numeric.blur);
         };
 
         $.fn.numeric.keypress = function(e)
         {
             // get decimal character and determine if negatives are allowed
-            var decimal = $.data(this, "numeric.decimal");
-            var negative = $.data(this, "numeric.negative");
+            var decimal = $.data(this, 'numeric.decimal');
+            var negative = $.data(this, 'numeric.negative');
             // get the key that was pressed
             var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
             // allow enter/return key (only when in an input box)
-            if(key == 13 && this.nodeName.toLowerCase() == "input")
+            if (key == 13 && this.nodeName.toLowerCase() == 'input')
             {
                 return true;
-            }
-            else if(key == 13)
+            } else if (key == 13)
             {
                 return false;
             }
             var allow = false;
             // allow Ctrl+A
-            if((e.ctrlKey && key == 97 /* firefox */) || (e.ctrlKey && key == 65) /* opera */) { return true; }
+            if ((e.ctrlKey && key == 97 /* firefox */) || (e.ctrlKey && key == 65) /* opera */) { return true; }
             // allow Ctrl+X (cut)
-            if((e.ctrlKey && key == 120 /* firefox */) || (e.ctrlKey && key == 88) /* opera */) { return true; }
+            if ((e.ctrlKey && key == 120 /* firefox */) || (e.ctrlKey && key == 88) /* opera */) { return true; }
             // allow Ctrl+C (copy)
-            if((e.ctrlKey && key == 99 /* firefox */) || (e.ctrlKey && key == 67) /* opera */) { return true; }
+            if ((e.ctrlKey && key == 99 /* firefox */) || (e.ctrlKey && key == 67) /* opera */) { return true; }
             // allow Ctrl+Z (undo)
-            if((e.ctrlKey && key == 122 /* firefox */) || (e.ctrlKey && key == 90) /* opera */) { return true; }
+            if ((e.ctrlKey && key == 122 /* firefox */) || (e.ctrlKey && key == 90) /* opera */) { return true; }
             // allow or deny Ctrl+V (paste), Shift+Ins
-            if((e.ctrlKey && key == 118 /* firefox */) || (e.ctrlKey && key == 86) /* opera */ ||
+            if ((e.ctrlKey && key == 118 /* firefox */) || (e.ctrlKey && key == 86) /* opera */ ||
                 (e.shiftKey && key == 45)) { return true; }
             // if a number was not pressed
-            if(key < 48 || key > 57)
+            if (key < 48 || key > 57)
             {
                 var value = $(this).val();
                 /* '-' only allowed at start and if negative numbers allowed */
-                if(value.indexOf("-") !== 0 && negative && key == 45 && (value.length === 0 || parseInt($.fn.getSelectionStart(this), 10) === 0)) { return true; }
+                if (value.indexOf('-') !== 0 && negative && key == 45 && (value.length === 0 || parseInt($.fn.getSelectionStart(this), 10) === 0)) { return true; }
                 /* only one decimal separator allowed */
-                if(decimal && key == decimal.charCodeAt(0) && value.indexOf(decimal) != -1)
+                if (decimal && key == decimal.charCodeAt(0) && value.indexOf(decimal) != -1)
                 {
                     allow = false;
                 }
                 // check for other keys that have special purposes
-                if(
+                if (
                     key != 8 /* backspace */ &&
                     key != 9 /* tab */ &&
                     key != 13 /* enter */ &&
@@ -127,77 +123,74 @@ modules.define('jquery__numeric', ['jquery'], function(provide, $) {
                 )
                 {
                     allow = false;
-                }
-                else
+                } else
                 {
                     // for detecting special keys (listed above)
                     // IE does not support 'charCode' and ignores them in keypress anyway
-                    if(typeof e.charCode != "undefined")
+                    if (typeof e.charCode != 'undefined')
                     {
                         // special keys have 'keyCode' and 'which' the same (e.g. backspace)
-                        if(e.keyCode == e.which && e.which !== 0)
+                        if (e.keyCode == e.which && e.which !== 0)
                         {
                             allow = true;
                             // . and delete share the same code, don't allow . (will be set to true later if it is the decimal point)
-                            if(e.which == 46) { allow = false; }
+                            if (e.which == 46) { allow = false; }
                         }
                         // or keyCode != 0 and 'charCode'/'which' = 0
-                        else if(e.keyCode !== 0 && e.charCode === 0 && e.which === 0)
+                        else if (e.keyCode !== 0 && e.charCode === 0 && e.which === 0)
                         {
                             allow = true;
                         }
                     }
                 }
                 // if key pressed is the decimal and it is not already in the field
-                if(decimal && key == decimal.charCodeAt(0))
+                if (decimal && key == decimal.charCodeAt(0))
                 {
-                    if(value.indexOf(decimal) == -1)
+                    if (value.indexOf(decimal) == -1)
                     {
                         allow = true;
-                    }
-                    else
+                    } else
                     {
                         allow = false;
                     }
                 }
             }
-            //if a number key was pressed.
+            // if a number key was pressed.
             else
             {
                 // If scale >= 0, make sure there's only <scale> characters
                 // after the decimal point.
-                if($.data(this, "numeric.scale") >= 0)
+                if ($.data(this, 'numeric.scale') >= 0)
                 {
                     var decimalPosition = this.value.indexOf(decimal);
-                    //If there is a decimal.
+                    // If there is a decimal.
                     if (decimalPosition >= 0)
                     {
                         decimalsQuantity = this.value.length - decimalPosition - 1;
-                        //If the cursor is after the decimal.
+                        // If the cursor is after the decimal.
                         if ($.fn.getSelectionStart(this) > decimalPosition)
-                            allow = decimalsQuantity < $.data(this, "numeric.scale");
+                            allow = decimalsQuantity < $.data(this, 'numeric.scale');
                         else
                         {
                             integersQuantity = (this.value.length - 1) - decimalsQuantity;
-                            //If precision > 0, integers and decimals quantity should not be greater than precision
-                            if (integersQuantity < ($.data(this, "numeric.precision") - $.data(this, "numeric.scale")))
+                            // If precision > 0, integers and decimals quantity should not be greater than precision
+                            if (integersQuantity < ($.data(this, 'numeric.precision') - $.data(this, 'numeric.scale')))
                                 allow = true;
                             else
                                 allow = false;
                         }
                     }
-                    //If there is no decimal
+                    // If there is no decimal
                     else {
-                        if ($.data(this, "numeric.precision") > 0)
-                            allow = this.value.replace($.data(this, "numeric.decimal"), "").length < $.data(this, "numeric.precision") - $.data(this, "numeric.scale");
+                        if ($.data(this, 'numeric.precision') > 0)
+                            allow = this.value.replace($.data(this, 'numeric.decimal'), '').length < $.data(this, 'numeric.precision') - $.data(this, 'numeric.scale');
                         else
                             allow = true;
                     }
-                }
-                else
+                } else
                 // If precision > 0, make sure there's not more digits than precision
-                if ($.data(this, "numeric.precision") > 0)
-                    allow = this.value.replace($.data(this, "numeric.decimal"), "").length < $.data(this, "numeric.precision");
+                if ($.data(this, 'numeric.precision') > 0)
+                    allow = this.value.replace($.data(this, 'numeric.decimal'), '').length < $.data(this, 'numeric.precision');
                 else
                     allow = true;
             }
@@ -207,90 +200,90 @@ modules.define('jquery__numeric', ['jquery'], function(provide, $) {
         $.fn.numeric.keyup = function(e)
         {
             var val = $(this).val();
-            if(val && val.length > 0)
+            if (val && val.length > 0)
             {
                 // get carat (cursor) position
                 var carat = $.fn.getSelectionStart(this);
                 // get decimal character and determine if negatives are allowed
-                var decimal = $.data(this, "numeric.decimal");
-                var negative = $.data(this, "numeric.negative");
+                var decimal = $.data(this, 'numeric.decimal');
+                var negative = $.data(this, 'numeric.negative');
 
                 // prepend a 0 if necessary
-                if(decimal !== "" && decimal !== null)
+                if (decimal !== '' && decimal !== null)
                 {
                     // find decimal point
                     var dot = val.indexOf(decimal);
                     // if dot at start, add 0 before
-                    if(dot === 0)
+                    if (dot === 0)
                     {
-                        this.value = "0" + val;
+                        this.value = '0' + val;
                     }
                     // if dot at position 1, check if there is a - symbol before it
-                    if(dot == 1 && val.charAt(0) == "-")
+                    if (dot == 1 && val.charAt(0) == '-')
                     {
-                        this.value = "-0" + val.substring(1);
+                        this.value = '-0' + val.substring(1);
                     }
                     val = this.value;
                 }
 
                 // if pasted in, only allow the following characters
-                var validChars = [0,1,2,3,4,5,6,7,8,9,'-',decimal];
+                var validChars = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, '-', decimal];
                 // get length of the value (to loop through)
                 var length = val.length;
                 // loop backwards (to prevent going out of bounds)
-                for(var i = length - 1; i >= 0; i--)
+                for (var i = length - 1; i >= 0; i--)
                 {
                     var ch = val.charAt(i);
                     // remove '-' if it is in the wrong place
-                    if(i !== 0 && ch == "-")
+                    if (i !== 0 && ch == '-')
                     {
                         val = val.substring(0, i) + val.substring(i + 1);
                     }
                     // remove character if it is at the start, a '-' and negatives aren't allowed
-                    else if(i === 0 && !negative && ch == "-")
+                    else if (i === 0 && !negative && ch == '-')
                     {
                         val = val.substring(1);
                     }
                     var validChar = false;
                     // loop through validChars
-                    for(var j = 0; j < validChars.length; j++)
+                    for (var j = 0; j < validChars.length; j++)
                     {
                         // if it is valid, break out the loop
-                        if(ch == validChars[j])
+                        if (ch == validChars[j])
                         {
                             validChar = true;
                             break;
                         }
                     }
                     // if not a valid character, or a space, remove
-                    if(!validChar || ch == " ")
+                    if (!validChar || ch == ' ')
                     {
                         val = val.substring(0, i) + val.substring(i + 1);
                     }
                 }
                 // remove extra decimal characters
                 var firstDecimal = val.indexOf(decimal);
-                if(firstDecimal > 0)
+                if (firstDecimal > 0)
                 {
-                    for(var k = length - 1; k > firstDecimal; k--)
+                    for (var k = length - 1; k > firstDecimal; k--)
                     {
                         var chch = val.charAt(k);
                         // remove decimal character
-                        if(chch == decimal)
+                        if (chch == decimal)
                         {
                             val = val.substring(0, k) + val.substring(k + 1);
                         }
                     }
                     // remove numbers after the decimal so that scale matches.
-                    if ($.data(this, "numeric.scale") >= 0)
-                        val = val.substring(0, firstDecimal+$.data(this, "numeric.scale") + 1);
+                    if ($.data(this, 'numeric.scale') >= 0)
+                        val = val.substring(0, firstDecimal + $.data(this, 'numeric.scale') + 1);
                     // remove numbers so that precision matches.
-                    if ($.data(this, "numeric.precision") > 0)
-                        val = val.substring(0, $.data(this, "numeric.precision") + 1);
+                    if ($.data(this, 'numeric.precision') > 0)
+                        val = val.substring(0, $.data(this, 'numeric.precision') + 1);
                 }
                 // limite the integers quantity, necessary when user delete decimal separator
-                else if ($.data(this, "numeric.precision") > 0)
-                    val = val.substring(0, ($.data(this, "numeric.precision") - $.data(this, "numeric.scale")));
+                else if ($.data(this, 'numeric.precision') > 0)
+                    val = val.substring(0, ($.data(this, 'numeric.precision') - $.data(this, 'numeric.scale')));
 
                 // set the value and prevent the cursor moving to the end
                 this.value = val;
@@ -300,13 +293,13 @@ modules.define('jquery__numeric', ['jquery'], function(provide, $) {
 
         $.fn.numeric.blur = function()
         {
-            var decimal = $.data(this, "numeric.decimal");
-            var callback = $.data(this, "numeric.callback");
+            var decimal = $.data(this, 'numeric.decimal');
+            var callback = $.data(this, 'numeric.callback');
             var val = this.value;
-            if(val !== "")
+            if (val !== '')
             {
-                var re = new RegExp("^\\d+$|^\\d*" + decimal + "\\d+$");
-                if(!re.exec(val))
+                var re = new RegExp('^\\d+$|^\\d*' + decimal + '\\d+$');
+                if (!re.exec(val))
                 {
                     callback.apply(this);
                 }
@@ -315,7 +308,7 @@ modules.define('jquery__numeric', ['jquery'], function(provide, $) {
 
         $.fn.removeNumeric = function()
         {
-            return this.data("numeric.decimal", null).data("numeric.negative", null).data("numeric.callback", null).unbind("keypress", $.fn.numeric.keypress).unbind("blur", $.fn.numeric.blur);
+            return this.data('numeric.decimal', null).data('numeric.negative', null).data('numeric.callback', null).unbind('keypress', $.fn.numeric.keypress).unbind('blur', $.fn.numeric.blur);
         };
 
 // Based on code from http://javascript.nwbox.com/cursor_position/ (Diego Perini <dperini@nwbox.com>)
@@ -334,9 +327,9 @@ modules.define('jquery__numeric', ['jquery'], function(provide, $) {
         $.fn.setSelection = function(o, p)
         {
             // if p is number, start and end are the same
-            if(typeof p == "number") { p = [p, p]; }
+            if (typeof p == 'number') { p = [p, p]; }
             // only set if p is an array of length 2
-            if(p && p.constructor == Array && p.length == 2)
+            if (p && p.constructor == Array && p.length == 2)
             {
                 if (o.createTextRange)
                 {
@@ -345,8 +338,7 @@ modules.define('jquery__numeric', ['jquery'], function(provide, $) {
                     r.moveStart('character', p[0]);
                     r.moveEnd('character', p[1]);
                     r.select();
-                }
-                else if(o.setSelectionRange)
+                } else if (o.setSelectionRange)
                 {
                     o.focus();
                     o.setSelectionRange(p[0], p[1]);

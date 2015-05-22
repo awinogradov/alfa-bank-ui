@@ -3,7 +3,7 @@ block('logo').mod('view', 'full')(
         return [
             applyNext(),
             {
-                elem : 'text'
+                elem: 'text'
             }
         ];
     })

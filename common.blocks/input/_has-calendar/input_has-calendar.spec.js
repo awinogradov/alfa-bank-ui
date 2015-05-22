@@ -13,8 +13,8 @@ describe('input_has-calendar', function() {
 
     beforeEach(function() {
         bemjson = {
-            block : 'input',
-            mods : { 'has-calendar' : true, 'has-addon' : true }
+            block: 'input',
+            mods: { 'has-calendar': true, 'has-addon': true }
         };
     });
 
@@ -149,8 +149,8 @@ describe('input_has-calendar', function() {
     it('should emit event `change` on calendar when day selected', function() {
         block = build('input', bemjson);
         block.setVal('');
-        var calendar = block._calendar;
-        var eventCatched = false;
+        var calendar = block._calendar,
+            eventCatched = false;
 
         block.elem('control').trigger('focus');
 

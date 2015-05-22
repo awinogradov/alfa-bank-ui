@@ -5,14 +5,14 @@ module.exports = function(bh) {
             select = ctx.tParam('select'),
             optionToMenuItem = function(option) {
                 var res = {
-                        block : 'menu-item',
-                        mods : { checked : option.checked, disabled : mods.disabled || option.disabled },
-                        val : option.val,
-                        js : { checkedText : option.checkedText },
-                        content : option.text
+                        block: 'menu-item',
+                        mods: { checked: option.checked, disabled: mods.disabled || option.disabled },
+                        val: option.val,
+                        js: { checkedText: option.checkedText },
+                        content: option.text
                     };
 
-                if(option.icon) {
+                if (option.icon) {
                     res.js.text = option.text;
                     res.content = [
                         option.icon,
@@ -24,23 +24,23 @@ module.exports = function(bh) {
             };
 
         return {
-            block : 'menu',
-            mix : { block : json.block, elem : json.elem },
-            mods : {
-                size : mods.size,
-                theme : mods.theme,
-                bkg : mods.bkg,
-                disabled : mods.disabled,
-                mode : mods.mode
+            block: 'menu',
+            mix: { block: json.block, elem: json.elem },
+            mods: {
+                size: mods.size,
+                theme: mods.theme,
+                bkg: mods.bkg,
+                disabled: mods.disabled,
+                mode: mods.mode
             },
-            attrs : { tabindex : null },
-            content : select.options.map(function(optionOrGroup) {
-                return optionOrGroup.group?
+            attrs: { tabindex: null },
+            content: select.options.map(function(optionOrGroup) {
+                return optionOrGroup.group ?
                     {
-                        elem : 'group',
-                        mods : { 'has-title' : !!optionOrGroup.title },
-                        title : optionOrGroup.title,
-                        content : optionOrGroup.group.map(optionToMenuItem)
+                        elem: 'group',
+                        mods: { 'has-title': !!optionOrGroup.title },
+                        title: optionOrGroup.title,
+                        content: optionOrGroup.group.map(optionToMenuItem)
                     } :
                     optionToMenuItem(optionOrGroup);
             })

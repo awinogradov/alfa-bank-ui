@@ -4,9 +4,9 @@ modules.define('header',
 
 provide(BEMDOM.decl(this.name, {
 
-    onSetMod : {
-        'js' : {
-            'inited' : function() {
+    onSetMod: {
+        'js': {
+            'inited': function() {
                 var _this = this;
 
                 this._colorize();
@@ -17,7 +17,7 @@ provide(BEMDOM.decl(this.name, {
             }
         }
     },
-    _colorize : function() {
+    _colorize: function() {
         $(window).scrollTop() > 10 ?
             this.setMod('fixed') :
             this.delMod('fixed');

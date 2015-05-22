@@ -2,66 +2,66 @@ block('layouts')(
     content()(function() {
         return [
             {
-                block : 'row',
-                content : [
+                block: 'row',
+                content: [
                     {
-                        elem : 'col',
-                        mods : { 's' : true },
-                        content : [
+                        elem: 'col',
+                        mods: { 's': true },
+                        content: [
                             {
-                                block : 'heading',
-                                lvl : 3,
-                                content : 'Плашка'
+                                block: 'heading',
+                                lvl: 3,
+                                content: 'Плашка'
                             },
                             {
-                                block : 'plate',
-                                mods : { theme : 'alfa', bkg : 'color' },
-                                content : [
+                                block: 'plate',
+                                mods: { theme: 'alfa', bkg: 'color' },
+                                content: [
                                     {
-                                        block : 'logo',
-                                        mods : { theme : 'alfa', bkg : 'white', view : 'full', size : 's' }
+                                        block: 'logo',
+                                        mods: { theme: 'alfa', bkg: 'white', view: 'full', size: 's' }
                                     }
                                 ]
                             },
                             {
-                                block : 'plate',
-                                mods : { theme : 'alfa', bkg : 'color', 'has-clear' : true },
-                                content : [
+                                block: 'plate',
+                                mods: { theme: 'alfa', bkg: 'color', 'has-clear': true },
+                                content: [
                                     {
-                                        block : 'logo',
-                                        mods : { theme : 'alfa', bkg : 'white', view : 'full', size : 's' }
+                                        block: 'logo',
+                                        mods: { theme: 'alfa', bkg: 'white', view: 'full', size: 's' }
                                     }
                                 ]
                             }
                         ]
                     },
                     {
-                        elem : 'col',
-                        mods : { 's' : true },
-                        mix : { elem : 'white' },
-                        content : [
+                        elem: 'col',
+                        mods: { 's': true },
+                        mix: { elem: 'white' },
+                        content: [
                             {
-                                block : 'heading',
-                                lvl : 3,
-                                content : 'Плашка'
+                                block: 'heading',
+                                lvl: 3,
+                                content: 'Плашка'
                             },
                             {
-                                block : 'plate',
-                                mods : { theme : 'alfa', bkg : 'white' },
-                                content : [
+                                block: 'plate',
+                                mods: { theme: 'alfa', bkg: 'white' },
+                                content: [
                                     {
-                                        block : 'logo',
-                                        mods : { theme : 'alfa', bkg : 'color', view : 'full', size : 's' }
+                                        block: 'logo',
+                                        mods: { theme: 'alfa', bkg: 'color', view: 'full', size: 's' }
                                     }
                                 ]
                             },
                             {
-                                block : 'plate',
-                                mods : { theme : 'alfa', bkg : 'white', 'has-clear' : true },
-                                content : [
+                                block: 'plate',
+                                mods: { theme: 'alfa', bkg: 'white', 'has-clear': true },
+                                content: [
                                     {
-                                        block : 'logo',
-                                        mods : { theme : 'alfa', bkg : 'color', view : 'full', size : 's' }
+                                        block: 'logo',
+                                        mods: { theme: 'alfa', bkg: 'color', view: 'full', size: 's' }
                                     }
                                 ]
                             }
@@ -69,6 +69,6 @@ block('layouts')(
                     }
                 ]
             }
-        ]
+        ];
     })
 );

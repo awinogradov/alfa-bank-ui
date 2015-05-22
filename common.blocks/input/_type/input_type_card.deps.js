@@ -1,5 +1,5 @@
 [{
-    mustDeps : [
-        { block : 'jquery', elems : ['formatter'] }
+    mustDeps: [
+        { block: 'jquery', elems: ['formatter'] }
     ]
-}]
+}];

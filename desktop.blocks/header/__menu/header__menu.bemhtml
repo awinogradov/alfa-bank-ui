@@ -4,30 +4,30 @@ block('header').elem('menu')(
 
         return [
             {
-                block : 'menu',
-                mods : {
-                    theme : _this._headerMods.theme,
-                    bkg : _this._headerMods.bkg,
-                    size : 'm',
-                    horizontal : true
+                block: 'menu',
+                mods: {
+                    theme: _this._headerMods.theme,
+                    bkg: _this._headerMods.bkg,
+                    size: 'm',
+                    horizontal: true
                 },
-                content : _this._header.menu && _this._header.menu.map(function(item) {
-                    if(item.items){
+                content: _this._header.menu && _this._header.menu.map(function(item) {
+                    if (item.items){
                         return {
-                            block : 'menu-item',
-                            mods : { type : 'dropdown' },
-                            content : item.title,
-                            popup : [
+                            block: 'menu-item',
+                            mods: { type: 'dropdown' },
+                            content: item.title,
+                            popup: [
                                 {
-                                    block : 'menu',
-                                    mix : { elem : 'additional' },
-                                    content : item.items.map(function(item) {
+                                    block: 'menu',
+                                    mix: { elem: 'additional' },
+                                    content: item.items.map(function(item) {
                                         return {
-                                            block : 'menu-item',
-                                            mods : { type : 'link', theme : 'alfa', bkg : 'color' },
-                                            mix : { elem : 'additional' },
-                                            url : item.url,
-                                            content : item.title
+                                            block: 'menu-item',
+                                            mods: { type: 'link', theme: 'alfa', bkg: 'color' },
+                                            mix: { elem: 'additional' },
+                                            url: item.url,
+                                            content: item.title
                                         };
                                     })
                                 }
@@ -35,10 +35,10 @@ block('header').elem('menu')(
                         };
                     }
                     return {
-                        block : 'menu-item',
-                        mods : { type : 'link' },
-                        url : item.url,
-                        content : item.title
+                        block: 'menu-item',
+                        mods: { type: 'link' },
+                        url: item.url,
+                        content: item.title
                     };
                 })
             }

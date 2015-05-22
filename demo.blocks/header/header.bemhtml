@@ -4,105 +4,105 @@ block('header')(
 
         return [
             {
-                elem : 'logo',
-                content : [
+                elem: 'logo',
+                content: [
                     {
-                        block : 'logo',
-                        mods : { theme : 'alfa', bkg : 'color', size : 's', view : 'full' }
+                        block: 'logo',
+                        mods: { theme: 'alfa', bkg: 'color', size: 's', view: 'full' }
                     }
                 ]
             },
             {
-                elem : 'content',
-                content : [
+                elem: 'content',
+                content: [
                     {
-                        elem : 'menu',
-                        content : [
+                        elem: 'menu',
+                        content: [
                             {
-                                block : 'menu',
-                                mods : { bkg : 'color', theme : 'alfa', size : 'm', horizontal : true },
-                                content : [
+                                block: 'menu',
+                                mods: { bkg: 'color', theme: 'alfa', size: 'm', horizontal: true },
+                                content: [
                                     {
-                                        block : 'menu-item',
-                                        mods: { type : 'link' },
-                                        content : [
+                                        block: 'menu-item',
+                                        mods: { type: 'link' },
+                                        content: [
                                             {
-                                                block : 'link',
-                                                mods : { bkg : 'color', theme : 'alfa' },
-                                                url : '../logo/logo.html',
-                                                content : 'Логотипы'
+                                                block: 'link',
+                                                mods: { bkg: 'color', theme: 'alfa' },
+                                                url: '../logo/logo.html',
+                                                content: 'Логотипы'
                                             }
                                         ]
                                     },
                                     {
-                                        block : 'menu-item',
-                                        mods: { type : 'link' },
-                                        content : [
+                                        block: 'menu-item',
+                                        mods: { type: 'link' },
+                                        content: [
                                             {
-                                                block : 'link',
-                                                mods : { bkg : 'color', theme : 'alfa' },
-                                                url : '../input/input.html',
-                                                content : 'Инпуты'
+                                                block: 'link',
+                                                mods: { bkg: 'color', theme: 'alfa' },
+                                                url: '../input/input.html',
+                                                content: 'Инпуты'
                                             }
                                         ]
                                     },
                                     {
-                                        block : 'menu-item',
-                                        mods: { type : 'link' },
-                                        content : [
+                                        block: 'menu-item',
+                                        mods: { type: 'link' },
+                                        content: [
                                             {
-                                                block : 'link',
-                                                mods : { bkg : 'color', theme : 'alfa' },
-                                                url : '../button/button.html',
-                                                content : 'Кнопки'
+                                                block: 'link',
+                                                mods: { bkg: 'color', theme: 'alfa' },
+                                                url: '../button/button.html',
+                                                content: 'Кнопки'
                                             }
                                         ]
                                     },
                                     {
-                                        block : 'menu-item',
-                                        mods: { type : 'link' },
-                                        content : [
+                                        block: 'menu-item',
+                                        mods: { type: 'link' },
+                                        content: [
                                             {
-                                                block : 'link',
-                                                mods : { bkg : 'color', theme : 'alfa' },
-                                                url : '../forms/forms.html',
-                                                content : 'Формы'
+                                                block: 'link',
+                                                mods: { bkg: 'color', theme: 'alfa' },
+                                                url: '../forms/forms.html',
+                                                content: 'Формы'
                                             }
                                         ]
                                     },
                                     {
-                                        block : 'menu-item',
-                                        mods: { type : 'link' },
-                                        content : [
+                                        block: 'menu-item',
+                                        mods: { type: 'link' },
+                                        content: [
                                             {
-                                                block : 'link',
-                                                mods : { bkg : 'color', theme : 'alfa' },
-                                                url : '../typography/typography.html',
-                                                content : 'Типографика'
+                                                block: 'link',
+                                                mods: { bkg: 'color', theme: 'alfa' },
+                                                url: '../typography/typography.html',
+                                                content: 'Типографика'
                                             }
                                         ]
                                     },
                                     {
-                                        block : 'menu-item',
-                                        mods: { type : 'link' },
-                                        content : [
+                                        block: 'menu-item',
+                                        mods: { type: 'link' },
+                                        content: [
                                             {
-                                                block : 'link',
-                                                mods : { bkg : 'color', theme : 'alfa' },
-                                                url : '../layouts/layouts.html',
-                                                content : 'Layouts'
+                                                block: 'link',
+                                                mods: { bkg: 'color', theme: 'alfa' },
+                                                url: '../layouts/layouts.html',
+                                                content: 'Layouts'
                                             }
                                         ]
                                     },
                                     {
-                                        block : 'menu-item',
-                                        mods: { type : 'link' },
-                                        content : [
+                                        block: 'menu-item',
+                                        mods: { type: 'link' },
+                                        content: [
                                             {
-                                                block : 'link',
-                                                mods : { bkg : 'color', theme : 'alfa' },
-                                                url : '../menus/menus.html',
-                                                content : 'Меню'
+                                                block: 'link',
+                                                mods: { bkg: 'color', theme: 'alfa' },
+                                                url: '../menus/menus.html',
+                                                content: 'Меню'
                                             }
                                         ]
                                     }

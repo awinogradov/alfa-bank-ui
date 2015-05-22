@@ -7,7 +7,7 @@ modules.define('jquery__formatter', ['jquery'], function(provide, $) {
  *
  * thanks to digitalBush/jquery.maskedinput for some of the trickier
  * keycode handling
- */ 
+ */
 
 /*
  * pattern.js
@@ -15,7 +15,7 @@ modules.define('jquery__formatter', ['jquery'], function(provide, $) {
  * Utilities to parse str pattern and return info
  *
  */
-var pattern = function () {
+var pattern = (function() {
     // Define module
     var pattern = {};
     // Match information
@@ -25,7 +25,7 @@ var pattern = function () {
     //
     // Helper method to parse pattern str
     //
-    var getMatches = function (pattern) {
+    var getMatches = function(pattern) {
       // Populate array of matches
       var matches = [], match;
       while (match = regexp.exec(pattern)) {
@@ -37,7 +37,7 @@ var pattern = function () {
     // Create an object holding all formatted characters
     // with corresponding positions
     //
-    pattern.parse = function (pattern) {
+    pattern.parse = function(pattern) {
       // Our obj to populate
       var info = {
           inpts: {},
@@ -48,7 +48,7 @@ var pattern = function () {
       // Counters
       var mCount = 0, iCount = 0, i = 0;
       // Add inpts, move to end of match, and process
-      var processMatch = function (val) {
+      var processMatch = function(val) {
         var valLength = val.length;
         for (var j = 0; j < valLength; j++) {
           info.inpts[iCount] = val.charAt(j);
@@ -71,14 +71,14 @@ var pattern = function () {
     };
     // Expose
     return pattern;
-  }();
+  })();
 /*
  * utils.js
  *
  * Independent helper methods (cross browser, etc..)
  *
  */
-var utils = function () {
+var utils = function() {
     // Define module
     var utils = {};
     // Useragent info for keycode handling
@@ -86,7 +86,7 @@ var utils = function () {
     //
     // Shallow copy properties from n objects to destObj
     //
-    utils.extend = function (destObj) {
+    utils.extend = function(destObj) {
       for (var i = 1; i < arguments.length; i++) {
         for (var key in arguments[i]) {
           destObj[key] = arguments[i][key];
@@ -97,20 +97,20 @@ var utils = function () {
     //
     // Add a given character to a string at a defined pos
     //
-    utils.addChars = function (str, chars, pos) {
+    utils.addChars = function(str, chars, pos) {
       return str.substr(0, pos) + chars + str.substr(pos, str.length);
     };
     //
     // Remove a span of characters
     //
-    utils.removeChars = function (str, start, end) {
+    utils.removeChars = function(str, start, end) {
       return str.substr(0, start) + str.substr(end, str.length);
     };
     //
     // Return true/false is num false between bounds
     //
-    utils.isBetween = function (num, bounds) {
-      bounds.sort(function (a, b) {
+    utils.isBetween = function(num, bounds) {
+      bounds.sort(function(a, b) {
         return a - b;
       });
       return num > bounds[0] && num < bounds[1];
@@ -118,20 +118,20 @@ var utils = function () {
     //
     // Helper method for cross browser event listeners
     //
-    utils.addListener = function (el, evt, handler) {
+    utils.addListener = function(el, evt, handler) {
       return typeof el.addEventListener !== 'undefined' ? el.addEventListener(evt, handler, false) : el.attachEvent('on' + evt, handler);
     };
     //
     // Helper method for cross browser implementation of preventDefault
     //
-    utils.preventDefault = function (evt) {
+    utils.preventDefault = function(evt) {
       return evt.preventDefault ? evt.preventDefault() : evt.returnValue = false;
     };
     //
     // Helper method for cross browser implementation for grabbing
     // clipboard data
     //
-    utils.getClip = function (evt) {
+    utils.getClip = function(evt) {
       if (evt.clipboardData) {
         return evt.clipboardData.getData('Text');
       }
@@ -142,7 +142,7 @@ var utils = function () {
     //
     // Loop over object and checking for matching properties
     //
-    utils.getMatchingKey = function (which, keyCode, keys) {
+    utils.getMatchingKey = function(which, keyCode, keys) {
       // Loop over and return if matched.
       for (var k in keys) {
         var key = keys[k];
@@ -154,7 +154,7 @@ var utils = function () {
     //
     // Returns true/false if k is a del keyDown
     //
-    utils.isDelKeyDown = function (which, keyCode) {
+    utils.isDelKeyDown = function(which, keyCode) {
       var keys = {
           'backspace': {
             'which': 8,
@@ -170,7 +170,7 @@ var utils = function () {
     //
     // Returns true/false if k is a del keyPress
     //
-    utils.isDelKeyPress = function (which, keyCode) {
+    utils.isDelKeyPress = function(which, keyCode) {
       var keys = {
           'backspace': {
             'which': 8,
@@ -204,7 +204,7 @@ var utils = function () {
     //
     // Determine if keypress relates to specialKey
     //
-    utils.isSpecialKeyPress = function (which, keyCode) {
+    utils.isSpecialKeyPress = function(which, keyCode) {
       var keys = {
           'tab': {
             'which': 0,
@@ -248,13 +248,13 @@ var utils = function () {
     //
     // Returns true/false if modifier key is held down
     //
-    utils.isModifier = function (evt) {
+    utils.isModifier = function(evt) {
       return evt.ctrlKey || evt.altKey || evt.metaKey;
     };
     //
     // Iterates over each property of object or array.
     //
-    utils.forEach = function (collection, callback, thisArg) {
+    utils.forEach = function(collection, callback, thisArg) {
       if (collection.hasOwnProperty('length')) {
         for (var index = 0, len = collection.length; index < len; index++) {
           if (callback.call(thisArg, collection[index], index, collection) === false) {
@@ -281,13 +281,13 @@ var utils = function () {
 * input string
 *
 */
-var patternMatcher = function (pattern, utils) {
+var patternMatcher = function(pattern, utils) {
     //
     // Parse a matcher string into a RegExp. Accepts valid regular
     // expressions and the catchall '*'.
     // @private
     //
-    var parseMatcher = function (matcher) {
+    var parseMatcher = function(matcher) {
       if (matcher === '*') {
         return /.*/;
       }
@@ -304,9 +304,9 @@ var patternMatcher = function (pattern, utils) {
     function patternMatcher(patternSpec) {
       var matchers = [], patterns = [];
       // Iterate over each pattern in order.
-      utils.forEach(patternSpec, function (patternMatcher) {
+      utils.forEach(patternSpec, function(patternMatcher) {
         // Process single property object to obtain pattern and matcher.
-        utils.forEach(patternMatcher, function (patternStr, matcherStr) {
+        utils.forEach(patternMatcher, function(patternStr, matcherStr) {
           var parsedPattern = pattern.parse(patternStr), regExpMatcher = parseMatcher(matcherStr);
           matchers.push(regExpMatcher);
           patterns.push(parsedPattern);
@@ -314,9 +314,9 @@ var patternMatcher = function (pattern, utils) {
           return false;
         });
       });
-      var getPattern = function (input) {
+      var getPattern = function(input) {
         var matchedIndex;
-        utils.forEach(matchers, function (matcher, index) {
+        utils.forEach(matchers, function(matcher, index) {
           if (matcher.test(input)) {
             matchedIndex = index;
             return false;
@@ -339,14 +339,14 @@ var patternMatcher = function (pattern, utils) {
  * Cross browser implementation to get and set input selections
  *
  */
-var inptSel = function () {
+var inptSel = function() {
     // Define module
     var inptSel = {};
     //
     // Get begin and end positions of selected input. Return 0's
     // if there is no selectiion data
     //
-    inptSel.get = function (el) {
+    inptSel.get = function(el) {
       // If normal browser return with result
       if (typeof el.selectionStart === 'number') {
         return {
@@ -371,7 +371,7 @@ var inptSel = function () {
             end: length
           };
         }
-        // Note: moveStart usually returns the units moved, which 
+        // Note: moveStart usually returns the units moved, which
         // one may think is -length, however, it will stop when it
         // gets to the begin of the range, thus giving us the
         // negative value of the pos.
@@ -380,7 +380,7 @@ var inptSel = function () {
           end: -inputRange.moveEnd('character', -length)
         };
       }
-      //Return 0's on no selection data
+      // Return 0's on no selection data
       return {
         begin: 0,
         end: 0
@@ -389,7 +389,7 @@ var inptSel = function () {
     //
     // Set the caret position at a specified location
     //
-    inptSel.set = function (el, pos) {
+    inptSel.set = function(el, pos) {
       // Normalize pos
       if (typeof pos !== 'object') {
         pos = {
@@ -418,7 +418,7 @@ var inptSel = function () {
  * Class used to format input based on passed pattern
  *
  */
-var formatter = function (patternMatcher, inptSel, utils) {
+var formatter = function(patternMatcher, inptSel, utils) {
     // Defaults
     var defaults = {
         persistent: false,
@@ -462,13 +462,13 @@ var formatter = function (patternMatcher, inptSel, utils) {
       self.hldrs = {};
       self.focus = 0;
       // Add Listeners
-      utils.addListener(self.el, 'keydown', function (evt) {
+      utils.addListener(self.el, 'keydown', function(evt) {
         self._keyDown(evt);
       });
-      utils.addListener(self.el, 'keypress', function (evt) {
+      utils.addListener(self.el, 'keypress', function(evt) {
         self._keyPress(evt);
       });
-      utils.addListener(self.el, 'paste', function (evt) {
+      utils.addListener(self.el, 'paste', function(evt) {
         self._paste(evt);
       });
       // Persistence
@@ -477,13 +477,13 @@ var formatter = function (patternMatcher, inptSel, utils) {
         self._processKey('', false);
         self.el.blur();
         // Add Listeners
-        utils.addListener(self.el, 'focus', function (evt) {
+        utils.addListener(self.el, 'focus', function(evt) {
           self._focus(evt);
         });
-        utils.addListener(self.el, 'click', function (evt) {
+        utils.addListener(self.el, 'click', function(evt) {
           self._focus(evt);
         });
-        utils.addListener(self.el, 'touchstart', function (evt) {
+        utils.addListener(self.el, 'touchstart', function(evt) {
           self._focus(evt);
         });
       }
@@ -492,14 +492,14 @@ var formatter = function (patternMatcher, inptSel, utils) {
     // @public
     // Add new char
     //
-    Formatter.addInptType = function (chr, reg) {
+    Formatter.addInptType = function(chr, reg) {
       inptRegs[chr] = reg;
     };
     //
     // @public
     // Apply the given pattern to the current input without moving caret.
     //
-    Formatter.prototype.resetPattern = function (str) {
+    Formatter.prototype.resetPattern = function(str) {
       // Update opts to hold new pattern
       this.opts.patterns = str ? this._specFromSinglePattern(str) : this.opts.patterns;
       // Get current state
@@ -522,7 +522,7 @@ var formatter = function (patternMatcher, inptSel, utils) {
     // @private
     // Determine correct format pattern based on input val
     //
-    Formatter.prototype._updatePattern = function () {
+    Formatter.prototype._updatePattern = function() {
       // Determine appropriate pattern
       var newPattern = this.patternMatcher.getPattern(this.val);
       // Only update the pattern if there is an appropriate pattern for the value.
@@ -539,7 +539,7 @@ var formatter = function (patternMatcher, inptSel, utils) {
     // Handler called on all keyDown strokes. All keys trigger
     // this handler. Only process delete keys.
     //
-    Formatter.prototype._keyDown = function (evt) {
+    Formatter.prototype._keyDown = function(evt) {
       // The first thing we need is the character code
       var k = evt.which || evt.keyCode;
       // If delete key
@@ -554,7 +554,7 @@ var formatter = function (patternMatcher, inptSel, utils) {
     // Handler called on all keyPress strokes. Only processes
     // character keys (as long as no modifier key is in use).
     //
-    Formatter.prototype._keyPress = function (evt) {
+    Formatter.prototype._keyPress = function(evt) {
       // The first thing we need is the character code
       var k, isSpecial;
       // Mozilla will trigger on special keys and assign the the value 0
@@ -571,7 +571,7 @@ var formatter = function (patternMatcher, inptSel, utils) {
     // @private
     // Handler called on paste event.
     //
-    Formatter.prototype._paste = function (evt) {
+    Formatter.prototype._paste = function(evt) {
       // Process the clipboard paste and prevent default
       this._processKey(utils.getClip(evt), false);
       return utils.preventDefault(evt);
@@ -580,10 +580,10 @@ var formatter = function (patternMatcher, inptSel, utils) {
     // @private
     // Handle called on focus event.
     //
-    Formatter.prototype._focus = function () {
+    Formatter.prototype._focus = function() {
       // Wrapped in timeout so that we can grab input selection
       var self = this;
-      setTimeout(function () {
+      setTimeout(function() {
         // Grab selection
         var selection = inptSel.get(self.el);
         // Char check
@@ -598,7 +598,7 @@ var formatter = function (patternMatcher, inptSel, utils) {
     // @private
     // Using the provided key information, alter el value.
     //
-    Formatter.prototype._processKey = function (chars, delKey, ignoreCaret) {
+    Formatter.prototype._processKey = function(chars, delKey, ignoreCaret) {
       // Get current state
       this.sel = inptSel.get(this.el);
       this.val = this.el.value;
@@ -630,7 +630,7 @@ var formatter = function (patternMatcher, inptSel, utils) {
     // @private
     // Deletes the character in front of it
     //
-    Formatter.prototype._delete = function () {
+    Formatter.prototype._delete = function() {
       // Adjust focus to make sure its not on a formatted char
       while (this.chars[this.sel.begin]) {
         this._nextPos();
@@ -648,7 +648,7 @@ var formatter = function (patternMatcher, inptSel, utils) {
     // @private
     // Quick helper method to move the caret to the next pos
     //
-    Formatter.prototype._nextPos = function () {
+    Formatter.prototype._nextPos = function() {
       this.sel.end++;
       this.sel.begin++;
     };
@@ -657,7 +657,7 @@ var formatter = function (patternMatcher, inptSel, utils) {
     // Alter element value to display characters matching the provided
     // instance pattern. Also responsible for updating
     //
-    Formatter.prototype._formatValue = function (ignoreCaret) {
+    Formatter.prototype._formatValue = function(ignoreCaret) {
       // Set caret pos
       this.newPos = this.sel.end + this.delta;
       // Remove all formatted chars from val
@@ -679,7 +679,7 @@ var formatter = function (patternMatcher, inptSel, utils) {
     // @private
     // Remove all formatted before and after a specified pos
     //
-    Formatter.prototype._removeChars = function () {
+    Formatter.prototype._removeChars = function() {
       // Delta shouldn't include placeholders
       if (this.sel.end > this.focus) {
         this.delta += this.sel.end - this.focus;
@@ -708,7 +708,7 @@ var formatter = function (patternMatcher, inptSel, utils) {
     // @private
     // Make sure all inpts are valid, else remove and update delta
     //
-    Formatter.prototype._validateInpts = function () {
+    Formatter.prototype._validateInpts = function() {
       // Loop over each char and validate
       for (var i = 0; i < this.val.length; i++) {
         // Get char inpt type
@@ -729,7 +729,7 @@ var formatter = function (patternMatcher, inptSel, utils) {
     // @private
     // Loop over val and add formatted chars as necessary
     //
-    Formatter.prototype._addChars = function () {
+    Formatter.prototype._addChars = function() {
       if (this.opts.persistent) {
         // Loop over all possible characters
         for (var i = 0; i <= this.mLength; i++) {
@@ -761,7 +761,7 @@ var formatter = function (patternMatcher, inptSel, utils) {
     // @private
     // Add formattted char at position
     //
-    Formatter.prototype._addChar = function (i) {
+    Formatter.prototype._addChar = function(i) {
       // If char exists at position
       var chr = this.chars[i];
       if (!chr) {
@@ -793,24 +793,22 @@ var formatter = function (patternMatcher, inptSel, utils) {
     // Create a patternSpec for passing into patternMatcher that
     // has exactly one catch all pattern.
     //
-    Formatter.prototype._specFromSinglePattern = function (patternStr) {
+    Formatter.prototype._specFromSinglePattern = function(patternStr) {
       return [{ '*': patternStr }];
     };
     // Expose
     return Formatter;
   }(patternMatcher, inptSel, utils);
 
-
-
 // A really lightweight plugin wrapper around the constructor,
 // preventing against multiple instantiations
 var pluginName = 'formatter';
 
-$.fn[pluginName] = function (options) {
+$.fn[pluginName] = function(options) {
 
   // Initiate plugin if options passed
   if (typeof options == 'object') {
-    this.each(function () {
+    this.each(function() {
       if (!$.data(this, 'plugin_' + pluginName)) {
         $.data(this, 'plugin_' + pluginName,
         new formatter(this, options));
@@ -819,8 +817,8 @@ $.fn[pluginName] = function (options) {
   }
 
   // Add resetPattern method to plugin
-  this.resetPattern = function (str) {
-    this.each(function () {
+  this.resetPattern = function(str) {
+    this.each(function() {
       var formatted = $.data(this, 'plugin_' + pluginName);
       // resetPattern for instance
       if (formatted) { formatted.resetPattern(str); }
@@ -833,7 +831,7 @@ $.fn[pluginName] = function (options) {
   return this;
 };
 
-$.fn[pluginName].addInptType = function (chr, regexp) {
+$.fn[pluginName].addInptType = function(chr, regexp) {
   formatter.addInptType(chr, regexp);
 };
 

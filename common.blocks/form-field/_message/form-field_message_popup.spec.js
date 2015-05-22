@@ -6,13 +6,13 @@ modules.define('spec', ['spec__utils', 'form-field', 'message', 'popup', 'input'
 
         beforeEach(function() {
             block = utils.buildBlock('form-field', {
-                block : 'form-field',
-                mods : {
-                    type : 'input',
-                    message : 'popup'
+                block: 'form-field',
+                mods: {
+                    type: 'input',
+                    message: 'popup'
                 },
-                content : {
-                    block : 'input'
+                content: {
+                    block: 'input'
                 }
             });
         });

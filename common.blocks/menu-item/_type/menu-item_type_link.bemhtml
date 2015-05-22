@@ -1,17 +1,17 @@
 block('menu-item').mod('type', 'link').match(this._alfaMods)(
     content()(function() {
         return [{
-            block : 'link',
-            mix : { block : 'menu-item', elem : 'link' },
-            mods : {
-                theme : this.mods.theme || this._alfaMods.theme,
-                bkg : this.mods.bkg || this._alfaMods.bkg,
-                size : this.mods.size || this._alfaMods.size,
-                pseudo : this.mods.pseudo
+            block: 'link',
+            mix: { block: 'menu-item', elem: 'link' },
+            mods: {
+                theme: this.mods.theme || this._alfaMods.theme,
+                bkg: this.mods.bkg || this._alfaMods.bkg,
+                size: this.mods.size || this._alfaMods.size,
+                pseudo: this.mods.pseudo
             },
-            url : this.ctx.url,
-            target : this.ctx.target,
-            content : applyNext()
+            url: this.ctx.url,
+            target: this.ctx.target,
+            content: applyNext()
         }];
     })
 );

@@ -4,15 +4,15 @@ block('message').mod('type', 'popup')(
 
         applyCtx([
             {
-                block : 'popup',
-                directions : ['right-top'],
-                mods : {
-                    target : 'anchor',
-                    theme : ctx.mods.theme,
-                    size : ctx.mods.size,
-                    view : 'hint'
+                block: 'popup',
+                directions: ['right-top'],
+                mods: {
+                    target: 'anchor',
+                    theme: ctx.mods.theme,
+                    size: ctx.mods.size,
+                    view: 'hint'
                 },
-                mix : { block : ctx.block, mods : ctx.mods }
+                mix: { block: ctx.block, mods: ctx.mods }
             }
         ]);
     })

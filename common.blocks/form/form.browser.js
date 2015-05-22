@@ -9,8 +9,8 @@ modules.define('form', function(provide, Form) {
          * Returns field by name
          * @type {FormField[]}
          */
-        getFieldByName : function(name) {
-            return this.findBlocksInside({ block : 'form-field', modName : 'name', modVal : name });
+        getFieldByName: function(name) {
+            return this.findBlocksInside({ block: 'form-field', modName: 'name', modVal: name });
         }
     }));
 

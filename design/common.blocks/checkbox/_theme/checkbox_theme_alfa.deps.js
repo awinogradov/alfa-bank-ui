@@ -1,11 +1,11 @@
-({
-    include : false,
-    mods : { type : 'button' },
-    mustDeps : [
+[{
+    include: false,
+    mods: { type: 'button' },
+    mustDeps: [
         {
-            block : 'button',
-            mods : { theme : 'alfa', togglable : 'check' }
+            block: 'button',
+            mods: { theme: 'alfa', togglable: 'check' }
         },
-        { block : 'variables' }
+        { block: 'variables' }
     ]
-})
+}];
