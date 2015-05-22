@@ -17,7 +17,7 @@ modules.define('notification', ['i-bem__dom', 'BEMHTML', 'plate'], function(prov
 
                     var _this = this;
 
-                    //override to don't hide plate
+                    // override to don't hide plate
                     this.findBlockInside('plate')._onClick = function() {
                         _this._evade();
                     }
@@ -47,11 +47,11 @@ modules.define('notification', ['i-bem__dom', 'BEMHTML', 'plate'], function(prov
         },
 
         push: function(status, message) {
-            //update icon
+            // update icon
             this.findBlockInside('icon').setMod('action', status);
-            //update background-color
+            // update background-color
             this.findBlockInside('notification__status').setMod('type', status);
-            //update message
+            // update message
             this.elem('inner').html(message);
             if (this.getMod('visible')){
                 this._evade();

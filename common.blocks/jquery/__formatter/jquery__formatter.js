@@ -380,7 +380,7 @@ var inptSel = function() {
           end: -inputRange.moveEnd('character', -length)
         };
       }
-      //Return 0's on no selection data
+      // Return 0's on no selection data
       return {
         begin: 0,
         end: 0

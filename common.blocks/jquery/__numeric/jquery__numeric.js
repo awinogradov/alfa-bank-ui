@@ -155,7 +155,7 @@ modules.define('jquery__numeric', ['jquery'], function(provide, $) {
                     }
                 }
             }
-            //if a number key was pressed.
+            // if a number key was pressed.
             else
             {
                 // If scale >= 0, make sure there's only <scale> characters
@@ -163,24 +163,24 @@ modules.define('jquery__numeric', ['jquery'], function(provide, $) {
                 if ($.data(this, "numeric.scale") >= 0)
                 {
                     var decimalPosition = this.value.indexOf(decimal);
-                    //If there is a decimal.
+                    // If there is a decimal.
                     if (decimalPosition >= 0)
                     {
                         decimalsQuantity = this.value.length - decimalPosition - 1;
-                        //If the cursor is after the decimal.
+                        // If the cursor is after the decimal.
                         if ($.fn.getSelectionStart(this) > decimalPosition)
                             allow = decimalsQuantity < $.data(this, "numeric.scale");
                         else
                         {
                             integersQuantity = (this.value.length - 1) - decimalsQuantity;
-                            //If precision > 0, integers and decimals quantity should not be greater than precision
+                            // If precision > 0, integers and decimals quantity should not be greater than precision
                             if (integersQuantity < ($.data(this, "numeric.precision") - $.data(this, "numeric.scale")))
                                 allow = true;
                             else
                                 allow = false;
                         }
                     }
-                    //If there is no decimal
+                    // If there is no decimal
                     else {
                         if ($.data(this, "numeric.precision") > 0)
                             allow = this.value.replace($.data(this, "numeric.decimal"), "").length < $.data(this, "numeric.precision") - $.data(this, "numeric.scale");
