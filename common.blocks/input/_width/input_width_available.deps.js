@@ -8,4 +8,4 @@
     mustDeps: [
         { tech: 'bemhtml', block: 'input', mods: { 'has-autocomplete': true, width: 'available' } }
     ]
-}]
+}];

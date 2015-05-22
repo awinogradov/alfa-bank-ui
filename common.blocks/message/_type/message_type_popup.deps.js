@@ -3,4 +3,4 @@
     shouldDeps: [
         { tech: 'bemhtml', block: 'message', mods: { type: 'popup' } }
     ]
-}]
+}];

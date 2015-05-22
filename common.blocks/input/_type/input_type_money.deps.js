@@ -5,4 +5,4 @@
     shouldDeps: [
         { block: 'utils', elem: 'format' },
     ]
-}]
+}];

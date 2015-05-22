@@ -15,4 +15,4 @@
         { block: 'link' },
         { block: 'link', mod: 'pseudo' }
     ]
-}]
+}];

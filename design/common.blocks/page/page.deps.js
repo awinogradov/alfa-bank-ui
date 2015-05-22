@@ -3,4 +3,4 @@
         { block: 'variables' },
         { block: 'typo' }
     ]
-}]
+}];

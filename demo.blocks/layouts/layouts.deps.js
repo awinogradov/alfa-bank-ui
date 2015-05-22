@@ -20,4 +20,4 @@
             mods: { theme: 'alfa', bkg: 'color', view: 'full' }
         },
     ]
-}]
+}];

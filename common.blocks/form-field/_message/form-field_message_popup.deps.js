@@ -5,4 +5,4 @@
         { tech: 'bemhtml', block: 'message', mods: { type: 'popup' } },
         { tech: 'bemhtml', block: 'form-field', mods: { type: 'input', message: 'popup' } }
     ]
-}]
+}];

@@ -1,4 +1,4 @@
-({
+[{
     mustDeps: [
         { block: 'variables' }
     ],
@@ -7,4 +7,4 @@
             elems: ['calendar']
         }
     ]
-})
+}];

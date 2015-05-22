@@ -13,4 +13,4 @@
         { tech: 'bemhtml', block: 'tooltip' },
         { tech: 'bemhtml', block: 'popup', mods: { target: 'anchor' } }
     ]
-}]
+}];

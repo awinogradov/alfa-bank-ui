@@ -10,4 +10,4 @@
         { tech: 'bemhtml', block: 'i-bem' },
         { tech: 'bemhtml', block: 'input', elem: 'ios-calendar' }
     ]
-}]
+}];

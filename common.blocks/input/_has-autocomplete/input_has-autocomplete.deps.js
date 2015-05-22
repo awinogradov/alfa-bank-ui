@@ -11,4 +11,4 @@
     shouldDeps: [
         { tech: 'bemhtml', block: 'input', mods: { 'has-autocomplete': true } }
     ]
-}]
+}];

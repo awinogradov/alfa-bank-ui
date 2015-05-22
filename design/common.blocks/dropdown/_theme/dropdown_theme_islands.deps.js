@@ -1,4 +1,4 @@
-({
+[{
     shouldDeps: [
         { block: 'popup', mods: { theme: 'islands' } },
         {
@@ -12,4 +12,4 @@
             shouldDeps: { block: 'button', mod: 'theme', val: 'islands' }
         }
     ]
-})
+}];

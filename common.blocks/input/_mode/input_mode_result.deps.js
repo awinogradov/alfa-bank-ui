@@ -6,4 +6,4 @@
     mustDeps: [
         { tech: 'bemhtml', block: 'input', mods: { mode: 'result' } }
     ]
-}]
+}];

@@ -20,4 +20,4 @@
             mods: { bkg: 'white', theme: 'alfa', type: 'dropdown' }
         },
     ]
-}]
+}];

@@ -1,4 +1,4 @@
-({
+[{
     shouldDeps: [
         { block: 'popup' },
         { block: 'menu' },
@@ -6,7 +6,7 @@
     ].map(function(block) {
         block.mods =  { theme: 'alfa', bkg: 'color' };
         return block;
-    })
+    }];
     .concat([
         { block: 'popup' },
         { block: 'menu' },
@@ -15,4 +15,4 @@
         block.mods =  { theme: 'alfa', bkg: 'white' };
         return block;
     }))
-})
+}];

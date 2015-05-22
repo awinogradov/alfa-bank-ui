@@ -1,4 +1,4 @@
-({
+[{
     mustDeps: [
         { block: 'variables' }
     ],
@@ -6,4 +6,4 @@
         block: 'menu-item',
         mods: { theme: 'alfa' }
     }
-})
+}];

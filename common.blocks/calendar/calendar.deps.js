@@ -28,4 +28,4 @@
     mustDeps: [
         { tech: 'bemhtml', block: 'calendar' }
     ]
-}]
+}];

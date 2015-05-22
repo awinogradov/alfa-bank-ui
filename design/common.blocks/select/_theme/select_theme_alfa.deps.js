@@ -1,4 +1,4 @@
-({
+[{
     mustDeps: [
         { block: 'button', mods: { theme: 'alfa' } },
         { block: 'variables' }
@@ -8,4 +8,4 @@
         { block: 'menu', mods: { theme: 'alfa', view: 'dropdown' } },
         { block: 'icon' }
     ]
-})
+}];

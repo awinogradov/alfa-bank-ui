@@ -9,4 +9,4 @@
     shouldDeps: [
         { tech: 'bemhtml', block: 'notification' }
     ]
-}]
+}];

@@ -32,4 +32,4 @@
             mods: { theme: 'alfa', bkg: 'white', network: 'facebook' }
         },
     ]
-}]
+}];

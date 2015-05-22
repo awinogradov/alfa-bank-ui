@@ -1,4 +1,4 @@
-({
+[{
     include: false,
     mods: { type: 'button' },
     mustDeps: [
@@ -8,4 +8,4 @@
         },
         { block: 'variables' }
     ]
-})
+}];

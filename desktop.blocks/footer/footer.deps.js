@@ -10,4 +10,4 @@
         block.mods = { theme: 'alfa', bkg: 'color' };
         return block;
     }))
-}]
+}];

@@ -4,4 +4,4 @@
         { block: 'buttons' },
         { block: 'typography' }
     ]
-}]
+}];

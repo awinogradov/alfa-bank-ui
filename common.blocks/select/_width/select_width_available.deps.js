@@ -3,4 +3,4 @@
     shouldDeps: [
         { tech: 'bemhtml', block: 'select', mods: { width: 'available' } }
     ]
-}]
+}];
