@@ -1,5 +1,5 @@
 [{
-    shouldDeps : [
-        { block : 'variables' }
+    shouldDeps: [
+        { block: 'variables' }
     ]
 }]

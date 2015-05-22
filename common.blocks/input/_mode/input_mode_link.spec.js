@@ -7,10 +7,10 @@ describe('input_mode_link', function() {
 
     beforeEach(function() {
         input = helper.buildBlock('input', {
-            block : 'input',
-            mods : { mode : 'link' },
-            val : 'inplace',
-            placeholder : 'placeholder'
+            block: 'input',
+            mods: { mode: 'link' },
+            val: 'inplace',
+            placeholder: 'placeholder'
         });
     });
 
@@ -50,9 +50,9 @@ describe('input_mode_link', function() {
 
     it('should set placeholder text to empty string, when placeholder is not specified', function() {
         var input = helper.buildBlock('input', {
-            block : 'input',
-            mods : { mode : 'link' },
-            val : 'inplace'
+            block: 'input',
+            mods: { mode: 'link' },
+            val: 'inplace'
         });
 
         input.getPlaceholder().should.equal('');
@@ -72,12 +72,12 @@ describe('input_mode_link', function() {
         var link = input._trigger.domElem;
         link.focus();
         input.getMod('focused').should.equal('');
-        link.trigger($.Event('keyup', { keyCode : 13 }));
+        link.trigger($.Event('keyup', { keyCode: 13 }));
         input.getMod('focused').should.equal(true);
-        link.trigger($.Event('keyup', { keyCode : 13 }));
+        link.trigger($.Event('keyup', { keyCode: 13 }));
         input.getMod('focused').should.equal('');
         // other random key
-        link.trigger($.Event('keyup', { keyCode : 67 }));
+        link.trigger($.Event('keyup', { keyCode: 67 }));
         input.getMod('focused').should.equal('');
     });
 });

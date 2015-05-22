@@ -14,15 +14,15 @@ function(provide, Popup, Menu, dom, $, BEMHTML, BEMDOM, Select) {
             this._menu.un();
 
             menu.on({
-                'change' : this._onMenuChange,
-                'item-click' : this._onMenuItemClick
+                'change': this._onMenuChange,
+                'item-click': this._onMenuItemClick
             }, this);
 
             this._menu = menu;
             this._updateMenuWidth();
         },
 
-        setOptions: function (options) {
+        setOptions: function(options) {
             var popup = this.getPopup();
 
             BEMDOM.update(popup.domElem, BEMHTML.apply({

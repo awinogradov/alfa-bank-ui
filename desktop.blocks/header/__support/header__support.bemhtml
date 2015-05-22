@@ -4,33 +4,33 @@ block('header').elem('support')(
 
         return [
             {
-                elem : 'support-city',
-                content : [
+                elem: 'support-city',
+                content: [
                     {
-                        block : 'link',
-                        mods : {
-                            theme : _this._headerMods.theme,
-                            bkg : _this._headerMods.bkg,
-                            pseudo : true,
-                            size : 'm'
+                        block: 'link',
+                        mods: {
+                            theme: _this._headerMods.theme,
+                            bkg: _this._headerMods.bkg,
+                            pseudo: true,
+                            size: 'm'
                         },
-                        url : '#',
-                        content : 'Москва'
+                        url: '#',
+                        content: 'Москва'
                     }
                 ]
             },
             {
-                elem : 'support-phone',
-                content : {
-                    block : 'link',
-                    mods : {
-                        theme : _this._headerMods.theme,
-                        bkg : _this._headerMods.bkg,
-                        pseudo : true,
-                        size : 'm'
+                elem: 'support-phone',
+                content: {
+                    block: 'link',
+                    mods: {
+                        theme: _this._headerMods.theme,
+                        bkg: _this._headerMods.bkg,
+                        pseudo: true,
+                        size: 'm'
                     },
-                    url : '#',
-                    content : '+7 (777) 777-77-77'
+                    url: '#',
+                    content: '+7 (777) 777-77-77'
                 }
             }
         ];

@@ -1,15 +1,15 @@
 block('card-number')(
     tag()('span'),
     content()(function() {
-        if(this.ctx.val){
+        if (this.ctx.val){
             var val = this.ctx.val.replace(/ /g, '');
             var num = val.split(/\*+/);
-            if(num.length === 1){
+            if (num.length === 1){
                 //not masked val
                 var number = num[0];
-                if(number.length >= 16){
+                if (number.length >= 16){
                     var groups = [];
-                    for(var i = 0; i < 3; i++){
+                    for (var i = 0; i < 3; i++){
                         groups.push(number.substring(4 * i, 4 * (i + 1)));
                     }
                     groups.push(number.substring(12, number.length));
@@ -21,25 +21,25 @@ block('card-number')(
             }
 
             //masked val
-            if(num[0]){
+            if (num[0]){
                 num[0] = num[0].trim().substring(0, 4);
             }
-            if(num[1]){
+            if (num[1]){
                 num[1] = num[1].trim().substring(0, 4);
             }
             return [
                 num[0],
                 {
-                    elem : 'dot'
+                    elem: 'dot'
                 },
                 {
-                    elem : 'dot'
+                    elem: 'dot'
                 },
                 {
-                    elem : 'dot'
+                    elem: 'dot'
                 },
                 {
-                    elem : 'dot'
+                    elem: 'dot'
                 },
                 num[1]
             ];

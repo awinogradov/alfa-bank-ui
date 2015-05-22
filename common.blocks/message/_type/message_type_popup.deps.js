@@ -1,6 +1,6 @@
 [{
-    tech : 'spec.js',
-    shouldDeps : [
-        { tech : 'bemhtml', block : 'message', mods : { type : 'popup' } }
+    tech: 'spec.js',
+    shouldDeps: [
+        { tech: 'bemhtml', block: 'message', mods: { type: 'popup' } }
     ]
 }]

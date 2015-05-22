@@ -1,12 +1,12 @@
 [{
-    mustDeps : [
-        { block : 'i-bem' },
-        { block : 'link' }
+    mustDeps: [
+        { block: 'i-bem' },
+        { block: 'link' }
     ]
 },
 {
-    tech : 'spec.js',
-    shouldDeps : [
-        { tech : 'bemhtml', block : 'collapse' }
+    tech: 'spec.js',
+    shouldDeps: [
+        { tech: 'bemhtml', block: 'collapse' }
     ]
 }]

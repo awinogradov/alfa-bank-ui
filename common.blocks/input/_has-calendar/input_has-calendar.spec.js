@@ -13,8 +13,8 @@ describe('input_has-calendar', function() {
 
     beforeEach(function() {
         bemjson = {
-            block : 'input',
-            mods : { 'has-calendar' : true, 'has-addon' : true }
+            block: 'input',
+            mods: { 'has-calendar': true, 'has-addon': true }
         };
     });
 

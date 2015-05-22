@@ -1,5 +1,5 @@
 [{
-    shouldDeps : [
-        { block : 'link', mods : { theme : 'alfa' } }
+    shouldDeps: [
+        { block: 'link', mods: { theme: 'alfa' } }
     ]
 }]

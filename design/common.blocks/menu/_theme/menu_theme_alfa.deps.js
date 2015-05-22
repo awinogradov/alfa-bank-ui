@@ -1,9 +1,9 @@
 ({
-    mustDeps : [
-        { block : 'variables' }
+    mustDeps: [
+        { block: 'variables' }
     ],
-    shouldDeps : {
-        block : 'menu-item',
-        mods : { theme : 'alfa' }
+    shouldDeps: {
+        block: 'menu-item',
+        mods: { theme: 'alfa' }
     }
 })

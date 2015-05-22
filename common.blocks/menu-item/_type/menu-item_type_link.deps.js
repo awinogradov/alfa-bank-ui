@@ -1,5 +1,5 @@
 [{
-    shouldDeps : [
-        { block : 'link', mods : { pseudo : true } }
+    shouldDeps: [
+        { block: 'link', mods: { pseudo: true } }
     ]
 }]

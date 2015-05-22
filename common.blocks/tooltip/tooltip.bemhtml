@@ -3,19 +3,19 @@ block('tooltip')(
     content()(function() {
         var mods = this.mods;
         return [{
-            elem : 'icon',
-            content : this.ctx.icon
+            elem: 'icon',
+            content: this.ctx.icon
         },
         {
-            block : 'popup',
-            mix : { block : 'tooltip', elem : 'popup' },
-            mods : {
-                target : 'anchor',
-                theme : mods.theme,
-                bkg : mods.bkg
+            block: 'popup',
+            mix: { block: 'tooltip', elem: 'popup' },
+            mods: {
+                target: 'anchor',
+                theme: mods.theme,
+                bkg: mods.bkg
             },
-            directions : this.ctx.directions,
-            content : applyNext()
+            directions: this.ctx.directions,
+            content: applyNext()
         }];
     })
 );

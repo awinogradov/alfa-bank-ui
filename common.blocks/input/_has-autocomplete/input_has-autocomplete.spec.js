@@ -8,9 +8,9 @@ var build = helper.buildBlock;
 
 describe('input_has-autocomplete', function() {
     var bemjson = {
-        block : 'input',
-        mods : { 'has-autocomplete' : true },
-        options : []
+        block: 'input',
+        mods: { 'has-autocomplete': true },
+        options: []
     };
 
     var block;
@@ -82,8 +82,8 @@ describe('input_has-autocomplete', function() {
 
     it('should add options as `menu-item`s', function() {
         bemjson.options = [
-            { val : 'value 1', content : 'item 1' },
-            { val : 'value 2', content : 'item 2' }
+            { val: 'value 1', content: 'item 1' },
+            { val: 'value 2', content: 'item 2' }
         ];
         block = build('input', bemjson);
         var menu = block.findBlockInside('popup').findBlockInside('menu');
@@ -99,8 +99,8 @@ describe('input_has-autocomplete', function() {
 
     it('should add mod `opened` on focus', function() {
         bemjson.options = [
-            { val : 'value 1', content : 'item 1' },
-            { val : 'value 2', content : 'item 2' }
+            { val: 'value 1', content: 'item 1' },
+            { val: 'value 2', content: 'item 2' }
         ];
         block = build('input', bemjson);
 
@@ -113,8 +113,8 @@ describe('input_has-autocomplete', function() {
 
     it('should show popup when `opened`', function() {
         bemjson.options = [
-            { val : 'value 1', content : 'item 1' },
-            { val : 'value 2', content : 'item 2' }
+            { val: 'value 1', content: 'item 1' },
+            { val: 'value 2', content: 'item 2' }
         ];
         block = build('input', bemjson);
         var popup = block.findBlockInside('popup');
@@ -127,8 +127,8 @@ describe('input_has-autocomplete', function() {
 
     it('should set value on item click', function() {
         bemjson.options = [
-            { val : 'value 1', content : 'item 1' },
-            { val : 'value 2', content : 'item 2' }
+            { val: 'value 1', content: 'item 1' },
+            { val: 'value 2', content: 'item 2' }
         ];
         block = build('input', bemjson);
         block.setVal('value 0');
@@ -141,8 +141,8 @@ describe('input_has-autocomplete', function() {
 
     it('should close popup when item selected', function() {
         bemjson.options = [
-            { val : 'value 1', content : 'item 1' },
-            { val : 'value 2', content : 'item 2' }
+            { val: 'value 1', content: 'item 1' },
+            { val: 'value 2', content: 'item 2' }
         ];
         block = build('input', bemjson);
         var menu = block.findBlockInside('menu'),
@@ -159,23 +159,23 @@ describe('input_has-autocomplete', function() {
     it('should render groups with `group` element in `menu`', function() {
         bemjson.options = [
             {
-                title : 'Russia',
-                group : [
-                    { val : 'MSC', content : 'Moscow' },
-                    { val : 'SPB', content : 'Saint-Petersburg' }
+                title: 'Russia',
+                group: [
+                    { val: 'MSC', content: 'Moscow' },
+                    { val: 'SPB', content: 'Saint-Petersburg' }
                 ]
             },
             {
-                group : [
-                    { val : 'PAR', content : 'Paris' },
-                    { val : 'MAR', content : 'Marseille' }
+                group: [
+                    { val: 'PAR', content: 'Paris' },
+                    { val: 'MAR', content: 'Marseille' }
                 ]
             },
             {
-                title : 'Austria',
-                group : []
+                title: 'Austria',
+                group: []
             },
-            { val : 'NYC', content : 'New York' }
+            { val: 'NYC', content: 'New York' }
         ];
         block = build('input', bemjson);
         var menu = block.findBlockInside('menu');
@@ -199,8 +199,8 @@ describe('input_has-autocomplete', function() {
 
     it('should emit event `select` when item selected', function() {
         bemjson.options = [
-            { val : 'value 1', data: 'xxx', content : 'item 1' },
-            { val : 'value 2', data: 'yyy', content : 'item 2' }
+            { val: 'value 1', data: 'xxx', content: 'item 1' },
+            { val: 'value 2', data: 'yyy', content: 'item 2' }
         ];
         block = build('input', bemjson);
         block.setVal('value 0');
@@ -276,8 +276,8 @@ describe('input_has-autocomplete', function() {
         block.setOptions.should.be.a('function');
 
         block.setOptions([
-            { val : 'value 1', content : 'item 1' },
-            { val : 'value 2', content : 'item 2' }
+            { val: 'value 1', content: 'item 1' },
+            { val: 'value 2', content: 'item 2' }
         ]);
 
         var menu = block.findBlockInside('popup').findBlockInside('menu');
@@ -308,23 +308,23 @@ describe('input_has-autocomplete', function() {
 
         block.setOptions([
             {
-                title : 'Russia',
-                group : [
-                    { val : 'MSC', content : 'Moscow' },
-                    { val : 'SPB', content : 'Saint-Petersburg' }
+                title: 'Russia',
+                group: [
+                    { val: 'MSC', content: 'Moscow' },
+                    { val: 'SPB', content: 'Saint-Petersburg' }
                 ]
             },
             {
-                group : [
-                    { val : 'PAR', content : 'Paris' },
-                    { val : 'MAR', content : 'Marseille' }
+                group: [
+                    { val: 'PAR', content: 'Paris' },
+                    { val: 'MAR', content: 'Marseille' }
                 ]
             },
             {
-                title : 'Austria',
-                group : []
+                title: 'Austria',
+                group: []
             },
-            { val : 'NYC', content : 'New York' }
+            { val: 'NYC', content: 'New York' }
         ]);
 
         var menu = block.findBlockInside('menu');
@@ -351,49 +351,49 @@ describe('input_has-autocomplete', function() {
             block = build('input', bemjson);
             block.setOptions([
                 {
-                    title : 'Russia',
-                    group : [
-                        { val : 'MSC', content : 'Moscow' },
-                        { val : 'SPB', content : 'Saint-Petersburg' }
+                    title: 'Russia',
+                    group: [
+                        { val: 'MSC', content: 'Moscow' },
+                        { val: 'SPB', content: 'Saint-Petersburg' }
                     ]
                 },
                 {
-                    group : [
-                        { val : 'PAR', content : 'Paris' },
-                        { val : 'MAR', content : 'Marseille' }
+                    group: [
+                        { val: 'PAR', content: 'Paris' },
+                        { val: 'MAR', content: 'Marseille' }
                     ]
                 },
                 {
-                    title : 'Austria',
-                    group : []
+                    title: 'Austria',
+                    group: []
                 },
-                { val : 'NYC', content : 'New York' }
+                { val: 'NYC', content: 'New York' }
             ]);
 
             var menu = block.findBlockInside('menu'),
                 menuItems = menu.findBlocksInside('menu-item');
 
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
             menuItems[0].hasMod('focused').should.be.true;
 
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
             menuItems[0].hasMod('focused').should.be.false;
             menuItems[1].hasMod('focused').should.be.true;
 
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 38 })); // UP
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 38 })); // UP
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 38 })); // UP
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 38 })); // UP
             menuItems[0].hasMod('focused').should.be.true;
             menuItems[1].hasMod('focused').should.be.false;
 
             // overflow test
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 38 })); // UP
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 38 })); // UP
             menuItems[0].hasMod('focused').should.be.true;
             menuItems[1].hasMod('focused').should.be.false;
 
             // overflow test 2
-            for(var i = 0; i < 7; i++) {
-                block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            for (var i = 0; i < 7; i++) {
+                block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
             }
             menuItems[3].hasMod('focused').should.be.false;
             menuItems[4].hasMod('focused').should.be.true;
@@ -401,11 +401,11 @@ describe('input_has-autocomplete', function() {
 
         it('should skip hidden', function() {
             bemjson.options = [
-                { val : 'value 1', data: 'xxx', content : 'item 1' },
-                { val : 'value 2', data: 'xxx', content : 'item 2' },
-                { val : 'value 3', data: 'xxx', content : 'item 3' },
-                { val : 'value 4', data: 'yyy', content : 'item 4' },
-                { val : 'value 5', data: 'yyy', content : 'item 5' }
+                { val: 'value 1', data: 'xxx', content: 'item 1' },
+                { val: 'value 2', data: 'xxx', content: 'item 2' },
+                { val: 'value 3', data: 'xxx', content: 'item 3' },
+                { val: 'value 4', data: 'yyy', content: 'item 4' },
+                { val: 'value 5', data: 'yyy', content: 'item 5' }
             ];
             block = build('input', bemjson);
 
@@ -416,29 +416,29 @@ describe('input_has-autocomplete', function() {
             menuItems[2].setMod('hidden');
             menuItems[4].setMod('hidden');
 
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
             menuItems[0].hasMod('focused').should.be.false;
             menuItems[1].hasMod('focused').should.be.true;
 
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 38 })); // UP
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 38 })); // UP
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 38 })); // UP
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 38 })); // UP
             menuItems[0].hasMod('focused').should.be.false;
             menuItems[1].hasMod('focused').should.be.true;
 
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
             menuItems[2].hasMod('focused').should.be.false;
             menuItems[3].hasMod('focused').should.be.true;
 
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
             menuItems[3].hasMod('focused').should.be.true;
             menuItems[4].hasMod('focused').should.be.false;
         });
 
         it('should handle all hidden', function() {
             bemjson.options = [
-                { val : 'value 1', data: 'xxx', content : 'item 1' },
-                { val : 'value 2', data: 'xxx', content : 'item 2' }
+                { val: 'value 1', data: 'xxx', content: 'item 1' },
+                { val: 'value 2', data: 'xxx', content: 'item 2' }
             ];
             block = build('input', bemjson);
 
@@ -448,7 +448,7 @@ describe('input_has-autocomplete', function() {
             menuItems[0].setMod('hidden');
             menuItems[1].setMod('hidden');
 
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
             menuItems[0].hasMod('focused').should.be.false;
             menuItems[1].hasMod('focused').should.be.false;
             block._focusedItem.should.equal(-1);
@@ -456,19 +456,19 @@ describe('input_has-autocomplete', function() {
 
         it('should select focused item on ENTER', function() {
             bemjson.options = [
-                { val : 'value 1', data: 'xxx', content : 'item 1' },
-                { val : 'value 2', data: 'xxx', content : 'item 2' }
+                { val: 'value 1', data: 'xxx', content: 'item 1' },
+                { val: 'value 2', data: 'xxx', content: 'item 2' }
             ];
             block = build('input', bemjson);
 
             var menu = block.findBlockInside('menu'),
                 menuItems = menu.findBlocksInside('menu-item');
 
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 13 })); // ENTER
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 13 })); // ENTER
 
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 13 })); // ENTER
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 13 })); // ENTER
 
             block.getVal().should.equal('value 2');
 
@@ -478,15 +478,15 @@ describe('input_has-autocomplete', function() {
 
         it('should reset on setOptions', function() {
             bemjson.options = [
-                { val : 'value 1', data: 'xxx', content : 'item 1' },
-                { val : 'value 2', data: 'xxx', content : 'item 2' }
+                { val: 'value 1', data: 'xxx', content: 'item 1' },
+                { val: 'value 2', data: 'xxx', content: 'item 2' }
             ];
             block = build('input', bemjson);
 
             var menu = block.findBlockInside('menu'),
                 menuItems = menu.findBlocksInside('menu-item');
 
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
             block._focusedItem.should.equal(0);
 
             block.setOptions([]);
@@ -499,15 +499,15 @@ describe('input_has-autocomplete', function() {
 
         it('should reset on select', function() {
             bemjson.options = [
-                { val : 'value 1', data: 'xxx', content : 'item 1' },
-                { val : 'value 2', data: 'xxx', content : 'item 2' }
+                { val: 'value 1', data: 'xxx', content: 'item 1' },
+                { val: 'value 2', data: 'xxx', content: 'item 2' }
             ];
             block = build('input', bemjson);
 
             var menu = block.findBlockInside('menu'),
                 menuItems = menu.findBlocksInside('menu-item');
 
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
             block._focusedItem.should.equal(0);
 
             menuItems[1].domElem.click();
@@ -518,8 +518,8 @@ describe('input_has-autocomplete', function() {
 
         it('should not throw on empty list', function() {
             block = build('input', bemjson);
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 38 })); // UP
-            block.domElem.trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 38 })); // UP
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
         });
     });
 });

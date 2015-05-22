@@ -1,5 +1,5 @@
 [{
-    mustDeps : [
-        { block : 'input', mods : { 'has-autocomplete' : true } }
+    mustDeps: [
+        { block: 'input', mods: { 'has-autocomplete': true } }
     ]
 }]

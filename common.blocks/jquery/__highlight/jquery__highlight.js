@@ -45,7 +45,7 @@ modules.define('jquery__highlight', ['jquery'], function(provide, jQuery) {
  */
 
 jQuery.extend({
-    highlight: function (node, re, nodeName, className) {
+    highlight: function(node, re, nodeName, className) {
         if (node.nodeType === 3) {
             var match = node.data.match(re);
             if (match) {
@@ -69,25 +69,25 @@ jQuery.extend({
     }
 });
 
-jQuery.fn.unhighlight = function (options) {
+jQuery.fn.unhighlight = function(options) {
     var settings = { className: 'highlight', element: 'span' };
     jQuery.extend(settings, options);
 
-    return this.find(settings.element + "." + settings.className).each(function () {
+    return this.find(settings.element + "." + settings.className).each(function() {
         var parent = this.parentNode;
         parent.replaceChild(this.firstChild, this);
         parent.normalize();
     }).end();
 };
 
-jQuery.fn.highlight = function (words, options) {
+jQuery.fn.highlight = function(words, options) {
     var settings = { className: 'highlight', element: 'span', caseSensitive: false, wordsOnly: false };
     jQuery.extend(settings, options);
 
     if (words.constructor === String) {
         words = [words];
     }
-    words = jQuery.grep(words, function(word, i){
+    words = jQuery.grep(words, function(word, i) {
       return word != '';
     });
     words = jQuery.map(words, function(word, i) {
@@ -102,7 +102,7 @@ jQuery.fn.highlight = function (words, options) {
     }
     var re = new RegExp(pattern, flag);
 
-    return this.each(function () {
+    return this.each(function() {
         jQuery.highlight(this, re, settings.element, settings.className);
     });
 };

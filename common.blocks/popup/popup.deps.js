@@ -1,4 +1,4 @@
 ({
-    tech : 'spec.js',
-    mustDeps : { block : 'popup' }
+    tech: 'spec.js',
+    mustDeps: { block: 'popup' }
 })

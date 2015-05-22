@@ -6,22 +6,22 @@ block('radio-group')(
         return (ctx.options || []).map(function(option) {
             return [
                 {
-                    block : 'radio',
-                    mods : {
-                        type : mods.type,
-                        view : mods.view,
-                        mode : mods.mode,
-                        theme : mods.theme,
-                        bkg : mods.bkg,
-                        size : mods.size,
-                        checked : option.checked,
-                        disabled : option.disabled || mods.disabled
+                    block: 'radio',
+                    mods: {
+                        type: mods.type,
+                        view: mods.view,
+                        mode: mods.mode,
+                        theme: mods.theme,
+                        bkg: mods.bkg,
+                        size: mods.size,
+                        checked: option.checked,
+                        disabled: option.disabled || mods.disabled
                     },
-                    name : ctx.name,
-                    val : option.val,
-                    text : option.text,
-                    title : option.title,
-                    icon : option.icon
+                    name: ctx.name,
+                    val: option.val,
+                    text: option.text,
+                    title: option.title,
+                    icon: option.icon
                 }
             ];
         });

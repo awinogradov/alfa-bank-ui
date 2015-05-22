@@ -6,10 +6,10 @@ modules.define('spec', ['form-field', 'spec__utils'], function(provide, _, helpe
 
         beforeEach(function() {
             block = helper.buildBlock('form-field', {
-                block : 'form-field',
-                mods : { type : 'hidden' },
-                name : 'field name',
-                val : 'field value'
+                block: 'form-field',
+                mods: { type: 'hidden' },
+                name: 'field name',
+                val: 'field value'
             });
         });
 
@@ -32,9 +32,9 @@ modules.define('spec', ['form-field', 'spec__utils'], function(provide, _, helpe
 
         it('should return empty string, when there is no value', function() {
             var b = helper.buildBlock('form-field', {
-                block : 'form-field',
-                mods : { type : 'hidden' },
-                name : 'field name'
+                block: 'form-field',
+                mods: { type: 'hidden' },
+                name: 'field name'
             });
 
             b.getVal().should.equal('');

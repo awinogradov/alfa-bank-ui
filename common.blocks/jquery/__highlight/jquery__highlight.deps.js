@@ -1,5 +1,5 @@
 [{
-    shouldDeps : [
-        { block : 'highlight' }
+    shouldDeps: [
+        { block: 'highlight' }
     ]
 }]

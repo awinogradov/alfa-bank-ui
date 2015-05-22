@@ -1,5 +1,5 @@
 ({
-    shouldDeps : [
-        { block : 'message', mods : { bkg : 'white' } }
+    shouldDeps: [
+        { block: 'message', mods: { bkg: 'white' } }
     ]
 })

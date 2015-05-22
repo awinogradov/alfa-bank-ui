@@ -5,9 +5,9 @@ modules.define(
 
         provide(BEMDOM.decl(this.name, {
 
-            onSetMod : {
-                'js' : {
-                    'inited' : function() {
+            onSetMod: {
+                'js': {
+                    'inited': function() {
                         var _this = this;
 
                         this._colorize();
@@ -18,7 +18,7 @@ modules.define(
                     }
                 }
             },
-            _colorize : function() {
+            _colorize: function() {
                 window.scrollY > 10 ?
                     this.setMod('fixed') :
                     this.delMod('fixed');

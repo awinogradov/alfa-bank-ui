@@ -1,6 +1,6 @@
 ({
-    mustDeps : [
-        { block : 'variables' }
+    mustDeps: [
+        { block: 'variables' }
     ],
-    shouldDeps : { block : 'radio', mods : { theme : 'alfa' } }
+    shouldDeps: { block: 'radio', mods: { theme: 'alfa' } }
 })

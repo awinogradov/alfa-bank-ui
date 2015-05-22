@@ -1,6 +1,6 @@
 [{
-    tech : 'spec.js',
-    shouldDeps : [
-        { tech : 'bemhtml', block : 'form-field', mods : { type : 'hidden' } }
+    tech: 'spec.js',
+    shouldDeps: [
+        { tech: 'bemhtml', block: 'form-field', mods: { type: 'hidden' } }
     ]
 }]

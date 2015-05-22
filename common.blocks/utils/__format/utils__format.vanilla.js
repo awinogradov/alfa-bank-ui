@@ -2,8 +2,8 @@ modules.define('utils__format',
     function(provide) {
         var utils = this;
 
-        utils.formatSum = function(sum){
-            if(sum) {
+        utils.formatSum = function(sum) {
+            if (sum) {
                 //sum to number
                 sum = parseFloat(sum.toString().replace(',', '.').replace(' ', ''));
                 //format minor

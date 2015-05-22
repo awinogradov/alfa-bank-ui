@@ -1,6 +1,6 @@
 [{
-    mustDeps : [
-        { block : 'variables' },
-        { block : 'typo' }
+    mustDeps: [
+        { block: 'variables' },
+        { block: 'typo' }
     ]
 }]

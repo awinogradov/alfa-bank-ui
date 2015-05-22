@@ -6,22 +6,22 @@ module.exports = function(bh) {
             checkedOptions = ctx.tParam('checkedOptions');
 
         return {
-            block : 'button',
-            mix : { block : json.block, elem : json.elem },
-            mods : {
-                size : mods.size,
-                theme : mods.theme,
-                view : mods.view,
-                bkg : mods.bkg,
-                focused : mods.focused,
-                disabled : mods.disabled,
-                checked : mods.mode !== 'radio' && !!checkedOptions.length
+            block: 'button',
+            mix: { block: json.block, elem: json.elem },
+            mods: {
+                size: mods.size,
+                theme: mods.theme,
+                view: mods.view,
+                bkg: mods.bkg,
+                focused: mods.focused,
+                disabled: mods.disabled,
+                checked: mods.mode !== 'radio' && !!checkedOptions.length
             },
-            id : select.id,
-            textMaxWidth : select.textMaxWidth,
-            content : [
+            id: select.id,
+            textMaxWidth: select.textMaxWidth,
+            content: [
                 ctx.content(),
-                { block : 'icon', mix : { block : 'select', elem : 'tick' } }
+                { block: 'icon', mix: { block: 'select', elem: 'tick' } }
             ]
         };
     });

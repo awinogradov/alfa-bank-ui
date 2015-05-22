@@ -6,9 +6,9 @@ modules.define('spec', ['spec__utils', 'message', 'popup'], function(provide, ut
 
         beforeEach(function() {
             block = utils.buildBlock('message', {
-                block : 'message',
-                mods : {
-                    type : 'popup',
+                block: 'message',
+                mods: {
+                    type: 'popup',
                 }
             });
         });

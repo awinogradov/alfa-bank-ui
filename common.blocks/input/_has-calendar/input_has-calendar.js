@@ -11,8 +11,8 @@ modules.define('input', ['i-bem__dom', 'jquery', 'dom'], function(provide, BEMDO
  */
 provide(Input.decl({ modName: 'has-calendar' }, /** @lends input.prototype */{
     onSetMod: {
-        'js' : {
-            'inited' : function() {
+        'js': {
+            'inited': function() {
                 this.__base.apply(this, arguments);
 
                 this._calendar = this.findBlockInside('calendar');
@@ -29,29 +29,29 @@ provide(Input.decl({ modName: 'has-calendar' }, /** @lends input.prototype */{
             }
         }
     },
-    showCalendar : function() {
-        if(!this._calendar.isShown()) {
+    showCalendar: function() {
+        if (!this._calendar.isShown()) {
             this._calendar
                 .setVal(this.getVal())
                 .show();
         }
     },
-    getDate : function() {
+    getDate: function() {
         return this._calendar.getVal();
     },
-    _onChangeCalendar : function(e, data) {
+    _onChangeCalendar: function(e, data) {
         this.setVal(data.formated);
     },
-    _onControlBlur : function(e) {
-        if(this._ignoreBlur) {
+    _onControlBlur: function(e) {
+        if (this._ignoreBlur) {
             this._ignoreBlur = false;
         } else {
             this._calendar.hide();
         }
     },
-    _onPointerClickSwitcher : function() {
-        if(!this.hasMod('disabled')) {
-            if(this._calendar.isShown()) {
+    _onPointerClickSwitcher: function() {
+        if (!this.hasMod('disabled')) {
+            if (this._calendar.isShown()) {
                 this._calendar.hide();
             } else {
                 this._calendar
@@ -60,16 +60,16 @@ provide(Input.decl({ modName: 'has-calendar' }, /** @lends input.prototype */{
             }
         }
     },
-    _onDocPointerDown : function(e) {
+    _onDocPointerDown: function(e) {
 
         var target = $(e.target),
             insideCalendar = dom.contains(this._calendar.domElem, target);
 
-        if(insideCalendar) {
+        if (insideCalendar) {
             this._ignoreBlur = true;
         }
 
-        if(!insideCalendar && !dom.contains(this.domElem, target)) {
+        if (!insideCalendar && !dom.contains(this.domElem, target)) {
             this._calendar.hide();
         }
     }

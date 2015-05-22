@@ -3,14 +3,14 @@ modules.define('spec', ['spec__utils', 'jquery', 'input'], function(provide, uti
     describe('input_has-filter', function() {
 
         var bemjson = {
-            block : 'input',
-            mods : {
-                'has-autocomplete' : true,
-                'has-filter' : true
+            block: 'input',
+            mods: {
+                'has-autocomplete': true,
+                'has-filter': true
             },
-            options : [
-                { val : '111', data : { text : 'AAA' }, content : 'XXX' },
-                { val : '222', data : { text : 'BBB' }, content : 'YYY' }
+            options: [
+                { val: '111', data: { text: 'AAA' }, content: 'XXX' },
+                { val: '222', data: { text: 'BBB' }, content: 'YYY' }
             ]
         }
 
@@ -71,9 +71,9 @@ modules.define('spec', ['spec__utils', 'jquery', 'input'], function(provide, uti
 
         it('should not throw without has-autocomplete', function() {
             var block = utils.buildBlock('input', {
-                block : 'input',
-                mods : {
-                    'has-filter' : true
+                block: 'input',
+                mods: {
+                    'has-filter': true
                 }
             });
 
@@ -81,7 +81,7 @@ modules.define('spec', ['spec__utils', 'jquery', 'input'], function(provide, uti
         });
 
         it('should reset focused item if it was filtered out', function() {
-            block.elem('control').trigger(new $.Event('keydown', { keyCode : 40 })); // DOWN
+            block.elem('control').trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
             items[0].hasMod('focused').should.be.true;
 
             block.setVal('X');

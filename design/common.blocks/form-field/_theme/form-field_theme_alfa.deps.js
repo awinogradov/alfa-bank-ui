@@ -1,6 +1,6 @@
 ({
-    mustDeps : [
-        { block : 'variables' },
-        { block : 'message', mods : { theme : 'alfa' } }
+    mustDeps: [
+        { block: 'variables' },
+        { block: 'message', mods: { theme: 'alfa' } }
     ]
 })

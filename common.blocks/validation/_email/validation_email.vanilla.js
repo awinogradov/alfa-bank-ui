@@ -14,7 +14,7 @@ modules.define('validation_email',
         var message = params.message || DEFAULT_MESSAGE;
 
         return function(val) {
-            return !val || EMAIL_RE.test(val)? null : message;
+            return !val || EMAIL_RE.test(val) ? null : message;
         };
     });
 

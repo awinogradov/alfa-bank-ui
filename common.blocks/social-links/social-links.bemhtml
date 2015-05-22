@@ -5,20 +5,20 @@ block('social-links')(
 
         ctx.links.forEach(function(link) {
             content.push({
-                block : 'link',
-                mods : { theme : ctx.mods.theme, bkg : ctx.mods.bkg, icon : true },
-                mix : { block : ctx.block, elem : 'item' },
-                url : link.url,
-                content : [
+                block: 'link',
+                mods: { theme: ctx.mods.theme, bkg: ctx.mods.bkg, icon: true },
+                mix: { block: ctx.block, elem: 'item' },
+                url: link.url,
+                content: [
                     {
-                        block : 'icon',
-                        mods : {
-                            network : link.network,
-                            bkg : ctx.mods.bkg,
-                            size : ctx.mods.size,
-                            theme : ctx.mods.theme
+                        block: 'icon',
+                        mods: {
+                            network: link.network,
+                            bkg: ctx.mods.bkg,
+                            size: ctx.mods.size,
+                            theme: ctx.mods.theme
                         },
-                        mix : { block : 'link', elem : 'icon' }
+                        mix: { block: 'link', elem: 'icon' }
                     }
                 ]
             });

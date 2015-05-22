@@ -4,15 +4,15 @@ modules.define('spec', ['spec__utils', 'popup'], function(provide, utils) {
 
         it('should init', function() {
             var block = utils.buildBlock('popup', {
-                block : 'popup',
-                mods : {
-                    view : 'column',
-                    target : 'anchor'
+                block: 'popup',
+                mods: {
+                    view: 'column',
+                    target: 'anchor'
                 },
-                content : 'some content'
+                content: 'some content'
             });
 
-            var anchor = utils.buildBlock('anchor', { block : 'anchor' });
+            var anchor = utils.buildBlock('anchor', { block: 'anchor' });
 
             block.domElem.text().should.equal('some content');
 

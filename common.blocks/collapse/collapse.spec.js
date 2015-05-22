@@ -4,11 +4,11 @@ modules.define('spec', ['collapse', 'spec__utils'], function(provide, collapse, 
         cl = 'Подробнее';
 
     var bemjson = {
-        block : 'collapse',
-        mods : { theme : 'alfa', bkg : 'color' },
-        expandedLabel : el,
-        collapsedLabel : cl,
-        content : [ 'Подробности...' ]
+        block: 'collapse',
+        mods: { theme: 'alfa', bkg: 'color' },
+        expandedLabel: el,
+        collapsedLabel: cl,
+        content: ['Подробности...']
     };
 
     describe('collapse', function() {

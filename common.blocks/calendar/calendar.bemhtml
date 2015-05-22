@@ -2,8 +2,8 @@ block('calendar')(
 
     js()(function() {
         return this.extend({
-            weekdays : ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
-            months : [
+            weekdays: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+            months: [
                 'Январь',
                 'Февраль',
                 'Март',
@@ -23,13 +23,13 @@ block('calendar')(
     mix()(function() {
         var ctx = this.ctx;
         return {
-            block : 'popup',
-            mods : this.extend(ctx.mods, {
-                'has-calendar' : true,
-                target : 'anchor',
-                bkg : false
+            block: 'popup',
+            mods: this.extend(ctx.mods, {
+                'has-calendar': true,
+                target: 'anchor',
+                bkg: false
             }),
-            directions : ctx.directions
+            directions: ctx.directions
         };
     }),
 
