@@ -2,12 +2,34 @@
 {
     font-family: $font_family;
 
+    box-sizing: border-box;
+
     position: relative;
     display:  block;
 
+    padding: 0;
+    margin: 0;
+
     vertical-align: top;
+    line-height: inherit;
 
     border-radius: $inputs_radius;
+
+    outline:    none;
+    background: none;
+
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    &::-webkit-input-placeholder
+    {
+        text-indent: 0;
+    }
+
+    &::-moz-placeholder
+    {
+        opacity: 1;
+    }
 
     /* Decorative element (inner background) */
     &:before
@@ -23,38 +45,6 @@
         border-radius: $inputs_radius - $inputs_border_size;
     }
 
-    .textarea__control
-    {
-        font:        inherit;
-        line-height: inherit;
-
-        position: relative;
-        display:  block;
-
-        box-sizing: border-box;
-        margin:     0;
-        padding:    0;
-        width:      100%;
-        height:     100%;
-
-        border:     0;
-        outline:    none;
-        background: none;
-
-        -webkit-appearance:          none;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
-        &::-webkit-input-placeholder
-        {
-            text-indent: 0;
-        }
-
-        &::-moz-placeholder
-        {
-            opacity: 1;
-        }
-    }
-
     &.textarea_focused
     {
         z-index: 1;
@@ -62,16 +52,13 @@
 
     &.textarea_disabled
     {
+        cursor: default;
+
+        resize: none;
+
         &:before
         {
             display: none;
-        }
-
-        .textarea__control
-        {
-            cursor: default;
-
-            resize: none;
         }
     }
 
@@ -79,52 +66,36 @@
     {
         font-size: $textarea_font_size_s;
 
-        .textarea__control
-        {
-            padding: $textarea_padding_s;
+        padding: $textarea_padding_s;
 
-            min-height: $textarea_min_height_s;
-        }
+        min-height: $textarea_min_height_s;
+
     }
 
     &.textarea_size_m
     {
         font-size: $textarea_font_size_m;
 
-        .textarea__control
-        {
-            padding: $textarea_padding_m;
+        padding: $textarea_padding_m;
 
-            min-height: $textarea_min_height_m;
-        }
+        min-height: $textarea_min_height_m;
     }
 
     &.textarea_size_l
     {
         font-size: $textarea_font_size_l;
 
-        .textarea__control
-        {
-            padding: $textarea_padding_l;
+        padding: $textarea_padding_l;
 
-            min-height: $textarea_min_height_l;
-        }
+        min-height: $textarea_min_height_l;
     }
 
     &.textarea_size_xl
     {
         font-size: $textarea_font_size_xl;
 
-        .textarea__control
-        {
-            padding: $textarea_padding_xl;
+        padding: $textarea_padding_xl;
 
-            min-height: $textarea_min_height_xl;
-        }
-    }
-
-    &.textarea_width_available
-    {
-      width: 100%;
+        min-height: $textarea_min_height_xl;
     }
 }
