@@ -18,13 +18,13 @@ modules.define('spec', ['dropdown', 'spec__utils'], function(provide, _, helper)
             helper.destruct(dropdown);
         });
 
-        it('should add mod "opened" on hover', function() {
+        it('should add mod 'opened' on hover', function() {
             dropdown.hasMod('opened').should.be.false;
             dropdown.getSwitcher().domElem.mouseenter();
             dropdown.hasMod('opened').should.be.true;
         });
 
-        it('should remove mod "opened" on mouseleave on popup', function() {
+        it('should remove mod 'opened' on mouseleave on popup', function() {
             dropdown.setMod('opened', true);
             dropdown.getPopup().domElem.mouseleave();
             dropdown.hasMod('opened').should.be.false;

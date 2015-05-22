@@ -73,7 +73,7 @@ jQuery.fn.unhighlight = function(options) {
     var settings = { className: 'highlight', element: 'span' };
     jQuery.extend(settings, options);
 
-    return this.find(settings.element + "." + settings.className).each(function() {
+    return this.find(settings.element + '.' + settings.className).each(function() {
         var parent = this.parentNode;
         parent.replaceChild(this.firstChild, this);
         parent.normalize();
@@ -91,14 +91,14 @@ jQuery.fn.highlight = function(words, options) {
       return word != '';
     });
     words = jQuery.map(words, function(word, i) {
-      return word.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+      return word.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
     });
     if (words.length == 0) { return this; };
 
-    var flag = settings.caseSensitive ? "" : "i";
-    var pattern = "(" + words.join("|") + ")";
+    var flag = settings.caseSensitive ? '' : 'i';
+    var pattern = '(' + words.join('|') + ')';
     if (settings.wordsOnly) {
-        pattern = "\\b" + pattern + "\\b";
+        pattern = '\\b' + pattern + '\\b';
     }
     var re = new RegExp(pattern, flag);
 
