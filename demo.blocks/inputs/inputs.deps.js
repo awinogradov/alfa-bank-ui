@@ -38,11 +38,7 @@
         },
         {
             block : 'radio',
-            mods : { theme : 'alfa', bkg : 'color', checked : true }
-        },
-        {
-            block : 'radio-group',
-            mods : { theme : 'alfa', bkg : 'white', type : 'button' }
+            mods : { theme : 'alfa', bkg : ['white', 'color'], checked : true }
         },
         {
             block : 'row'
