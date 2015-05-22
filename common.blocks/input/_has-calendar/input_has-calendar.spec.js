@@ -109,6 +109,18 @@ describe('input_has-calendar', function() {
         ((calendar.parseDate(block.getVal()) + '') === (calendar.getVal() + '')).should.be.true;
     });
 
+    it('should get `Date`', function() {
+        block = build('input', bemjson);
+        var calendar = block.findBlockInside('calendar');
+
+        block.elem('control').trigger('focus');
+        calendar.findElem('day').eq(10).click();
+
+        (calendar.getVal() instanceof Date).should.be.true;
+        (block.getDate() instanceof Date).should.be.true;
+
+    });
+
     it('should toggle calendar when clicked switcher element', function() {
 
         block = build('input', bemjson);

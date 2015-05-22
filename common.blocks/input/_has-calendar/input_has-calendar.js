@@ -36,6 +36,9 @@ provide(Input.decl({ modName: 'has-calendar' }, /** @lends input.prototype */{
                 .show();
         }
     },
+    getDate : function() {
+        return this._calendar.getVal();
+    },
     _onChangeCalendar : function(e, data) {
         this.setVal(data.formated);
     },
