@@ -1,7 +1,7 @@
 block('social-links')(
     content()(function() {
-        var content = [];
-        var ctx = this.ctx;
+        var content = [],
+            ctx = this.ctx;
 
         ctx.links.forEach(function(link) {
             content.push({

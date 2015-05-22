@@ -24,13 +24,14 @@ modules.define('spec', ['spec__utils', 'jquery__numeric', 'input'], function(pro
         });
 
         it('should insert comma instead of period', function() {
-            var block = utils.buildBlock('input', {
+            var block, el;
+
+            block = utils.buildBlock('input', {
                 block: 'input',
                 mods: { type: 'money' },
                 val: '1'
             });
-
-            var el = block.elem('control');
+            el = block.elem('control');
 
             el.focus();
             el.trigger(new $.Event('keyup', { keyCode: 190 }));

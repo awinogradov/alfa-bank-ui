@@ -14,7 +14,7 @@ modules.define('utils__format',
             } else {
                 return 0;
             }
-        }
+        };
 
         provide(utils);
 

@@ -1,15 +1,14 @@
 modules.define('spec', ['collapse', 'spec__utils'], function(provide, collapse, utils) {
 
     var el = 'Скрыть подробности',
-        cl = 'Подробнее';
-
-    var bemjson = {
-        block: 'collapse',
-        mods: { theme: 'alfa', bkg: 'color' },
-        expandedLabel: el,
-        collapsedLabel: cl,
-        content: ['Подробности...']
-    };
+        cl = 'Подробнее',
+        bemjson = {
+            block: 'collapse',
+            mods: { theme: 'alfa', bkg: 'color' },
+            expandedLabel: el,
+            collapsedLabel: cl,
+            content: ['Подробности...']
+        };
 
     describe('collapse', function() {
 
@@ -50,9 +49,8 @@ modules.define('spec', ['collapse', 'spec__utils'], function(provide, collapse, 
 
         it('should set link label to `expandedLabel` when rendered with `expanded` mod', function() {
             bemjson.mods.expanded = true;
-            var block = utils.buildBlock('collapse', bemjson);
-
-            var link = block.findBlockInside('link');
+            var block = utils.buildBlock('collapse', bemjson),
+                link = block.findBlockInside('link');
             link.domElem.text().should.equal(el);
 
             utils.destruct(block);

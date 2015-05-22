@@ -2,7 +2,9 @@ modules.define('spec', ['spec__utils', 'jquery', 'input'], function(provide, uti
 
     describe('input_has-filter', function() {
 
-        var bemjson = {
+        var block, items, bemjson;
+
+        bemjson = {
             block: 'input',
             mods: {
                 'has-autocomplete': true,
@@ -12,9 +14,7 @@ modules.define('spec', ['spec__utils', 'jquery', 'input'], function(provide, uti
                 { val: '111', data: { text: 'AAA' }, content: 'XXX' },
                 { val: '222', data: { text: 'BBB' }, content: 'YYY' }
             ]
-        }
-
-        var block, items;
+        };
 
         beforeEach(function() {
             block = utils.buildBlock('input', bemjson);

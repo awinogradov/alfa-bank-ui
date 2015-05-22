@@ -7,7 +7,7 @@ modules.define('jquery__formatter', ['jquery'], function(provide, $) {
  *
  * thanks to digitalBush/jquery.maskedinput for some of the trickier
  * keycode handling
- */ 
+ */
 
 /*
  * pattern.js
@@ -15,7 +15,7 @@ modules.define('jquery__formatter', ['jquery'], function(provide, $) {
  * Utilities to parse str pattern and return info
  *
  */
-var pattern = function() {
+var pattern = (function() {
     // Define module
     var pattern = {};
     // Match information
@@ -71,7 +71,7 @@ var pattern = function() {
     };
     // Expose
     return pattern;
-  }();
+  })();
 /*
  * utils.js
  *
@@ -371,7 +371,7 @@ var inptSel = function() {
             end: length
           };
         }
-        // Note: moveStart usually returns the units moved, which 
+        // Note: moveStart usually returns the units moved, which
         // one may think is -length, however, it will stop when it
         // gets to the begin of the range, thus giving us the
         // negative value of the pos.

@@ -3,7 +3,9 @@ modules.define('spec', ['spec__utils', 'popup'], function(provide, utils) {
     describe('popup_view_column', function() {
 
         it('should init', function() {
-            var block = utils.buildBlock('popup', {
+            var block, anchor;
+
+            block = utils.buildBlock('popup', {
                 block: 'popup',
                 mods: {
                     view: 'column',
@@ -11,8 +13,7 @@ modules.define('spec', ['spec__utils', 'popup'], function(provide, utils) {
                 },
                 content: 'some content'
             });
-
-            var anchor = utils.buildBlock('anchor', { block: 'anchor' });
+            anchor = utils.buildBlock('anchor', { block: 'anchor' });
 
             block.domElem.text().should.equal('some content');
 

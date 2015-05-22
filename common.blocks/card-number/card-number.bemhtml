@@ -2,10 +2,10 @@ block('card-number')(
     tag()('span'),
     content()(function() {
         if (this.ctx.val){
-            var val = this.ctx.val.replace(/ /g, '');
-            var num = val.split(/\*+/);
+            var val = this.ctx.val.replace(/ /g, ''),
+                num = val.split(/\*+/);
             if (num.length === 1){
-                //not masked val
+                // not masked val
                 var number = num[0];
                 if (number.length >= 16){
                     var groups = [];
@@ -15,12 +15,12 @@ block('card-number')(
                     groups.push(number.substring(12, number.length));
                     return groups.join(' ');
                 } else {
-                    //to short for card number
+                    // to short for card number
                     return this.ctx.val;
                 }
             }
 
-            //masked val
+            // masked val
             if (num[0]){
                 num[0] = num[0].trim().substring(0, 4);
             }

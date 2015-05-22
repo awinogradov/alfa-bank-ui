@@ -20,7 +20,7 @@ modules.define('notification', ['i-bem__dom', 'BEMHTML', 'plate'], function(prov
                     // override to don't hide plate
                     this.findBlockInside('plate')._onClick = function() {
                         _this._evade();
-                    }
+                    };
 
                 }
             },

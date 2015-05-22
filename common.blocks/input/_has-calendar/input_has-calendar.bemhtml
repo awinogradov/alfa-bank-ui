@@ -7,9 +7,9 @@ block('input')(
     mod('has-calendar', true)(
 
         def()(function() {
-            var ctx = this.ctx;
-            var mods = ctx.mods;
-            var calendarParams = {};
+            var ctx = this.ctx,
+                mods = ctx.mods,
+                calendarParams = {};
 
             if (ctx.earlierLimit) calendarParams.earlierLimit = ctx.earlierLimit;
             if (ctx.laterLimit) calendarParams.laterLimit = ctx.laterLimit;

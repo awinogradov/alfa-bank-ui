@@ -29,6 +29,6 @@ module.exports = function(bh) {
                 },
                 js: ctx.tParam('calendar')
             }
-        ]
+        ];
     });
 };

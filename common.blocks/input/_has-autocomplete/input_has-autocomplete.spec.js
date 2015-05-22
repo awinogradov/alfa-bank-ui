@@ -7,13 +7,12 @@ modules.define('spec',
 var build = helper.buildBlock;
 
 describe('input_has-autocomplete', function() {
-    var bemjson = {
-        block: 'input',
-        mods: { 'has-autocomplete': true },
-        options: []
-    };
-
-    var block;
+    var block,
+        bemjson = {
+            block: 'input',
+            mods: { 'has-autocomplete': true },
+            options: []
+        };
 
     afterEach(function() {
         helper.destruct(block);
@@ -86,8 +85,8 @@ describe('input_has-autocomplete', function() {
             { val: 'value 2', content: 'item 2' }
         ];
         block = build('input', bemjson);
-        var menu = block.findBlockInside('popup').findBlockInside('menu');
-        var items = menu.findBlocksInside('menu-item');
+        var menu = block.findBlockInside('popup').findBlockInside('menu'),
+            items = menu.findBlocksInside('menu-item');
 
         expect(items).to.not.be.null;
         items.length.should.equal(2);
@@ -204,8 +203,8 @@ describe('input_has-autocomplete', function() {
         ];
         block = build('input', bemjson);
         block.setVal('value 0');
-        var menu = block.findBlockInside('menu');
-        var eventCatched = false;
+        var menu = block.findBlockInside('menu'),
+            eventCatched = false;
 
         block.on('select', function(_, item) {
             item.val.should.equal('value 2');
@@ -280,8 +279,8 @@ describe('input_has-autocomplete', function() {
             { val: 'value 2', content: 'item 2' }
         ]);
 
-        var menu = block.findBlockInside('popup').findBlockInside('menu');
-        var items = menu.findBlocksInside('menu-item');
+        var menu = block.findBlockInside('popup').findBlockInside('menu'),
+            items = menu.findBlocksInside('menu-item');
 
         expect(items).to.not.be.null;
         items.length.should.equal(2);
