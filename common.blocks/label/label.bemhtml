@@ -1,5 +1,5 @@
 block('label')(
     content()(function() {
-        return { elem : 'inner', tag : 'span', content : applyNext() };
+        return { elem: 'inner', tag: 'span', content: applyNext() };
     })
 );

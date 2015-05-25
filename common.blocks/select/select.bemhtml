@@ -1,19 +1,19 @@
 block('select')(
     content()(function() {
         return [
-            { elem : 'button' },
+            { elem: 'button' },
             {
-                block : 'popup',
-                mix : { block : this.block, elem : 'popup', mods : { size : this.mods.size } },
-                mods : {
-                    target : 'anchor',
-                    theme : this.mods.theme,
-                    bkg : this.mods.bkg,
-                    autoclosable : true,
-                    view : 'dropdown'
+                block: 'popup',
+                mix: { block: this.block, elem: 'popup', mods: { size: this.mods.size } },
+                mods: {
+                    target: 'anchor',
+                    theme: this.mods.theme,
+                    bkg: this.mods.bkg,
+                    autoclosable: true,
+                    view: 'dropdown'
                 },
-                directions : ['bottom-left'],
-                content : { block : this.block, mods : this.mods, elem : 'menu' }
+                directions: ['bottom-left'],
+                content: { block: this.block, mods: this.mods, elem: 'menu' }
             }
         ];
     })

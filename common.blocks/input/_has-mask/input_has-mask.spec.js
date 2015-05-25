@@ -4,12 +4,12 @@ modules.define('spec', ['spec__utils', 'jquery__formatter', 'input'], function(p
 
         it('should init without errors', function() {
             var block = utils.buildBlock('input', {
-                block : 'input',
-                mods : {
-                    'has-mask' : true
+                block: 'input',
+                mods: {
+                    'has-mask': true
                 },
-                js : {
-                    mask : '{{99}}-{{99}}'
+                js: {
+                    mask: '{{99}}-{{99}}'
                 }
             });
 

@@ -1,7 +1,7 @@
-({
-    mustDeps : [
-        { block : 'variables' },
-        { block : 'font', mods : { roboto : true } }
+[{
+    mustDeps: [
+        { block: 'variables' },
+        { block: 'font', mods: { roboto: true } }
     ],
-    shouldDeps : { block : 'ua', elem : 'svg' }
-})
+    shouldDeps: { block: 'ua', elem: 'svg' }
+}];

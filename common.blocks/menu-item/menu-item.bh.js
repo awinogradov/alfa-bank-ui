@@ -3,13 +3,13 @@ module.exports = function(bh) {
         var menuMods = ctx.tParam('menuMods');
 
         menuMods && ctx.mods({
-            theme : menuMods.theme,
-            bkg : menuMods.bkg,
-            disabled : menuMods.disabled
+            theme: menuMods.theme,
+            bkg: menuMods.bkg,
+            disabled: menuMods.disabled
         });
 
         ctx
-            .js({ val : json.val })
+            .js({ val: json.val })
             .attr('role', 'menuitem');
     });
 };

@@ -12,12 +12,12 @@ describe('input_width_available', function() {
 
     beforeEach(function() {
         block = build('input', {
-            block : 'input',
-            mods : { 'has-autocomplete' : true, width : 'available' },
-            name : 'input1',
-            options : [
-                { val : 'input1', content : 'Ищут вместе с исполнителями, которых вы слушаете 11111111111' },
-                { val : 'input2', content : 'item 2' }
+            block: 'input',
+            mods: { 'has-autocomplete': true, width: 'available' },
+            name: 'input1',
+            options: [
+                { val: 'input1', content: 'Ищут вместе с исполнителями, которых вы слушаете 11111111111' },
+                { val: 'input2', content: 'item 2' }
             ]
         });
         popup = block.findBlockInside('popup');

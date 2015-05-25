@@ -10,11 +10,11 @@ modules.define('link', function(provide, Link) {
      * @augments control
      * @bem
      */
-    Link.decl({ modName : 'pseudo', modVal : true }, {
+    Link.decl({ modName: 'pseudo', modVal: true }, {
 
-        onSetMod : {
-            'js' : {
-                'inited' : function() {
+        onSetMod: {
+            'js': {
+                'inited': function() {
                     this._val = this.domElem.text();
                 }
             }
@@ -23,21 +23,21 @@ modules.define('link', function(provide, Link) {
          * Returns val
          * @returns {String}
          */
-        getVal : function() {
+        getVal: function() {
             return this._val;
         },
         /**
          * Sets val
          * @param {String} val
          */
-        setVal : function(val) {
+        setVal: function(val) {
             this._val = val;
             this.updateContent();
         },
         /**
          * Update text on link
          */
-        updateContent : function() {
+        updateContent: function() {
             this.domElem.text(this._val);
         }
     });

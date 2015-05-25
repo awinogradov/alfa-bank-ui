@@ -5,14 +5,14 @@ block('form-field').mod('message', 'popup')(
         return [
             ctx.content,
             {
-                block : 'message',
-                mods : {
-                    type : 'popup',
-                    theme : ctx.mods.theme,
-                    size : ctx.mods.size,
-                    bkg : ctx.mods.bkg
+                block: 'message',
+                mods: {
+                    type: 'popup',
+                    theme: ctx.mods.theme,
+                    size: ctx.mods.size,
+                    bkg: ctx.mods.bkg
                 },
-                mix : { block : ctx.block, elem : 'message' }
+                mix: { block: ctx.block, elem: 'message' }
             }
         ];
     })

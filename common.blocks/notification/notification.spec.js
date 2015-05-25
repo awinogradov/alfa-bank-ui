@@ -5,8 +5,8 @@ modules.define('spec', ['notification', 'spec__utils'], function(provide, _, uti
 
         beforeEach(function() {
             notification = utils.buildBlock('notification', {
-                block : 'notification',
-                mods : { theme : 'alfa', bkg : 'color' }
+                block: 'notification',
+                mods: { theme: 'alfa', bkg: 'color' }
             });
         });
 
@@ -40,7 +40,7 @@ modules.define('spec', ['notification', 'spec__utils'], function(provide, _, uti
             var stopEvade = false;
             notification.push('ok', 'test push');
 
-            notification._stopEvade = function(){
+            notification._stopEvade = function() {
                 stopEvade = true;
             };
 
@@ -57,10 +57,10 @@ modules.define('spec', ['notification', 'spec__utils'], function(provide, _, uti
                 startEvade = false;
             notification.push('ok', 'test push');
 
-            notification._stopEvade = function(){
+            notification._stopEvade = function() {
                 stopEvade = true;
             };
-            notification._startEvade = function(){
+            notification._startEvade = function() {
                 startEvade = true;
             };
 

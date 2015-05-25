@@ -8,11 +8,11 @@ modules.define('form-field',
 /**
  * Field block
  */
-FormField.decl({ block : this.name, modName : 'has-validate', modVal : true }, /** @lends form-field.prototype */{
+FormField.decl({ block: this.name, modName: 'has-validate', modVal: true }, /** @lends form-field.prototype */{
 
-    onSetMod : {
-        'js' : {
-            'inited' : function() {
+    onSetMod: {
+        'js': {
+            'inited': function() {
                 this.__base.apply(this, arguments);
 
                 if (this.hasMod('type')) {
@@ -27,11 +27,11 @@ FormField.decl({ block : this.name, modName : 'has-validate', modVal : true }, /
         }
     },
 
-    getDirty : function() {
+    getDirty: function() {
         return !!this._dirty;
     },
 
-    _updateStatus : function() {
+    _updateStatus: function() {
         this.__base.apply(this, arguments);
 
         this.setMessageVal(this._status);

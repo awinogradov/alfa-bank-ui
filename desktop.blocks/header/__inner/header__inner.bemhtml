@@ -4,32 +4,32 @@ block('header').elem('inner')(
 
         return [
             {
-                block : 'link',
-                url : _this._header.logoUrl,
-                mix : { block : 'header', elem : 'logo' },
-                content : [
+                block: 'link',
+                url: _this._header.logoUrl,
+                mix: { block: 'header', elem: 'logo' },
+                content: [
                     {
-                        block : 'logo',
-                        mods : {
-                            theme : _this._headerMods.theme,
-                            bkg : _this._headerMods.bkg,
-                            size : 's',
-                            view : 'full'
+                        block: 'logo',
+                        mods: {
+                            theme: _this._headerMods.theme,
+                            bkg: _this._headerMods.bkg,
+                            size: 's',
+                            view: 'full'
                         }
                     }
                 ]
             },
             {
-                elem : 'content',
-                content : [
+                elem: 'content',
+                content: [
                     (!!_this._header.menu) && {
-                        elem : 'menu'
+                        elem: 'menu'
                     },
                     (!!_this._header.customer) && {
-                        elem : 'user'
+                        elem: 'user'
                     },
                     (!!_this._header.support) && {
-                        elem : 'support'
+                        elem: 'support'
                     }
                 ]
             }

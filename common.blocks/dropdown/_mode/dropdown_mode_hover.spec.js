@@ -1,14 +1,13 @@
 modules.define('spec', ['dropdown', 'spec__utils'], function(provide, _, helper) {
 
     describe('dropdown_mode_hover', function() {
-        var bemjson = {
-            block : 'dropdown',
-            mods : { switcher : 'link', mode : 'hover' },
-            switcher : { block : 'link', content : 'dropdown link' },
-            content : { block : 'popup', content : 'popup content' }
-        };
-
-        var dropdown;
+        var dropdown,
+            bemjson = {
+                block: 'dropdown',
+                mods: { switcher: 'link', mode: 'hover' },
+                switcher: { block: 'link', content: 'dropdown link' },
+                content: { block: 'popup', content: 'popup content' }
+            };
 
         beforeEach(function() {
             dropdown = helper.buildBlock('dropdown', bemjson);

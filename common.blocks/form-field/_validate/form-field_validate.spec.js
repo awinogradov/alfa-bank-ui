@@ -6,9 +6,9 @@ modules.define('spec', ['spec__utils', 'form-field'], function(provide, utils) {
 
         it('should throw without has-validate', function() {
             var blockFn = utils.buildBlock.bind(this, 'form-field', {
-                block : 'form-field',
-                mods : {
-                    validate : 'email'
+                block: 'form-field',
+                mods: {
+                    validate: 'email'
                 }
             });
 

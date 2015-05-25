@@ -1,8 +1,8 @@
 [{
-    mustDeps : [
-        { block : 'jquery', elem : 'numeric' }
+    mustDeps: [
+        { block: 'jquery', elem: 'numeric' }
     ],
-    shouldDeps : [
-        { block : 'utils', elem : 'format' },
+    shouldDeps: [
+        { block: 'utils', elem: 'format' },
     ]
-}]
+}];

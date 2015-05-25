@@ -1,16 +1,16 @@
 block('app')(
 
     def()(function() {
-        applyNext({ _appMods : this.ctx.mods });
+        applyNext({ _appMods: this.ctx.mods });
     }),
 
     elem('title')(content()(function() {
         var appMods = this._appMods;
 
         return {
-            block : 'heading',
-            mods : { theme : appMods.theme, bkg : appMods.bkg },
-            content : applyNext()
+            block: 'heading',
+            mods: { theme: appMods.theme, bkg: appMods.bkg },
+            content: applyNext()
         };
     })),
 
@@ -18,15 +18,15 @@ block('app')(
         var appMods = this._appMods;
 
         return {
-            block : 'menu',
-            mods : {
-                mode : 'radio',
-                bkg : appMods.bkg,
-                theme : appMods.theme,
-                size : 'l',
-                horizontal : true
+            block: 'menu',
+            mods: {
+                mode: 'radio',
+                bkg: appMods.bkg,
+                theme: appMods.theme,
+                size: 'l',
+                horizontal: true
             },
-            content : applyNext()
+            content: applyNext()
         };
     })),
 

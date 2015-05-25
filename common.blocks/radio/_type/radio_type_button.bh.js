@@ -4,31 +4,31 @@ module.exports = function(bh) {
         var mods = ctx.mods();
 
         ctx.content([{
-            block : 'button',
-            mods : {
-                togglable : mods.mode === 'radio-check'?
+            block: 'button',
+            mods: {
+                togglable: mods.mode === 'radio-check' ?
                     'check' :
                     'radio',
-                checked : mods.checked,
-                disabled : mods.disabled,
-                theme : mods.theme,
-                bkg : mods.bkg,
-                size : mods.size
+                checked: mods.checked,
+                disabled: mods.disabled,
+                theme: mods.theme,
+                bkg: mods.bkg,
+                size: mods.size
             },
-            title : json.title,
-            content : [
+            title: json.title,
+            content: [
                 json.icon,
-                typeof json.text !== 'undefined'?
-                    { elem : 'text', content : json.text } :
+                typeof json.text !== 'undefined' ?
+                    { elem: 'text', content: json.text } :
                     ''
             ]
         }, {
-            block : 'radio',
-            elem : 'control',
-            checked : mods.checked,
-            disabled : mods.disabled,
-            name : json.name,
-            val : json.val
+            block: 'radio',
+            elem: 'control',
+            checked: mods.checked,
+            disabled: mods.disabled,
+            name: json.name,
+            val: json.val
         }]);
     });
 

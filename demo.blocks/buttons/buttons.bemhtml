@@ -3,91 +3,91 @@ block('buttons')(
 
         return [
             {
-                block : 'row',
-                content : [
+                block: 'row',
+                content: [
                     {
-                        elem : 'col',
-                        mods : { 's' : true },
-                        content : [
+                        elem: 'col',
+                        mods: { 's': true },
+                        content: [
                             {
-                                elem : 'size-section',
-                                content : [
+                                elem: 'size-section',
+                                content: [
                                     {
-                                        block : 'row',
-                                        content : [
+                                        block: 'row',
+                                        content: [
                                             {
-                                                elem : 'col',
-                                                mods : { 's' : true },
-                                                content : [
+                                                elem: 'col',
+                                                mods: { 's': true },
+                                                content: [
                                                     {
-                                                        elem : 'sidebar',
-                                                        content : 'S'
+                                                        elem: 'sidebar',
+                                                        content: 'S'
                                                     },
                                                     {
-                                                        elem : 'content',
-                                                        content : [
+                                                        elem: 'content',
+                                                        content: [
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'color', size: 's' },
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 's' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
-                                                                    {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'color', size : 's', view : 'action' },
-                                                                        text : 'button'
-                                                                    }
-                                                                ]
-                                                            },
-                                                            {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'color', view : 'pseudo', size: 's' },
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 's', view: 'action' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'color', size: 's', disabled : true },
+                                                                        mods: { theme: 'alfa', bkg: 'color', view: 'pseudo', size: 's' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'color', size : 's' },
-                                                                        text : 'button',
-                                                                        icon : { block : 'icon', mods : { action : 'download' } }
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 's', disabled: true },
+                                                                        text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'color', size : 's' },
-                                                                        icon : {
-                                                                            block : 'spin',
-                                                                            mods : { theme : 'alfa', bkg : 'color', size : 'xs', visible : true }
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 's' },
+                                                                        text: 'button',
+                                                                        icon: { block: 'icon', mods: { action: 'download' } }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block: 'controls',
+                                                                content: [
+                                                                    {
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 's' },
+                                                                        icon: {
+                                                                            block: 'spin',
+                                                                            mods: { theme: 'alfa', bkg: 'color', size: 'xs', visible: true }
                                                                         },
-                                                                        text : 'Loading...'
+                                                                        text: 'Loading...'
                                                                     }
                                                                 ]
                                                             }
@@ -100,87 +100,87 @@ block('buttons')(
                                 ]
                             },
                             {
-                                tag : 'hr'
+                                tag: 'hr'
                             },
                             {
-                                elem : 'size-section',
+                                elem: 'size-section',
                                 content: [
                                     {
-                                        block : 'row',
-                                        content : [
+                                        block: 'row',
+                                        content: [
                                             {
-                                                elem : 'col',
-                                                mods : { 's' : true },
-                                                content : [
+                                                elem: 'col',
+                                                mods: { 's': true },
+                                                content: [
                                                     {
-                                                        elem : 'sidebar',
-                                                        content : 'M'
+                                                        elem: 'sidebar',
+                                                        content: 'M'
                                                     },
                                                     {
-                                                        elem : 'content',
-                                                        content : [
+                                                        elem: 'content',
+                                                        content: [
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'color', size: 'm' },
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
-                                                                    {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'color', size : 'm', view : 'action' },
-                                                                        text : 'button'
-                                                                    }
-                                                                ]
-                                                            },
-                                                            {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'color', view : 'pseudo', size: 'm' },
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm', view: 'action' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'color', size: 'm', disabled : true },
+                                                                        mods: { theme: 'alfa', bkg: 'color', view: 'pseudo', size: 'm' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'color', size : 'm' },
-                                                                        text : 'button',
-                                                                        icon : { block : 'icon', mods : { action : 'download' } }
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm', disabled: true },
+                                                                        text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'color', size : 'm' },
-                                                                        icon : {
-                                                                            block : 'spin',
-                                                                            mods : { theme : 'alfa', bkg : 'color', size : 's', visible : true }
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm' },
+                                                                        text: 'button',
+                                                                        icon: { block: 'icon', mods: { action: 'download' } }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block: 'controls',
+                                                                content: [
+                                                                    {
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm' },
+                                                                        icon: {
+                                                                            block: 'spin',
+                                                                            mods: { theme: 'alfa', bkg: 'color', size: 's', visible: true }
                                                                         },
-                                                                        text : 'Loading...'
+                                                                        text: 'Loading...'
                                                                     }
                                                                 ]
                                                             }
@@ -193,87 +193,87 @@ block('buttons')(
                                 ]
                             },
                             {
-                                tag : 'hr'
+                                tag: 'hr'
                             },
                             {
-                                elem : 'size-section',
+                                elem: 'size-section',
                                 content: [
                                     {
-                                        block : 'row',
-                                        content : [
+                                        block: 'row',
+                                        content: [
                                             {
-                                                elem : 'col',
-                                                mods : { 's' : true },
-                                                content : [
+                                                elem: 'col',
+                                                mods: { 's': true },
+                                                content: [
                                                     {
-                                                        elem : 'sidebar',
-                                                        content : 'L'
+                                                        elem: 'sidebar',
+                                                        content: 'L'
                                                     },
                                                     {
-                                                        elem : 'content',
-                                                        content : [
+                                                        elem: 'content',
+                                                        content: [
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'color', size: 'l' },
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'l' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
-                                                                    {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'color', size : 'l', view : 'action' },
-                                                                        text : 'button'
-                                                                    }
-                                                                ]
-                                                            },
-                                                            {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'color', view : 'pseudo', size: 'l' },
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'l', view: 'action' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'color', size: 'l', disabled : true },
+                                                                        mods: { theme: 'alfa', bkg: 'color', view: 'pseudo', size: 'l' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'color', size : 'l' },
-                                                                        text : 'button',
-                                                                        icon : { block : 'icon', mods : { action : 'download' } }
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'l', disabled: true },
+                                                                        text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'color', size : 'l' },
-                                                                        icon : {
-                                                                            block : 'spin',
-                                                                            mods : { theme : 'alfa', bkg : 'color', size : 'm', visible : true }
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'l' },
+                                                                        text: 'button',
+                                                                        icon: { block: 'icon', mods: { action: 'download' } }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block: 'controls',
+                                                                content: [
+                                                                    {
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'l' },
+                                                                        icon: {
+                                                                            block: 'spin',
+                                                                            mods: { theme: 'alfa', bkg: 'color', size: 'm', visible: true }
                                                                         },
-                                                                        text : 'Loading...'
+                                                                        text: 'Loading...'
                                                                     }
                                                                 ]
                                                             }
@@ -286,87 +286,87 @@ block('buttons')(
                                 ]
                             },
                             {
-                                tag : 'hr'
+                                tag: 'hr'
                             },
                             {
-                                elem : 'size-section',
+                                elem: 'size-section',
                                 content: [
                                     {
-                                        block : 'row',
-                                        content : [
+                                        block: 'row',
+                                        content: [
                                             {
-                                                elem : 'col',
-                                                mods : { 's' : true },
-                                                content : [
+                                                elem: 'col',
+                                                mods: { 's': true },
+                                                content: [
                                                     {
-                                                        elem : 'sidebar',
-                                                        content : 'XL'
+                                                        elem: 'sidebar',
+                                                        content: 'XL'
                                                     },
                                                     {
-                                                        elem : 'content',
-                                                        content : [
+                                                        elem: 'content',
+                                                        content: [
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'color', size: 'xl' },
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'xl' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
-                                                                    {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'color', size : 'xl', view : 'action' },
-                                                                        text : 'button'
-                                                                    }
-                                                                ]
-                                                            },
-                                                            {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'color', view : 'pseudo', size: 'xl' },
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'xl', view: 'action' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'color', size: 'xl', disabled : true },
+                                                                        mods: { theme: 'alfa', bkg: 'color', view: 'pseudo', size: 'xl' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'color', size : 'xl' },
-                                                                        text : 'button',
-                                                                        icon : { block : 'icon', mods : { action : 'download' } }
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'xl', disabled: true },
+                                                                        text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'color', size : 'xl' },
-                                                                        icon : {
-                                                                            block : 'spin',
-                                                                            mods : { theme : 'alfa', bkg : 'color', size : 'l', visible : true }
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'xl' },
+                                                                        text: 'button',
+                                                                        icon: { block: 'icon', mods: { action: 'download' } }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block: 'controls',
+                                                                content: [
+                                                                    {
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'xl' },
+                                                                        icon: {
+                                                                            block: 'spin',
+                                                                            mods: { theme: 'alfa', bkg: 'color', size: 'l', visible: true }
                                                                         },
-                                                                        text : 'Loading...'
+                                                                        text: 'Loading...'
                                                                     }
                                                                 ]
                                                             }
@@ -381,89 +381,89 @@ block('buttons')(
                         ]
                     },
                     {
-                        elem : 'col',
-                        mods : { 's' : true },
-                        mix : { elem : 'white' },
-                        content : [
+                        elem: 'col',
+                        mods: { 's': true },
+                        mix: { elem: 'white' },
+                        content: [
                             {
-                                elem : 'size-section',
-                                content : [
+                                elem: 'size-section',
+                                content: [
                                     {
-                                        block : 'row',
-                                        content : [
+                                        block: 'row',
+                                        content: [
                                             {
-                                                elem : 'col',
-                                                mods : { 's' : true },
-                                                content : [
+                                                elem: 'col',
+                                                mods: { 's': true },
+                                                content: [
                                                     {
-                                                        elem : 'sidebar',
-                                                        content : 'S'
+                                                        elem: 'sidebar',
+                                                        content: 'S'
                                                     },
                                                     {
-                                                        elem : 'content',
-                                                        content : [
+                                                        elem: 'content',
+                                                        content: [
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'white', size: 's' },
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 's' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
-                                                                    {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'white', size : 's', view : 'action' },
-                                                                        text : 'button'
-                                                                    }
-                                                                ]
-                                                            },
-                                                            {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'white', view : 'pseudo', size: 's' },
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 's', view: 'action' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'white', size: 's', disabled : true },
+                                                                        mods: { theme: 'alfa', bkg: 'white', view: 'pseudo', size: 's' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'white', size : 's' },
-                                                                        text : 'button',
-                                                                        icon : { block : 'icon', mods : { action : 'download' } }
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 's', disabled: true },
+                                                                        text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'white', size : 's' },
-                                                                        icon : {
-                                                                            block : 'spin',
-                                                                            mods : { theme : 'alfa', bkg : 'white', size : 'xs', visible : true }
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 's' },
+                                                                        text: 'button',
+                                                                        icon: { block: 'icon', mods: { action: 'download' } }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block: 'controls',
+                                                                content: [
+                                                                    {
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 's' },
+                                                                        icon: {
+                                                                            block: 'spin',
+                                                                            mods: { theme: 'alfa', bkg: 'white', size: 'xs', visible: true }
                                                                         },
-                                                                        text : 'Loading...'
+                                                                        text: 'Loading...'
                                                                     }
                                                                 ]
                                                             }
@@ -476,87 +476,87 @@ block('buttons')(
                                 ]
                             },
                             {
-                                tag : 'hr'
+                                tag: 'hr'
                             },
                             {
-                                elem : 'size-section',
+                                elem: 'size-section',
                                 content: [
                                     {
-                                        block : 'row',
-                                        content : [
+                                        block: 'row',
+                                        content: [
                                             {
-                                                elem : 'col',
-                                                mods : { 's' : true },
-                                                content : [
+                                                elem: 'col',
+                                                mods: { 's': true },
+                                                content: [
                                                     {
-                                                        elem : 'sidebar',
-                                                        content : 'M'
+                                                        elem: 'sidebar',
+                                                        content: 'M'
                                                     },
                                                     {
-                                                        elem : 'content',
-                                                        content : [
+                                                        elem: 'content',
+                                                        content: [
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'white', size: 'm' },
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
-                                                                    {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'white', size : 'm', view : 'action' },
-                                                                        text : 'button'
-                                                                    }
-                                                                ]
-                                                            },
-                                                            {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'white', view : 'pseudo', size: 'm' },
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm', view: 'action' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'white', size: 'm', disabled : true },
+                                                                        mods: { theme: 'alfa', bkg: 'white', view: 'pseudo', size: 'm' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'white', size : 'm' },
-                                                                        text : 'button',
-                                                                        icon : { block : 'icon', mods : { action : 'download' } }
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm', disabled: true },
+                                                                        text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'white', size : 'm' },
-                                                                        icon : {
-                                                                            block : 'spin',
-                                                                            mods : { theme : 'alfa', bkg : 'white', size : 's', visible : true }
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm' },
+                                                                        text: 'button',
+                                                                        icon: { block: 'icon', mods: { action: 'download' } }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block: 'controls',
+                                                                content: [
+                                                                    {
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm' },
+                                                                        icon: {
+                                                                            block: 'spin',
+                                                                            mods: { theme: 'alfa', bkg: 'white', size: 's', visible: true }
                                                                         },
-                                                                        text : 'Loading...'
+                                                                        text: 'Loading...'
                                                                     }
                                                                 ]
                                                             }
@@ -569,87 +569,87 @@ block('buttons')(
                                 ]
                             },
                             {
-                                tag : 'hr'
+                                tag: 'hr'
                             },
                             {
-                                elem : 'size-section',
+                                elem: 'size-section',
                                 content: [
                                     {
-                                        block : 'row',
-                                        content : [
+                                        block: 'row',
+                                        content: [
                                             {
-                                                elem : 'col',
-                                                mods : { 's' : true },
-                                                content : [
+                                                elem: 'col',
+                                                mods: { 's': true },
+                                                content: [
                                                     {
-                                                        elem : 'sidebar',
-                                                        content : 'L'
+                                                        elem: 'sidebar',
+                                                        content: 'L'
                                                     },
                                                     {
-                                                        elem : 'content',
-                                                        content : [
+                                                        elem: 'content',
+                                                        content: [
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'white', size: 'l' },
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'l' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
-                                                                    {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'white', size : 'l', view : 'action' },
-                                                                        text : 'button'
-                                                                    }
-                                                                ]
-                                                            },
-                                                            {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'white', view : 'pseudo', size: 'l' },
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'l', view: 'action' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'white', size: 'l', disabled : true },
+                                                                        mods: { theme: 'alfa', bkg: 'white', view: 'pseudo', size: 'l' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'white', size : 'l' },
-                                                                        text : 'button',
-                                                                        icon : { block : 'icon', mods : { action : 'download' } }
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'l', disabled: true },
+                                                                        text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'white', size : 'l' },
-                                                                        icon : {
-                                                                            block : 'spin',
-                                                                            mods : { theme : 'alfa', bkg : 'white', size : 'm', visible : true }
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'l' },
+                                                                        text: 'button',
+                                                                        icon: { block: 'icon', mods: { action: 'download' } }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block: 'controls',
+                                                                content: [
+                                                                    {
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'l' },
+                                                                        icon: {
+                                                                            block: 'spin',
+                                                                            mods: { theme: 'alfa', bkg: 'white', size: 'm', visible: true }
                                                                         },
-                                                                        text : 'Loading...'
+                                                                        text: 'Loading...'
                                                                     }
                                                                 ]
                                                             }
@@ -662,87 +662,87 @@ block('buttons')(
                                 ]
                             },
                             {
-                                tag : 'hr'
+                                tag: 'hr'
                             },
                             {
-                                elem : 'size-section',
+                                elem: 'size-section',
                                 content: [
                                     {
-                                        block : 'row',
-                                        content : [
+                                        block: 'row',
+                                        content: [
                                             {
-                                                elem : 'col',
-                                                mods : { 's' : true },
-                                                content : [
+                                                elem: 'col',
+                                                mods: { 's': true },
+                                                content: [
                                                     {
-                                                        elem : 'sidebar',
-                                                        content : 'XL'
+                                                        elem: 'sidebar',
+                                                        content: 'XL'
                                                     },
                                                     {
-                                                        elem : 'content',
-                                                        content : [
+                                                        elem: 'content',
+                                                        content: [
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'white', size: 'xl' },
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'xl' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
-                                                                    {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'white', size : 'xl', view : 'action' },
-                                                                        text : 'button'
-                                                                    }
-                                                                ]
-                                                            },
-                                                            {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'white', view : 'pseudo', size: 'xl' },
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'xl', view: 'action' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
                                                                         block: 'button',
-                                                                        mods: { theme: 'alfa', bkg : 'white', size: 'xl', disabled : true },
+                                                                        mods: { theme: 'alfa', bkg: 'white', view: 'pseudo', size: 'xl' },
                                                                         text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'white', size : 'xl' },
-                                                                        text : 'button',
-                                                                        icon : { block : 'icon', mods : { action : 'download' } }
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'xl', disabled: true },
+                                                                        text: 'button'
                                                                     }
                                                                 ]
                                                             },
                                                             {
-                                                                block : 'controls',
-                                                                content : [
+                                                                block: 'controls',
+                                                                content: [
                                                                     {
-                                                                        block : 'button',
-                                                                        mods : { theme: 'alfa', bkg : 'white', size : 'xl' },
-                                                                        icon : {
-                                                                            block : 'spin',
-                                                                            mods : { theme : 'alfa', bkg : 'white', size : 'l', visible : true }
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'xl' },
+                                                                        text: 'button',
+                                                                        icon: { block: 'icon', mods: { action: 'download' } }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                block: 'controls',
+                                                                content: [
+                                                                    {
+                                                                        block: 'button',
+                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'xl' },
+                                                                        icon: {
+                                                                            block: 'spin',
+                                                                            mods: { theme: 'alfa', bkg: 'white', size: 'l', visible: true }
                                                                         },
-                                                                        text : 'Loading...'
+                                                                        text: 'Loading...'
                                                                     }
                                                                 ]
                                                             }
@@ -758,6 +758,6 @@ block('buttons')(
                     }
                 ]
             }
-        ]
+        ];
     })
 );

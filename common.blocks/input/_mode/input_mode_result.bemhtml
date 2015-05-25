@@ -1,18 +1,18 @@
 block('input').mod('mode', 'result')(
     def()(function() {
-        applyNext({ _input : this.ctx });
+        applyNext({ _input: this.ctx });
     }),
 
     elem('box')(
         content()(function() {
             return [
                 {
-                    elem : 'inner',
-                    mods : {
-                        theme : this._input.mods.theme,
-                        bkg : this._input.mods.bkg
+                    elem: 'inner',
+                    mods: {
+                        theme: this._input.mods.theme,
+                        bkg: this._input.mods.bkg
                     },
-                    content : this._input.val
+                    content: this._input.val
                 }
             ];
         })

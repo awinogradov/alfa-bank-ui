@@ -11,11 +11,11 @@ modules.define('input',
  * @class input
  * @bem
  */
-Input.decl({ block : this.name, modName : 'mode', modVal : 'link' }, {
+Input.decl({ block: this.name, modName: 'mode', modVal: 'link' }, {
 
-    onSetMod : {
-        'js' : {
-            'inited' : function() {
+    onSetMod: {
+        'js': {
+            'inited': function() {
                 this.__base.apply(this, arguments);
 
                 var _this = this;
@@ -30,11 +30,11 @@ Input.decl({ block : this.name, modName : 'mode', modVal : 'link' }, {
                 this.bindTo('keyup', _this._onSubmit);
             }
         },
-        'focused' : {
-            'true' : function() {
+        'focused': {
+            'true': function() {
                 this.elem('control').val(this.getVal()).focus();
             },
-            '' : function() {
+            '': function() {
                 this._trigger.setVal(this.getVal() || this.getPlaceholder());
                 this._trigger.updateContent();
                 this.emit('submit');
@@ -42,17 +42,17 @@ Input.decl({ block : this.name, modName : 'mode', modVal : 'link' }, {
         }
     },
 
-    getPlaceholder : function() {
+    getPlaceholder: function() {
         return this._placeholder;
     },
 
-    _onChange : function() {
+    _onChange: function() {
         this._trigger.setVal(this.getVal() || this.getPlaceholder());
         this.getVal() ? this.delMod('empty') : this.setMod('empty');
     },
 
-    _onSubmit : function(e) {
-        if(e.keyCode === keyCodes.ENTER) {
+    _onSubmit: function(e) {
+        if (e.keyCode === keyCodes.ENTER) {
             this.toggleMod('focused');
         }
     }

@@ -1,9 +1,9 @@
 modules.define('form-field', [], function(provide, FormField) {
 
-provide(FormField.decl({ modName : 'message', modValue : 'popup' }, {
-    onSetMod : {
-        'js' : {
-            'inited' : function() {
+provide(FormField.decl({ modName: 'message', modValue: 'popup' }, {
+    onSetMod: {
+        'js': {
+            'inited': function() {
                 this.__base.apply(this, arguments);
 
                 /* istanbul ignore else: no way to check, form-field throws without `type` */
@@ -12,13 +12,13 @@ provide(FormField.decl({ modName : 'message', modValue : 'popup' }, {
                 }
             }
         },
-        'focused' : {
-            'true' : function() {
+        'focused': {
+            'true': function() {
                 this.__base.apply(this, arguments);
 
                 this.hasMod('invalid') && this.getMessage().show();
             },
-            '' : function() {
+            '': function() {
                 this.__base.apply(this, arguments);
 
                 this.getMessage().hide();

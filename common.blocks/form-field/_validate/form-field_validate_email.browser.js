@@ -3,7 +3,7 @@
  */
 modules.define('form-field',
     ['validation_email', 'objects'],
-    function(provide, validate_email, objects, FormField) {
+    function(provide, validateEmail, objects, FormField) {
 
 /**
  * E-mail form-field validation
@@ -12,14 +12,14 @@ modules.define('form-field',
  * @class form-field
  * @bem
  */
-FormField.decl({ modName : 'validate', modVal : 'email' }, /** @lends form-field.prototype */{
+FormField.decl({ modName: 'validate', modVal: 'email' }, /** @lends form-field.prototype */{
 
-    onSetMod : {
-        'js' : {
-            'inited' : function() {
+    onSetMod: {
+        'js': {
+            'inited': function() {
                 this.__base.apply(this, arguments);
 
-                this.getValidator().push(validate_email(this.params.email));
+                this.getValidator().push(validateEmail(this.params.email));
             }
         }
     }

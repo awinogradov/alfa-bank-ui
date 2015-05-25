@@ -6,9 +6,9 @@ modules.define('spec', ['spec__utils', 'input', 'message', 'form-field'], functi
 
         beforeEach(function() {
             bemjson = {
-                block : 'form-field',
-                    mods : {
-                    'has-validate' : true
+                block: 'form-field',
+                    mods: {
+                    'has-validate': true
                 }
             };
         });
@@ -26,10 +26,10 @@ modules.define('spec', ['spec__utils', 'input', 'message', 'form-field'], functi
             bemjson.mods.type = 'input';
             bemjson.mods.message = 'text';
             bemjson.content = {
-                elem : 'control',
-                content : {
-                    block : 'input',
-                    val : 'XXX'
+                elem: 'control',
+                content: {
+                    block: 'input',
+                    val: 'XXX'
                 }
             };
             block = utils.buildBlock('form-field', bemjson);
@@ -51,10 +51,10 @@ modules.define('spec', ['spec__utils', 'input', 'message', 'form-field'], functi
             bemjson.mods.type = 'input';
             bemjson.mods.message = 'text';
             bemjson.content = {
-                elem : 'control',
-                content : {
-                    block : 'input',
-                    val : 'XXX'
+                elem: 'control',
+                content: {
+                    block: 'input',
+                    val: 'XXX'
                 }
             };
             block = utils.buildBlock('form-field', bemjson);

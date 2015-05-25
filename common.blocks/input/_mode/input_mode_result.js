@@ -9,21 +9,21 @@ modules.define('input', function(provide, Input) {
  * @class input
  * @bem
  */
-Input.decl({ modName : 'mode', modVal : 'result' }, {
+Input.decl({ modName: 'mode', modVal: 'result' }, {
 
-    onSetMod : {
-        'js' : {
-            'inited' : function() {
+    onSetMod: {
+        'js': {
+            'inited': function() {
                 this._val = this.elem('inner').text();
             }
         }
     },
-    setVal : function(val) {
+    setVal: function(val) {
         this._val = val;
         this.elem('inner').text(val);
     },
 
-    getVal : function() {
+    getVal: function() {
         return this._val;
     }
 });

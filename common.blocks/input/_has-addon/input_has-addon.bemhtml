@@ -1,4 +1,4 @@
 block('input').mod('has-addon', true).elem('box')
     .content()(function() {
-    return [applyNext(), { elem : 'addon', content : this._input.addon }];
+    return [applyNext(), { elem: 'addon', content: this._input.addon }];
 });

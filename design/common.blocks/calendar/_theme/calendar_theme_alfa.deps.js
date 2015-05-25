@@ -1,5 +1,5 @@
-({
-    mustDeps : [
+[{
+    mustDeps: [
         'variables'
     ]
-})
+}];
