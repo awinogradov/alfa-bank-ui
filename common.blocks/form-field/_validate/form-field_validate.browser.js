@@ -7,10 +7,10 @@
  */
 modules.define('form-field', function(provide, FormField) {
 
-    provide(FormField.decl({ modName : 'validate' }, {
-        onSetMod : {
-            'js' : {
-                'inited' : function() {
+    provide(FormField.decl({ modName: 'validate' }, {
+        onSetMod: {
+            'js': {
+                'inited': function() {
                     this.__base.apply(this, this.arguments);
 
                     if (!this.hasMod('has-validate')) {

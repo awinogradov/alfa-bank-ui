@@ -13,7 +13,7 @@ describe('calendar', function() {
 
     beforeEach(function() {
         bemjson = {
-            block : 'calendar'
+            block: 'calendar'
         };
     });
 

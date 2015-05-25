@@ -5,9 +5,9 @@ modules.define('spec', ['input', 'spec__utils'], function(provide, _, helper) {
 
         beforeEach(function() {
             input = helper.buildBlock('input', {
-                block : 'input',
-                mods : { mode : 'result' },
-                val : 'result_before'
+                block: 'input',
+                mods: { mode: 'result' },
+                val: 'result_before'
             });
         });
 

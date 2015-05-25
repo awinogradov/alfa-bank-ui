@@ -3,242 +3,57 @@ block('forms')(
 
         return [
             {
-                block : 'row',
-                content : [
+                block: 'row',
+                content: [
                     {
-                        elem : 'col',
-                        mods : { 's' : true },
-                        content : [
+                        elem: 'col',
+                        mods: { 's': true },
+                        content: [
                             {
-                                block : 'form',
-                                mods : {
-                                    'has-validate' : true,
-                                    message : 'popup'
+                                block: 'form',
+                                mods: {
+                                    'has-validate': true,
+                                    message: 'popup'
                                 },
-                                method : 'GET',
-                                content : [
+                                method: 'GET',
+                                content: [
                                     {
-                                        block : 'row',
-                                        content : [
+                                        block: 'row',
+                                        content: [
                                             {
-                                                elem : 'col',
-                                                mods : { sw : 2 },
-                                                content : [
+                                                elem: 'col',
+                                                mods: { sw: 2 },
+                                                content: [
                                                     {
-                                                        block : 'label',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm' },
-                                                        content : 'Тип карты'
+                                                        block: 'label',
+                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm' },
+                                                        content: 'Тип карты'
                                                     }
                                                 ]
                                             },
                                             {
-                                                elem : 'col',
-                                                mods : { sw : 4 },
-                                                content : [
+                                                elem: 'col',
+                                                mods: { sw: 4 },
+                                                content: [
                                                     {
-                                                        block : 'form-field',
-                                                        id : 'input',
-                                                        mods : {
-                                                            type : 'input',
-                                                            'has-validate' : true,
-                                                            message : 'popup',
-                                                            required : true,
-                                                            theme : 'alfa',
-                                                            bkg : 'color'
+                                                        block: 'form-field',
+                                                        id: 'input',
+                                                        mods: {
+                                                            type: 'input',
+                                                            'has-validate': true,
+                                                            message: 'popup',
+                                                            required: true,
+                                                            theme: 'alfa',
+                                                            bkg: 'color'
                                                         },
-                                                        content : [
+                                                        content: [
                                                             {
-                                                                block : 'select',
-                                                                mods : { mode : 'radio-check', theme : 'alfa', bkg : 'color', size : 'm' },
-                                                                name : 'card-type',
-                                                                options : [
-                                                                    { val : 1, text : 'Дебетовая', checked: true },
-                                                                    { val : 2, text : 'Кредитная' }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        block : 'row',
-                                        content : [
-                                            {
-                                                elem : 'col',
-                                                mods : { sw : 2 },
-                                                content : [
-                                                    {
-                                                        block : 'label',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm' },
-                                                        content : 'Количество'
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                elem : 'col',
-                                                mods : { sw : 4 },
-                                                content : [
-                                                    {
-                                                        block : 'form-field',
-                                                        id : 'input2',
-                                                        mods : {
-                                                            type : 'input',
-                                                            message : 'popup',
-                                                            'has-validate' : true,
-                                                            required : true,
-                                                            theme : 'alfa',
-                                                            bkg : 'color'
-                                                        },
-                                                        content : [
-                                                            {
-                                                                block : 'select',
-                                                                mods : { mode : 'radio-check', theme : 'alfa', bkg : 'color', size : 'm' },
-                                                                name : 'card-count',
-                                                                options : [
-                                                                    { val : 1, text : '1', checked: true },
-                                                                    { val : 2, text : '2' },
-                                                                    { val : 2, text : '3' },
-                                                                    { val : 2, text : '4' }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        block : 'row',
-                                        content : [
-                                            {
-                                                elem : 'col',
-                                                mods : { sw : 2 },
-                                                content : [
-                                                    {
-                                                        block : 'label',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm' },
-                                                        content : 'Валюта'
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                elem : 'col',
-                                                mods : { sw : 4 },
-                                                content : [
-                                                    {
-                                                        block : 'form-field',
-                                                        id : 'input2',
-                                                        mods : {
-                                                            type : 'input',
-                                                            message : 'popup',
-                                                            'has-validate' : true,
-                                                            required : true,
-                                                            theme : 'alfa',
-                                                            bkg : 'color'
-                                                        },
-                                                        content : [
-                                                            {
-                                                                block : 'radio-group',
-                                                                mods : { theme : 'alfa', bkg : 'color', size : 'm', type : 'button' },
-                                                                name : 'currency',
-                                                                options : [
-                                                                    { val : 1, text : '₽', checked : true },
-                                                                    { val : 2, text : '€' },
-                                                                    { val : 3, text : '$' }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        block : 'row',
-                                        content : [
-                                            {
-                                                elem : 'col',
-                                                mods : { sw : 2 },
-                                                content : [
-                                                    {
-                                                        block : 'label',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm' },
-                                                        content : 'Сумма'
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                elem : 'col',
-                                                mods : { sw : 4 },
-                                                content : [
-                                                    {
-                                                        block : 'form-field',
-                                                        id : 'input2',
-                                                        mods : {
-                                                            type : 'input',
-                                                            message : 'popup',
-                                                            'has-validate' : true,
-                                                            required : true,
-                                                            theme : 'alfa',
-                                                            bkg : 'color'
-                                                        },
-                                                        content : [
-                                                            {
-                                                                block : 'input',
-                                                                name : 'count',
-                                                                mods : {
-                                                                    theme : 'alfa',
-                                                                    bkg : 'color',
-                                                                    size : 'm',
-                                                                    type : 'symbol'
-                                                                },
-                                                                symbol : '₽'
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        block : 'row',
-                                        content : [
-                                            {
-                                                elem : 'col',
-                                                mods : { sw : 2 },
-                                                content : [
-                                                    {
-                                                        block : 'label',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm' },
-                                                        content : 'Доп. услуги'
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                elem : 'col',
-                                                mods : { sw : 4 },
-                                                content : [
-                                                    {
-                                                        block : 'form-field',
-                                                        id : 'input2',
-                                                        mods : {
-                                                            type : 'input',
-                                                            message : 'popup',
-                                                            'has-validate' : true,
-                                                            required : true,
-                                                            theme : 'alfa',
-                                                            bkg : 'color'
-                                                        },
-                                                        content : [
-                                                            {
-                                                                block : 'checkbox-group',
-                                                                mods : { theme : 'alfa', bkg : 'color', size : 'm' },
-                                                                name : 'adv-service',
-                                                                options : [
-                                                                    { val : 1, text : 'Индивидуальный дизайн' },
-                                                                    { val : 2, text : 'Альфа-Чек', checked : true }
+                                                                block: 'select',
+                                                                mods: { mode: 'radio-check', theme: 'alfa', bkg: 'color', size: 'm' },
+                                                                name: 'card-type',
+                                                                options: [
+                                                                    { val: 1, text: 'Дебетовая', checked: true },
+                                                                    { val: 2, text: 'Кредитная' }
                                                                 ]
                                                             }
                                                         ]
@@ -252,15 +67,200 @@ block('forms')(
                                         content: [
                                             {
                                                 elem: 'col',
-                                                mods: {sw: 2}
+                                                mods: { sw: 2 },
+                                                content: [
+                                                    {
+                                                        block: 'label',
+                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm' },
+                                                        content: 'Количество'
+                                                    }
+                                                ]
                                             },
                                             {
                                                 elem: 'col',
-                                                mods: {sw: 3},
+                                                mods: { sw: 4 },
+                                                content: [
+                                                    {
+                                                        block: 'form-field',
+                                                        id: 'input2',
+                                                        mods: {
+                                                            type: 'input',
+                                                            message: 'popup',
+                                                            'has-validate': true,
+                                                            required: true,
+                                                            theme: 'alfa',
+                                                            bkg: 'color'
+                                                        },
+                                                        content: [
+                                                            {
+                                                                block: 'select',
+                                                                mods: { mode: 'radio-check', theme: 'alfa', bkg: 'color', size: 'm' },
+                                                                name: 'card-count',
+                                                                options: [
+                                                                    { val: 1, text: '1', checked: true },
+                                                                    { val: 2, text: '2' },
+                                                                    { val: 2, text: '3' },
+                                                                    { val: 2, text: '4' }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        block: 'row',
+                                        content: [
+                                            {
+                                                elem: 'col',
+                                                mods: { sw: 2 },
+                                                content: [
+                                                    {
+                                                        block: 'label',
+                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm' },
+                                                        content: 'Валюта'
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                elem: 'col',
+                                                mods: { sw: 4 },
+                                                content: [
+                                                    {
+                                                        block: 'form-field',
+                                                        id: 'input2',
+                                                        mods: {
+                                                            type: 'input',
+                                                            message: 'popup',
+                                                            'has-validate': true,
+                                                            required: true,
+                                                            theme: 'alfa',
+                                                            bkg: 'color'
+                                                        },
+                                                        content: [
+                                                            {
+                                                                block: 'radio-group',
+                                                                mods: { theme: 'alfa', bkg: 'color', size: 'm', type: 'button' },
+                                                                name: 'currency',
+                                                                options: [
+                                                                    { val: 1, text: '₽', checked: true },
+                                                                    { val: 2, text: '€' },
+                                                                    { val: 3, text: '$' }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        block: 'row',
+                                        content: [
+                                            {
+                                                elem: 'col',
+                                                mods: { sw: 2 },
+                                                content: [
+                                                    {
+                                                        block: 'label',
+                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm' },
+                                                        content: 'Сумма'
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                elem: 'col',
+                                                mods: { sw: 4 },
+                                                content: [
+                                                    {
+                                                        block: 'form-field',
+                                                        id: 'input2',
+                                                        mods: {
+                                                            type: 'input',
+                                                            message: 'popup',
+                                                            'has-validate': true,
+                                                            required: true,
+                                                            theme: 'alfa',
+                                                            bkg: 'color'
+                                                        },
+                                                        content: [
+                                                            {
+                                                                block: 'input',
+                                                                name: 'count',
+                                                                mods: {
+                                                                    theme: 'alfa',
+                                                                    bkg: 'color',
+                                                                    size: 'm',
+                                                                    type: 'symbol'
+                                                                },
+                                                                symbol: '₽'
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        block: 'row',
+                                        content: [
+                                            {
+                                                elem: 'col',
+                                                mods: { sw: 2 },
+                                                content: [
+                                                    {
+                                                        block: 'label',
+                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm' },
+                                                        content: 'Доп. услуги'
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                elem: 'col',
+                                                mods: { sw: 4 },
+                                                content: [
+                                                    {
+                                                        block: 'form-field',
+                                                        id: 'input2',
+                                                        mods: {
+                                                            type: 'input',
+                                                            message: 'popup',
+                                                            'has-validate': true,
+                                                            required: true,
+                                                            theme: 'alfa',
+                                                            bkg: 'color'
+                                                        },
+                                                        content: [
+                                                            {
+                                                                block: 'checkbox-group',
+                                                                mods: { theme: 'alfa', bkg: 'color', size: 'm' },
+                                                                name: 'adv-service',
+                                                                options: [
+                                                                    { val: 1, text: 'Индивидуальный дизайн' },
+                                                                    { val: 2, text: 'Альфа-Чек', checked: true }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        block: 'row',
+                                        content: [
+                                            {
+                                                elem: 'col',
+                                                mods: { sw: 2 }
+                                            },
+                                            {
+                                                elem: 'col',
+                                                mods: { sw: 3 },
                                                 content: [
                                                     {
                                                         block: 'button',
-                                                        mods: {theme: 'alfa', bkg: 'color', type: 'submit', size: 'm', view: 'action'},
+                                                        mods: { theme: 'alfa', bkg: 'color', type: 'submit', size: 'm', view: 'action' },
                                                         text: 'Отправить заявку'
                                                     }
                                                 ]
@@ -272,240 +272,55 @@ block('forms')(
                         ]
                     },
                     {
-                        elem : 'col',
-                        mods : { 's' : true },
-                        mix : { elem : 'white' },
-                        content : [
+                        elem: 'col',
+                        mods: { 's': true },
+                        mix: { elem: 'white' },
+                        content: [
                             {
-                                block : 'form',
-                                mods : {
-                                    'has-validate' : true,
-                                    message : 'popup'
+                                block: 'form',
+                                mods: {
+                                    'has-validate': true,
+                                    message: 'popup'
                                 },
-                                method : 'GET',
-                                content : [
+                                method: 'GET',
+                                content: [
                                     {
-                                        block : 'row',
-                                        content : [
+                                        block: 'row',
+                                        content: [
                                             {
-                                                elem : 'col',
-                                                mods : { sw : 2 },
-                                                content : [
+                                                elem: 'col',
+                                                mods: { sw: 2 },
+                                                content: [
                                                     {
-                                                        block : 'label',
-                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm' },
-                                                        content : 'Тип карты'
+                                                        block: 'label',
+                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm' },
+                                                        content: 'Тип карты'
                                                     }
                                                 ]
                                             },
                                             {
-                                                elem : 'col',
-                                                mods : { sw : 4 },
-                                                content : [
+                                                elem: 'col',
+                                                mods: { sw: 4 },
+                                                content: [
                                                     {
-                                                        block : 'form-field',
-                                                        id : 'input',
-                                                        mods : {
-                                                            type : 'input',
-                                                            'has-validate' : true,
-                                                            message : 'popup',
-                                                            required : true,
-                                                            theme : 'alfa',
-                                                            bkg : 'white'
+                                                        block: 'form-field',
+                                                        id: 'input',
+                                                        mods: {
+                                                            type: 'input',
+                                                            'has-validate': true,
+                                                            message: 'popup',
+                                                            required: true,
+                                                            theme: 'alfa',
+                                                            bkg: 'white'
                                                         },
-                                                        content : [
+                                                        content: [
                                                             {
-                                                                block : 'select',
-                                                                mods : { mode : 'radio-check', theme : 'alfa', bkg : 'white', size : 'm' },
-                                                                name : 'card-type',
-                                                                options : [
-                                                                    { val : 1, text : 'Дебетовая', checked: true },
-                                                                    { val : 2, text : 'Кредитная' }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        block : 'row',
-                                        content : [
-                                            {
-                                                elem : 'col',
-                                                mods : { sw : 2 },
-                                                content : [
-                                                    {
-                                                        block : 'label',
-                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm' },
-                                                        content : 'Количество'
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                elem : 'col',
-                                                mods : { sw : 4 },
-                                                content : [
-                                                    {
-                                                        block : 'form-field',
-                                                        id : 'input2',
-                                                        mods : {
-                                                            type : 'input',
-                                                            message : 'popup',
-                                                            'has-validate' : true,
-                                                            required : true,
-                                                            theme : 'alfa',
-                                                            bkg : 'white'
-                                                        },
-                                                        content : [
-                                                            {
-                                                                block : 'select',
-                                                                mods : { mode : 'radio-check', theme : 'alfa', bkg : 'white', size : 'm' },
-                                                                name : 'card-count',
-                                                                options : [
-                                                                    { val : 1, text : '1', checked: true },
-                                                                    { val : 2, text : '2' },
-                                                                    { val : 2, text : '3' },
-                                                                    { val : 2, text : '4' }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        block : 'row',
-                                        content : [
-                                            {
-                                                elem : 'col',
-                                                mods : { sw : 2 },
-                                                content : [
-                                                    {
-                                                        block : 'label',
-                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm' },
-                                                        content : 'Валюта'
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                elem : 'col',
-                                                mods : { sw : 4 },
-                                                content : [
-                                                    {
-                                                        block : 'form-field',
-                                                        id : 'input2',
-                                                        mods : {
-                                                            type : 'input',
-                                                            message : 'popup',
-                                                            'has-validate' : true,
-                                                            required : true,
-                                                            theme : 'alfa',
-                                                            bkg : 'white'
-                                                        },
-                                                        content : [
-                                                            {
-                                                                block : 'radio-group',
-                                                                mods : { theme : 'alfa', bkg : 'white', size : 'm', type : 'button' },
-                                                                name : 'currency',
-                                                                options : [
-                                                                    { val : 1, text : '₽', checked : true },
-                                                                    { val : 2, text : '€' },
-                                                                    { val : 3, text : '$' }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        block : 'row',
-                                        content : [
-                                            {
-                                                elem : 'col',
-                                                mods : { sw : 2 },
-                                                content : [
-                                                    {
-                                                        block : 'label',
-                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm' },
-                                                        content : 'Сумма'
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                elem : 'col',
-                                                mods : { sw : 4 },
-                                                content : [
-                                                    {
-                                                        block : 'form-field',
-                                                        id : 'input2',
-                                                        mods : {
-                                                            type : 'input',
-                                                            message : 'popup',
-                                                            'has-validate' : true,
-                                                            required : true,
-                                                            theme : 'alfa',
-                                                            bkg : 'white'
-                                                        },
-                                                        content : [
-                                                            {
-                                                                block : 'input',
-                                                                name : 'count',
-                                                                mods : {
-                                                                    theme : 'alfa',
-                                                                    bkg : 'white',
-                                                                    size : 'm',
-                                                                    type : 'symbol'
-                                                                },
-                                                                symbol : '₽'
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        block : 'row',
-                                        content : [
-                                            {
-                                                elem : 'col',
-                                                mods : { sw : 2 },
-                                                content : [
-                                                    {
-                                                        block : 'label',
-                                                        mods : { theme : 'alfa', bkg : 'white', size : 'm' },
-                                                        content : 'Доп. услуги'
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                elem : 'col',
-                                                mods : { sw : 4 },
-                                                content : [
-                                                    {
-                                                        block : 'form-field',
-                                                        id : 'input2',
-                                                        mods : {
-                                                            type : 'input',
-                                                            message : 'popup',
-                                                            'has-validate' : true,
-                                                            required : true,
-                                                            theme : 'alfa',
-                                                            bkg : 'white'
-                                                        },
-                                                        content : [
-                                                            {
-                                                                block : 'checkbox-group',
-                                                                mods : { theme : 'alfa', bkg : 'white', size : 'm' },
-                                                                name : 'adv-service',
-                                                                options : [
-                                                                    { val : 1, text : 'Индивидуальный дизайн' },
-                                                                    { val : 2, text : 'Альфа-Чек', checked : true }
+                                                                block: 'select',
+                                                                mods: { mode: 'radio-check', theme: 'alfa', bkg: 'white', size: 'm' },
+                                                                name: 'card-type',
+                                                                options: [
+                                                                    { val: 1, text: 'Дебетовая', checked: true },
+                                                                    { val: 2, text: 'Кредитная' }
                                                                 ]
                                                             }
                                                         ]
@@ -519,15 +334,200 @@ block('forms')(
                                         content: [
                                             {
                                                 elem: 'col',
-                                                mods: {sw: 2}
+                                                mods: { sw: 2 },
+                                                content: [
+                                                    {
+                                                        block: 'label',
+                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm' },
+                                                        content: 'Количество'
+                                                    }
+                                                ]
                                             },
                                             {
                                                 elem: 'col',
-                                                mods: {sw: 3},
+                                                mods: { sw: 4 },
+                                                content: [
+                                                    {
+                                                        block: 'form-field',
+                                                        id: 'input2',
+                                                        mods: {
+                                                            type: 'input',
+                                                            message: 'popup',
+                                                            'has-validate': true,
+                                                            required: true,
+                                                            theme: 'alfa',
+                                                            bkg: 'white'
+                                                        },
+                                                        content: [
+                                                            {
+                                                                block: 'select',
+                                                                mods: { mode: 'radio-check', theme: 'alfa', bkg: 'white', size: 'm' },
+                                                                name: 'card-count',
+                                                                options: [
+                                                                    { val: 1, text: '1', checked: true },
+                                                                    { val: 2, text: '2' },
+                                                                    { val: 2, text: '3' },
+                                                                    { val: 2, text: '4' }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        block: 'row',
+                                        content: [
+                                            {
+                                                elem: 'col',
+                                                mods: { sw: 2 },
+                                                content: [
+                                                    {
+                                                        block: 'label',
+                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm' },
+                                                        content: 'Валюта'
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                elem: 'col',
+                                                mods: { sw: 4 },
+                                                content: [
+                                                    {
+                                                        block: 'form-field',
+                                                        id: 'input2',
+                                                        mods: {
+                                                            type: 'input',
+                                                            message: 'popup',
+                                                            'has-validate': true,
+                                                            required: true,
+                                                            theme: 'alfa',
+                                                            bkg: 'white'
+                                                        },
+                                                        content: [
+                                                            {
+                                                                block: 'radio-group',
+                                                                mods: { theme: 'alfa', bkg: 'white', size: 'm', type: 'button' },
+                                                                name: 'currency',
+                                                                options: [
+                                                                    { val: 1, text: '₽', checked: true },
+                                                                    { val: 2, text: '€' },
+                                                                    { val: 3, text: '$' }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        block: 'row',
+                                        content: [
+                                            {
+                                                elem: 'col',
+                                                mods: { sw: 2 },
+                                                content: [
+                                                    {
+                                                        block: 'label',
+                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm' },
+                                                        content: 'Сумма'
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                elem: 'col',
+                                                mods: { sw: 4 },
+                                                content: [
+                                                    {
+                                                        block: 'form-field',
+                                                        id: 'input2',
+                                                        mods: {
+                                                            type: 'input',
+                                                            message: 'popup',
+                                                            'has-validate': true,
+                                                            required: true,
+                                                            theme: 'alfa',
+                                                            bkg: 'white'
+                                                        },
+                                                        content: [
+                                                            {
+                                                                block: 'input',
+                                                                name: 'count',
+                                                                mods: {
+                                                                    theme: 'alfa',
+                                                                    bkg: 'white',
+                                                                    size: 'm',
+                                                                    type: 'symbol'
+                                                                },
+                                                                symbol: '₽'
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        block: 'row',
+                                        content: [
+                                            {
+                                                elem: 'col',
+                                                mods: { sw: 2 },
+                                                content: [
+                                                    {
+                                                        block: 'label',
+                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm' },
+                                                        content: 'Доп. услуги'
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                elem: 'col',
+                                                mods: { sw: 4 },
+                                                content: [
+                                                    {
+                                                        block: 'form-field',
+                                                        id: 'input2',
+                                                        mods: {
+                                                            type: 'input',
+                                                            message: 'popup',
+                                                            'has-validate': true,
+                                                            required: true,
+                                                            theme: 'alfa',
+                                                            bkg: 'white'
+                                                        },
+                                                        content: [
+                                                            {
+                                                                block: 'checkbox-group',
+                                                                mods: { theme: 'alfa', bkg: 'white', size: 'm' },
+                                                                name: 'adv-service',
+                                                                options: [
+                                                                    { val: 1, text: 'Индивидуальный дизайн' },
+                                                                    { val: 2, text: 'Альфа-Чек', checked: true }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        block: 'row',
+                                        content: [
+                                            {
+                                                elem: 'col',
+                                                mods: { sw: 2 }
+                                            },
+                                            {
+                                                elem: 'col',
+                                                mods: { sw: 3 },
                                                 content: [
                                                     {
                                                         block: 'button',
-                                                        mods: {theme: 'alfa', bkg: 'white', type: 'submit', size: 'm', view: 'action'},
+                                                        mods: { theme: 'alfa', bkg: 'white', type: 'submit', size: 'm', view: 'action' },
                                                         text: 'Отправить заявку'
                                                     }
                                                 ]
@@ -540,6 +540,6 @@ block('forms')(
                     }
                 ]
             }
-        ]
+        ];
     })
 );

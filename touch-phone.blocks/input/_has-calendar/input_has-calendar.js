@@ -14,7 +14,7 @@ provide(BEMDOM.decl({ block: this.name, modName: 'has-calendar' }, /** @lends in
         js: function() {
             this.__base.apply(this, arguments);
 
-            if(this.__self._checkNativeDatepicker()) {
+            if (this.__self._checkNativeDatepicker()) {
                 this._initIosNativeCalendar();
             } else {
                 this._calendar.setDirections([
@@ -41,14 +41,14 @@ provide(BEMDOM.decl({ block: this.name, modName: 'has-calendar' }, /** @lends in
         this.unbindFrom('calendar', 'pointerclick');
 
         BEMDOM.append(this.domElem, BEMHTML.apply({
-            block : 'input',
-            elem : 'ios-calendar'
+            block: 'input',
+            elem: 'ios-calendar'
         }));
 
         // Forwarding date to base input
         this.bindTo('ios-calendar', 'change', this._onChangeIosNativeCalendar);
     },
-    _onChangeIosNativeCalendar : function() {
+    _onChangeIosNativeCalendar: function() {
         var val = this.elem('ios-calendar').val().split('-').reverse().join('.');
         this.setVal(val);
     }
@@ -57,11 +57,11 @@ provide(BEMDOM.decl({ block: this.name, modName: 'has-calendar' }, /** @lends in
     _checkNativeDatepicker: function() {
         var isSupport = false;
 
-        if(typeof this._isNativeDateSupport === 'undefined') {
+        if (typeof this._isNativeDateSupport === 'undefined') {
             try {
                 isSupport = $('<input>').prop('type', 'date').prop('type') === 'date' &&
                     (ua.ios > '5' || (ua.android && ua.chrome > '20') || ua.opera > '15');
-            } catch(e) {}
+            } catch (e) {}
 
             this._isNativeDateSupport = isSupport;
         }

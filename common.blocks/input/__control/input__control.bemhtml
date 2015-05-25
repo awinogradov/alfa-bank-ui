@@ -4,13 +4,13 @@ block('input').elem('control')(
     attrs()(function() {
         var input = this._input,
             attrs = {
-                type : 'text',
-                id : input.id || this._currentId,
-                name : input.name,
-                value : input.val,
-                maxlength : input.maxLength,
-                tabindex : input.tabIndex,
-                placeholder : input.placeholder
+                type: 'text',
+                id: input.id || this._currentId,
+                name: input.name,
+                value: input.val,
+                maxlength: input.maxLength,
+                tabindex: input.tabIndex,
+                placeholder: input.placeholder
             };
 
         input.autocomplete !== true && (attrs.autocomplete = 'off');

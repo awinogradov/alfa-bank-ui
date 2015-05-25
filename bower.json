@@ -1,6 +1,6 @@
 {
   "name": "nyc-public",
-  "version": "3.0.2",
+  "version": "3.1.0",
   "description": "NYC Public Library of UI components",
   "repository": {
     "type": "git",
@@ -13,8 +13,8 @@
     "libs"
   ],
   "dependencies": {
-    "bem-core": "2.5.1",
-    "bem-components": "2.0.0",
+    "bem-core": "2.6.0",
+    "bem-components": "2.1.1",
     "bem-grid": "1.2.3",
     "bem-typography": "1.0.1",
     "bem-forms": "bem/bem-forms#19b868dbed68a3451f1398b7b831fc936248d504"
@@ -23,7 +23,7 @@
     "bem-pr": "ssh://git@git/man/bem-pr.git"
   },
   "resolutions": {
-    "bem-components": "2.0.0",
-    "bem-core": "2.5.1"
+    "bem-components": "2.1.1",
+    "bem-core": "2.6.0"
   }
 }

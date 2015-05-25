@@ -9,19 +9,19 @@ modules.define('plate', function(provide, Plate) {
      * @class plate_has-clear
      * @bem
      */
-    Plate.decl({ modName : 'has-clear', modVal : true }, {
+    Plate.decl({ modName: 'has-clear', modVal: true }, {
 
-            onSetMod : {
-                'js' : {
-                    'inited' : function() {
+            onSetMod: {
+                'js': {
+                    'inited': function() {
                         this.__base.apply(this.arguments);
-                        this.bindTo('clear', 'click', function (){
+                        this.bindTo('clear', 'click', function() {
                             this._onClick();
                         });
                     }
                 }
             },
-            _onClick : function() {
+            _onClick: function() {
                 this.setMod('hidden');
                 this.emit('hide');
             }

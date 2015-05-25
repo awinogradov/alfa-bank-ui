@@ -1,4 +1,4 @@
-//({
+// ({
 //    block : 'page',
 //    title : 'nyc-public: logo',
 //    mods : { theme : 'alfa', bkg : 'color' },
@@ -12,4 +12,4 @@
 //            mods : { theme : 'alfa', bkg : 'color', size : 's', view : 'icon' }
 //        }
 //    ]
-//})
+// })

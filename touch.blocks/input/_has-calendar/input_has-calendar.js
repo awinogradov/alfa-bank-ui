@@ -10,7 +10,7 @@ modules.define('input', ['i-bem__dom'], function(provide, BEMDOM) {
  * @augments control
  * @bem
  */
-provide(BEMDOM.decl({ block : this.name, modName: 'has-calendar' }, /** @lends input.prototype */{
+provide(BEMDOM.decl({ block: this.name, modName: 'has-calendar' }, /** @lends input.prototype */{
     onSetMod: {
         js: function() {
             this.elem('control').attr('readonly', 'readonly');

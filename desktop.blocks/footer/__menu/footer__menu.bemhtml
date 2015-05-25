@@ -4,20 +4,20 @@ block('footer').elem('menu')(
 
         return [
             {
-                block : 'menu',
-                mods : {
-                    theme : _this._footerMods.theme,
-                    bkg : _this._footerMods.bkg,
-                    size : 'm',
-                    horizontal : true
+                block: 'menu',
+                mods: {
+                    theme: _this._footerMods.theme,
+                    bkg: _this._footerMods.bkg,
+                    size: 'm',
+                    horizontal: true
                 },
-                content : _this._footer.menu && _this._footer.menu.map(function(item) {
+                content: _this._footer.menu && _this._footer.menu.map(function(item) {
                     return {
-                        block : 'menu-item',
-                        mods : { type : 'link' },
-                        url : item.url,
-                        content : item.title,
-                        target : item.target
+                        block: 'menu-item',
+                        mods: { type: 'link' },
+                        url: item.url,
+                        content: item.title,
+                        target: item.target
                     };
                 })
             }

@@ -6,8 +6,8 @@ modules.define('spec', ['spec__utils', 'tooltip', 'popup'], function(provide, ut
 
         beforeEach(function() {
             block = utils.buildBlock('tooltip', {
-                block : 'tooltip',
-                content : 'content'
+                block: 'tooltip',
+                content: 'content'
             });
         });
 

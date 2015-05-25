@@ -3,21 +3,21 @@ block('footer')(
 
         return [
             {
-                elem : 'menu',
-                content : [
+                elem: 'menu',
+                content: [
                     {
-                        block : 'menu',
-                        mods : { bkg : 'color', theme : 'alfa', size : 'm', horizontal : true },
-                        content : 'footer'
+                        block: 'menu',
+                        mods: { bkg: 'color', theme: 'alfa', size: 'm', horizontal: true },
+                        content: 'footer'
                     }
                 ]
             },
             {
-                elem : 'copyright',
-                content : [
-                    { block : 'copyright' }
+                elem: 'copyright',
+                content: [
+                    { block: 'copyright' }
                 ]
             }
-        ]
+        ];
     })
 );

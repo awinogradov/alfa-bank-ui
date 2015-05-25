@@ -1,23 +1,23 @@
 block('input').mod('has-autocomplete', true)(
     def()(function() {
-        applyNext({ _input : this.ctx });
+        applyNext({ _input: this.ctx });
     }),
     elem('box')(
         content()(function() {
 
             function mapItems(item) {
-                if(item.group) {
+                if (item.group) {
                     return {
-                        elem : 'group',
-                        title : item.title,
-                        content : item.group.map(mapItems)
+                        elem: 'group',
+                        title: item.title,
+                        content: item.group.map(mapItems)
                     };
                 } else {
                     return {
-                        block : 'menu-item',
-                        val : item.val,
-                        data : item.data,
-                        content : item.content
+                        block: 'menu-item',
+                        val: item.val,
+                        data: item.data,
+                        content: item.content
                     };
                 }
             }
@@ -25,26 +25,26 @@ block('input').mod('has-autocomplete', true)(
             return [
                 applyNext(),
                 {
-                    block : 'popup',
-                    mods : {
-                        target : 'anchor',
-                        theme : this._input.mods.theme,
-                        bkg : this._input.mods.bkg,
-                        size : this._input.mods.size,
-                        view : 'dropdown'
+                    block: 'popup',
+                    mods: {
+                        target: 'anchor',
+                        theme: this._input.mods.theme,
+                        bkg: this._input.mods.bkg,
+                        size: this._input.mods.size,
+                        view: 'dropdown'
                     },
-                    directions : ['bottom-left', 'bottom-right'],
-                    content : [
+                    directions: ['bottom-left', 'bottom-right'],
+                    content: [
                         {
-                            block : 'menu',
-                            mods : {
-                                mode : 'radio-check',
-                                theme : this._input.mods.theme,
-                                bkg : this._input.mods.bkg,
-                                size : this._input.mods.size,
-                                view : 'dropdown'
+                            block: 'menu',
+                            mods: {
+                                mode: 'radio-check',
+                                theme: this._input.mods.theme,
+                                bkg: this._input.mods.bkg,
+                                size: this._input.mods.size,
+                                view: 'dropdown'
                             },
-                            content : this._input.options.map(mapItems)
+                            content: this._input.options.map(mapItems)
                         }
                     ]
                 }

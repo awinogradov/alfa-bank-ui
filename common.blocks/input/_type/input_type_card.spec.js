@@ -4,8 +4,8 @@ modules.define('spec', ['spec__utils', 'jquery__formatter', 'input'], function(p
 
         it('should init without errors', function() {
             var block = utils.buildBlock('input', {
-                block : 'input',
-                mods : { type : 'card' }
+                block: 'input',
+                mods: { type: 'card' }
             });
 
             utils.destruct(block);
@@ -13,9 +13,9 @@ modules.define('spec', ['spec__utils', 'jquery__formatter', 'input'], function(p
 
         it('should return value without spaces', function() {
             var block = utils.buildBlock('input', {
-                block : 'input',
-                mods : { type : 'card' },
-                val : '0000 0000 0000 0000'
+                block: 'input',
+                mods: { type: 'card' },
+                val: '0000 0000 0000 0000'
             });
 
             block.getVal().should.equal('0000000000000000');

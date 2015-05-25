@@ -1,6 +1,6 @@
-({
-    mustDeps : [
-        { block : 'calc', elem : 'rem' }
+[{
+    mustDeps: [
+        { block: 'calc', elem: 'rem' }
     ],
-    shouldDeps : []
-})
+    shouldDeps: []
+}];

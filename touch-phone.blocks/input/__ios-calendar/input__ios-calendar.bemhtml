@@ -1,4 +1,4 @@
 block('input')(
     tag()('input'),
-    attrs({ type : 'date', value : '' })
+    attrs({ type: 'date', value: '' })
 );

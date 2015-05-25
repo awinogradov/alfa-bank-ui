@@ -1,3 +1,3 @@
-({
-    shouldDeps : { block : 'checkbox', mods : { theme : 'alfa' } }
-})
+[{
+    shouldDeps: { block: 'checkbox', mods: { theme: 'alfa' } }
+}];

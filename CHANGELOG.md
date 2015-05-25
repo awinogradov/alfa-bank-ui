@@ -1,3 +1,25 @@
+<a name"3.1.0"></a>
+## 3.1.0 (2015-05-22)
+
+
+#### Bug Fixes
+
+* **input:** has_calendar style fix' ([d2f39b4](http://git/projects/MAN/repos/nyc-public/commits/d2f39b46a175e5bfeaed9abc327c09aecbd3e743))
+* **input-email:** disable default bubble ([46d6857](http://git/projects/MAN/repos/nyc-public/commits/46d6857e92099fa7cdf52b8e7e15e24c25a2a58f))
+* **input_has-addon:** applyNext() instead this.ctx.content ([ad130ce](http://git/projects/MAN/repos/nyc-public/commits/ad130ce5cdac4bc68781eeac20e6c65d68c93735))
+
+
+#### Features
+
+* ***:**
+  * last syntax fixes ([d970a86](http://git/projects/MAN/repos/nyc-public/commits/d970a86bf0d25013fdd7a7b727d4a66d59685f91))
+  * quotes replaced ([f5edb19](http://git/projects/MAN/repos/nyc-public/commits/f5edb193088046d18249ea5d4cbd25601fc0282e))
+  * comments format ([6d816ba](http://git/projects/MAN/repos/nyc-public/commits/6d816bab08478a1927952e31e1713cc6971628ed))
+  * deps.js brackets and semicolons ([0820766](http://git/projects/MAN/repos/nyc-public/commits/08207667be9db38e956ccc32053917953dc5a720))
+  * new .jscs, and automatic fixing ([568e280](http://git/projects/MAN/repos/nyc-public/commits/568e2803bbb03528f1305b04d6496c8a2501201c))
+* **input:** getDate for has_calendar ([6efd0b5](http://git/projects/MAN/repos/nyc-public/commits/6efd0b58ab929f1bef17c94ff428d15def94c978))
+
+
 <a name"3.0.2"></a>
 ### 3.0.2 (2015-05-20)
 
