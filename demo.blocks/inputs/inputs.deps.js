@@ -37,12 +37,8 @@
             mods: { theme: 'alfa', bkg: ['white', 'color'], type: 'button' }
         },
         {
-            block: 'radio',
-            mods: { theme: 'alfa', bkg: 'color', checked: true }
-        },
-        {
-            block: 'radio-group',
-            mods: { theme: 'alfa', bkg: 'white', type: 'button' }
+            block : 'radio',
+            mods : { theme : 'alfa', bkg : ['white', 'color'], checked : true }
         },
         {
             block: 'row'
