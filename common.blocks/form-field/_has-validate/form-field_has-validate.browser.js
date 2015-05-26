@@ -34,8 +34,10 @@ FormField.decl({ block: this.name, modName: 'has-validate', modVal: true }, /** 
     _updateStatus: function() {
         this.__base.apply(this, arguments);
 
-        this.setMessageVal(this._status);
-        this.hasMod('focused') && this.getMessage().show();
+        if (this.hasMod('message')) {
+            this.setMessageVal(this._status);
+            this._status && this.hasMod('focused') && this.getMessage().show();
+        }
     }
 });
 

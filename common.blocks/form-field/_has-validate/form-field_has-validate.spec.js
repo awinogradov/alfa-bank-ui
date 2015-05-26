@@ -58,8 +58,15 @@ modules.define('spec', ['spec__utils', 'input', 'message', 'form-field'], functi
                 }
             };
             block = utils.buildBlock('form-field', bemjson);
+
+            // should not show for valid block
             block.getControl().elem('control').focus();
             var spy = sinon.spy(block.getMessage(), 'show');
+            block._updateStatus();
+            (!!spy.called).should.be.false;
+
+            // should show for invalid block
+            block._status = 'error';
             block._updateStatus();
             (!!spy.called).should.be.true;
         });
