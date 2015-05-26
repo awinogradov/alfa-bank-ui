@@ -2,7 +2,7 @@
     shouldDeps: [
         {
             block: 'input',
-            mods: { 'has-addon': true }
+            mods: { 'has-addon': true, 'has-mask': true }
         },
         {
             block: 'icon',
