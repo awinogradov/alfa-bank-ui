@@ -1,0 +1,13 @@
+block('display-none').content()(function() {
+    return [
+        {
+            block : 'link',
+            mods : { pseudo : true },
+            content : 'Toggler :)'
+        },
+        {
+            elem : 'content',
+            content : applyNext()
+        }
+    ];
+});

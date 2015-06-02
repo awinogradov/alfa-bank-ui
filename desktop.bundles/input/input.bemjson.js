@@ -36,6 +36,12 @@
                                 },
                                 {
                                     block : 'inputs'
+                                },
+                                {
+                                    block : 'display-none',
+                                    content : {
+                                        block : 'inputs'
+                                    }
                                 }
                             ]
                         }
