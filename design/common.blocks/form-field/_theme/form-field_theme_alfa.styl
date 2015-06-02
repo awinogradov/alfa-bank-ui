@@ -1,12 +1,21 @@
+$labelPaddingTopLine = (3 11 14 14);
+$controlSize = (25 35 45 55);
+
 .form-field_theme_alfa
 {
+    position: relative;
     padding-bottom: 20px;
 
     &.form-field_view_line
     {
         .form-field__label
         {
-            float: left;
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100px;
         }
 
         .form-field__control
@@ -23,54 +32,29 @@
         }
     }
 
-    &.form-field_size_l
-    {
-        .form-field__label
-        {
-            padding-top: round($control_size_l / 4);
-        }
-
-        .form-field__control
-        {
-            line-height: $control_size_l;
-        }
-
-        &.form-field_view_line
-        {
-            .form-field__label
-            {
-                padding-right: 15px;
-
-                width: 100px;
-            }
-        }
-    }
-
-    &.form-field_size_m
-    {
-
-        .form-field__label
-        {
-            padding-top: 18px;
-        }
-
-        .form-field__control
-        {
-            line-height: $control_size_m;
-        }
-    }
-
-    &.form-field_size_s
-    {
-        .form-field__label
-        {
-            line-height: 35px;
-        }
-    }
-
     &.form-field_disabled
     {
         opacity: 0.4;
     }
 
+}
+
+for $sizeVal, i in s m l xl {
+
+    .form-field_size_{$sizeVal}
+    {
+
+        &.form-field_view_line
+        {
+            .form-field__label
+            {
+                padding-top: ($labelPaddingTopLine[i])px;
+            }
+
+            .form-field__control
+            {
+                line-height: ($controlSize[i])px;
+            }
+        }
+    }
 }

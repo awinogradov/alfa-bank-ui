@@ -17,7 +17,8 @@
     "bem-components": "2.1.1",
     "bem-grid": "1.2.3",
     "bem-typography": "1.0.1",
-    "bem-forms": "bem/bem-forms#19b868dbed68a3451f1398b7b831fc936248d504"
+    "bem-forms": "bem/bem-forms#19b868dbed68a3451f1398b7b831fc936248d504",
+    "morgan": "ssh://git@git/man/morgan.git#1.0.0"
   },
   "devDependencies": {
     "bem-pr": "ssh://git@git/man/bem-pr.git"
