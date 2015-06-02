@@ -19,6 +19,7 @@ modules.define('spec', ['validation', 'validation_card'], function(provide, Vali
         });
 
         it('should allow 16 digits', function() {
+            (!!validators.check('')).should.be.false;
             (validators.check('1111222233334444') || '').should.not.equal(wrong_length);
 
             validators.check('111122223333444').should.equal(wrong_length);
