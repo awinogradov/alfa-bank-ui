@@ -2,6 +2,7 @@ modules.define('log',
     ['jquery'],
     function(provide, $) {
 
+/* istanbul ignore next: not much to test here */
 provide({
     /**
      * Send log object to the middle
