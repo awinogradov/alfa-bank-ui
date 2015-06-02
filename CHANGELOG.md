@@ -1,3 +1,28 @@
+<a name"3.2.0"></a>
+## 3.2.0 (2015-06-02)
+
+
+#### Bug Fixes
+
+* **form:** add novalidate attribute to disable browsers` built-in validation ([60d8de0](http://git/projects/MAN/repos/nyc-public/commits/60d8de050c83dd063acc543d126830a488edeea0))
+* **form-field:** message should not be shown for invalid status ([6eaf79c](http://git/projects/MAN/repos/nyc-public/commits/6eaf79c90a6e7f9a5ec79e34db9b3e9d165d6c3f))
+* **input:** has-calendar deps on has-mask, fix js param in has-calendar ([1d44c09](http://git/projects/MAN/repos/nyc-public/commits/1d44c099b67847262fb3cc413fc7e01e2858803c))
+* **label:** fix font-size ([c082182](http://git/projects/MAN/repos/nyc-public/commits/c082182fb96af50a03f3af22a785a5cadef7b44f))
+* **texarea:** fix style after upd version bem-components ([aaca9a1](http://git/projects/MAN/repos/nyc-public/commits/aaca9a12788a7374fd0839a8a4cab9aab27a3c9b))
+* **textarea:** white background color ([a36e074](http://git/projects/MAN/repos/nyc-public/commits/a36e0749233832b5e02ce0af2f19ed663576c9e2))
+* **validation:**
+  * add crads specs ([c17e260](http://git/projects/MAN/repos/nyc-public/commits/c17e260aed0245fdd23e4817ffb89ee40efa9eae))
+  * new cards regex ([6e68b9a](http://git/projects/MAN/repos/nyc-public/commits/6e68b9a3ea87d82b3f3787666842b80d1cf07f77))
+
+
+#### Features
+
+* ***:** update bem-components ([bd9c5c1](http://git/projects/MAN/repos/nyc-public/commits/bd9c5c12591f2623ecaec919658c50d9990b52ac))
+* **i-bem:** disable html escaping ([78626c6](http://git/projects/MAN/repos/nyc-public/commits/78626c6b8ad06ad95b9e3ac683c64feee33615fc))
+* **icon:** add tool "close" ([071068b](http://git/projects/MAN/repos/nyc-public/commits/071068bdde9aeb10dbf40d77f3d083871382ede0))
+* **input:** format date on input ([2d578d8](http://git/projects/MAN/repos/nyc-public/commits/2d578d800d31819b561d0a67682c7f6bec86e7a7))
+
+
 <a name"3.1.0"></a>
 ## 3.1.0 (2015-05-22)
 
