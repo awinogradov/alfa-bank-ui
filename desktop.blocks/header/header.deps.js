@@ -1,4 +1,8 @@
 [{
+    mustDeps: [{
+        block: 'i-bem',
+        elem: 'dom'
+    }],
     shouldDeps: [
         { elems: ['inner', 'menu', 'user', 'support'] },
         { block: 'logo', mods: { view: 'full' } },
