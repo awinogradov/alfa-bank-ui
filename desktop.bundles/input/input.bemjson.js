@@ -39,6 +39,7 @@
                                 },
                                 {
                                     block : 'display-none',
+                                    mods : { 'true' : true },
                                     content : {
                                         block : 'inputs'
                                     }

@@ -1,13 +1,19 @@
-block('display-none').content()(function() {
-    return [
-        {
-            block : 'link',
-            mods : { pseudo : true },
-            content : 'Toggler :)'
-        },
-        {
-            elem : 'content',
-            content : applyNext()
-        }
-    ];
-});
+block('display-none')(
+    js()(function() {
+        return true;
+    }),
+    content()(function() {
+        return [
+            {
+                block: 'link',
+                mix: { block: this.block, elem: 'switcher' },
+                mods: { pseudo: true },
+                content: 'display-none Switcher :)'
+            },
+            {
+                elem: 'content',
+                content: applyNext()
+            }
+        ];
+    })
+);
