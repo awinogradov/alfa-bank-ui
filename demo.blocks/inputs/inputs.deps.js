@@ -5,10 +5,10 @@
             mods: {
                 theme: 'alfa',
                 bkg: ['white', 'color'],
+                mode: 'link',
+                width: 'available',
                 'has-clear': true,
-                'type': ['symbol', 'result', 'link'],
-                'has-autocomplete': true,
-                width: 'available'
+                'has-autocomplete': true
             }
         },
         {
