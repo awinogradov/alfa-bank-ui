@@ -1,9 +1,11 @@
+$green = #4faf5b;
+
 .button_theme_alfa.button_bkg_white
 {
     color:        black;
-    font-weight:  $btns_font_weight;
-    background:   white;
-    border:       1px solid $gray;
+    font-weight:  300;
+    background:   #fff;
+    border:       1px solid #b0afb4;
 
     &.button_hovered
     {
@@ -23,6 +25,17 @@
         }
     }
 
+    &.button_disabled
+    {
+        border-color: transparent;
+        background: rgba(0,0,0,0.08);
+
+        &.button_checked
+        {
+            background: rgba(0,0,0,0.08);
+        }
+    }
+
     &.button_view_pseudo
     {
         border-style: dashed;
@@ -35,6 +48,6 @@
     {
         background:   $green;
         border-color: $green;
-        color:        white;
+        color:        #fff;
     }
 }

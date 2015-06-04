@@ -1,6 +1,13 @@
 ctx = '.button_theme_alfa'
+
+$controlRadius = 6px;
+$fontSize      = (12 12 14 16);
+$controlSize   = (25 35 45 55);
+
+$controlPadding  = (20 30 40 50);
+
 {ctx} {
-    font-family: $font_family;
+    font-family: 'Roboto', sans-serif;
 
     position: relative;
     display:  inline-block;
@@ -10,7 +17,7 @@ ctx = '.button_theme_alfa'
 
     user-select: none;
 
-    border-radius: $btns_radius;
+    border-radius: $controlRadius;
 
     outline: 0;
 
@@ -96,39 +103,21 @@ ctx = '.button_theme_alfa'
     {
         padding-right: 10px;
     }
+}
 
-    &.button_size_s
+for $sizeVal, i in s m l xl {
+    .button_size_{$sizeVal}
     {
-        font-size:   $btns_font_size_s;
-        line-height: $control_size_s;
+        font-size: ($fontSize[i])px;
 
-        padding: 0 $btns_padding_s;
-    }
+        font-size: ($fontSize[i])px;
+        height: ($controlSize[i])px;
+        line-height: ($controlSize[i])px - 2;
 
-    &.button_size_m
-    {
-        font-size:   $btns_font_size_m;
-        line-height: $control_size_m;
-
-        padding: 0 $btns_padding_s;
-    }
-
-    &.button_size_l
-    {
-        font-size:   $btns_font_size_l;
-        line-height: $control_size_l;
-
-        padding: 0 $btns_padding_l;
-    }
-
-    &.button_size_xl
-    {
-        font-size:   $btns_font_size_xl;
-        line-height: $control_size_xl;
-
-        padding: 0 $btns_padding_xl;
+        padding: 0 ($controlPadding[i])px;
     }
 }
+
 
 .control-group
 {
@@ -139,17 +128,17 @@ ctx = '.button_theme_alfa'
     > {ctx}:first-child,
     > :first-child {ctx}
     {
-        border-radius: $btns_radius 0 0 $btns_radius;
+        border-radius: $controlRadius 0 0 $controlRadius;
     }
 
     > {ctx}:last-child,
     > :last-child {ctx}
     {
-        border-radius: 0 $btns_radius $btns_radius 0;
+        border-radius: 0 $controlRadius $controlRadius 0;
     }
 
     > :only-child {ctx}
     {
-        border-radius: $btns_radius;
+        border-radius: $controlRadius;
     }
 }
