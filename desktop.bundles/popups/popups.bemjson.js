@@ -88,6 +88,42 @@
                                                         content : 'third'
                                                     }
                                                 ]
+                                            },
+                                            {
+                                                block : 'input',
+                                                mods : {
+                                                    theme : 'alfa',
+                                                    size : size,
+                                                    bkg : 'color',
+                                                    'has-addon' : true,
+                                                    'has-calendar' : true
+                                                }
+                                            },
+                                            {
+                                                block : 'form',
+                                                mods : { theme : 'alfa' },
+                                                content : {
+                                                    block: 'form-field',
+                                                    id: 'input2',
+                                                    mods: {
+                                                        type: 'input',
+                                                        message: 'popup',
+                                                        'has-validate': true,
+                                                        required: true,
+                                                        theme: 'alfa',
+                                                        bkg: 'color'
+                                                    },
+                                                    content: [
+                                                        {
+                                                            block: 'input',
+                                                            mods: {
+                                                                theme: 'alfa',
+                                                                bkg: 'color',
+                                                                size: size
+                                                            }
+                                                        }
+                                                    ]
+                                                }
                                             }
                                         ];
                                     }),
@@ -220,6 +256,51 @@
                                                 ]
                                             }
                                         ]
+                                    },
+                                    // TOOLTIPS
+                                    {
+                                        attrs: {
+                                            style: 'padding:20px'
+                                        },
+                                        content: [
+                                            ['bottom-left', 'bottom-center', 'bottom-right'],
+                                            ['top-left', 'top-center', 'top-right'],
+                                            ['right-top', 'right-center', 'right-bottom'],
+                                            ['left-top', 'left-center', 'left-bottom']
+                                        ].map(function(directions) {
+                                            return {
+                                                block : 'tooltip',
+                                                mods : { theme : 'alfa', bkg : 'color' },
+                                                icon : {
+                                                    block : 'icon',
+                                                    mods : { theme : 'alfa', bkg : 'white', tool : 'help', size : 'm' }
+                                                },
+                                                directions : directions,
+                                                content : 'Tooltip'
+                                            };
+                                        })
+                                    },
+                                    {
+                                        attrs: {
+                                            style: 'padding:20px; background:#fff'
+                                        },
+                                        content: [
+                                            ['bottom-left', 'bottom-center', 'bottom-right'],
+                                            ['top-left', 'top-center', 'top-right'],
+                                            ['right-top', 'right-center', 'right-bottom'],
+                                            ['left-top', 'left-center', 'left-bottom']
+                                        ].map(function(directions) {
+                                            return {
+                                                block : 'tooltip',
+                                                mods : { theme : 'alfa', bkg : 'white' },
+                                                icon : {
+                                                    block : 'icon',
+                                                    mods : { theme : 'alfa', bkg : 'white', tool : 'help', size : 'm' }
+                                                },
+                                                directions : directions,
+                                                content : 'Tooltip'
+                                            };
+                                        })
                                     }
                                 ]
                             }
