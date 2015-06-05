@@ -111,7 +111,8 @@
                                                         'has-validate': true,
                                                         required: true,
                                                         theme: 'alfa',
-                                                        bkg: 'color'
+                                                        bkg: 'color',
+                                                        size: size
                                                     },
                                                     content: [
                                                         {
