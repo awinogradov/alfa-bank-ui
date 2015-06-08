@@ -107,6 +107,13 @@ block('inputs')(
                 placeholder: 'текст'
             },
             {
+                block: 'textarea',
+                mods: {
+                    width: 'available'
+                },
+                placeholder: 'текст'
+            },
+            {
                 block: 'input',
                 mods: {
                     mode: 'link'
