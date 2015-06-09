@@ -46,7 +46,6 @@ provide(Input.decl({ modName: 'has-autocomplete' }, {
                 this.bindTo('keydown', this._handleKey.bind(this));
 
                 this._isPointerPressInProgress = false;
-                this._updateMenuWidth();
             }
         },
         'focused': {
@@ -61,6 +60,7 @@ provide(Input.decl({ modName: 'has-autocomplete' }, {
         },
         'opened': {
             'true': function() {
+                this._updateMenuWidth();
                 this._popup.setMod('visible');
                 this.bindToDoc('pointerpress', this._onDocPointerPress);
             },
