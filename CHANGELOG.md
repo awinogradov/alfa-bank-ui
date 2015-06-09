@@ -1,3 +1,23 @@
+<a name"3.2.1"></a>
+### 3.2.1 (2015-06-05)
+
+
+#### Bug Fixes
+
+* ***:** fix sizes components, refactoring ([e16dc1b](http://git/projects/MAN/repos/nyc-public/commits/e16dc1ba440f91b408d23225b9ec4fd99372210f))
+* **input:**
+  * AC-6027 updateMenuWidth should set width on popup instead of menu ([9913a1d](http://git/projects/MAN/repos/nyc-public/commits/9913a1dc22ed78dc53a1246d7310400878c64a12))
+  * fastfix input_has-addons ([f301df7](http://git/projects/MAN/repos/nyc-public/commits/f301df70bd60da0b1aae6c021fee700453ad4a26))
+
+
+#### Features
+
+* ***:**
+  * upd bem-components to 2.2.0 ([8c1d572](http://git/projects/MAN/repos/nyc-public/commits/8c1d57293a424954cba489d3ba62ae7a9c088a31))
+  * part demo block display-none ([eb63819](http://git/projects/MAN/repos/nyc-public/commits/eb63819365626ad5bbbb3424cb584eb633a65244))
+* **input:** live init for _has-autocomplete + demo page ([45a948e](http://git/projects/MAN/repos/nyc-public/commits/45a948ef32b9d38ffeb2b7ab4b5dcaaf3a2f4fee))
+
+
 <a name"3.2.0"></a>
 ## 3.2.0 (2015-06-02)
 

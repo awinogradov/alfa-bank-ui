@@ -186,6 +186,12 @@ provide(Input.decl({ modName: 'has-autocomplete' }, {
 
     }
 
+},
+{
+    live : function() {
+        this.__base.apply(this, arguments);
+        return true;
+    }
 }));
 
 });

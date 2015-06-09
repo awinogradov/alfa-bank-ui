@@ -17,16 +17,26 @@ $placeholder_style(font_size, placeholder_font_size) {
     }
 }
 
+$fontSize               = (12 12 15 25);
+$controlSize            = (25 35 45 55);
+$controlPaddingHoriz    = (4 9 12 12);
+$controlPaddingVert     = (13 15 17 19);
+$clearSize              = (20 34 38 42);
+$innerFontSize          = (25 48 62 73);
+$addonFontSize          = (12 14 20 30);
+
 .input_theme_alfa
 {
-    font-family: $font_family;
-    font-weight: $font_weight;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 
     position: relative;
     display:  inline-block;
     width:    100%;
 
-    border-radius: $inputs_radius;
+    border-radius: 6px;
+
+    box-sizing: border-box;
 
     transition: all 200ms ease;
 
@@ -40,7 +50,7 @@ $placeholder_style(font_size, placeholder_font_size) {
 
         content: '';
 
-        border-radius: $inputs_radius - $inputs_border_size;
+        border-radius: 5px;
     }
 
     .input__box
@@ -59,7 +69,10 @@ $placeholder_style(font_size, placeholder_font_size) {
         line-height: inherit;
 
         box-sizing: border-box;
+
         padding:    0;
+        margin:     0;
+
         width:      100%;
 
         border:     0;
@@ -103,7 +116,7 @@ $placeholder_style(font_size, placeholder_font_size) {
     .input__clear
     {
         position: absolute;
-        top:      0;
+        top:      50%;
         right:    0;
 
         cursor:     text;
@@ -111,6 +124,7 @@ $placeholder_style(font_size, placeholder_font_size) {
 
         opacity:    0;
         background: 50% 50% no-repeat;
+        background-position: center center;
 
         &_visible
         {
@@ -153,122 +167,95 @@ $placeholder_style(font_size, placeholder_font_size) {
         }
     }
 
-    &.input_mode_result
+    &.input_type_password .input__control
     {
-        border: none;
-        display: inline-block;
-        width: auto;
-        background: none;
+        text-overflow: clip;
+    }
+
+    &.input_has-addon .input__addon
+    {
+        transition: all 200ms ease;
     }
 
     &.input_mode_link
     {
         padding-left: 0;
     }
+}
 
-    &.input_size_s
+for $sizeVal, i in s m l xl {
+    .input_size_{$sizeVal}
     {
-        font-size: 18px;
+        font-size: ($fontSize[i])px;
+        height:    ($controlSize[i])px;
 
         .input__control
         {
-            height:       35px;
-            padding-left: 12px;
-
-            $placeholder_style(18px, 16px);
+            padding-top:  ($controlPaddingHoriz[i])px; /* hack, default line-height */
+            padding-bottom:  ($controlPaddingHoriz[i])px + 1; /* hack, default line-height  */
+            padding-left: ($controlPaddingVert[i])px;
+            padding-right: ($controlPaddingVert[i])px;
         }
 
-        &.input_has-clear .input__box
+        &.input_has-clear
         {
-            padding-right: 20px;
+            .input__box
+            {
+                padding-right: ($clearSize[i])px;
+            }
+
+            .input__control
+            {
+                padding-right: 0;
+            }
+
+            .input__clear
+            {
+                width:       ($clearSize[i])px;
+                height:      ($clearSize[i])px;
+                margin-top: -($clearSize[i]/2)px;
+            }
         }
 
-        .input__clear
+        &.input_has-addon
         {
-            width:  20px;
-            height: @width;
+            .input__box
+            {
+                padding-right: ($controlSize[i])px;
+            }
 
-            background-position: 2px 8px;
+            .input__control
+            {
+                padding-right: 0;
+            }
+
+            .input__addon
+            {
+                top:       -1px;
+                right:     -1px;
+                width:     ($controlSize[i])px;
+                height:    ($controlSize[i])px;
+
+                line-height: ($controlSize[i])px;
+                font-size:   ($addonFontSize[i])px;
+            }
         }
-    }
 
-    &.input_size_m
-    {
-        font-size: $inputs_font_size_m;
-
-        .input__control
+        &.input_mode_link
         {
-            height:       $control_size_m;
-            padding-left: $inputs_padding_m;
+            .input__box
+            {
+                height:       ($controlSize[i])px - 2;
+                padding-left: ($controlPaddingVert[i])px;
+                margin-right: ($controlPaddingVert[i])px;
+            }
+
+            .input__trigger
+            {
+                line-height:  ($controlSize[i])px - 2;
+            }
         }
 
-        &.input_has-clear .input__box
-        {
-            padding-right: 34px;
-        }
-
-        .input__clear
-        {
-            width:  34px;
-            height: @width;
-
-            background-position: 10px 13px;
-        }
-    }
-
-    &.input_size_l
-    {
-        font-size: $inputs_font_size_l;
-
-        .input__control
-        {
-            height:       $control_size_l;
-            padding-left: $inputs_padding_l;
-        }
-
-        &.input_has-clear .input__box
-        {
-            padding-right: 38px;
-        }
-
-        .input__clear
-        {
-            width:  38px;
-            height: @width;
-
-            background-position: 10px 15px;
-        }
-    }
-
-    &.input_size_xl
-    {
-        font-size:   $inputs_font_size_xl;
-
-        .input__control
-        {
-            height:       $control_size_xl;
-            padding-left: $inputs_padding_xl;
-
-            $placeholder_style($inputs_font_size_xl, 16px);
-        }
-
-        &.input_has-clear .input__box
-        {
-            padding-right: 42px;
-        }
-
-        .input__clear
-        {
-            width:  42px;
-            height: @width;
-
-            background-position: 12px 20px;
-        }
-    }
-
-    &.input_type_password .input__control
-    {
-        text-overflow: clip;
     }
 }
 
