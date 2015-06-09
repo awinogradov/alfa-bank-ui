@@ -1,7 +1,7 @@
 /**
  * @module form-field
  *
- * Throws error without 'has-validate' mod
+ * Throws error without 'has-validation' mod
  *
  * FIXME: PR to bem-forms
  */
@@ -13,8 +13,8 @@ modules.define('form-field', function(provide, FormField) {
                 'inited': function() {
                     this.__base.apply(this, this.arguments);
 
-                    if (!this.hasMod('has-validate')) {
-                        throw new Error('`validate` should not be used without `has-validate`!');
+                    if (!this.hasMod('has-validation')) {
+                        throw new Error('`validate` should not be used without `has-validation`!');
                     }
                 }
             }

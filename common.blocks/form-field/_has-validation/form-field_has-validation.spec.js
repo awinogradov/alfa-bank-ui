@@ -1,6 +1,6 @@
 modules.define('spec', ['spec__utils', 'input', 'message', 'form-field'], function(provide, utils) {
 
-    describe('form-field_has-validate', function() {
+    describe('form-field_has-validation', function() {
 
         var block, bemjson;
 
@@ -8,7 +8,7 @@ modules.define('spec', ['spec__utils', 'input', 'message', 'form-field'], functi
             bemjson = {
                 block: 'form-field',
                     mods: {
-                    'has-validate': true
+                    'has-validation': true
                 }
             };
         });
