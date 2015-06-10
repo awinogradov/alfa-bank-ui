@@ -7,7 +7,7 @@ modules.define('spec', ['spec__utils', 'form-field'], function(provide, utils) {
             block = utils.buildBlock('form-field', {
                 block: 'form-field',
                 mods: {
-                    'has-validate': true,
+                    'has-validation': true,
                     message: 'text',
                     validate: 'email'
                 }
