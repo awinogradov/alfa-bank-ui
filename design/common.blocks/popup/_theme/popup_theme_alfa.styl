@@ -7,7 +7,7 @@ $invalidMarginTop = (-12 -7 -2 3)
 
     margin: -9999px 0 0 -9999px;
 
-    border-radius: $popup_radius;
+    border-radius: 6px;
 
     box-sizing: border-box;
 
@@ -22,13 +22,6 @@ $invalidMarginTop = (-12 -7 -2 3)
     {
         background-color: rgba(0, 0, 0, 0.6);
 
-        &.popup_visible
-        {
-            margin: 0 0 0 -35px;
-            display: block;
-            opacity: 1;
-        }
-
         bottom: 0;
         top:    0 !important;
 
@@ -42,11 +35,18 @@ $invalidMarginTop = (-12 -7 -2 3)
         opacity: 0;
 
         transition: opacity 400ms ease;
+
+        &.popup_visible
+        {
+            margin: 0 0 0 -35px;
+            display: block;
+            opacity: 1;
+        }
     }
 
     &.popup_view_dropdown
     {
-        border-radius: 0 0 $popup_radius $popup_radius;
+        border-radius: 0 0 6px 6px;
 
         overflow-y: auto;
         overflow-x: hidden;
@@ -56,10 +56,6 @@ $invalidMarginTop = (-12 -7 -2 3)
 
     &.popup_visible
     {
-        font-family: $font_family;
-        font-weight: $font_weight;
-        font-size:   $font_size;
-
         visibility: visible;
 
         margin: 0;

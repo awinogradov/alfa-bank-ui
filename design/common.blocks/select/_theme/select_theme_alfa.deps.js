@@ -1,7 +1,6 @@
 [{
     mustDeps: [
-        { block: 'button', mods: { theme: 'alfa' } },
-        { block: 'variables' }
+        { block: 'button', mods: { theme: 'alfa' } }
     ],
     shouldDeps: [
         { block: 'popup', mods: { theme: 'alfa' } },

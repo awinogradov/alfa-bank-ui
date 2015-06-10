@@ -1,3 +1,5 @@
+$iconSize = (11 25 35 45 55)
+
 .icon_theme_alfa
 {
     vertical-align: middle;
@@ -5,34 +7,11 @@
     background-repeat: no-repeat;
     background-size:   contain;
 
-    &.icon_size_xs
-    {
-        width:  $icon_size_xs;
-        height: $icon_size_xs;
-        margin-bottom: 2px;
-    }
-
-    &.icon_size_s
-    {
-        width:  $icon_size_s;
-        height: $icon_size_s;
-    }
-
-    &.icon_size_m
-    {
-        width:  $icon_size_m;
-        height: $icon_size_m;
-    }
-
-    &.icon_size_l
-    {
-        width:  $icon_size_l;
-        height: $icon_size_l;
-    }
-
-    &.icon_size_xl
-    {
-        width:  $icon_size_xl;
-        height: $icon_size_xl;
+    for $sizeVal, i in xs s m l xl {
+        &.icon_size_{$sizeVal}
+        {
+            width:  ($iconSize[i])px;
+            height: ($iconSize[i])px;
+        }
     }
 }

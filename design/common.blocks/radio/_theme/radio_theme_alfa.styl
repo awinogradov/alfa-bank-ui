@@ -1,15 +1,17 @@
+$fontSize         = (12 15);
+$radioSize        = (12 15);
+$radioMargin      = (5 7);
+$radioControlSize = (8 9);
+
 .radio_theme_alfa
 {
-    font-family: $font_family;
+    font-family: 'Roboto', sans-serif;
 
-    font-weight: 100;
+    font-weight: 300;
 
-    display: block;
+    display: inline-block;
 
-    &:hover
-    {
-        cursor: pointer;
-    }
+    cursor: pointer;
 
     .radio__control
     {
@@ -28,69 +30,23 @@
 
         border-radius: 50%;
 
-        &:before
+        &:after
         {
             position: absolute;
-            top:      $radio_border_width;
-            right:    $radio_border_width;
-            bottom:   $radio_border_width;
-            left:     $radio_border_width;
+
+            top: 50%;
+            left: 50%;
 
             content: '';
 
+            visibility: hidden;
+            opacity:    0;
+
             border-radius: 50%;
-        }
-    }
 
-    &.radio_size_m
-    {
-        font-size: $inputs_font_size_m;
-
-        .radio__box
-        {
-            line-height: $radio_size_m;
-
-            top: floor($radio_control_size_m / 2) - 2;
-
-            width:  $radio_size_m;
-            height: $radio_size_m;
-
-            margin-right: $radio_margin_m;
-
-            &:after
-            {
-                top:  floor($radio_control_size_m / 2) - 1;
-                left: floor($radio_control_size_m / 2) - 1;
-
-                width:  $radio_control_size_m;
-                height: $radio_control_size_m;
-            }
-        }
-    }
-
-    &.radio_size_l
-    {
-        font-size: $inputs_font_size_l;
-
-        .radio__box
-        {
-            line-height: $radio_size_l;
-
-            top: round($radio_control_size_l / 2) - 2;
-
-            width:  $radio_size_l;
-            height: $radio_size_l;
-
-            margin-right: $radio_margin_l;
-
-            &:after
-            {
-                top:  round($radio_control_size_l / 2) - 1;
-                left: round($radio_control_size_l / 2) - 1;
-
-                width:  $radio_control_size_l;
-                height: $radio_control_size_l;
-            }
+            transition: transform .05s ease-out,
+                        opacity .05s ease-out,
+                        visibility 0s linear .05s;
         }
     }
 
@@ -100,11 +56,8 @@
         {
             &:after
             {
-                position: absolute;
-
-                border-radius: 50%;
-
-                content: '';
+                visibility: visible;
+                opacity:    1;
             }
         }
     }
@@ -112,12 +65,32 @@
     &.radio_disabled
     {
         cursor: default;
+    }
 
-        .radio__box
+    for $sizeVal, i in m l {
+        &.radio_size_{$sizeVal}
         {
-            &:before
+            font-size: ($fontSize[i])px;
+
+            .radio__box
             {
-                display: none;
+                line-height: ($radioSize[i])px;
+
+                top: 2px;
+
+                width:  ($radioSize[i])px;
+                height: ($radioSize[i])px;
+
+                margin-right: ($radioMargin[i])px;
+
+                &:after
+                {
+                    margin-top: -($radioControlSize[i] / 2)px;
+                    margin-left: -($radioControlSize[i] / 2)px;
+
+                    width:  ($radioControlSize[i])px;
+                    height: ($radioControlSize[i])px;
+                }
             }
         }
     }
