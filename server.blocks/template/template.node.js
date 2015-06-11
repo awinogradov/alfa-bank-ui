@@ -1,35 +1,27 @@
 var path = require('path'),
     vm = require('vm'),
     vow = require('vow'),
-    vfs = require('vow-fs'),
+    fs = require('fs'),
     _ = require('lodash');
 
 modules.define('template', function(provide) {
 
-    var bemhtmlPath, bemtreePath;
+    var bemhtml, bemtree;
 
     provide({
         setBEMHTML: function(path) {
-            bemhtmlPath = path;
+            bemhtml = require(path).BEMHTML;
         },
         setBEMTREE: function(path) {
-            bemtreePath = path;
+            var context = vm.createContext({ console: console, Vow: vow, _: _ });
+            bemtree = vm.runInNewContext('(function(data){' + fs.readFileSync(path) +
+                '; return this.BEMTREE})', context);
         },
         BEMHTML: function() {
-            return require(bemhtmlPath).BEMHTML;
+            return bemhtml;
         },
         BEMTREE: function(data) {
-            var context = vm.createContext({
-                console: console,
-                Vow: vow,
-                data: data,
-                _: _
-            });
-
-            return vfs.read(bemtreePath).then(function(BEMTREE) {
-                vm.runInNewContext(BEMTREE, context);
-                return context.BEMTREE;
-            });
+            return vow.invoke(bemtree, data);
         }
     });
 
