@@ -1,3 +1,22 @@
+<a name"3.2.2"></a>
+### 3.2.2 (2015-06-15)
+
+
+#### Bug Fixes
+
+* **form-field_validate:** this case is handled in bem-forms ([72e9130](http://git/projects/MAN/repos/nyc-public/commits/72e9130ef60b7352a85d4e70a55e6e5c727fe8a1))
+* **input:** updateMenuWidth when popup is shown ([3ad6984](http://git/projects/MAN/repos/nyc-public/commits/3ad69848e391a39884f7dcd35e08709a63069f41))
+* **popup:** Popup horizontal scroll NYCP-26 ([b171a9d](http://git/projects/MAN/repos/nyc-public/commits/b171a9d750ecf4985550a8a7d432472e346eedfe))
+* **popup_invalid:** margin-top depending on size inputs #NYCP-39 ([7d1d8ab](http://git/projects/MAN/repos/nyc-public/commits/7d1d8ab0be1b2dcb6e0e48237ebce10d7b5bc106))
+* **spin:** animated image ([7de0818](http://git/projects/MAN/repos/nyc-public/commits/7de081822bbc546bfa49e0149893cd7091a9a0ef))
+
+
+#### Features
+
+* ***:** update to new version of bem-forms (has-validate -> has-validation) ([07fee7b](http://git/projects/MAN/repos/nyc-public/commits/07fee7b8c37b2b76e7683ecaaa970c26999051d2))
+* **template:** tune-up template memory performance ([15b61ea](http://git/projects/MAN/repos/nyc-public/commits/15b61eafe0228a7ad890a922205240df020881b5))
+
+
 <a name"3.2.1"></a>
 ### 3.2.1 (2015-06-05)
 
