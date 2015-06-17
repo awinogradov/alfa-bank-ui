@@ -35,6 +35,7 @@ function(provide, Popup, Menu, dom, $, BEMHTML, BEMDOM, Select) {
             var menu = popup.findBlockInside('menu');
 
             this.resetMenu(menu);
+            this._menu.emit('change');
         }
 
     }));
