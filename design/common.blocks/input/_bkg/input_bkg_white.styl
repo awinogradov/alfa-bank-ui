@@ -1,18 +1,18 @@
 .input_bkg_white
 {
-    background: #b0afb4;
-    padding: 1px;
-
+    background: rgba(255, 255, 255, .3);
     color: #000;
 
-    &:before
-    {
-        background: #fff;
-    }
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc;
+
+    transition: all 200ms ease;
 
     .input__control
     {
         color: #000;
+        background: transparent;
     }
 
     .input__clear
@@ -20,56 +20,66 @@
         background-image: url(../__clear/_bkg/input__clear_bkg_white.svg);
     }
 
+    &.input_has-addon .input__addon
+    {
+        color: #000;
+
+        opacity: .6
+    }
+
     &.input_mode_link
     {
-        background: #fff;
+        background: rgba(255, 255, 255, 0);
+        border-color: transparent;
 
         &.input_hovered
         {
-            background: #adadad;
+            background: rgba(255, 255, 255, .3);
         }
 
         &.input_focused
         {
-            background: #ff9900;
+            background: rgba(255, 255, 255, 1);
         }
+    }
+
+    &.input_mode_result .input__inner
+    {
+        color: #000;
+    }
+
+    &.input_invalid
+    {
+        border-color: #fc5c5e;
+    }
+
+    &.input_hovered,
+    &.input_focused
+    {
+        border-color: rgba(0, 0, 0, .4);
     }
 
     &.input_focused
     {
-        background: #ff9900;
-
-        &:before
-        {
-            top:    2px;
-            right:  2px;
-            bottom: 2px;
-            left:   2px;
-        }
+        background: #fff;
     }
 
-    &.input_hovered
+    &.input_focused.input_invalid,
+    &.input_hovered.input_invalid
     {
-        .input__trigger
-        {
-            border-bottom: none;
-        }
-    }
-
-    .input__trigger
-    {
-        color: #333333 !important;
-        border-bottom-color: #333333;
+        border-color: rgba(252, 92, 94, 1);
     }
 
     &.input_disabled
     {
-        background: rgba(0, 0, 0, 0.08);
+        border-color: transparent;
+
+        background: rgba(0, 0, 0, .06);
 
         .input__box,
         .input__control
         {
-            color: rgba(0, 0, 0, 0.4);
+            color: #414141;
         }
     }
 
@@ -84,10 +94,4 @@
     {
         background-size: 14px;
     }
-
-    &.input_invalid
-    {
-        background: #fc5c5e;
-    }
-
 }

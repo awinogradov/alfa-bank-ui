@@ -4,22 +4,20 @@
     {
         transition: all 200ms ease;
 
-        background: #fff;
+        background: rgba(255, 255, 255, .3);
 
-        border-width: 1px;
-        border-style: solid;
-        border-color: alpha(#b0afb4, 0.8);
+        border: 1px solid #ccc;
     }
 
     &.radio_checked
     {
         .radio__box
         {
-            border-color: alpha(#b0afb4, 0.8);
+            border-color: rgba(0, 0, 0, .4);
 
             &:after
             {
-                background: #4faf5b;
+                background: #B20C00;
             }
         }
     }
@@ -29,16 +27,7 @@
     {
         .radio__box
         {
-            border-color: #b0afb4;
-        }
-    }
-
-    &.radio_hovered
-    {
-
-        &.radio_checked .radio__box
-        {
-            border-color: alpha(#b0afb4, 0.8);
+            border-color: rgba(0, 0, 0, .4);
         }
     }
 
@@ -49,12 +38,20 @@
         .radio__box
         {
             border-color: transparent;
-            background: rgba(0, 0, 0, 0.08);
+            background: rgba(0, 0, 0, 0.06);
         }
 
         &.radio_checked .radio__box:after
         {
             opacity: 0.4;
+        }
+    }
+
+    &.radio_type_button
+    {
+        .button_checked
+        {
+            background: #ccc;
         }
     }
 }

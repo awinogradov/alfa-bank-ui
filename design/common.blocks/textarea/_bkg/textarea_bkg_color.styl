@@ -10,24 +10,21 @@
     border-style: solid;
     border-color: rgba(255,255,255,0.5);
 
-    &::-webkit-input-placeholder
+    &.textarea_disabled
     {
-        /*color: #999;*/
+        border-color: transparent;
+        background: rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.5);
     }
 
-    &::-moz-placeholder
-    {
-        /*color: #999;*/
-    }
-
-    &.textarea_hovered
+    &.textarea_hovered,
+    &.textarea_focused
     {
         border-color: rgba(255,255,255,1);
     }
 
     &.textarea_focused
     {
-        border-color: rgba(255,255,255,1);
 
         background-color: rgba(0,0,0,.3);
     }

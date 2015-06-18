@@ -114,6 +114,14 @@ block('inputs')(
                 placeholder: 'текст'
             },
             {
+                block: 'textarea',
+                mods: {
+                    width: 'available',
+                    disabled: true
+                },
+                val: 'текст'
+            },
+            {
                 block: 'input',
                 mods: {
                     mode: 'link'
@@ -188,6 +196,23 @@ block('inputs')(
                 text: 'Чекбокс'
             },
             {
+                block: 'checkbox-group',
+                options: [
+                    { text: 'Checkbox 1', val: '1', checked: true },
+                    { text: 'Checkbox 2', val: '2' },
+                    { text: 'Checkbox 3', val: '3' }
+                ]
+            },
+            {
+                block: 'checkbox-group',
+                mods: { type: 'button' },
+                options: [
+                    { text: 'Checkbox 1', val: '1', checked: true },
+                    { text: 'Checkbox 2', val: '2' },
+                    { text: 'Checkbox 3', val: '3' }
+                ]
+            },
+            {
                 block: 'radio',
                 mods: {},
                 val: 1,
@@ -217,6 +242,23 @@ block('inputs')(
                 },
                 val: 1,
                 text: 'Радио'
+            },
+            {
+                block: 'radio-group',
+                options: [
+                    { text: 'Radio 1', val: '1', checked: true },
+                    { text: 'Radio 2', val: '2' },
+                    { text: 'Radio 3', val: '3' }
+                ]
+            },
+            {
+                block: 'radio-group',
+                mods: { type: 'button' },
+                options: [
+                    { text: 'Radio 1', val: '1', checked: true },
+                    { text: 'Radio 2', val: '2' },
+                    { text: 'Radio 3', val: '3' }
+                ]
             }
         ];
 
