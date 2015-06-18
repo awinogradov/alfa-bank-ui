@@ -1,15 +1,17 @@
+$fontSize            = (12 15);
+$checkboxSize        = (12 15);
+$checkboxMargin      = (5 7);
+$checkboxControlSize = (15 18);
+
 .checkbox_theme_alfa
 {
-    font-family: $font_family;
+    font-family: 'Roboto', sans-serif;
 
-    font-weight: 100;
+    font-weight: 300;
 
-    display: block;
+    display: inline-block;
 
-    &:hover
-    {
-        cursor: pointer;
-    }
+    cursor: pointer;
 
     .checkbox__control
     {
@@ -26,20 +28,7 @@
         position: relative;
         display:  inline-block;
 
-        border-radius: $checkbox_radius;
-
-        &:before
-        {
-            position: absolute;
-            top:      $checkbox_border_width;
-            right:    $checkbox_border_width;
-            bottom:   $checkbox_border_width;
-            left:     $checkbox_border_width;
-
-            content: '';
-
-            border-radius: $checkbox_radius - 1;
-        }
+        border-radius: 3px;
 
         &:after
         {
@@ -54,56 +43,35 @@
             visibility: hidden;
             opacity:    0;
 
-            transition: transform .05s ease-out, opacity .05s ease-out, visibility 0s linear .05s;
+            transition: transform .05s ease-out,
+                        opacity .05s ease-out,
+                        visibility 0s linear .05s;
         }
     }
 
-    &.checkbox_size_m
-    {
-        font-size: $inputs_font_size_m;
-
-        .checkbox__box
+    for $sizeVal, i in m l {
+        &.checkbox_size_{$sizeVal}
         {
-            line-height: $checkbox_size_m;
+            font-size: ($fontSize[i])px;
 
-            top: 2px;
-
-            width:  $checkbox_size_m;
-            height: $checkbox_size_m;
-
-            margin-right: $checkbox_margin_m;
-
-            &:after
+            .checkbox__box
             {
-                width:  $checkbox_control_size_m;
-                height: $checkbox_control_size_m;
+                line-height: ($checkboxSize[i])px;
 
-                transform: translateY(- $checkbox_margin_m);
-            }
-        }
-    }
+                top: 2px;
 
-    &.checkbox_size_l
-    {
-        font-size: $inputs_font_size_l;
+                width:  ($checkboxSize[i])px;
+                height: ($checkboxSize[i])px;
 
-        .checkbox__box
-        {
-            line-height: $checkbox_size_l;
+                margin-right: ($checkboxMargin[i])px;
 
-            top: 3px;
+                &:after
+                {
+                    width:  ($checkboxControlSize[i])px;
+                    height: ($checkboxControlSize[i])px;
 
-            width:  $checkbox_size_l;
-            height: $checkbox_size_l;
-
-            margin-right: $checkbox_margin_l;
-
-            &:after
-            {
-                width:  $checkbox_control_size_l;
-                height: $checkbox_control_size_l;
-
-                transform: translateY(- $checkbox_margin_l);
+                    transform: translateY(- ($checkboxMargin[i])px);
+                }
             }
         }
     }
@@ -126,14 +94,6 @@
     &.checkbox_disabled
     {
         cursor: default;
-
-        .checkbox__box
-        {
-            &:before
-            {
-                display: none;
-            }
-        }
     }
 
     &.checkbox_type_button

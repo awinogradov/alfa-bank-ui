@@ -30,7 +30,7 @@
         },
         {
             block: 'checkbox',
-            mods: { theme: 'alfa', bkg: ['white', 'color'], checked: true }
+            mods: { theme: 'alfa', bkg: ['white', 'color'] }
         },
         {
             block: 'radio-group',
@@ -38,7 +38,7 @@
         },
         {
             block : 'radio',
-            mods : { theme : 'alfa', bkg : ['white', 'color'], checked : true }
+            mods : { theme : 'alfa', bkg : ['white', 'color'] }
         },
         {
             block: 'row'

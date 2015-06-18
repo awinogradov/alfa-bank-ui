@@ -112,6 +112,104 @@ block('inputs')(
                     mode: 'link'
                 },
                 val: 'Простой inplace'
+            },
+            {
+                block: 'checkbox',
+                mods: {},
+                val: 1,
+                text: 'Чекбокс'
+            },
+            {
+                block: 'checkbox',
+                mods: {
+                    checked: true
+                },
+                val: 1,
+                text: 'Чекбокс'
+            },
+            {
+                block: 'checkbox',
+                mods: {
+                    disabled: true
+                },
+                val: 1,
+                text: 'Чекбокс'
+            },
+            {
+                block: 'checkbox',
+                mods: {
+                    checked: true,
+                    disabled: true
+                },
+                val: 1,
+                text: 'Чекбокс'
+            },
+            {
+                block: 'checkbox',
+                mods: {
+                    type: 'button',
+                },
+                val: 1,
+                text: 'Чекбокс'
+            },
+            {
+                block: 'checkbox',
+                mods: {
+                    type: 'button',
+                    checked: true
+                },
+                val: 1,
+                text: 'Чекбокс'
+            },
+            {
+                block: 'checkbox',
+                mods: {
+                    type: 'button',
+                    disabled: true
+                },
+                val: 1,
+                text: 'Чекбокс'
+            },
+            {
+                block: 'checkbox',
+                mods: {
+                    type: 'button',
+                    disabled: true,
+                    checked: true
+                },
+                val: 1,
+                text: 'Чекбокс'
+            },
+            {
+                block: 'radio',
+                mods: {},
+                val: 1,
+                text: 'Радио'
+            },
+            {
+                block: 'radio',
+                mods: {
+                    checked: true
+                },
+                val: 1,
+                text: 'Радио'
+            },
+            {
+                block: 'radio',
+                mods: {
+                    disabled: true
+                },
+                val: 1,
+                text: 'Радио'
+            },
+            {
+                block: 'radio',
+                mods: {
+                    checked: true,
+                    disabled: true
+                },
+                val: 1,
+                text: 'Радио'
             }
         ];
 
