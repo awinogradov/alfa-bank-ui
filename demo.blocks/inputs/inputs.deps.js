@@ -22,7 +22,7 @@
         },
         {
             block: 'textarea',
-            mods: { theme: 'alfa', bkg: ['white', 'color'] }
+            mods: { theme: 'alfa', bkg: ['white', 'color'], width: 'available' }
         },
         {
             block: 'checkbox-group',
