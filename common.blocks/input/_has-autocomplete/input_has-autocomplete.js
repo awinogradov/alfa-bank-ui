@@ -32,44 +32,160 @@ function reveal(parent, item) {
     }
 }
 
+function onDocPointerPress(e) {
+    if (isEventInPopup.call(this, e)) {
+        this._isPointerPressInProgress = true;
+        this.bindToDoc('pointerrelease', onDocPointerRelease);
+    } else {
+        this.delMod('opened');
+    }
+}
+
+function onDocPointerRelease(e) {
+    this._isPointerPressInProgress = false;
+    this.unbindFromDoc('pointerrelease', onDocPointerRelease);
+}
+
+function isEventInPopup(e) {
+    var $target = $(e.target);
+    return dom.contains(this.getPopup().domElem, $target)
+        || dom.contains(this.domElem, $target);
+}
+
+function onMenuItemClick(_, data) {
+    this.setVal(data.item.getVal());
+    this.emit('select', data.item.params);
+    this.delMod('opened');
+    this.resetFocusedItem();
+}
+
+function handleKey(e) {
+    switch (e.keyCode) {
+    case KeyCodes.DOWN:
+        if (!this.getMod('opened')) this.setMod('opened');
+        this.setFocusedItem(nextNotHidden(this.getMenuItems(), this.getFocusedItem()));
+        break;
+    case KeyCodes.UP:
+        this.setFocusedItem(previousNotHidden(this.getMenuItems(), this.getFocusedItem()));
+        break;
+    case KeyCodes.ENTER:
+        if (typeof this._focusedItem !== 'undefined' && this._focusedItem != -1) {
+            onMenuItemClick.call(this, null, { item: this._menuItems[this._focusedItem] });
+            e.preventDefault();
+            return true;
+        }
+        break;
+    }
+}
+
+function mapItems(item) {
+    if (item.group) {
+        return {
+            block: 'menu',
+            elem: 'group',
+            title: item.title,
+            content: item.group.map(mapItems.bind(this))
+        };
+    } else {
+        return {
+            block: 'menu-item',
+            mods: {
+                theme: this.getMod('theme'),
+                bkg: this.getMod('bkg'),
+                size: this.getMod('size')
+            },
+            val: item.val,
+            data: item.data,
+            content: item.content
+        };
+    }
+};
+
 provide(Input.decl({ modName: 'has-autocomplete' }, {
     onSetMod: {
         'js': {
             'inited': function() {
                 this.__base.apply(this, arguments);
-                this._popup = this.findBlockInside('popup');
-                this._popup.setAnchor(this);
-                this._menu = this._popup.findBlockInside('menu');
 
-                this._menu.on({ 'item-click': this._onMenuItemClick }, this);
-
-                this.bindTo('keydown', this._handleKey.bind(this));
-
+                this.getMenu().on('item-click', onMenuItemClick, this);
+                this.bindTo('keydown', handleKey);
                 this._isPointerPressInProgress = false;
             }
         },
         'focused': {
             'true': function() {
                 this.__base.apply(this, arguments);
+
                 this.setMod('opened');
             },
             '': function() {
                 this.__base.apply(this, arguments);
+
                 if (!this._isPointerPressInProgress) this.delMod('opened');
             }
         },
         'opened': {
             'true': function() {
                 this._updateMenuWidth();
-                this._popup.setMod('visible');
-                this.bindToDoc('pointerpress', this._onDocPointerPress);
+                this.getPopup().setAnchor(this);
+                this.getPopup().setMod('visible');
+                this.bindToDoc('pointerpress', onDocPointerPress);
             },
 
             '': function() {
-                this._popup.delMod('visible');
-                this.unbindFromDoc('pointerpress', this._onDocPointerPress);
+                this.getPopup().delMod('visible');
+                this.unbindFromDoc('pointerpress', onDocPointerPress);
             }
         }
+    },
+
+    /**
+     * Get the popup element
+     * @return {bem-block} 'popup'
+     */
+    getPopup: function() {
+        return this._popup || (this._popup = this.findBlockInside('popup'));
+    },
+
+    /**
+     * Get the menu element
+     * @return {bem-block} 'menu'
+     */
+    getMenu: function() {
+        return this._menu || (this._menu = this.getPopup().findBlockInside('menu'));
+    },
+
+    /**
+     * Returns cached list of menu-item's
+     */
+    getMenuItems: function() {
+        return this._menuItems || (this._menuItems = this.getMenu().findBlocksInside('menu-item'));
+    },
+
+    /**
+     * Returns the index of currently focused menu item.
+     * Or -1 if no item is currently focused.
+     */
+    getFocusedItem: function() {
+        if (typeof this._focusedItem === 'undefined') this._focusedItem = -1;
+        return this._focusedItem;
+    },
+
+    setFocusedItem: function(value) {
+        var current = this.getFocusedItem(),
+            items = this.getMenuItems();
+
+        // remove focused state from current item
+        if (current != -1) items[current].delMod('focused');
+
+        if (value != -1) {
+            // add focused state to new item
+            items[value].setMod('focused');
+            // scroll to new item
+            reveal(this.getPopup().domElem, items[value].domElem);
+        }
+
+        this._focusedItem = value;
     },
 
     /**
@@ -78,116 +194,28 @@ provide(Input.decl({ modName: 'has-autocomplete' }, {
      * @param {Array} opts new options
      */
     setOptions: function(opts) {
-        var mapItems = function(item) {
-            if (item.group) {
-                return {
-                    block: 'menu',
-                    elem: 'group',
-                    title: item.title,
-                    content: item.group.map(mapItems)
-                };
-            } else {
-                return {
-                    block: 'menu-item',
-                    mods: {
-                        theme: this.getMod('theme'),
-                        bkg: this.getMod('bkg'),
-                        size: this.getMod('size')
-                    },
-                    val: item.val,
-                    data: item.data,
-                    content: item.content
-                };
-            }
-        }.bind(this);
-
-        BEMDOM.update(this._menu.domElem, BEMHTML.apply(opts.map(mapItems)));
-        this._resetFocusedItem();
+        BEMDOM.update(this.getMenu().domElem,
+                      BEMHTML.apply(opts.map(mapItems.bind(this))));
+        this.resetFocusedItem();
     },
 
-    getMenu: function() {
-        return this._menu;
-    },
-
-    _onDocPointerPress: function(e) {
-        if (this._isEventInPopup(e)) {
-            this._isPointerPressInProgress = true;
-            this.bindToDoc('pointerrelease', this._onDocPointerRelease);
-        } else {
-            this.delMod('opened');
+    resetFocusedItem: function() {
+        var items = this.getMenuItems(), focused = this._focusedItem;
+        if (items && (typeof focused !== 'undefined') && items[focused]) {
+            items[focused].delMod('focused');
         }
-    },
-
-    _onDocPointerRelease: function(e) {
-        this._isPointerPressInProgress = false;
-        this.unbindFromDoc('pointerrelease', this._onDocPointerRelease);
-    },
-
-    _isEventInPopup: function(e) {
-        var $target = $(e.target);
-        return dom.contains(this._popup.domElem, $target)
-            || dom.contains(this.domElem, $target);
-    },
-
-    _onMenuItemClick: function(_, data) {
-        this.setVal(data.item.getVal());
-        this.emit('select', data.item.params);
-        this.delMod('opened');
-        this._resetFocusedItem();
-    },
-
-    _updateMenuWidth: function() {
-        this._popup.domElem.css('min-width', this.domElem.outerWidth());
-        this._popup.redraw();
-    },
-
-    _resetFocusedItem: function() {
-        if (this._menuItems && (typeof this._focusedItem !== 'undefined') && this._menuItems[this._focusedItem]) {
-            this._menuItems[this._focusedItem].delMod('focused');
-        }
-        delete this._menuItems;
+        delete this._menuItems;   // drop menuItems cache
         delete this._focusedItem;
     },
 
-    _handleKey: function(e) {
-
-        if (e.keyCode === KeyCodes.DOWN && !this.getMod('opened')) {
-            this.setMod('opened');
-        }
-
-        if (e.keyCode === KeyCodes.UP || e.keyCode === KeyCodes.DOWN) {
-
-            if (!this._menuItems) this._menuItems = this._menu.findBlocksInside('menu-item');
-
-            if (typeof this._focusedItem === 'undefined') {
-                this._focusedItem = -1;
-            }
-
-            if (this._focusedItem != -1) this._menuItems[this._focusedItem].delMod('focused');
-
-            this._focusedItem = e.keyCode === KeyCodes.DOWN ?
-                nextNotHidden(this._menuItems, this._focusedItem) :
-                previousNotHidden(this._menuItems, this._focusedItem);
-
-            if (this._focusedItem != -1) {
-                this._menuItems[this._focusedItem].setMod('focused');
-                reveal(this._popup.domElem, this._menuItems[this._focusedItem].domElem);
-            }
-        }
-
-        if (e.keyCode === KeyCodes.ENTER) {
-            if (typeof this._focusedItem !== 'undefined' && this._focusedItem != -1) {
-                this._onMenuItemClick(null, { item: this._menuItems[this._focusedItem] });
-                e.preventDefault();
-                return true;
-            }
-        }
-
-    }
+    _updateMenuWidth: function() {
+        this.getPopup().domElem.css('min-width', this.domElem.outerWidth());
+        this.getPopup().redraw();
+    },
 
 },
 {
-    live : function() {
+    live: function() {
         this.__base.apply(this, arguments);
         return true;
     }

@@ -58,7 +58,7 @@ describe('input_has-autocomplete', function() {
     it('should set popup`s anchor', function() {
         block = build('input', bemjson);
         var popup = block.findBlockInside('popup');
-
+        block.setMod('opened');
         popup._anchor.should.equal(block.domElem);
     });
 
@@ -450,7 +450,7 @@ describe('input_has-autocomplete', function() {
             block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
             menuItems[0].hasMod('focused').should.be.false;
             menuItems[1].hasMod('focused').should.be.false;
-            block._focusedItem.should.equal(-1);
+            block.getFocusedItem().should.equal(-1);
         });
 
         it('should select focused item on ENTER', function() {
@@ -486,7 +486,7 @@ describe('input_has-autocomplete', function() {
                 menuItems = menu.findBlocksInside('menu-item');
 
             block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
-            block._focusedItem.should.equal(0);
+            block.getFocusedItem().should.equal(0);
 
             block.setOptions([]);
 
@@ -507,7 +507,7 @@ describe('input_has-autocomplete', function() {
                 menuItems = menu.findBlocksInside('menu-item');
 
             block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
-            block._focusedItem.should.equal(0);
+            block.getFocusedItem().should.equal(0);
 
             menuItems[1].domElem.click();
 
