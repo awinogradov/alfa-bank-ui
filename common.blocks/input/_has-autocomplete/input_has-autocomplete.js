@@ -36,7 +36,7 @@ function onDocPointerPress(e) {
     if (isEventInPopup.call(this, e)) {
         this._isPointerPressInProgress = true;
         this.bindToDoc('pointerrelease', onDocPointerRelease);
-    } else {
+    } else if (!this.hasMod('focused')) {
         this.delMod('opened');
     }
 }

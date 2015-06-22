@@ -229,6 +229,7 @@ describe('input_has-autocomplete', function() {
 
         var x = popup.domElem.position().left - 1, y = popup.domElem.position().top - 1;
         $(document).trigger(new $.Event('pointerpress', { pageX: x, pageY: y }));
+        block.elem('control').blur();
         block._isPointerPressInProgress.should.be.false;
         $(document).trigger(new $.Event('pointerrelease', { pageX: x, pageY: y }));
 
