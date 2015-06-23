@@ -66,6 +66,7 @@ provide(Input.decl({ modName: 'has-autocomplete' }, {
             },
 
             '': function() {
+                this._updateMenuWidth();
                 this._popup.delMod('visible');
                 this.unbindFromDoc('pointerpress', this._onDocPointerPress);
             }
