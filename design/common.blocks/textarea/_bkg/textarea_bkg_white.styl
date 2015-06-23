@@ -1,34 +1,29 @@
 .textarea_bkg_white
 {
-
-    background: #fff;
-
-    border-width: 1px;
-    border-style: solid;
-    border-color: #b0afb4;
+    background: rgba(255,255,255,.3);
 
     transition: all 200ms ease;
 
-    &::-webkit-input-placeholder
-    {
-        color: #999;
-    }
+    color: #000;
 
-    &::-moz-placeholder
-    {
-        color: #999;
-    }
+    border: 1px solid #ccc;
 
     &.textarea_disabled
     {
-        background: rgba(0, 0, 0, 0.08);
+        border-color: transparent;
+        background: rgba(0, 0, 0, .06);
 
-        color: rgba(0, 0, 0, 0.4);
+        color: #666;
     }
 
     &.textarea_hovered,
     &.textarea_focused
     {
-        border-color: #4faf5b;
+        border-color: rgba(0, 0, 0, .4);
+    }
+
+    &.textarea_focused
+    {
+        background: #fff;
     }
 }

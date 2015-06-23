@@ -4,11 +4,11 @@
     .checkbox__box {
         transition: all 200ms ease;
 
-        background: #fff;
+        background: rgba(255, 255, 255, .3);
 
         border-width: 1px;
         border-style: solid;
-        border-color: alpha(#b0afb4, 0.8);
+        border-color: #ccc;
 
         &:after
         {
@@ -20,7 +20,7 @@
     {
         .checkbox__box
         {
-            border-color: alpha(#b0afb4, 0.8);
+            border-color:rgba(0, 0, 0, .4);
         }
     }
 
@@ -29,15 +29,7 @@
     {
         .checkbox__box
         {
-            border-color: #b0afb4;
-        }
-    }
-
-    &.checkbox_hovered
-    {
-        &.checkbox_checked .checkbox__box
-        {
-            border-color: alpha(#b0afb4, 0.8);
+            border-color: rgba(0, 0, 0, .4);
         }
     }
 
@@ -48,12 +40,19 @@
         .checkbox__box
         {
             border-color: transparent;
-            background: rgba(0, 0, 0, 0.08);
+            background: rgba(0, 0, 0, 0.06);
         }
 
         &.checkbox_checked .checkbox__box:after
         {
             opacity: 0.4;
+        }
+    }
+    &.checkbox_type_button
+    {
+        .button_checked
+        {
+            background: #ccc;
         }
     }
 }
