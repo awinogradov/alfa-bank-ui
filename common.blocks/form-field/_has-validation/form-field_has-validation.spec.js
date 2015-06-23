@@ -22,7 +22,6 @@ modules.define('spec', ['spec__utils', 'input', 'message', 'form-field'], functi
             block.getVal().should.equal('');
         });
 
-
         it('should validate on blur', function() {
             bemjson.mods.type = 'input';
             bemjson.mods.message = 'text';
@@ -44,7 +43,6 @@ modules.define('spec', ['spec__utils', 'input', 'message', 'form-field'], functi
 
             block.setVal('YYY');
             block.getControl().elem('control').blur();
-
             block.getDirty().should.be.true;
             (!!spy.called).should.be.true;
         });
@@ -66,13 +64,13 @@ modules.define('spec', ['spec__utils', 'input', 'message', 'form-field'], functi
             var spy = sinon.spy(block.getMessage(), 'show');
             block._updateStatus();
             (!!spy.called).should.be.false;
-            (block.hasMod('message')).should.be.true;
 
             // should show for invalid block
             block._status = 'error';
             block._updateStatus();
             (!!spy.called).should.be.true;
         });
+
     });
 
     provide();
