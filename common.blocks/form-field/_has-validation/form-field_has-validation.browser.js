@@ -17,10 +17,8 @@ FormField.decl({ block: this.name, modName: 'has-validation', modVal: true }, /*
 
                 if (this.hasMod('type')) {
                     this.getControl().bindTo('control', 'blur', function(e) {
-                        setTimeout(function() {
-                            this._dirty = this._dirty || (this.getVal() != this._initVal);
-                            this._dirty && this.validate();
-                        }.bind(this), 100);
+                        this._dirty = this._dirty || (this.getVal() != this._initVal);
+                        this._dirty && this.validate();
                     }.bind(this));
                 }
 
