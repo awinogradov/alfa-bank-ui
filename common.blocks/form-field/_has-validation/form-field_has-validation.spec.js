@@ -22,7 +22,7 @@ modules.define('spec', ['spec__utils', 'input', 'message', 'form-field'], functi
             block.getVal().should.equal('');
         });
 
-        it('should validate on blur', function() {
+        it.only('should validate on blur', function() {
             bemjson.mods.type = 'input';
             bemjson.mods.message = 'text';
             bemjson.content = {
@@ -41,10 +41,17 @@ modules.define('spec', ['spec__utils', 'input', 'message', 'form-field'], functi
             block.getDirty().should.be.false; // value was not changed
             (!!spy.called).should.be.false; // validate should not be called if value is not dirty
 
+
+            var clock = sinon.useFakeTimers();
             block.setVal('YYY');
             block.getControl().elem('control').blur();
+
+            clock.tick(100);
+
             block.getDirty().should.be.true;
             (!!spy.called).should.be.true;
+
+            clock.restore();
         });
 
         it('should call show message when changes status focused', function() {
