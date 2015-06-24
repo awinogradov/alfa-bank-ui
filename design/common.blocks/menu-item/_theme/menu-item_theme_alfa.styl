@@ -1,11 +1,13 @@
-paddingVert = (3 4 5 6);
-paddingHor = ($inputs_padding_s $inputs_padding_m $inputs_padding_l $inputs_padding_xl);
-fontSize = ($links_font_size_s $links_font_size_m $links_font_size_l $links_font_size_xl);
-inputFontSize = ($inputs_font_size_s $inputs_font_size_m $inputs_font_size_l $inputs_font_size_xl);
+$paddingVert = (3 4 5 6);
+$paddingHor = (13 15 17 19);
+$fontSize = (12 15 20 35);
+$inputFontSize = (12 12 15 25);
 
 .menu-item_theme_alfa
 {
     position: relative;
+
+    font-family: 'Roboto', sans-serif;
 
     cursor: pointer;
 
@@ -66,13 +68,13 @@ for sizeVal, i in s m l xl {
     {
         .menu-item_theme_alfa.menu-item_horizontal
         {
-            font-size: (fontSize[i]);
+            font-size: ($fontSize[i])px;
         }
 
         .menu-item_theme_alfa
         {
-            font-size: (inputFontSize[i])px;
-            padding: (paddingVert[i])px (paddingHor[i])px;
+            font-size: ($inputFontSize[i])px;
+            padding: ($paddingVert[i])px ($paddingHor[i])px;
         }
     }
 }

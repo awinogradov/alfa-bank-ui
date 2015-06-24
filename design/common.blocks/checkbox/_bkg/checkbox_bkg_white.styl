@@ -1,11 +1,14 @@
 .checkbox_bkg_white
 {
-    .checkbox__box {
-        background: $gray;
 
-        &:before {
-            background: #fff;
-        }
+    .checkbox__box {
+        transition: all 200ms ease;
+
+        background: rgba(255, 255, 255, .3);
+
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ccc;
 
         &:after
         {
@@ -17,33 +20,16 @@
     {
         .checkbox__box
         {
-            background: $gray;
-
-            &:before
-            {
-                background: #fff;
-            }
+            border-color:rgba(0, 0, 0, .4);
         }
     }
 
-    &.checkbox_focused
-    {
-        .checkbox__box
-        {
-            background: rgba(0, 212, 150, 0.4);
-        }
-    }
-
+    &.checkbox_focused,
     &.checkbox_hovered
     {
         .checkbox__box
         {
-            background: darken($gray, 10%);
-        }
-
-        &.checkbox_checked .checkbox__box
-        {
-            background: darken($gray, 10%);
+            border-color: rgba(0, 0, 0, .4);
         }
     }
 
@@ -53,12 +39,20 @@
 
         .checkbox__box
         {
-            background: rgba(0, 0, 0, 0.08);
+            border-color: transparent;
+            background: rgba(0, 0, 0, 0.06);
         }
 
         &.checkbox_checked .checkbox__box:after
         {
             opacity: 0.4;
+        }
+    }
+    &.checkbox_type_button
+    {
+        .button_checked
+        {
+            background: #ccc;
         }
     }
 }

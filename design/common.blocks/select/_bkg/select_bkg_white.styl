@@ -5,6 +5,14 @@
         background-image: url(../__tick/_bkg/select__tick_bkg_white.svg);
     }
 
+    .button_hovered
+    {
+        .select__tick
+        {
+            opacity: 0.6;
+        }
+    }
+
     &.select_size_s .select__tick,
     &.select_size_m .select__tick
     {
@@ -15,15 +23,5 @@
     &.select_size_xl .select__tick
     {
         background-size: 16px;
-    }
-
-    .select__button
-    {
-        color:      black;
-    }
-
-    &.select_opened .select__button
-    {
-        background: $green;
     }
 }

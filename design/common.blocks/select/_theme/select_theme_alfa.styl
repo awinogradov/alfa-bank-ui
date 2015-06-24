@@ -1,8 +1,12 @@
+$fontSize = (12 12 15 25);
+$controlMarginLeft = (12 14 16 18);
+$controlPaddingRight = (27 28 32 38);
+
 .select_theme_alfa
 {
     max-width: 100%;
 
-    display: block;
+    display: inline-block;
 
     vertical-align: top;
 
@@ -24,64 +28,21 @@
                 content: '\00a0';
             }
         }
-        &.button_size_s
-        {
-            .button__text
-            {
-                font-size: $inputs_font_size_s;
-                padding-right: 27px;
-                margin-left:   ($inputs_padding_s - 1);
-            }
 
-            .icon
+        for $sizeVal, i in s m l xl {
+            &.button_size_{$sizeVal}
             {
-                width: 25px;
-            }
-        }
+                .button__text
+                {
+                    font-size: ($fontSize[i])px;
+                    padding-right: ($controlPaddingRight[i])px;
+                    margin-left:   ($controlMarginLeft[i])px;
+                }
 
-
-        &.button_size_m
-        {
-            .button__text
-            {
-                font-size: $inputs_font_size_m;
-                padding-right: 28px;
-                margin-left:   ($inputs_padding_m - 1);
-            }
-
-            .icon
-            {
-                width: 29px;
-            }
-        }
-
-        &.button_size_l
-        {
-            .button__text
-            {
-                font-size: $inputs_font_size_l;
-                padding-right: 32px;
-                margin-left:   ($inputs_padding_l - 1);
-            }
-
-            .icon
-            {
-                width: 33px;
-            }
-        }
-
-        &.button_size_xl
-        {
-            .button__text
-            {
-                font-size: $inputs_font_size_xl;
-                padding-right: 38px;
-                margin-left:   ($inputs_padding_xl - 1);
-            }
-
-            .icon
-            {
-                width: 39px;
+                .icon
+                {
+                    width: ($controlPaddingRight[i])px + 1;
+                }
             }
         }
     }
@@ -96,19 +57,19 @@
         opacity: 0.3;
     }
 
-    &:hover
+    .button_hovered
     {
         .select__tick
         {
             opacity: 1;
         }
 
-        &.select_disabled
-        {
-            .select__tick
-            {
-                opacity: 0.3;
-            }
+    }
+
+    &.select_disabled
+    {
+        .button_hovered .select__tick {
+            opacity: 0.3; 
         }
     }
 

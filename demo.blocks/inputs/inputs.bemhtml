@@ -107,11 +107,158 @@ block('inputs')(
                 placeholder: 'текст'
             },
             {
+                block: 'textarea',
+                mods: {
+                    width: 'available'
+                },
+                placeholder: 'текст'
+            },
+            {
+                block: 'textarea',
+                mods: {
+                    width: 'available',
+                    disabled: true
+                },
+                val: 'текст'
+            },
+            {
                 block: 'input',
                 mods: {
                     mode: 'link'
                 },
                 val: 'Простой inplace'
+            },
+            {
+                block: 'checkbox',
+                mods: {},
+                val: 1,
+                text: 'Чекбокс'
+            },
+            {
+                block: 'checkbox',
+                mods: {
+                    checked: true
+                },
+                val: 1,
+                text: 'Чекбокс'
+            },
+            {
+                block: 'checkbox',
+                mods: {
+                    disabled: true
+                },
+                val: 1,
+                text: 'Чекбокс'
+            },
+            {
+                block: 'checkbox',
+                mods: {
+                    checked: true,
+                    disabled: true
+                },
+                val: 1,
+                text: 'Чекбокс'
+            },
+            {
+                block: 'checkbox',
+                mods: {
+                    type: 'button',
+                },
+                val: 1,
+                text: 'Чекбокс'
+            },
+            {
+                block: 'checkbox',
+                mods: {
+                    type: 'button',
+                    checked: true
+                },
+                val: 1,
+                text: 'Чекбокс'
+            },
+            {
+                block: 'checkbox',
+                mods: {
+                    type: 'button',
+                    disabled: true
+                },
+                val: 1,
+                text: 'Чекбокс'
+            },
+            {
+                block: 'checkbox',
+                mods: {
+                    type: 'button',
+                    disabled: true,
+                    checked: true
+                },
+                val: 1,
+                text: 'Чекбокс'
+            },
+            {
+                block: 'checkbox-group',
+                options: [
+                    { text: 'Checkbox 1', val: '1', checked: true },
+                    { text: 'Checkbox 2', val: '2' },
+                    { text: 'Checkbox 3', val: '3' }
+                ]
+            },
+            {
+                block: 'checkbox-group',
+                mods: { type: 'button' },
+                options: [
+                    { text: 'Checkbox 1', val: '1', checked: true },
+                    { text: 'Checkbox 2', val: '2' },
+                    { text: 'Checkbox 3', val: '3' }
+                ]
+            },
+            {
+                block: 'radio',
+                mods: {},
+                val: 1,
+                text: 'Радио'
+            },
+            {
+                block: 'radio',
+                mods: {
+                    checked: true
+                },
+                val: 1,
+                text: 'Радио'
+            },
+            {
+                block: 'radio',
+                mods: {
+                    disabled: true
+                },
+                val: 1,
+                text: 'Радио'
+            },
+            {
+                block: 'radio',
+                mods: {
+                    checked: true,
+                    disabled: true
+                },
+                val: 1,
+                text: 'Радио'
+            },
+            {
+                block: 'radio-group',
+                options: [
+                    { text: 'Radio 1', val: '1', checked: true },
+                    { text: 'Radio 2', val: '2' },
+                    { text: 'Radio 3', val: '3' }
+                ]
+            },
+            {
+                block: 'radio-group',
+                mods: { type: 'button' },
+                options: [
+                    { text: 'Radio 1', val: '1', checked: true },
+                    { text: 'Radio 2', val: '2' },
+                    { text: 'Radio 3', val: '3' }
+                ]
             }
         ];
 

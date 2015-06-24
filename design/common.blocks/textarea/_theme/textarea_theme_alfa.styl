@@ -1,11 +1,15 @@
+$fontSize = (12 12 15 25);
+$controlPadding = (13 15 17 19);
+$controlMinHeight = (2 4 6 8);
+
 .textarea_theme_alfa
 {
-    font-family: $font_family;
+    font-family: 'Roboto', sans-serif;
 
     box-sizing: border-box;
 
     position: relative;
-    display:  block;
+    display:  inline-block;
 
     padding: 0;
     margin: 0;
@@ -13,7 +17,7 @@
     vertical-align: top;
     line-height: inherit;
 
-    border-radius: $inputs_radius;
+    border-radius: 6px;
 
     outline:    none;
     background: none;
@@ -35,14 +39,14 @@
     &:before
     {
         position: absolute;
-        top:      $inputs_border_size;
-        right:    $inputs_border_size;
-        bottom:   $inputs_border_size;
-        left:     $inputs_border_size;
+        top:      1px;
+        right:    1px;
+        bottom:   1px;
+        left:     1px;
 
         content: '';
 
-        border-radius: $inputs_radius - $inputs_border_size;
+        border-radius: 5px;
     }
 
     &.textarea_focused
@@ -62,40 +66,12 @@
         }
     }
 
-    &.textarea_size_s
-    {
-        font-size: $textarea_font_size_s;
-
-        padding: $textarea_padding_s;
-
-        min-height: $textarea_min_height_s;
-
-    }
-
-    &.textarea_size_m
-    {
-        font-size: $textarea_font_size_m;
-
-        padding: $textarea_padding_m;
-
-        min-height: $textarea_min_height_m;
-    }
-
-    &.textarea_size_l
-    {
-        font-size: $textarea_font_size_l;
-
-        padding: $textarea_padding_l;
-
-        min-height: $textarea_min_height_l;
-    }
-
-    &.textarea_size_xl
-    {
-        font-size: $textarea_font_size_xl;
-
-        padding: $textarea_padding_xl;
-
-        min-height: $textarea_min_height_xl;
+    for $sizeVal, i in s m l xl {
+        &.textarea_size_{$sizeVal}
+        {
+            font-size: ($fontSize[i])px;
+            padding: 4px ($controlPadding[i])px;
+            min-height: ($controlMinHeight[i])em;
+        }
     }
 }

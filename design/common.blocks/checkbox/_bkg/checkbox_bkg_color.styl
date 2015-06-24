@@ -1,7 +1,6 @@
 .checkbox_bkg_color
 {
-    color:       #fff;
-    font-weight: $font_weight;
+    color: #fff;
 
     .checkbox__box {
         transition: all 200ms ease;
@@ -10,12 +9,7 @@
 
         border-width: 1px;
         border-style: solid;
-        border-color: #fff;
-        border-color: rgba(255,255,255,0.5);
-
-        &:before {
-            background: transparent;
-        }
+        border-color: alpha(#fff, 0.5);
 
         &:after
         {
@@ -28,50 +22,36 @@
         .checkbox__box
         {
             border-color: #fff;
-            border-color: rgba(255,255,255,1);
-
-            &:before
-            {
-                background: transparent;
-            }
         }
     }
 
-    &.checkbox_focused
-    {
-        .checkbox__box
-        {
-            border-color: #fff;
-            border-color: rgba(255,255,255,1);
-
-            background: rgba(255,255,255,0.2);
-        }
-    }
-
+    &.checkbox_focused,
     &.checkbox_hovered
     {
         .checkbox__box
         {
             border-color: #fff;
-            border-color: rgba(255,255,255,1);
-
-            background: rgba(255,255,255,0.2);
+            background: alpha(#fff, 0.2);
         }
+    }
 
+    &.checkbox_hovered
+    {
         &.checkbox_checked .checkbox__box
         {
-            background: rgba(255,255,255,0.2);
+            background: alpha(#fff, 0.2);
         }
     }
 
     &.checkbox_disabled
     {
         color: #fff;
-        color: rgba(255,255,255,0.2)
+        color: alpha(#fff, 0.2);
 
         .checkbox__box
         {
-            background: rgba(255,255,255,0.1);
+            border-color: alpha(#fff, 0.2);
+            background: alpha(#fff, 0.1);
         }
 
         &.checkbox_checked .checkbox__box:after

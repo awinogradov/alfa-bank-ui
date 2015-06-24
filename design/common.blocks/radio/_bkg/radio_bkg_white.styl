@@ -2,50 +2,32 @@
 {
     .radio__box
     {
-        background: $gray;
+        transition: all 200ms ease;
 
-        &:before
-        {
-            background: #fff;
-        }
-    }
+        background: rgba(255, 255, 255, .3);
 
-    &.radio_focused
-    {
-        .radio__box
-        {
-            background: rgba(0, 212, 150, 0.4);
-        }
-    }
-
-    &.radio_hovered
-    {
-        .radio__box
-        {
-            background: darken($gray, 10%);
-        }
-
-        &.radio_checked .radio__box
-        {
-            background: darken($gray, 10%);
-        }
+        border: 1px solid #ccc;
     }
 
     &.radio_checked
     {
         .radio__box
         {
-            background: $gray;
-
-            &:before
-            {
-                background: #fff;
-            }
+            border-color: rgba(0, 0, 0, .4);
 
             &:after
             {
-                background: $green;
+                background: #B20C00;
             }
+        }
+    }
+
+    &.radio_focused,
+    &.radio_hovered
+    {
+        .radio__box
+        {
+            border-color: rgba(0, 0, 0, .4);
         }
     }
 
@@ -55,12 +37,21 @@
 
         .radio__box
         {
-            background: rgba(0, 0, 0, 0.08);
+            border-color: transparent;
+            background: rgba(0, 0, 0, 0.06);
+        }
 
-            &:after
-            {
-                background: rgba(0, 0, 0, 0.4);
-            }
+        &.radio_checked .radio__box:after
+        {
+            opacity: 0.4;
+        }
+    }
+
+    &.radio_type_button
+    {
+        .button_checked
+        {
+            background: #ccc;
         }
     }
 }
