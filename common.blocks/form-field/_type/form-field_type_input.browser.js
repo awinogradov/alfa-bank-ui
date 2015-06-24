@@ -7,8 +7,12 @@ modules.define('form-field', function(provide, FormField) {
                     this.__base.apply(this, arguments);
 
                     var input = this.getControl();
-                    if (input && input.hasMod('has-autocomplete') && this.hasMod('has-validation')) {
+                    if (this.hasMod('has-validation')) {
                         input.on('select', function() {
+                            this.validate();
+                        }.bind(this));
+
+                        input.on('pick-date', function() {
                             this.validate();
                         }.bind(this));
                     }

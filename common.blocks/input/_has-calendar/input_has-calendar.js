@@ -39,8 +39,12 @@ provide(Input.decl({ modName: 'has-calendar' }, /** @lends input.prototype */{
     getDate: function() {
         return this._calendar.getVal();
     },
+    getCalendar: function() {
+        return this._calendar;
+    },
     _onChangeCalendar: function(e, data) {
         this.setVal(data.formated);
+        this.emit('pick-date');
     },
     _onControlBlur: function(e) {
         if (this._ignoreBlur) {

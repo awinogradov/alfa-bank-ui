@@ -244,6 +244,19 @@ describe('input_has-calendar', function() {
         popup.getMod('visible').should.be.true;
     });
 
+    it('should emit "pick-date" event on calendar changed', function() {
+        block = build('input', bemjson);
+
+        var calendar = block.getCalendar();
+        var shouldBeCalled = false;
+        block.on('pick-date', function() {
+            shouldBeCalled = true;
+        });
+
+        calendar.emit('change', { formated: 'hi there' });
+
+        shouldBeCalled.should.be.true;
+    });
 });
 
 provide();

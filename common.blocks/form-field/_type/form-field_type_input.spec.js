@@ -26,10 +26,17 @@ modules.define('spec', ['spec__utils', 'form-field', 'input', 'message'], functi
             utils.destruct(block);
         });
 
-        it('should call validate function on select event', function() {
+        it('should call validate function on select event on input', function() {
             var input = block.getControl();
             var spyOnValidate = sinon.spy(block, 'validate');
             input.emit('select');
+            spyOnValidate.called.should.be.true;
+        });
+
+        it('should call validate function on pick-date event on input', function() {
+            var input = block.getControl();
+            var spyOnValidate = sinon.spy(block, 'validate');
+            input.emit('pick-date');
             spyOnValidate.called.should.be.true;
         });
     });
