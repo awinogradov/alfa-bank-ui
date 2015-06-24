@@ -1,4 +1,4 @@
-modules.define('spec', ['form-field', 'spec__utils'], function(provide, FormField, utils) {
+modules.define('spec', ['spec__utils', 'form-field', 'input'], function(provide, utils) {
 
     describe('form-field_type_input', function() {
 
@@ -10,6 +10,7 @@ modules.define('spec', ['form-field', 'spec__utils'], function(provide, FormFiel
             content: [
                 {
                     block: 'input',
+                    options: [],
                     mods: {
                         'has-autocomplete': true
                     }
