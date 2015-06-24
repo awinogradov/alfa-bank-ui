@@ -1,4 +1,4 @@
-modules.define('spec', ['spec__utils', 'form-field', 'input'], function(provide, utils) {
+modules.define('spec', ['spec__utils', 'form-field', 'input', 'message'], function(provide, utils) {
 
     describe('form-field_type_input', function() {
 
@@ -6,7 +6,7 @@ modules.define('spec', ['spec__utils', 'form-field', 'input'], function(provide,
 
         bemjson = {
             block: 'form-field',
-            mods: { type: 'input', 'has-validation': true },
+            mods: { type: 'input', 'has-validation': true, message: 'text'},
             content: [
                 {
                     block: 'input',
@@ -30,7 +30,7 @@ modules.define('spec', ['spec__utils', 'form-field', 'input'], function(provide,
             var input = block.getControl();
             var spyOnValidate = sinon.spy(block, 'validate');
             input.emit('select');
-            spyOnValidate.calledshould.be.true;
+            spyOnValidate.called.should.be.true;
         });
     });
 

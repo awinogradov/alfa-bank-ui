@@ -1,7 +1,8 @@
 [{
     tech: 'spec.js',
     shouldDeps: [
-        {  block: 'input', mods: { 'has-autocomplete': true } },
-        {  block: 'form-field', mods: { type: 'input', 'has-validation': true } }
+        { tech: 'js', block: 'form-field', mods: { type: 'input', 'has-validation': true, message: 'text' } },
+        { tech: 'bemhtml', block: 'input', mods: { 'has-autocomplete': true } },
+        { tech: 'bemhtml', block: 'form-field', mods: { type: 'input', 'has-validation': true, message: 'text' } }
     ]
 }];
