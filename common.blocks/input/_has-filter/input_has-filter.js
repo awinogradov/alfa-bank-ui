@@ -36,12 +36,13 @@ modules.define('input', [], function(provide, Input) {
          * Use to manually trigger filtering when needed
          */
         filter: function(val) {
-            var menu = this.getMenu();
+            var menu = this.getMenu(),
+                items = this.getMenuItems(),
+                focused = this.getFocusedItem();
 
             if (!val) val = this.getVal();
 
-            // TODO cache menu-item's
-            menu.findBlocksInside('menu-item').forEach(function(item) {
+            items.forEach(function(item) {
                 if (this._filter(item, val)) {
                     item.delMod('hidden');
                 } else {
@@ -55,10 +56,9 @@ modules.define('input', [], function(provide, Input) {
             $groups.has('.menu-item:not(.menu-item_hidden)').show();
 
             // reset focused item if it was filter out
-            if (this._menuItems && (typeof this._focusedItem !== 'undefined') &&
-                    this._menuItems[this._focusedItem] &&
-                    this._menuItems[this._focusedItem].hasMod('hidden')) {
-                this._resetFocusedItem();
+            if (items && (typeof focused !== 'undefined') &&
+                    items[focused] && items[focused].hasMod('hidden')) {
+                this.resetFocusedItem();
             }
 
             this._lastVal = val;
