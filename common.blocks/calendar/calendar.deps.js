@@ -13,7 +13,8 @@
                 theme: 'alfa',
                 target: 'anchor'
             }
-        }
+        },
+        'moment'
     ]
 },
 {

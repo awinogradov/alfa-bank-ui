@@ -1,8 +1,8 @@
 var expect = chai.expect;
 
 modules.define('spec',
-    ['jquery', 'spec__utils', 'input', 'popup', 'calendar'],
-    function(provide, $, helper, input, popup, calendar) {
+    ['jquery', 'spec__utils', 'input', 'popup', 'calendar', 'moment'],
+    function(provide, $, helper, input, popup, calendar, moment) {
 
 var build = helper.buildBlock;
 
@@ -106,7 +106,7 @@ describe('input_has-calendar', function() {
         block.elem('control').trigger('focus');
         calendar.findElem('day').eq(10).click();
 
-        ((calendar.parseDate(block.getVal()) + '') === (calendar.getVal() + '')).should.be.true;
+        (block.getDate().toString() === calendar.getVal().toString()).should.be.true;
     });
 
     it('should get `Date`', function() {
@@ -116,8 +116,8 @@ describe('input_has-calendar', function() {
         block.elem('control').trigger('focus');
         calendar.findElem('day').eq(10).click();
 
-        (calendar.getVal() instanceof Date).should.be.true;
-        (block.getDate() instanceof Date).should.be.true;
+        (moment.isDate(calendar.getVal())).should.be.true;
+        (moment.isDate(block.getDate())).should.be.true;
 
     });
 
@@ -257,6 +257,37 @@ describe('input_has-calendar', function() {
 
         shouldBeCalled.should.be.true;
     });
+
+    it('should be set readable format date', function() {
+        bemjson.mods['readable-date'] = true;
+        block = build('input', bemjson);
+
+        var formatedDate = '24.06.2015';
+        var readableDate = '24 июня 2015';
+
+        block.hasMod('readable-date').should.be.true;
+
+        block.elem('control').trigger('focus');
+        block.setVal(formatedDate);
+        block.getVal().should.be.equal(formatedDate);
+
+        block.elem('control').trigger('blur');
+        block.getVal().should.be.equal(readableDate);
+
+    });
+
+    it('should be set date when pressed ENTER', function() {
+        block = build('input', bemjson);
+
+        block.elem('control').trigger('focus');
+        block.setVal('24.06.2015');
+        block.domElem.trigger(new $.Event('keydown', { keyCode: 13 })); // ENTER
+        (block._calendar.getVal().toString() === block.getDate().toString()).should.be.true;
+
+        block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
+
+    });
+
 });
 
 provide();

@@ -1,51 +1,7 @@
 /**
  * @module calendar
  */
-/* istanbul ignore next: FIXME @voischev */
-modules.define('calendar', ['i-bem__dom', 'BEMHTML', 'jquery'], function(provide, BEMDOM, BEMHTML, $) {
-
-function compareMonths(a, b) {
-
-    if (a.getFullYear() > b.getFullYear()) {
-        return 1;
-    }
-
-    if (a.getFullYear() < b.getFullYear()) {
-        return -1;
-    }
-
-    if (a.getMonth() > b.getMonth()) {
-        return 1;
-    }
-
-    if (a.getMonth() < b.getMonth()) {
-        return -1;
-    }
-
-    return 0;
-}
-
-function leadZero(num) {
-    return num < 10 ? '0' + num : num;
-}
-
-function parseDateParts(str) {
-    var match;
-
-    match = /^\s*(\d{1,2})[./-](\d{1,2})(?:[./-](\d{4}|\d\d))?\s*$/.exec(str);
-
-    if (match) {
-        return [match[1], match[2] - 1, match[3]];
-    }
-
-    match = /^\s*(\d{4})[./-](\d\d)(?:[./-](\d\d))?\s*$/.exec(str);
-
-    if (match) {
-        return [match[3], match[2] - 1, match[1]];
-    }
-
-    return null;
-}
+modules.define('calendar', ['i-bem__dom', 'BEMHTML', 'jquery', 'moment'], function(provide, BEMDOM, BEMHTML, $, moment) {
 
 /**
  * @exports
@@ -63,8 +19,7 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
 
                 this._popup = this.domElem.bem('popup');
 
-                this._month = this._getToday();
-                this._month.setDate(1);
+                this._month = moment(this._getToday()).set('date', 1).format();
 
                 this.setLimits(
                     this.params.earlierLimit,
@@ -75,15 +30,6 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
     },
 
     /**
-     * Get value
-     *
-     * @returns {?Date}
-     */
-    getVal: function() {
-        return this._val;
-    },
-
-    /**
      * Set value
      *
      * @param {Date|string} val
@@ -91,13 +37,41 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
      */
     setVal: function(val) {
         var date = this.parseDate(val);
-        this._val = this._isValidDate(date) ? date : null;
+
+        this._val = this._isValidDate(moment(date).set('hour', 1).format()) ? date : null;
+
         if (this._val) {
-            this._month = new Date(this._val.getTime());
-            this._month.setDate(1);
+            this._month = moment(this._val).set('date', 1).format();
         }
 
         return this;
+    },
+
+    /**
+     * Get value
+     *
+     * @returns {?Date}
+     */
+    getVal: function() {
+        return this._val ? new Date(this._val) : '';
+    },
+
+    /**
+     * Get formated Date
+     *
+     * @returns {String} DD.MM.YYYY
+     */
+    getFormatedDate: function() {
+        return this.getVal() ? this._formatDate(this.getVal()) : '';
+    },
+
+    /**
+     * Get readable format Date
+     *
+     * @returns {String} DD MMMM YYYY
+     */
+    getReadableDate: function() {
+        return this.getVal() ? moment(this.getVal()).format('DD MMMM YYYY') : '';
     },
 
     /**
@@ -140,9 +114,9 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
      * @returns {calendar} this
      */
     switchMonth: function(step) {
-        this._month.setMonth(this._month.getMonth() + step);
+        this._month = moment(this._month).month(moment(this._month).month() + step);
 
-        this.nextTick(this._build);
+        this._build();
 
         return this;
     },
@@ -154,27 +128,13 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
      * @returns {?Date} this
      */
     parseDate: function(val) {
-        if (val instanceof Date) {
+        if (moment.isDate(val)) {
             return val;
         }
 
-        var parsed = parseDateParts(val);
-        if (parsed) {
-            var day = parsed[0],
-                month = parsed[1],
-                year = parsed[2],
-                date = this._getToday();
+        var iso = moment(val, ['DD-MM-YYYY', 'YYYY-MM-DD', 'DD MMMM YYYY'], 'ru');
 
-            date.setMonth(month, day);
-
-            if (year) {
-                date.setFullYear(year);
-            }
-
-            return date;
-        }
-
-        return null;
+        return iso.isValid() ? iso.format() : null;
     },
 
     /**
@@ -212,15 +172,13 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
         this._earlierLimit = this.parseDate(earlier);
         this._laterLimit = this.parseDate(later);
 
-        if (earlier && compareMonths(this._month, this._earlierLimit) < 0) {
-            this._month = new Date(earlier.getTime());
+        if (earlier && moment(this._month).isBefore(this._earlierLimit, 'month')) {
+            this._month = moment(this._earlierLimit).set('date', 1).format();
         }
 
-        if (later && compareMonths(this._laterLimit, this._month) < 0) {
-            this._month = new Date(later.getTime());
+        if (later && moment(this._laterLimit).isBefore(this._month, 'month')) {
+            this._month = moment(this._laterLimit).set('date', 1).format();
         }
-
-        this._month.setDate(1);
 
         return this;
     },
@@ -252,37 +210,32 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
      */
     _isOffDay: function(date) {
 
-        var offDays = this.getOffDays();
+        var offDays = this.getOffDays() || [];
+        var value = moment(this.parseDate(date));
 
-        if (offDays && offDays.length) {
-            for (i in offDays){
-                if (new Date(date).getTime() == new Date(this.parseDate(offDays[i])).getTime()){
-                    return true;
-                }
-            }
+        for (var i in offDays) {
+            if (value.isSame(this.parseDate(offDays[i]))) return true;
         }
 
         return false;
     },
 
     _getToday: function() {
-        var today = new Date();
-        today.setHours(0, 0, 0, 0);
-
-        return today;
+        return moment().set({ hour: 0, minute : 0, second: 0 }).format();
     },
 
     _formatDate: function(date) {
-        var year = date.getFullYear(),
-            month = date.getMonth() + 1,
-            day = date.getDate();
-
-        return [leadZero(day), leadZero(month), year].join('.');
+        var value = moment(date);
+        return value.isValid() ? value.format('DD.MM.YYYY') : '';
     },
 
     _isValidDate: function(date) {
-        return !(this._earlierLimit && date < this._earlierLimit ||
-            this._laterLimit && date > this._laterLimit || this._isOffDay(date));
+        var value = moment(date);
+        return value.isValid() ?
+            !(this._earlierLimit && value.isBefore(this._earlierLimit) ||
+                this._laterLimit && value.isAfter(this._laterLimit) ||
+                this._isOffDay(date)) :
+            null;
     },
 
     _build: function() {
@@ -322,13 +275,15 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
             weeks = [],
             countDays = 7,
             lastDay = 6,
-            week = new Array(countDays),
-            dateIterator = new Date(month.getTime());
+            week = new Array(countDays);
 
-        for (dateIterator.setDate(1); dateIterator.getMonth() === month.getMonth(); dateIterator.setDate(dateIterator.getDate() + 1)) {
-            weekDay = (dateIterator.getDay() + lastDay) % countDays; // Получаем 0 - пн, 1 - вт, и т.д.
+        for (var dateIterator = moment(month).set('hour', 1);
+            dateIterator.isSame(month, 'month');
+            dateIterator = dateIterator.date(dateIterator.date() + 1)) {
 
-            week[weekDay] = new Date(dateIterator.getTime());
+            weekDay = dateIterator.day(); // Получаем 0 - пн, 1 - вт, и т.д.
+
+            week[weekDay] = dateIterator.format();
 
             if (weekDay === lastDay) {
                 weeks.push(week);
@@ -359,7 +314,7 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
                         elem: 'day',
                         content: {
                             elem: 'inner',
-                            content: day ? day.getDate() : ''
+                            content: day ? moment(day).date() : ''
                         },
                         attrs: {},
                         mods: {}
@@ -373,7 +328,7 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
                     dayElem.mods.type = weekend ? (off ? 'weekend-off' : 'weekend') : 'off';
                 }
 
-                if (day && val && day.getTime() === val.getTime()) {
+                if (day && val && moment(day).isSame(val, 'day')) {
                     dayElem.mods.state = 'current';
                 }
 
@@ -406,8 +361,8 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
     },
 
     _buildTitle: function(month) {
-        var prevMonth = !this._earlierLimit || compareMonths(month, this._earlierLimit) > 0,
-            nextMonth = !this._laterLimit || compareMonths(this._laterLimit, month) > 0;
+        var prevMonth = !this._earlierLimit || moment(month).isAfter(this._earlierLimit, 'month'),
+            nextMonth = !this._laterLimit || moment(this._laterLimit).isAfter(month, 'month');
 
         return {
             elem: 'title',
@@ -428,8 +383,8 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
                 },
                 {
                     elem: 'name',
-                    content: this.params.months[month.getMonth()] +
-                        ' ' + month.getFullYear()
+                    content: this.params.months[moment(month).month()] +
+                        ' ' + moment(month).year()
                 }
             ]
         };
@@ -449,9 +404,11 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
             this.hide();
 
             var val = this.getVal();
+
             this.emit('change', {
                 value: val,
-                formated: this._formatDate(val)
+                formated: this.getFormatedDate(),
+                readableFormat: this.getReadableDate()
             });
         }
     }
