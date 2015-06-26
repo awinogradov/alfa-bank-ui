@@ -33,7 +33,8 @@ block('input')(
 
             applyNext({
                 _inputMods: mods,
-                _calendarParams: calendarParams
+                _calendarParams: calendarParams,
+                _calendarDirections: ctx.directions
             });
         }),
 
@@ -50,7 +51,8 @@ block('input')(
                         size: mods.size,
                         bkg: mods.bkg
                     },
-                    js: this._calendarParams
+                    js: this._calendarParams,
+                    directions: this._calendarDirections
                 }
             ];
         }),

@@ -29,7 +29,13 @@ block('calendar')(
                 target: 'anchor',
                 bkg: false
             }),
-            directions: ctx.directions
+            js: {
+                mainOffset: ctx.mainOffset,
+                secondaryOffset: ctx.secondaryOffset,
+                viewportOffset: ctx.viewportOffset,
+                directions: ctx.directions,
+                zIndexGroupLevel: ctx.zIndexGroupLevel
+            }
         };
     }),
 
