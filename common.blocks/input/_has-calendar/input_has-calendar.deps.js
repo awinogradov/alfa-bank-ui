@@ -12,6 +12,9 @@
             block: 'keyboard',
             elem: 'codes'
         },
+        {
+            elems: ['calendar']
+        },
         'ua',
         'calendar'
     ]
