@@ -89,12 +89,15 @@ describe('calendar', function() {
         (moment(block._month).month()).should.be.equal(6);
         block.findElem('arrow', 'direction', 'left').trigger(new $.Event('pointerclick'));
         (moment(block._month).month()).should.be.equal(5);
+    });
 
-        // Disabled arrows clicked
+    it('should not to switch month', function() {
+
         bemjson.js = {
             earlierLimit: '01.01.2015',
             laterLimit: '31.12.2015',
         };
+
         block = build('calendar', bemjson);
 
         block.setVal('02.02.2015');
