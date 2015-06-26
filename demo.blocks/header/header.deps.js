@@ -1,5 +1,6 @@
 [{
     shouldDeps: [
+        { block: 'variables' },
         { block: 'logo', mods: { view: 'full' } },
         { block: 'menu', mods: { horizontal: true } },
         { block: 'menu-item', mods: { type: 'link' } },

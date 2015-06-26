@@ -299,7 +299,8 @@ function getSourceLevels(platform) {
             { path : path.join('libs', 'bem-core', name + '.blocks'), check : false },
             { path : path.join('libs', 'bem-components', name + '.blocks'), check : false },
             { path : path.join('libs', 'bem-grid', name + '.blocks'), check : false },
-            { path : path.join('libs', 'bem-typography', name + '.blocks'), check : false }
+            { path : path.join('libs', 'bem-typography', name + '.blocks'), check : false },
+            { path : path.join('libs', 'bem-typography', 'design', name + '.blocks'), check : false }
         );
     });
 
@@ -310,15 +311,6 @@ function getSourceLevels(platform) {
     });
 
     levels.push({ path : 'demo.blocks', check : true });
-
-    platformNames.forEach(function(name) {
-        levels.push(
-            { path : path.join('libs', 'bem-typography', 'design', name + '.blocks'), check : false },
-            { path : path.join('design', name + '.blocks'), check : true }
-        );
-    });
-
-    levels.push({ path : 'design/demo.blocks', check : true });
 
     return levels;
 }
