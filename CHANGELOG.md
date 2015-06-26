@@ -1,3 +1,27 @@
+<a name"3.3.0"></a>
+## 3.3.0 (2015-06-26)
+
+
+#### Bug Fixes
+
+* **app:** NYCP-45 remove mode_radio from menu ([7584933](http://git/projects/MAN/repos/nyc-public/commits/75849339ca53759b87e8c9d0533b75c1a5325596))
+* **input:**
+  * NYCP-48 close popup on click outside when not focused ([df886a9](http://git/projects/MAN/repos/nyc-public/commits/df886a91aa0188f707890fd038a48a3089d2fe33))
+  * updateMenuWidth when popup is shown ([573568d](http://git/projects/MAN/repos/nyc-public/commits/573568d3f26cbf3f227ba1d9540b1422070b36b9))
+  * AC-6027 updateMenuWidth should set width on popup instead of menu ([86a5f75](http://git/projects/MAN/repos/nyc-public/commits/86a5f751a74ca50deb8b3b9600733a9e1e35ba98))
+
+
+#### Features
+
+* ***:**
+  * postpone validation on form-field ([150d684](http://git/projects/MAN/repos/nyc-public/commits/150d684284a537741d392d9f0187cae09dffb81b))
+  * postpone validation on form-field ([2d3bf45](http://git/projects/MAN/repos/nyc-public/commits/2d3bf4512868ee9ac49db521d13f32e7590ce06c))
+  * border color for invalid textarea ([102e92d](http://git/projects/MAN/repos/nyc-public/commits/102e92db97ff94732eee3398d4b96a3a9b770fc7))
+  * add menu emit change events on select set new options ([88b6c56](http://git/projects/MAN/repos/nyc-public/commits/88b6c5653f711bc534217de06da309636a92af8c))
+* **calendar:** set format/readable date focus/blur ([18b7592](http://git/projects/MAN/repos/nyc-public/commits/18b7592a87c6c2592f6068022b74cdc4ca213508))
+* **form-field:** mark input field as dirty when setting some value ([45039c1](http://git/projects/MAN/repos/nyc-public/commits/45039c167edbf1fc0ea7d7ef984bc76af34e431f))
+
+
 <a name"3.2.2"></a>
 ### 3.2.2 (2015-06-15)
 
