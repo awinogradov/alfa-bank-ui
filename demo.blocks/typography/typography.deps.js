@@ -2,7 +2,7 @@
     shouldDeps: [
         {
             block: 'paragraph',
-            mods: { type: 'lead' }
+            mods: { type: 'lead', theme: 'alfa' }
         },
         {
             block: 'list',
