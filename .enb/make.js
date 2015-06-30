@@ -294,22 +294,25 @@ function getSourceLevels(platform) {
     var platformNames = (PLATFORMS[platform] || SETS[platform]);
     var levels = [];
 
+    // YANDEX CORE LIBS
     platformNames.forEach(function(name) {
         levels.push(
             { path : path.join('libs', 'bem-core', name + '.blocks'), check : false },
-            { path : path.join('libs', 'bem-components', name + '.blocks'), check : false },
-            { path : path.join('libs', 'bem-grid', name + '.blocks'), check : false },
-            { path : path.join('libs', 'bem-typography', name + '.blocks'), check : false },
-            { path : path.join('libs', 'bem-typography', 'design', name + '.blocks'), check : false }
+            { path : path.join('libs', 'bem-components', name + '.blocks'), check : false }
         );
     });
 
+    // EXTERNAL LIBS
+    levels.push({ path : path.join('libs', 'bem-grid', 'common.blocks'), check : false });
+    levels.push({ path : path.join('libs', 'bem-typography', 'common.blocks'), check : false });
     levels.push({ path : path.join('libs', 'bem-forms', 'common.blocks'), check : true });
 
+    // PROJECT LIBS
     platformNames.forEach(function(name) {
         levels.push({ path : name + '.blocks', check : true });
     });
 
+    // DEMO OVERRIDES
     levels.push({ path : 'demo.blocks', check : true });
 
     return levels;
