@@ -76,7 +76,8 @@ module.exports = {
                     'tag'
                 ]
             },
-            includes : ['*.blocks/**/*.bemhtml']
+            includes : ['*.blocks/**/*.bemhtml'],
+            excludes : ['test.blocks/**/*']
         },
 
         bhjs : {

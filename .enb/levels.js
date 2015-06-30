@@ -29,8 +29,8 @@ var path = require('path'),
             levels.push({ path: name + '.blocks', check: true });
         });
 
-        // DEMO OVERRIDES
-        levels.push({ path: 'demo.blocks', check: true });
+        // TEST OVERRIDES
+        levels.push({ path: 'test.blocks', check: true });
 
         return levels;
     },
