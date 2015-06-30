@@ -205,17 +205,26 @@
                             content : [
                                 {
                                     block : 'heading',
+                                    mods: { theme: 'alfa', bkg: 'color' },
                                     content : 'h1. Заголовок первого уровня'
                                 },
                                 {
                                     block : 'heading',
+                                    mods: { theme: 'alfa', bkg: 'color' },
                                     lvl : 2,
                                     content : 'h2. Заголовок второго уровня'
                                 },
                                 {
                                     block : 'heading',
+                                    mods: { theme: 'alfa', bkg: 'color' },
                                     lvl : 3,
                                     content : 'h3. Заголовок третьего уровня'
+                                },
+                                {
+                                    block : 'heading',
+                                    mods: { theme: 'alfa', bkg: 'color' },
+                                    lvl : 4,
+                                    content : 'h4. Заголовок четвертого уровня'
                                 }
                             ]
                         }
@@ -235,7 +244,7 @@
                             content : [
                                 {
                                     block : 'paragraph',
-                                    mods : { type : 'lead' },
+                                    mods : { type : 'lead', theme: 'alfa', bkg: 'color' },
                                     content : [
                                         'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
                                         'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
@@ -248,6 +257,7 @@
                                 },
                                 {
                                     block : 'paragraph',
+                                    mods: { theme: 'alfa', bkg: 'color' },
                                     content : [
                                         'Это обычный параграф, в котором такой же бестолковый текст. ',
                                         'Это обычный параграф, в котором такой же бестолковый текст. ',
@@ -260,6 +270,7 @@
                                 },
                                 {
                                     block : 'paragraph',
+                                    mods: { theme: 'alfa', bkg: 'color' },
                                     mark : 'nb',
                                     content : [
                                         'Это параграф с меткой NB, в котором еще более бестолковый текст. ',
