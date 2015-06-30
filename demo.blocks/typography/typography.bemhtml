@@ -13,6 +13,7 @@ block('typography')(
                                 content: [
                                     {
                                         block: 'heading',
+                                        mods: { theme: 'alfa' },
                                         lvl: 3,
                                         content: 'Заголовки'
                                     },
@@ -21,15 +22,18 @@ block('typography')(
                                         content: [
                                             {
                                                 block: 'heading',
+                                                mods: { theme: 'alfa' },
                                                 content: 'Заголовок h1'
                                             },
                                             {
                                                 block: 'heading',
+                                                mods: { theme: 'alfa' },
                                                 lvl: 2,
                                                 content: 'Заголовок h2'
                                             },
                                             {
                                                 block: 'heading',
+                                                mods: { theme: 'alfa' },
                                                 lvl: 3,
                                                 content: 'Заголовок h3'
                                             }
@@ -42,6 +46,7 @@ block('typography')(
                                 content: [
                                     {
                                         block: 'heading',
+                                        mods: { theme: 'alfa' },
                                         lvl: 3,
                                         content: 'Параграфы'
                                     },
@@ -50,7 +55,7 @@ block('typography')(
                                         content: [
                                             {
                                                 block: 'paragraph',
-                                                mods: { type: 'lead' },
+                                                mods: { type: 'lead', theme: 'alfa' },
                                                 content: [
                                                     'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
                                                     'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
@@ -63,6 +68,7 @@ block('typography')(
                                             },
                                             {
                                                 block: 'paragraph',
+                                                mods: { theme: 'alfa' },
                                                 content: [
                                                     'Это обычный параграф, в котором такой же бестолковый текст. ',
                                                     'Это обычный параграф, в котором такой же бестолковый текст. ',
@@ -75,6 +81,7 @@ block('typography')(
                                             },
                                             {
                                                 block: 'paragraph',
+                                                mods: { theme: 'alfa' },
                                                 mark: 'nb',
                                                 content: [
                                                     'Это параграф с меткой NB, в котором еще более бестолковый текст. ',
@@ -95,6 +102,7 @@ block('typography')(
                                 content: [
                                     {
                                         block: 'heading',
+                                        mods: { theme: 'alfa' },
                                         lvl: 3,
                                         content: 'Списки'
                                     },
@@ -140,6 +148,7 @@ block('typography')(
                             },
                             {
                                 block: 'heading',
+                                mods: { theme: 'alfa' },
                                 lvl: 3,
                                 content: 'Загрузчики'
                             },
@@ -281,6 +290,7 @@ block('typography')(
                             },
                             {
                                 block: 'heading',
+                                mods: { theme: 'alfa' },
                                 lvl: 3,
                                 content: 'Иконки'
                             },
@@ -422,6 +432,7 @@ block('typography')(
                             },
                             {
                                 block: 'heading',
+                                mods: { theme: 'alfa' },
                                 lvl: 3,
                                 content: 'Ссылки'
                             },
@@ -625,6 +636,7 @@ block('typography')(
                                 content: [
                                     {
                                         block: 'heading',
+                                        mods: { theme: 'alfa' },
                                         lvl: 3,
                                         content: 'Заголовки'
                                     },
@@ -633,15 +645,18 @@ block('typography')(
                                         content: [
                                             {
                                                 block: 'heading',
+                                                mods: { theme: 'alfa' },
                                                 content: 'Заголовок h1'
                                             },
                                             {
                                                 block: 'heading',
+                                                mods: { theme: 'alfa' },
                                                 lvl: 2,
                                                 content: 'Заголовок h2'
                                             },
                                             {
                                                 block: 'heading',
+                                                mods: { theme: 'alfa' },
                                                 lvl: 3,
                                                 content: 'Заголовок h3'
                                             }
@@ -654,6 +669,7 @@ block('typography')(
                                 content: [
                                     {
                                         block: 'heading',
+                                        mods: { theme: 'alfa' },
                                         lvl: 3,
                                         content: 'Параграфы'
                                     },
@@ -662,7 +678,7 @@ block('typography')(
                                         content: [
                                             {
                                                 block: 'paragraph',
-                                                mods: { type: 'lead' },
+                                                mods: { type: 'lead', theme: 'alfa' },
                                                 content: [
                                                     'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
                                                     'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
@@ -675,6 +691,7 @@ block('typography')(
                                             },
                                             {
                                                 block: 'paragraph',
+                                                mods: { theme: 'alfa' },
                                                 content: [
                                                     'Это обычный параграф, в котором такой же бестолковый текст. ',
                                                     'Это обычный параграф, в котором такой же бестолковый текст. ',
@@ -687,6 +704,7 @@ block('typography')(
                                             },
                                             {
                                                 block: 'paragraph',
+                                                mods: { theme: 'alfa' },
                                                 mark: 'nb',
                                                 content: [
                                                     'Это параграф с меткой NB, в котором еще более бестолковый текст. ',
@@ -707,6 +725,7 @@ block('typography')(
                                 content: [
                                     {
                                         block: 'heading',
+                                        mods: { theme: 'alfa' },
                                         lvl: 3,
                                         content: 'Списки'
                                     },
@@ -752,6 +771,7 @@ block('typography')(
                             },
                             {
                                 block: 'heading',
+                                mods: { theme: 'alfa' },
                                 lvl: 3,
                                 content: 'Загрузчики'
                             },
@@ -893,6 +913,7 @@ block('typography')(
                             },
                             {
                                 block: 'heading',
+                                mods: { theme: 'alfa' },
                                 lvl: 3,
                                 content: 'Иконки'
                             },
@@ -1034,6 +1055,7 @@ block('typography')(
                             },
                             {
                                 block: 'heading',
+                                mods: { theme: 'alfa' },
                                 lvl: 3,
                                 content: 'Ссылки'
                             },
