@@ -1,0 +1,112 @@
+var levels = require('./levels'),
+    browsersSupport = require('./browsers-support'),
+    techs = {
+        levels: require('enb-bem-techs/techs/levels'),
+        levelsToBemdecl: require('enb-bem-techs/techs/levels-to-bemdecl'),
+        depsByTechToBemdecl: require('enb-bem-techs/techs/deps-by-tech-to-bemdecl'),
+        bemdecl: require('enb-bem-techs/techs/bemjson-to-bemdecl'),
+        deps: require('enb-bem-techs/techs/deps'),
+        files: require('enb-bem-techs/techs/files'),
+        stylusWithAutoprefixer: require('enb-stylus/techs/css-stylus-with-autoprefixer'),
+        js: require('enb-diverse-js/techs/browser-js'),
+        ym: require('enb-modules/techs/prepend-modules'),
+        bemhtml: require('enb-bemxjst/techs/bemhtml'),
+        html: require('enb-bemxjst/techs/html-from-bemjson'),
+        copyFile: require('enb/techs/file-copy'),
+        mergeFiles: require('enb/techs/file-merge'),
+        mergeBemdecl: require('enb-bem-techs/techs/merge-bemdecl'),
+        borschik: require('enb-borschik/techs/borschik')
+    },
+    bundles = {
+    configure: function(config, platform, nodes) {
+        config.nodes(nodes, function(nodeConfig) {
+            nodeConfig.addTech([techs.levels, { levels: levels.getProjectLevels(platform) }]);
+
+            nodeConfig.addTechs([
+                [techs.bemdecl],
+                [techs.deps],
+                [techs.files]
+            ]);
+
+            // Client techs
+            nodeConfig.addTechs([
+                [techs.stylusWithAutoprefixer, {
+                    browsers: browsersSupport.getPlatform(platform)
+                }],
+                [techs.js, {
+                    filesTarget: '?.js.files'
+                }],
+                [techs.mergeFiles, {
+                    target: '?.pre.js',
+                    sources: ['?.browser.bemhtml.js', '?.browser.js']
+                }],
+                [techs.ym, {
+                    source: '?.pre.js',
+                    target: '?.js'
+                }]
+            ]);
+
+            // js techs
+            nodeConfig.addTechs([
+                [techs.depsByTechToBemdecl, {
+                    target: '?.js-js.bemdecl.js',
+                    sourceTech: 'js',
+                    destTech: 'js'
+                }],
+                [techs.mergeBemdecl, {
+                    sources: ['?.bemdecl.js', '?.js-js.bemdecl.js'],
+                    target: '?.js.bemdecl.js'
+                }],
+                [techs.deps, {
+                    target: '?.js.deps.js',
+                    bemdeclFile: '?.js.bemdecl.js'
+                }],
+                [techs.files, {
+                    depsFile: '?.js.deps.js',
+                    filesTarget: '?.js.files',
+                    dirsTarget: '?.js.dirs'
+                }]
+            ]);
+
+            // Client Template Engine
+            nodeConfig.addTechs([
+                [techs.depsByTechToBemdecl, {
+                    target: '?.template.bemdecl.js',
+                    sourceTech: 'js',
+                    destTech: 'bemhtml'
+                }],
+                [techs.deps, {
+                    target: '?.template.deps.js',
+                    bemdeclFile: '?.template.bemdecl.js'
+                }],
+                [techs.files, {
+                    depsFile: '?.template.deps.js',
+                    filesTarget: '?.template.files',
+                    dirsTarget: '?.template.dirs'
+                }],
+                [techs.bemhtml, {
+                    target: '?.browser.bemhtml.js',
+                    filesTarget: '?.template.files',
+                    devMode: false
+                }]
+            ]);
+
+            // Build htmls
+            nodeConfig.addTechs([
+                [techs.bemhtml, { devMode: false }],
+                [techs.html]
+            ]);
+
+            nodeConfig.addTechs([
+                [techs.borschik, { source: '?.css', target: '?.min.css' }],
+                [techs.borschik, { source: '?.js', target:  '?.min.js' }]
+            ]);
+
+            nodeConfig.addTargets([
+                '?.min.css', '?.min.js', '?.html'
+            ]);
+        });
+    }
+};
+
+module.exports = bundles;
