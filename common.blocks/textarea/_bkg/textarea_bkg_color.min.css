@@ -1,0 +1,25 @@
+.textarea_bkg_color {
+    background: transparent;
+
+    -webkit-transition: all 200ms ease;
+
+            transition: all 200ms ease;
+
+    color: #fff;
+
+    border: 1px solid rgba(255,255,255,0.5);
+}
+.textarea_bkg_color.textarea_disabled {
+    border-color: transparent;
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.5);
+}
+.textarea_bkg_color.textarea_hovered, .textarea_bkg_color.textarea_focused {
+    border-color: rgba(255,255,255,1);
+}
+.textarea_bkg_color.textarea_focused {
+    background-color: rgba(0,0,0,.3);
+}
+.textarea_bkg_color.textarea_invalid {
+    border-color: #fc5c5e;
+}

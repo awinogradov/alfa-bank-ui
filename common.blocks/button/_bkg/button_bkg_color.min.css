@@ -1,0 +1,83 @@
+.button_bkg_color {
+    color: rgba(255, 255, 255, .8);
+
+    background: transparent;
+
+    border: 1px solid rgba(255, 255, 255, .5);
+}
+
+.button_bkg_color.button_hovered {
+    color: #fff;
+    border-color: #fff;
+}
+
+.button_bkg_color.button_checked, .button_bkg_color.button_hovered.button_checked {
+    background: #fff;
+    color: #000;
+}
+
+.button_bkg_color.button_disabled {
+    border-color: transparent;
+    background: rgba(255, 255, 255, .1);
+}
+
+.button_bkg_color.button_disabled .button__text {
+    color: rgba(255, 255, 255, .5)
+}
+
+.button_bkg_color.button_disabled.button_checked {
+    background: rgba(255, 255, 255, .3);
+}
+
+.button_bkg_color.button_disabled.button_checked .button__text {
+    color: #000;
+}
+
+.button_bkg_color.button_focused-hard {
+    z-index: 1;
+    background: rgba(255, 255, 255, .4);
+}
+
+.button_bkg_color.button_view_action {
+    border-color: transparent;
+    color: #fff;
+    background: rgba(255, 255, 255, .5);
+}
+
+.button_bkg_color.button_view_action.button_hovered {
+    background: #fff;
+    background: rgba(255, 255, 255, .7);
+}
+
+.button_bkg_color.button_view_pseudo {
+    border-style: dashed;
+}
+
+.control-group .button_bkg_color {
+    border-width: 1px;
+    border-style: solid;
+    border-right-color: transparent;
+}
+
+.control-group .button_bkg_color.button_hovered {
+    background: rgba(255, 255, 255, .2);
+    border-right-color: transparent;
+}
+
+.control-group.checkbox-group .checkbox_checked + .checkbox_bkg_color .button_bkg_color, .control-group.checkbox-group .checkbox_hovered + .checkbox_bkg_color
+        .radio_checked + .radio_bkg_color .button_bkg_color, .control-group.checkbox-group .radio_hovered + .radio_bkg_color .button_bkg_color, .control-group.radio-group .checkbox_checked + .checkbox_bkg_color .button_bkg_color, .control-group.radio-group .checkbox_hovered + .checkbox_bkg_color
+        .radio_checked + .radio_bkg_color .button_bkg_color, .control-group.radio-group .radio_hovered + .radio_bkg_color .button_bkg_color {
+    border-left-color: #fff;
+}
+
+.control-group > :last-child .button_bkg_color {
+    border-right-color: rgba(255, 255, 255, .5);
+}
+
+.control-group > :last-child .button_bkg_color.button_hovered {
+    border-right-color: #fff;
+}
+
+.control-group > :last-child .button_bkg_color.button_disabled {
+    border-right-color: transparent;
+}

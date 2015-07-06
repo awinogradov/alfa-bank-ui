@@ -1,0 +1,7 @@
+.label_bkg_white {
+    color : #333333;
+}
+.label_bkg_white.label_optional {
+    font-style: italic;
+    color:      #999;
+}

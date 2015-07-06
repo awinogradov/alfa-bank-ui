@@ -1,0 +1,16 @@
+.select_bkg_white {
+
+    /* FIXME: maybe remove cascade? */
+}
+.select_bkg_white .select__tick {
+    background-image: url(../__tick/_bkg/select__tick_bkg_white.svg);
+}
+.select_bkg_white .button_hovered .select__tick {
+    opacity: 0.6;
+}
+.select_bkg_white.select_size_s .select__tick, .select_bkg_white.select_size_m .select__tick {
+    background-size: 11px;
+}
+.select_bkg_white.select_size_l .select__tick, .select_bkg_white.select_size_xl .select__tick {
+    background-size: 16px;
+}

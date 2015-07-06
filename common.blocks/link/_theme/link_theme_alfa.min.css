@@ -1,0 +1,41 @@
+.link_theme_alfa {
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+
+    cursor: pointer;
+
+    -webkit-transition: all 200ms ease-out;
+
+            transition: all 200ms ease-out;
+
+    text-decoration: none;
+
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+
+    padding-bottom: 1px;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+.link_theme_alfa.link_size_s {
+    font-size: 12px;
+}
+.link_theme_alfa.link_size_m {
+    font-size: 15px;
+}
+.link_theme_alfa.link_size_l {
+    font-size: 20px;
+}
+.link_theme_alfa.link_size_xl {
+    font-size: 35px;
+}
+.link_theme_alfa.link_pseudo {
+    border-bottom-style: dotted;
+}
+.link_theme_alfa.link_icon {
+    border: none;
+}
+.link_theme_alfa.link_icon .link__icon {
+    margin-right: 5px;
+    vertical-align: middle;
+}

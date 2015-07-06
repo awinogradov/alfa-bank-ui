@@ -1,0 +1,18 @@
+.collapse_bkg_color .collapse__link
+    {
+    outline: none;
+}
+.collapse_bkg_color .collapse__link:after
+    {
+    content: '';
+    background: url(../__link/_theme/collaps__link_theme_alfa.svg);
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+}
+.collapse_bkg_color.collapse_expanded .collapse__link:after
+        {
+    -webkit-transform: scaleY(-1);
+            transform: scaleY(-1);
+}

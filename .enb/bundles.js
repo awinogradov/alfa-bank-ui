@@ -1,5 +1,4 @@
 var levels = require('./levels'),
-    browsersSupport = require('./browsers-support'),
     techs = {
         levels: require('enb-bem-techs/techs/levels'),
         levelsToBemdecl: require('enb-bem-techs/techs/levels-to-bemdecl'),
@@ -31,17 +30,7 @@ var levels = require('./levels'),
             nodeConfig.addTechs([
                 [techs.postcss, {
                     sourcemap: true,
-                    plugins: [
-                        require('postcss-each'),
-                        require('postcss-custom-properties'),
-                        require('postcss-nested'),
-                        require('postcss-url')({
-                            url: 'rebase'
-                        }),
-                        require('autoprefixer-core')({
-                            browsers: browsersSupport.getPlatform(platform)
-                        })
-                    ]
+                    plugins: require('./postcss-plugins')
                 }],
                 [techs.js, {
                     filesTarget: '?.js.files'

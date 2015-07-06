@@ -1,0 +1,40 @@
+.logo_theme_alfa {
+    display: inline-block;
+    line-height: 0;
+}
+.logo_theme_alfa.logo_size_s .logo__icon {
+    width: 22px;
+    height: 35px;
+}
+.logo_theme_alfa.logo_size_s .logo__text {
+    width: 82px;
+    height: 34px;
+    margin-left: 8px;
+}
+.logo_theme_alfa.logo_size_m .logo__icon {
+    width: 30px;
+    height: 48px;
+}
+.logo_theme_alfa.logo_size_m .logo__text {
+    width: 112px;
+    height: 47px;
+    margin-left: 12px;
+}
+.logo_theme_alfa.logo_size_l .logo__icon {
+    width: 40px;
+    height: 64px;
+}
+.logo_theme_alfa.logo_size_l .logo__text {
+    width: 150px;
+    height: 63px;
+    margin-left: 16px;
+}
+.logo_theme_alfa.logo_size_xl .logo__icon {
+    width: 60px;
+    height: 96px;
+}
+.logo_theme_alfa.logo_size_xl .logo__text {
+    width: 225px;
+    height: 94px;
+    margin-left: 24px;
+}
