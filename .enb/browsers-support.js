@@ -4,8 +4,7 @@ module.exports.getPlatform = function(platform) {
             return [
                 'last 2 versions',
                 'ie 10',
-                'ff 24',
-                'opera 12.16'
+                'ff 24'
             ];
         case 'touch':
             return [

@@ -1,6 +1,5 @@
 [{
     shouldDeps: {
-        block: 'button',
-        mods: { theme: 'alfa' }
+        block: 'button', mods: { theme: 'alfa' }
     }
 }];

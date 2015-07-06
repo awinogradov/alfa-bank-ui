@@ -7,7 +7,7 @@ var levels = require('./levels'),
         bemdecl: require('enb-bem-techs/techs/bemjson-to-bemdecl'),
         deps: require('enb-bem-techs/techs/deps'),
         files: require('enb-bem-techs/techs/files'),
-        stylusWithAutoprefixer: require('enb-stylus/techs/css-stylus-with-autoprefixer'),
+        postcss: require('enb-postcss/techs/enb-postcss'),
         js: require('enb-diverse-js/techs/browser-js'),
         ym: require('enb-modules/techs/prepend-modules'),
         bemhtml: require('enb-bemxjst/techs/bemhtml'),
@@ -28,10 +28,20 @@ var levels = require('./levels'),
                 [techs.files]
             ]);
 
-            // Client techs
             nodeConfig.addTechs([
-                [techs.stylusWithAutoprefixer, {
-                    browsers: browsersSupport.getPlatform(platform)
+                [techs.postcss, {
+                    sourcemap: true,
+                    plugins: [
+                        require('postcss-each'),
+                        require('postcss-custom-properties'),
+                        require('postcss-nested'),
+                        require('postcss-url')({
+                            url: 'rebase'
+                        }),
+                        require('autoprefixer-core')({
+                            browsers: browsersSupport.getPlatform(platform)
+                        })
+                    ]
                 }],
                 [techs.js, {
                     filesTarget: '?.js.files'
@@ -91,15 +101,14 @@ var levels = require('./levels'),
                 }]
             ]);
 
-            // Build htmls
             nodeConfig.addTechs([
                 [techs.bemhtml, { devMode: false }],
                 [techs.html]
             ]);
 
             nodeConfig.addTechs([
-                [techs.borschik, { source: '?.css', target: '?.min.css' }],
-                [techs.borschik, { source: '?.js', target:  '?.min.js' }]
+                [techs.borschik, { source: '?.css', target: '?.min.css', minify: false }],
+                [techs.borschik, { source: '?.js', target: '?.min.js', minify: false }]
             ]);
 
             nodeConfig.addTargets([

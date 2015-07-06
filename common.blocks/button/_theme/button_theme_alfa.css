@@ -1,0 +1,144 @@
+:root {
+  --buttonRadius: 6px;
+}
+
+.button_theme_alfa {
+    font-family: 'Roboto', sans-serif;
+
+    position: relative;
+    display:  inline-block;
+
+    padding: 0;
+    margin: 0;
+
+    user-select: none;
+
+    border-radius: var(--buttonRadius);
+
+    outline: 0;
+
+    text-align:  center;
+    white-space: nowrap;
+
+    transition: all 200ms ease;
+
+    cursor: pointer;
+
+    &::-moz-focus-inner {
+        padding: 0;
+
+        border: 0;
+    }
+
+    .button__text {
+        overflow: hidden;
+
+        text-overflow:  ellipsis;
+        vertical-align: top;
+    }
+
+    .button__text {
+        /*
+         * These rules fixes Opera 12+ && IE 9 bug with extra top margin when pressed
+         * Warning: bug still can be reproduced by clicking on button's border
+         * TODO: try to fix
+         */
+        position: relative;
+        display:  inline-block;
+    }
+
+    .button__icon {
+        position: relative;
+        vertical-align: middle;
+    }
+
+    &.button_type_link {
+        text-decoration: none;
+    }
+
+    &.button_focused-hard {
+        z-index: 1;
+    }
+
+    &.button_disabled {
+        cursor: default;
+
+        &.button_checked {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .button__text {
+            color: #aaa;
+        }
+
+        /* FIXME: maybe remove cascade? */
+        .icon {
+            opacity: 0.3;
+        }
+    }
+
+    > :last-child {
+        padding-right: 0;
+    }
+
+    & .button__icon {
+        padding-right: 10px;
+    }
+
+    &.button_size_s {
+        font-size: 12px;
+        height: 25px;
+        line-height: 23px;
+
+        padding: 0 20px;
+    }
+
+    &.button_size_m {
+        font-size: 12px;
+        height: 35px;
+        line-height: 33px;
+
+        padding: 0 30px;
+    }
+
+    &.button_size_l {
+        font-size: 14px;
+        height: 35px;
+        line-height: 43px;
+
+        padding: 0 40px;
+    }
+
+    &.button_size_xl {
+        font-size: 16px;
+        height: 55px;
+        line-height: 53px;
+
+        padding: 0 50px;
+    }
+}
+
+
+.control-group
+{
+    .button_theme_alfa {
+        border-radius: 0;
+    }
+
+    > .button_theme_alfa:first-child,
+    > :first-child .button_theme_alfa
+    {
+        border-radius: var(--buttonRadius) 0 0 var(--buttonRadius);
+    }
+
+    > .button_theme_alfa:last-child,
+    > :last-child .button_theme_alfa
+    {
+        border-radius: 0 var(--buttonRadius) var(--buttonRadius) 0;
+    }
+
+    > :only-child .button_theme_alfa
+    {
+        border-radius: var(--buttonRadius);
+    }
+}

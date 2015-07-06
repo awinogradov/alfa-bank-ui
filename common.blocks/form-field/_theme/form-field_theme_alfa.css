@@ -1,0 +1,72 @@
+.form-field_theme_alfa {
+    position: relative;
+    padding-bottom: 20px;
+
+    &.form-field_view_line {
+
+        .form-field__label {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100px;
+        }
+
+        .form-field__control {
+            padding-left: 115px;
+        }
+    }
+
+    &.form-field_view_compact {
+
+        .form-field__label {
+            padding-bottom: 10px;
+        }
+    }
+
+    &.form-field_disabled {
+        opacity: 0.4;
+    }
+
+    &.form-field_size_s {
+
+        &.form-field_view_line {
+
+            .form-field__label {
+                padding-top: 2px;
+            }
+        }
+    }
+
+    &.form-field_size_m {
+
+        &.form-field_view_line {
+
+            .form-field__label {
+                padding-top: 7px;
+            }
+        }
+    }
+
+    &.form-field_size_l {
+
+        &.form-field_view_line {
+
+            .form-field__label {
+                padding-top: 13px;
+            }
+        }
+    }
+
+    &.form-field_size_xl {
+
+        &.form-field_view_line {
+
+            .form-field__label {
+                padding-top: 13px;
+            }
+        }
+    }
+
+}

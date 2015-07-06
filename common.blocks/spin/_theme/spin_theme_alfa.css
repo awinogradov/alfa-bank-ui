@@ -1,30 +1,29 @@
-.icon_theme_alfa {
-    vertical-align: middle;
-
+.spin_theme_alfa {
+    display: none;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-position: 50%;
 
-    &.icon_size_xs {
-        width: 11px;
-        height: 11px;
+    &.spin_visible {
+        display: inline-block;
     }
 
-    &.icon_size_s {
+    &.spin_size_s {
         width: 25px;
         height: 25px;
     }
 
-    &.icon_size_m {
+
+    &.spin_size_m {
         width: 35px;
         height: 35px;
     }
 
-    &.icon_size_l {
+    &.spin_size_l {
         width: 45px;
         height: 45px;
     }
 
-    &.icon_size_xl {
+    &.spin_size_xl {
         width: 55px;
         height: 55px;
     }
