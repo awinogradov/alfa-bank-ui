@@ -1,0 +1,36 @@
+.form_theme_alfa {
+
+    &.form_size_m {
+        padding-bottom: 60px;
+
+        .form__header {
+            margin-bottom: 40px;
+        }
+
+        .form__content {
+            padding-left: 40px;
+        }
+
+        .form__footer {
+            padding-top: 20px;
+            padding-left: 225px;
+        }
+
+        .form__field {
+            padding-bottom: 20px;
+        }
+
+        .form__field-label {
+            padding-top: 7px;
+
+            margin-right: 20px;
+
+            width: 165px;
+        }
+
+        .form__hint {
+            padding-top: 10px;
+            padding-left: 185px;
+        }
+    }
+}

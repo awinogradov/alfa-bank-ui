@@ -1,10 +1,6 @@
-.logo_bkg_white {
-
-    .logo__icon {
-        background-image: url(../__icon/_bkg/logo__icon_bkg_white.svg);
-    }
-
-    .logo__text {
-        background-image: url(../__text/_bkg/logo__text_bkg_white.svg);
-    }
+.logo_bkg_white .logo__icon {
+    background-image: url(../__icon/_bkg/logo__icon_bkg_white.svg);
+}
+.logo_bkg_white .logo__text {
+    background-image: url(../__text/_bkg/logo__text_bkg_white.svg);
 }

@@ -4,115 +4,85 @@
     display: inline-block;
 
     cursor: pointer;
-
-    .checkbox__control {
-        position: absolute;
-        z-index: -1;
-
-        margin: 0;
-
-        opacity: 0;
-    }
-
-    .checkbox__box {
-        position: relative;
-        display: inline-block;
-
-        border-radius: 3px;
-
-        &:after {
-            position: absolute;
-            top: -5px;
-            left: 2px;
-
-            content: '';
-
-            background-size:  100%;
-
-            visibility: hidden;
-            opacity: 0;
-
+}
+.checkbox_theme_alfa .checkbox__control {
+    position: absolute;
+    z-index: -1;
+    margin: 0;
+    opacity: 0;
+}
+.checkbox_theme_alfa .checkbox__box {
+    position: relative;
+    display: inline-block;
+    border-radius: 3px;
+}
+.checkbox_theme_alfa .checkbox__box:after {
+    position: absolute;
+    top: -5px;
+    left: 2px;
+    content: '';
+    background-size:  100%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: -webkit-transform .05s ease-out,
+                        opacity .05s ease-out,
+                        visibility 0s linear .05s;
             transition: transform .05s ease-out,
                         opacity .05s ease-out,
                         visibility 0s linear .05s;
-        }
-    }
-
-    &.checkbox_size_m {
-        font-size: 12px;
-
-        .checkbox__box {
-            line-height: 12px;
-
-            top: 2px;
-
-            width: 12px;
-            height: 12px;
-
-            margin-right: 5px;
-
-            &:after {
-                width: 15px;
-                height: 15px;
-
-                transform: translateY(-5px);
-            }
-        }
-    }
-
-    &.checkbox_size_l {
-        font-size: 15px;
-
-        .checkbox__box {
-            line-height: 15px;
-
-            top: 2px;
-
-            width: 15px;
-            height: 15px;
-
-            margin-right: 7px;
-
-            &:after {
-                width: 18px;
-                height: 18px;
-
-                transform: translateY(-7px);
-            }
-        }
-    }
-
-    &.checkbox_checked {
-
-        .checkbox__box:after {
-            visibility: visible;
-            opacity: 1;
-
+}
+.checkbox_theme_alfa.checkbox_size_m {
+    font-size: 12px;
+}
+.checkbox_theme_alfa.checkbox_size_m .checkbox__box {
+    line-height: 12px;
+    top: 2px;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+.checkbox_theme_alfa.checkbox_size_m .checkbox__box:after {
+    width: 15px;
+    height: 15px;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+}
+.checkbox_theme_alfa.checkbox_size_l {
+    font-size: 15px;
+}
+.checkbox_theme_alfa.checkbox_size_l .checkbox__box {
+    line-height: 15px;
+    top: 2px;
+    width: 15px;
+    height: 15px;
+    margin-right: 7px;
+}
+.checkbox_theme_alfa.checkbox_size_l .checkbox__box:after {
+    width: 18px;
+    height: 18px;
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
+}
+.checkbox_theme_alfa.checkbox_checked .checkbox__box:after {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
             transform: translateY(0px);
+    -webkit-transition-delay: 0s;
             transition-delay: 0s;
-        }
-    }
-
-    &.checkbox_disabled {
-        cursor: default;
-    }
-
-    &.checkbox_type_button {
-        display: inline-block;
-    }
-
-    &.checkbox_view_line {
-
-        &.checkbox_size_m {
-            margin-right: 13px;
-        }
-
-        &.checkbox_size_l {
-            margin-right: 15px;
-        }
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
+}
+.checkbox_theme_alfa.checkbox_disabled {
+    cursor: default;
+}
+.checkbox_theme_alfa.checkbox_type_button {
+    display: inline-block;
+}
+.checkbox_theme_alfa.checkbox_view_line.checkbox_size_m {
+    margin-right: 13px;
+}
+.checkbox_theme_alfa.checkbox_view_line.checkbox_size_l {
+    margin-right: 15px;
+}
+.checkbox_theme_alfa.checkbox_view_line:last-child {
+    margin-right: 0;
 }

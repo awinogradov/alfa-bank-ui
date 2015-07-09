@@ -1,52 +1,33 @@
-.checkbox_bkg_white {
-
-    .checkbox__box {
-        transition: all 200ms ease;
-
-        background: rgba(255, 255, 255, .3);
-
-        border-width: 1px;
-        border-style: solid;
-        border-color: #ccc;
-
-        &:after {
-            background-image: url(../__box/_bkg/checkbox__box_bkg_white.svg);
-        }
-    }
-
-    &.checkbox_checked {
-
-        .checkbox__box {
-            border-color:rgba(0, 0, 0, .4);
-        }
-    }
-
-    &.checkbox_focused,
-    &.checkbox_hovered {
-
-        .checkbox__box {
-            border-color: rgba(0, 0, 0, .4);
-        }
-    }
-
-    &.checkbox_disabled {
-        color: #999;
-
-        .checkbox__box {
-            border-color: transparent;
-            background: rgba(0, 0, 0, 0.06);
-        }
-
-        &.checkbox_checked .checkbox__box:after {
-            opacity: 0.4;
-        }
-    }
-
-    &.checkbox_type_button {
-
-        /* FIXME: maybe remove cascade? */
-        .button_checked {
-            background: #ccc;
-        }
-    }
+.checkbox_bkg_white .checkbox__box {
+    -webkit-transition: all 200ms ease;
+            transition: all 200ms ease;
+    background: rgba(255, 255, 255, .3);
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc;
+}
+.checkbox_bkg_white .checkbox__box:after {
+    background-image: url(../__box/_bkg/checkbox__box_bkg_white.svg);
+}
+.checkbox_bkg_white.checkbox_checked .checkbox__box {
+    border-color:rgba(0, 0, 0, .4);
+}
+.checkbox_bkg_white.checkbox_focused .checkbox__box, .checkbox_bkg_white.checkbox_hovered .checkbox__box {
+    border-color: rgba(0, 0, 0, .4);
+}
+.checkbox_bkg_white.checkbox_disabled {
+    color: #999;
+}
+.checkbox_bkg_white.checkbox_disabled .checkbox__box {
+    border-color: transparent;
+    background: rgba(0, 0, 0, 0.06);
+}
+.checkbox_bkg_white.checkbox_disabled.checkbox_checked .checkbox__box:after {
+    opacity: 0.4;
+}
+.checkbox_bkg_white.checkbox_type_button {
+    /* FIXME: maybe remove cascade? */
+}
+.checkbox_bkg_white.checkbox_type_button .button_checked {
+    background: #ccc;
 }

@@ -1,54 +1,35 @@
 .checkbox_bkg_color {
     color: #fff;
-
-    .checkbox__box {
-        transition: all 200ms ease;
-
-        background: transparent;
-
-        border-width: 1px;
-        border-style: solid;
-        border-color: alpha(#fff, 0.5);
-
-        &:after {
-            background-image: url(../__box/_bkg/checkbox__box_bkg_color.svg);
-        }
-    }
-
-    &.checkbox_checked {
-
-        .checkbox__box {
-            border-color: #fff;
-        }
-    }
-
-    &.checkbox_focused,
-    &.checkbox_hovered {
-
-        .checkbox__box {
-            border-color: #fff;
-            background: alpha(#fff, 0.2);
-        }
-    }
-
-    &.checkbox_hovered {
-
-        &.checkbox_checked .checkbox__box {
-            background: alpha(#fff, 0.2);
-        }
-    }
-
-    &.checkbox_disabled {
-        color: #fff;
-        color: alpha(#fff, 0.2);
-
-        .checkbox__box {
-            border-color: alpha(#fff, 0.2);
-            background: alpha(#fff, 0.1);
-        }
-
-        &.checkbox_checked .checkbox__box:after {
-            opacity: 0.4;
-        }
-    }
+}
+.checkbox_bkg_color .checkbox__box {
+    -webkit-transition: all 200ms ease;
+            transition: all 200ms ease;
+    background: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-color: alpha(#fff, 0.5);
+}
+.checkbox_bkg_color .checkbox__box:after {
+    background-image: url(../__box/_bkg/checkbox__box_bkg_color.svg);
+}
+.checkbox_bkg_color.checkbox_checked .checkbox__box {
+    border-color: #fff;
+}
+.checkbox_bkg_color.checkbox_focused .checkbox__box, .checkbox_bkg_color.checkbox_hovered .checkbox__box {
+    border-color: #fff;
+    background: alpha(#fff, 0.2);
+}
+.checkbox_bkg_color.checkbox_hovered.checkbox_checked .checkbox__box {
+    background: alpha(#fff, 0.2);
+}
+.checkbox_bkg_color.checkbox_disabled {
+    color: #fff;
+    color: alpha(#fff, 0.2);
+}
+.checkbox_bkg_color.checkbox_disabled .checkbox__box {
+    border-color: alpha(#fff, 0.2);
+    background: alpha(#fff, 0.1);
+}
+.checkbox_bkg_color.checkbox_disabled.checkbox_checked .checkbox__box:after {
+    opacity: 0.4;
 }

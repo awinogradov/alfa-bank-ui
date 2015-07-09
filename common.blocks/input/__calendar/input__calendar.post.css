@@ -1,0 +1,9 @@
+.input__calendar {
+    opacity: 0.4;
+}
+
+/* FIXME: maybe remove cascade*/
+.input__calendar .icon {
+    transform: scale(0.4);
+    display: block;
+}

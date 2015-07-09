@@ -1,6 +1,6 @@
 module.exports = [
-    require('postcss-each'),
     require('postcss-custom-properties'),
+    require('postcss-each'),
     require('postcss-nested'),
     require('postcss-url')({
         url: 'rebase'

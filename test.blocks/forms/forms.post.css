@@ -1,0 +1,16 @@
+.forms {
+    padding-bottom: 50px;
+
+    .label {
+        line-height: 35px;
+    }
+
+    .row__white {
+        background-color: white;
+    }
+
+    .row__col {
+        padding: 10px;
+        border-radius: 5px;
+    }
+}

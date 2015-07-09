@@ -2,8 +2,7 @@
     color: #fff;
 
     border-bottom-color: rgba(255,255,255,.5);
-
-    &.link_hovered {
-        opacity: .7;
-    }
+}
+.link_bkg_color.link_hovered {
+    opacity: .7;
 }

@@ -1,0 +1,13 @@
+.display-none {
+
+    .display-none__switcher {
+        background-color: #FFF;
+    }
+
+    &.display-none_true {
+
+        .display-none__content {
+            display: none;
+        }
+    }
+}

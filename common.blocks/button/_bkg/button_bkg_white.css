@@ -5,125 +5,99 @@
     background: rgba(255, 255, 255, .3);
 
     border: 1px solid #ccc;
-
-    &.button_hovered {
-        border-color: rgba(0, 0, 0, .4);
-    }
-
-    &.button_checked {
-        border-color: #ccc;
-        color: #000;
-
-        &.button_hovered {
-            border-color: rgba(0, 0, 0, .4);
-        }
-    }
-
-    &.button_disabled {
-        border-color: transparent;
-        background: rgba(0, 0, 0, .06);
-
-        &.button_checked {
-            background: rgba(0, 0, 0, .12);
-        }
-    }
-
-    &.button_focused-hard {
-        z-index: 1;
-
-        background: rgba(255, 255, 255, .4);
-    }
-
-    &.button_view_action {
-        background: rgba(178, 12, 0, .8);
-        border-color: rgba(178, 12, 0, .8);
-        color: #fff;
-
-        &.button_pressed,
-        &.button_hovered,
-        &.button_focused {
-            background: rgba(178, 12, 0, 1);
-            border-color: rgba(178, 12, 0, 1);
-        }
-    }
-
-
-    &.button_view_pseudo {
-        border-style: dashed;
-    }
 }
 
-.control-group
-{
-    .button_bkg_white {
-        border-width: 1px;
-        border-style: solid;
+.button_bkg_white.button_hovered {
+    border-color: rgba(0, 0, 0, .4);
+}
 
-        border-right-color: transparent;
+.button_bkg_white.button_checked {
+    border-color: #ccc;
+    color: #000;
+}
 
-        &.button_hovered {
-            border-color: rgba(0, 0, 0, .4);
+.button_bkg_white.button_checked.button_hovered {
+    border-color: rgba(0, 0, 0, .4);
+}
 
-            background: rgba(0, 0, 0, .1);
+.button_bkg_white.button_disabled {
+    border-color: transparent;
+    background: rgba(0, 0, 0, .06);
+}
 
-            border-right-color: transparent;
+.button_bkg_white.button_disabled.button_checked {
+    background: rgba(0, 0, 0, .12);
+}
 
-            &.button_checked {
-                background: #ccc;
-                border-color: #ccc;
-                color: #000;
+.button_bkg_white.button_focused-hard {
+    z-index: 1;
+    background: rgba(255, 255, 255, .4);
+}
 
-                &.button_hovered {
-                    border-color: rgba(0, 0, 0, .4);
-                    border-right-color: transparent;
-                }
-            }
-        }
-    }
+.button_bkg_white.button_view_action {
+    background: rgba(178, 12, 0, .8);
+    border-color: rgba(178, 12, 0, .8);
+    color: #fff;
+}
 
-    &.checkbox-group,
-    &.radio-group {
+.button_bkg_white.button_view_action.button_pressed, .button_bkg_white.button_view_action.button_hovered, .button_bkg_white.button_view_action.button_focused {
+    background: rgba(178, 12, 0, 1);
+    border-color: rgba(178, 12, 0, 1);
+}
 
-        .checkbox_hovered + .checkbox_bkg_white
-        .radio_hovered + .radio_bkg_white {
+.button_bkg_white.button_view_pseudo {
+    border-style: dashed;
+}
 
-            .button_bkg_white {
-                border-left-color: rgba(0, 0, 0, .4);
-            }
-        }
+.control-group .button_bkg_white {
+    border-width: 1px;
+    border-style: solid;
+    border-right-color: transparent;
+}
 
-        .checkbox_hovered.checkbox_checked + .checkbox_bkg_white {
+.control-group .button_bkg_white.button_hovered {
+    border-color: rgba(0, 0, 0, .4);
+    background: rgba(0, 0, 0, .1);
+    border-right-color: transparent;
+}
 
-            .button_bkg_white {
-                border-left-color: rgba(0, 0, 0, .4);
-            }
+.control-group .button_bkg_white.button_hovered.button_checked {
+    background: #ccc;
+    border-color: #ccc;
+    color: #000;
+}
 
-            &.checkbox_checked {
+.control-group .button_bkg_white.button_hovered.button_checked.button_hovered {
+    border-color: rgba(0, 0, 0, .4);
+    border-right-color: transparent;
+}
 
-                .button_bkg_white {
-                    border-left-color: rgba(0, 0, 0, .4);
-                }
-            }
-        }
-    }
+.control-group.checkbox-group .checkbox_hovered + .checkbox_bkg_white
+        .radio_hovered + .radio_bkg_white .button_bkg_white, .control-group.radio-group .checkbox_hovered + .checkbox_bkg_white
+        .radio_hovered + .radio_bkg_white .button_bkg_white {
+    border-left-color: rgba(0, 0, 0, .4);
+}
 
-    > :last-child {
+.control-group.checkbox-group .checkbox_hovered.checkbox_checked + .checkbox_bkg_white .button_bkg_white, .control-group.radio-group .checkbox_hovered.checkbox_checked + .checkbox_bkg_white .button_bkg_white {
+    border-left-color: rgba(0, 0, 0, .4);
+}
 
-        .button_bkg_white {
-            border-right-color: #ccc;
+.control-group.checkbox-group .checkbox_hovered.checkbox_checked + .checkbox_bkg_white.checkbox_checked .button_bkg_white, .control-group.radio-group .checkbox_hovered.checkbox_checked + .checkbox_bkg_white.checkbox_checked .button_bkg_white {
+    border-left-color: rgba(0, 0, 0, .4);
+}
 
-            &.button_hovered {
-                border-right-color: rgba(0, 0, 0, .4);
-            }
+.control-group > :last-child .button_bkg_white {
+    border-right-color: #ccc;
+}
 
-            &.button_checked,
-            &.button_disabled {
-                border-right-color: transparent;
+.control-group > :last-child .button_bkg_white.button_hovered {
+    border-right-color: rgba(0, 0, 0, .4);
+}
 
-                &.button_hovered {
-                    border-right-color: rgba(0, 0, 0, .4);
-                }
-            }
-        }
-    }
+.control-group > :last-child .button_bkg_white.button_checked, .control-group > :last-child .button_bkg_white.button_disabled {
+    border-right-color: transparent;
+}
+
+.control-group > :last-child .button_bkg_white.button_checked.button_hovered, .control-group > :last-child .button_bkg_white.button_disabled.button_hovered {
+    border-right-color: rgba(0, 0, 0, .4);
 }

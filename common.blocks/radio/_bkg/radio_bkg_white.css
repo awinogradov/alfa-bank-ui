@@ -1,49 +1,28 @@
-.radio_bkg_white {
-
-    .radio__box {
-        transition: all 200ms ease;
-
-        background: rgba(255, 255, 255, .3);
-
-        border: 1px solid #ccc;
-    }
-
-    &.radio_checked {
-
-        .radio__box {
-            border-color: rgba(0, 0, 0, .4);
-
-            &:after {
-                background: #B20C00;
-            }
-        }
-    }
-
-    &.radio_focused,
-    &.radio_hovered {
-
-        .radio__box {
-            border-color: rgba(0, 0, 0, .4);
-        }
-    }
-
-    &.radio_disabled {
-        color: #999;
-
-        .radio__box {
-            border-color: transparent;
-            background: rgba(0, 0, 0, 0.06);
-        }
-
-        &.radio_checked .radio__box:after {
-            opacity: 0.4;
-        }
-    }
-
-    &.radio_type_button {
-
-        .button_checked {
-            background: #ccc;
-        }
-    }
+.radio_bkg_white .radio__box {
+    -webkit-transition: all 200ms ease;
+            transition: all 200ms ease;
+    background: rgba(255, 255, 255, .3);
+    border: 1px solid #ccc;
+}
+.radio_bkg_white.radio_checked .radio__box {
+    border-color: rgba(0, 0, 0, .4);
+}
+.radio_bkg_white.radio_checked .radio__box:after {
+    background: #B20C00;
+}
+.radio_bkg_white.radio_focused .radio__box, .radio_bkg_white.radio_hovered .radio__box {
+    border-color: rgba(0, 0, 0, .4);
+}
+.radio_bkg_white.radio_disabled {
+    color: #999;
+}
+.radio_bkg_white.radio_disabled .radio__box {
+    border-color: transparent;
+    background: rgba(0, 0, 0, 0.06);
+}
+.radio_bkg_white.radio_disabled.radio_checked .radio__box:after {
+    opacity: 0.4;
+}
+.radio_bkg_white.radio_type_button .button_checked {
+    background: #ccc;
 }

@@ -13,7 +13,7 @@ var levels = [
 
 levels.forEach(function(level) {
 
-    exec('find ' + level + ' -iname \'*.css\'', function(err, stdout, stdin) {
+    exec('find ' + level + ' -iname \'*.post.css\'', function(err, stdout, stdin) {
 
         var cssFiles = stdout.split('\n');
 
@@ -26,7 +26,7 @@ levels.forEach(function(level) {
             .process(fs.readFileSync(relativePath))
             .then(function(result) {
 
-                var distPath = relativePath.replace('.css', '.min.css');
+                var distPath = relativePath.replace('.post.css', '.css');
 
                 fs.writeFileSync(distPath, result.css);
             });
