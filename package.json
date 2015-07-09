@@ -30,7 +30,6 @@
     "enb-modules": "~0.2.0",
     "enb-postcss": "~0.1.0",
     "git-hooks": "~0.0.6",
-    "glob": "^5.0.13",
     "istanbul": "0.3.5",
     "jscs": "1.13.1",
     "jscs-alfa": "git+ssh://git@git/man/jscs-alfa.git",
