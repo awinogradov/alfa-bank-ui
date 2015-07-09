@@ -1,0 +1,7 @@
+.checkbox-group {
+    display: inline-block;
+
+    &.checkbox-group_type_button {
+        white-space: nowrap;
+    }
+}

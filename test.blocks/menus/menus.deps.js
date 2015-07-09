@@ -2,22 +2,14 @@
     shouldDeps: [
         {
             block: 'menu',
-            mods: { bkg: 'color', theme: 'alfa', horizontal: true }
+            mods: { theme: ['alfa-on-color', 'alfa-on-white'], horizontal: true }
         },
         {
             block: 'menu-item',
-            mods: { bkg: 'color', theme: 'alfa', type: 'dropdown' }
+            mods: { theme: ['alfa-on-color', 'alfa-on-white'], type: 'dropdown' }
         },
         {
             block: 'row'
-        },
-        {
-            block: 'menu',
-            mods: { bkg: 'white', theme: 'alfa', horizontal: true }
-        },
-        {
-            block: 'menu-item',
-            mods: { bkg: 'white', theme: 'alfa', type: 'dropdown' }
-        },
+        }
     ]
 }];

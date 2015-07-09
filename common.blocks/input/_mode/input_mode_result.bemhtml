@@ -9,8 +9,7 @@ block('input').mod('mode', 'result')(
                 {
                     elem: 'inner',
                     mods: {
-                        theme: this._input.mods.theme,
-                        bkg: this._input.mods.bkg
+                        theme: this._input.mods.theme
                     },
                     content: this._input.val
                 }

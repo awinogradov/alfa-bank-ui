@@ -7,7 +7,7 @@ block('footer')(
                 content: [
                     {
                         block: 'menu',
-                        mods: { bkg: 'color', theme: 'alfa', size: 'm', horizontal: true },
+                        mods: { theme: 'alfa-on-color', size: 'm', horizontal: true },
                         content: 'footer'
                     }
                 ]

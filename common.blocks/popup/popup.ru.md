@@ -90,18 +90,15 @@
 ```
 {
     block : 'popup',
-    mods : { theme : 'alfa' },
     content : 'islands'
 }
 ```
-
-### Фон `_bkg`
 
 * `white` для белого фона:
 ```bemjson
 {
     block : 'popup',
-    mods : { theme : 'alfa', bkg : 'white' }
+    mods : { theme : 'alfa-on-white' }
     content : 'On white background'
 }
 ```
@@ -109,7 +106,7 @@
 ```bemjson
 {
     block : 'popup',
-    mods : { theme : 'alfa', bkg : 'color' }
+    mods : { theme : 'alfa-on-color' }
     content : 'On dark background'
 }
 ```
@@ -127,7 +124,7 @@
 ```
 {
     block : 'popup',
-    mods : { theme : 'alfa', autoclosable : true },
+    mods : { autoclosable : true },
     content : 'islands'
 }
 ```
@@ -140,7 +137,7 @@
 ```bemjson
 {
     block : 'popup',
-    mods : { theme : 'alfa', bkg : 'color', view : 'column' },
+    mods : { theme : 'alfa-on-color', view : 'column' },
     content : 'Content'
 }
 ```
@@ -148,7 +145,7 @@
 ```bemjson
 {
     block : 'popup'
-    mods : { theme : 'alfa', view : 'hint' },
+    mods : { view : 'hint' },
     content : 'Content'
 }
 ```
@@ -159,7 +156,7 @@
 ```bemjson
 {
     block : 'popup'
-    mods : { theme : 'alfa', view : 'hint', error : true },
+    mods : { view : 'hint', error : true },
     content : 'Content'
 }
 ```
@@ -191,7 +188,7 @@
 ```
 {
     block : 'popup',
-    mods : { autoclosable : true, theme: 'alfa' },
+    mods : { autoclosable : true },
     directions : ['top-left', 'top-center', 'top-right'],
     content : 'Hello, world!'
 }
@@ -202,7 +199,7 @@
 ```
 {
     block : 'popup',
-    mods : { autoclosable : true, theme: 'alfa' },
+    mods : { autoclosable : true },
     directions : ['right-center'],
     content : 'Hello, world!'
 }
@@ -213,7 +210,7 @@
 ```
 {
     block : 'popup',
-    mods : { autoclosable : true, theme: 'alfa' },
+    mods : { autoclosable : true },
     direction : ['right-center'],
     mainOffset : 100,
     secondaryOffset : 100,

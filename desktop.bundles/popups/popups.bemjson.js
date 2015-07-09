@@ -1,6 +1,6 @@
 ({
     block : 'page',
-    mods : { theme : 'alfa', bkg : 'color'},
+    mods : { theme : 'alfa-on-color'},
     title : 'Demo Alfa-Bank UI',
     favicon : '/favicon.ico',
     head : [
@@ -27,7 +27,7 @@
                     elem : 'content',
                     content : {
                         block : 'app',
-                        mods : { theme : 'alfa', bkg : 'color' },
+                        mods : { theme : 'alfa-on-color' },
                         content : [
                             {
                                 elem : 'title',
@@ -44,13 +44,13 @@
                                         return [
                                             {
                                                 block : 'heading',
-                                                mods : { theme : 'alfa', bkg : 'color' },
+                                                mods : { theme : 'alfa-on-color' },
                                                 lvl : 2,
                                                 content : 'Size ' + size
                                             },
                                             {
                                                 block : 'select',
-                                                mods : { mode : 'radio', theme : 'alfa', bkg : 'color', size : size },
+                                                mods : { mode : 'radio', theme : 'alfa-on-color', size : size },
                                                 name : 'select1',
                                                 optionsMaxHeight : 200,
                                                 val : 2,
@@ -73,7 +73,7 @@
                                             },
                                             {
                                                 block : 'input',
-                                                mods : { theme : 'alfa', bkg : 'color', size : size, 'has-autocomplete' : true },
+                                                mods : { theme : 'alfa-on-color', size : size, 'has-autocomplete' : true },
                                                 options : [
                                                     {
                                                         val : 'first',
@@ -92,16 +92,14 @@
                                             {
                                                 block : 'input',
                                                 mods : {
-                                                    theme : 'alfa',
+                                                    theme : 'alfa-on-color',
                                                     size : size,
-                                                    bkg : 'color',
                                                     'has-addon' : true,
                                                     'has-calendar' : true
                                                 }
                                             },
                                             {
                                                 block : 'form',
-                                                mods : { theme : 'alfa' },
                                                 content : {
                                                     block: 'form-field',
                                                     id: 'input2',
@@ -110,16 +108,14 @@
                                                         message: 'popup',
                                                         'has-validate': true,
                                                         required: true,
-                                                        theme: 'alfa',
-                                                        bkg: 'color',
+                                                        theme : 'alfa-on-color',
                                                         size: size
                                                     },
                                                     content: [
                                                         {
                                                             block: 'input',
                                                             mods: {
-                                                                theme: 'alfa',
-                                                                bkg: 'color',
+                                                                theme : 'alfa-on-color',
                                                                 size: size
                                                             }
                                                         }
@@ -139,7 +135,7 @@
                                                     { block : 'link', mods : { pseudo : true }, content : 'open at 100&times;100' },
                                                     {
                                                         block : 'popup',
-                                                        mods : { target : 'position', autoclosable : true, theme : 'alfa', bkg : 'color' },
+                                                        mods : { target : 'position', autoclosable : true, theme : 'alfa-on-color' },
                                                         content : [
                                                             'popup is opened at 100&times;100',
                                                             {
@@ -147,7 +143,7 @@
                                                                     content : [
                                                                         {
                                                                             block : 'input',
-                                                                            mods : { theme : 'alfa', bkg : 'color' },
+                                                                            mods : { theme : 'alfa-on-color' },
                                                                             val : 'islands'
                                                                         },
                                                                         {
@@ -173,7 +169,7 @@
                                                     { block : 'link', mods : { pseudo : true }, content : 'all directions' },
                                                     {
                                                         block : 'popup',
-                                                        mods : { target : 'anchor', theme : 'alfa', bkg : 'color' },
+                                                        mods : { target : 'anchor', theme : 'alfa-on-color' },
                                                         content : [
                                                             'There\'s content',
                                                             { tag : 'br' },
@@ -192,7 +188,7 @@
                                                     { block : 'link', mods : { pseudo : true }, content : 'bottom-* directions' },
                                                     {
                                                         block : 'popup',
-                                                        mods : { target : 'anchor', theme : 'alfa', bkg : 'color' },
+                                                        mods : { target : 'anchor', theme : 'alfa-on-color' },
                                                         directions : ['bottom-left', 'bottom-center', 'bottom-right'],
                                                         content : [
                                                             'There\'s content',
@@ -210,7 +206,7 @@
                                                     { block : 'link', mods : { pseudo : true }, content : 'top-* directions' },
                                                     {
                                                         block : 'popup',
-                                                        mods : { target : 'anchor', theme : 'alfa', bkg : 'color' },
+                                                        mods : { target : 'anchor', theme : 'alfa-on-color' },
                                                         directions : ['top-left', 'top-center', 'top-right'],
                                                         content : [
                                                             'There\'s content',
@@ -228,7 +224,7 @@
                                                     { block : 'link', mods : { pseudo : true }, content : 'right-* directions' },
                                                     {
                                                         block : 'popup',
-                                                        mods : { target : 'anchor', theme : 'alfa', bkg : 'color' },
+                                                        mods : { target : 'anchor', theme : 'alfa-on-color' },
                                                         directions : ['right-top', 'right-center', 'right-bottom'],
                                                         content : [
                                                             'There\'s content',
@@ -246,7 +242,7 @@
                                                     { block : 'link', mods : { pseudo : true }, content : 'left-* directions' },
                                                     {
                                                         block : 'popup',
-                                                        mods : { target : 'anchor', theme : 'alfa', bkg : 'color' },
+                                                        mods : { target : 'anchor', theme : 'alfa-on-color' },
                                                         directions : ['left-top', 'left-center', 'left-bottom'],
                                                         content : [
                                                             'There\'s content',
@@ -271,10 +267,10 @@
                                         ].map(function(directions) {
                                             return {
                                                 block : 'tooltip',
-                                                mods : { theme : 'alfa', bkg : 'color' },
+                                                mods : { theme : 'alfa-on-color' },
                                                 icon : {
                                                     block : 'icon',
-                                                    mods : { theme : 'alfa', bkg : 'white', tool : 'help', size : 'm' }
+                                                    mods : { theme : 'alfa-on-white', tool : 'help', size : 'm' }
                                                 },
                                                 directions : directions,
                                                 content : 'Tooltip'
@@ -293,10 +289,10 @@
                                         ].map(function(directions) {
                                             return {
                                                 block : 'tooltip',
-                                                mods : { theme : 'alfa', bkg : 'white' },
+                                                mods : { theme : 'alfa-on-white' },
                                                 icon : {
                                                     block : 'icon',
-                                                    mods : { theme : 'alfa', bkg : 'white', tool : 'help', size : 'm' }
+                                                    mods : { theme : 'alfa-on-white', tool : 'help', size : 'm' }
                                                 },
                                                 directions : directions,
                                                 content : 'Tooltip'

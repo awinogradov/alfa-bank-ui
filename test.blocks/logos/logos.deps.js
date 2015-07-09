@@ -3,13 +3,7 @@
         {
             block: 'logo',
             mods: {
-                bkg: 'color'
-            }
-        },
-        {
-            block: 'logo',
-            mods: {
-                bkg: 'white'
+                theme: ['alfa-on-color', 'alfa-on-white']
             }
         },
         { block: 'row' }

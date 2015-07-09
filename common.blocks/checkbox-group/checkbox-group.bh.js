@@ -16,7 +16,6 @@ module.exports = function(bh) {
                         type: mods.type,
                         view: mods.view,
                         theme: mods.theme,
-                        bkg: mods.bkg,
                         size: mods.size,
                         checked: option.checked,
                         disabled: option.disabled || mods.disabled

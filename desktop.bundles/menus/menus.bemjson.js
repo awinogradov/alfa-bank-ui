@@ -1,6 +1,6 @@
 ({
     block: 'page',
-    mods: {theme: 'alfa', bkg: 'color'},
+    mods: { theme: 'alfa-on-color'},
     title: 'Demo Alfa-Bank UI',
     favicon: '/favicon.ico',
     head: [
@@ -31,7 +31,7 @@
                             content : [
                                 {
                                     block : 'heading',
-                                    mods : { theme : 'alfa', bkg : 'color' },
+                                    mods : { theme : 'alfa-on-color' },
                                     content : 'Меню'
                                 },
                                 {

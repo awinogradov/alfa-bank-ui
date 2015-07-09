@@ -1,6 +1,6 @@
 ({
     block : 'page',
-    mods : { theme : 'alfa', bkg : 'color' },
+    mods : { theme : 'alfa-on-color' },
     title : 'Alfa-Bank UI',
     favicon : '/favicon.ico',
     head : [
@@ -19,7 +19,7 @@
             content : [
                 {
                     block : 'heading',
-                    mods : { theme : 'alfa', bkg : 'color' },
+                    mods : { theme : 'alfa-on-color' },
                     mix : [{ block : 'align', mods : { hor : 'center' }    }],
                     content : 'Компоненты интерфейса'
                 }
@@ -76,7 +76,7 @@
                                             content : [
                                                 {
                                                     block : 'logo',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 's', view : 'icon' }
+                                                    mods : { theme : 'alfa-on-color', size : 's', view : 'icon' }
                                                 }
                                             ]
                                         },
@@ -85,37 +85,7 @@
                                             content : [
                                                 {
                                                     block : 'logo',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 's', view : 'full' }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            block : 'controls',
-                                            content : [
-
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    elem : 'col',
-                                    mods : { sw : 3 },
-                                    content : [
-                                        {
-                                            block : 'controls',
-                                            content : [
-                                                {
-                                                    block : 'logo',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'm', view : 'icon' }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            block : 'controls',
-                                            content : [
-                                                {
-                                                    block : 'logo',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'm', view : 'full' }
+                                                    mods : { theme : 'alfa-on-color', size : 's', view : 'full' }
                                                 }
                                             ]
                                         },
@@ -136,7 +106,7 @@
                                             content : [
                                                 {
                                                     block : 'logo',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'l', view : 'icon' }
+                                                    mods : { theme : 'alfa-on-color', size : 'm', view : 'icon' }
                                                 }
                                             ]
                                         },
@@ -145,7 +115,7 @@
                                             content : [
                                                 {
                                                     block : 'logo',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'l', view : 'full' }
+                                                    mods : { theme : 'alfa-on-color', size : 'm', view : 'full' }
                                                 }
                                             ]
                                         },
@@ -166,7 +136,7 @@
                                             content : [
                                                 {
                                                     block : 'logo',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'xl', view : 'icon' }
+                                                    mods : { theme : 'alfa-on-color', size : 'l', view : 'icon' }
                                                 }
                                             ]
                                         },
@@ -175,7 +145,37 @@
                                             content : [
                                                 {
                                                     block : 'logo',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'xl', view : 'full' }
+                                                    mods : { theme : 'alfa-on-color', size : 'l', view : 'full' }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'col',
+                                    mods : { sw : 3 },
+                                    content : [
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'logo',
+                                                    mods : { theme : 'alfa-on-color', size : 'xl', view : 'icon' }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            block : 'controls',
+                                            content : [
+                                                {
+                                                    block : 'logo',
+                                                    mods : { theme : 'alfa-on-color', size : 'xl', view : 'full' }
                                                 }
                                             ]
                                         },
@@ -205,24 +205,24 @@
                             content : [
                                 {
                                     block : 'heading',
-                                    mods: { theme: 'alfa', bkg: 'color' },
+                                    mods: { theme: 'alfa-on-color' },
                                     content : 'h1. Заголовок первого уровня'
                                 },
                                 {
                                     block : 'heading',
-                                    mods: { theme: 'alfa', bkg: 'color' },
+                                    mods: { theme: 'alfa-on-color' },
                                     lvl : 2,
                                     content : 'h2. Заголовок второго уровня'
                                 },
                                 {
                                     block : 'heading',
-                                    mods: { theme: 'alfa', bkg: 'color' },
+                                    mods: { theme: 'alfa-on-color' },
                                     lvl : 3,
                                     content : 'h3. Заголовок третьего уровня'
                                 },
                                 {
                                     block : 'heading',
-                                    mods: { theme: 'alfa', bkg: 'color' },
+                                    mods: { theme: 'alfa-on-color' },
                                     lvl : 4,
                                     content : 'h4. Заголовок четвертого уровня'
                                 }
@@ -244,7 +244,7 @@
                             content : [
                                 {
                                     block : 'paragraph',
-                                    mods : { type : 'lead', theme: 'alfa', bkg: 'color' },
+                                    mods : { type : 'lead', theme: 'alfa-on-color' },
                                     content : [
                                         'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
                                         'Это заглавный параграф, в котором абсолютно бестолковый текст. ',
@@ -257,7 +257,7 @@
                                 },
                                 {
                                     block : 'paragraph',
-                                    mods: { theme: 'alfa', bkg: 'color' },
+                                    mods: { theme: 'alfa-on-color' },
                                     content : [
                                         'Это обычный параграф, в котором такой же бестолковый текст. ',
                                         'Это обычный параграф, в котором такой же бестолковый текст. ',
@@ -270,7 +270,7 @@
                                 },
                                 {
                                     block : 'paragraph',
-                                    mods: { theme: 'alfa', bkg: 'color' },
+                                    mods: { theme: 'alfa-on-color' },
                                     mark : 'nb',
                                     content : [
                                         'Это параграф с меткой NB, в котором еще более бестолковый текст. ',
@@ -325,7 +325,7 @@
                                     content : [
                                         {
                                             block : 'list',
-                                            mods : { theme : 'alfa', bkg : 'color' },
+                                            mods : { theme : 'alfa-on-color' },
                                             items : [
                                                 'Пункт списка',
                                                 'Пункт списка',
@@ -403,7 +403,7 @@
                                             content: [
                                                 {
                                                     block: 'button',
-                                                    mods: { theme: 'alfa', bkg : 'color', size: 's' },
+                                                    mods: { theme: 'alfa-on-color', size: 's' },
                                                     text: 'button'
                                                 }
                                             ]
@@ -413,7 +413,7 @@
                                             content : [
                                                 {
                                                     block : 'button',
-                                                    mods : { theme: 'alfa', bkg : 'color', size : 's', view : 'action' },
+                                                    mods : { theme: 'alfa-on-color', size : 's', view : 'action' },
                                                     text : 'button'
                                                 }
                                             ]
@@ -423,7 +423,7 @@
                                             content: [
                                                 {
                                                     block: 'button',
-                                                    mods: { theme: 'alfa', bkg : 'color', view : 'pseudo', size: 's' },
+                                                    mods: { theme: 'alfa-on-color', view : 'pseudo', size: 's' },
                                                     text: 'button'
                                                 }
                                             ]
@@ -433,7 +433,7 @@
                                             content: [
                                                 {
                                                     block: 'button',
-                                                    mods: { theme: 'alfa', bkg : 'color', size: 's', disabled : true },
+                                                    mods: { theme: 'alfa-on-color', size: 's', disabled : true },
                                                     text: 'button'
                                                 }
                                             ]
@@ -443,7 +443,7 @@
                                             content : [
                                                 {
                                                     block : 'button',
-                                                    mods : { theme: 'alfa', bkg : 'color', size : 's' },
+                                                    mods : { theme: 'alfa-on-color', size : 's' },
                                                     text : 'button',
                                                     icon : { block : 'icon', mods : { action : 'download' } }
                                                 }
@@ -454,10 +454,10 @@
                                             content : [
                                                 {
                                                     block : 'button',
-                                                    mods : { theme: 'alfa', bkg : 'color', size : 's' },
+                                                    mods : { theme: 'alfa-on-color', size : 's' },
                                                     icon : {
                                                         block : 'spin',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 'xs', visible : true },
+                                                        mods : { theme : 'alfa-on-color', size : 'xs', visible : true },
                                                         mix : { block : 'button', elem : 'icon' }
                                                     },
                                                     text : 'Loading...'
@@ -475,7 +475,7 @@
                                             content: [
                                                 {
                                                     block: 'button',
-                                                    mods: { theme: 'alfa', bkg : 'color', size: 'm' },
+                                                    mods: { theme: 'alfa-on-color', size: 'm' },
                                                     text: 'button'
                                                 }
                                             ]
@@ -485,7 +485,7 @@
                                             content : [
                                                 {
                                                     block : 'button',
-                                                    mods : { theme: 'alfa', bkg : 'color', size : 'm', view : 'action' },
+                                                    mods : { theme: 'alfa-on-color', size : 'm', view : 'action' },
                                                     text : 'button'
                                                 }
                                             ]
@@ -495,7 +495,7 @@
                                             content: [
                                                 {
                                                     block: 'button',
-                                                    mods: { theme: 'alfa', bkg : 'color', view : 'pseudo', size: 'm' },
+                                                    mods: { theme: 'alfa-on-color', view : 'pseudo', size: 'm' },
                                                     text: 'button'
                                                 }
                                             ]
@@ -505,7 +505,7 @@
                                             content: [
                                                 {
                                                     block: 'button',
-                                                    mods: { theme: 'alfa', bkg : 'color', size: 'm', disabled : true },
+                                                    mods: { theme: 'alfa-on-color', size: 'm', disabled : true },
                                                     text: 'button'
                                                 }
                                             ]
@@ -515,7 +515,7 @@
                                             content : [
                                                 {
                                                     block : 'button',
-                                                    mods : { theme: 'alfa', bkg : 'color', size : 'm' },
+                                                    mods : { theme: 'alfa-on-color', size : 'm' },
                                                     text : 'button',
                                                     icon : { block : 'icon', mods : { action : 'download' } }
                                                 }
@@ -526,10 +526,10 @@
                                             content : [
                                                 {
                                                     block : 'button',
-                                                    mods : { theme: 'alfa', bkg : 'color', size : 'm' },
+                                                    mods : { theme: 'alfa-on-color', size : 'm' },
                                                     icon : {
                                                         block : 'spin',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 's', visible : true },
+                                                        mods : { theme : 'alfa-on-color', size : 's', visible : true },
                                                         mix : { block : 'button', elem : 'icon' }
                                                     },
                                                     text : 'Loading...'
@@ -547,7 +547,7 @@
                                             content: [
                                                 {
                                                     block: 'button',
-                                                    mods: {theme: 'alfa', bkg : 'color', size: 'l' },
+                                                    mods: {theme: 'alfa-on-color', size: 'l' },
                                                     text: 'button'
                                                 }
                                             ]
@@ -557,7 +557,7 @@
                                             content : [
                                                 {
                                                     block : 'button',
-                                                    mods : { theme: 'alfa', bkg : 'color', size : 'l', view : 'action' },
+                                                    mods : { theme: 'alfa-on-color', size : 'l', view : 'action' },
                                                     text : 'button'
                                                 }
                                             ]
@@ -567,7 +567,7 @@
                                             content: [
                                                 {
                                                     block: 'button',
-                                                    mods: { theme: 'alfa', bkg : 'color', view : 'pseudo', size: 'l' },
+                                                    mods: { theme: 'alfa-on-color', view : 'pseudo', size: 'l' },
                                                     text: 'button'
                                                 }
                                             ]
@@ -577,7 +577,7 @@
                                             content: [
                                                 {
                                                     block: 'button',
-                                                    mods: {theme: 'alfa', bkg : 'color', size: 'l', disabled : true },
+                                                    mods: {theme: 'alfa-on-color', size: 'l', disabled : true },
                                                     text: 'button'
                                                 }
                                             ]
@@ -587,7 +587,7 @@
                                             content : [
                                                 {
                                                     block : 'button',
-                                                    mods : { theme: 'alfa', bkg : 'color', size : 'l' },
+                                                    mods : { theme: 'alfa-on-color', size : 'l' },
                                                     text : 'button',
                                                     icon : { block : 'icon', mods : { action : 'download' } }
                                                 }
@@ -598,10 +598,10 @@
                                             content : [
                                                 {
                                                     block : 'button',
-                                                    mods : { theme: 'alfa', bkg : 'color', size : 'l' },
+                                                    mods : { theme: 'alfa-on-color', size : 'l' },
                                                     icon : {
                                                         block : 'spin',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 'm', visible : true },
+                                                        mods : { theme : 'alfa-on-color', size : 'm', visible : true },
                                                         mix : { block : 'button', elem : 'icon' }
                                                     },
                                                     text : 'Loading...'
@@ -619,7 +619,7 @@
                                             content: [
                                                 {
                                                     block: 'button',
-                                                    mods: {theme: 'alfa', bkg : 'color', size: 'xl' },
+                                                    mods: {theme: 'alfa-on-color', size: 'xl' },
                                                     text: 'button'
                                                 }
                                             ]
@@ -629,7 +629,7 @@
                                             content : [
                                                 {
                                                     block : 'button',
-                                                    mods : { theme: 'alfa', bkg : 'color', size : 'xl', view : 'action' },
+                                                    mods : { theme: 'alfa-on-color', size : 'xl', view : 'action' },
                                                     text : 'button'
                                                 }
                                             ]
@@ -639,7 +639,7 @@
                                             content: [
                                                 {
                                                     block: 'button',
-                                                    mods: { theme: 'alfa', bkg : 'color', view : 'pseudo', size: 'xl' },
+                                                    mods: { theme: 'alfa-on-color', view : 'pseudo', size: 'xl' },
                                                     text: 'button'
                                                 }
                                             ]
@@ -649,7 +649,7 @@
                                             content: [
                                                 {
                                                     block: 'button',
-                                                    mods: {theme: 'alfa', bkg : 'color', size: 'xl', disabled : true },
+                                                    mods: {theme: 'alfa-on-color', size: 'xl', disabled : true },
                                                     text: 'button'
                                                 }
                                             ]
@@ -659,7 +659,7 @@
                                             content : [
                                                 {
                                                     block : 'button',
-                                                    mods : { theme: 'alfa', bkg : 'color', size : 'xl' },
+                                                    mods : { theme: 'alfa-on-color', size : 'xl' },
                                                     text : 'button',
                                                     icon : { block : 'icon', mods : { action : 'download' } }
                                                 }
@@ -670,10 +670,10 @@
                                             content : [
                                                 {
                                                     block : 'button',
-                                                    mods : { theme: 'alfa', bkg : 'color', size : 'xl' },
+                                                    mods : { theme: 'alfa-on-color', size : 'xl' },
                                                     icon : {
                                                         block : 'spin',
-                                                        mods : { theme : 'alfa', bkg : 'color', size : 'l', visible : true },
+                                                        mods : { theme : 'alfa-on-color', size : 'l', visible : true },
                                                         mix : { block : 'button', elem : 'icon' }
                                                     },
                                                     text : 'Loading...'
@@ -734,7 +734,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 's' },
+                                                    mods : { theme : 'alfa-on-color', size : 's' },
                                                     val : 'Простой',
                                                     placeholder : 'placeholder'
                                                 }
@@ -745,7 +745,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 's', disabled : true },
+                                                    mods : { theme : 'alfa-on-color', size : 's', disabled : true },
                                                     val : 'Недоступный',
                                                     placeholder : 'placeholder'
                                                 }
@@ -756,7 +756,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 's', 'has-clear' : true },
+                                                    mods : { theme : 'alfa-on-color', size : 's', 'has-clear' : true },
                                                     val : 'С очисткой',
                                                     placeholder : 'placeholder'
                                                 }
@@ -767,7 +767,7 @@
                                             content : [
                                                 {
                                                     block : 'select',
-                                                    mods : { mode : 'radio-check', theme : 'alfa', bkg : 'color', size : 's' },
+                                                    mods : { mode : 'radio-check', theme : 'alfa-on-color', size : 's' },
                                                     name : 'select',
                                                     text : 'first',
                                                     options : [
@@ -782,7 +782,7 @@
                                             content : [
                                                 {
                                                     block : 'textarea',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 's' },
+                                                    mods : { theme : 'alfa-on-color', size: 's' },
                                                     placeholder : 'текст'
                                                 }
                                             ]
@@ -792,7 +792,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 's', 'type' : 'link' },
+                                                    mods : { theme : 'alfa-on-color', size: 's', 'type' : 'link' },
                                                     val : null,
                                                     placeholder : 'Добавьте название'
                                                 }
@@ -803,7 +803,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 's', 'type' : 'symbol' },
+                                                    mods : { theme : 'alfa-on-color', size: 's', 'type' : 'symbol' },
                                                     val : 'Простой символ',
                                                     symbol : '₽'
                                                 }
@@ -814,7 +814,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 's', 'type' : 'result' },
+                                                    mods : { theme : 'alfa-on-color', size: 's', 'type' : 'result' },
                                                     val : 'Result'
                                                 }
                                             ]
@@ -830,7 +830,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'm' },
+                                                    mods : { theme : 'alfa-on-color', size : 'm' },
                                                     val : 'Простой',
                                                     placeholder : 'placeholder'
                                                 }
@@ -841,7 +841,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'm', disabled : true },
+                                                    mods : { theme : 'alfa-on-color', size : 'm', disabled : true },
                                                     val : 'Недоступный',
                                                     placeholder : 'placeholder'
                                                 }
@@ -852,7 +852,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'm', 'has-clear' : true },
+                                                    mods : { theme : 'alfa-on-color', size : 'm', 'has-clear' : true },
                                                     val : 'С очисткой',
                                                     placeholder : 'placeholder'
                                                 }
@@ -863,7 +863,7 @@
                                             content : [
                                                 {
                                                     block : 'select',
-                                                    mods : { mode : 'radio-check', theme : 'alfa', bkg : 'color', size : 'm' },
+                                                    mods : { mode : 'radio-check', theme : 'alfa-on-color', size : 'm' },
                                                     name : 'select',
                                                     text : 'first',
                                                     options : [
@@ -878,7 +878,7 @@
                                             content : [
                                                 {
                                                     block : 'textarea',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 'm' },
+                                                    mods : { theme : 'alfa-on-color', size: 'm' },
                                                     placeholder : 'текст'
                                                 }
                                             ]
@@ -888,7 +888,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 'm', 'type' : 'link' },
+                                                    mods : { theme : 'alfa-on-color', size: 'm', 'type' : 'link' },
                                                     val : 'Простой inplace'
                                                 }
                                             ]
@@ -898,7 +898,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 'm', 'type' : 'symbol' },
+                                                    mods : { theme : 'alfa-on-color', size: 'm', 'type' : 'symbol' },
                                                     val : 'Простой символ',
                                                     symbol : '₽'
                                                 }
@@ -909,7 +909,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 'm', 'type' : 'result' },
+                                                    mods : { theme : 'alfa-on-color', size: 'm', 'type' : 'result' },
                                                     val : 'Result'
                                                 }
                                             ]
@@ -925,7 +925,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'l' },
+                                                    mods : { theme : 'alfa-on-color', size : 'l' },
                                                     val : 'Простой',
                                                     placeholder : 'placeholder'
                                                 }
@@ -936,7 +936,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'l', disabled : true },
+                                                    mods : { theme : 'alfa-on-color', size : 'l', disabled : true },
                                                     val : 'Недоступный',
                                                     placeholder : 'placeholder'
                                                 }
@@ -947,7 +947,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'l', 'has-clear' : true },
+                                                    mods : { theme : 'alfa-on-color', size : 'l', 'has-clear' : true },
                                                     val : 'С очисткой',
                                                     placeholder : 'placeholder'
                                                 }
@@ -958,7 +958,7 @@
                                             content : [
                                                 {
                                                     block : 'select',
-                                                    mods : { mode : 'radio-check', theme : 'alfa', bkg : 'color', size : 'l' },
+                                                    mods : { mode : 'radio-check', theme : 'alfa-on-color', size : 'l' },
                                                     name : 'select',
                                                     text : 'first',
                                                     options : [
@@ -973,7 +973,7 @@
                                             content : [
                                                 {
                                                     block : 'textarea',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 'l' },
+                                                    mods : { theme : 'alfa-on-color', size: 'l' },
                                                     placeholder : 'текст'
                                                 }
                                             ]
@@ -983,7 +983,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 'l', 'type' : 'link' },
+                                                    mods : { theme : 'alfa-on-color', size: 'l', 'type' : 'link' },
                                                     val : 'Простой inplace'
                                                 }
                                             ]
@@ -993,7 +993,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 'l', 'type' : 'symbol' },
+                                                    mods : { theme : 'alfa-on-color', size: 'l', 'type' : 'symbol' },
                                                     val : 'Простой символ',
                                                     symbol : '₽'
                                                 }
@@ -1004,7 +1004,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 'l', 'type' : 'result' },
+                                                    mods : { theme : 'alfa-on-color', size: 'l', 'type' : 'result' },
                                                     val : 'Result'
                                                 }
                                             ]
@@ -1020,7 +1020,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'xl' },
+                                                    mods : { theme : 'alfa-on-color', size : 'xl' },
                                                     val : 'Простой',
                                                     placeholder : 'placeholder'
                                                 }
@@ -1031,7 +1031,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'xl', disabled : true },
+                                                    mods : { theme : 'alfa-on-color', size : 'xl', disabled : true },
                                                     val : 'Недоступный',
                                                     placeholder : 'placeholder'
                                                 }
@@ -1042,7 +1042,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'xl', 'has-clear' : true },
+                                                    mods : { theme : 'alfa-on-color', size : 'xl', 'has-clear' : true },
                                                     val : 'С очисткой',
                                                     placeholder : 'placeholder'
                                                 }
@@ -1053,7 +1053,7 @@
                                             content : [
                                                 {
                                                     block : 'select',
-                                                    mods : { mode : 'radio-check', theme : 'alfa', bkg : 'color', size : 'xl' },
+                                                    mods : { mode : 'radio-check', theme : 'alfa-on-color', size : 'xl' },
                                                     name : 'select',
                                                     text : 'first',
                                                     options : [
@@ -1068,7 +1068,7 @@
                                             content : [
                                                 {
                                                     block : 'textarea',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 'xl' },
+                                                    mods : { theme : 'alfa-on-color', size: 'xl' },
                                                     placeholder : 'текст'
                                                 }
                                             ]
@@ -1078,7 +1078,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 'xl', 'type' : 'link' },
+                                                    mods : { theme : 'alfa-on-color', size: 'xl', 'type' : 'link' },
                                                     val : 'Простой inplace'
                                                 }
                                             ]
@@ -1088,7 +1088,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 'xl', 'type' : 'symbol' },
+                                                    mods : { theme : 'alfa-on-color', size: 'xl', 'type' : 'symbol' },
                                                     val : 'Простой символ',
                                                     symbol : '₽'
                                                 }
@@ -1099,7 +1099,7 @@
                                             content : [
                                                 {
                                                     block : 'input',
-                                                    mods : { theme : 'alfa', bkg : 'color', size: 'xl', 'type' : 'result' },
+                                                    mods : { theme : 'alfa-on-color', size: 'xl', 'type' : 'result' },
                                                     val : 'Result'
                                                 }
                                             ]
@@ -1158,7 +1158,7 @@
                                             content : [
                                                 {
                                                     block : 'radio-group',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 's', type : 'button' },
+                                                    mods : { theme : 'alfa-on-color', size : 's', type : 'button' },
                                                     name : 'radio-sizes-s',
                                                     options : [
                                                         { val : 1, text : 'Один' },
@@ -1179,7 +1179,7 @@
                                             content : [
                                                 {
                                                     block : 'radio-group',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'm', type : 'button' },
+                                                    mods : { theme : 'alfa-on-color', size : 'm', type : 'button' },
                                                     name : 'radio-sizes-m',
                                                     options : [
                                                         { val : 1, text : 'Один' },
@@ -1194,7 +1194,7 @@
                                             content : [
                                                 {
                                                     block : 'radio',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'm', checked : true },
+                                                    mods : { theme : 'alfa-on-color', size : 'm', checked : true },
                                                     val : 1,
                                                     text : 'радио'
                                                 }
@@ -1205,7 +1205,7 @@
                                             content : [
                                                 {
                                                     block : 'radio-group',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'm' },
+                                                    mods : { theme : 'alfa-on-color', size : 'm' },
                                                     name : 'radio-sizes-m',
                                                     options : [
                                                         { val : 1, text : 'Один' },
@@ -1226,7 +1226,7 @@
                                             content : [
                                                 {
                                                     block : 'radio-group',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'l', type : 'button' },
+                                                    mods : { theme : 'alfa-on-color', size : 'l', type : 'button' },
                                                     name : 'radio-sizes-l',
                                                     options : [
                                                         { val : 1, text : 'Один' },
@@ -1241,7 +1241,7 @@
                                             content : [
                                                 {
                                                     block : 'radio',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'l', checked : true },
+                                                    mods : { theme : 'alfa-on-color', size : 'l', checked : true },
                                                     val : 1,
                                                     text : 'радио'
                                                 }
@@ -1252,7 +1252,7 @@
                                             content : [
                                                 {
                                                     block : 'radio-group',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'l' },
+                                                    mods : { theme : 'alfa-on-color', size : 'l' },
                                                     name : 'radio-sizes-l',
                                                     options : [
                                                         { val : 1, text : 'Один' },
@@ -1273,7 +1273,7 @@
                                             content : [
                                                 {
                                                     block : 'radio-group',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'xl', type : 'button' },
+                                                    mods : { theme : 'alfa-on-color', size : 'xl', type : 'button' },
                                                     name : 'radio-sizes-xl',
                                                     options : [
                                                         { val : 1, text : 'Один' },
@@ -1337,7 +1337,7 @@
                                             content : [
                                                 {
                                                     block : 'checkbox-group',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 's', type : 'button' },
+                                                    mods : { theme : 'alfa-on-color', size : 's', type : 'button' },
                                                     name : 'checkbox-sizes-s',
                                                     options : [
                                                         { val : 1, text : 'Один' },
@@ -1358,7 +1358,7 @@
                                             content : [
                                                 {
                                                     block : 'checkbox-group',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'm', type : 'button' },
+                                                    mods : { theme : 'alfa-on-color', size : 'm', type : 'button' },
                                                     name : 'checkbox-sizes-m',
                                                     options : [
                                                         { val : 1, text : 'Один' },
@@ -1373,7 +1373,7 @@
                                             content : [
                                                 {
                                                     block : 'checkbox',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'm', checked : true },
+                                                    mods : { theme : 'alfa-on-color', size : 'm', checked : true },
                                                     val : 1,
                                                     text : 'чекбокс'
                                                 }
@@ -1384,7 +1384,7 @@
                                             content : [
                                                 {
                                                     block : 'checkbox-group',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'm' },
+                                                    mods : { theme : 'alfa-on-color', size : 'm' },
                                                     name : 'checkbox-sizes-m',
                                                     options : [
                                                         { val : 1, text : 'Один' },
@@ -1405,7 +1405,7 @@
                                             content : [
                                                 {
                                                     block : 'checkbox-group',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'l', type : 'button' },
+                                                    mods : { theme : 'alfa-on-color', size : 'l', type : 'button' },
                                                     name : 'checkbox-sizes-l',
                                                     options : [
                                                         { val : 1, text : 'Один' },
@@ -1420,7 +1420,7 @@
                                             content : [
                                                 {
                                                     block : 'checkbox',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'l', checked : true },
+                                                    mods : { theme : 'alfa-on-color', size : 'l', checked : true },
                                                     val : 1,
                                                     text : 'чекбокс'
                                                 }
@@ -1431,7 +1431,7 @@
                                             content : [
                                                 {
                                                     block : 'checkbox-group',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'l' },
+                                                    mods : { theme : 'alfa-on-color', size : 'l' },
                                                     name : 'checkbox-sizes-l',
                                                     options : [
                                                         { val : 1, text : 'Один' },
@@ -1452,7 +1452,7 @@
                                             content : [
                                                 {
                                                     block : 'checkbox-group',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'xl', type : 'button' },
+                                                    mods : { theme : 'alfa-on-color', size : 'xl', type : 'button' },
                                                     name : 'checkbox-sizes-xl',
                                                     options : [
                                                         { val : 1, text : 'Один' },
@@ -1516,9 +1516,9 @@
                                             content : [
                                                 {
                                                     block : 'dropdown',
-                                                    mods : { switcher : 'link', theme : 'alfa', bkg : 'color', size : 's', mode : 'hover' },
+                                                    mods : { switcher : 'link', theme : 'alfa-on-color', size : 's', mode : 'hover' },
                                                     switcher : 'hover column dropdown',
-                                                    popup : { block : 'popup', mods : { theme : 'alfa', bkg : 'color', view : 'column' }, content : 'popup' }
+                                                    popup : { block : 'popup', mods : { theme : 'alfa-on-color', view : 'column' }, content : 'popup' }
                                                 }
                                             ]
                                         },
@@ -1531,7 +1531,7 @@
                                                     switcher : 'dropdown',
                                                     popup : {
                                                         block : 'popup',
-                                                        mods : { theme : 'alfa', bkg : 'color' },
+                                                        mods : { theme : 'alfa-on-color' },
                                                         content : {
                                                             block : 'menu',
                                                             mods : { theme : 'alfa', size : 's' },
@@ -1568,9 +1568,9 @@
                                             content : [
                                                 {
                                                     block : 'dropdown',
-                                                    mods : { switcher : 'link', theme : 'alfa', bkg : 'color', size : 's', mode : 'hover' },
+                                                    mods : { switcher : 'link', theme : 'alfa-on-color', size : 's', mode : 'hover' },
                                                     switcher : 'hover column dropdown',
-                                                    popup : { block : 'popup', mods : { theme : 'alfa', bkg : 'color', view : 'column' }, content : 'popup' }
+                                                    popup : { block : 'popup', mods : { theme : 'alfa-on-color', view : 'column' }, content : 'popup' }
                                                 }
                                             ]
                                         },
@@ -1767,7 +1767,7 @@
                                             content : [
                                                 {
                                                     block : 'spin',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 's', visible : true }
+                                                    mods : { theme : 'alfa-on-color', size : 's', visible : true }
                                                 }
                                             ]
                                         }
@@ -1782,7 +1782,7 @@
                                             content : [
                                                 {
                                                     block : 'spin',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'm', visible : true }
+                                                    mods : { theme : 'alfa-on-color', size : 'm', visible : true }
                                                 }
                                             ]
                                         }
@@ -1797,7 +1797,7 @@
                                             content : [
                                                 {
                                                     block : 'spin',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'l', visible : true }
+                                                    mods : { theme : 'alfa-on-color', size : 'l', visible : true }
                                                 }
                                             ]
                                         }
@@ -1812,7 +1812,7 @@
                                             content : [
                                                 {
                                                     block : 'spin',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'xl', visible : true }
+                                                    mods : { theme : 'alfa-on-color', size : 'xl', visible : true }
                                                 }
                                             ]
                                         }
@@ -1870,7 +1870,7 @@
                                             content : [
                                                 {
                                                     block : 'link',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 's' },
+                                                    mods : { theme : 'alfa-on-color', size : 's' },
                                                     url : '#',
                                                     content : 'Ссылка'
                                                 }
@@ -1881,7 +1881,7 @@
                                             content : [
                                                 {
                                                     block : 'link',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 's', pseudo : true },
+                                                    mods : { theme : 'alfa-on-color', size : 's', pseudo : true },
                                                     title : 'pseudo mod',
                                                     content : 'link'
                                                 }
@@ -1898,7 +1898,7 @@
                                             content : [
                                                 {
                                                     block : 'link',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'm' },
+                                                    mods : { theme : 'alfa-on-color', size : 'm' },
                                                     url : '#',
                                                     content : 'Ссылка'
                                                 }
@@ -1909,7 +1909,7 @@
                                             content : [
                                                 {
                                                     block : 'link',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'm', pseudo : true },
+                                                    mods : { theme : 'alfa-on-color', size : 'm', pseudo : true },
                                                     title : 'pseudo mod',
                                                     content : 'link'
                                                 }
@@ -1926,7 +1926,7 @@
                                             content : [
                                                 {
                                                     block : 'link',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'l' },
+                                                    mods : { theme : 'alfa-on-color', size : 'l' },
                                                     url : '#',
                                                     content : 'Ссылка'
                                                 }
@@ -1937,7 +1937,7 @@
                                             content : [
                                                 {
                                                     block : 'link',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'l', pseudo : true },
+                                                    mods : { theme : 'alfa-on-color', size : 'l', pseudo : true },
                                                     title : 'pseudo mod',
                                                     content : 'link'
                                                 }
@@ -1954,7 +1954,7 @@
                                             content : [
                                                 {
                                                     block : 'link',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'xl' },
+                                                    mods : { theme : 'alfa-on-color', size : 'xl' },
                                                     url : '#',
                                                     content : 'Ссылка'
                                                 }
@@ -1965,7 +1965,7 @@
                                             content : [
                                                 {
                                                     block : 'link',
-                                                    mods : { theme : 'alfa', bkg : 'color', size : 'xl', pseudo : true },
+                                                    mods : { theme : 'alfa-on-color', size : 'xl', pseudo : true },
                                                     title : 'pseudo mod',
                                                     content : 'link'
                                                 }
@@ -2031,7 +2031,7 @@
                         },
                         {
                           block : 'link',
-                          mods : { theme : 'alfa', bkg : 'color', size : 'xl', pseudo : true },
+                          mods : { theme : 'alfa-on-color', size : 'xl', pseudo : true },
                           title : 'pseudo mod',
                           content : 'link'
                         }
@@ -2100,7 +2100,7 @@
                                             content : [
                                                 {
                                                     block : 'icon',
-                                                    mods : { bkg : 'color', theme : 'alfa', size: 's', network : 'facebook' }
+                                                    mods : { theme : 'alfa-on-color', size: 's', network : 'facebook' }
                                                 }
                                             ]
                                         }
@@ -2115,7 +2115,7 @@
                                             content : [
                                                 {
                                                     block : 'icon',
-                                                    mods : { bkg : 'color', theme : 'alfa', size: 'm', network : 'facebook' }
+                                                    mods : { theme : 'alfa-on-color', size: 'm', network : 'facebook' }
                                                 }
                                             ]
                                         }
@@ -2130,7 +2130,7 @@
                                             content : [
                                                 {
                                                     block : 'icon',
-                                                    mods : { bkg : 'color', theme : 'alfa', size: 'l', network : 'facebook' }
+                                                    mods : { theme : 'alfa-on-color', size: 'l', network : 'facebook' }
                                                 }
                                             ]
                                         }
@@ -2145,7 +2145,7 @@
                                             content : [
                                                 {
                                                     block : 'icon',
-                                                    mods : { bkg : 'color', theme : 'alfa', size: 'xl', network : 'facebook' }
+                                                    mods : { theme : 'alfa-on-color', size: 'xl', network : 'facebook' }
                                                 }
                                             ]
                                         }
@@ -2181,7 +2181,7 @@
                                             content : [
                                                 {
                                                     block : 'menu',
-                                                    mods : { bkg : 'white', theme : 'alfa', size : 's', horizontal : true },
+                                                    mods : { theme : 'alfa-on-alfa', size : 's', horizontal : true },
                                                     content : [
                                                         {
                                                             block : 'menu-item',
@@ -2244,7 +2244,7 @@
                                             content : [
                                                 {
                                                     block : 'menu',
-                                                    mods : { bkg : 'color', theme : 'alfa', size : 's', horizontal : true },
+                                                    mods : { theme : 'alfa-on-color', size : 's', horizontal : true },
                                                     content : [
                                                         {
                                                             block : 'menu-item',
@@ -2317,7 +2317,7 @@
                                             content : [
                                                 {
                                                     block : 'menu',
-                                                    mods : { bkg : 'white', theme : 'alfa', size : 'm', horizontal : true },
+                                                    mods : { theme : 'alfa-on-alfa', size : 'm', horizontal : true },
                                                     content : [
                                                         {
                                                             block : 'menu-item',
@@ -2380,7 +2380,7 @@
                                             content : [
                                                 {
                                                     block : 'menu',
-                                                    mods : { bkg : 'color', theme : 'alfa', size : 'm', horizontal : true },
+                                                    mods : { theme : 'alfa-on-color', size : 'm', horizontal : true },
                                                     content : [
                                                         {
                                                             block : 'menu-item',
@@ -2453,7 +2453,7 @@
                                             content : [
                                                 {
                                                     block : 'menu',
-                                                    mods : { bkg : 'white', theme : 'alfa', size : 'l', horizontal : true },
+                                                    mods : { theme : 'alfa-on-alfa', size : 'l', horizontal : true },
                                                     content : [
                                                         {
                                                             block : 'menu-item',
@@ -2516,7 +2516,7 @@
                                             content : [
                                                 {
                                                     block : 'menu',
-                                                    mods : { bkg : 'color', theme : 'alfa', size : 'l', horizontal : true },
+                                                    mods : { theme : 'alfa-on-color', size : 'l', horizontal : true },
                                                     content : [
                                                         {
                                                             block : 'menu-item',
@@ -2585,7 +2585,7 @@
                                             content : [
                                                 {
                                                     block : 'menu',
-                                                    mods : { bkg : 'white', theme : 'alfa', size : 'xl', horizontal : true },
+                                                    mods : { theme : 'alfa-on-alfa', size : 'xl', horizontal : true },
                                                     content : [
                                                         {
                                                             block : 'menu-item',
@@ -2644,7 +2644,7 @@
                                             content : [
                                                 {
                                                     block : 'menu',
-                                                    mods : { bkg : 'color', theme : 'alfa', size : 'xl', horizontal : true },
+                                                    mods : { theme : 'alfa-on-color', size : 'xl', horizontal : true },
                                                     content : [
                                                         {
                                                             block : 'menu-item',
@@ -2873,11 +2873,11 @@
                                             content : [
                                                 {
                                                     block : 'plate',
-                                                    mods : { theme : 'alfa', bkg : 'color' },
+                                                    mods : { theme : 'alfa-on-color' },
                                                     content : [
                                                         {
                                                             block : 'logo',
-                                                            mods : { theme : 'alfa', bkg : 'white', view : 'full', size : 's' }
+                                                            mods : { theme : 'alfa-on-white', view : 'full', size : 's' }
                                                         }
                                                     ]
                                                 }
@@ -2888,11 +2888,11 @@
                                             content : [
                                                 {
                                                     block : 'plate',
-                                                    mods : { theme : 'alfa', bkg : 'color', 'has-clear' : true },
+                                                    mods : { theme : 'alfa-on-color', 'has-clear' : true },
                                                     content : [
                                                         {
                                                             block : 'logo',
-                                                            mods : { theme : 'alfa', bkg : 'white', view : 'full', size : 's' }
+                                                            mods : { theme : 'alfa-on-white', view : 'full', size : 's' }
                                                         }
                                                     ]
                                                 }
@@ -3020,7 +3020,7 @@
                                             content : [
                                                 {
                                                     block : 'notification',
-                                                    mods : { theme : 'alfa', bkg : 'color' },
+                                                    mods : { theme : 'alfa-on-color' },
                                                     message : 'Карта переименованна',
                                                     status : 'ok'
                                                 }
@@ -3031,7 +3031,7 @@
                                             content : [
                                                 {
                                                     block : 'notification',
-                                                    mods : { theme : 'alfa', bkg : 'color' },
+                                                    mods : { theme : 'alfa-on-color' },
                                                     message : 'Карта переименованна',
                                                     status : 'fail'
                                                 }
@@ -3118,11 +3118,11 @@
             content : [
                 {
                     block : 'copyright',
-                    mods : { theme : 'alfa', bkg : 'color' },
+                    mods : { theme : 'alfa-on-color' },
                     content : [
                         {
                             block : 'social-links',
-                            mods : { theme : 'alfa', bkg : 'color', size : 's' },
+                            mods : { theme : 'alfa-on-color', size : 's' },
                             links : [
                                 { network : 'vk', url : 'https://vk.com/alfabank' },
                                 { network : 'facebook', url : 'https://facebook.com/alfabank' },
@@ -3131,7 +3131,7 @@
                             content : [
                                 {
                                     block : 'link',
-                                    mods : { theme: 'alfa', bkg : 'color', pseudo : true },
+                                    mods : { theme: 'alfa-on-color', pseudo : true },
                                     url : '#',
                                     content : 'Мы в соцмедиа'
                                 }

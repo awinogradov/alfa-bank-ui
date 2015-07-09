@@ -6,7 +6,7 @@ modules.define('spec', ['notification', 'spec__utils'], function(provide, _, uti
         beforeEach(function() {
             notification = utils.buildBlock('notification', {
                 block: 'notification',
-                mods: { theme: 'alfa', bkg: 'color' }
+                mods: { theme: 'alfa-on-color' }
             });
         });
 

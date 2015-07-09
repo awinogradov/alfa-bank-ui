@@ -10,7 +10,6 @@ block('copyright')(
                 block: 'social-links',
                 mods: {
                     theme: _copyrightMods.theme,
-                    bkg: _copyrightMods.bkg,
                     size: 's'
                 },
                 links: [

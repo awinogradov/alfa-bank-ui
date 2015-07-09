@@ -115,7 +115,7 @@ block('typography')(
                                         content: [
                                             {
                                                 block: 'list',
-                                                mods: { theme: 'alfa', bkg: 'color' },
+                                                mods: { theme: 'alfa-on-color' },
                                                 items: [
                                                     'Пункт списка',
                                                     'Пункт списка',
@@ -174,7 +174,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'spin',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 's', visible: true }
+                                                                        mods: { theme: 'alfa-on-color', size: 's', visible: true }
                                                                     }
                                                                 ]
                                                             }
@@ -208,7 +208,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'spin',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm', visible: true }
+                                                                        mods: { theme: 'alfa-on-color', size: 'm', visible: true }
                                                                     }
                                                                 ]
                                                             }
@@ -242,7 +242,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'spin',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'l', visible: true }
+                                                                        mods: { theme: 'alfa-on-color', size: 'l', visible: true }
                                                                     }
                                                                 ]
                                                             }
@@ -276,7 +276,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'spin',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'xl', visible: true }
+                                                                        mods: { theme: 'alfa-on-color', size: 'xl', visible: true }
                                                                     }
                                                                 ]
                                                             }
@@ -316,7 +316,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'icon',
-                                                                        mods: { bkg: 'color', theme: 'alfa', size: 's', network: 'facebook' }
+                                                                        mods: { theme: 'alfa-on-color', size: 's', network: 'facebook' }
                                                                     }
                                                                 ]
                                                             }
@@ -350,7 +350,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'icon',
-                                                                        mods: { bkg: 'color', theme: 'alfa', size: 'm', network: 'facebook' }
+                                                                        mods: { theme: 'alfa-on-color', size: 'm', network: 'facebook' }
                                                                     }
                                                                 ]
                                                             }
@@ -384,7 +384,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'icon',
-                                                                        mods: { bkg: 'color', theme: 'alfa', size: 'l', network: 'facebook' }
+                                                                        mods: { theme: 'alfa-on-color', size: 'l', network: 'facebook' }
                                                                     }
                                                                 ]
                                                             }
@@ -418,7 +418,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'icon',
-                                                                        mods: { bkg: 'color', theme: 'alfa', size: 'xl', network: 'facebook' }
+                                                                        mods: { theme: 'alfa-on-color', size: 'xl', network: 'facebook' }
                                                                     }
                                                                 ]
                                                             }
@@ -458,7 +458,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'link',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 's' },
+                                                                        mods: { theme: 'alfa-on-color', size: 's' },
                                                                         url: '#',
                                                                         content: 'Ссылка'
                                                                     }
@@ -469,7 +469,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'link',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 's', pseudo: true },
+                                                                        mods: { theme: 'alfa-on-color', size: 's', pseudo: true },
                                                                         title: 'pseudo mod',
                                                                         content: 'link'
                                                                     }
@@ -505,7 +505,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'link',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm' },
+                                                                        mods: { theme: 'alfa-on-color', size: 'm' },
                                                                         url: '#',
                                                                         content: 'Ссылка'
                                                                     }
@@ -516,7 +516,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'link',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm', pseudo: true },
+                                                                        mods: { theme: 'alfa-on-color', size: 'm', pseudo: true },
                                                                         title: 'pseudo mod',
                                                                         content: 'link'
                                                                     }
@@ -552,7 +552,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'link',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'l' },
+                                                                        mods: { theme: 'alfa-on-color', size: 'l' },
                                                                         url: '#',
                                                                         content: 'Ссылка'
                                                                     }
@@ -563,7 +563,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'link',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'l', pseudo: true },
+                                                                        mods: { theme: 'alfa-on-color', size: 'l', pseudo: true },
                                                                         title: 'pseudo mod',
                                                                         content: 'link'
                                                                     }
@@ -599,7 +599,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'link',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'xl' },
+                                                                        mods: { theme: 'alfa-on-color', size: 'xl' },
                                                                         url: '#',
                                                                         content: 'Ссылка'
                                                                     }
@@ -610,7 +610,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'link',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'xl', pseudo: true },
+                                                                        mods: { theme: 'alfa-on-color', size: 'xl', pseudo: true },
                                                                         title: 'pseudo mod',
                                                                         content: 'link'
                                                                     }
@@ -738,7 +738,7 @@ block('typography')(
                                         content: [
                                             {
                                                 block: 'list',
-                                                mods: { theme: 'alfa', bkg: 'white' },
+                                                mods: { theme: 'alfa-on-white' },
                                                 items: [
                                                     'Пункт списка',
                                                     'Пункт списка',
@@ -797,7 +797,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'spin',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 's', visible: true }
+                                                                        mods: { theme: 'alfa-on-white', size: 's', visible: true }
                                                                     }
                                                                 ]
                                                             }
@@ -831,7 +831,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'spin',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm', visible: true }
+                                                                        mods: { theme: 'alfa-on-white', size: 'm', visible: true }
                                                                     }
                                                                 ]
                                                             }
@@ -865,7 +865,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'spin',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'l', visible: true }
+                                                                        mods: { theme: 'alfa-on-white', size: 'l', visible: true }
                                                                     }
                                                                 ]
                                                             }
@@ -899,7 +899,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'spin',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'xl', visible: true }
+                                                                        mods: { theme: 'alfa-on-white', size: 'xl', visible: true }
                                                                     }
                                                                 ]
                                                             }
@@ -939,7 +939,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'icon',
-                                                                        mods: { bkg: 'white', theme: 'alfa', size: 's', network: 'facebook' }
+                                                                        mods: { theme: 'alfa-on-white', size: 's', network: 'facebook' }
                                                                     }
                                                                 ]
                                                             }
@@ -973,7 +973,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'icon',
-                                                                        mods: { bkg: 'white', theme: 'alfa', size: 'm', network: 'facebook' }
+                                                                        mods: { theme: 'alfa-on-white', size: 'm', network: 'facebook' }
                                                                     }
                                                                 ]
                                                             }
@@ -1007,7 +1007,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'icon',
-                                                                        mods: { bkg: 'white', theme: 'alfa', size: 'l', network: 'facebook' }
+                                                                        mods: { theme: 'alfa-on-white', size: 'l', network: 'facebook' }
                                                                     }
                                                                 ]
                                                             }
@@ -1041,7 +1041,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'icon',
-                                                                        mods: { bkg: 'white', theme: 'alfa', size: 'xl', network: 'facebook' }
+                                                                        mods: { theme: 'alfa-on-white', size: 'xl', network: 'facebook' }
                                                                     }
                                                                 ]
                                                             }
@@ -1081,7 +1081,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'link',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 's' },
+                                                                        mods: { theme: 'alfa-on-white', size: 's' },
                                                                         url: '#',
                                                                         content: 'Ссылка'
                                                                     }
@@ -1092,7 +1092,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'link',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 's', pseudo: true },
+                                                                        mods: { theme: 'alfa-on-white', size: 's', pseudo: true },
                                                                         title: 'pseudo mod',
                                                                         content: 'link'
                                                                     }
@@ -1128,7 +1128,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'link',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm' },
+                                                                        mods: { theme: 'alfa-on-white', size: 'm' },
                                                                         url: '#',
                                                                         content: 'Ссылка'
                                                                     }
@@ -1139,7 +1139,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'link',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm', pseudo: true },
+                                                                        mods: { theme: 'alfa-on-white', size: 'm', pseudo: true },
                                                                         title: 'pseudo mod',
                                                                         content: 'link'
                                                                     }
@@ -1175,7 +1175,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'link',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'l' },
+                                                                        mods: { theme: 'alfa-on-white', size: 'l' },
                                                                         url: '#',
                                                                         content: 'Ссылка'
                                                                     }
@@ -1186,7 +1186,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'link',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'l', pseudo: true },
+                                                                        mods: { theme: 'alfa-on-white', size: 'l', pseudo: true },
                                                                         title: 'pseudo mod',
                                                                         content: 'link'
                                                                     }
@@ -1222,7 +1222,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'link',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'xl' },
+                                                                        mods: { theme: 'alfa-on-white', size: 'xl' },
                                                                         url: '#',
                                                                         content: 'Ссылка'
                                                                     }
@@ -1233,7 +1233,7 @@ block('typography')(
                                                                 content: [
                                                                     {
                                                                         block: 'link',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'xl', pseudo: true },
+                                                                        mods: { theme: 'alfa-on-white', size: 'xl', pseudo: true },
                                                                         title: 'pseudo mod',
                                                                         content: 'link'
                                                                     }

@@ -3,8 +3,7 @@
         {
             block: 'input',
             mods: {
-                theme: 'alfa',
-                bkg: ['white', 'color'],
+                theme: ['alfa-on-color', 'alfa-on-white'],
                 mode: 'link',
                 width: 'available',
                 'has-clear': true,
@@ -14,31 +13,30 @@
         {
             block: 'select',
             mods: {
-                theme: 'alfa',
-                bkg: ['white', 'color'],
+                theme: ['alfa-on-color', 'alfa-on-white'],
                 mode: 'radio-check',
                 width: 'available'
             }
         },
         {
             block: 'textarea',
-            mods: { theme: 'alfa', bkg: ['white', 'color'], width: 'available' }
+            mods: { theme: ['alfa-on-color', 'alfa-on-white'], width: 'available' }
         },
         {
             block: 'checkbox-group',
-            mods: { theme: 'alfa', bkg: ['white', 'color'], type: 'button' }
+            mods: { theme: ['alfa-on-color', 'alfa-on-white'], type: 'button' }
         },
         {
             block: 'checkbox',
-            mods: { theme: 'alfa', bkg: ['white', 'color'] }
+            mods: { theme: ['alfa-on-color', 'alfa-on-white'], }
         },
         {
             block: 'radio-group',
-            mods: { theme: 'alfa', bkg: ['white', 'color'], type: 'button' }
+            mods: { theme: ['alfa-on-color', 'alfa-on-white'], type: 'button' }
         },
         {
             block : 'radio',
-            mods : { theme : 'alfa', bkg : ['white', 'color'] }
+            mods : { theme: ['alfa-on-color', 'alfa-on-white'], }
         },
         {
             block: 'row'

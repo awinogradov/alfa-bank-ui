@@ -30,7 +30,7 @@ block('logos')(
                                                                 content: [
                                                                     {
                                                                         block: 'logo',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 's', view: 'icon' }
+                                                                        mods: { theme: 'alfa-on-color', size: 's', view: 'icon' }
                                                                     }
                                                                 ]
                                                             },
@@ -39,7 +39,7 @@ block('logos')(
                                                                 content: [
                                                                     {
                                                                         block: 'logo',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 's', view: 'full' }
+                                                                        mods: { theme: 'alfa-on-color', size: 's', view: 'full' }
                                                                     }
                                                                 ]
                                                             }
@@ -73,7 +73,7 @@ block('logos')(
                                                                 content: [
                                                                     {
                                                                         block: 'logo',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm', view: 'icon' }
+                                                                        mods: { theme: 'alfa-on-color', size: 'm', view: 'icon' }
                                                                     }
                                                                 ]
                                                             },
@@ -82,7 +82,7 @@ block('logos')(
                                                                 content: [
                                                                     {
                                                                         block: 'logo',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm', view: 'full' }
+                                                                        mods: { theme: 'alfa-on-color', size: 'm', view: 'full' }
                                                                     }
                                                                 ]
                                                             }
@@ -116,7 +116,7 @@ block('logos')(
                                                                 content: [
                                                                     {
                                                                         block: 'logo',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'l', view: 'icon' }
+                                                                        mods: { theme: 'alfa-on-color', size: 'l', view: 'icon' }
                                                                     }
                                                                 ]
                                                             },
@@ -125,7 +125,7 @@ block('logos')(
                                                                 content: [
                                                                     {
                                                                         block: 'logo',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'l', view: 'full' }
+                                                                        mods: { theme: 'alfa-on-color', size: 'l', view: 'full' }
                                                                     }
                                                                 ]
                                                             }
@@ -159,7 +159,7 @@ block('logos')(
                                                                 content: [
                                                                     {
                                                                         block: 'logo',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'xl', view: 'icon' }
+                                                                        mods: { theme: 'alfa-on-color', size: 'xl', view: 'icon' }
                                                                     }
                                                                 ]
                                                             },
@@ -168,7 +168,7 @@ block('logos')(
                                                                 content: [
                                                                     {
                                                                         block: 'logo',
-                                                                        mods: { theme: 'alfa', bkg: 'color', size: 'xl', view: 'full' }
+                                                                        mods: { theme: 'alfa-on-color', size: 'xl', view: 'full' }
                                                                     }
                                                                 ]
                                                             }
@@ -209,7 +209,7 @@ block('logos')(
                                                                 content: [
                                                                     {
                                                                         block: 'logo',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 's', view: 'icon' }
+                                                                        mods: { theme: 'alfa-on-white', size: 's', view: 'icon' }
                                                                     }
                                                                 ]
                                                             },
@@ -218,7 +218,7 @@ block('logos')(
                                                                 content: [
                                                                     {
                                                                         block: 'logo',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 's', view: 'full' }
+                                                                        mods: { theme: 'alfa-on-white', size: 's', view: 'full' }
                                                                     }
                                                                 ]
                                                             }
@@ -252,7 +252,7 @@ block('logos')(
                                                                 content: [
                                                                     {
                                                                         block: 'logo',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm', view: 'icon' }
+                                                                        mods: { theme: 'alfa-on-white', size: 'm', view: 'icon' }
                                                                     }
                                                                 ]
                                                             },
@@ -261,7 +261,7 @@ block('logos')(
                                                                 content: [
                                                                     {
                                                                         block: 'logo',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm', view: 'full' }
+                                                                        mods: { theme: 'alfa-on-white', size: 'm', view: 'full' }
                                                                     }
                                                                 ]
                                                             }
@@ -295,7 +295,7 @@ block('logos')(
                                                                 content: [
                                                                     {
                                                                         block: 'logo',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'l', view: 'icon' }
+                                                                        mods: { theme: 'alfa-on-white', size: 'l', view: 'icon' }
                                                                     }
                                                                 ]
                                                             },
@@ -304,7 +304,7 @@ block('logos')(
                                                                 content: [
                                                                     {
                                                                         block: 'logo',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'l', view: 'full' }
+                                                                        mods: { theme: 'alfa-on-white', size: 'l', view: 'full' }
                                                                     }
                                                                 ]
                                                             }
@@ -338,7 +338,7 @@ block('logos')(
                                                                 content: [
                                                                     {
                                                                         block: 'logo',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'xl', view: 'icon' }
+                                                                        mods: { theme: 'alfa-on-white', size: 'xl', view: 'icon' }
                                                                     }
                                                                 ]
                                                             },
@@ -347,7 +347,7 @@ block('logos')(
                                                                 content: [
                                                                     {
                                                                         block: 'logo',
-                                                                        mods: { theme: 'alfa', bkg: 'white', size: 'xl', view: 'full' }
+                                                                        mods: { theme: 'alfa-on-white', size: 'xl', view: 'full' }
                                                                     }
                                                                 ]
                                                             }

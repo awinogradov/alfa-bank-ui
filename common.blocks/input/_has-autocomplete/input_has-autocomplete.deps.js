@@ -4,14 +4,7 @@
         { block: 'menu', mods: { view: 'dropdown' } },
         { block: 'menu-item' },
         { block: 'keyboard', elem: 'codes' }
-    ].concat([
-        { block: 'popup' },
-        { block: 'menu' },
-        { block: 'menu-item' }
-    ].map(function(block) {
-        block.mods =  { theme: 'alfa', bkg: ['color', 'white'] };
-        return block;
-    }))
+    ]
 },
 {
     tech: 'spec.js',

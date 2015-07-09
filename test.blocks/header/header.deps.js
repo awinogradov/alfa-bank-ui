@@ -10,7 +10,7 @@
         { block: 'menu-item' },
         { block: 'link' },
     ].map(function(block) {
-        block.mods = { theme: 'alfa', bkg: 'color' };
+        block.mods = { theme: 'alfa-on-color' };
         return block;
     }))
 }];

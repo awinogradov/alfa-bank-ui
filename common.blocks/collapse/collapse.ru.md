@@ -6,7 +6,7 @@ Collapse
 ```js
     {
         block : 'collapse',
-        mods : { theme : 'alfa', bkg : 'color' },
+        mods : { theme : 'alfa-on-color' },
         expandedLabel : 'Скрыть подробности',
         collapsedLabel : 'Подробнее',
         content : [ 'Подробности...' ]

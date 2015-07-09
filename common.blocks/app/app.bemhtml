@@ -7,9 +7,10 @@ block('app')(
     elem('title')(content()(function() {
         var appMods = this._appMods;
 
+        // TODO: issue NYCP-69
         return {
             block: 'heading',
-            mods: { theme: appMods.theme, bkg: appMods.bkg },
+            mods: { theme: appMods.theme },
             content: applyNext()
         };
     })),
@@ -17,10 +18,10 @@ block('app')(
     elem('menu')(content()(function() {
         var appMods = this._appMods;
 
+        // TODO: issue NYCP-69
         return {
             block: 'menu',
             mods: {
-                bkg: appMods.bkg,
                 theme: appMods.theme,
                 size: 'l',
                 horizontal: true

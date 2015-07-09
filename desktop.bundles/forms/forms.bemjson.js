@@ -1,6 +1,6 @@
 ({
     block : 'page',
-    mods : { theme : 'alfa', bkg : 'color'},
+    mods : { theme : 'alfa-on-color'},
     title : 'Demo Alfa-Bank UI',
     favicon : '/favicon.ico',
     head : [
@@ -28,7 +28,7 @@
                     content : [
                         {
                             block : 'app',
-                            mods : { theme : 'alfa', bkg : 'color' },
+                            mods : { theme : 'alfa-on-color' },
                             content : [
                                 {
                                     elem : 'title',
@@ -39,17 +39,17 @@
                                     content : [
                                         {
                                             block : 'menu-item',
-                                            mods : { theme : 'alfa', bkg : 'color', size : 'l' },
+                                            mods : { theme : 'alfa-on-color', size : 'l' },
                                             content : 'Menu 1'
                                         },
                                         {
                                             block : 'menu-item',
-                                            mods : { theme : 'alfa', bkg : 'color', size : 'l' },
+                                            mods : { theme : 'alfa-on-color', size : 'l' },
                                             content : 'Menu 2'
                                         },
                                         {
                                             block : 'menu-item',
-                                            mods : { theme : 'alfa', bkg : 'color', size : 'l' },
+                                            mods : { theme : 'alfa-on-color', size : 'l' },
                                             content : 'Menu 3'
                                         }
                                     ]
@@ -59,7 +59,7 @@
                                     content : [
                                         {
                                             block : 'form',
-                                            mods : { theme : 'alfa', bkg : 'color' },
+                                            mods : { theme : 'alfa-on-color' },
                                             content : [
                                                 {
                                                     block : 'form-field',
@@ -69,8 +69,7 @@
                                                         'has-validate' : true,
                                                         message : 'popup',
                                                         required : true,
-                                                        theme : 'alfa',
-                                                        bkg : 'color',
+                                                        theme : 'alfa-on-color',
                                                         size : 'm',
                                                         view : 'compact'
                                                     },
@@ -84,7 +83,7 @@
                                                             elem : 'label',
                                                             content : {
                                                                 block : 'label',
-                                                                mods : { theme : 'alfa', bkg : 'color', size : 'm' },
+                                                                mods : { theme : 'alfa-on-color', size : 'm' },
                                                                 content : 'Label'
                                                             }
                                                         },
@@ -94,7 +93,7 @@
                                                                 block : 'input',
                                                                 mods : {
                                                                     'has-mask' : true,
-                                                                    theme : 'alfa', bkg : 'color', size : 'm' },
+                                                                    theme : 'alfa-on-color', size : 'm' },
                                                                 js : {
                                                                     mask : '{{99}}-{{99}}-{{99}}'
                                                                 },
@@ -111,8 +110,7 @@
                                                         message : 'popup',
                                                         'has-validate' : true,
                                                         required : true,
-                                                        theme : 'alfa',
-                                                        bkg : 'color',
+                                                        theme : 'alfa-on-color',
                                                         size : 'm',
                                                         view : 'compact'
                                                     },
@@ -126,7 +124,7 @@
                                                             elem : 'label',
                                                             content : {
                                                                 block : 'label',
-                                                                mods : { theme : 'alfa', bkg : 'color', size : 'm' },
+                                                                mods : { theme : 'alfa-on-color', size : 'm' },
                                                                 content : 'Loooooong looooong looong looooong Label'
                                                             }
                                                         },
@@ -135,8 +133,7 @@
                                                             content : {
                                                                 block : 'input',
                                                                 mods : {
-                                                                    theme : 'alfa',
-                                                                    bkg : 'color',
+                                                                    theme : 'alfa-on-color',
                                                                     size : 'm',
                                                                     'has-autocomplete' : true
                                                                 },
@@ -157,8 +154,7 @@
                                                         validate : 'date',
                                                         message : 'popup',
                                                         required : true,
-                                                        theme : 'alfa',
-                                                        bkg : 'color',
+                                                        theme : 'alfa-on-color',
                                                         size : 'm',
                                                         view : 'compact'
                                                     },
@@ -172,7 +168,7 @@
                                                             elem : 'label',
                                                             content : {
                                                                 block : 'label',
-                                                                mods : { theme : 'alfa', bkg : 'color', size : 'm' },
+                                                                mods : { theme : 'alfa-on-color', size : 'm' },
                                                                 content : 'Date'
                                                             }
                                                         },
@@ -180,7 +176,7 @@
                                                             elem : 'control',
                                                             content : {
                                                                 block : 'input',
-                                                                mods : { theme : 'alfa', bkg : 'color', size : 'm', 'has-addon' : true, 'has-calendar' : true },
+                                                                mods : { theme : 'alfa-on-color', size : 'm', 'has-addon' : true, 'has-calendar' : true },
                                                                 js : {
                                                                     date : {
                                                                         message : 'Укажите дату в правильном формате ДД.ММ.ГГГГ'
@@ -200,13 +196,13 @@
                                                 // INPUTS
                                                 {
                                                     block : 'heading',
-                                                    mods : { theme : 'alfa', bkg : 'color' },
+                                                    mods : { theme : 'alfa-on-color' },
                                                     lvl : 2,
                                                     content : 'Sizes'
                                                 },
                                                 {
                                                     block : 'heading',
-                                                    mods : { theme : 'alfa', bkg : 'color' },
+                                                    mods : { theme : 'alfa-on-color' },
                                                     lvl : 3,
                                                     content : 'Inputs'
                                                 },
@@ -228,8 +224,7 @@
                                                                                     id : 'input',
                                                                                     mods : {
                                                                                         type : 'input',
-                                                                                        theme : 'alfa',
-                                                                                        bkg : color,
+                                                                                        theme : 'alfa-on-' + color,
                                                                                         size : size,
                                                                                         view : 'compact'
                                                                                     },
@@ -243,7 +238,7 @@
                                                                                             elem : 'label',
                                                                                             content : {
                                                                                                 block : 'label',
-                                                                                                mods : { theme : 'alfa', bkg : color, size : size },
+                                                                                                mods : { theme : 'alfa-on-' + color, size : size },
                                                                                                 content : 'Label ' + size
                                                                                             }
                                                                                         },
@@ -251,7 +246,7 @@
                                                                                             elem : 'control',
                                                                                             content : {
                                                                                                 block : 'input',
-                                                                                                mods : { theme : 'alfa', bkg : color, size : size },
+                                                                                                mods : { theme : 'alfa-on-' + color, size : size },
                                                                                                 val : 'Super required field 1'
                                                                                             }
                                                                                         }
@@ -270,8 +265,7 @@
                                                                                     id : 'input',
                                                                                     mods : {
                                                                                         type : 'input',
-                                                                                        theme : 'alfa',
-                                                                                        bkg : color,
+                                                                                        theme : 'alfa-on-' + color,
                                                                                         size : size,
                                                                                         view : 'line'
                                                                                     },
@@ -285,7 +279,7 @@
                                                                                             elem : 'label',
                                                                                             content : {
                                                                                                 block : 'label',
-                                                                                                mods : { theme : 'alfa', bkg : color, size : size },
+                                                                                                mods : { theme : 'alfa-on-' + color, size : size },
                                                                                                 content : 'Label ' + size
                                                                                             }
                                                                                         },
@@ -293,7 +287,7 @@
                                                                                             elem : 'control',
                                                                                             content : {
                                                                                                 block : 'input',
-                                                                                                mods : { theme : 'alfa', bkg : color, size : size },
+                                                                                                mods : { theme : 'alfa-on-' + color, size : size },
                                                                                                 val : 'Super required field 1'
                                                                                             }
                                                                                         }
@@ -317,8 +311,7 @@
                                                                                     id : 'input',
                                                                                     mods : {
                                                                                         type : 'input',
-                                                                                        theme : 'alfa',
-                                                                                        bkg : color,
+                                                                                        theme : 'alfa-on-' + color,
                                                                                         size : size,
                                                                                         view : 'compact'
                                                                                     },
@@ -332,7 +325,7 @@
                                                                                             elem : 'label',
                                                                                             content : {
                                                                                                 block : 'label',
-                                                                                                mods : { theme : 'alfa', bkg : color, size : size },
+                                                                                                mods : { theme : 'alfa-on-' + color, size : size },
                                                                                                 content : 'Loooooong looooong looong looooong looong looooong Label ' + size
                                                                                             }
                                                                                         },
@@ -340,7 +333,7 @@
                                                                                             elem : 'control',
                                                                                             content : {
                                                                                                 block : 'input',
-                                                                                                mods : { theme : 'alfa', bkg : color, size : size },
+                                                                                                mods : { theme : 'alfa-on-' + color, size : size },
                                                                                                 val : 'Super required field 1'
                                                                                             }
                                                                                         }
@@ -359,8 +352,7 @@
                                                                                     id : 'input',
                                                                                     mods : {
                                                                                         type : 'input',
-                                                                                        theme : 'alfa',
-                                                                                        bkg : color,
+                                                                                        theme : 'alfa-on-' + color,
                                                                                         size : size,
                                                                                         view : 'line'
                                                                                     },
@@ -374,7 +366,7 @@
                                                                                             elem : 'label',
                                                                                             content : {
                                                                                                 block : 'label',
-                                                                                                mods : { theme : 'alfa', bkg : color, size : size },
+                                                                                                mods : { theme : 'alfa-on-' + color, size : size },
                                                                                                 content : 'Loooooong Label ' + size
                                                                                             }
                                                                                         },
@@ -382,7 +374,7 @@
                                                                                             elem : 'control',
                                                                                             content : {
                                                                                                 block : 'input',
-                                                                                                mods : { theme : 'alfa', bkg : color, size : size },
+                                                                                                mods : { theme : 'alfa-on-' + color, size : size },
                                                                                                 val : 'Super required field 1'
                                                                                             }
                                                                                         }
@@ -401,13 +393,13 @@
                                                 // SELECT
                                                 {
                                                     block : 'heading',
-                                                    mods : { theme : 'alfa', bkg : 'color' },
+                                                    mods : { theme : 'alfa-on-color' },
                                                     lvl : 2,
                                                     content : 'Sizes'
                                                 },
                                                 {
                                                     block : 'heading',
-                                                    mods : { theme : 'alfa', bkg : 'color' },
+                                                    mods : { theme : 'alfa-on-color' },
                                                     lvl : 3,
                                                     content : 'Select'
                                                 },
@@ -429,8 +421,7 @@
                                                                                     id : 'input',
                                                                                     mods : {
                                                                                         type : 'select',
-                                                                                        theme : 'alfa',
-                                                                                        bkg : color,
+                                                                                        theme : 'alfa-on-' + color,
                                                                                         size : size,
                                                                                         view : 'compact'
                                                                                     },
@@ -444,7 +435,7 @@
                                                                                             elem : 'label',
                                                                                             content : {
                                                                                                 block : 'label',
-                                                                                                mods : { theme : 'alfa', bkg : color, size : size },
+                                                                                                mods : { theme : 'alfa-on-' + color, size : size },
                                                                                                 content : 'Label ' + size
                                                                                             }
                                                                                         },
@@ -452,7 +443,7 @@
                                                                                             elem : 'control',
                                                                                             content : {
                                                                                                 block : 'select',
-                                                                                                mods : { mode : 'radio', theme : 'alfa', bkg : color, size : size },
+                                                                                                mods : { mode : 'radio', theme : 'alfa-on-' + color, size : size },
                                                                                                 optionsMaxHeight : 200,
                                                                                                 name : 'select1',
                                                                                                 val : 2,
@@ -489,8 +480,7 @@
                                                                                     id : 'input',
                                                                                     mods : {
                                                                                         type : 'select',
-                                                                                        theme : 'alfa',
-                                                                                        bkg : color,
+                                                                                        theme : 'alfa-on-' + color,
                                                                                         size : size,
                                                                                         view : 'line'
                                                                                     },
@@ -504,7 +494,7 @@
                                                                                             elem : 'label',
                                                                                             content : {
                                                                                                 block : 'label',
-                                                                                                mods : { theme : 'alfa', bkg : color, size : size },
+                                                                                                mods : { theme : 'alfa-on-' + color, size : size },
                                                                                                 content : 'Label ' + size
                                                                                             }
                                                                                         },
@@ -512,7 +502,7 @@
                                                                                             elem : 'control',
                                                                                             content : {
                                                                                                 block : 'select',
-                                                                                                mods : { mode : 'radio', theme : 'alfa', bkg : color, size : size },
+                                                                                                mods : { mode : 'radio', theme : 'alfa-on-' + color, size : size },
                                                                                                 optionsMaxHeight : 200,
                                                                                                 name : 'select2',
                                                                                                 val : 2,
@@ -554,8 +544,7 @@
                                                                                     id : 'input',
                                                                                     mods : {
                                                                                         type : 'select',
-                                                                                        theme : 'alfa',
-                                                                                        bkg : color,
+                                                                                        theme : 'alfa-on-' + color,
                                                                                         size : size,
                                                                                         view : 'compact'
                                                                                     },
@@ -569,7 +558,7 @@
                                                                                             elem : 'label',
                                                                                             content : {
                                                                                                 block : 'label',
-                                                                                                mods : { theme : 'alfa', bkg : color, size : size },
+                                                                                                mods : { theme : 'alfa-on-' + color, size : size },
                                                                                                 content : 'Loooooong looooong looong looooong looong looooong Label ' + size
                                                                                             }
                                                                                         },
@@ -577,7 +566,7 @@
                                                                                             elem : 'control',
                                                                                             content : {
                                                                                                 block : 'select',
-                                                                                                mods : { mode : 'radio', theme : 'alfa', bkg : color, size : size },
+                                                                                                mods : { mode : 'radio', theme : 'alfa-on-' + color, size : size },
                                                                                                 optionsMaxHeight : 200,
                                                                                                 name : 'select3',
                                                                                                 val : 2,
@@ -614,8 +603,7 @@
                                                                                     id : 'input',
                                                                                     mods : {
                                                                                         type : 'select',
-                                                                                        theme : 'alfa',
-                                                                                        bkg : color,
+                                                                                        theme : 'alfa-on-' + color,
                                                                                         size : size,
                                                                                         view : 'line'
                                                                                     },
@@ -629,7 +617,7 @@
                                                                                             elem : 'label',
                                                                                             content : {
                                                                                                 block : 'label',
-                                                                                                mods : { theme : 'alfa', bkg : color, size : size },
+                                                                                                mods : { theme : 'alfa-on-' + color, size : size },
                                                                                                 content : 'Loooooong Label ' + size
                                                                                             }
                                                                                         },
@@ -637,7 +625,7 @@
                                                                                             elem : 'control',
                                                                                             content : {
                                                                                                 block : 'select',
-                                                                                                mods : { mode : 'radio', theme : 'alfa', bkg : color, size : size },
+                                                                                                mods : { mode : 'radio', theme : 'alfa-on-' + color, size : size },
                                                                                                 optionsMaxHeight : 200,
                                                                                                 name : 'select4',
                                                                                                 val : 2,

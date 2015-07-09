@@ -2,34 +2,22 @@
     shouldDeps: [
         {
             block: 'paragraph',
-            mods: { type: 'lead', theme: 'alfa' }
+            mods: { type: 'lead' }
         },
         {
             block: 'list',
-            mods: { theme: 'alfa', bkg: 'color', type: 'ordered' }
+            mods: { theme: ['alfa-on-color', 'alfa-on-whtie'], type: 'ordered' }
         },
         {
             block: 'link',
-            mods: { theme: 'alfa', bkg: 'color', pseudo: true }
+            mods: { theme: ['alfa-on-color', 'alfa-on-whtie'], pseudo: true }
         },
         {
             block: 'icon',
-            mods: { theme: 'alfa', bkg: 'color', network: 'facebook' }
+            mods: { theme: ['alfa-on-color', 'alfa-on-whtie'], network: 'facebook' }
         },
         {
             block: 'row'
-        },
-        {
-            block: 'list',
-            mods: { theme: 'alfa', bkg: 'white', type: 'ordered' }
-        },
-        {
-            block: 'link',
-            mods: { theme: 'alfa', bkg: 'white', pseudo: true }
-        },
-        {
-            block: 'icon',
-            mods: { theme: 'alfa', bkg: 'white', network: 'facebook' }
-        },
+        }
     ]
 }];

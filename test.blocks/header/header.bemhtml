@@ -8,7 +8,7 @@ block('header')(
                 content: [
                     {
                         block: 'logo',
-                        mods: { theme: 'alfa', bkg: 'color', size: 's', view: 'full' }
+                        mods: { theme: 'alfa-on-color', size: 's', view: 'full' }
                     }
                 ]
             },
@@ -20,7 +20,7 @@ block('header')(
                         content: [
                             {
                                 block: 'menu',
-                                mods: { bkg: 'color', theme: 'alfa', size: 'm', horizontal: true },
+                                mods: { theme: 'alfa-on-color', size: 'm', horizontal: true },
                                 content: [
                                     {
                                         block: 'menu-item',
@@ -28,7 +28,7 @@ block('header')(
                                         content: [
                                             {
                                                 block: 'link',
-                                                mods: { bkg: 'color', theme: 'alfa' },
+                                                mods: { theme: 'alfa-on-color' },
                                                 url: '../logo/logo.html',
                                                 content: 'Логотипы'
                                             }
@@ -40,7 +40,7 @@ block('header')(
                                         content: [
                                             {
                                                 block: 'link',
-                                                mods: { bkg: 'color', theme: 'alfa' },
+                                                mods: { theme: 'alfa-on-color' },
                                                 url: '../input/input.html',
                                                 content: 'Инпуты'
                                             }
@@ -52,7 +52,7 @@ block('header')(
                                         content: [
                                             {
                                                 block: 'link',
-                                                mods: { bkg: 'color', theme: 'alfa' },
+                                                mods: { theme: 'alfa-on-color' },
                                                 url: '../button/button.html',
                                                 content: 'Кнопки'
                                             }
@@ -64,7 +64,7 @@ block('header')(
                                         content: [
                                             {
                                                 block: 'link',
-                                                mods: { bkg: 'color', theme: 'alfa' },
+                                                mods: { theme: 'alfa-on-color' },
                                                 url: '../forms/forms.html',
                                                 content: 'Формы'
                                             }
@@ -76,7 +76,7 @@ block('header')(
                                         content: [
                                             {
                                                 block: 'link',
-                                                mods: { bkg: 'color', theme: 'alfa' },
+                                                mods: { theme: 'alfa-on-color' },
                                                 url: '../typography/typography.html',
                                                 content: 'Типографика'
                                             }
@@ -88,7 +88,7 @@ block('header')(
                                         content: [
                                             {
                                                 block: 'link',
-                                                mods: { bkg: 'color', theme: 'alfa' },
+                                                mods: { theme: 'alfa-on-color' },
                                                 url: '../layouts/layouts.html',
                                                 content: 'Layouts'
                                             }
@@ -100,7 +100,7 @@ block('header')(
                                         content: [
                                             {
                                                 block: 'link',
-                                                mods: { bkg: 'color', theme: 'alfa' },
+                                                mods: { theme: 'alfa-on-color' },
                                                 url: '../menus/menus.html',
                                                 content: 'Меню'
                                             }

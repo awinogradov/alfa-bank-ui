@@ -21,7 +21,6 @@ block('input')(
                 block: 'icon',
                 mods: {
                     theme: mods.theme,
-                    bkg: mods.bkg,
                     size: mods.size,
                     tool: 'calendar'
                 }
@@ -48,8 +47,7 @@ block('input')(
                     block: 'calendar',
                     mods: {
                         theme: mods.theme,
-                        size: mods.size,
-                        bkg: mods.bkg
+                        size: mods.size
                     },
                     js: this._calendarParams,
                     directions: this._calendarDirections

@@ -10,7 +10,6 @@ module.exports = function(bh) {
                 checked: mods.checked,
                 disabled: mods.disabled,
                 theme: mods.theme,
-                bkg: mods.bkg,
                 size: mods.size
             },
             title: json.title,

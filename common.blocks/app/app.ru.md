@@ -5,7 +5,6 @@
 ``` js
 {
     block : 'app',
-    mods : { theme : 'alfa', bkg : 'color' },
     mix : { block : 'service-name' },
     content : [
         {
@@ -17,6 +16,7 @@
             content : [
                 {
                     block : 'menu-item',
+                    mods : { theme : 'alfa-on-color' },
                     mods : {
                         type : 'link'
                     },

@@ -264,11 +264,11 @@ block('inputs')(
 
         return {
             block: 'row',
-            content: ['color', 'white'].map(function(bkg) {
+            content: ['color', 'white'].map(function(color) {
                 return {
                     elem: 'col',
                     mods: { 's': true },
-                    mix: { elem: bkg },
+                    mix: { elem: color },
                     content: ['s', 'm', 'l', 'xl'].map(function(size) {
                         return {
                             elem: 'size-section',
@@ -289,8 +289,7 @@ block('inputs')(
                                                     content: blocks.map(function(block) {
                                                         if (!block.mods) block.mods = {};
 
-                                                        block.mods.theme = 'alfa';
-                                                        block.mods.bkg = bkg;
+                                                        block.mods.theme = 'alfa-on-' + color;
                                                         block.mods.size = size;
 
                                                         return {
