@@ -11,8 +11,7 @@ block('tooltip')(
             mix: { block: 'tooltip', elem: 'popup' },
             mods: {
                 target: 'anchor',
-                theme: mods.theme,
-                bkg: mods.bkg
+                theme: mods.theme
             },
             directions: this.ctx.directions,
             content: applyNext()

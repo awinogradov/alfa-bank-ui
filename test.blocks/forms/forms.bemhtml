@@ -26,7 +26,7 @@ block('forms')(
                                                 content: [
                                                     {
                                                         block: 'label',
-                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm' },
+                                                        mods: { theme: 'alfa-on-color', size: 'm' },
                                                         content: 'Тип карты'
                                                     }
                                                 ]
@@ -43,13 +43,12 @@ block('forms')(
                                                             'has-validate': true,
                                                             message: 'popup',
                                                             required: true,
-                                                            theme: 'alfa',
-                                                            bkg: 'color'
+                                                            theme: 'alfa-on-color'
                                                         },
                                                         content: [
                                                             {
                                                                 block: 'select',
-                                                                mods: { mode: 'radio-check', theme: 'alfa', bkg: 'color', size: 'm' },
+                                                                mods: { mode: 'radio-check', theme: 'alfa-on-color', size: 'm' },
                                                                 name: 'card-type',
                                                                 options: [
                                                                     { val: 1, text: 'Дебетовая', checked: true },
@@ -71,7 +70,7 @@ block('forms')(
                                                 content: [
                                                     {
                                                         block: 'label',
-                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm' },
+                                                        mods: { theme: 'alfa-on-color', size: 'm' },
                                                         content: 'Количество'
                                                     }
                                                 ]
@@ -88,13 +87,12 @@ block('forms')(
                                                             message: 'popup',
                                                             'has-validate': true,
                                                             required: true,
-                                                            theme: 'alfa',
-                                                            bkg: 'color'
+                                                            theme: 'alfa-on-color'
                                                         },
                                                         content: [
                                                             {
                                                                 block: 'select',
-                                                                mods: { mode: 'radio-check', theme: 'alfa', bkg: 'color', size: 'm' },
+                                                                mods: { mode: 'radio-check', theme: 'alfa-on-color', size: 'm' },
                                                                 name: 'card-count',
                                                                 options: [
                                                                     { val: 1, text: '1', checked: true },
@@ -118,7 +116,7 @@ block('forms')(
                                                 content: [
                                                     {
                                                         block: 'label',
-                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm' },
+                                                        mods: { theme: 'alfa-on-color', size: 'm' },
                                                         content: 'Валюта'
                                                     }
                                                 ]
@@ -135,13 +133,12 @@ block('forms')(
                                                             message: 'popup',
                                                             'has-validate': true,
                                                             required: true,
-                                                            theme: 'alfa',
-                                                            bkg: 'color'
+                                                            theme: 'alfa-on-color'
                                                         },
                                                         content: [
                                                             {
                                                                 block: 'radio-group',
-                                                                mods: { theme: 'alfa', bkg: 'color', size: 'm', type: 'button' },
+                                                                mods: { theme: 'alfa-on-color', size: 'm', type: 'button' },
                                                                 name: 'currency',
                                                                 options: [
                                                                     { val: 1, text: '₽', checked: true },
@@ -164,7 +161,7 @@ block('forms')(
                                                 content: [
                                                     {
                                                         block: 'label',
-                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm' },
+                                                        mods: { theme: 'alfa-on-color', size: 'm' },
                                                         content: 'Сумма'
                                                     }
                                                 ]
@@ -181,16 +178,14 @@ block('forms')(
                                                             message: 'popup',
                                                             'has-validate': true,
                                                             required: true,
-                                                            theme: 'alfa',
-                                                            bkg: 'color'
+                                                            theme: 'alfa-on-color'
                                                         },
                                                         content: [
                                                             {
                                                                 block: 'input',
                                                                 name: 'count',
                                                                 mods: {
-                                                                    theme: 'alfa',
-                                                                    bkg: 'color',
+                                                                    theme: 'alfa-on-color',
                                                                     size: 'm',
                                                                     type: 'symbol'
                                                                 },
@@ -211,7 +206,7 @@ block('forms')(
                                                 content: [
                                                     {
                                                         block: 'label',
-                                                        mods: { theme: 'alfa', bkg: 'color', size: 'm' },
+                                                        mods: { theme: 'alfa-on-color', size: 'm' },
                                                         content: 'Доп. услуги'
                                                     }
                                                 ]
@@ -228,13 +223,12 @@ block('forms')(
                                                             message: 'popup',
                                                             'has-validate': true,
                                                             required: true,
-                                                            theme: 'alfa',
-                                                            bkg: 'color'
+                                                            theme: 'alfa-on-color'
                                                         },
                                                         content: [
                                                             {
                                                                 block: 'checkbox-group',
-                                                                mods: { theme: 'alfa', bkg: 'color', size: 'm' },
+                                                                mods: { theme: 'alfa-on-color', size: 'm' },
                                                                 name: 'adv-service',
                                                                 options: [
                                                                     { val: 1, text: 'Индивидуальный дизайн' },
@@ -260,7 +254,7 @@ block('forms')(
                                                 content: [
                                                     {
                                                         block: 'button',
-                                                        mods: { theme: 'alfa', bkg: 'color', type: 'submit', size: 'm', view: 'action' },
+                                                        mods: { theme: 'alfa-on-color', type: 'submit', size: 'm', view: 'action' },
                                                         text: 'Отправить заявку'
                                                     }
                                                 ]
@@ -293,7 +287,7 @@ block('forms')(
                                                 content: [
                                                     {
                                                         block: 'label',
-                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm' },
+                                                        mods: { theme: 'alfa-on-white', size: 'm' },
                                                         content: 'Тип карты'
                                                     }
                                                 ]
@@ -310,13 +304,12 @@ block('forms')(
                                                             'has-validate': true,
                                                             message: 'popup',
                                                             required: true,
-                                                            theme: 'alfa',
-                                                            bkg: 'white'
+                                                            theme: 'alfa-on-white'
                                                         },
                                                         content: [
                                                             {
                                                                 block: 'select',
-                                                                mods: { mode: 'radio-check', theme: 'alfa', bkg: 'white', size: 'm' },
+                                                                mods: { mode: 'radio-check', theme: 'alfa-on-white', size: 'm' },
                                                                 name: 'card-type',
                                                                 options: [
                                                                     { val: 1, text: 'Дебетовая', checked: true },
@@ -338,7 +331,7 @@ block('forms')(
                                                 content: [
                                                     {
                                                         block: 'label',
-                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm' },
+                                                        mods: { theme: 'alfa-on-white', size: 'm' },
                                                         content: 'Количество'
                                                     }
                                                 ]
@@ -355,13 +348,12 @@ block('forms')(
                                                             message: 'popup',
                                                             'has-validate': true,
                                                             required: true,
-                                                            theme: 'alfa',
-                                                            bkg: 'white'
+                                                            theme: 'alfa-on-white'
                                                         },
                                                         content: [
                                                             {
                                                                 block: 'select',
-                                                                mods: { mode: 'radio-check', theme: 'alfa', bkg: 'white', size: 'm' },
+                                                                mods: { mode: 'radio-check', theme: 'alfa-on-white', size: 'm' },
                                                                 name: 'card-count',
                                                                 options: [
                                                                     { val: 1, text: '1', checked: true },
@@ -385,7 +377,7 @@ block('forms')(
                                                 content: [
                                                     {
                                                         block: 'label',
-                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm' },
+                                                        mods: { theme: 'alfa-on-white', size: 'm' },
                                                         content: 'Валюта'
                                                     }
                                                 ]
@@ -402,13 +394,12 @@ block('forms')(
                                                             message: 'popup',
                                                             'has-validate': true,
                                                             required: true,
-                                                            theme: 'alfa',
-                                                            bkg: 'white'
+                                                            theme: 'alfa-on-white'
                                                         },
                                                         content: [
                                                             {
                                                                 block: 'radio-group',
-                                                                mods: { theme: 'alfa', bkg: 'white', size: 'm', type: 'button' },
+                                                                mods: { theme: 'alfa-on-white', size: 'm', type: 'button' },
                                                                 name: 'currency',
                                                                 options: [
                                                                     { val: 1, text: '₽', checked: true },
@@ -431,7 +422,7 @@ block('forms')(
                                                 content: [
                                                     {
                                                         block: 'label',
-                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm' },
+                                                        mods: { theme: 'alfa-on-white', size: 'm' },
                                                         content: 'Сумма'
                                                     }
                                                 ]
@@ -448,16 +439,14 @@ block('forms')(
                                                             message: 'popup',
                                                             'has-validate': true,
                                                             required: true,
-                                                            theme: 'alfa',
-                                                            bkg: 'white'
+                                                            theme: 'alfa-on-white'
                                                         },
                                                         content: [
                                                             {
                                                                 block: 'input',
                                                                 name: 'count',
                                                                 mods: {
-                                                                    theme: 'alfa',
-                                                                    bkg: 'white',
+                                                                    theme: 'alfa-on-white',
                                                                     size: 'm',
                                                                     type: 'symbol'
                                                                 },
@@ -478,7 +467,7 @@ block('forms')(
                                                 content: [
                                                     {
                                                         block: 'label',
-                                                        mods: { theme: 'alfa', bkg: 'white', size: 'm' },
+                                                        mods: { theme: 'alfa-on-white', size: 'm' },
                                                         content: 'Доп. услуги'
                                                     }
                                                 ]
@@ -495,13 +484,12 @@ block('forms')(
                                                             message: 'popup',
                                                             'has-validate': true,
                                                             required: true,
-                                                            theme: 'alfa',
-                                                            bkg: 'white'
+                                                            theme: 'alfa-on-white'
                                                         },
                                                         content: [
                                                             {
                                                                 block: 'checkbox-group',
-                                                                mods: { theme: 'alfa', bkg: 'white', size: 'm' },
+                                                                mods: { theme: 'alfa-on-white', size: 'm' },
                                                                 name: 'adv-service',
                                                                 options: [
                                                                     { val: 1, text: 'Индивидуальный дизайн' },
@@ -527,7 +515,7 @@ block('forms')(
                                                 content: [
                                                     {
                                                         block: 'button',
-                                                        mods: { theme: 'alfa', bkg: 'white', type: 'submit', size: 'm', view: 'action' },
+                                                        mods: { theme: 'alfa-on-white', type: 'submit', size: 'm', view: 'action' },
                                                         text: 'Отправить заявку'
                                                     }
                                                 ]

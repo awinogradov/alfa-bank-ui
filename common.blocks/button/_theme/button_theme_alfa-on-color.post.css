@@ -1,0 +1,106 @@
+.button_theme_alfa-on-color {
+    color: rgba(255, 255, 255, .8);
+
+    background: transparent;
+
+    border: 1px solid rgba(255, 255, 255, .5);
+
+    &.button_hovered {
+        color: #fff;
+
+        border-color: #fff;
+    }
+
+    &.button_checked,
+    &.button_hovered.button_checked {
+        background: #fff;
+
+        color: #000;
+    }
+
+    &.button_disabled {
+        border-color: transparent;
+
+        background: rgba(255, 255, 255, .1);
+
+        .button__text {
+            color: rgba(255, 255, 255, .5)
+        }
+
+        &.button_checked {
+            background: rgba(255, 255, 255, .3);
+
+            .button__text {
+                color: #000;
+            }
+        }
+    }
+
+    &.button_focused-hard {
+        z-index: 1;
+
+        background: rgba(255, 255, 255, .4);
+    }
+
+    &.button_view_action {
+        border-color: transparent;
+
+        color: #fff;
+
+        background: rgba(255, 255, 255, .5);
+
+        &.button_hovered {
+            background: #fff;
+            background: rgba(255, 255, 255, .7);
+        }
+    }
+
+    &.button_view_pseudo {
+        border-style: dashed;
+    }
+}
+
+.control-group {
+
+    .button_theme_alfa-on-color {
+        border-width: 1px;
+        border-style: solid;
+
+        border-right-color: transparent;
+
+        &.button_hovered {
+            background: rgba(255, 255, 255, .2);
+
+            border-right-color: transparent;
+        }
+
+    }
+
+    &.checkbox-group,
+    &.radio-group {
+
+        .checkbox_checked + .checkbox_theme_alfa-on-color,
+        .checkbox_hovered + .checkbox_theme_alfa-on-color
+        .radio_checked + .radio_theme_alfa-on-color,
+        .radio_hovered + .radio_theme_alfa-on-color {
+
+            .button_theme_alfa-on-color {
+                border-left-color: #fff;
+            }
+        }
+    }
+
+    > :last-child {
+        .button_theme_alfa-on-color {
+            border-right-color: rgba(255, 255, 255, .5);
+
+            &.button_hovered {
+                border-right-color: #fff;
+            }
+
+            &.button_disabled {
+                border-right-color: transparent;
+            }
+        }
+    }
+}

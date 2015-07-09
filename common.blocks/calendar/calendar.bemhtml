@@ -26,8 +26,7 @@ block('calendar')(
             block: 'popup',
             mods: this.extend(ctx.mods, {
                 'has-calendar': true,
-                target: 'anchor',
-                bkg: false
+                target: 'anchor'
             }),
             js: {
                 mainOffset: ctx.mainOffset,

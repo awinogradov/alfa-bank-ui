@@ -19,18 +19,16 @@
 ``` js
 {
     block : 'notification',
-    mods : { theme  : 'alfa' }
+    mods : { theme : 'alfa-on-color' }
 }
 ```
-
-### _bkg
 
 - для белого фона (white)
 
 ``` js
 {
     block : 'notification',
-    mods : { theme  : 'alfa', bkg : 'white' }
+    mods : { theme  : 'alfa-on-white' }
 }
 ```
 
@@ -39,7 +37,7 @@
 ``` js
 {
     block : 'notification',
-    mods : { theme  : 'alfa', bkg : 'color' }
+    mods : { theme  : 'alfa-on-color' }
 }
 ```
 

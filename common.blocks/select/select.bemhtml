@@ -8,7 +8,6 @@ block('select')(
                 mods: {
                     target: 'anchor',
                     theme: this.mods.theme,
-                    bkg: this.mods.bkg,
                     autoclosable: true,
                     view: 'dropdown'
                 },

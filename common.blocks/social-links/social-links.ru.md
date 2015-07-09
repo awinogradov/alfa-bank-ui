@@ -22,7 +22,7 @@
 ```bemjson
 {
     block : 'social-links',
-    mods : { theme : 'alfa' },
+    mods : { theme : 'alfa-on-color' },
     links : []
 }
 ```
@@ -31,14 +31,13 @@
 
 Стандартный модификатор размера: `s`, `m`, `l`, `xl`.
 
-### _bkg
 
 - для белого фона (white)
 
 ```bemjson
 {
     block : 'social-links',
-    mods : { theme : 'alfa', bkg : 'white' },
+    mods : { theme : 'alfa-on-white' },
     links : []
 }
 ```
@@ -48,7 +47,7 @@
 ```bemjson
 {
     block : 'social-links',
-    mods : { theme : 'alfa', bkg : 'color' },
+    mods : { theme : 'alfa-on-color' },
     links : []
 }
 ```

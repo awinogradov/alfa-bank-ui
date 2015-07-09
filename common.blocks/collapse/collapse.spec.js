@@ -4,7 +4,7 @@ modules.define('spec', ['collapse', 'spec__utils'], function(provide, collapse, 
         cl = 'Подробнее',
         bemjson = {
             block: 'collapse',
-            mods: { theme: 'alfa', bkg: 'color' },
+            mods: { theme: 'alfa-on-color' },
             expandedLabel: el,
             collapsedLabel: cl,
             content: ['Подробности...']
@@ -27,10 +27,9 @@ modules.define('spec', ['collapse', 'spec__utils'], function(provide, collapse, 
             block.elem('link').length.should.equal(1);
         });
 
-        it('should pass `theme` and `bkg` mods to link', function() {
+        it('should pass `theme` mods to link', function() {
             var link = block.findBlockInside('link');
-            link.getMod('theme').should.equal('alfa');
-            link.getMod('bkg').should.equal('color');
+            link.getMod('theme').should.equal('alfa-on-color');
         });
 
         it('should set link label to `collapsedLabel` in collapsed state', function() {

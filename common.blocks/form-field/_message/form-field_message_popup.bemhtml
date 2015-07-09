@@ -9,8 +9,7 @@ block('form-field').mod('message', 'popup')(
                 mods: {
                     type: 'popup',
                     theme: ctx.mods.theme,
-                    size: ctx.mods.size,
-                    bkg: ctx.mods.bkg
+                    size: ctx.mods.size
                 },
                 mix: { block: ctx.block, elem: 'message' }
             }

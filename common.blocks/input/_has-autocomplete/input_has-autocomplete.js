@@ -91,7 +91,6 @@ function mapItems(item) {
             block: 'menu-item',
             mods: {
                 theme: this.getMod('theme'),
-                bkg: this.getMod('bkg'),
                 size: this.getMod('size')
             },
             val: item.val,

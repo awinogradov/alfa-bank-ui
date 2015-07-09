@@ -12,7 +12,6 @@ block('header').elem('inner')(
                         block: 'logo',
                         mods: {
                             theme: _this._headerMods.theme,
-                            bkg: _this._headerMods.bkg,
                             size: 's',
                             view: 'full'
                         }

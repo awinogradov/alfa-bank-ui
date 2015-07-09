@@ -16,9 +16,8 @@
                 {
                     block : 'input',
                     mods : {
-                        theme : 'alfa',
+                        theme : 'alfa-on-white',
                         size : 'm',
-                        bkg : 'white',
                         'has-addon' : true,
                         'has-calendar': true
                     }
@@ -27,10 +26,9 @@
                 {
                     block : 'input',
                     mods : {
-                        theme : 'alfa',
+                        theme : 'alfa-on-white',
                         'readable-date': true,
                         size : 'm',
-                        bkg : 'white',
                         'has-addon' : true,
                         'has-calendar': true
                     }
@@ -38,9 +36,8 @@
                 {
                     block : 'input',
                     mods : {
-                        theme : 'alfa',
+                        theme : 'alfa-on-white',
                         size : 'm',
-                        bkg : 'white',
                         'has-addon' : true,
                         'has-calendar': true,
                         disabled : true
@@ -56,9 +53,8 @@
                 {
                     block : 'input',
                     mods : {
-                        theme : 'alfa',
+                        theme : 'alfa-on-color',
                         size : 'm',
-                        bkg : 'color',
                         'has-addon' : true,
                         'has-calendar' : true
                     },
@@ -72,9 +68,8 @@
                 {
                     block : 'input',
                     mods : {
-                        theme : 'alfa',
+                        theme : 'alfa-on-color',
                         size : 'm',
-                        bkg : 'color',
                         'has-addon' : true,
                         'has-calendar' : true,
                         'readable-date' : true
@@ -89,9 +84,8 @@
                 {
                     block : 'input',
                     mods : {
-                        theme : 'alfa',
+                        theme : 'alfa-on-color',
                         size : 'm',
-                        bkg : 'color',
                         'has-addon' : true,
                         'has-calendar' : true,
                         disabled : true

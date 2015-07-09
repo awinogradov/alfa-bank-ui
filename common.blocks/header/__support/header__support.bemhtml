@@ -10,7 +10,6 @@ block('header').elem('support')(
                         block: 'link',
                         mods: {
                             theme: _this._headerMods.theme,
-                            bkg: _this._headerMods.bkg,
                             pseudo: true,
                             size: 'm'
                         },
@@ -25,7 +24,6 @@ block('header').elem('support')(
                     block: 'link',
                     mods: {
                         theme: _this._headerMods.theme,
-                        bkg: _this._headerMods.bkg,
                         pseudo: true,
                         size: 'm'
                     },

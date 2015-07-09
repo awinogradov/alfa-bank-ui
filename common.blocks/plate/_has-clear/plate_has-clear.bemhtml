@@ -9,7 +9,6 @@ block('plate').mod('has-clear', true)(
                     block: 'icon',
                     mods: {
                        theme: this.ctx.mods.theme,
-                       bkg: this.ctx.mods.bkg,
                        tool: 'close'
                     }
                 }

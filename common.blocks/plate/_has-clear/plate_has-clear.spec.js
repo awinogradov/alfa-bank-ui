@@ -6,7 +6,7 @@ modules.define('spec', ['plate', 'spec__utils'], function(provide, _, utils) {
         beforeEach(function() {
             plate = utils.buildBlock('plate', {
                 block: 'plate',
-                mods: { theme: 'alfa', bkg: 'color', 'has-clear': true }
+                mods: { theme: 'alfa-on-color', 'has-clear': true }
             });
         });
 

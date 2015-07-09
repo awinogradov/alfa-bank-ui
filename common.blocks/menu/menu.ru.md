@@ -5,36 +5,16 @@
 ### Темы `_theme`
 
 Блоку добавлена тема:
-    * alfa
+    * alfa-on-color
+    * alfa-on-white
 
 Наглядно показано на примере ниже:
 
 ```bemjson
  {
     block : 'menu',
-    mods : { theme : 'alfa'}
+    mods : { theme : 'alfa-on-color' }
  }
-```
-### Фон `_bkg`
-
-Доступны два типа для белого и цветного фона:
-    * white
-    * color
-    
-Примеры: 
-
-```bemjson
-{
-    block : 'menu',
-    mods : { bkg : 'color', theme : 'alfa'}
-}
-```
-
-```bemjson
-{
-    block : 'menu',
-    mods : { bkg : 'color', theme : 'alfa'}
-}
 ```
 
 ### Размер `_size`
@@ -43,7 +23,7 @@
 
 ```bemjson
 {
-    block : 'logo',
+    block : 'menu',
     mods : { size : 's' }
 }
 ```
@@ -52,7 +32,7 @@
 
 ```bemjson
 {
-    block : 'logo',
+    block : 'menu',
     mods : { size : 'm' }
 }
 ```
@@ -61,7 +41,7 @@
 
 ```bemjson
 {
-    block : 'logo',
+    block : 'menu',
     mods : { size : 'l' }
 }
 ```
@@ -70,7 +50,7 @@
 
 ```bemjson
 {
-    block : 'logo',
+    block : 'menu',
     mods : { size : 'xl' }
 }
 ```

@@ -35,24 +35,14 @@ describe('input_has-calendar', function() {
         expect(calendar).to.not.be.null;
     });
 
-    it('should pass `theme`, `bkg` and `size` mods to `calendar`', function() {
+    it('should pass `theme` and `size` mods to `calendar`', function() {
         bemjson.mods.theme = 'xxx';
-        bemjson.mods.bkg = 'yyy';
         bemjson.mods.size = 'm';
         block = build('input', bemjson);
         var calendar = block.findBlockInside('calendar');
 
         calendar.getMod('theme').should.equal('xxx');
-        calendar.getMod('bkg').should.equal('yyy');
         calendar.getMod('size').should.equal('m');
-    });
-
-    it('should not to install `bkg` mods to `popup`', function() {
-        bemjson.mods.bkg = 'yyy';
-        block = build('input', bemjson);
-        var popup = block.findBlockInside('calendar')._popup;
-
-        popup.getMod('bkg').should.equal('');
     });
 
     it('should set popup`s anchor', function() {

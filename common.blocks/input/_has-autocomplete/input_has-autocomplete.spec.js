@@ -31,27 +31,23 @@ describe('input_has-autocomplete', function() {
         expect(popup).to.not.be.null;
     });
 
-    it('should pass `theme`, `bkg` and `size` mods to `popup`', function() {
+    it('should pass `theme` and `size` mods to `popup`', function() {
         bemjson.mods.theme = 'xxx';
-        bemjson.mods.bkg = 'yyy';
         bemjson.mods.size = 'm';
         block = build('input', bemjson);
         var popup = block.findBlockInside('popup');
 
         popup.getMod('theme').should.equal('xxx');
-        popup.getMod('bkg').should.equal('yyy');
         popup.getMod('size').should.equal('m');
     });
 
-    it('should pass `theme`, `bkg` and `size` mods to `menu`', function() {
+    it('should pass `theme` and `size` mods to `menu`', function() {
         bemjson.mods.theme = 'xxx';
-        bemjson.mods.bkg = 'yyy';
         bemjson.mods.size = 'm';
         block = build('input', bemjson);
         var menu = block.findBlockInside('menu');
 
         menu.getMod('theme').should.equal('xxx');
-        menu.getMod('bkg').should.equal('yyy');
         menu.getMod('size').should.equal('m');
     });
 
@@ -69,14 +65,12 @@ describe('input_has-autocomplete', function() {
         expect(menu).to.not.be.null;
     });
 
-    it('should pass `theme` and `bkg` mods to `menu`', function() {
+    it('should pass `theme` mods to `menu`', function() {
         bemjson.mods.theme = 'xxx';
-        bemjson.mods.bkg = 'yyy';
         block = build('input', bemjson);
         var menu = block.findBlockInside('popup').findBlockInside('menu');
 
         menu.getMod('theme').should.equal('xxx');
-        menu.getMod('bkg').should.equal('yyy');
     });
 
     it('should add options as `menu-item`s', function() {
@@ -270,7 +264,6 @@ describe('input_has-autocomplete', function() {
 
     it('should support setting options on runtime', function() {
         bemjson.mods.theme = 'XXX';
-        bemjson.mods.bkg = 'YYY';
         bemjson.mods.size = 'ZZZ';
         block = build('input', bemjson);
         block.setOptions.should.be.a('function');
@@ -291,7 +284,6 @@ describe('input_has-autocomplete', function() {
         items[1].domElem.text().should.equal('item 2');
 
         items[0].getMod('theme').should.equal('XXX');
-        items[0].getMod('bkg').should.equal('YYY');
         items[0].getMod('size').should.equal('ZZZ');
 
         block.setOptions([]);

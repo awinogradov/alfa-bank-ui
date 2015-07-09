@@ -1,0 +1,10 @@
+.logo_theme_alfa-on-color {
+
+    .logo__icon {
+        background-image: url(../__icon/logo__icon_color.svg);
+    }
+
+    .logo__text {
+        background-image: url(../__text/logo__text_color.svg);
+    }
+}

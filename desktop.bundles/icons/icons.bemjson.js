@@ -1,6 +1,6 @@
 ({
     block : 'page',
-    mods : { theme : 'alfa', bkg : 'color'},
+    mods : { theme : 'alfa-on-color'},
     title : 'Demo Alfa-Bank UI',
     favicon : '/favicon.ico',
     head : [
@@ -27,7 +27,7 @@
                     elem : 'content',
                     content : {
                         block : 'app',
-                        mods : { theme : 'alfa', bkg : 'color' },
+                        mods : { theme : 'alfa-on-color' },
                         content : [
                             {
                                 elem : 'title',
@@ -44,13 +44,13 @@
                                         return [
                                             {
                                                 block : 'heading',
-                                                mods : { theme : 'alfa', bkg : 'color' },
+                                                mods : { theme : 'alfa-on-color' },
                                                 lvl : 2,
                                                 content : 'Size ' + size
                                             },
                                             {
                                                 block : 'select',
-                                                mods : { mode : 'radio', theme : 'alfa', bkg : 'color', size : size },
+                                                mods : { mode : 'radio', theme : 'alfa-on-color', size : size },
                                                 optionsMaxHeight : 200,
                                                 val : 2,
                                                 options : [
@@ -72,32 +72,32 @@
                                             },
                                             {
                                                 block : 'input',
-                                                mods : { theme : 'alfa', bkg : 'color', size : size, 'has-clear' : true },
+                                                mods : { theme : 'alfa-on-color', size : size, 'has-clear' : true },
                                                 val : 'С очисткой',
                                                 placeholder : 'placeholder'
                                             },
                                             {
                                                 block : 'input',
-                                                mods : { theme : 'alfa', bkg : 'color', size : size, type : 'search', 'has-addon' : true },
+                                                mods : { theme : 'alfa-on-color', size : size, type : 'search', 'has-addon' : true },
                                                 placeholder : 'Поиск',
                                                 addon : {
                                                     block : 'icon',
-                                                    mods : { theme : 'alfa', bkg : 'color', tool : 'search', size : size }
+                                                    mods : { theme : 'alfa-on-color', tool : 'search', size : size }
                                                 }
                                             },
                                             {
                                                 block : 'input',
-                                                mods : { theme : 'alfa', bkg : 'color', size : size, 'has-addon' : true, 'has-calendar' : true },
+                                                mods : { theme : 'alfa-on-color', size : size, 'has-addon' : true, 'has-calendar' : true },
                                                 val : '07.05.2015',
                                                 placeholder : 'Date'
                                             },
                                             {
                                                 block : 'input',
-                                                mods : { theme : 'alfa', bkg : 'color', size : size, 'has-addon' : true },
+                                                mods : { theme : 'alfa-on-color', size : size, 'has-addon' : true },
                                                 val : '100500',
                                                 addon : {
                                                     block : 'icon',
-                                                    mods : { theme : 'alfa', bkg : 'color', currency : 'rub', size : size }
+                                                    mods : { theme : 'alfa-on-color', currency : 'rub', size : size }
                                                 }
                                             }
                                             // notification

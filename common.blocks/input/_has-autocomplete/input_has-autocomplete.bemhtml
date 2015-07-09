@@ -29,7 +29,6 @@ block('input').mod('has-autocomplete', true)(
                     mods: {
                         target: 'anchor',
                         theme: this._input.mods.theme,
-                        bkg: this._input.mods.bkg,
                         size: this._input.mods.size,
                         view: 'dropdown'
                     },
@@ -40,7 +39,6 @@ block('input').mod('has-autocomplete', true)(
                             mods: {
                                 mode: 'radio-check',
                                 theme: this._input.mods.theme,
-                                bkg: this._input.mods.bkg,
                                 size: this._input.mods.size,
                                 view: 'dropdown'
                             },

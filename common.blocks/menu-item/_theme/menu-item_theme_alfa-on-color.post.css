@@ -1,0 +1,6 @@
+.menu-item_theme_alfa-on-color {
+
+    &.menu-item_checked {
+        opacity: .8;
+    }
+}

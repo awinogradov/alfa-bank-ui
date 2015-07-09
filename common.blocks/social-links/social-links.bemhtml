@@ -6,7 +6,7 @@ block('social-links')(
         ctx.links.forEach(function(link) {
             content.push({
                 block: 'link',
-                mods: { theme: ctx.mods.theme, bkg: ctx.mods.bkg, icon: true },
+                mods: { theme: ctx.mods.theme, icon: true },
                 mix: { block: ctx.block, elem: 'item' },
                 url: link.url,
                 content: [
@@ -14,7 +14,6 @@ block('social-links')(
                         block: 'icon',
                         mods: {
                             network: link.network,
-                            bkg: ctx.mods.bkg,
                             size: ctx.mods.size,
                             theme: ctx.mods.theme
                         },
