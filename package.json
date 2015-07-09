@@ -51,7 +51,7 @@
     "lint": "jshint-groups && jscs .",
     "specs": "magic run specs",
     "tmpls": "magic run tmpl-specs",
-    "clean-dist": "find common.blocks -iname '*.min.css' | xargs rm",
+    "clean-dist": "find common.blocks -iname '*.css' | grep -v 'post.css' |  xargs rm",
     "dist": "npm run clean-dist && node distribute",
     "coverage": "ISTANBUL_COVERAGE=yes npm run specs && istanbul report --include coverage.json html text && istanbul check-coverage --include coverage.json",
     "release-patch": "mversion patch",
