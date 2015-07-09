@@ -1,52 +1,177 @@
-.icon_bkg_color {
+.icon_bkg_color.icon_currency_rub {
+    background-image: url('../_currency/icon_currency_rub.svg');
+}
 
-    @each $name in rub {
-        &.icon_currency_$(name) {
-            background-image: url('../_currency/icon_currency_$(name).svg');
-        }
-    }
+.icon_bkg_color.icon_card_visa {
+    background-image: url('../_card/icon_card_visa.svg');
+}
 
-    @each $name in visa, visaelectron, mastercard, maestro {
-        &.icon_card_$(name) {
-            background-image: url('../_card/icon_card_$(name).svg');
-        }
-    }
+.icon_bkg_color.icon_card_visaelectron {
+    background-image: url('../_card/icon_card_visaelectron.svg');
+}
 
-    @each $name in ok, fail, repeat, error {
-        &.icon_action_$(name) {
-            background-image: url('../_action/icon_action_$(name).svg');
-        }
-    }
+.icon_bkg_color.icon_card_mastercard {
+    background-image: url('../_card/icon_card_mastercard.svg');
+}
 
-    @each $name in twitter, vk, facebook {
-        &.icon_network_$(name) {
-            background-image: url('../_network/icon_network_$(name).svg');
-        }
-    }
+.icon_bkg_color.icon_card_maestro {
+    background-image: url('../_card/icon_card_maestro.svg');
+}
 
-    @each $name in 'print', pdf, email, close, calendar, search, help {
-        &.icon_tool_$(name) {
-            background-image: url('../_tool/icon_tool_$(name).svg');
-        }
-    }
+.icon_bkg_color.icon_action_ok {
+    background-image: url('../_action/icon_action_ok.svg');
+}
 
-    @each $name in left, right, up, down {
-        &.icon_arrow_$(name) {
-            background-image: url('../_arrow/icon_arrow_$(name).svg');
-        }
-    }
+.icon_bkg_color.icon_action_fail {
+    background-image: url('../_action/icon_action_fail.svg');
+}
 
-    @each $name in out {
-        &.icon_user_$(name) {
-            background-image: url('../_user/icon_user_$(name).svg');
-        }
-    }
+.icon_bkg_color.icon_action_repeat {
+    background-image: url('../_action/icon_action_repeat.svg');
+}
 
-    @each $name in 2449, 3308, 5475, 285, 10223, 439, 9908, 3001, 1490, 4267, 7311, 1516, 1309, 8967, 351, 6415, 4924, 5030, 256, 1415, 2377, 7687, 7686, 244, 404 {
-        &.icon_bank_$(name) {
-            background-image: url('../_bank/icon_bank_$(name).svg');
-        }
-    }
+.icon_bkg_color.icon_action_error {
+    background-image: url('../_action/icon_action_error.svg');
+}
+
+.icon_bkg_color.icon_network_twitter {
+    background-image: url('../_network/icon_network_twitter.svg');
+}
+
+.icon_bkg_color.icon_network_vk {
+    background-image: url('../_network/icon_network_vk.svg');
+}
+
+.icon_bkg_color.icon_network_facebook {
+    background-image: url('../_network/icon_network_facebook.svg');
+}
+
+.icon_bkg_color.icon_tool_pdf {
+    background-image: url('../_tool/icon_tool_pdf.svg');
+}
+
+.icon_bkg_color.icon_tool_pr {
+    background-image: url('../_tool/icon_tool_pr.svg');
+}
+
+.icon_bkg_color.icon_arrow_left {
+    background-image: url('../_arrow/icon_arrow_left.svg');
+}
+
+.icon_bkg_color.icon_arrow_right {
+    background-image: url('../_arrow/icon_arrow_right.svg');
+}
+
+.icon_bkg_color.icon_arrow_up {
+    background-image: url('../_arrow/icon_arrow_up.svg');
+}
+
+.icon_bkg_color.icon_arrow_down {
+    background-image: url('../_arrow/icon_arrow_down.svg');
+}
+
+.icon_bkg_color.icon_user_out {
+    background-image: url('../_user/icon_user_out.svg');
+}
+
+.icon_bkg_color.icon_bank_2449 {
+    background-image: url('../_bank/icon_bank_2449.svg');
+}
+
+.icon_bkg_color.icon_bank_3308 {
+    background-image: url('../_bank/icon_bank_3308.svg');
+}
+
+.icon_bkg_color.icon_bank_5475 {
+    background-image: url('../_bank/icon_bank_5475.svg');
+}
+
+.icon_bkg_color.icon_bank_285 {
+    background-image: url('../_bank/icon_bank_285.svg');
+}
+
+.icon_bkg_color.icon_bank_10223 {
+    background-image: url('../_bank/icon_bank_10223.svg');
+}
+
+.icon_bkg_color.icon_bank_439 {
+    background-image: url('../_bank/icon_bank_439.svg');
+}
+
+.icon_bkg_color.icon_bank_9908 {
+    background-image: url('../_bank/icon_bank_9908.svg');
+}
+
+.icon_bkg_color.icon_bank_3001 {
+    background-image: url('../_bank/icon_bank_3001.svg');
+}
+
+.icon_bkg_color.icon_bank_1490 {
+    background-image: url('../_bank/icon_bank_1490.svg');
+}
+
+.icon_bkg_color.icon_bank_4267 {
+    background-image: url('../_bank/icon_bank_4267.svg');
+}
+
+.icon_bkg_color.icon_bank_7311 {
+    background-image: url('../_bank/icon_bank_7311.svg');
+}
+
+.icon_bkg_color.icon_bank_1516 {
+    background-image: url('../_bank/icon_bank_1516.svg');
+}
+
+.icon_bkg_color.icon_bank_1309 {
+    background-image: url('../_bank/icon_bank_1309.svg');
+}
+
+.icon_bkg_color.icon_bank_8967 {
+    background-image: url('../_bank/icon_bank_8967.svg');
+}
+
+.icon_bkg_color.icon_bank_351 {
+    background-image: url('../_bank/icon_bank_351.svg');
+}
+
+.icon_bkg_color.icon_bank_6415 {
+    background-image: url('../_bank/icon_bank_6415.svg');
+}
+
+.icon_bkg_color.icon_bank_4924 {
+    background-image: url('../_bank/icon_bank_4924.svg');
+}
+
+.icon_bkg_color.icon_bank_5030 {
+    background-image: url('../_bank/icon_bank_5030.svg');
+}
+
+.icon_bkg_color.icon_bank_256 {
+    background-image: url('../_bank/icon_bank_256.svg');
+}
+
+.icon_bkg_color.icon_bank_1415 {
+    background-image: url('../_bank/icon_bank_1415.svg');
+}
+
+.icon_bkg_color.icon_bank_2377 {
+    background-image: url('../_bank/icon_bank_2377.svg');
+}
+
+.icon_bkg_color.icon_bank_7687 {
+    background-image: url('../_bank/icon_bank_7687.svg');
+}
+
+.icon_bkg_color.icon_bank_7686 {
+    background-image: url('../_bank/icon_bank_7686.svg');
+}
+
+.icon_bkg_color.icon_bank_244 {
+    background-image: url('../_bank/icon_bank_244.svg');
+}
+
+.icon_bkg_color.icon_bank_404 {
+    background-image: url('../_bank/icon_bank_404.svg');
 }
 
 .icon_bkg_color.icon_tool_pdf.icon_size_s,

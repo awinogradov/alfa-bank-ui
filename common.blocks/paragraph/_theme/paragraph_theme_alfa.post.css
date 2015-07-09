@@ -1,0 +1,9 @@
+.paragraph_theme_alfa {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+
+    &.paragraph_type_lead {
+        font-size: 1.25rem;
+        line-height: 1.5625rem;
+    }
+}

@@ -1,0 +1,35 @@
+.select_bkg_color {
+
+    .select__button {
+
+        color: #fff;
+
+        /* FIXME: maybe remove cascade? */
+        &.button_disabled {
+
+            &.button_checked {
+                background: rgba(255,255,255,0.1);
+                color: #fff;
+
+                .button__text {
+                    color: #fff;
+                    color: rgba(255,255,255,0.5)
+                }
+            }
+        }
+    }
+
+    .select__tick {
+        background-image: url(../__tick/_bkg/select__tick_bkg_color.svg);
+    }
+
+    &.select_size_s .select__tick,
+    &.select_size_m .select__tick {
+        background-size: 11px;
+    }
+
+    &.select_size_l .select__tick,
+    &.select_size_xl .select__tick {
+        background-size: 16px;
+    }
+}

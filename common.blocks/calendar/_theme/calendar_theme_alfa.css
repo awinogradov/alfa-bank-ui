@@ -9,45 +9,50 @@
 
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
                 0 10px 20px -5px rgba(0, 0, 0, 0.4);
+}
 
-    &.popup_direction_bottom-right {
-        margin-top: 7px !important;
-        margin-left: 10px !important;
-    }
 
-    &.popup_direction_bottom-right:before {
-        margin-top: -29px;
-        right: 15px;
+.calendar_theme_alfa.popup_direction_bottom-right {
+    margin-top: 7px !important;
+    margin-left: 10px !important;
+}
 
-        border-top: 7px solid transparent;
-        border-left: 7px solid transparent;
-        border-right: 7px solid transparent;
-        border-bottom: 7px solid rgba(0,0,0,0.9);
-        content: '';
-        position: absolute;
-    }
 
-    .calendar__title,
-    .calendar__layout {
-        padding: 12px;
-    }
+.calendar_theme_alfa.popup_direction_bottom-right:before {
+    margin-top: -29px;
+    right: 15px;
+    border-top: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid rgba(0,0,0,0.9);
+    content: '';
+    position: absolute;
+}
 
-    .calendar__title {
-        border-bottom: 1px solid rgba(217, 217, 219, 1);
-    }
 
-    .calendar__dayname {
-        line-height: 34px;
-        font-weight: 300;
-    }
+.calendar_theme_alfa .calendar__title, .calendar_theme_alfa .calendar__layout {
+    padding: 12px;
+}
 
-    .calendar__day {
-        font-weight: 300;
-    }
 
-    .calendar__day_state_current {
-        color: rgba(255,255,255,1);
-    }
+.calendar_theme_alfa .calendar__title {
+    border-bottom: 1px solid rgba(217, 217, 219, 1);
+}
+
+
+.calendar_theme_alfa .calendar__dayname {
+    line-height: 34px;
+    font-weight: 300;
+}
+
+
+.calendar_theme_alfa .calendar__day {
+    font-weight: 300;
+}
+
+
+.calendar_theme_alfa .calendar__day_state_current {
+    color: rgba(255,255,255,1);
 }
 
 

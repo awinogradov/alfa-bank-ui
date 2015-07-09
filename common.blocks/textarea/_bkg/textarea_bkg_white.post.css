@@ -1,0 +1,29 @@
+.textarea_bkg_white {
+    background: rgba(255,255,255,.3);
+
+    transition: all 200ms ease;
+
+    color: #000;
+
+    border: 1px solid #ccc;
+
+    &.textarea_disabled {
+        border-color: transparent;
+        background: rgba(0, 0, 0, .06);
+
+        color: #666;
+    }
+
+    &.textarea_hovered,
+    &.textarea_focused {
+        border-color: rgba(0, 0, 0, .4);
+    }
+
+    &.textarea_focused {
+        background: #fff;
+    }
+
+    &.textarea_invalid {
+        border-color: #fc5c5e;
+    }
+}

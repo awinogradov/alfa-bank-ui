@@ -7,8 +7,7 @@
         { elems: ['inner', 'menu', 'user', 'support'] },
         { block: 'logo', mods: { view: 'full' } },
         { block: 'menu', mods: { horizontal: true } },
-        { block: 'menu-item', mods: { type: 'link' } },
-        { block: 'menu-item', mods: { type: 'dropdown' } }
+        { block: 'menu-item', mods: { type: ['link', 'dropdown'] } },
     ].concat([
         { block: 'logo' },
         { block: 'menu' },

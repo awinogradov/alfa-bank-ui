@@ -1,7 +1,3 @@
-.list_bkg_white {
-
-    .list__item:before {
-        color: #ef3124;
-    }
-
+.list_bkg_white .list__item:before {
+    color: #ef3124;
 }

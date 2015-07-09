@@ -13,11 +13,12 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    transition: opacity .1s ease-out;
+    -webkit-transition: opacity .1s ease-out;
 
-    &:hover {
-        opacity: 1;
-    }
+            transition: opacity .1s ease-out;
 
     cursor: pointer;
+}
+.plate__clear > .icon:hover {
+    opacity: 1;
 }

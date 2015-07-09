@@ -2,29 +2,23 @@
     display: none;
     background-repeat: no-repeat;
     background-position: 50%;
-
-    &.spin_visible {
-        display: inline-block;
-    }
-
-    &.spin_size_s {
-        width: 25px;
-        height: 25px;
-    }
-
-
-    &.spin_size_m {
-        width: 35px;
-        height: 35px;
-    }
-
-    &.spin_size_l {
-        width: 45px;
-        height: 45px;
-    }
-
-    &.spin_size_xl {
-        width: 55px;
-        height: 55px;
-    }
+}
+.spin_theme_alfa.spin_visible {
+    display: inline-block;
+}
+.spin_theme_alfa.spin_size_s {
+    width: 25px;
+    height: 25px;
+}
+.spin_theme_alfa.spin_size_m {
+    width: 35px;
+    height: 35px;
+}
+.spin_theme_alfa.spin_size_l {
+    width: 45px;
+    height: 45px;
+}
+.spin_theme_alfa.spin_size_xl {
+    width: 55px;
+    height: 55px;
 }

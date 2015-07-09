@@ -1,0 +1,6 @@
+.menu-item_bkg_white {
+
+    &.menu-item_hovered {
+        background-color: rgba(255,255,255,0.2);
+    }
+}

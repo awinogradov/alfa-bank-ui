@@ -6,346 +6,299 @@
 
     border-radius: 6px;
 
-    box-sizing: border-box;
+    -moz-box-sizing: border-box;
 
-    transition: all 200ms ease;
+         box-sizing: border-box;
 
-    &:before {
-        position: absolute;
-        top:      1px;
-        right:    1px;
-        bottom:   1px;
-        left:     1px;
+    -webkit-transition: all 200ms ease;
 
-        content: '';
-
-        border-radius: 5px;
-    }
-
-    .input__box {
-        position: relative;
-        display:  block;
-
-        -webkit-touch-callout: none;
-
-        user-select: none;
-    }
-
-    .input__control {
-        font:        inherit;
-        line-height: inherit;
-
-        box-sizing: border-box;
-
-        padding:    0;
-        margin:     0;
-
-        width:      100%;
-
-        border:     0;
-        outline:    none;
-        background: none;
-
-        -webkit-appearance:          none;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
-        &::-webkit-search-decoration {
-            -webkit-appearance: none;
-        }
-
-        &::-webkit-search-cancel-button {
-            display: none;
-        }
-
-        &::-webkit-input-placeholder {
-            text-indent: 0;
-        }
-
-        &::-moz-placeholder {
-            opacity: 1;
-        }
-
-        &::-ms-clear {
-            display: none;
-        }
-    }
-
-    &.input_has-clear .input__control {
-        text-overflow: ellipsis;
-        padding-right: 0;
-    }
-
-    .input__clear {
-        position: absolute;
-        top:      50%;
-        right:    0;
-
-        cursor:     text;
-        transition: opacity 0.1s ease-out;
-
-        opacity:    0;
-        background: 50% 50% no-repeat;
-        background-position: center center;
-
-        &_visible {
-            opacity: 0.3;
-
-            &:hover {
-                cursor: pointer;
-
-                opacity: 1;
-            }
-        }
-    }
-
-    &.input_focused {
-        z-index: 1;
-
-        &.input_mode_link {
-            .input__control {
-                padding-left: 0;
-            }
-        }
-    }
-
-    &.input_disabled {
-        &:before,
-        .input__clear {
-            display: none;
-        }
-
-        .input__box,
-        .input__control {
-            cursor: default;
-        }
-    }
-
-    &.input_type_password .input__control {
-        text-overflow: clip;
-    }
-
-    &.input_has-addon {
-
-        .input__control {
-            padding-right: 0;
-        }
-
-        .input__addon {
             transition: all 200ms ease;
-            top: -1px;
-            right: -1px;
-        }
-    }
-
-
-    &.input_mode_link {
-        padding-left: 0;
-    }
-
-    .input_size_s {
-        font-size: 12px;
-        height: 25px;
-
-        .input__control {
-            padding: 4px 13px 5px 13px;
-        }
-
-        &.input_has-clear {
-            .input__box {
-                padding-right: 20px;
-            }
-
-            .input__clear {
-                width: 20px;
-                height: 20px;
-                margin-top: -10px;
-            }
-        }
-
-        &.input_has-addon {
-            .input__box {
-                padding-right: 25px;
-            }
-
-            .input__addon {
-                width: 25px;
-                height: 25px;
-
-                line-height: 25px;
-                font-size: 12px;
-            }
-        }
-
-        &.input_mode_link {
-            .input__box {
-                height: 23px;
-                padding-left: 13px;
-                margin-right: 13px;
-            }
-
-            .input__trigger {
-                line-height: 23px;
-            }
-        }
-    }
-
-    .input_size_m {
-        font-size: 12px;
-        height: 35px;
-
-        .input__control {
-            padding: 9px 15px 10px 15px;
-        }
-
-        &.input_has-clear {
-            .input__box {
-                padding-right: 34px;
-            }
-
-            .input__clear {
-                width: 34px;
-                height: 34px;
-                margin-top: -17px;
-            }
-        }
-
-        &.input_has-addon {
-            .input__box {
-                padding-right: 35px;
-            }
-
-            .input__addon {
-                width: 35px;
-                height: 35px;
-
-                line-height: 35px;
-                font-size: 14px;
-            }
-        }
-
-        &.input_mode_link {
-            .input__box {
-                height: 33px;
-                padding-left: 15px;
-                margin-right: 15px;
-            }
-
-            .input__trigger {
-                line-height: 33px;
-            }
-        }
-    }
-
-    .input_size_l {
-        font-size: 15px;
-        height: 45px;
-
-        .input__control {
-            padding: 12px 17px 13px 17px;
-        }
-
-        &.input_has-clear {
-            .input__box {
-                padding-right: 38px;
-            }
-
-            .input__clear {
-                width: 38px;
-                height: 38px;
-                margin-top: -19px;
-            }
-        }
-
-        &.input_has-addon {
-            .input__box {
-                padding-right: 45px;
-            }
-
-            .input__addon {
-                width: 45px;
-                height: 45px;
-
-                line-height: 45px;
-                font-size: 20px;
-            }
-        }
-
-        &.input_mode_link {
-            .input__box {
-                height: 43px;
-                padding-left: 17px;
-                margin-right: 17px;
-            }
-
-            .input__trigger {
-                line-height: 43px;
-            }
-        }
-    }
-
-    .input_size_xl {
-        font-size: 25px;
-        height: 55px;
-
-        .input__control {
-            padding: 12px 19px 13px 19px;
-        }
-
-        &.input_has-clear {
-            .input__box {
-                padding-right: 42px;
-            }
-
-            .input__clear {
-                width: 42px;
-                height: 42px;
-                margin-top: -21px;
-            }
-        }
-
-        &.input_has-addon {
-            .input__box {
-                padding-right: 55px;
-            }
-
-            .input__addon {
-                width: 55px;
-                height: 55px;
-
-                line-height: 55px;
-                font-size: 30px;
-            }
-        }
-
-        &.input_mode_link {
-            .input__box {
-                height: 53px;
-                padding-left: 19px;
-                margin-right: 19px;
-            }
-
-            .input__trigger {
-                line-height: 53px;
-            }
-        }
-    }
 }
 
-.control-group {
-    .input_theme_alfa {
-        &:before {
-            right: 0;
-        }
+.input_theme_alfa:before {
+    position: absolute;
+    top:      1px;
+    right:    1px;
+    bottom:   1px;
+    left:     1px;
+    content: '';
+    border-radius: 5px;
+}
 
-        &.input_focused:before {
-            right: 1px;
-        }
-    }
+.input_theme_alfa .input__box {
+    position: relative;
+    display:  block;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
 
-    > .input_theme_alfa:last-child,
-    > :last-child .input_theme_alfa {
-        &:before {
-            right: 1px;
-        }
-    }
+.input_theme_alfa .input__control {
+    font:        inherit;
+    line-height: inherit;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    padding:    0;
+    margin:     0;
+    width:      100%;
+    border:     0;
+    outline:    none;
+    background: none;
+    -webkit-appearance:          none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.input_theme_alfa .input__control::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+.input_theme_alfa .input__control::-webkit-search-cancel-button {
+    display: none;
+}
+
+.input_theme_alfa .input__control::-webkit-input-placeholder {
+    text-indent: 0;
+}
+
+.input_theme_alfa .input__control::-moz-placeholder {
+    opacity: 1;
+}
+
+.input_theme_alfa .input__control::-ms-clear {
+    display: none;
+}
+
+.input_theme_alfa.input_has-clear .input__control {
+    text-overflow: ellipsis;
+    padding-right: 0;
+}
+
+.input_theme_alfa .input__clear {
+    position: absolute;
+    top:      50%;
+    right:    0;
+    cursor:     text;
+    -webkit-transition: opacity 0.1s ease-out;
+            transition: opacity 0.1s ease-out;
+    opacity:    0;
+    background: 50% 50% no-repeat;
+    background-position: center center;
+}
+
+.input_theme_alfa .input__clear_visible {
+    opacity: 0.3;
+}
+
+.input_theme_alfa .input__clear_visible:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.input_theme_alfa.input_focused {
+    z-index: 1;
+}
+
+.input_theme_alfa.input_focused.input_mode_link .input__control {
+    padding-left: 0;
+}
+
+.input_theme_alfa.input_disabled:before, .input_theme_alfa.input_disabled .input__clear {
+    display: none;
+}
+
+.input_theme_alfa.input_disabled .input__box, .input_theme_alfa.input_disabled .input__control {
+    cursor: default;
+}
+
+.input_theme_alfa.input_type_password .input__control {
+    text-overflow: clip;
+}
+
+.input_theme_alfa.input_has-addon .input__control {
+    padding-right: 0;
+}
+
+.input_theme_alfa.input_has-addon .input__addon {
+    -webkit-transition: all 200ms ease;
+            transition: all 200ms ease;
+    top: -1px;
+    right: -1px;
+}
+
+.input_theme_alfa.input_mode_link {
+    padding-left: 0;
+}
+
+.input_theme_alfa.input_size_s {
+    font-size: 12px;
+    height: 25px;
+}
+
+.input_theme_alfa.input_size_s .input__control {
+    padding: 4px 13px 5px 13px;
+}
+
+.input_theme_alfa.input_size_s.input_has-clear .input__box {
+    padding-right: 20px;
+}
+
+.input_theme_alfa.input_size_s.input_has-clear .input__clear {
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+}
+
+.input_theme_alfa.input_size_s.input_has-addon .input__box {
+    padding-right: 25px;
+}
+
+.input_theme_alfa.input_size_s.input_has-addon .input__addon {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+}
+
+.input_theme_alfa.input_size_s.input_mode_link .input__box {
+    height: 23px;
+    padding-left: 13px;
+    margin-right: 13px;
+}
+
+.input_theme_alfa.input_size_s.input_mode_link .input__trigger {
+    line-height: 23px;
+}
+
+.input_theme_alfa.input_size_m {
+    font-size: 12px;
+    height: 35px;
+}
+
+.input_theme_alfa.input_size_m .input__control {
+    padding: 9px 15px 10px 15px;
+}
+
+.input_theme_alfa.input_size_m.input_has-clear .input__box {
+    padding-right: 34px;
+}
+
+.input_theme_alfa.input_size_m.input_has-clear .input__clear {
+    width: 34px;
+    height: 34px;
+    margin-top: -17px;
+}
+
+.input_theme_alfa.input_size_m.input_has-addon .input__box {
+    padding-right: 35px;
+}
+
+.input_theme_alfa.input_size_m.input_has-addon .input__addon {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+}
+
+.input_theme_alfa.input_size_m.input_mode_link .input__box {
+    height: 33px;
+    padding-left: 15px;
+    margin-right: 15px;
+}
+
+.input_theme_alfa.input_size_m.input_mode_link .input__trigger {
+    line-height: 33px;
+}
+
+.input_theme_alfa.input_size_l {
+    font-size: 15px;
+    height: 45px;
+}
+
+.input_theme_alfa.input_size_l .input__control {
+    padding: 12px 17px 13px 17px;
+}
+
+.input_theme_alfa.input_size_l.input_has-clear .input__box {
+    padding-right: 38px;
+}
+
+.input_theme_alfa.input_size_l.input_has-clear .input__clear {
+    width: 38px;
+    height: 38px;
+    margin-top: -19px;
+}
+
+.input_theme_alfa.input_size_l.input_has-addon .input__box {
+    padding-right: 45px;
+}
+
+.input_theme_alfa.input_size_l.input_has-addon .input__addon {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 20px;
+}
+
+.input_theme_alfa.input_size_l.input_mode_link .input__box {
+    height: 43px;
+    padding-left: 17px;
+    margin-right: 17px;
+}
+
+.input_theme_alfa.input_size_l.input_mode_link .input__trigger {
+    line-height: 43px;
+}
+
+.input_theme_alfa.input_size_xl {
+    font-size: 25px;
+    height: 55px;
+}
+
+.input_theme_alfa.input_size_xl .input__control {
+    padding: 12px 19px 13px 19px;
+}
+
+.input_theme_alfa.input_size_xl.input_has-clear .input__box {
+    padding-right: 42px;
+}
+
+.input_theme_alfa.input_size_xl.input_has-clear .input__clear {
+    width: 42px;
+    height: 42px;
+    margin-top: -21px;
+}
+
+.input_theme_alfa.input_size_xl.input_has-addon .input__box {
+    padding-right: 55px;
+}
+
+.input_theme_alfa.input_size_xl.input_has-addon .input__addon {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 30px;
+}
+
+.input_theme_alfa.input_size_xl.input_mode_link .input__box {
+    height: 53px;
+    padding-left: 19px;
+    margin-right: 19px;
+}
+
+.input_theme_alfa.input_size_xl.input_mode_link .input__trigger {
+    line-height: 53px;
+}
+
+.control-group .input_theme_alfa:before {
+    right: 0;
+}
+
+.control-group .input_theme_alfa.input_focused:before {
+    right: 1px;
+}
+
+.control-group > .input_theme_alfa:last-child:before, .control-group > :last-child .input_theme_alfa:before {
+    right: 1px;
 }

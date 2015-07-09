@@ -20,7 +20,7 @@
                 {
                     elem : 'header',
                     content : [
-                        { block : 'header' }
+                        { block : 'header', mods: { theme: 'alfa', bkg: 'color' } }
                     ]
                 },
                 {

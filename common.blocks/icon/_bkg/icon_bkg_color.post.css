@@ -1,0 +1,58 @@
+.icon_bkg_color {
+
+    @each $name in rub {
+        &.icon_currency_$(name) {
+            background-image: url('../_currency/icon_currency_$(name).svg');
+        }
+    }
+
+    @each $name in visa, visaelectron, mastercard, maestro {
+        &.icon_card_$(name) {
+            background-image: url('../_card/icon_card_$(name).svg');
+        }
+    }
+
+    @each $name in ok, fail, repeat, error {
+        &.icon_action_$(name) {
+            background-image: url('../_action/icon_action_$(name).svg');
+        }
+    }
+
+    @each $name in twitter, vk, facebook {
+        &.icon_network_$(name) {
+            background-image: url('../_network/icon_network_$(name).svg');
+        }
+    }
+
+    @each $name in pdf, print, email, close, calendar, search, help {
+        &.icon_tool_$(name) {
+            background-image: url('../_tool/icon_tool_$(name).svg');
+        }
+    }
+
+    @each $name in left, right, up, down {
+        &.icon_arrow_$(name) {
+            background-image: url('../_arrow/icon_arrow_$(name).svg');
+        }
+    }
+
+    @each $name in out {
+        &.icon_user_$(name) {
+            background-image: url('../_user/icon_user_$(name).svg');
+        }
+    }
+
+    @each $name in 2449, 3308, 5475, 285, 10223, 439, 9908, 3001, 1490, 4267, 7311, 1516, 1309, 8967, 351, 6415, 4924, 5030, 256, 1415, 2377, 7687, 7686, 244, 404 {
+        &.icon_bank_$(name) {
+            background-image: url('../_bank/icon_bank_$(name).svg');
+        }
+    }
+}
+
+.icon_bkg_color.icon_tool_pdf.icon_size_s,
+.icon_bkg_color.icon_tool_email.icon_size_s {
+    width: 7px;
+    height: 7px;
+    margin-right: 4px;
+    display: inline-block;
+}
