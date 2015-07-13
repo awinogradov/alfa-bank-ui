@@ -121,23 +121,23 @@
 
 .control-group
 {
-    .button_theme_alfa {
+    .button {
         border-radius: 0;
     }
 
-    > .button_theme_alfa:first-child,
-    > :first-child .button_theme_alfa
+    > .button:first-child,
+    > :first-child .button
     {
         border-radius: var(--buttonRadius) 0 0 var(--buttonRadius);
     }
 
-    > .button_theme_alfa:last-child,
-    > :last-child .button_theme_alfa
+    > .button:last-child,
+    > :last-child .button
     {
         border-radius: 0 var(--buttonRadius) var(--buttonRadius) 0;
     }
 
-    > :only-child .button_theme_alfa
+    > :only-child .button
     {
         border-radius: var(--buttonRadius);
     }

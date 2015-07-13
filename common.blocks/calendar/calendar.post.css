@@ -1,4 +1,4 @@
-.calendar {
+.popup.calendar {
     color: rgba(128, 128, 128, 1);
     background: rgba(255,255,255,1);
 
@@ -71,7 +71,7 @@
 
 @media all and (min-width:0px) {
 
-    .calendar_theme_alfa-on-white .calendar__day_state_current:after {
+    .calendar .calendar__day_state_current:after {
         background: rgba(178, 12, 0, 1);
     }
 }
