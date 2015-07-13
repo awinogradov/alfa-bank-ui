@@ -1527,28 +1527,28 @@
                                             content : [
                                                 {
                                                     block : 'dropdown',
-                                                    mods : { switcher : 'button', theme : 'alfa', size : 's' },
+                                                    mods : { switcher : 'button', size : 's' },
                                                     switcher : 'dropdown',
                                                     popup : {
                                                         block : 'popup',
                                                         mods : { theme : 'alfa-on-color' },
                                                         content : {
                                                             block : 'menu',
-                                                            mods : { theme : 'alfa', size : 's' },
+                                                            mods : { size : 's' },
                                                             content : [
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'alfa', size : 's' },
+                                                                    mods : { size : 's' },
                                                                     content : 'Раз'
                                                                 },
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'alfa', size : 's' },
+                                                                    mods : { size : 's' },
                                                                     content : 'Два'
                                                                 },
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'alfa', size : 's' },
+                                                                    mods : { size : 's' },
                                                                     content : 'Три'
                                                                 }
                                                             ]
@@ -1579,28 +1579,27 @@
                                             content : [
                                                 {
                                                     block : 'dropdown',
-                                                    mods : { switcher : 'button', theme : 'alfa', size : 'm' },
+                                                    mods : { switcher : 'button', size : 'm' },
                                                     switcher : 'dropdown',
                                                     popup : {
                                                         block : 'popup',
-                                                        mods : { theme : 'alfa' },
                                                         content : {
                                                             block : 'menu',
-                                                            mods : { theme : 'alfa', size : 'm' },
+                                                            mods : { size : 'm' },
                                                             content : [
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'alfa', size : 'm' },
+                                                                    mods : { size : 'm' },
                                                                     content : 'Раз'
                                                                 },
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'alfa', size : 'm' },
+                                                                    mods : { size : 'm' },
                                                                     content : 'Два'
                                                                 },
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'alfa', size : 'm' },
+                                                                    mods : { size : 'm' },
                                                                     content : 'Три'
                                                                 }
                                                             ]
@@ -1620,9 +1619,9 @@
                                             content : [
                                                 {
                                                     block : 'dropdown',
-                                                    mods : { switcher : 'button', theme : 'alfa', size : 'l' },
+                                                    mods : { switcher : 'button', size : 'l' },
                                                     switcher : 'dropdown',
-                                                    popup : { block : 'popup', mods : { theme : 'alfa' }, content : 'popup' }
+                                                    popup : { block : 'popup', content : 'popup' }
                                                 }
                                             ]
                                         },
@@ -1631,28 +1630,27 @@
                                             content : [
                                                 {
                                                     block : 'dropdown',
-                                                    mods : { switcher : 'button', theme : 'alfa', size : 'l' },
+                                                    mods : { switcher : 'button', size : 'l' },
                                                     switcher : 'dropdown',
                                                     popup : {
                                                         block : 'popup',
-                                                        mods : { theme : 'alfa' },
                                                         content : {
                                                             block : 'menu',
-                                                            mods : { theme : 'alfa', size : 'l' },
+                                                            mods : { size : 'l' },
                                                             content : [
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'alfa', size : 'l' },
+                                                                    mods : { size : 'l' },
                                                                     content : 'Раз'
                                                                 },
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'alfa', size : 'l' },
+                                                                    mods : { size : 'l' },
                                                                     content : 'Два'
                                                                 },
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'alfa', size : 'l' },
+                                                                    mods : { size : 'l' },
                                                                     content : 'Три'
                                                                 }
                                                             ]
@@ -1672,9 +1670,9 @@
                                             content : [
                                                 {
                                                     block : 'dropdown',
-                                                    mods : { switcher : 'button', theme : 'alfa', size : 'xl' },
+                                                    mods : { switcher : 'button', size : 'xl' },
                                                     switcher : 'dropdown',
-                                                    popup : { block : 'popup', mods : { theme : 'alfa' }, content : 'popup' }
+                                                    popup : { block : 'popup', content : 'popup' }
                                                 }
                                             ]
                                         },
@@ -1683,28 +1681,27 @@
                                             content : [
                                                 {
                                                     block : 'dropdown',
-                                                    mods : { switcher : 'button', theme : 'alfa', size : 'xl' },
+                                                    mods : { switcher : 'button', size : 'xl' },
                                                     switcher : 'dropdown',
                                                     popup : {
                                                         block : 'popup',
-                                                        mods : { theme : 'alfa' },
                                                         content : {
                                                             block : 'menu',
-                                                            mods : { theme : 'alfa', size : 'xl' },
+                                                            mods : { size : 'xl' },
                                                             content : [
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'alfa', size : 'xl' },
+                                                                    mods : { size : 'xl' },
                                                                     content : 'Раз'
                                                                 },
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'alfa', size : 'xl' },
+                                                                    mods : { size : 'xl' },
                                                                     content : 'Два'
                                                                 },
                                                                 {
                                                                     block : 'menu-item',
-                                                                    mods : { theme : 'alfa', size : 'xl' },
+                                                                    mods : { size : 'xl' },
                                                                     content : 'Три'
                                                                 }
                                                             ]

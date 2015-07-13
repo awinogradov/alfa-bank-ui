@@ -173,7 +173,6 @@
 {
     block : 'input',
     mods : {
-        theme : 'alfa',
         size : 'm',
         'has-addon' : true,
         'has-calendar' : true,

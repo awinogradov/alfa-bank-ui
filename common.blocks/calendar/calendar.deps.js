@@ -1,15 +1,16 @@
 [{
-    mustDeps: ['i-bem'],
-    shouldDeps: [
-        {
-            elems: ['arrow', 'day', 'dayname']
-        },
+    mustDeps: [
+        'i-bem',
         {
             block: 'popup',
             mods: {
-                theme: 'alfa',
                 target: 'anchor'
             }
+        }
+    ],
+    shouldDeps: [
+        {
+            elems: ['arrow', 'day', 'dayname']
         },
         'moment'
     ]
