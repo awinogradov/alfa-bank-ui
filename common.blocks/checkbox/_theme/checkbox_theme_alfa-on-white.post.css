@@ -17,7 +17,7 @@
     &.checkbox_checked {
 
         .checkbox__box {
-            border-color:rgba(0, 0, 0, .4);
+            border-color: rgba(0, 0, 0, .4);
         }
     }
 
