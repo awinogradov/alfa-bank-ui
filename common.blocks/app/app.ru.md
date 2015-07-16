@@ -9,27 +9,39 @@
     content : [
         {
             elem : 'title',
-            content : 'Заголовок'
+            content : {
+                block : 'heading',
+                mods : { theme : 'alfa-on-color' },
+                lvl : 1,
+                content : 'Заголовок'
+            }
         },
         {
             elem : 'menu',
             content : [
                 {
-                    block : 'menu-item',
+                    block : 'menu',
                     mods : { theme : 'alfa-on-color' },
-                    mods : {
-                        type : 'link'
-                    },
-                    url : '#',
-                    content : 'Раз'
-                },
-                {
-                    block : 'menu-item',
-                    mods : {
-                        type : 'link'
-                    },
-                    url : '#',
-                    content : 'Два'
+                    content : [
+                        {
+                            block : 'menu-item',
+                            mods : {
+                                theme : 'alfa-on-color',
+                                type : 'link'
+                            },
+                            url : '#',
+                            content : 'Раз'
+                        },
+                        {
+                            block : 'menu-item',
+                            mods : {
+                                theme : 'alfa-on-color',
+                                type : 'link'
+                            },
+                            url : '#',
+                            content : 'Два'
+                        }
+                    ]
                 }
             ]
         },

@@ -52,15 +52,4 @@
             display: none;
         }
     }
-
-    /* FIXME: maybe remove cascade? */
-    .button {
-        position: relative;
-
-        &__text {
-            display: inline;
-
-            z-index: 1;
-        }
-    }
 }

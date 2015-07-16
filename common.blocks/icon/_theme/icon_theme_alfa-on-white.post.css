@@ -24,7 +24,7 @@
         }
     }
 
-    @each $name in pdf, print, email, close, calendar, search, help {
+    @each $name in pdf, pr, email, close, calendar, search, help {
         &.icon_tool_$(name) {
             background-image: url('../_tool/icon_tool_$(name)-white.svg');
         }
