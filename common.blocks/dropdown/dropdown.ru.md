@@ -32,7 +32,7 @@
 
 ``` js
 {
-    block : 'logo',
+    block : 'dropdown',
     mods : { mode : 'hover', theme : 'alfa-on-white' }
 }
 ```
@@ -41,7 +41,7 @@
 
 ``` js
 {
-    block : 'logo',
+    block : 'dropdown',
     mods : { mode : 'hover', theme : 'alfa-on-color' }
 }
 ```

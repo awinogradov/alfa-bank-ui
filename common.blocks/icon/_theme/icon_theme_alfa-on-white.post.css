@@ -20,7 +20,7 @@
 
     @each $name in twitter, vk, facebook {
         &.icon_network_$(name) {
-            background-image: url('../_network/icon_network_$(name).svg');
+            background-image: url('../_network/icon_network_$(name)-on-white.svg');
         }
     }
 
