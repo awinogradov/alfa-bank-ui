@@ -120,7 +120,7 @@
                 return {
                     elem: 'col',
                     elemMods: { theme: theme },
-                    content: ['m', 'l'].map(function(size) {
+                    content: ['s', 'm', 'l', 'xl'].map(function(size) {
                         return [
                             { elem: 'size', content: size },
                             {
@@ -351,7 +351,7 @@
                 return {
                     elem: 'col',
                     elemMods: { theme: theme },
-                    content: ['m', 'l'].map(function(size) {
+                    content: ['s', 'm', 'l', 'xl'].map(function(size) {
                         return [
                             { elem: 'size', content: size },
                             {
