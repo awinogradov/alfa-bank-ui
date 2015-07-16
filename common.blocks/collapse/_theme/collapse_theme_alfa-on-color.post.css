@@ -1,25 +1,6 @@
-.collapse_theme_alfa-on-color
-{
-    .collapse__link
-    {
-        outline: none;
-    }
-
+.collapse_theme_alfa-on-color {
     .collapse__link:after
     {
-        content: '';
-        background: url(../__link/collaps__link.svg);
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        margin-left: 5px;
-    }
-
-    &.collapse_expanded
-    {
-        .collapse__link:after
-        {
-            transform: scaleY(-1);
-        }
+        background: url(../__link/collaps__link-color.svg);
     }
 }
