@@ -4,6 +4,6 @@
         { block: 'copyright' },
         { block: 'menu', mods: { horizontal: true } },
         { block: 'menu' },
-        { block: 'menu-item' }
+        { block: 'menu-item', type: 'link' }
     ]
 }];

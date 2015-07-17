@@ -2,6 +2,7 @@ block('footer').elem('menu')(
     content()(function() {
         var _this = this;
 
+        // TODO: #NYCP-69
         return [
             {
                 block: 'menu',
