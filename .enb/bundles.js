@@ -1,4 +1,6 @@
 var levels = require('./levels'),
+    path = require('path'),
+    fs = require('fs'),
     techs = {
         levels: require('enb-bem-techs/techs/levels'),
         levelsToBemdecl: require('enb-bem-techs/techs/levels-to-bemdecl'),
@@ -19,7 +21,21 @@ var levels = require('./levels'),
     bundles = {
     configure: function(config, platform, nodes) {
         config.nodes(nodes, function(nodeConfig) {
-            nodeConfig.addTech([techs.levels, { levels: levels.getProjectLevels(platform) }]);
+
+            var nodeDir = nodeConfig.getNodePath(),
+                blockSublevelDir = path.join(nodeDir, '..', '.blocks'),
+                sublevelDir = path.join(nodeDir, 'blocks'),
+                extendedLevels = [].concat(levels.getProjectLevels(platform));
+
+            if(fs.existsSync(blockSublevelDir)) {
+                extendedLevels.push(blockSublevelDir);
+            }
+
+            if(fs.existsSync(sublevelDir)) {
+                extendedLevels.push(sublevelDir);
+            }
+
+            nodeConfig.addTech([techs.levels, { levels: extendedLevels }]);
 
             nodeConfig.addTechs([
                 [techs.bemdecl],
