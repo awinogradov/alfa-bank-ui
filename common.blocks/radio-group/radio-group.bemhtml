@@ -9,7 +9,6 @@ block('radio-group')(
                     block: 'radio',
                     mods: {
                         type: mods.type,
-                        view: mods.view,
                         mode: mods.mode,
                         theme: mods.theme,
                         size: mods.size,
@@ -21,7 +20,8 @@ block('radio-group')(
                     text: option.text,
                     title: option.title,
                     icon: option.icon
-                }
+                },
+                (!mods.type) ? { tag: 'br' } : ''
             ];
         });
     })

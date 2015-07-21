@@ -30,8 +30,7 @@
                 margin-left: 12px;
             }
 
-            /* FIXME: maybe remove cascade? */
-            .icon {
+            .select__tick {
                 width: 28px;
             }
         }
@@ -44,8 +43,7 @@
                 margin-left: 14px;
             }
 
-            /* FIXME: maybe remove cascade? */
-            .icon {
+            .select__tick {
                 width: 29px;
             }
         }
@@ -58,8 +56,7 @@
                 margin-left: 16px;
             }
 
-            /* FIXME: maybe remove cascade? */
-            .icon {
+            .select__tick {
                 width: 33px;
             }
         }
@@ -72,8 +69,7 @@
                 margin-left: 18px;
             }
 
-            /* FIXME: maybe remove cascade? */
-            .icon {
+            .select__tick {
                 width: 39px;
             }
         }
@@ -83,6 +79,10 @@
         position: absolute;
         top: 0;
         right: 0;
+
+        height: 100%;
+
+        background-position: center;
 
         transition: all 0.1s ease-out;
         opacity: 0.3;

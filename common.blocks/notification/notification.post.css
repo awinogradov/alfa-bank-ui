@@ -1,7 +1,6 @@
 :root {
     --height: 109px;
     --width: 390px;
-    --notifWidth: 80px;
 }
 
 .notification {
@@ -26,7 +25,7 @@
 
     .notification__status {
         text-align: center;
-        width: var(--notifWidth);
+        width: 80px;
         height: var(--height);
         line-height: var(--height);
         position: absolute;
@@ -36,7 +35,7 @@
     .notification__message {
         display: table;
         height: var(--height);
-        padding-left: var(--notifWidth) + 21px;
+        padding-left: 101px;
         min-width: 200px;
         max-width: 360px;
     }

@@ -35,6 +35,10 @@
         border-bottom-style: dotted;
     }
 
+    &.link_disabled {
+        cursor: default;
+    }
+
     &.link_icon {
         border: none;
 

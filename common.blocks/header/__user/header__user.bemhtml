@@ -2,6 +2,7 @@ block('header').elem('user')(
     content()(function() {
         var _this = this;
 
+        // TODO: #NYCP-69
         return [
             {
                 block: 'link',

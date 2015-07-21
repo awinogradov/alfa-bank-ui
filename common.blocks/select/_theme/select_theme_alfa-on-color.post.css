@@ -2,8 +2,6 @@
 
     .select__button {
 
-        color: #fff;
-
         /* FIXME: maybe remove cascade? */
         &.button_disabled {
 

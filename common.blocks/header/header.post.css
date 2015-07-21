@@ -31,8 +31,11 @@
         padding: 25px 35px;
         margin-right: 30px;
 
+        border: 0;
         border-radius: 0 0 5px 5px;
         background-color: #ef3124;
+
+        outline: none;
     }
 
     .header__content {

@@ -1,8 +1,8 @@
 :root {
-    --placeholderColor: rgba(0,0,0,0.5);
+    --placeholderColorOnWhite: rgba(0,0,0,0.5);
 }
-
 .input_theme_alfa-on-white {
+
     background: rgba(255, 255, 255, .3);
     color: #000;
 
@@ -17,15 +17,15 @@
         background: transparent;
 
         &::-webkit-input-placeholder {
-            color: var(--placeholderColor);
+            color: var(--placeholderColorOnWhite);
         }
 
         &:-ms-input-placeholder {
-            color: var(--placeholderColor);
+            color: var(--placeholderColorOnWhite);
         }
 
         &::-moz-placeholder {
-            color: var(--placeholderColor);
+            color: var(--placeholderColorOnWhite);
         }
     }
 

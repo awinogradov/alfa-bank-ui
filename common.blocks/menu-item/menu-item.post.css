@@ -7,13 +7,20 @@
 
     &.menu-item_disabled {
         opacity: 0.3;
+        cursor: default;
     }
 
     &.menu-item_checked {
         cursor: default;
     }
 
+    &.menu-item_hidden {
+        display: none;
+    }
+
     &.menu-item_type_link {
+
+        cursor: default;
 
         .menu-item__link {
             outline: none;

@@ -1,6 +1,7 @@
 [{
     shouldDeps: [
-        { elem: 'clear' }
+        { elem: 'clear' },
+        { block: 'plate', mods: { 'has-clear': true } }
     ]
 },
 {

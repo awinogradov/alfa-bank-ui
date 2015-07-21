@@ -1,5 +1,5 @@
 :root {
-    --placeholderColor: rgba(255,255,255,0.5);
+    --placeholderColorOnColor: rgba(255,255,255,0.5);
 }
 
 .input_theme_alfa-on-color {
@@ -19,15 +19,15 @@
         color: #fff;
 
         &::-webkit-input-placeholder {
-            color: var(--placeholderColor);
+            color: var(--placeholderColorOnColor);
         }
 
         &:-ms-input-placeholder {
-            color: var(--placeholderColor);
+            color: var(--placeholderColorOnColor);
         }
 
         &::-moz-placeholder {
-            color: var(--placeholderColor);
+            color: var(--placeholderColorOnColor);
         }
     }
 
