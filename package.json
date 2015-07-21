@@ -52,6 +52,7 @@
     "specs": "magic run specs",
     "tmpls": "magic run tmpl-specs",
     "clean-dist": "find *.blocks -iname '*.css' | grep -v 'post.css' |  xargs rm",
+    "rm-examples": "rm -rf desktop.examples && rm -rf touch.examples",
     "dist": "npm run clean-dist && node distribute",
     "coverage": "ISTANBUL_COVERAGE=yes npm run specs && istanbul report --include coverage.json html text && istanbul check-coverage --include coverage.json",
     "release-patch": "mversion patch",
