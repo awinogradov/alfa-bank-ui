@@ -8,7 +8,7 @@ provide(FormField.decl({ modName: 'message', modValue: 'popup' }, {
 
                 /* istanbul ignore else: no way to check, form-field throws without `type` */
                 if (this.hasMod('type')) {
-                    this.getMessage()._popup.setAnchor(this.getControl());
+                    this.getMessage().setAnchor(this.getControl());
                 }
             }
         },
