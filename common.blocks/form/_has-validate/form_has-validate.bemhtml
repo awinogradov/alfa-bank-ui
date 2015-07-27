@@ -1,3 +1,0 @@
-block('form').mod('has-validation', true)(
-    attrs()({ novalidate: true })
-);
