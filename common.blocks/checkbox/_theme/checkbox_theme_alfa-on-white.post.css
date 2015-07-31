@@ -10,7 +10,7 @@
         border-color: #ccc;
 
         &:after {
-            background-image: url(../__box/checkbox__box_white.svg);
+            background-image: url(../__box/checkbox__box_theme_alfa-on-white.svg);
         }
     }
 

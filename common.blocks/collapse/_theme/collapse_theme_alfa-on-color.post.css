@@ -1,6 +1,6 @@
 .collapse_theme_alfa-on-color {
     .collapse__link:after
     {
-        background: url(../__link/collaps__link-color.svg);
+        background: url(../__link/collaps__link_theme_alfa-on-color.svg);
     }
 }

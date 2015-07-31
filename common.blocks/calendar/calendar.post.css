@@ -1,6 +1,6 @@
 .calendar {
-    color: rgba(128, 128, 128, 1);
-    background: rgba(255,255,255,1);
+    color: #808080;
+    background: #fff;
 
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
@@ -42,7 +42,7 @@
     }
 
     .calendar__title {
-        border-bottom: 1px solid rgba(217, 217, 219, 1);
+        border-bottom: 1px solid #d9d9db;
     }
 
     .calendar__dayname {
@@ -72,7 +72,7 @@
 @media all and (min-width:0px) {
 
     .calendar .calendar__day_state_current:after {
-        background: rgba(178, 12, 0, 1);
+        background: #b20c00;
     }
 }
 

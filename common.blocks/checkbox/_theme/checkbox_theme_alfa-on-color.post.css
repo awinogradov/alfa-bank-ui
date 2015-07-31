@@ -11,7 +11,7 @@
         border-color: rgba(255, 255, 255, 0.5);
 
         &:after {
-            background-image: url(../__box/checkbox__box_color.svg);
+            background-image: url(../__box/checkbox__box_theme_alfa-on-color.svg);
         }
     }
 

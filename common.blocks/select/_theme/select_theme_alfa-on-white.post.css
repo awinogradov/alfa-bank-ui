@@ -1,7 +1,7 @@
 .select_theme_alfa-on-white {
 
     .select__tick {
-        background-image: url(../__tick/select__tick_white.svg);
+        background-image: url(../__tick/select__tick_theme_alfa-on-white.svg);
     }
 
     /* FIXME: maybe remove cascade? */

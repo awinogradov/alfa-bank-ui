@@ -1,8 +1,3 @@
 .label_theme_alfa-on-white {
     color : #333333;
-
-    &.label_optional {
-        font-style: italic;
-        color:      #999;
-    }
 }

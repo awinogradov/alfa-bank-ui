@@ -1,6 +1,5 @@
 .popup {
     position: absolute;
-    display: none;
     visibility: hidden;
 
     margin: -9999px 0 0 -9999px;
@@ -10,10 +9,6 @@
     box-sizing: border-box;
 
     z-index : 9999;
-
-    &.popup_js_inited {
-        display: block;
-    }
 
     &.popup_view_column {
         background-color: rgba(0, 0, 0, 0.6);
@@ -34,7 +29,6 @@
 
         &.popup_visible {
             margin: 0 0 0 -35px;
-            display: block;
             opacity: 1;
         }
     }

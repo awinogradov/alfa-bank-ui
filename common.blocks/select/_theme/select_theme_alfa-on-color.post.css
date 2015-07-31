@@ -18,7 +18,7 @@
     }
 
     .select__tick {
-        background-image: url(../__tick/select__tick_color.svg);
+        background-image: url(../__tick/select__tick_theme_alfa-on-color.svg);
     }
 
     &.select_size_s .select__tick,
