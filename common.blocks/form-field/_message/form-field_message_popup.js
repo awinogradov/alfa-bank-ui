@@ -1,11 +1,10 @@
-modules.define('form-field', [], function(provide, FormField) {
+modules.define('form-field', function(provide, FormField) {
 
-provide(FormField.decl({ modName: 'message', modValue: 'popup' }, {
+provide(FormField.decl({ modName: 'message', modVal: 'popup' }, {
     onSetMod: {
         'js': {
             'inited': function() {
                 this.__base.apply(this, arguments);
-
                 /* istanbul ignore else: no way to check, form-field throws without `type` */
                 if (this.hasMod('type')) {
                     this.getMessage().setAnchor(this.getControl());

@@ -36,18 +36,15 @@ modules.define('spec', ['spec__utils', 'form-field', 'message', 'popup', 'input'
             (!!spy.called).should.be.true;
         });
 
-        it('should hide message on blur', function() {
-            var spy = sinon.spy(block.getMessage(), 'hide');
-
-            block.setMod('focused');
-            block.delMod('focused');
-            (!!spy.called).should.be.true;
-        });
-
         it('should set popup`s anchor to input', function() {
             var anchor = block.getMessage()._popup._anchor;
-            (!!anchor).should.be.true;
-            anchor.attr('class').should.equal(block.getControl().domElem.attr('class'));
+
+            block.hasMod('type').should.be.true;
+
+            setTimeout(function() {
+                (!!anchor).should.be.true;
+                anchor.attr('class').should.equal(block.getControl().domElem.attr('class'));
+            }, 20);
         });
     });
 
