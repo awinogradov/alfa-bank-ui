@@ -44,7 +44,7 @@
   },
   "scripts": {
     "start": "enb server",
-    "make": "enb make --no-cache && npm run dist",
+    "make": "magic make && npm run dist",
     "build": "magic make",
     "deps": "bower i",
     "test": "npm run lint && npm run build && npm run specs",
