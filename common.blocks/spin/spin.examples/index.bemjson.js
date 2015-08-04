@@ -21,7 +21,7 @@
                             {
                                 elem: 'item',
                                 content: {
-                                    block : 'spin',
+                                    block: 'spin',
                                     mods: { theme: theme, size: size, visible: true }
                                 }
                             }

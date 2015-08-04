@@ -6,7 +6,7 @@
         },
         {
             block: 'icon',
-            mods: { theme: 'alfa-on-white'}
+            mods: { theme: 'alfa-on-white' }
         }
     ]
 });

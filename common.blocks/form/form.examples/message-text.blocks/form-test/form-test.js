@@ -16,7 +16,7 @@ provide(FormTest.decl({
 
                         form.validate();
 
-                        if(form.getStatus()) {
+                        if (form.getStatus()) {
                             form.setMessageVal('form valid! Data: ' + JSON.stringify(data));
                         } else {
                             form.setMessageVal('form invalid! Data: ' +  JSON.stringify(data));

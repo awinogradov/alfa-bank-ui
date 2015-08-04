@@ -7,7 +7,7 @@ modules.define('spec', ['spec__utils', 'sinon', 'form-field', 'input', 'message'
 
         var bemjsonForEventTests = {
             block: 'form-field',
-            mods: { type: 'input', 'has-validation': true, message: 'text'},
+            mods: { type: 'input', 'has-validation': true, message: 'text' },
             content: [
                 {
                     block: 'input',
@@ -34,8 +34,6 @@ modules.define('spec', ['spec__utils', 'sinon', 'form-field', 'input', 'message'
             input.emit('pick-date');
             spyOnValidate.called.should.be.true;
         });
-
-
 
         it('should mark itself dirty on setVal if with modifier has-validation', function() {
             block = utils.buildBlock('form-field', {

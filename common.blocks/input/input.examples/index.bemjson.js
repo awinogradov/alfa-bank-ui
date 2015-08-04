@@ -351,8 +351,8 @@
                                     block: 'input',
                                     mods: { theme: theme, size: size, 'has-calendar': true, 'has-addon': true },
                                     val: '22.07.2015',
-                                    earlierLimit : '20.06.2015',
-                                    laterLimit : '20.08.2015',
+                                    earlierLimit: '20.06.2015',
+                                    laterLimit: '20.08.2015',
                                 }
                             }
                         ];
@@ -376,7 +376,7 @@
                                     block: 'input',
                                     mods: { theme: theme, size: size, 'has-calendar': true, 'has-addon': true },
                                     val: '22.07.2015',
-                                    weekdays : ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su']
+                                    weekdays: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su']
                                 }
                             }
                         ];
@@ -400,7 +400,7 @@
                                     block: 'input',
                                     mods: { theme: theme, size: size, 'has-calendar': true, 'has-addon': true },
                                     val: '22.07.2015',
-                                    months : ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+                                    months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
                                 }
                             }
                         ];
@@ -448,7 +448,7 @@
                                     block: 'input',
                                     mods: { theme: theme, size: size, 'has-calendar': true, 'has-addon': true },
                                     val: '19.07.2015',
-                                    directions : ['right-center']
+                                    directions: ['right-center']
                                 }
                             }
                         ];

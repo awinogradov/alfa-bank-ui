@@ -5,4 +5,4 @@
             mods: { theme: 'alfa-on-white' }
         }
     ]
-})
+});

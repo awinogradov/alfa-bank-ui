@@ -19,14 +19,14 @@
                         ['left-top', 'left-center', 'left-bottom']
                     ].map(function(directions) {
                         return {
-                            block : 'tooltip',
-                            mods : { theme : 'alfa-on-color' },
-                            icon : {
-                                block : 'icon',
-                                mods : { theme : 'alfa-on-white', tool : 'help', size : 'm' }
+                            block: 'tooltip',
+                            mods: { theme: 'alfa-on-color' },
+                            icon: {
+                                block: 'icon',
+                                mods: { theme: 'alfa-on-white', tool: 'help', size: 'm' }
                             },
-                            directions : directions,
-                            content : 'Tooltip'
+                            directions: directions,
+                            content: 'Tooltip'
                         };
                     })
                 }

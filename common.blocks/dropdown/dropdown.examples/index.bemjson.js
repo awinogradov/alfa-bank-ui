@@ -16,7 +16,7 @@
                         elem: 'item',
                         content: {
                             block: 'dropdown',
-                            mods: { switcher : 'link', theme : theme },
+                            mods: { switcher: 'link', theme: theme },
                             switcher: {
                                 block: 'link',
                                 mods: { theme: theme, size: 'm' },
@@ -39,7 +39,7 @@
                         elem: 'item',
                         content: {
                             block: 'dropdown',
-                            mods: { switcher : 'button', theme : theme },
+                            mods: { switcher: 'button', theme: theme },
                             switcher: {
                                 block: 'button',
                                 mods: { theme: theme, size: 'm' },
@@ -65,7 +65,7 @@
                             mods: { mode: 'hover', switcher: 'link', theme: theme },
                             switcher: {
                                 block: 'link',
-                                mods: { theme: theme, size: 'm'},
+                                mods: { theme: theme, size: 'm' },
                                 content: 'Узнать об акциях на сайте'
                             },
                             popup: 'Скидка 30% на новую коллекцию. Для активации акции нужно ввести промокод.'

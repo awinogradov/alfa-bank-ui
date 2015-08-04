@@ -15,11 +15,11 @@
                     content: {
                         elem: 'item',
                         content: {
-                            block : 'collapse',
-                            mods : { theme : theme },
-                            expandedLabel : 'Скрыть подробности',
-                            collapsedLabel : 'Подробнее',
-                            content : [ 'Подробности...' ]
+                            block: 'collapse',
+                            mods: { theme: theme },
+                            expandedLabel: 'Скрыть подробности',
+                            collapsedLabel: 'Подробнее',
+                            content: ['Подробности...']
                         }
                     }
                 };

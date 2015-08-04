@@ -1,4 +1,5 @@
 /* istanbul ignore next */
+/* jscs:disable */
 /* jshint
     maxlen: 100500,
     node: true,

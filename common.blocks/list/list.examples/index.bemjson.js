@@ -31,9 +31,9 @@
                                 [
                                     'ordered item 4',
                                     {
-                                        block : 'list',
-                                        mods : { type : 'ordered' },
-                                        items : ['nested and ordered item 1', 'nested and ordered item 2']
+                                        block: 'list',
+                                        mods: { type: 'ordered' },
+                                        items: ['nested and ordered item 1', 'nested and ordered item 2']
                                     }
                                 ]
                             ]
@@ -64,9 +64,9 @@
                                 [
                                     'ordered item 4',
                                     {
-                                        block : 'list',
-                                        mods : { type : 'ordered' },
-                                        items : ['nested and ordered item 1', 'nested and ordered item 2']
+                                        block: 'list',
+                                        mods: { type: 'ordered' },
+                                        items: ['nested and ordered item 1', 'nested and ordered item 2']
                                     }
                                 ]
                             ]

@@ -11,7 +11,7 @@ provide(BEMDOM.decl(this.name, {
             'inited': function() {
                 this.findBlockInside('form')
                     .on('submit', function(e, data) {
-                        if(e.target.getStatus()) {
+                        if (e.target.getStatus()) {
                             console.log('form valid', data);
                         } else {
                             console.log('form invalid', data);

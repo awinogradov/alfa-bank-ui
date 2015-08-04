@@ -18,11 +18,11 @@
                             {
                                 elem: 'item',
                                 content: {
-                                    block : 'radio',
+                                    block: 'radio',
                                     mods: { theme: theme, size: size },
-                                    name : 'radio',
-                                    val : 'BEMHTML',
-                                    text : 'Использовать BEMHTML'
+                                    name: 'radio',
+                                    val: 'BEMHTML',
+                                    text: 'Использовать BEMHTML'
                                 }
                             }
                         ];
@@ -43,11 +43,11 @@
                             {
                                 elem: 'item',
                                 content: {
-                                    block : 'radio',
+                                    block: 'radio',
                                     mods: { theme: theme, size: size, type: 'button' },
-                                    name : 'radio',
-                                    val : 'BEMHTML',
-                                    text : 'Использовать BEMHTML'
+                                    name: 'radio',
+                                    val: 'BEMHTML',
+                                    text: 'Использовать BEMHTML'
                                 }
                             }
                         ];
@@ -69,32 +69,32 @@
                                 elem: 'item',
                                 content: [
                                     {
-                                        block : 'radio',
+                                        block: 'radio',
                                         mods: { theme: theme, size: size, disabled: true },
-                                        name : 'radio',
-                                        val : 'BEMHTML',
-                                        text : 'Использовать BEMHTML'
+                                        name: 'radio',
+                                        val: 'BEMHTML',
+                                        text: 'Использовать BEMHTML'
                                     },
                                     {
-                                        block : 'radio',
+                                        block: 'radio',
                                         mods: { theme: theme, size: size, type: 'button', disabled: true },
-                                        name : 'radio',
-                                        val : 'BEMHTML',
-                                        text : 'Использовать BEMHTML'
+                                        name: 'radio',
+                                        val: 'BEMHTML',
+                                        text: 'Использовать BEMHTML'
                                     },
                                     {
-                                        block : 'radio',
+                                        block: 'radio',
                                         mods: { theme: theme, size: size, checked: true, disabled: true },
-                                        name : 'radio',
-                                        val : 'BEMHTML',
-                                        text : 'Использовать BEMHTML'
+                                        name: 'radio',
+                                        val: 'BEMHTML',
+                                        text: 'Использовать BEMHTML'
                                     },
                                     {
-                                        block : 'radio',
+                                        block: 'radio',
                                         mods: { theme: theme, size: size, type: 'button', checked: true, disabled: true },
-                                        name : 'radio',
-                                        val : 'BEMHTML',
-                                        text : 'Использовать BEMHTML'
+                                        name: 'radio',
+                                        val: 'BEMHTML',
+                                        text: 'Использовать BEMHTML'
                                     }
                                 ]
                             }

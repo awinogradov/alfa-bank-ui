@@ -21,7 +21,7 @@
                                     block: 'checkbox-group',
                                     mods: { theme: theme, size: size },
                                     name: 'group1',
-                                    val : [],
+                                    val: [],
                                     option3: [
                                         {
                                             text: 'Default',
@@ -47,7 +47,7 @@
                                     block: 'checkbox-group',
                                     mods: { theme: theme, size: size },
                                     name: 'group3',
-                                    val : [2, 3],
+                                    val: [2, 3],
                                     options: [
                                         {
                                             text: 'Default',
@@ -88,7 +88,7 @@
                                     block: 'checkbox-group',
                                     mods: { theme: theme, size: size, type: 'line' },
                                     name: 'group5',
-                                    val : [2, 3],
+                                    val: [2, 3],
                                     options: [
                                         {
                                             text: 'Default',
@@ -129,7 +129,7 @@
                                     block: 'checkbox-group',
                                     mods: { theme: theme, size: size, type: 'button' },
                                     name: 'group6',
-                                    val : [2, 3],
+                                    val: [2, 3],
                                     options: [
                                         {
                                             text: 'Default',
@@ -170,7 +170,7 @@
                                     block: 'checkbox-group',
                                     mods: { theme: theme, size: size, disabled: true },
                                     name: 'group3',
-                                    val : [],
+                                    val: [],
                                     options: [
                                         {
                                             text: 'Disabled',
@@ -196,7 +196,7 @@
                                     block: 'checkbox-group',
                                     mods: { theme: theme, size: size, disabled: true },
                                     name: 'group3',
-                                    val : [1, 2, 3],
+                                    val: [1, 2, 3],
                                     options: [
                                         {
                                             text: 'Checked-Disabled',
@@ -222,7 +222,7 @@
                                     block: 'checkbox-group',
                                     mods: { theme: theme, size: size },
                                     name: 'group4',
-                                    val : [2, 3],
+                                    val: [2, 3],
                                     options: [
                                         {
                                             text: 'Disabled',
@@ -265,7 +265,7 @@
                                     block: 'checkbox-group',
                                     mods: { theme: theme, size: size, disabled: true, type: 'line' },
                                     name: 'group3',
-                                    val : [],
+                                    val: [],
                                     options: [
                                         {
                                             text: 'Disabled',
@@ -291,7 +291,7 @@
                                     block: 'checkbox-group',
                                     mods: { theme: theme, size: size, disabled: true, type: 'line' },
                                     name: 'group3',
-                                    val : [1, 2, 3],
+                                    val: [1, 2, 3],
                                     options: [
                                         {
                                             text: 'Checked-Disabled',
@@ -317,7 +317,7 @@
                                     block: 'checkbox-group',
                                     mods: { theme: theme, size: size, type: 'line' },
                                     name: 'group4',
-                                    val : [2, 3],
+                                    val: [2, 3],
                                     options: [
                                         {
                                             text: 'Disabled',
@@ -360,7 +360,7 @@
                                     block: 'checkbox-group',
                                     mods: { theme: theme, size: size, disabled: true, type: 'button' },
                                     name: 'group3',
-                                    val : [],
+                                    val: [],
                                     options: [
                                         {
                                             text: 'Disabled',
@@ -386,7 +386,7 @@
                                     block: 'checkbox-group',
                                     mods: { theme: theme, size: size, disabled: true, type: 'button' },
                                     name: 'group3',
-                                    val : [1, 2, 3],
+                                    val: [1, 2, 3],
                                     options: [
                                         {
                                             text: 'Checked-Disabled',
@@ -412,7 +412,7 @@
                                     block: 'checkbox-group',
                                     mods: { theme: theme, size: size, type: 'button' },
                                     name: 'group4',
-                                    val : [2, 3],
+                                    val: [2, 3],
                                     options: [
                                         {
                                             text: 'Disabled',

@@ -15,8 +15,8 @@
                     content: {
                         elem: 'item',
                         content: {
-                            block : 'copyright',
-                            mods : { theme : theme }
+                            block: 'copyright',
+                            mods: { theme: theme }
                         }
                     }
                 };

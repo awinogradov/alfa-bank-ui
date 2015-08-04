@@ -14,7 +14,7 @@ provide(FormTest.decl({
 
                 this._form
                     .on('submit', function(e, data) {
-                        if(e.target.getStatus()) { // OK
+                        if (e.target.getStatus()) { // OK
                             console.log('form valid', data);
                         } else {                   // Например покажем невалидные поля формы
                             console.log('form invalid', data);

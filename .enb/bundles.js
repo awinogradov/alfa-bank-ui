@@ -27,11 +27,11 @@ var levels = require('./levels'),
                 sublevelDir = path.join(nodeDir, 'blocks'),
                 extendedLevels = [].concat(levels.getProjectLevels(platform));
 
-            if(fs.existsSync(blockSublevelDir)) {
+            if (fs.existsSync(blockSublevelDir)) {
                 extendedLevels.push(blockSublevelDir);
             }
 
-            if(fs.existsSync(sublevelDir)) {
+            if (fs.existsSync(sublevelDir)) {
                 extendedLevels.push(sublevelDir);
             }
 

@@ -1,32 +1,32 @@
 module.exports = {
-    options : {
-        boss : true,
-        eqeqeq : true,
-        evil : true,
-        expr : true,
-        forin : true,
-        immed : true,
-        loopfunc : true,
-        maxdepth : 4,
-        maxlen : 120,
-        noarg : true,
-        noempty : true,
-        onecase : true,
-        quotmark : 'single',
-        sub : true,
-        supernew : true,
-        undef : true,
-        unused : true
+    options: {
+        boss: true,
+        eqeqeq: true,
+        evil: true,
+        expr: true,
+        forin: true,
+        immed: true,
+        loopfunc: true,
+        maxdepth: 4,
+        maxlen: 120,
+        noarg: true,
+        noempty: true,
+        onecase: true,
+        quotmark: 'single',
+        sub: true,
+        supernew: true,
+        undef: true,
+        unused: true
     },
 
-    groups : {
-        browserjs : {
-            options : {
-                browser : true,
-                predef : ['modules']
+    groups: {
+        browserjs: {
+            options: {
+                browser: true,
+                predef: ['modules']
             },
-            includes : ['*.blocks/**/*.js'],
-            excludes : [
+            includes: ['*.blocks/**/*.js'],
+            excludes: [
                 '*.blocks/**/*node.js',
                 '**/*.i18n/*.js',
                 '**/*.bem/*.js',
@@ -38,11 +38,11 @@ module.exports = {
             ]
         },
 
-        specjs : {
-            options : {
-                browser : true,
-                maxlen : 150,
-                predef : [
+        specjs: {
+            options: {
+                browser: true,
+                maxlen: 150,
+                predef: [
                     'modules',
                     'describe',
                     'it',
@@ -53,12 +53,12 @@ module.exports = {
                     'chai'
                 ]
             },
-            includes : ['*.blocks/**/*.spec.js']
+            includes: ['*.blocks/**/*.spec.js']
         },
 
-        bemhtml : {
-            options : {
-                predef : [
+        bemhtml: {
+            options: {
+                predef: [
                     'apply',
                     'applyCtx',
                     'applyNext',
@@ -78,23 +78,23 @@ module.exports = {
                     'tag'
                 ]
             },
-            includes : ['*.blocks/**/*.bemhtml'],
-            excludes : ['test.blocks/**/*']
+            includes: ['*.blocks/**/*.bemhtml'],
+            excludes: ['test.blocks/**/*']
         },
 
-        bemjsonjs : {
-            options : {
-                asi : true
+        bemjsonjs: {
+            options: {
+                asi: true
             },
-            includes : ['*.bundles/**/*.bemjson.js']
+            includes: ['*.bundles/**/*.bemjson.js']
         },
 
-        nodejs : {
-            options : {
-                node : true
+        nodejs: {
+            options: {
+                node: true
             },
-            includes : ['**/.bem/**/*.js'],
-            excludes : [
+            includes: ['**/.bem/**/*.js'],
+            excludes: [
                 '.bem/cache/**',
                 'libs/**',
                 'node_modules/**'

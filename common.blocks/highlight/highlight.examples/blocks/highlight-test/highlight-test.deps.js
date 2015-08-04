@@ -15,4 +15,4 @@
             mods: { theme: 'alfa-on-color' }
         }
     ]
-})
+});

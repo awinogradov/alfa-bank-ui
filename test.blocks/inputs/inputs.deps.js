@@ -1,4 +1,4 @@
-[{
+({
     shouldDeps: [
         {
             block: 'input',
@@ -35,12 +35,12 @@
             mods: { theme: ['alfa-on-color', 'alfa-on-white'], type: 'button' }
         },
         {
-            block : 'radio',
-            mods : { theme: ['alfa-on-color', 'alfa-on-white'], }
+            block: 'radio',
+            mods: { theme: ['alfa-on-color', 'alfa-on-white'], }
         },
         {
             block: 'row'
         },
         'display-none'
     ]
-}];
+});

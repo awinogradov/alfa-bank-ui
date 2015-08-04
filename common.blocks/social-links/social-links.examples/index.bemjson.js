@@ -21,11 +21,11 @@
                             {
                                 elem: 'item',
                                 content: {
-                                    block : 'social-links',
+                                    block: 'social-links',
                                     mods: { theme: theme, size: size },
-                                    links : [
-                                        { network : 'twitter', url : 'http://twitter.com/...' },
-                                        { network : 'facebook', url : 'http://facebook.com/...' }
+                                    links: [
+                                        { network: 'twitter', url: 'http://twitter.com/...' },
+                                        { network: 'facebook', url: 'http://facebook.com/...' }
                                     ]
                                 }
                             }

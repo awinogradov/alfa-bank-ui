@@ -18,13 +18,13 @@
                             {
                                 elem: 'item',
                                 content: {
-                                    block : 'radio-group',
-                                    mods : { theme : theme, size : size },
-                                    name : 'radio-sizes-s',
-                                    options : [
-                                        { val : 1, text : 'Один' },
-                                        { val : 2, text : 'Два', checked : true },
-                                        { val : 3, text : 'Три', disabled: true }
+                                    block: 'radio-group',
+                                    mods: { theme: theme, size: size },
+                                    name: 'radio-sizes-s',
+                                    options: [
+                                        { val: 1, text: 'Один' },
+                                        { val: 2, text: 'Два', checked: true },
+                                        { val: 3, text: 'Три', disabled: true }
                                     ]
                                 }
                             }
@@ -46,13 +46,13 @@
                             {
                                 elem: 'item',
                                 content: {
-                                    block : 'radio-group',
-                                    mods : { theme : theme, size : size, type: 'line' },
-                                    name : 'radio-sizes-s',
-                                    options : [
-                                        { val : 1, text : 'Один' },
-                                        { val : 2, text : 'Два', checked : true },
-                                        { val : 3, text : 'Три', disabled: true }
+                                    block: 'radio-group',
+                                    mods: { theme: theme, size: size, type: 'line' },
+                                    name: 'radio-sizes-s',
+                                    options: [
+                                        { val: 1, text: 'Один' },
+                                        { val: 2, text: 'Два', checked: true },
+                                        { val: 3, text: 'Три', disabled: true }
                                     ]
                                 }
                             }
@@ -74,13 +74,13 @@
                             {
                                 elem: 'item',
                                 content: {
-                                    block : 'radio-group',
-                                    mods : { theme : theme, size : size, type: 'button' },
-                                    name : 'radio-sizes-s',
-                                    options : [
-                                        { val : 1, text : 'Один' },
-                                        { val : 2, text : 'Два', checked : true },
-                                        { val : 3, text : 'Три', disabled: true }
+                                    block: 'radio-group',
+                                    mods: { theme: theme, size: size, type: 'button' },
+                                    name: 'radio-sizes-s',
+                                    options: [
+                                        { val: 1, text: 'Один' },
+                                        { val: 2, text: 'Два', checked: true },
+                                        { val: 3, text: 'Три', disabled: true }
                                     ]
                                 }
                             }
@@ -103,13 +103,13 @@
                                 elem: 'item',
                                 content: [
                                     {
-                                        block : 'radio-group',
-                                        mods : { theme : theme, size : size, disabled: true },
-                                        name : 'radio-sizes-s',
-                                        options : [
-                                            { val : 1, text : 'Один' },
-                                            { val : 2, text : 'Два', checked : true },
-                                            { val : 3, text : 'Три', disabled: true }
+                                        block: 'radio-group',
+                                        mods: { theme: theme, size: size, disabled: true },
+                                        name: 'radio-sizes-s',
+                                        options: [
+                                            { val: 1, text: 'Один' },
+                                            { val: 2, text: 'Два', checked: true },
+                                            { val: 3, text: 'Три', disabled: true }
                                         ]
                                     }
                                 ]
@@ -118,13 +118,13 @@
                                 elem: 'item',
                                 content: [
                                     {
-                                        block : 'radio-group',
-                                        mods : { theme : theme, size : size, type: 'button', disabled: true },
-                                        name : 'radio-sizes-s',
-                                        options : [
-                                            { val : 1, text : 'Один' },
-                                            { val : 2, text : 'Два', checked : true },
-                                            { val : 3, text : 'Три', disabled: true }
+                                        block: 'radio-group',
+                                        mods: { theme: theme, size: size, type: 'button', disabled: true },
+                                        name: 'radio-sizes-s',
+                                        options: [
+                                            { val: 1, text: 'Один' },
+                                            { val: 2, text: 'Два', checked: true },
+                                            { val: 3, text: 'Три', disabled: true }
                                         ]
                                     }
                                 ]
