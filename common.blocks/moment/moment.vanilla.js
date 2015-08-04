@@ -1,4 +1,15 @@
 /* istanbul ignore next */
+/* jshint
+    maxlen: 100500,
+    node: true,
+    unused: false,
+    undef: false,
+    eqeqeq: false,
+    eqnull: true,
+    forin: false,
+    maxdepth: false
+*/
+
 modules.define('moment', function(provide) {
 
 //! moment.js

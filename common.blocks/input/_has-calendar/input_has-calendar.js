@@ -1,7 +1,10 @@
 /**
  * @module input
  */
-modules.define('input', ['i-bem__dom', 'jquery', 'dom', 'keyboard__codes'], function(provide, BEMDOM, $, dom, KeyCodes, Input) {
+modules.define(
+    'input',
+    ['i-bem__dom', 'jquery', 'dom', 'keyboard__codes'],
+    function(provide, BEMDOM, $, dom, KeyCodes, Input) {
 
 /**
  * @exports
@@ -66,7 +69,7 @@ provide(Input.decl({ modName: 'has-calendar' }, /** @lends input.prototype */{
         this.emit('pick-date');
     },
 
-    _onControlBlur: function(e) {
+    _onControlBlur: function() {
 
         this._calendar.setVal(this.getVal());
 

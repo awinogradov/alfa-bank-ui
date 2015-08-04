@@ -1,11 +1,11 @@
-modules.define('spec', ['spec__utils', 'form-field', 'input', 'message'], function(provide, utils) {
+modules.define('spec', ['spec__utils', 'sinon', 'form-field', 'input', 'message'], function(provide, utils, sinon) {
 
     describe('form-field_type_input', function() {
 
         var block;
         var assert = chai.assert;
 
-        bemjsonForEventTests = {
+        var bemjsonForEventTests = {
             block: 'form-field',
             mods: { type: 'input', 'has-validation': true, message: 'text'},
             content: [

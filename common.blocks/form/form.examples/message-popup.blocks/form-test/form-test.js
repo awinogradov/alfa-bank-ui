@@ -1,3 +1,5 @@
+/* globals console: true */
+
 modules.define(
 'form-test',
 function(provide, FormTest) {

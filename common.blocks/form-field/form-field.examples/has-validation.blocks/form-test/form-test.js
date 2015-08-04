@@ -7,7 +7,7 @@ provide(FormTest.decl({
         'js': {
             'inited': function() {
                 this.findBlockInside('form')
-                    .on('submit', function(e, data) {
+                    .on('submit', function(e) {
                         var form = e.target;
                         form.validate();
                     });

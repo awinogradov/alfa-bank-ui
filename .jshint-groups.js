@@ -27,6 +27,7 @@ module.exports = {
             },
             includes : ['*.blocks/**/*.js'],
             excludes : [
+                '*.blocks/**/*node.js',
                 '**/*.i18n/*.js',
                 '**/*.bem/*.js',
                 '**/_*.js',
@@ -48,7 +49,8 @@ module.exports = {
                     'before',
                     'beforeEach',
                     'after',
-                    'afterEach'
+                    'afterEach',
+                    'chai'
                 ]
             },
             includes : ['*.blocks/**/*.spec.js']
@@ -78,16 +80,6 @@ module.exports = {
             },
             includes : ['*.blocks/**/*.bemhtml'],
             excludes : ['test.blocks/**/*']
-        },
-
-        bhjs : {
-            options : {
-                node : true
-            },
-            includes : [
-                '*.blocks/**/*.bh.js',
-                'design/*.blocks/**/*.bh.js'
-            ]
         },
 
         bemjsonjs : {

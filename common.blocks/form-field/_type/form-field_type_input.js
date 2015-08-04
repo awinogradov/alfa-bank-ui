@@ -20,7 +20,7 @@ modules.define('form-field', function(provide, FormField) {
         },
         setVal: function(val) {
             if (this.hasMod('has-validation')) {
-                this._dirty = this._dirty || this.getVal() != val;
+                this._dirty = this._dirty || this.getVal() !== val;
             }
             this.__base.apply(this, arguments);
         }

@@ -1,4 +1,4 @@
-modules.define('spec', ['spec__utils', 'jquery__formatter', 'input'], function(provide, utils, $) {
+modules.define('spec', ['spec__utils', 'jquery__formatter', 'input'], function(provide, utils) {
 
     describe('input_has-mask', function() {
 

@@ -51,7 +51,7 @@ modules.define('spec', ['spec__utils', 'jquery', 'input'], function(provide, uti
 
         it('should not call filter function on same value', function() {
             var called = false;
-            block.setFilter(function(item, val) {
+            block.setFilter(function() {
                 called = true;
                 return true;
             });

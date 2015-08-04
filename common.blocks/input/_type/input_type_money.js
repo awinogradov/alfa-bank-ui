@@ -12,7 +12,7 @@ provide(Input.decl({ modName: 'type', modVal: 'money' }, {
                 var _this = this;
 
                 $(this.elem('control')).keyup(function(q) {
-                    if (q.keyCode == 190){
+                    if (q.keyCode === 190){
                         _this.setVal(_this._val + ',');
                     }
                 });

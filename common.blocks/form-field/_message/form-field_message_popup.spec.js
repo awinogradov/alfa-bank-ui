@@ -1,4 +1,4 @@
-modules.define('spec', ['spec__utils', 'form-field', 'message', 'popup', 'input'], function(provide, utils) {
+modules.define('spec', ['spec__utils', 'sinon', 'form-field', 'message', 'popup', 'input'], function(provide, utils, sinon) {
 
     describe('form-field_message_popup', function() {
 

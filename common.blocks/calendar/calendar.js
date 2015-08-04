@@ -1,7 +1,10 @@
 /**
  * @module calendar
  */
-modules.define('calendar', ['i-bem__dom', 'BEMHTML', 'jquery', 'moment'], function(provide, BEMDOM, BEMHTML, $, moment) {
+modules.define(
+    'calendar',
+    ['i-bem__dom', 'BEMHTML', 'jquery', 'moment'],
+    function(provide, BEMDOM, BEMHTML, $, moment) {
 
 /**
  * @exports

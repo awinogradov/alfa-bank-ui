@@ -1,4 +1,4 @@
-modules.define('spec', ['notification', 'spec__utils'], function(provide, _, utils) {
+modules.define('spec', ['spec__utils', 'notification', 'plate'], function(provide, utils) {
 
     describe('notification', function() {
         var notification;

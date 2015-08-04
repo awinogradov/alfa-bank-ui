@@ -1,4 +1,4 @@
-modules.define('spec', ['spec__utils', 'input', 'message', 'form-field'], function(provide, utils) {
+modules.define('spec', ['spec__utils', 'sinon', 'input', 'message', 'form-field'], function(provide, utils, sinon) {
 
     describe('form-field_has-validation', function() {
 

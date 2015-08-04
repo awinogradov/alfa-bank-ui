@@ -11,7 +11,7 @@ modules.define('input', [], function(provide, Input) {
                     this.__base.apply(this, arguments);
 
                     if (!this.hasMod('has-autocomplete')) {
-                        console.error('\'has-filter\' should only be used with \'has-autocomplete\'');
+                        console.error('\'has-filter\' should only be used with \'has-autocomplete\''); // jshint ignore: line
                         return;
                     }
 
@@ -78,7 +78,7 @@ modules.define('input', [], function(provide, Input) {
      * Input value change handler
      * @private
      */
-    function handleChange(e) {
+    function handleChange() {
         var val = this.getVal();
         this.filter(val);
     }

@@ -1,3 +1,16 @@
+/* istanbul ignore next */
+/* jshint
+    maxlen: 100500,
+    node: true,
+    unused: false,
+    undef: false,
+    eqeqeq: false,
+    eqnull: true,
+    forin: false,
+    maxdepth: false,
+    -W041: false,
+    -W032: false
+*/
 modules.define('jquery__highlight', ['jquery'], function(provide, jQuery) {
 /*
  * jQuery Highlight plugin

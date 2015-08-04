@@ -144,7 +144,7 @@ describe('input_has-calendar', function() {
 
         block.elem('control').trigger('focus');
 
-        calendar.on('change', function(_, item) {
+        calendar.on('change', function() {
             eventCatched = true;
         });
 

@@ -10,7 +10,7 @@ modules.define('form-field', function(provide, FormField) {
             this.params.value = val;
         },
 
-        getVal: function(val) {
+        getVal: function() {
             return this.params.value || '';
         }
 

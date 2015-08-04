@@ -1,7 +1,7 @@
 modules.define(
     'display-none',
-    ['i-bem__dom', 'jquery'],
-    function(provide, BEMDOM, $) {
+    ['i-bem__dom'],
+    function(provide, BEMDOM) {
 
 provide(BEMDOM.decl(this.name, {
 
@@ -13,14 +13,6 @@ provide(BEMDOM.decl(this.name, {
                     this.toggleMod('true', true);
                 });
 
-            }
-        },
-        'true' : {
-            'true' : function() {
-                console.log('display:none');
-            },
-            '' : function() {
-                console.log('display:block');
             }
         }
     }

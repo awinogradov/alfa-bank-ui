@@ -1,5 +1,3 @@
-var expect = chai.expect;
-
 modules.define('spec',
     ['jquery', 'spec__utils', 'popup', 'calendar', 'moment'],
     function(provide, $, helper, popup, calendar, moment) {
@@ -9,7 +7,8 @@ var build = helper.buildBlock;
 describe('calendar', function() {
 
     var block,
-        bemjson;
+        bemjson,
+        expect = chai.expect;
 
     beforeEach(function() {
         bemjson = {
@@ -37,7 +36,7 @@ describe('calendar', function() {
         var date = new Date('Wed May 20 2015 00:00:00 GMT+0300 (MSK)');
 
         block.setVal('');
-        (block._val == null).should.be.true;
+        (block._val === null).should.be.true;
         (block.getVal()).should.equal('');
 
         block.setVal(date);

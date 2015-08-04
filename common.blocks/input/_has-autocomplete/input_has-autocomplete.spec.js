@@ -248,7 +248,6 @@ describe('input_has-autocomplete', function() {
 
     it('should not close the popup when user clicked on input (AFT-132)', function() {
         block = build('input', bemjson);
-        var popup = block.findBlockInside('popup');
 
         block.elem('control').focus();
         block.getMod('opened').should.be.true;
@@ -452,9 +451,6 @@ describe('input_has-autocomplete', function() {
                 { val: 'value 2', data: 'xxx', content: 'item 2' }
             ];
             block = build('input', bemjson);
-
-            var menu = block.findBlockInside('menu'),
-                menuItems = menu.findBlocksInside('menu-item');
 
             block.domElem.trigger(new $.Event('keydown', { keyCode: 13 })); // ENTER
 

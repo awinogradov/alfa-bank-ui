@@ -1,4 +1,4 @@
-modules.define('notification', ['i-bem__dom', 'BEMHTML', 'plate'], function(provide, BEMDOM, BEMHTML) {
+modules.define('notification', ['i-bem__dom'], function(provide, BEMDOM) {
 
     provide(BEMDOM.decl(this.name, {
 
