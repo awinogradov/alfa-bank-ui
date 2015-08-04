@@ -12,7 +12,6 @@ block('input').mod('mode', 'link')(
                     mix: { block: this.block, elem: 'trigger' },
                     mods: {
                         theme: this._input.mods.theme,
-                        bkg: this._input.mods.bkg,
                         pseudo: true
                     },
                     content: this._input.val || this._input.placeholder

@@ -1,0 +1,53 @@
+.example-section {
+    padding-bottom: 30px;
+    display: block;
+    width: 1250px;
+    margin: auto;
+
+    &__title {
+        padding-left: 10px;
+    }
+
+    &__size {
+        position: relative;
+        height: 0;
+        left: -20px;
+        bottom: -2px;
+
+        text-transform: uppercase;
+
+        font-family: 'Roboto';
+        font-size: 14px;
+    }
+
+    &__col {
+        position: relative;
+        width: 49%;
+        float: left;
+        padding: 15px 0 0px 30px;
+        box-sizing: border-box;
+        border-radius: 6px;
+
+        &_theme_alfa-on-color {
+            .example-section__size {
+                color: #FFF;
+            }
+        }
+
+        &_theme_alfa-on-white {
+            background: #FFF;
+
+            .example-section__size {
+                color: #000;
+            }
+        }
+    }
+
+    &__col + &__col {
+        float: right;
+    }
+
+    &__item {
+        padding: 0px 15px 15px;
+    }
+}

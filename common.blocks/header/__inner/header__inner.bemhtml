@@ -2,6 +2,7 @@ block('header').elem('inner')(
     content()(function() {
         var _this = this;
 
+        // TODO: #NYCP-69
         return [
             {
                 block: 'link',
@@ -11,8 +12,7 @@ block('header').elem('inner')(
                     {
                         block: 'logo',
                         mods: {
-                            theme: _this._headerMods.theme,
-                            bkg: _this._headerMods.bkg,
+                            theme: 'alfa-on-color',
                             size: 's',
                             view: 'full'
                         }

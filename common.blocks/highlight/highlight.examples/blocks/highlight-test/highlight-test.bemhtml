@@ -1,0 +1,19 @@
+block('highlight-test')(
+    js()(true),
+    content()(function() {
+        return [
+            {
+                block: 'button',
+                mods: { theme: 'alfa-on-color', size: 'm' },
+                mix: { block: 'highlight-test', elem: 'clean' },
+                text: 'Отчистить'
+            },
+            {
+                block: 'button',
+                mods: { theme: 'alfa-on-color', size: 'm' },
+                mix: { block: 'highlight-test', elem: 'find' },
+                text: 'Найти'
+            }
+        ];
+    })
+);

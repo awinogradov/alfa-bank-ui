@@ -1,4 +1,16 @@
 /* istanbul ignore next */
+/* jscs:disable */
+/* jshint
+    maxlen: 100500,
+    node: true,
+    unused: false,
+    undef: false,
+    eqeqeq: false,
+    eqnull: true,
+    forin: false,
+    maxdepth: false
+*/
+
 modules.define('moment', function(provide) {
 
 //! moment.js
@@ -61,7 +73,7 @@ modules.define('moment', function(provide) {
         parseTokenOffsetMs = /[\+\-]?\d+/, // 1234567890123
         parseTokenTimestampMs = /[\+\-]?\d+(\.\d{1,3})?/, // 123456789 123456789.123
 
-        //strict parsing regexes
+        // strict parsing regexes
         parseTokenOneDigit = /\d/, // 0 - 9
         parseTokenTwoDigits = /\d\d/, // 00 - 99
         parseTokenThreeDigits = /\d{3}/, // 000 - 999

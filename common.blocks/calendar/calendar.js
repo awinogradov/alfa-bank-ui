@@ -1,7 +1,10 @@
 /**
  * @module calendar
  */
-modules.define('calendar', ['i-bem__dom', 'BEMHTML', 'jquery', 'moment'], function(provide, BEMDOM, BEMHTML, $, moment) {
+modules.define(
+    'calendar',
+    ['i-bem__dom', 'BEMHTML', 'jquery', 'moment'],
+    function(provide, BEMDOM, BEMHTML, $, moment) {
 
 /**
  * @exports
@@ -221,7 +224,7 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
     },
 
     _getToday: function() {
-        return moment().set({ hour: 0, minute : 0, second: 0 }).format();
+        return moment().set({ hour: 0, minute: 0, second: 0 }).format();
     },
 
     _formatDate: function(date) {

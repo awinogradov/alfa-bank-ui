@@ -10,19 +10,18 @@
 
 ``` js
 {
-    block : 'сopyright',
-    mods : { theme  : 'alfa' }
+    block : 'сopyright'
 }
 ```
 
-### _bkg
+### _theme
 
 - для белого фона (white)
 
 ``` js
 {
     block : 'сopyright',
-    mods : { theme  : 'alfa', bkg : 'white' }
+    mods : { theme  : 'alfa-on-white' }
 }
 ```
 
@@ -31,6 +30,6 @@
 ``` js
 {
     block : 'сopyright',
-    mods : { theme  : 'alfa', bkg : 'color' }
+    mods : { theme  : 'alfa-on-color' }
 }
 ``` 

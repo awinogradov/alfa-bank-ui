@@ -1,8 +1,6 @@
-var expect = chai.expect;
-
 modules.define('spec',
-    ['spec__utils', 'jquery', 'input'],
-    function(provide, helper, $, Input) {
+    ['spec__utils', 'input'],
+    function(provide, helper) {
 
 var build = helper.buildBlock;
 

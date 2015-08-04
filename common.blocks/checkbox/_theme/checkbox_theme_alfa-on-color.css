@@ -1,0 +1,35 @@
+.checkbox_theme_alfa-on-color {
+    color: #fff;
+}
+.checkbox_theme_alfa-on-color .checkbox__box {
+    -webkit-transition: all 200ms ease;
+            transition: all 200ms ease;
+    background: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+.checkbox_theme_alfa-on-color .checkbox__box:after {
+    background-image: url(../__box/checkbox__box_theme_alfa-on-color.svg);
+}
+.checkbox_theme_alfa-on-color.checkbox_checked .checkbox__box {
+    border-color: #fff;
+}
+.checkbox_theme_alfa-on-color.checkbox_focused .checkbox__box, .checkbox_theme_alfa-on-color.checkbox_hovered .checkbox__box {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+}
+.checkbox_theme_alfa-on-color.checkbox_hovered.checkbox_checked .checkbox__box {
+    background: rgba(255, 255, 255, 0.2);
+}
+.checkbox_theme_alfa-on-color.checkbox_disabled {
+    color: #fff;
+    color: rgba(255, 255, 255, 0.2);
+}
+.checkbox_theme_alfa-on-color.checkbox_disabled .checkbox__box {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+}
+.checkbox_theme_alfa-on-color.checkbox_disabled.checkbox_checked .checkbox__box:after {
+    opacity: 0.4;
+}

@@ -1,0 +1,12 @@
+.radio-group {
+    display: inline-block;
+}
+.radio-group.radio-group_size_m {
+    line-height: 8px;
+}
+.radio-group.radio-group_size_l {
+    line-height: 9px;
+}
+.radio-group.radio-group_type_button {
+    white-space: nowrap;
+}

@@ -3,27 +3,15 @@
         { block: 'form' },
         {
             block: 'form-field',
-            mods: { theme: 'alfa', bkg: 'color' }
+            mods: { theme: ['alfa-on-color', 'alfa-on-white'] }
         },
         {
             block: 'label',
-            mods: { theme: 'alfa', bkg: 'color' }
+            mods: { theme: ['alfa-on-color', 'alfa-on-white'] }
         },
         {
             block: 'input',
-            mods: { theme: 'alfa', bkg: 'color' }
-        },
-        {
-            block: 'form-field',
-            mods: { theme: 'alfa', bkg: 'white' }
-        },
-        {
-            block: 'label',
-            mods: { theme: 'alfa', bkg: 'white' }
-        },
-        {
-            block: 'input',
-            mods: { theme: 'alfa', bkg: 'white' }
+            mods: { theme: ['alfa-on-color', 'alfa-on-white'] }
         },
         {
             block: 'row'

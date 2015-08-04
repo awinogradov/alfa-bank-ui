@@ -2,12 +2,12 @@ block('header').elem('menu')(
     content()(function() {
         var _this = this;
 
+        // TODO: #NYCP-69
         return [
             {
                 block: 'menu',
                 mods: {
                     theme: _this._headerMods.theme,
-                    bkg: _this._headerMods.bkg,
                     size: 'm',
                     horizontal: true
                 },
@@ -24,7 +24,7 @@ block('header').elem('menu')(
                                     content: item.items.map(function(item) {
                                         return {
                                             block: 'menu-item',
-                                            mods: { type: 'link', theme: 'alfa', bkg: 'color' },
+                                            mods: { type: 'link', theme: _this._headerMods.theme },
                                             mix: { elem: 'additional' },
                                             url: item.url,
                                             content: item.title

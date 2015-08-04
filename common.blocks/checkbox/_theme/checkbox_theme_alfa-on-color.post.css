@@ -1,0 +1,54 @@
+.checkbox_theme_alfa-on-color {
+    color: #fff;
+
+    .checkbox__box {
+        transition: all 200ms ease;
+
+        background: transparent;
+
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(255, 255, 255, 0.5);
+
+        &:after {
+            background-image: url(../__box/checkbox__box_theme_alfa-on-color.svg);
+        }
+    }
+
+    &.checkbox_checked {
+
+        .checkbox__box {
+            border-color: #fff;
+        }
+    }
+
+    &.checkbox_focused,
+    &.checkbox_hovered {
+
+        .checkbox__box {
+            border-color: #fff;
+            background: rgba(255, 255, 255, 0.2);
+        }
+    }
+
+    &.checkbox_hovered {
+
+        &.checkbox_checked .checkbox__box {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    }
+
+    &.checkbox_disabled {
+        color: #fff;
+        color: rgba(255, 255, 255, 0.2);
+
+        .checkbox__box {
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        &.checkbox_checked .checkbox__box:after {
+            opacity: 0.4;
+        }
+    }
+}

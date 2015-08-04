@@ -15,21 +15,21 @@ block('layouts')(
                             },
                             {
                                 block: 'plate',
-                                mods: { theme: 'alfa', bkg: 'color' },
+                                mods: { theme: 'alfa-on-color' },
                                 content: [
                                     {
                                         block: 'logo',
-                                        mods: { theme: 'alfa', bkg: 'white', view: 'full', size: 's' }
+                                        mods: { theme: 'alfa-on-white', view: 'full', size: 's' }
                                     }
                                 ]
                             },
                             {
                                 block: 'plate',
-                                mods: { theme: 'alfa', bkg: 'color', 'has-clear': true },
+                                mods: { theme: 'alfa-on-color', 'has-clear': true },
                                 content: [
                                     {
                                         block: 'logo',
-                                        mods: { theme: 'alfa', bkg: 'white', view: 'full', size: 's' }
+                                        mods: { theme: 'alfa-on-white', view: 'full', size: 's' }
                                     }
                                 ]
                             }
@@ -47,21 +47,21 @@ block('layouts')(
                             },
                             {
                                 block: 'plate',
-                                mods: { theme: 'alfa', bkg: 'white' },
+                                mods: { theme: 'alfa-on-white' },
                                 content: [
                                     {
                                         block: 'logo',
-                                        mods: { theme: 'alfa', bkg: 'color', view: 'full', size: 's' }
+                                        mods: { theme: 'alfa-on-color', view: 'full', size: 's' }
                                     }
                                 ]
                             },
                             {
                                 block: 'plate',
-                                mods: { theme: 'alfa', bkg: 'white', 'has-clear': true },
+                                mods: { theme: 'alfa-on-white', 'has-clear': true },
                                 content: [
                                     {
                                         block: 'logo',
-                                        mods: { theme: 'alfa', bkg: 'color', view: 'full', size: 's' }
+                                        mods: { theme: 'alfa-on-color', view: 'full', size: 's' }
                                     }
                                 ]
                             }

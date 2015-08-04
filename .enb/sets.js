@@ -8,9 +8,7 @@ var path = require('path'),
             destPath: platform + '.examples',
             levels: levels.getLibLevels(platform),
             techSuffixes: ['examples'],
-            fileSuffixes: ['bemjson.js', 'title.txt'],
-            inlineBemjson: true,
-            processInlineBemjson: set.wrapInPage
+            fileSuffixes: ['bemjson.js']
         });
 
         sets.docs.configure({
@@ -42,29 +40,6 @@ var path = require('path'),
                 }
             }
         });
-    },
-
-    wrapInPage: function(bemjson, meta) {
-        var basename = '_' + path.basename(meta.filename, '.bemjson.js');
-        return {
-            block: 'page',
-            title: naming.stringify(meta.notation),
-            head: [{ elem: 'css', url: basename + '.css' }],
-            scripts: [{ elem: 'js', url: basename + '.js' }],
-            mods: { theme: set.getThemeFromBemjson(bemjson) },
-            content: bemjson
-        };
-    },
-
-    getThemeFromBemjson: function(bemjson) {
-        if (typeof bemjson !== 'object') return;
-
-        var theme, key;
-
-        for (key in bemjson) {
-            if (theme = key === 'mods' ? bemjson.mods.theme :
-                    set.getThemeFromBemjson(bemjson[key])) return theme;
-        }
     }
 };
 

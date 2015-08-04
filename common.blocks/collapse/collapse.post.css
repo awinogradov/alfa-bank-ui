@@ -1,12 +1,37 @@
-.collapse__content {
-    height: 0;
-    visibility: hidden;
-    transition: height 0.2s;
-    overflow: hidden;
-}
+.collapse {
 
-.collapse_expanded .collapse__content {
-    height: auto;
-    visibility: visible;
-    padding-bottom: 15px;
+    &__link
+    {
+        outline: none;
+    }
+
+    &__link:after
+    {
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin-left: 5px;
+    }
+
+    &__content {
+        height: 0;
+        visibility: hidden;
+        transition: height 0.2s;
+        overflow: hidden;
+    }
+
+    &_expanded {
+
+        .collapse__content {
+            height: auto;
+            visibility: visible;
+            padding-bottom: 15px;
+        }
+
+        .collapse__link:after
+        {
+            transform: scaleY(-1);
+        }
+    }
 }

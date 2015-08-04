@@ -5,31 +5,43 @@
 ``` js
 {
     block : 'app',
-    mods : { theme : 'alfa', bkg : 'color' },
     mix : { block : 'service-name' },
     content : [
         {
             elem : 'title',
-            content : 'Заголовок'
+            content : {
+                block : 'heading',
+                mods : { theme : 'alfa-on-color' },
+                lvl : 1,
+                content : 'Заголовок'
+            }
         },
         {
             elem : 'menu',
             content : [
                 {
-                    block : 'menu-item',
-                    mods : {
-                        type : 'link'
-                    },
-                    url : '#',
-                    content : 'Раз'
-                },
-                {
-                    block : 'menu-item',
-                    mods : {
-                        type : 'link'
-                    },
-                    url : '#',
-                    content : 'Два'
+                    block : 'menu',
+                    mods : { theme : 'alfa-on-color' },
+                    content : [
+                        {
+                            block : 'menu-item',
+                            mods : {
+                                theme : 'alfa-on-color',
+                                type : 'link'
+                            },
+                            url : '#',
+                            content : 'Раз'
+                        },
+                        {
+                            block : 'menu-item',
+                            mods : {
+                                theme : 'alfa-on-color',
+                                type : 'link'
+                            },
+                            url : '#',
+                            content : 'Два'
+                        }
+                    ]
                 }
             ]
         },

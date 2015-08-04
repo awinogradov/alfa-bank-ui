@@ -1,0 +1,109 @@
+.select {
+    max-width: 100%;
+
+    display: inline-block;
+
+    vertical-align: top;
+
+    .select__button {
+        width: 100%;
+
+        text-align: left;
+        vertical-align: top;
+
+        padding: 0;
+
+        /* FIXME: maybe remove cascade? */
+        .button__text {
+            display: block;
+
+            &:empty:before {
+                content: '\00a0';
+            }
+        }
+
+        &.button_size_s {
+
+            .button__text {
+                font-size: 12px;
+                padding-right: 27px;
+                margin-left: 12px;
+            }
+
+            .select__tick {
+                width: 28px;
+            }
+        }
+
+        &.button_size_m {
+
+            .button__text {
+                font-size: 12px;
+                padding-right: 28px;
+                margin-left: 14px;
+            }
+
+            .select__tick {
+                width: 29px;
+            }
+        }
+
+        &.button_size_l {
+
+            .button__text {
+                font-size: 15px;
+                padding-right: 32px;
+                margin-left: 16px;
+            }
+
+            .select__tick {
+                width: 33px;
+            }
+        }
+
+        &.button_size_xl {
+
+            .button__text {
+                font-size: 25px;
+                padding-right: 38px;
+                margin-left: 18px;
+            }
+
+            .select__tick {
+                width: 39px;
+            }
+        }
+    }
+
+    .select__tick {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        height: 100%;
+
+        background-position: center;
+
+        transition: all 0.1s ease-out;
+        opacity: 0.3;
+    }
+
+    /* FIXME: maybe remove cascade? */
+    .button_hovered {
+
+        .select__tick {
+            opacity: 1;
+        }
+    }
+
+    &.select_disabled {
+
+        .button_hovered .select__tick {
+            opacity: 0.3;
+        }
+    }
+
+    &.select_opened .select__tick {
+        transform: rotate(-180deg);
+    }
+}

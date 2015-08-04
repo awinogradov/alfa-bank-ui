@@ -18,19 +18,16 @@
 
 ``` js
 {
-    block : 'plate',
-    mods : { theme  : 'alfa' }
+    block : 'plate'
 }
 ```
-
-### _bkg
 
 - для белого фона (white)
 
 ``` js
 {
     block : 'plate',
-    mods : { theme  : 'alfa', bkg : 'white' }
+    mods : { theme  : 'alfa-on-white' }
 }
 ```
 
@@ -39,7 +36,7 @@
 ``` js
 {
     block : 'plate',
-    mods : { theme  : 'alfa', bkg : 'color' }
+    mods : { theme  : 'alfa-on-color' }
 }
 ```
 

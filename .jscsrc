@@ -1,1 +1,16 @@
-{ "plugins": ["./node_modules/jscs-alfa"], "preset": "alfa" }
+{
+    "plugins": ["./node_modules/jscs-alfa"],
+    "preset": "alfa",
+    "requireMultipleVarDecl": null,
+    "excludeFiles": [
+        ".git/**",
+        ".enb/tmp/**",
+        "node_modules/**",
+        "libs/**",
+        "coverage/**",
+        "*.bundles/**",
+        "*.examples/**",
+        "*.specs/**",
+        "**/*.bemdecl.js"
+    ]
+}

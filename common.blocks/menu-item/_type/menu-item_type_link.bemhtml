@@ -5,7 +5,6 @@ block('menu-item').mod('type', 'link').match(this._alfaMods)(
             mix: { block: 'menu-item', elem: 'link' },
             mods: {
                 theme: this.mods.theme || this._alfaMods.theme,
-                bkg: this.mods.bkg || this._alfaMods.bkg,
                 size: this.mods.size || this._alfaMods.size,
                 pseudo: this.mods.pseudo
             },

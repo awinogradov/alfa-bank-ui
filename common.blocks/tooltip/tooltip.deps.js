@@ -4,7 +4,7 @@
     ],
     shouldDeps: [
         { block: 'control' },
-        { block: 'popup', mods: { target: 'anchor' } }
+        { block: 'popup', mods: { theme: 'alfa-on-color', target: 'anchor' } }
     ]
 },
 {

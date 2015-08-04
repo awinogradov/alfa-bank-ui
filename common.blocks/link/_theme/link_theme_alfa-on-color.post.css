@@ -1,0 +1,9 @@
+.link_theme_alfa-on-color {
+    color: #fff;
+
+    border-bottom-color: rgba(255,255,255,.5);
+
+    &.link_hovered {
+        opacity: .7;
+    }
+}

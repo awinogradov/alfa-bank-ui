@@ -7,11 +7,11 @@
 
 ```bemjson
 {
-    block : 'menu-item',
-    mods: {type: 'dropdown'},
-    val : 4,
+    block: 'menu-item',
+    mods: { type: 'dropdown'},
+    val: 4,
     content: 'Солнце',
-    popup : [
+    popup: [
         {
             block: 'menu',
             content: 'content'

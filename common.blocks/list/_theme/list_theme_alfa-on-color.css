@@ -1,0 +1,8 @@
+.list_theme_alfa-on-color {
+    color: #fff;
+
+}
+.list_theme_alfa-on-color .list__item:before {
+    color: inherit;
+
+}

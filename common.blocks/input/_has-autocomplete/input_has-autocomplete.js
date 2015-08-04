@@ -26,7 +26,7 @@ function reveal(parent, item) {
     } else if (pos + item.outerHeight() >= parent.height()) {
         newScroll = parent.scrollTop() + pos + item.outerHeight() + margin - parent.height();
     }
-    if (newScroll != null) {
+    if (newScroll !== null) {
         // TODO animate
         parent.scrollTop(newScroll);
     }
@@ -41,15 +41,15 @@ function onDocPointerPress(e) {
     }
 }
 
-function onDocPointerRelease(e) {
+function onDocPointerRelease() {
     this._isPointerPressInProgress = false;
     this.unbindFromDoc('pointerrelease', onDocPointerRelease);
 }
 
 function isEventInPopup(e) {
     var $target = $(e.target);
-    return dom.contains(this.getPopup().domElem, $target)
-        || dom.contains(this.domElem, $target);
+    return dom.contains(this.getPopup().domElem, $target) ||
+        dom.contains(this.domElem, $target);
 }
 
 function onMenuItemClick(_, data) {
@@ -69,7 +69,7 @@ function handleKey(e) {
         this.setFocusedItem(previousNotHidden(this.getMenuItems(), this.getFocusedItem()));
         break;
     case KeyCodes.ENTER:
-        if (typeof this._focusedItem !== 'undefined' && this._focusedItem != -1) {
+        if (typeof this._focusedItem !== 'undefined' && this._focusedItem !== -1) {
             onMenuItemClick.call(this, null, { item: this._menuItems[this._focusedItem] });
             e.preventDefault();
             return true;
@@ -91,7 +91,6 @@ function mapItems(item) {
             block: 'menu-item',
             mods: {
                 theme: this.getMod('theme'),
-                bkg: this.getMod('bkg'),
                 size: this.getMod('size')
             },
             val: item.val,
@@ -99,7 +98,7 @@ function mapItems(item) {
             content: item.content
         };
     }
-};
+}
 
 provide(Input.decl({ modName: 'has-autocomplete' }, {
     onSetMod: {
@@ -176,9 +175,9 @@ provide(Input.decl({ modName: 'has-autocomplete' }, {
             items = this.getMenuItems();
 
         // remove focused state from current item
-        if (current != -1) items[current].delMod('focused');
+        if (current !== -1) items[current].delMod('focused');
 
-        if (value != -1) {
+        if (value !== -1) {
             // add focused state to new item
             items[value].setMod('focused');
             // scroll to new item

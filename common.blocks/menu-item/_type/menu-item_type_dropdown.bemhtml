@@ -4,7 +4,6 @@ block('menu-item').mod('type', 'dropdown').match(this._alfaMods)(
             block: 'dropdown',
             mods: {
                 theme: this.mods.theme || this._alfaMods.theme,
-                bkg: this.mods.bkg || this._alfaMods.bkg,
                 size: this.mods.size || this._alfaMods.size,
                 switcher: 'link',
                 mode: 'hover',
@@ -15,7 +14,6 @@ block('menu-item').mod('type', 'dropdown').match(this._alfaMods)(
                 block: 'popup',
                 mods: {
                     theme: this.mods.theme || this._alfaMods.theme,
-                    bkg: this.mods.bkg || this._alfaMods.bkg,
                     view: 'column'
                 },
                 content: this.ctx.popup

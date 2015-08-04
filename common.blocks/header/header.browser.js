@@ -17,7 +17,8 @@ provide(BEMDOM.decl(this.name, {
     },
 
     _colorize: function() {
-        BEMDOM.win.scrollTop() > 10 ?
+        this._isColorise = BEMDOM.win.scrollTop() > 10;
+        this._isColorise ?
             this.setMod('fixed') :
             this.delMod('fixed');
     }

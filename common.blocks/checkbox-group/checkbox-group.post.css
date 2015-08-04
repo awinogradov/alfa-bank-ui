@@ -1,0 +1,39 @@
+.checkbox-group {
+    display: inline-block;
+
+    &.checkbox-group_type_button {
+        white-space: nowrap;
+    }
+
+    .checkbox_size_m {
+        margin-bottom: 10px;
+    }
+
+    .checkbox_size_l {
+        margin-bottom: 12px;
+    }
+
+    &_type_line {
+        .checkbox {
+            margin-bottom: 0;
+        }
+
+        .checkbox_size_m {
+            margin-right: 13px;
+        }
+
+        .checkbox_size_l {
+            margin-right: 15px;
+        }
+
+        .checkbox:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &_type_button {
+        .checkbox {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.radio_theme_alfa-on-color {
+    color: #fff;
+
+    .radio__box {
+        transition: all 200ms ease;
+
+        background: transparent;
+
+        border-width: 1px;
+        border-style: solid;
+        border-color: #fff;
+        border-color: rgba(255, 255, 255, 0.5);;
+    }
+
+    &.radio_focused,
+    &.radio_hovered {
+
+        .radio__box {
+            border-color: #fff;
+            background: rgba(255, 255, 255, 0.2);;
+        }
+    }
+
+    &.radio_checked {
+
+        .radio__box {
+            border-color: #fff;
+
+            &:after {
+                background: #fff;
+            }
+        }
+    }
+
+    &.radio_disabled {
+        color: #fff;
+        color: rgba(255, 255, 255, 0.2);
+
+        .radio__box {
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);;
+
+            &:after {
+                opacity: 0.4;
+            }
+        }
+    }
+}

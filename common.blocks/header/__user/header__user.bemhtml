@@ -2,12 +2,12 @@ block('header').elem('user')(
     content()(function() {
         var _this = this;
 
+        // TODO: #NYCP-69
         return [
             {
                 block: 'link',
                 mods: {
                     theme: _this._headerMods.theme,
-                    bkg: _this._headerMods.bkg,
                     pseudo: !_this._header.customerUrl,
                     size: 'm'
                 },
@@ -19,7 +19,6 @@ block('header').elem('user')(
                 block: 'link',
                 mods: {
                     theme: _this._headerMods.theme,
-                    bkg: _this._headerMods.bkg,
                     size: 'm'
                 },
                 url: _this._header.out,
@@ -29,7 +28,6 @@ block('header').elem('user')(
                     mix: { block: 'header', elem: 'user-out-icon' },
                     mods: {
                         theme: _this._headerMods.theme,
-                        bkg: _this._headerMods.bkg,
                         user: 'out'
                     }
                 }

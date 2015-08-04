@@ -1,4 +1,4 @@
-modules.define('spec', ['notification', 'spec__utils'], function(provide, _, utils) {
+modules.define('spec', ['spec__utils', 'notification', 'plate'], function(provide, utils) {
 
     describe('notification', function() {
         var notification;
@@ -6,7 +6,7 @@ modules.define('spec', ['notification', 'spec__utils'], function(provide, _, uti
         beforeEach(function() {
             notification = utils.buildBlock('notification', {
                 block: 'notification',
-                mods: { theme: 'alfa', bkg: 'color' }
+                mods: { theme: 'alfa-on-color' }
             });
         });
 

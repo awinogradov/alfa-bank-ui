@@ -1,0 +1,158 @@
+.button {
+    font-family: 'Roboto', sans-serif;
+
+    position: relative;
+    display:  inline-block;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+
+    padding: 0;
+    margin: 0;
+
+    -webkit-user-select: none;
+
+       -moz-user-select: none;
+
+        -ms-user-select: none;
+
+            user-select: none;
+
+    border-radius: 6px;
+
+    outline: 0;
+
+    text-align:  center;
+    white-space: nowrap;
+
+    -webkit-transition: all 200ms ease;
+
+            transition: all 200ms ease;
+
+    cursor: pointer;
+}
+
+
+.button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+
+.button .button__text {
+    overflow: hidden;
+    text-overflow:  ellipsis;
+    vertical-align: top;
+}
+
+
+.button .button__text {
+    /*
+         * These rules fixes Opera 12+ && IE 9 bug with extra top margin when pressed
+         * Warning: bug still can be reproduced by clicking on button's border
+         * TODO: try to fix
+         */
+    position: relative;
+    display:  inline-block;
+}
+
+
+.button .button__icon {
+    position: relative;
+    vertical-align: middle;
+}
+
+
+.button.button_type_link {
+    text-decoration: none;
+}
+
+
+.button.button_focused-hard {
+    z-index: 1;
+}
+
+
+.button.button_disabled {
+    cursor: default;
+    /* FIXME: maybe remove cascade? */
+}
+
+
+.button.button_disabled.button_checked {
+    background: rgba(255,255,255,0.3);
+}
+
+
+.button.button_disabled .button__text {
+    color: #aaa;
+}
+
+
+.button.button_disabled .icon {
+    opacity: 0.3;
+}
+
+
+.button > :last-child {
+    padding-right: 0;
+}
+
+
+.button .button__icon {
+    padding-right: 10px;
+}
+
+
+.button.button_size_s {
+    font-size: 12px;
+    height: 25px;
+    line-height: 23px;
+    padding: 0 20px;
+}
+
+
+.button.button_size_m {
+    font-size: 12px;
+    height: 35px;
+    line-height: 33px;
+    padding: 0 30px;
+}
+
+
+.button.button_size_l {
+    font-size: 14px;
+    height: 45px;
+    line-height: 43px;
+    padding: 0 40px;
+}
+
+
+.button.button_size_xl {
+    font-size: 16px;
+    height: 55px;
+    line-height: 53px;
+    padding: 0 50px;
+}
+
+
+.control-group .button {
+    border-radius: 0;
+}
+
+
+.control-group > .button:first-child, .control-group > :first-child .button
+    {
+    border-radius: 6px 0 0 6px;
+}
+
+
+.control-group > .button:last-child, .control-group > :last-child .button
+    {
+    border-radius: 0 6px 6px 0;
+}
+
+
+.control-group > :only-child .button
+    {
+    border-radius: 6px;
+}

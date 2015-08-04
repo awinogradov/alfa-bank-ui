@@ -2,7 +2,6 @@ block('menu')(
     def()(function() {
         applyNext({
             _alfaMods: {
-                bkg: this.mods.bkg,
                 horizontal: this.mods.horizontal,
                 theme: this.mods.theme,
                 size: this.mods.size

@@ -13,7 +13,10 @@ block('footer').elem('inner')(
             {
                 elem: 'copyright',
                 content: [
-                    { block: 'copyright' }
+                    {
+                        block: 'copyright',
+                        mods: { theme: this._footerMods.theme }
+                    }
                 ]
             }
         ];

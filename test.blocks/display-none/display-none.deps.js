@@ -1,14 +1,14 @@
 ({
-    mustDeps : [
+    mustDeps: [
         {
-            block : 'i-bem',
-            elem : 'dom'
+            block: 'i-bem',
+            elem: 'dom'
         }
     ],
-    shouldDeps : [
+    shouldDeps: [
         {
-            block : 'link',
-            mods : { pseudo : true }
+            block: 'link',
+            mods: { pseudo: true }
         }
     ]
-})
+});

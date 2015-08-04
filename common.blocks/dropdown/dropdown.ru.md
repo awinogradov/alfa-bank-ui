@@ -13,7 +13,7 @@
 ``` js
 {
     block : 'dropdown',
-    mods : { mode  : 'hover' }
+    mods : { mode : 'hover' }
 }
 ```
 
@@ -24,18 +24,16 @@
 ``` js
 {
     block : 'dropdown',
-    mods : { mode  : 'hover', theme  : 'alfa' }
+    mods : { mode : 'hover', theme : 'alfa-on-color' }
 }
 ```
-
-### _bkg
 
 - для белого фона (white)
 
 ``` js
 {
-    block : 'logo',
-    mods : { mode  : 'hover', theme  : 'alfa', bkg : 'white' }
+    block : 'dropdown',
+    mods : { mode : 'hover', theme : 'alfa-on-white' }
 }
 ```
 
@@ -43,7 +41,7 @@
 
 ``` js
 {
-    block : 'logo',
-    mods : { mode  : 'hover', theme  : 'alfa', bkg : 'color' }
+    block : 'dropdown',
+    mods : { mode : 'hover', theme : 'alfa-on-color' }
 }
 ```
