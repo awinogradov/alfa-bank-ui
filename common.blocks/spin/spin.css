@@ -1,0 +1,24 @@
+.spin {
+    display: none;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.spin.spin_visible {
+    display: inline-block;
+}
+.spin.spin_size_s {
+    width: 25px;
+    height: 25px;
+}
+.spin.spin_size_m {
+    width: 35px;
+    height: 35px;
+}
+.spin.spin_size_l {
+    width: 45px;
+    height: 45px;
+}
+.spin.spin_size_xl {
+    width: 55px;
+    height: 55px;
+}

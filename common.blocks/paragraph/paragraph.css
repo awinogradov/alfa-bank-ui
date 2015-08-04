@@ -1,0 +1,14 @@
+.paragraph {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+
+    line-height: 1.25rem;
+}
+.paragraph.paragraph_type_lead {
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+}
