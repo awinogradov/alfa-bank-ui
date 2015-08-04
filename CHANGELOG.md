@@ -1,3 +1,31 @@
+<a name"4.0.0"></a>
+## 4.0.0 (2015-08-04)
+
+
+#### Bug Fixes
+
+* ***:** cleanup package.json ([163357e](http://git/projects/MAN/repos/nyc-public/commits/163357e2673d200370b047e02441b7df41d50e91))
+* **collapse:** fix style ([7c99331](http://git/projects/MAN/repos/nyc-public/commits/7c9933157b4ee0af4fac02511a656ed04970f9b9))
+* **form-field:** fix set anchor in message_popup mod ([a5b19a8](http://git/projects/MAN/repos/nyc-public/commits/a5b19a867d797600f204bfae6dd0fd63f38a786a))
+* **jscs:** fix code style ([381fe8a](http://git/projects/MAN/repos/nyc-public/commits/381fe8af8c90b99bd120552ef80c854d1e7fd178))
+* **jshint:** fix lint errors ([82224f2](http://git/projects/MAN/repos/nyc-public/commits/82224f2d7568ec6f27a1952ef13cb01e7f238317))
+* **mversion:** dont make ([0ccb136](http://git/projects/MAN/repos/nyc-public/commits/0ccb1367ba469a3eaa3a1a489ace9ac6146e23c5))
+* **package.json:** fix script clean-dist ([c38922c](http://git/projects/MAN/repos/nyc-public/commits/c38922c74af76a171369c6198172e890076e1641))
+* **pkg:** use magic in make script ([f5043ab](http://git/projects/MAN/repos/nyc-public/commits/f5043abdffbb438b51b6a7e114742dea06af45e2))
+* **test:** fix specs before remove bkg ([e44676b](http://git/projects/MAN/repos/nyc-public/commits/e44676b33a0dacc0ee698fe9a17de4fcfee7903c))
+* **tests:** calendar specs ([59bb3fa](http://git/projects/MAN/repos/nyc-public/commits/59bb3fa4d2ea8f0eff53a2f55d9e4b0276dca9a2))
+
+
+#### Features
+
+* ***:**
+  * add task remove examples dest ([b8d5143](http://git/projects/MAN/repos/nyc-public/commits/b8d514338258a530d8c89c9d8e356cc92772308a))
+  * build blocks in examples ([c147426](http://git/projects/MAN/repos/nyc-public/commits/c14742633f5659aa9b880fa9c8d0b5a8dbaa381c))
+  * users can use compiled css ([21f3573](http://git/projects/MAN/repos/nyc-public/commits/21f35736371e4dcff3f1fd01c5237d216e088f57))
+  * migrate to postCSS ([d8162dc](http://git/projects/MAN/repos/nyc-public/commits/d8162dcc0b387aee16291de1690c76efc27f5cbb))
+* **footer:** NYCP-68 - add color for footer in white theme ([06e7083](http://git/projects/MAN/repos/nyc-public/commits/06e70835a453d0708cedcfac136721afd7b5f115))
+
+
 <a name"3.3.0"></a>
 ## 3.3.0 (2015-06-26)
 

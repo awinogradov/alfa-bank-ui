@@ -3,7 +3,7 @@
   "author": "Anton Winogradov <winogradovaa@gmail.com>",
   "name": "nyc-public",
   "description": "NYC Public Library of UI components",
-  "version": "3.3.0",
+  "version": "4.0.0",
   "dependencies": {
     "bem-environ": "1.4.0",
     "lodash": "^3.9.3",
