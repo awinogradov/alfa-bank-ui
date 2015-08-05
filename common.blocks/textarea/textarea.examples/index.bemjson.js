@@ -52,6 +52,30 @@
                     })
                 };
             })
+        },
+        {
+            block: 'example-section',
+            title: 'Width available',
+            content: ['alfa-on-color', 'alfa-on-white'].map(function(theme) {
+                return {
+                    elem: 'col',
+                    elemMods: { theme: theme },
+                    content: ['s', 'm', 'l', 'xl'].map(function(size) {
+                        return [
+                            { elem: 'size', content: size },
+                            {
+                                elem: 'item',
+                                content: {
+                                    block: 'textarea',
+                                    mods: { theme: theme, size: size, width: 'available' },
+                                    val: 'Textarea',
+                                    placeholder: 'Placeholder'
+                                }
+                            }
+                        ];
+                    })
+                };
+            })
         }
     ]
 });
