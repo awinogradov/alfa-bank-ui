@@ -20,32 +20,6 @@
                                 content: {
                                     block: 'checkbox-group',
                                     mods: { theme: theme, size: size },
-                                    name: 'group1',
-                                    val: [],
-                                    option3: [
-                                        {
-                                            text: 'Default',
-                                            name: 'checkbox1',
-                                            val: 1
-                                        },
-                                        {
-                                            text: 'Default',
-                                            name: 'checkbox2',
-                                            val: 2
-                                        },
-                                        {
-                                            text: 'Default',
-                                            name: 'checkbox3',
-                                            val: 3
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                elem: 'item',
-                                content: {
-                                    block: 'checkbox-group',
-                                    mods: { theme: theme, size: size },
                                     name: 'group3',
                                     val: [2, 3],
                                     options: [
