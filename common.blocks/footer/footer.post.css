@@ -38,11 +38,10 @@
 }
 
 .footer__copyright {
-    opacity: .5;
-
-    line-height: 1.6;
-
     padding: 15px 0;
+    width: 200px;
 
     float: right;
+
+    opacity: .5;
 }
