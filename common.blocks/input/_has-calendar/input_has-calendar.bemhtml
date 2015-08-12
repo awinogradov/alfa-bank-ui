@@ -9,13 +9,13 @@ block('input')(
         def()(function() {
             var ctx = this.ctx,
                 mods = ctx.mods,
-                calendarParams = {};
-
-            if (ctx.earlierLimit) calendarParams.earlierLimit = ctx.earlierLimit;
-            if (ctx.laterLimit) calendarParams.laterLimit = ctx.laterLimit;
-            if (ctx.weekdays) calendarParams.weekdays = ctx.weekdays;
-            if (ctx.months) calendarParams.months = ctx.months;
-            if (ctx.offDays) calendarParams.offDays = ctx.offDays;
+                calendarParams = {
+                    earlierLimit: ctx.earlierLimit,
+                    laterLimit: ctx.laterLimit,
+                    weekdays: ctx.weekdays,
+                    months: ctx.months,
+                    offDays: ctx.offDays
+                };
 
             ctx.addon = {
                 block: 'icon',
@@ -29,30 +29,14 @@ block('input')(
             mods['has-mask'] = true;
             ctx.js = ctx.js || {};
             ctx.js.mask = '{{99}}.{{99}}.{{9999}}';
+            ctx.js.calendarParams = calendarParams;
+            ctx.js.popupDirections = ctx.directions;
 
             applyNext({
                 _inputMods: mods,
                 _calendarParams: calendarParams,
-                _calendarDirections: ctx.directions
+                _popupDirections: ctx.directions
             });
-        }),
-
-        elem('box').content()(function() {
-
-            var mods = this._inputMods;
-
-            return [
-                applyNext(),
-                {
-                    block: 'calendar',
-                    mods: {
-                        theme: mods.theme,
-                        size: mods.size
-                    },
-                    js: this._calendarParams,
-                    directions: this._calendarDirections
-                }
-            ];
         }),
 
         elem('addon').mix()({ block: 'input', elem: 'calendar' })

@@ -337,6 +337,64 @@
         },
         {
             block: 'example-section',
+            title: 'Has Calendar Default Disabled',
+            content: ['alfa-on-color', 'alfa-on-white'].map(function(theme) {
+                return {
+                    elem: 'col',
+                    elemMods: { theme: theme },
+                    content: ['s', 'm', 'l', 'xl'].map(function(size) {
+                        return [
+                            { elem: 'size', content: size },
+                            {
+                                elem: 'item',
+                                content: {
+                                    block: 'input',
+                                    mods: {
+                                        theme: theme,
+                                        size: size,
+                                        'has-calendar': true,
+                                        'has-addon': true,
+                                        disabled: true
+                                    },
+                                    val: '22.07.2015'
+                                }
+                            }
+                        ];
+                    })
+                };
+            })
+        },
+        {
+            block: 'example-section',
+            title: 'Has Calendar Readable Date',
+            content: ['alfa-on-color', 'alfa-on-white'].map(function(theme) {
+                return {
+                    elem: 'col',
+                    elemMods: { theme: theme },
+                    content: ['s', 'm', 'l', 'xl'].map(function(size) {
+                        return [
+                            { elem: 'size', content: size },
+                            {
+                                elem: 'item',
+                                content: {
+                                    block: 'input',
+                                    mods: {
+                                        theme: theme,
+                                        size: size,
+                                        'has-calendar': true,
+                                        'has-addon': true,
+                                        'readable-date': true
+                                    },
+                                    val: '22 июля 2015'
+                                }
+                            }
+                        ];
+                    })
+                };
+            })
+        },
+        {
+            block: 'example-section',
             title: 'Has Calendar Set Limits',
             content: ['alfa-on-color', 'alfa-on-white'].map(function(theme) {
                 return {

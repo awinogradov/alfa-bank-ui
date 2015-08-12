@@ -16,18 +16,17 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
     onSetMod: {
         'js': {
             'inited': function() {
-                this.__base.apply(this, arguments);
-
                 this._val = null;
 
-                this._popup = this.domElem.bem('popup');
-
-                this._month = moment(this._getToday()).set('date', 1).format();
+                this.params.val ?
+                    this.setVal(this.params.val) :
+                    this._month = moment(this._getToday()).set('date', 1).format();
 
                 this.setLimits(
                     this.params.earlierLimit,
                     this.params.laterLimit
                 );
+
             }
         }
     },
@@ -41,10 +40,14 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
     setVal: function(val) {
         var date = this.parseDate(val);
 
-        this._val = this._isValidDate(moment(date).set('hour', 1).format()) ? date : null;
+        if (this.getFormatedDate(this._val) !== val) {
+            this._val = this._isValidDate(moment(date).set('hour', 1).format()) ? date : null;
 
-        if (this._val) {
-            this._month = moment(this._val).set('date', 1).format();
+            if (this._val) {
+                this._month = moment(this._val).set('date', 1).format();
+            }
+
+            this.redraw();
         }
 
         return this;
@@ -78,39 +81,6 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
     },
 
     /**
-     * Show calendar
-     *
-     * @returns {calendar} this
-     */
-    show: function() {
-        this._build();
-
-        this._popup.setMod('visible', true);
-
-        return this;
-    },
-
-    /**
-     * Hide calendar
-     *
-     * @returns {calendar} this
-     */
-    hide: function() {
-        this._popup.delMod('visible');
-
-        return this;
-    },
-
-    /**
-     * Is shown calendar?
-     *
-     * @returns {boolean}
-     */
-    isShown: function() {
-        return this._popup.hasMod('visible');
-    },
-
-    /**
      * Switch month
      *
      * @param {number} step
@@ -119,7 +89,7 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
     switchMonth: function(step) {
         this._month = moment(this._month).month(moment(this._month).month() + step);
 
-        this._build();
+        this.redraw();
 
         return this;
     },
@@ -141,30 +111,6 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
     },
 
     /**
-     * Set target
-     *
-     * @param {jQuery|BEMDOM} anchor - DOM elem or anchor BEMDOM block.
-     * @returns {calendar} this
-     */
-    setAnchor: function(anchor) {
-        this._popup.setAnchor(anchor);
-
-        return this;
-    },
-
-    /**
-     * Sets directions for calendar.
-     *
-     * @param {Array<string>} directions
-     * @returns {calendar} this
-     */
-    setDirections: function(directions) {
-        this._popup.params.directions = directions;
-
-        return this;
-    },
-
-    /**
      * Sets limits
      *
      * @param {Date|String} earlier
@@ -183,6 +129,8 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
             this._month = moment(this._laterLimit).set('date', 1).format();
         }
 
+        this.redraw();
+
         return this;
     },
 
@@ -194,6 +142,7 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
      */
     setOffDays: function(days) {
         this.params.offDays = days;
+        this.redraw();
     },
 
     /**
@@ -263,13 +212,13 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
                 }
             ]
         });
-        this._popup.setContent(calendar);
+        BEMDOM.update(this.domElem, calendar);
     },
 
     /**
-     * ReBuild Calendar.
+     * Redraw Calendar.
      */
-    reBuild: function() {
+    redraw: function() {
         this._build();
     },
 
@@ -393,21 +342,19 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
         };
     },
 
-    _changeMonthOnPointerClick: function(e) {
+    _changeMonthOnClick: function(e) {
         var elem = $(e.currentTarget);
         if (!this.hasMod(elem, 'disabled')) {
             this.switchMonth(this.hasMod(elem, 'direction', 'left') ? -1 : 1);
         }
     },
 
-    _changeDayOnPointerClick: function(e) {
+    _changeDayOnClick: function(e) {
         var date = $(e.currentTarget).data('day');
         if (date) {
             this.setVal(date);
-            this.hide();
 
             var val = this.getVal();
-
             this.emit('change', {
                 value: val,
                 formated: this.getFormatedDate(),
@@ -417,9 +364,10 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
     }
 },  /** @lends calendar */ {
     live: function() {
-        this.liveBindTo('arrow', 'pointerclick', this.prototype._changeMonthOnPointerClick);
+        var ptp = this.prototype;
 
-        this.liveBindTo('day', 'pointerclick', this.prototype._changeDayOnPointerClick);
+        this.liveBindTo('arrow', 'click', ptp._changeMonthOnClick);
+        this.liveBindTo('day', 'click', ptp._changeDayOnClick);
 
         return false;
     }

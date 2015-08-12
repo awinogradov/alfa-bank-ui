@@ -1,6 +1,6 @@
 modules.define('spec',
-    ['jquery', 'spec__utils', 'popup', 'calendar', 'moment'],
-    function(provide, $, helper, popup, calendar, moment) {
+    ['jquery', 'spec__utils', 'calendar', 'moment'],
+    function(provide, $, helper, calendar, moment) {
 
 var build = helper.buildBlock;
 
@@ -20,15 +20,21 @@ describe('calendar', function() {
         helper.destruct(block);
     });
 
-    it('should have `popup`', function() {
+    it('should choose this month', function() {
         block = build('calendar', bemjson);
-        expect(block._popup).to.not.be.null;
+        var date = new Date();
+
+        (moment(block._month).month()).should.be.equal(moment(date).month());
     });
 
-    it('should have `control` and `box` elements', function() {
+    it('should be set val in template', function() {
+        var checkDate = '12.08.2015';
+        bemjson.val = checkDate;
+
         block = build('calendar', bemjson);
-        expect(block.elem('box')).to.not.be.null;
-        expect(block.elem('control')).to.not.be.null;
+
+        (block.getFormatedDate() === checkDate).should.be.true;
+
     });
 
     it('should setVal/getVal equal', function() {
@@ -41,15 +47,6 @@ describe('calendar', function() {
 
         block.setVal(date);
         (block.getVal().toString()).should.equal(date.toString());
-    });
-
-    it('should show/hide `popup`', function() {
-        block = build('calendar', bemjson);
-        block.setAnchor($('body'));
-        block.show();
-        block._popup.hasMod('visible').should.be.true;
-        block.hide();
-        block._popup.hasMod('visible').should.be.false;
     });
 
     it('should be get formated date', function() {
@@ -78,19 +75,20 @@ describe('calendar', function() {
 
     });
 
-    it('should be switch month arrow clicked', function() {
+    it('should be switch month arrow clicked', function(done) {
         block = build('calendar', bemjson);
 
-        // Arrows clicked
         block.setVal('25.06.2015');
-        block._build();
-        block.findElem('arrow', 'direction', 'right').trigger(new $.Event('pointerclick'));
-        (moment(block._month).month()).should.be.equal(6);
-        block.findElem('arrow', 'direction', 'left').trigger(new $.Event('pointerclick'));
-        (moment(block._month).month()).should.be.equal(5);
+        setTimeout(function() {
+            block.findElem('arrow', 'direction', 'right').click();
+            (moment(block._month).month()).should.be.equal(6);
+            block.findElem('arrow', 'direction', 'left').click();
+            (moment(block._month).month()).should.be.equal(5);
+            done();
+        }, 200);
     });
 
-    it('should not to switch month', function() {
+    it('should not to switch month', function(done) {
 
         bemjson.js = {
             earlierLimit: '01.01.2015',
@@ -100,24 +98,22 @@ describe('calendar', function() {
         block = build('calendar', bemjson);
 
         block.setVal('02.02.2015');
-        block._build();
-        block.findElem('arrow', 'direction', 'left').trigger(new $.Event('pointerclick'));
-        (block.hasMod(block.findElem('arrow', 'direction', 'left'), 'disabled')).should.be.true;
-        block.findElem('arrow', 'direction', 'left').trigger(new $.Event('pointerclick'));
-        (moment(block._month).month()).should.be.equal(0);
 
-        block.setVal('30.12.2015');
-        block._build();
-        (block.hasMod(block.findElem('arrow', 'direction', 'right'), 'disabled')).should.be.true;
-        block.findElem('arrow', 'direction', 'right').trigger(new $.Event('pointerclick'));
-        (moment(block._month).month()).should.be.equal(11);
-    });
+        setTimeout(function() {
+            block.findElem('arrow', 'direction', 'left').click();
+            (block.hasMod(block.findElem('arrow', 'direction', 'left'), 'disabled')).should.be.true;
+            block.findElem('arrow', 'direction', 'left').click();
+            (moment(block._month).month()).should.be.equal(0);
 
-    it('should be set directions', function() {
-        block = build('calendar', bemjson);
-        var directions = ['right-center'];
-        block.setDirections(directions);
-        (block._popup.params.directions).should.be.equal(directions);
+            block.setVal('30.12.2015');
+
+            setTimeout(function() {
+                (block.hasMod(block.findElem('arrow', 'direction', 'right'), 'disabled')).should.be.true;
+                block.findElem('arrow', 'direction', 'right').click();
+                (moment(block._month).month()).should.be.equal(11);
+                done();
+            }, 100);
+        }, 100);
     });
 
     it('should be set offDays', function() {
@@ -169,12 +165,16 @@ describe('calendar', function() {
             '11.06.2015', /*ПТ*/
             '12.06.2015'  /*СБ*/
         ]);
-        block._build();
 
         (block.hasMod(block.findElem('day').eq(10), 'type', 'off')).should.be.false;
         (block.hasMod(block.findElem('day').eq(11), 'type', 'off')).should.be.true;
         (block.hasMod(block.findElem('day').eq(12), 'type', 'weekend-off')).should.be.true;
 
+    });
+
+    it('_isValidDate should return null in check invalid Date', function() {
+        block = build('calendar', bemjson);
+        (block._isValidDate('trololo') === null).should.be.true;
     });
 });
 

@@ -16,6 +16,23 @@
                         elem: 'item',
                         content: {
                             block: 'calendar',
+                            mods: { theme: theme }
+                        }
+                    }
+                };
+            })
+        },
+        {
+            block: 'example-section',
+            title: 'Default Set val in template',
+            content: ['alfa-on-color', 'alfa-on-white'].map(function(theme) {
+                return {
+                    elem: 'col',
+                    elemMods: { theme: theme },
+                    content: {
+                        elem: 'item',
+                        content: {
+                            block: 'calendar',
                             mods: { theme: theme },
                             val: '22.07.2015'
                         }
