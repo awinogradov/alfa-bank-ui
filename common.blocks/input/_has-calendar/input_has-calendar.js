@@ -3,8 +3,8 @@
  */
 modules.define(
     'input',
-    ['i-bem__dom', 'jquery', 'dom', 'keyboard__codes'],
-    function(provide, BEMDOM, $, dom, KeyCodes, Input) {
+    ['i-bem__dom', 'BEMHTML', 'jquery', 'dom', 'keyboard__codes', 'objects'],
+    function(provide, BEMDOM, BEMHTML, $, dom, KeyCodes, objects, Input) {
 
 /**
  * @exports
@@ -18,17 +18,19 @@ provide(Input.decl({ modName: 'has-calendar' }, /** @lends input.prototype */{
         'js': {
             'inited': function() {
                 this.__base.apply(this, arguments);
+                this._renderCalendar();
 
+                this._popup = this.findBlockInside('popup');
                 this._calendar = this.findBlockInside('calendar');
 
+                this._popup.setAnchor(this.domElem);
                 this._calendar
                     .setVal(this.getVal())
-                    .setAnchor(this.domElem)
                     .on('change', this._onChangeCalendar, this);
 
-                this.bindTo('control', 'focus pointerclick', this.showCalendar);
+                this.bindTo('control', 'focus click', this.showCalendar);
                 this.bindTo('control', 'blur', this._onControlBlur);
-                this.bindTo('calendar', 'pointerclick', this._onPointerClickSwitcher);
+                this.bindTo('calendar', 'click', this._onClickSwitcher);
                 this.bindToDoc('pointerdown', this._onDocPointerDown);
                 this.bindTo('keydown', this._handleKey.bind(this));
             }
@@ -39,11 +41,20 @@ provide(Input.decl({ modName: 'has-calendar' }, /** @lends input.prototype */{
 
         this.setVal(this._calendar.getFormatedDate());
 
-        if (!this._calendar.isShown()) {
+        if (!this.isShownCalendar()) {
             this._calendar
-                .setVal(this.getVal())
-                .show();
+                .setVal(this.getVal());
+            this._popup.setMod('visible', true);
         }
+    },
+
+    hideCalendar: function() {
+        this._popup.delMod('visible');
+        return this;
+    },
+
+    isShownCalendar: function() {
+        return this._popup.hasMod('visible');
     },
 
     getDate: function() {
@@ -52,6 +63,23 @@ provide(Input.decl({ modName: 'has-calendar' }, /** @lends input.prototype */{
 
     getCalendar: function() {
         return this._calendar;
+    },
+
+    _renderCalendar: function() {
+        var popupDirections = this.params.popupDirections,
+            calendarParams = this.params.calendarParams,
+            theme = this.getMod('theme');
+
+        BEMDOM.append(this.elem('box'), BEMHTML.apply({
+            block: 'popup',
+            mods: { theme: theme, target: 'anchor' },
+            directions: popupDirections,
+            content: objects.extend({
+                block: 'calendar',
+                mods: { theme: theme },
+                val: this.getVal()
+            }, calendarParams)
+        }));
     },
 
     _setFormatedDate: function() {
@@ -66,6 +94,7 @@ provide(Input.decl({ modName: 'has-calendar' }, /** @lends input.prototype */{
 
     _onChangeCalendar: function() {
         this._setReadableDate();
+        this.hideCalendar();
         this.emit('pick-date');
     },
 
@@ -77,20 +106,19 @@ provide(Input.decl({ modName: 'has-calendar' }, /** @lends input.prototype */{
             this._ignoreBlur = false;
         } else {
             this._setReadableDate();
-            this._calendar.hide();
+            this.hideCalendar();
         }
     },
 
-    _onPointerClickSwitcher: function() {
+    _onClickSwitcher: function() {
         if (!this.hasMod('disabled')) {
-            if (this._calendar.isShown()) {
+            if (this.isShownCalendar()) {
                 this._setReadableDate();
-                this._calendar.hide();
+                this.hideCalendar();
             } else {
                 this._setFormatedDate();
-                this._calendar
-                    .setVal(this.getVal())
-                    .show();
+                this._calendar.setVal(this.getVal());
+                this.showCalendar();
             }
         }
     },
@@ -105,7 +133,7 @@ provide(Input.decl({ modName: 'has-calendar' }, /** @lends input.prototype */{
         }
 
         if (!insideCalendar && !dom.contains(this.domElem, target)) {
-            this._calendar.hide();
+            this.hideCalendar();
         }
     },
 
@@ -113,11 +141,14 @@ provide(Input.decl({ modName: 'has-calendar' }, /** @lends input.prototype */{
 
         if (e.keyCode === KeyCodes.ENTER) {
             this._calendar
-                .setVal(this.getVal())
-                .reBuild();
+                .setVal(this.getVal());
         }
 
-    }
+    },
 
+}, {
+    live: function() {
+        return this.__base.apply(this, arguments);
+    }
 }));
 });

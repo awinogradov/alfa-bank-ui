@@ -1,12 +1,6 @@
 [{
     mustDeps: [
-        'i-bem',
-        {
-            block: 'popup',
-            mods: {
-                target: 'anchor'
-            }
-        }
+        'i-bem'
     ],
     shouldDeps: [
         {

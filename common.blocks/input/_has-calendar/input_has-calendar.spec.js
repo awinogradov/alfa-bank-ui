@@ -35,220 +35,201 @@ describe('input_has-calendar', function() {
         expect(calendar).to.not.be.null;
     });
 
-    it('should pass `theme` and `size` mods to `calendar`', function() {
+    it('should pass `theme` mods to `calendar` end `popup`', function(done) {
         bemjson.mods.theme = 'xxx';
-        bemjson.mods.size = 'm';
         block = build('input', bemjson);
-        var calendar = block.findBlockInside('calendar');
-
-        calendar.getMod('theme').should.equal('xxx');
-        calendar.getMod('size').should.equal('m');
-    });
-
-    it('should set popup`s anchor', function() {
-        block = build('input', bemjson);
-
-        var popup = block.findBlockInside('calendar')._popup;
-
-        block.elem('control').trigger('focus');
-        block.getMod('focused').should.be.true;
-
-        popup._anchor.should.equal(block.domElem);
-    });
-
-    it('should add elems block `calendar` in `popup`', function() {
-        block = build('input', bemjson);
-        var calendar = block.findBlockInside('calendar');
-
-        expect(calendar.findElem('container')).to.not.be.null;
-        expect(calendar.findElem('title')).to.not.be.null;
-    });
-
-    it('should show calendar', function() {
-        block = build('input', bemjson);
-        var popup = block.findBlockInside('popup');
-
         block.showCalendar();
-        popup.getMod('visible').should.be.true;
+        setTimeout(function() {
+            block._calendar.getMod('theme').should.equal('xxx');
+            block._popup.getMod('theme').should.equal('xxx');
+            done();
+        }, 200);
+    });
+
+    it('should set popup`s anchor', function(done) {
+        block = build('input', bemjson);
         block.showCalendar();
-        popup.getMod('visible').should.be.true;
+        setTimeout(function() {
+            block._popup._anchor.should.equal(block.domElem);
+            done();
+        }, 200);
     });
 
-    it('should close calendar when item selected', function() {
-
+    it('should show calendar', function(done) {
         block = build('input', bemjson);
-        var calendar = block.findBlockInside('calendar'),
-            popup = calendar._popup;
+        block.elem('control').trigger('focus');
+        setTimeout(function() {
+            block.isShownCalendar().should.be.true;
+            done();
+        }, 200);
+    });
+
+    it('should get `Date`', function(done) {
+        block = build('input', bemjson);
+        var calendar = block._calendar;
 
         block.elem('control').trigger('focus');
-        popup.getMod('visible').should.be.true;
-        // click on day
-        calendar.findElem('day').click();
-
-        popup.getMod('visible').should.equal('');
+        setTimeout(function() {
+            calendar.findElem('day').eq(10).click();
+            (moment.isDate(calendar.getVal())).should.be.true;
+            (moment.isDate(block.getDate())).should.be.true;
+            done();
+        }, 200);
     });
 
-    it('should set val calendar when item selected', function() {
+    it('should toggle calendar when clicked switcher element', function(done) {
 
         block = build('input', bemjson);
-        var calendar = block.findBlockInside('calendar');
-
-        block.elem('control').trigger('focus');
-        calendar.findElem('day').eq(10).click();
-
-        (block.getDate().toString() === calendar.getVal().toString()).should.be.true;
+        block.findElem('calendar').click();
+        setTimeout(function() {
+            block.isShownCalendar().should.be.true;
+            block.findElem('calendar').click();
+            block.isShownCalendar().should.be.false;
+            done();
+        }, 200);
     });
 
-    it('should get `Date`', function() {
-        block = build('input', bemjson);
-        var calendar = block.findBlockInside('calendar');
-
-        block.elem('control').trigger('focus');
-        calendar.findElem('day').eq(10).click();
-
-        (moment.isDate(calendar.getVal())).should.be.true;
-        (moment.isDate(block.getDate())).should.be.true;
-
-    });
-
-    it('should toggle calendar when clicked switcher element', function() {
-
-        block = build('input', bemjson);
-        var popup = block.findBlockInside('popup');
-
-        expect(block.findElem('calendar')).to.not.be.null;
-
-        block.findElem('calendar').trigger(new $.Event('pointerclick'));
-        popup.getMod('visible').should.be.true;
-
-        block.findElem('calendar').trigger(new $.Event('pointerclick'));
-        popup.getMod('visible').should.equal('');
-    });
-
-    it('should not open calendar when input desabled', function() {
-
+    it('should not open calendar when input disabled', function(done) {
         bemjson.mods.disabled = true;
-
         block = build('input', bemjson);
-        var popup = block.findBlockInside('popup');
-
-        block.findElem('calendar').trigger(new $.Event('pointerclick'));
-        popup.getMod('visible').should.be.fale;
+        block.findElem('calendar').click();
+        setTimeout(function() {
+            block.isShownCalendar().should.be.false;
+            done();
+        }, 200);
     });
 
-    it('should emit event `change` on calendar when day selected', function() {
+    it('should emit event `change` on calendar when day selected', function(done) {
+        var eventCatched = false;
+
         block = build('input', bemjson);
         block.setVal('');
-        var calendar = block._calendar,
-            eventCatched = false;
-
         block.elem('control').trigger('focus');
 
-        calendar.on('change', function() {
-            eventCatched = true;
-        });
+        setTimeout(function() {
+            var calendar = block._calendar;
 
-        // click on item
-        calendar.findElem('day').eq(10).click();
+            calendar.on('change', function() {
+                eventCatched = true;
+            });
 
-        eventCatched.should.be.true;
+            // click on item
+            calendar.findElem('day').eq(10).click();
+
+            eventCatched.should.be.true;
+            done();
+        }, 200);
     });
 
-    it('should not visible the popup when user set blur on input', function() {
+    it('should not visible the popup when user set blur on input', function(done) {
         block = build('input', bemjson);
-        var popup = block.findBlockInside('popup');
 
         block.elem('control').focus();
-        popup.getMod('visible').should.be.true;
-
-        block.elem('control').blur();
-        popup.getMod('visible').should.equal('');
+        setTimeout(function() {
+            block.isShownCalendar().should.be.true;
+            block.elem('control').blur();
+            block.isShownCalendar().should.be.false;
+            done();
+        }, 200);
     });
 
-    it('should visible the popup when user pointerdown event on input or calendar', function() {
+    it('should visible the popup when user pointerdown event on input or calendar', function(done) {
         block = build('input', bemjson);
-        var popup = block.findBlockInside('popup');
-
-        block.domElem.trigger(new $.Event('pointerdown'));
-        block._calendar._popup.getMod('visible').should.equal('');
 
         block.elem('control').focus();
-        popup.getMod('visible').should.be.true;
-        block._calendar.domElem.trigger(new $.Event('pointerdown'));
-        popup.getMod('visible').should.be.true;
-        block._ignoreBlur.should.be.true;
-        block.elem('control').blur();
-        block._ignoreBlur.should.be.false;
+        setTimeout(function() {
+            block.isShownCalendar().should.be.true;
+            block._calendar.domElem.trigger(new $.Event('pointerdown'));
+            block.isShownCalendar().should.be.true;
+            block._ignoreBlur.should.be.true;
+            block.elem('control').blur();
+            block._ignoreBlur.should.be.false;
+            done();
+        }, 200);
     });
 
-    it('should hide popup when user pointerdown event outside', function() {
+    it('should hide popup when user pointerdown event outside', function(done) {
         block = build('input', bemjson);
-        var popup = block.findBlockInside('popup');
+        block.elem('control').focus();
+        setTimeout(function() {
+            block.isShownCalendar().should.be.true;
+            $('body').trigger(new $.Event('pointerdown'));
+            block.isShownCalendar().should.be.false;
+            done();
+        }, 200);
+    });
+
+    it('should close the popup when user clicked outside', function(done) {
+        block = build('input', bemjson);
 
         block.elem('control').focus();
-        popup.getMod('visible').should.be.true;
-        $('body').trigger(new $.Event('pointerdown'));
-        block._calendar._popup.getMod('visible').should.equal('');
+        setTimeout(function() {
+            block.isShownCalendar().should.be.true;
+            block.elem('control').blur();
+
+            var x = block._popup.domElem.position().left - 10,
+                y = block._popup.domElem.position().top - 10;
+
+            $('body').trigger(new $.Event('pointerpress', { pageX: x, pageY: y }));
+            $('body').trigger(new $.Event('pointerrelease', { pageX: x, pageY: y }));
+            block.isShownCalendar().should.be.false;
+            done();
+        }, 200);
     });
 
-    it('should close the popup when user clicked outside', function() {
+    it('should not close the popup when user clicked inside', function(done) {
         block = build('input', bemjson);
-        var popup = block.findBlockInside('popup');
 
         block.elem('control').focus();
-        popup.getMod('visible').should.be.true;
+        setTimeout(function() {
+            block.isShownCalendar().should.be.true;
 
-        block.elem('control').blur();
+            var popup = block._popup,
+                x = popup.domElem.position().left + 10,
+                y = popup.domElem.position().top + 10;
 
-        var x = popup.domElem.position().left - 10, y = popup.domElem.position().top - 10;
-        $(document).trigger(new $.Event('pointerpress', { pageX: x, pageY: y }));
-        $(document).trigger(new $.Event('pointerrelease', { pageX: x, pageY: y }));
-        popup.getMod('visible').should.equal('');
+            popup.domElem.trigger(new $.Event('pointerpress', { pageX: x, pageY: y }));
+            popup.domElem.trigger(new $.Event('pointerrelease', { pageX: x, pageY: y }));
+
+            block.isShownCalendar().should.be.true;
+            done();
+        }, 200);
     });
 
-    it('should not close the popup when user clicked inside', function() {
+    it('should not close the popup when user clicked on input', function(done) {
         block = build('input', bemjson);
-        var popup = block.findBlockInside('popup');
 
         block.elem('control').focus();
-        popup.getMod('visible').should.be.true;
+        setTimeout(function() {
+            block.isShownCalendar().should.be.true;
 
-        var x = popup.domElem.position().left + 10, y = popup.domElem.position().top + 10;
-        popup.domElem.trigger(new $.Event('pointerpress', { pageX: x, pageY: y }));
-        popup.domElem.trigger(new $.Event('pointerrelease', { pageX: x, pageY: y }));
+            var x = block.domElem.position().left + 1,
+                y = block.domElem.position().top + 1;
 
-        popup.getMod('visible').should.be.true;
+            block.domElem.trigger(new $.Event('pointerpress', { pageX: x, pageY: y }));
+            block.domElem.trigger(new $.Event('pointerrelease', { pageX: x, pageY: y }));
+
+            block.isShownCalendar().should.be.true;
+            done();
+        }, 200);
+
     });
 
-    it('should not close the popup when user clicked on input', function() {
-        block = build('input', bemjson);
-        var popup = block.findBlockInside('popup');
-
-        block.elem('control').focus();
-        popup.getMod('visible').should.be.true;
-
-        var x = block.domElem.position().left + 1, y = block.domElem.position().top + 1;
-        block.domElem.trigger(new $.Event('pointerpress', { pageX: x, pageY: y }));
-        block.domElem.trigger(new $.Event('pointerrelease', { pageX: x, pageY: y }));
-
-        popup.getMod('visible').should.be.true;
-    });
-
-    it('should emit "pick-date" event on calendar changed', function() {
+    it('should emit `pick-date` event on calendar changed', function() {
         block = build('input', bemjson);
 
-        var calendar = block.getCalendar();
         var shouldBeCalled = false;
+
         block.on('pick-date', function() {
             shouldBeCalled = true;
         });
 
-        calendar.emit('change', { formated: 'hi there' });
+        block._calendar.emit('change', { formated: 'hi there' });
 
         shouldBeCalled.should.be.true;
     });
 
-    it('should be set readable format date', function() {
+    it('should be set readable format date', function(done) {
         bemjson.mods['readable-date'] = true;
         block = build('input', bemjson);
 
@@ -259,23 +240,39 @@ describe('input_has-calendar', function() {
 
         block.elem('control').trigger('focus');
         block.setVal(formatedDate);
-        block.getVal().should.be.equal(formatedDate);
 
-        block.elem('control').trigger('blur');
-        block.getVal().should.be.equal(readableDate);
+        setTimeout(function() {
+            block.getVal().should.be.equal(formatedDate);
+
+            block.elem('control').trigger('blur');
+            block.getVal().should.be.equal(readableDate);
+            done();
+        }, 200);
 
     });
 
-    it('should be set date when pressed ENTER', function() {
+    it('should be set date when pressed ENTER', function(done) {
         block = build('input', bemjson);
 
         block.elem('control').trigger('focus');
         block.setVal('24.06.2015');
-        block.domElem.trigger(new $.Event('keydown', { keyCode: 13 })); // ENTER
-        (block._calendar.getVal().toString() === block.getDate().toString()).should.be.true;
+        setTimeout(function() {
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 13 })); // ENTER
+            (block._calendar.getVal().toString() === block.getDate().toString()).should.be.true;
 
-        block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
+            block.domElem.trigger(new $.Event('keydown', { keyCode: 40 })); // DOWN
+            done();
+        }, 200);
 
+    });
+
+    it('getCalendar', function(done) {
+        block = build('input', bemjson);
+        block.elem('control').trigger('focus');
+        setTimeout(function() {
+            (block.getCalendar().domElem.hasClass('calendar')).should.be.true;
+            done();
+        }, 200);
     });
 
 });

@@ -1,6 +1,10 @@
 [{
     shouldDeps: [
         {
+            block: 'popup',
+            mods: { target: 'anchor' }
+        },
+        {
             block: 'input',
             mods: { 'has-addon': true, 'has-mask': true }
         },
@@ -15,8 +19,16 @@
         {
             elems: ['calendar']
         },
-        'ua',
-        'calendar'
+        'calendar',
+        'objects'
+    ]
+},
+{
+    tech: 'js',
+    mustDeps: [
+        { tech: 'bemhtml', block: 'i-bem' },
+        { tech: 'bemhtml', block: 'calendar' },
+        { tech: 'bemhtml', block: 'popup', mods: { target: 'anchor' } }
     ]
 },
 {
