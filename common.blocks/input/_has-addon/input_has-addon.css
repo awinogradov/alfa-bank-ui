@@ -6,4 +6,5 @@
 }
 .input_has-addon .input__control {
     text-overflow: ellipsis;
+    padding-right: 2px !important;
 }
