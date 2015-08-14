@@ -16,15 +16,6 @@
 }
 ```
 
-- поле принимает вид обычного output.
-
-``` bemjson
-{
-    block : 'input',
-    mods : { mode  : 'result' }
-}
-```
-
 ### _type
 
 - поле для ввода email
