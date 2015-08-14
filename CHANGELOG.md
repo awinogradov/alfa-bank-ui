@@ -1,3 +1,21 @@
+<a name"4.0.1"></a>
+### 4.0.1 (2015-08-14)
+
+
+#### Bug Fixes
+
+* **input_has-addon:** fix padding in control ([d314504](http://git/projects/MAN/repos/nyc-public/commits/d314504e49d27dbbe2e2519a4f08f95944fe4959))
+* **radio:** fix checked style ([b3a1d99](http://git/projects/MAN/repos/nyc-public/commits/b3a1d9954c260937c9523f67a92a8f06e8b61ff4))
+
+
+#### Features
+
+* ***:** upd enb-bemxjst ([b52783c](http://git/projects/MAN/repos/nyc-public/commits/b52783cd869f082c2f65adc93028ef40133c7997))
+* **copyfight:** more independence ([8c2d8ba](http://git/projects/MAN/repos/nyc-public/commits/8c2d8ba830401ac37b39dc8824ba76185804c4cd))
+* **examples:** textarea_width_available add, radio_type_button all size ([1f7ba55](http://git/projects/MAN/repos/nyc-public/commits/1f7ba55c73fce60224cdcbbed7f54cfb23458544))
+* **input:** Cursor pointer in calendar icon ([394defb](http://git/projects/MAN/repos/nyc-public/commits/394defbb2282dd29c6c0f968bd30c48e60d70474))
+
+
 <a name"4.0.0"></a>
 ## 4.0.0 (2015-08-04)
 
