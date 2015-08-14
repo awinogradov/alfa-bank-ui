@@ -8,6 +8,8 @@
     margin-right: 7px;
     margin-bottom: 7px;
 
+    background-color: #fff;
+
     &.plate_hidden {
         display: none;
     }

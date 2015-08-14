@@ -8,43 +8,36 @@
         {
             block: 'example-section',
             title: 'Default',
-            content: ['alfa-on-color', 'alfa-on-white'].map(function(theme) {
-                return {
-                    elem: 'col',
-                    elemMods: { theme: theme },
-                    content: {
-                        elem: 'item',
-                        content: {
-                            block: 'plate',
-                            mods: { theme: theme },
-                            content: {
-                                block: 'button',
-                                mods: { theme: 'alfa-on-white', size: 'm' },
-                                text: 'Content'
-                            }
-                        }
-                    }
-                };
-            })
-        },
-        {
-            block: 'example-section',
-            title: 'Has Clear',
-            content: ['alfa-on-color', 'alfa-on-white'].map(function(theme) {
-                return {
-                    elem: 'col',
-                    elemMods: { theme: theme },
+            content: {
+                elem: 'col',
+                content: {
+                    elem: 'item',
                     content: {
                         block: 'plate',
-                        mods: { theme: theme, 'has-clear': true },
                         content: {
                             block: 'button',
                             mods: { theme: 'alfa-on-white', size: 'm' },
                             text: 'Content'
                         }
                     }
-                };
-            })
+                }
+            }
+        },
+        {
+            block: 'example-section',
+            title: 'Has Clear',
+            content: {
+                elem: 'col',
+                content: {
+                    block: 'plate',
+                    mods: { 'has-clear': true },
+                    content: {
+                        block: 'button',
+                        mods: { theme: 'alfa-on-white', size: 'm' },
+                        text: 'Content'
+                    }
+                }
+            }
         }
     ]
 });

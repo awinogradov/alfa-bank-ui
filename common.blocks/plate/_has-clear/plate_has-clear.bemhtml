@@ -8,7 +8,7 @@ block('plate').mod('has-clear', true)(
                 content: {
                     block: 'icon',
                     mods: {
-                       theme: this.ctx.mods.theme,
+                       theme: 'alfa-on-color',
                        tool: 'close'
                     }
                 }
