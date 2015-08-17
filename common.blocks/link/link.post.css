@@ -8,12 +8,13 @@
 
     text-decoration: none;
 
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-
-    padding-bottom: 1px;
-
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+
+    .link__text {
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        padding-bottom: 1px;
+    }
 
     &.link_size_s {
         font-size: 12px;
@@ -32,19 +33,17 @@
     }
 
     &.link_pseudo {
-        border-bottom-style: dotted;
+        .link__text {
+            border-bottom-style: dotted;
+        }
     }
 
     &.link_disabled {
         cursor: default;
     }
 
-    &.link_icon {
-        border: none;
-
-        .link__icon {
-            margin-right: 5px;
-            vertical-align: middle;
-        }
+    .link__icon {
+        margin-right: 5px;
+        vertical-align: middle;
     }
 }
