@@ -72,8 +72,7 @@
             color: #aaa;
         }
 
-        /* FIXME: maybe remove cascade? */
-        .icon {
+        .button__icon {
             opacity: 0.3;
         }
     }
