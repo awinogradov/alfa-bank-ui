@@ -8,25 +8,29 @@ html {
     height: 100%;
 }
 
-.page .page__inner {
+.page__inner {
     min-height: 100%;
+
     margin-bottom: -148px;
 }
 
-.page .page__inner:after {
+.page__inner:after {
     content: "";
     display: block;
     height: 150px;
 }
 
-.page .page__content {
+.page__content {
     width: 1250px;
+
     margin: auto;
+
     padding-top: 95px;
     padding-bottom: 40px;
 }
 
-.page .page__footer {
+.page__footer {
     height: 150px;
+
     min-width: 1250px;
 }

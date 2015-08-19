@@ -1,9 +1,9 @@
-.form.form_size_m {
+.form_size_m {
     padding-bottom: 60px;
 }
-.form.form_size_m .form__header {
+.form_size_m .form__header {
     margin-bottom: 40px;
 }
-.form.form_size_m .form__footer {
+.form_size_m .form__footer {
     padding-top: 20px;
 }

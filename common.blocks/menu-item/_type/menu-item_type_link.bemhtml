@@ -10,7 +10,7 @@ block('menu-item').mod('type', 'link').match(this._alfaMods)(
             },
             url: this.ctx.url,
             target: this.ctx.target,
-            content: applyNext()
+            text: applyNext()
         }];
     })
 );

@@ -12,30 +12,38 @@
 
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
 }
-.link .link__text {
+
+.link__text {
     border-bottom-width: 1px;
     border-bottom-style: solid;
     padding-bottom: 1px;
 }
-.link.link_size_s {
+
+.link_size_s {
     font-size: 12px;
 }
-.link.link_size_m {
+
+.link_size_m {
     font-size: 15px;
 }
-.link.link_size_l {
+
+.link_size_l {
     font-size: 20px;
 }
-.link.link_size_xl {
+
+.link_size_xl {
     font-size: 35px;
 }
-.link.link_pseudo .link__text {
+
+.link_pseudo .link__text {
     border-bottom-style: dotted;
 }
-.link.link_disabled {
+
+.link_disabled {
     cursor: default;
 }
-.link .link__icon {
+
+.link__icon {
     margin-right: 5px;
     vertical-align: middle;
 }

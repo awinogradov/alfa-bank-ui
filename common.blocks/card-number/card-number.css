@@ -1,4 +1,4 @@
-.card-number .card-number__dot {
+.card-number__dot {
     border-radius: 100%;
     border: 4px solid;
     display: inline-block;
@@ -6,11 +6,11 @@
     vertical-align: middle;
     margin-bottom: 3px;
 }
-.card-number .card-number__dot:first-of-type
-        {
+.card-number__dot:first-of-type
+    {
     margin-left: 5px;
 }
-.card-number .card-number__dot:last-of-type
-        {
+.card-number__dot:last-of-type
+    {
     margin-right: 5px;
 }

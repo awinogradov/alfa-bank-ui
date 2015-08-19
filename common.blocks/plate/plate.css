@@ -10,6 +10,7 @@
 
     background-color: #fff;
 }
-.plate.plate_hidden {
+
+.plate_hidden {
     display: none;
 }

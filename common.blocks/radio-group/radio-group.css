@@ -1,27 +1,35 @@
 .radio-group {
     display: inline-block;
 }
-.radio-group .radio_size_m {
+
+.radio_size_m {
     margin-bottom: 10px;
 }
-.radio-group .radio_size_l {
+
+.radio_size_l {
     margin-bottom: 12px;
 }
-.radio-group.radio-group_type_button {
+
+.radio-group_type_button {
     white-space: nowrap;
 }
-.radio-group.radio-group_type_button .radio {
+
+.radio-group_type_button .radio {
     margin-bottom: 0;
 }
-.radio-group.radio-group_type_line .radio {
+
+.radio-group_type_line .radio {
     margin-bottom: 0;
 }
-.radio-group.radio-group_type_line .radio_size_m {
+
+.radio-group_type_line .radio_size_m {
     margin-right: 13px;
 }
-.radio-group.radio-group_type_line .radio_size_l {
+
+.radio-group_type_line .radio_size_l {
     margin-right: 15px;
 }
-.radio-group.radio-group_type_line .radio:last-child {
+
+.radio-group_type_line .radio:last-child {
     margin-right: 0;
 }

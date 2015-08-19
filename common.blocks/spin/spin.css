@@ -3,22 +3,28 @@
     background-repeat: no-repeat;
     background-position: 50%;
 }
-.spin.spin_visible {
+
+.spin_visible {
     display: inline-block;
 }
-.spin.spin_size_s {
+
+.spin_size_s {
     width: 25px;
     height: 25px;
 }
-.spin.spin_size_m {
+
+
+.spin_size_m {
     width: 35px;
     height: 35px;
 }
-.spin.spin_size_l {
+
+.spin_size_l {
     width: 45px;
     height: 45px;
 }
-.spin.spin_size_xl {
+
+.spin_size_xl {
     width: 55px;
     height: 55px;
 }

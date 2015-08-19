@@ -8,6 +8,8 @@ modules.define('collapse', ['i-bem__dom'], function(provide, BEMDOM) {
                     this.__base.apply(this, arguments);
 
                     var _this = this;
+
+                    this._link = this.findBlockOn('link', { block: 'link', modName: 'pseudo', modVal: true });
                     this.bindTo('link', 'click', function() {
                         _this.toggleMod('expanded');
                     });
@@ -20,12 +22,12 @@ modules.define('collapse', ['i-bem__dom'], function(provide, BEMDOM) {
             'expanded': {
                 'true': function() {
                     this.__base.apply(this, arguments);
-                    this.elem('link').text(this.params.expandedLabel);
+                    this._link.setVal(this.params.expandedLabel);
                     this.elem('content').height(this._height);
                 },
                 '': function() {
                     this.__base.apply(this, arguments);
-                    this.elem('link').text(this.params.collapsedLabel);
+                    this._link.setVal(this.params.collapsedLabel);
                     this.elem('content').height(0);
                 }
             }

@@ -4,20 +4,25 @@
 
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+
 }
-.heading.heading_lvl_1 {
+
+.heading_lvl_1 {
     font-size: 3.4rem;
     line-height: 4.2rem;
 }
-.heading.heading_lvl_2 {
+
+.heading_lvl_2 {
     font-size: 2.6rem;
     line-height: 3.6rem;
 }
-.heading.heading_lvl_3 {
+
+.heading_lvl_3 {
     font-size: 2rem;
     line-height: 2.4rem;
 }
-.heading.heading_lvl_4 {
+
+.heading_lvl_4 {
     font-size: 1.8rem;
     line-height: 2.4rem;
 }

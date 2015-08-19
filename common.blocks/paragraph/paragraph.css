@@ -8,7 +8,8 @@
 
     line-height: 1.25rem;
 }
-.paragraph.paragraph_type_lead {
+
+.paragraph_type_lead {
     font-size: 1.25rem;
     line-height: 1.5625rem;
 }

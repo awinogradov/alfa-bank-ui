@@ -113,6 +113,59 @@
         },
         {
             block: 'example-section',
+            title: 'Type Link Pseudo',
+            content: ['alfa-on-color', 'alfa-on-white'].map(function(theme) {
+                return {
+                    elem: 'col',
+                    elemMods: { theme: theme },
+                    content: ['s', 'm', 'l', 'xl'].map(function(size) {
+                        return [
+                            {
+                                elem: 'size',
+                                content: size
+                            },
+                            {
+                                block: 'menu',
+                                mods: { theme: theme, size: size },
+                                val: 2,
+                                content: [
+                                    {
+                                        block: 'menu-item',
+                                        mods: { theme: theme, size: size, type: 'link', pseudo: true },
+                                        val: 1,
+                                        url: '#',
+                                        content: 'Отпуск на работе'
+                                    },
+                                    {
+                                        block: 'menu-item',
+                                        mods: { theme: theme, size: size, type: 'link', pseudo: true },
+                                        val: 2,
+                                        url: '#',
+                                        content: 'Отпуск в горах'
+                                    },
+                                    {
+                                        block: 'menu-item',
+                                        mods: { theme: theme, size: size, type: 'link', pseudo: true },
+                                        val: 3,
+                                        url: '#',
+                                        content: 'Отпуск на море'
+                                    },
+                                    {
+                                        block: 'menu-item',
+                                        mods: { theme: theme, size: size, type: 'link', pseudo: true },
+                                        val: 4,
+                                        url: '#',
+                                        content: 'Отпуск на диване'
+                                    }
+                                ]
+                            }
+                        ];
+                    })
+                };
+            })
+        },
+        {
+            block: 'example-section',
             title: 'Type popup',
             content: ['alfa-on-color', 'alfa-on-white'].map(function(theme) {
                 return {

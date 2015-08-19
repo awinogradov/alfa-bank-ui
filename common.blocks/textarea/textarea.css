@@ -24,12 +24,15 @@
 
     /* Decorative element (inner background) */
 }
+
 .textarea::-webkit-input-placeholder {
     text-indent: 0;
 }
+
 .textarea::-moz-placeholder {
     opacity: 1;
 }
+
 .textarea:before {
     position: absolute;
     top:      1px;
@@ -39,32 +42,40 @@
     content: '';
     border-radius: 5px;
 }
-.textarea.textarea_focused {
+
+.textarea_focused {
     z-index: 1;
 }
-.textarea.textarea_disabled {
+
+.textarea_disabled {
     cursor: default;
+
     resize: none;
 }
-.textarea.textarea_disabled:before {
+
+.textarea_disabled:before {
     display: none;
 }
-.textarea.textarea_size_s {
+
+.textarea_size_s {
     font-size: 12px;
     padding: 4px 13px;
     min-height: 2em;
 }
-.textarea.textarea_size_m {
+
+.textarea_size_m {
     font-size: 12px;
     padding: 4px 15px;
     min-height: 4em;
 }
-.textarea.textarea_size_l {
+
+.textarea_size_l {
     font-size: 15px;
     padding: 4px 17px;
     min-height: 6em;
 }
-.textarea.textarea_size_xl {
+
+.textarea_size_xl {
     font-size: 25px;
     padding: 4px 19px;
     min-height: 8em;

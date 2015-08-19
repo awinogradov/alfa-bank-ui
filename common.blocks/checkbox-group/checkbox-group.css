@@ -1,27 +1,35 @@
 .checkbox-group {
     display: inline-block;
 }
-.checkbox-group .checkbox_size_m {
+
+.checkbox_size_m {
     margin-bottom: 10px;
 }
-.checkbox-group .checkbox_size_l {
+
+.checkbox_size_l {
     margin-bottom: 12px;
 }
-.checkbox-group.checkbox-group_type_button {
+
+.checkbox-group_type_button {
     white-space: nowrap;
 }
-.checkbox-group.checkbox-group_type_button .checkbox {
+
+.checkbox-group_type_button .checkbox {
     margin-bottom: 0;
 }
-.checkbox-group.checkbox-group_type_line .checkbox {
+
+.checkbox-group_type_line .checkbox {
     margin-bottom: 0;
 }
-.checkbox-group.checkbox-group_type_line .checkbox_size_m {
+
+.checkbox-group_type_line .checkbox_size_m {
     margin-right: 13px;
 }
-.checkbox-group.checkbox-group_type_line .checkbox_size_l {
+
+.checkbox-group_type_line .checkbox_size_l {
     margin-right: 15px;
 }
-.checkbox-group.checkbox-group_type_line .checkbox:last-child {
+
+.checkbox-group_type_line .checkbox:last-child {
     margin-right: 0;
 }

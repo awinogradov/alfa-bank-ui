@@ -1,20 +1,20 @@
 .label {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+}
 
-    &.label_size_s {
-        font-size: 12px;
-    }
+.label_size_s {
+    font-size: 12px;
+}
 
-    &.label_size_m {
-        font-size: 12px;
-    }
+.label_size_m {
+    font-size: 12px;
+}
 
-    &.label_size_l {
-        font-size: 15px;
-    }
+.label_size_l {
+    font-size: 15px;
+}
 
-    &.label_size_xl {
-        font-size: 25px;
-    }
+.label_size_xl {
+    font-size: 25px;
 }

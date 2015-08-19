@@ -9,8 +9,8 @@
     margin-bottom: 7px;
 
     background-color: #fff;
+}
 
-    &.plate_hidden {
-        display: none;
-    }
+.plate_hidden {
+    display: none;
 }

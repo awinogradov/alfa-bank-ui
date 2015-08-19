@@ -36,7 +36,6 @@ Input.decl({ block: this.name, modName: 'mode', modVal: 'link' }, {
             },
             '': function() {
                 this._trigger.setVal(this.getVal() || this.getPlaceholder());
-                this._trigger.updateContent();
                 this.emit('submit');
             }
         }

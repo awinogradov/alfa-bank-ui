@@ -14,8 +14,8 @@ block('collapse')(
             {
                 block: 'link',
                 mix: { block: 'collapse', elem: 'link' },
-                mods: { theme: this.ctx.mods.theme },
-                content: this.ctx.mods.expanded ?
+                mods: { theme: this.ctx.mods.theme, pseudo: true },
+                text: this.ctx.mods.expanded ?
                     (this.ctx.expandedLabel || 'Collapse') :
                     (this.ctx.collapsedLabel || 'Expand')
             }
