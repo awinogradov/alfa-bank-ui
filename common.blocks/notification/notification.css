@@ -6,20 +6,21 @@
     position: fixed;
     top: 17px;
     right: -500px;
-
-    /* FIXME: one type for error! */
 }
-.notification.notification_visible {
+
+.notification_visible {
     right: 10px !important;
 }
-.notification .notification__plate {
+
+.notification__plate {
     padding-top: 0 !important;
     padding-left: 0 !important;
     padding-bottom: 0 !important;
     height: 109px;
     width: 390px;
 }
-.notification .notification__status {
+
+.notification__status {
     text-align: center;
     width: 80px;
     height: 109px;
@@ -27,23 +28,29 @@
     position: absolute;
     border-radius: 4px 0 0 4px;
 }
-.notification .notification__message {
+
+.notification__message {
     display: table;
     height: 109px;
     padding-left: 101px;
     min-width: 200px;
     max-width: 360px;
 }
-.notification .notification__inner {
+
+.notification__inner {
     display: table-cell;
     vertical-align: middle;
 }
-.notification .notification__status_type_ok {
+
+.notification__status_type_ok {
     background-color: #4faf5b;
 }
-.notification .notification__status_type_fail {
+
+/* FIXME: one type for error! */
+.notification__status_type_fail {
     background-color: #de3c16;
 }
-.notification .notification__status_type_error {
+
+.notification__status_type_error {
     background-color: #de3c16;
 }

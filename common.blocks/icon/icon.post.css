@@ -4,29 +4,29 @@
 
     background-repeat: no-repeat;
     background-size: contain;
+}
 
-    &.icon_size_xs {
-        width: 11px;
-        height: 11px;
-    }
+.icon_size_xs {
+    width: 11px;
+    height: 11px;
+}
 
-    &.icon_size_s {
-        width: 25px;
-        height: 25px;
-    }
+.icon_size_s {
+    width: 25px;
+    height: 25px;
+}
 
-    &.icon_size_m {
-        width: 35px;
-        height: 35px;
-    }
+.icon_size_m {
+    width: 35px;
+    height: 35px;
+}
 
-    &.icon_size_l {
-        width: 45px;
-        height: 45px;
-    }
+.icon_size_l {
+    width: 45px;
+    height: 45px;
+}
 
-    &.icon_size_xl {
-        width: 55px;
-        height: 55px;
-    }
+.icon_size_xl {
+    width: 55px;
+    height: 55px;
 }

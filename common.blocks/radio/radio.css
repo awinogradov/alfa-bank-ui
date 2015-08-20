@@ -5,18 +5,24 @@
 
     cursor: pointer;
 }
-.radio .radio__control {
+
+.radio__control {
     position: absolute;
     z-index:  -1;
+
     margin: 0;
+
     opacity: 0;
 }
-.radio .radio__box {
+
+.radio__box {
     position: relative;
     display:  inline-block;
+
     border-radius: 50%;
 }
-.radio .radio__box:after {
+
+.radio__box:after {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -25,61 +31,70 @@
     opacity: 0;
     border-radius: 50%;
     -webkit-transition: -webkit-transform .05s ease-out,
-                        opacity .05s ease-out,
-                        visibility 0s linear .05s;
+                    opacity .05s ease-out,
+                    visibility 0s linear .05s;
             transition: transform .05s ease-out,
-                        opacity .05s ease-out,
-                        visibility 0s linear .05s;
+                    opacity .05s ease-out,
+                    visibility 0s linear .05s;
 }
-.radio.radio_checked .radio__box:after {
+
+.radio_checked .radio__box:after {
     visibility: visible;
     opacity:    1;
 }
-.radio.radio_disabled {
+
+.radio_disabled {
     cursor: default;
 }
-.radio.radio_size_m
-    {
+
+.radio_size_m {
     font-size: 12px;
 }
-.radio.radio_size_m .radio__box
-        {
+
+.radio_size_m .radio__box
+    {
     line-height: 12px;
     top: 2px;
     width: 12px;
     height: 12px;
     margin-right: 5px;
 }
-.radio.radio_size_m .radio__box:after
-            {
+
+.radio_size_m .radio__box:after
+        {
     margin-top: -4px;
     margin-left: -4px;
     width: 8px;
     height: 8px;
 }
-.radio.radio_size_l
-    {
+
+.radio_size_l {
     font-size: 15px;
 }
-.radio.radio_size_l .radio__box
-        {
+
+.radio_size_l .radio__box
+    {
     line-height: 15px;
     top: 2px;
     width: 15px;
     height: 15px;
     margin-right: 7px;
 }
-.radio.radio_size_l .radio__box:after
-            {
+
+.radio_size_l .radio__box:after
+        {
     margin-top: -5px;
     margin-left: -5px;
     width: 10px;
     height: 10px;
 }
-.radio.radio_type_button {
+
+.radio_type_button {
     display: inline-block;
+
     /* FIXME: maybe remove cascade? */
 }
-.radio.radio_type_button .button_checked {
+
+.radio_type_button .button_checked {
     cursor: default;
 }

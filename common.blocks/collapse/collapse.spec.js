@@ -1,20 +1,21 @@
-modules.define('spec', ['collapse', 'spec__utils'], function(provide, collapse, utils) {
+modules.define('spec', ['collapse', 'spec__utils', 'link'], function(provide, collapse, utils, link) {
 
     var el = 'Скрыть подробности',
-        cl = 'Подробнее',
-        bemjson = {
-            block: 'collapse',
-            mods: { theme: 'alfa-on-color' },
-            expandedLabel: el,
-            collapsedLabel: cl,
-            content: ['Подробности...']
-        };
+        cl = 'Подробнее';
 
     describe('collapse', function() {
 
-        var block;
+        var block,
+            bemjson;
 
         beforeEach(function() {
+            bemjson = {
+                block: 'collapse',
+                mods: { theme: 'alfa-on-color' },
+                expandedLabel: el,
+                collapsedLabel: cl,
+                content: ['Подробности...']
+            }
             block = utils.buildBlock('collapse', bemjson);
         });
 
@@ -28,40 +29,31 @@ modules.define('spec', ['collapse', 'spec__utils'], function(provide, collapse, 
         });
 
         it('should pass `theme` mods to link', function() {
-            var link = block.findBlockInside('link');
-            link.getMod('theme').should.equal('alfa-on-color');
+            block._link.getMod('theme').should.equal('alfa-on-color');
         });
 
         it('should set link label to `collapsedLabel` in collapsed state', function() {
-            block.delMod('expanded');
-            var link = block.findBlockInside('link');
-            link.should.not.be.null;
-            link.domElem.text().should.equal(cl);
+            console.log(block.domElem.html());
+            block._link.should.not.be.null;
+            block._link.getVal().should.equal(cl);
         });
 
         it('should set link label to `expandedLabel` in expanded state', function() {
             block.setMod('expanded', true);
-            var link = block.findBlockInside('link');
-            link.should.not.be.null;
-            link.domElem.text().should.equal(el);
+            block._link.should.not.be.null;
+            block._link.getVal().should.equal(el);
         });
 
         it('should set link label to `expandedLabel` when rendered with `expanded` mod', function() {
             bemjson.mods.expanded = true;
-            var block = utils.buildBlock('collapse', bemjson),
-                link = block.findBlockInside('link');
-            link.domElem.text().should.equal(el);
-
-            utils.destruct(block);
-            delete bemjson.mods.expanded;
+            block = utils.buildBlock('collapse', bemjson);
+            block._link.getVal().should.equal(el);
         });
 
         it('should toggle `expanded` mode on link click', function() {
-            block.delMod('expanded');
-            var link = block.findBlockInside('link');
-            link.domElem.click();
+            block._link.domElem.click();
             block.getMod('expanded').should.be.true;
-            link.domElem.click();
+            block._link.domElem.click();
             block.getMod('expanded').should.equal('');
         });
     });

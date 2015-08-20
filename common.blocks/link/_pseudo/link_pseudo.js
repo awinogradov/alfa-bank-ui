@@ -32,13 +32,13 @@ modules.define('link', function(provide, Link) {
          */
         setVal: function(val) {
             this._val = val;
-            this.updateContent();
+            this._updateText();
         },
         /**
          * Update text on link
          */
-        updateContent: function() {
-            this.domElem.text(this._val);
+        _updateText: function() {
+            this.elem('text').text(this._val);
         }
     });
 

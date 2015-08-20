@@ -1,7 +1,8 @@
-.app .app__title, .app .app__menu, .app .app__content {
+.app__title, .app__menu, .app__content {
     width:  780px;
     margin: 0 auto;
 }
-.app .app__menu {
+
+.app__menu {
     padding: 5px 0 40px;
 }

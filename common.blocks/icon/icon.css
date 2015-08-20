@@ -5,23 +5,28 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
-.icon.icon_size_xs {
+
+.icon_size_xs {
     width: 11px;
     height: 11px;
 }
-.icon.icon_size_s {
+
+.icon_size_s {
     width: 25px;
     height: 25px;
 }
-.icon.icon_size_m {
+
+.icon_size_m {
     width: 35px;
     height: 35px;
 }
-.icon.icon_size_l {
+
+.icon_size_l {
     width: 45px;
     height: 45px;
 }
-.icon.icon_size_xl {
+
+.icon_size_xl {
     width: 55px;
     height: 55px;
 }

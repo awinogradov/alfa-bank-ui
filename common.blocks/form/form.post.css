@@ -1,14 +1,11 @@
-.form {
+.form_size_m {
+    padding-bottom: 60px;
 
-    &.form_size_m {
-        padding-bottom: 60px;
+    .form__header {
+        margin-bottom: 40px;
+    }
 
-        .form__header {
-            margin-bottom: 40px;
-        }
-
-        .form__footer {
-            padding-top: 20px;
-        }
+    .form__footer {
+        padding-top: 20px;
     }
 }

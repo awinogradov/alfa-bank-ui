@@ -2,15 +2,19 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
-.label.label_size_s {
+
+.label_size_s {
     font-size: 12px;
 }
-.label.label_size_m {
+
+.label_size_m {
     font-size: 12px;
 }
-.label.label_size_l {
+
+.label_size_l {
     font-size: 15px;
 }
-.label.label_size_xl {
+
+.label_size_xl {
     font-size: 25px;
 }

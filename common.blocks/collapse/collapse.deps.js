@@ -1,7 +1,7 @@
 [{
     mustDeps: [
         { block: 'i-bem' },
-        { block: 'link' }
+        { block: 'link', mods: { pseudo: true } }
     ]
 },
 {

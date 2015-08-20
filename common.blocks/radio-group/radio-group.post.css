@@ -1,37 +1,37 @@
 .radio-group {
     display: inline-block;
+}
+
+.radio_size_m {
+    margin-bottom: 10px;
+}
+
+.radio_size_l {
+    margin-bottom: 12px;
+}
+
+.radio-group_type_button {
+    white-space: nowrap;
+
+    .radio {
+        margin-bottom: 0;
+    }
+}
+
+.radio-group_type_line {
+    .radio {
+        margin-bottom: 0;
+    }
 
     .radio_size_m {
-        margin-bottom: 10px;
+        margin-right: 13px;
     }
 
     .radio_size_l {
-        margin-bottom: 12px;
+        margin-right: 15px;
     }
 
-    &.radio-group_type_button {
-        white-space: nowrap;
-
-        .radio {
-            margin-bottom: 0;
-        }
-    }
-
-    &.radio-group_type_line {
-        .radio {
-            margin-bottom: 0;
-        }
-
-        .radio_size_m {
-            margin-right: 13px;
-        }
-
-        .radio_size_l {
-            margin-right: 15px;
-        }
-
-        .radio:last-child {
-            margin-right: 0;
-        }
+    .radio:last-child {
+        margin-right: 0;
     }
 }

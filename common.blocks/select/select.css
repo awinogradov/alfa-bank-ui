@@ -4,72 +4,91 @@
     display: inline-block;
 
     vertical-align: top;
-
-    /* FIXME: maybe remove cascade? */
 }
-.select .select__button {
+
+.select__button {
     width: 100%;
+
     text-align: left;
     vertical-align: top;
+
     padding: 0;
 
     /* FIXME: maybe remove cascade? */
 }
-.select .select__button .button__text {
+
+.select__button .button__text {
     display: block;
 }
-.select .select__button .button__text:empty:before {
+
+.select__button .button__text:empty:before {
     content: '\00a0';
 }
-.select .select__button.button_size_s .button__text {
+
+.select__button.button_hovered .select__tick {
+    opacity: 1;
+}
+
+.select__button.button_size_s .button__text {
     font-size: 12px;
     padding-right: 27px;
     margin-left: 12px;
 }
-.select .select__button.button_size_s .select__tick {
+
+.select__button.button_size_s .select__tick {
     width: 28px;
 }
-.select .select__button.button_size_m .button__text {
+
+.select__button.button_size_m .button__text {
     font-size: 12px;
     padding-right: 28px;
     margin-left: 14px;
 }
-.select .select__button.button_size_m .select__tick {
+
+.select__button.button_size_m .select__tick {
     width: 29px;
 }
-.select .select__button.button_size_l .button__text {
+
+.select__button.button_size_l .button__text {
     font-size: 15px;
     padding-right: 32px;
     margin-left: 16px;
 }
-.select .select__button.button_size_l .select__tick {
+
+.select__button.button_size_l .select__tick {
     width: 33px;
 }
-.select .select__button.button_size_xl .button__text {
+
+.select__button.button_size_xl .button__text {
     font-size: 25px;
     padding-right: 38px;
     margin-left: 18px;
 }
-.select .select__button.button_size_xl .select__tick {
+
+.select__button.button_size_xl .select__tick {
     width: 39px;
 }
-.select .select__tick {
+
+.select__tick {
     position: absolute;
     top: 0;
     right: 0;
+
     height: 100%;
+
     background-position: center;
+
     -webkit-transition: all 0.1s ease-out;
+
             transition: all 0.1s ease-out;
     opacity: 0.3;
 }
-.select .button_hovered .select__tick {
-    opacity: 1;
-}
-.select.select_disabled .button_hovered .select__tick {
+
+.select_disabled .button_hovered .select__tick {
     opacity: 0.3;
 }
-.select.select_opened .select__tick {
+
+.select_opened .select__tick {
     -webkit-transform: rotate(-180deg);
             transform: rotate(-180deg);
 }

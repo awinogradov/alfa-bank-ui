@@ -14,7 +14,7 @@ block('input').mod('mode', 'link')(
                         theme: this._input.mods.theme,
                         pseudo: true
                     },
-                    content: this._input.val || this._input.placeholder
+                    text: this._input.val || this._input.placeholder
                 },
                 applyNext()
             ];
