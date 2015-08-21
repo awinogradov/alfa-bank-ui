@@ -11,7 +11,25 @@ block('footer')(
         return [
             {
                 elem: 'inner',
-                content: this.ctx.content
+                content: !applyNext() ? [
+                    (this.ctx.menu) && {
+                        elem: 'menu',
+                        content: this.ctx.menu
+                    },
+                    (this.ctx.additional) && {
+                        elem: 'additional',
+                        content: this.ctx.additional || 'Сделано в Альфа-Лаборатории'
+                    },
+                    (this.ctx.copyright) && {
+                        elem: 'copyright',
+                        content: this.ctx.copyright || [
+                            {
+                                block: 'copyright',
+                                mods: { theme: this._footerMods.theme }
+                            }
+                        ]
+                    }
+                ] : applyNext()
             }
         ];
     })
