@@ -13,11 +13,32 @@
         <th>Описание</th>
     </tr>
     <tr>
+        <td>root</td>
+        <td>
+            <code>String</code>
+        </td>
+        <td>Url сервиса. По умолчанию `/`</td>
+    </tr>
+    <tr>
         <td>menu</td>
         <td>
-            <code>Array</code>
+            <code>Bemjson</code>
         </td>
-        <td>Массив объектов для построения меню</td>
+        <td>Мода для передачи бока `menu`</td>
+    </tr>
+    <tr>
+        <td>user</td>
+        <td>
+            <code>Bemjson</code>
+        </td>
+        <td>Мода для передачи бока `user`</td>
+    </tr>
+    <tr>
+        <td>support</td>
+        <td>
+            <code>Bemjson</code>
+        </td>
+        <td>Мода для передачи бока `support`</td>
     </tr>
 </table>
 
@@ -37,13 +58,13 @@
 
 ### __menu
 
-Реализует меню из входного массива объектов.
+Обертка для блока `menu`.
 
 ### __user
 
-Реализует меню пользователя.
+Обертка для блока `user`.
 
 ### __support
 
-Показывает город и номера телефонов для обращения в службу поддержки.
+Обертка для блока `support`.
 

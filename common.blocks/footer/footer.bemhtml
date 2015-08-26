@@ -1,37 +1,27 @@
 block('footer')(
-
-    def()(function() {
-        applyNext({
-            _footerMods: this.mods,
-            _footer: this.ctx
-        });
-    }),
-
     content()(function() {
-        return [
-            {
-                elem: 'inner',
-                content: !applyNext() ? [
-                    (this.ctx.menu) && {
-                        elem: 'menu',
-                        content: this.ctx.menu
-                    },
-                    (this.ctx.additional) && {
-                        elem: 'additional',
-                        content: this.ctx.additional || 'Сделано в Альфа-Лаборатории'
-                    },
-                    (this.ctx.copyright) && {
-                        elem: 'copyright',
-                        content: this.ctx.copyright || [
-                            {
-                                block: 'copyright',
-                                mods: { theme: this._footerMods.theme }
-                            }
-                        ]
-                    }
-                ] : applyNext()
-            }
-        ];
+        return {
+            elem: 'inner',
+            content: [
+                this.ctx.menu && {
+                    elem: 'menu',
+                    content: this.ctx.menu
+                },
+                {
+                    elem: 'additional',
+                    content: this.ctx.additional || 'Сделано в Альфа-Лаборатории'
+                },
+                {
+                    elem: 'copyright',
+                    content: this.ctx.copyright || [
+                        {
+                            block: 'copyright',
+                            mods: { theme: this.mods.theme }
+                        }
+                    ]
+                }
+            ]
+        };
     })
 
 );

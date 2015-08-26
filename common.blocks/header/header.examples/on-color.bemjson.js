@@ -8,30 +8,95 @@
         {
             block: 'header',
             mods: { theme: 'alfa-on-color' },
-            menu: [
-                {
-                    title: 'Частным лицам',
-                    url: '#'
+            menu: {
+                block: 'menu',
+                mods: {
+                    theme: 'alfa-on-color',
+                    size: 'm',
+                    horizontal: true
                 },
-                {
-                    title: 'Бизнесу',
-                    url: '#'
-                },
-                {
-                    title: 'Отделения',
-                    url: '#'
-                },
-                {
-                    title: 'Банкоматы',
-                    url: '#'
-                },
-                {
-                    title: 'Интернет-банк',
-                    url: '#'
+                content: [
+                    {
+                        title: 'Частным лицам',
+                        url: '#'
+                    },
+                    {
+                        title: 'Бизнесу',
+                        url: '#'
+                    },
+                    {
+                        title: 'Отделения',
+                        url: '#'
+                    },
+                    {
+                        title: 'Банкоматы',
+                        url: '#'
+                    },
+                    {
+                        title: 'Интернет-банк',
+                        url: '#',
+                        items: [
+                            {
+                                title: 'Банкоматы',
+                                url: '#'
+                            },
+                            {
+                                title: 'Интернет-банк',
+                                url: '#'
+                            }
+                        ]
+                    }
+                ].map(function(item) {
+                    if (item.items){
+                        return {
+                            block: 'menu-item',
+                            mods: { type: 'dropdown' },
+                            content: item.title,
+                            popup: [
+                                {
+                                    block: 'menu',
+                                    mix: { elem: 'additional' },
+                                    content: item.items.map(function(item) {
+                                        return {
+                                            block: 'menu-item',
+                                            mods: { type: 'link', theme: 'alfa-on-color' },
+                                            mix: { elem: 'additional' },
+                                            url: item.url,
+                                            content: item.title
+                                        };
+                                    })
+                                }
+                            ]
+                        };
+                    }
+                    return {
+                        block: 'menu-item',
+                        mods: { type: 'link', theme: 'alfa-on-color' },
+                        url: item.url,
+                        content: item.title
+                    };
+                })
+            },
+            user: {
+                block: 'user',
+                mods: { theme: 'alfa-on-color', size: 'm' },
+                url: '/logout',
+                text: 'User Name',
+                icon: {
+                    block: 'icon',
+                    mods: {
+                        theme: 'alfa-on-color',
+                        size: 's',
+                        user: 'out'
+                    }
                 }
-            ],
-            customer: 'customer',
-            support: 'support'
+            },
+            support: {
+                block: 'support',
+                mods: { theme: 'alfa-on-color', size: 'm' },
+                city: 'Москва',
+                phone: '+7 (777) 777-77-77'
+            }
         },
         [1,2,3,4,5,6,7,8,9,10].map(function(line) {
             return {

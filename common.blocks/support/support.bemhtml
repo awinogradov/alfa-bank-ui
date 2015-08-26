@@ -1,7 +1,7 @@
 block('support').content()(function() {
     var mods = this.ctx.mods;
     return [
-        this.ctx.city && {
+        {
             elem: 'city',
             content: {
                 block: 'link',
@@ -9,7 +9,7 @@ block('support').content()(function() {
                 text: this.ctx.city
             }
         },
-        this.ctx.phone && {
+        {
             elem: 'phone',
             content: {
                 block: 'link',

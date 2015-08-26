@@ -17,14 +17,14 @@
         <td>
             <code>String</code>
         </td>
-        <td>Названеие города</td>
+        <td>[Обязательный] Названеие города</td>
     </tr>
     <tr>
         <td>phone</td>
         <td>
             <code>String</code>
         </td>
-        <td>Телефон</td>
+        <td>[Обязательный] Телефон</td>
     </tr>
 </table>
 
