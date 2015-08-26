@@ -1,0 +1,21 @@
+block('support').content()(function() {
+    var mods = this.ctx.mods;
+    return [
+        this.ctx.city && {
+            elem: 'city',
+            content: {
+                block: 'link',
+                mods: this.extend(mods, { pseudo: true }),
+                text: this.ctx.city
+            }
+        },
+        this.ctx.phone && {
+            elem: 'phone',
+            content: {
+                block: 'link',
+                mods: this.extend(mods, { pseudo: true }),
+                text: this.ctx.phone
+            }
+        }
+    ];
+});
