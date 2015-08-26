@@ -1,0 +1,21 @@
+block('user').def()(function() {
+    var mods = this.ctx.mods,
+        icon = this.ctx.icon;
+
+    icon && (icon.mix = { block: 'user', elem: 'icon' });
+
+    applyCtx({
+        block: 'link',
+        mix: { block: 'user', mods: mods },
+        mods: mods,
+        url: this.ctx.url,
+        content: [
+            {
+                elem: 'text',
+                mix: { block: 'user', elem: 'text' },
+                content: this.ctx.text
+            },
+            icon
+        ]
+    });
+});
