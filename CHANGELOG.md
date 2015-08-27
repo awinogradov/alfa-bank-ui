@@ -1,3 +1,16 @@
+<a name"4.0.2"></a>
+### 4.0.2 (2015-08-27)
+
+
+#### Features
+
+* ***:** clean cascade in CSS dist ([85e9ef0](http://git/projects/MAN/repos/nyc-public/commits/85e9ef0b95b75304d00716b967dcd96aa2c5250a))
+* **card-number:** add 19 numder examples ([d26340c](http://git/projects/MAN/repos/nyc-public/commits/d26340c23954a350199d4cf2d334b5a650d11004))
+* **form:** cleanup ([f50f5c6](http://git/projects/MAN/repos/nyc-public/commits/f50f5c6b24c3ff50c58eeaad6539386c5e302eac))
+* **input:** remove input_mode_result ([246bc63](http://git/projects/MAN/repos/nyc-public/commits/246bc635b4770951bce7fc14f234ad2e34342e30))
+* **plate:** del themes ([3c1c446](http://git/projects/MAN/repos/nyc-public/commits/3c1c4467ae00856b59e6f6f360d3227ef4a93a08))
+
+
 <a name"4.0.1"></a>
 ### 4.0.1 (2015-08-14)
 
