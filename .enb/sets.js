@@ -1,7 +1,6 @@
 var path = require('path'),
     fs = require('fs'),
     levels = require('./levels'),
-    naming = require('bem-naming'),
     set = {
     configure: function(platform, sets) {
         sets.examples.configure({

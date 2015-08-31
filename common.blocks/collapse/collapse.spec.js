@@ -33,7 +33,6 @@ modules.define('spec', ['collapse', 'spec__utils', 'link'], function(provide, co
         });
 
         it('should set link label to `collapsedLabel` in collapsed state', function() {
-            console.log(block.domElem.html());
             block._link.should.not.be.null;
             block._link.getVal().should.equal(cl);
         });
