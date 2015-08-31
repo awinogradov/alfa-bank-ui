@@ -11,16 +11,37 @@
                 content: {
                     block: 'footer',
                     mods: { theme: theme },
-                    menu: [
-                        {
-                            title: 'menu 1',
-                            url: '#'
+                    menu: {
+                        block: 'menu',
+                        mods: {
+                            theme: theme,
+                            size: 'm',
+                            horizontal: true
                         },
-                        {
-                            title: 'menu 2',
-                            url: '#'
-                        }
-                    ]
+                        content: [
+                            {
+                                title: 'menu 1',
+                                url: '#'
+                            },
+                            {
+                                title: 'menu 2',
+                                url: '#'
+                            }
+                        ].map(function(item) {
+                            return {
+                                block: 'menu-item',
+                                mods: { type: 'link' },
+                                url: item.url,
+                                content: item.title,
+                                target: item.target
+                            };
+                        })
+                    },
+                    additional: 'asdf',
+                    copyright: {
+                        block: 'copyright',
+                        mods: { theme: theme }
+                    }
                 }
             };
         })

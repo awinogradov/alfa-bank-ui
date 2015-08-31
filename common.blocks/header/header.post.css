@@ -54,24 +54,6 @@
     margin-right: 30px;
 }
 
-.header__support-phone {
-    padding-top: 10px;
-}
-
 .header__user {
     float: right;
-}
-
-.header__user-link {
-    line-height: 26px;
-}
-
-.header__user-out {
-    margin-left: 15px;
-    border-bottom: none;
-}
-
-.header__user-out-icon {
-    width: 15px;
-    height: 15px;
 }

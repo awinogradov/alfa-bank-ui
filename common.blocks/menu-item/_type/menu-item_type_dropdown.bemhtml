@@ -9,7 +9,15 @@ block('menu-item').mod('type', 'dropdown').match(this._alfaMods)(
                 mode: 'hover',
                 target: 'anchor'
             },
-            switcher: this.ctx.content,
+            switcher: {
+                block: 'link',
+                mods: {
+                    theme: this.mods.theme || this._alfaMods.theme,
+                    size: this.mods.size || this._alfaMods.size,
+                    pseudo: true
+                },
+                text: this.ctx.content
+            },
             popup: {
                 block: 'popup',
                 mods: {

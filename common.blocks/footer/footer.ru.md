@@ -15,9 +15,16 @@
     <tr>
         <td>menu</td>
         <td>
-            <code>Array</code>
+            <code>Bemjson</code>
         </td>
-        <td>Массив объектов для построения меню</td>
+        <td>Мода для передачи бока `menu`</td>
+    </tr>
+    <tr>
+        <td>additional</td>
+        <td>
+            <code>String</code>
+        </td>
+        <td>Текст на подобии — `Сделано в Альфа-Лаборатории`</td>
     </tr>
 </table>
 

@@ -2,18 +2,44 @@ block('header')(
 
     js()(true),
 
-    def()(function() {
-        applyNext({
-            _headerMods: this.mods,
-            _header: this.ctx
-        });
-    }),
-
     content()(function() {
         return [
             {
                 elem: 'inner',
-                content: this.ctx.content
+                content: [
+                    {
+                        block: 'link',
+                        url: this.ctx.root || '/',
+                        mix: { block: 'header', elem: 'logo' },
+                        content: [
+                            {
+                                block: 'logo',
+                                mods: {
+                                    theme: 'alfa-on-color',
+                                    size: 's',
+                                    view: 'full'
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'content',
+                        content: [
+                            this.ctx.menu && {
+                                elem: 'menu',
+                                content: this.ctx.menu
+                            },
+                            this.ctx.user && {
+                                elem: 'user',
+                                content: this.ctx.user
+                            },
+                            this.ctx.support && {
+                                elem: 'support',
+                                content: this.ctx.support
+                            }
+                        ]
+                    }
+                ]
             }
         ];
     })
