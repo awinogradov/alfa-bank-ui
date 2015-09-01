@@ -2,7 +2,7 @@ var fs = require('fs'),
     path = require('path'),
     config = require('../config'),
     techs = require('../techs'),
-    BEM_TEMPLATE_ENGINE = process.env.BEM_TEMPLATE_ENGINE || 'BH';
+    BEM_TEMPLATE_ENGINE = process.env.BEM_TEMPLATE_ENGINE || 'BEMHTML';
 
 /**
  * Configures dir to build page.
@@ -80,6 +80,7 @@ module.exports = function(node, opts) {
 
         // build CSS
         [techs.postcss, {
+            sourceSuffixes : ['css', 'post.css'],
             target : '.tmp.css',
             sourcemap: true,
             plugins: require('./postcss-plugins')
@@ -124,21 +125,21 @@ module.exports = function(node, opts) {
     }
 
     node.addTargets([
-        '?.css', '?.js',
+        '?.min.css', '?.min.js',
         '?.html'
     ]);
 
     node.mode('development', function() {
         node.addTechs([
-            [techs.files.copy, { source : '.tmp.css', target : '?.css' }],
-            [techs.files.copy, { source : '.tmp.js', target : '?.js' }]
+            [techs.files.copy, { source : '.tmp.css', target : '?.min.css' }],
+            [techs.files.copy, { source : '.tmp.js', target : '?.min.js' }]
         ]);
     });
 
     node.mode('production', function() {
         node.addTechs([
-            [techs.borschik, { source : '.tmp.css', target : '?.css', tech : 'cleancss' }],
-            [techs.borschik, { source : '.tmp.js', target : '?.js' }]
+            [techs.borschik, { source : '.tmp.css', target : '?.min.css', tech : 'cleancss' }],
+            [techs.borschik, { source : '.tmp.js', target : '?.min.js' }]
         ]);
     });
 };

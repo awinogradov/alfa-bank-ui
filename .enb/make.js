@@ -2,32 +2,22 @@ var path = require('path'),
     env = process.env,
     techs = require('./techs'),
     config = require('./config'),
-    configurePage = require('./helpers/page'),
-    DEFAULT_LANGS = ['ru', 'en'],
-    LANGS = env.BEM_I18N_LANGS && env.BEM_I18N_LANGS.split(' ');
+    configurePage = require('./helpers/page');
 
 module.exports = function(project) {
-    project.setLanguages(LANGS || DEFAULT_LANGS);
+    project.setLanguages(['ru', 'en']);
 
-    // load task configs
-    [
-        'dist',
-        'specs', 'tmpl-specs',
-        'examples', 'tests',
-        'docs'
-    ].forEach(function (name) {
-        var filename = path.join(__dirname, 'tasks', name + '.js');
-
-        project.includeConfig(filename);
+    ['dist', 'specs', 'tmpl-specs', 'examples', 'docs'].forEach(function (name) {
+        project.includeConfig(path.join(__dirname, 'tasks', name + '.js'));
     });
 
     // build `common.bundles/index` page
-    project.node('common.bundles/index', function (node) {
-        // provide BEMJSON file
-        node.addTech([techs.files.provide, { target : '?.bemjson.js' }]);
-
-        configurePage(node, {
-            platform : 'common'
-        });
-    });
+    // project.node('common.bundles/index', function (node) {
+    //     // provide BEMJSON file
+    //     node.addTech([techs.files.provide, { target : '?.bemjson.js' }]);
+    //
+    //     configurePage(node, {
+    //         platform : 'common'
+    //     });
+    // });
 };

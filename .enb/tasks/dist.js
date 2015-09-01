@@ -1,7 +1,7 @@
 var techs = require('../techs'),
     config = require('../config'),
     PLATFORMS = config.platforms,
-    LIB_NAME = 'bem-core';
+    LIB_NAME = 'ui';
 
 /**
  * Creates `dist` task.
@@ -47,7 +47,11 @@ function configure(node, platform) {
         [techs.bem.files, { depsFile : '.tmp.deps.js' }],
 
         // build CSS
-        [techs.css, { target : LIB_NAME + '.dev.css' }],
+        [techs.postcss, {
+            target : LIB_NAME + '.dev.css',
+            sourcemap: true,
+            plugins: require('../helpers/postcss-plugins')
+        }],
         [techs.borschik, { source : LIB_NAME + '.dev.css', target : LIB_NAME + '.css' }],
 
         // build JavaScript for browsers

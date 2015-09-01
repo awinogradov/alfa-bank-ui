@@ -1,5 +1,5 @@
 module.exports = {
-    platforms : ['desktop', 'touch'],
+    platforms : ['desktop', 'mobile'],
 
     levels : require('./levels')
 };

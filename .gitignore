@@ -23,6 +23,7 @@ libs
 /dist
 /*.docs
 /*.examples
+/*.doc-examples
 /*.specs
 /*.tests
 /*.sets

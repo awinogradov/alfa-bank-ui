@@ -64,8 +64,8 @@ function wrapInPage(bemjson, meta) {
     return {
         block : 'page',
         title : naming.stringify(meta.notation),
-        head : [{ elem : 'css', url : basename + '.css' }],
-        scripts : [{ elem : 'js', url : basename + '.js' }],
+        head : [{ elem : 'css', url : basename + '.min.css' }],
+        scripts : [{ elem : 'js', url : basename + '.min.js' }],
         content : bemjson
     };
 }
