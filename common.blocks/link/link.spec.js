@@ -14,7 +14,7 @@ describe('link', function() {
         bemjson;
 
     beforeEach(function() {
-        bemjson = { block : 'link' };
+        bemjson = { block: 'link' };
         block = utils.buildBlock('link', bemjson);
     });
 
@@ -45,7 +45,7 @@ describe('link', function() {
         });
 
         it('mode text', function() {
-            bemjson.text = 'text'
+            bemjson.text = 'text';
             block = utils.buildBlock('link', bemjson);
 
             block.findElem('text')

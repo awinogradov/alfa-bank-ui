@@ -1,4 +1,7 @@
-modules.define('spec', ['collapse', 'spec__utils', 'link'], function(provide, collapse, utils, link) {
+modules.define(
+    'spec',
+    ['collapse', 'spec__utils', 'link'],
+    function(provide, collapse, utils) {
 
     var el = 'Скрыть подробности',
         cl = 'Подробнее';
@@ -15,7 +18,7 @@ modules.define('spec', ['collapse', 'spec__utils', 'link'], function(provide, co
                 expandedLabel: el,
                 collapsedLabel: cl,
                 content: ['Подробности...']
-            }
+            };
             block = utils.buildBlock('collapse', bemjson);
         });
 
@@ -33,7 +36,6 @@ modules.define('spec', ['collapse', 'spec__utils', 'link'], function(provide, co
         });
 
         it('should set link label to `collapsedLabel` in collapsed state', function() {
-            console.log(block.domElem.html());
             block._link.should.not.be.null;
             block._link.getVal().should.equal(cl);
         });

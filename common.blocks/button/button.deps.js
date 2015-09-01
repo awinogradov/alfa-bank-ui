@@ -2,4 +2,4 @@
     shouldDeps: {
         elem: 'icon'
     }
-})
+});

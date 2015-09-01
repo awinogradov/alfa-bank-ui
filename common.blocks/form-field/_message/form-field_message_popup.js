@@ -1,3 +1,4 @@
+/* istanbul ignore next: FIXME: @voischev */
 modules.define('form-field', function(provide, FormField) {
 
 provide(FormField.decl({ modName: 'message', modVal: 'popup' }, {
