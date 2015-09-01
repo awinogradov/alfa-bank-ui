@@ -1,36 +1,33 @@
-var bundles = require('./bundles'),
-    sets = require('./sets'),
-    levels = require('./levels'),
-    bundlesPlatforms = Object.keys(levels.bundlesPlatforms),
-    setsPlatforms = Object.keys(levels.setsPlatforms);
+var path = require('path'),
+    env = process.env,
+    techs = require('./techs'),
+    config = require('./config'),
+    configurePage = require('./helpers/page'),
+    DEFAULT_LANGS = ['ru', 'en'],
+    LANGS = env.BEM_I18N_LANGS && env.BEM_I18N_LANGS.split(' ');
 
-module.exports = function(config) {
-    config.includeConfig('enb-bem-examples');
-    config.includeConfig('enb-bem-docs');
-    config.includeConfig('enb-bem-specs');
-    config.includeConfig('enb-bem-tmpl-specs');
+module.exports = function(project) {
+    project.setLanguages(LANGS || DEFAULT_LANGS);
 
-    bundlesPlatforms.forEach(function(platform) {
-        var platformBundles = [platform + '.bundles/*'];
+    // load task configs
+    [
+        'dist',
+        'specs', 'tmpl-specs',
+        'examples', 'tests',
+        'docs'
+    ].forEach(function (name) {
+        var filename = path.join(__dirname, 'tasks', name + '.js');
 
-        config.nodes(platformBundles, function(nodeConfig) {
-            nodeConfig.addTech([require('enb/techs/file-provider'), { target: '?.bemjson.js' }]);
-        });
-
-        bundles.configure(config, platform, platformBundles);
+        project.includeConfig(filename);
     });
 
-    setsPlatforms.forEach(function(platform) {
-        var platformBundles = [platform + '.tests/*/*', platform + '.examples/*/*'];
+    // build `common.bundles/index` page
+    project.node('common.bundles/index', function (node) {
+        // provide BEMJSON file
+        node.addTech([techs.files.provide, { target : '?.bemjson.js' }]);
 
-        sets.configure(platform, {
-            examples: config.module('enb-bem-examples').createConfigurator('examples'),
-            docs: config.module('enb-bem-docs').createConfigurator('docs', 'examples'),
-            specs: config.module('enb-bem-specs').createConfigurator('specs'),
-            tmplSpecs: config.module('enb-bem-tmpl-specs').createConfigurator('tmpl-specs')
+        configurePage(node, {
+            platform : 'common'
         });
-
-        bundles.configure(config, platform, platformBundles);
     });
-
 };
