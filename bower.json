@@ -13,8 +13,8 @@
     "libs"
   ],
   "dependencies": {
-    "bem-core": "2.6.0",
-    "bem-components": "2.2.1",
+    "bem-core": "2.7.0",
+    "bem-components": "2.3.0",
     "bem-typography": "1.0.1",
     "bem-forms": "0.1.0",
     "morgan": "ssh://git@git/man/morgan.git#1.0.0"
@@ -24,7 +24,7 @@
     "bem-pr": "ssh://git@git/man/bem-pr.git"
   },
   "resolutions": {
-    "bem-components": "2.2.0",
-    "bem-core": "2.6.0"
+    "bem-core": "2.7.0",
+    "bem-components": "2.3.0"
   }
 }

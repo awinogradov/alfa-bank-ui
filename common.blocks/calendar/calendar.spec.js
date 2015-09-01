@@ -7,8 +7,7 @@ var build = helper.buildBlock;
 describe('calendar', function() {
 
     var block,
-        bemjson,
-        expect = chai.expect;
+        bemjson;
 
     beforeEach(function() {
         bemjson = {
