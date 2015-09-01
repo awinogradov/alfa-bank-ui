@@ -12,4 +12,4 @@
             { tech: 'bemhtml', block: 'link' }
         ]
     }
-]
+];

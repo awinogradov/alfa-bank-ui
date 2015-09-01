@@ -1,4 +1,7 @@
-modules.define('spec', ['collapse', 'spec__utils', 'link'], function(provide, collapse, utils, link) {
+modules.define(
+    'spec',
+    ['collapse', 'spec__utils', 'link'],
+    function(provide, collapse, utils) {
 
     var el = 'Скрыть подробности',
         cl = 'Подробнее';
@@ -15,7 +18,7 @@ modules.define('spec', ['collapse', 'spec__utils', 'link'], function(provide, co
                 expandedLabel: el,
                 collapsedLabel: cl,
                 content: ['Подробности...']
-            }
+            };
             block = utils.buildBlock('collapse', bemjson);
         });
 
