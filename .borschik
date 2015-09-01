@@ -1,6 +1,5 @@
 {
   "freeze_paths": {
-    "**/*": "assets.bundles/"
-  },
-  "freeze_nesting_level": 3
+    "**/*": "dist/assets/"
+  }
 }

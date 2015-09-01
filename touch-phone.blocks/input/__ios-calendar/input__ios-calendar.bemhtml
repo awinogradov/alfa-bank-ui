@@ -1,4 +1,0 @@
-block('input')(
-    tag()('input'),
-    attrs({ type: 'date', value: '' })
-);
