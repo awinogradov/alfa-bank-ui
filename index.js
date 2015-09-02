@@ -78,9 +78,18 @@ bh.match('example', function(ctx, json) {
         return buildState(block, state);
     });
 
-    var blocksExtendedWithMods = modVals.length ? modVals.map(function (modVal) {
-        return buildModVal(blocksExtendedWithStates, modName, modVal);
-    }) : [blocksExtendedWithStates];
+    var blocksExtendedWithMods;
+    if(modVals) {
+        if(modVals.length) {
+            blocksExtendedWithMods = modVals.map(function (modVal) {
+                return buildModVal(blocksExtendedWithStates, modName, modVal);
+            });
+        } else if(modVals) {
+            blocksExtendedWithMods = [buildModVal(blocksExtendedWithStates, modName, true)];
+        }
+    } else {
+        blocksExtendedWithMods = [blocksExtendedWithStates];
+    }
 
     var blocksExtendedWithThemes = themes.map(function (theme) {
         return buildTheme(blocksExtendedWithMods, theme);

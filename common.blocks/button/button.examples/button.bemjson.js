@@ -112,6 +112,7 @@
                                 , "block": "button"
                                 , "mods":
                                   { "size": "m"
+                                  , "default": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -144,6 +145,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "hovered": true
+                                  , "default": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -176,6 +178,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "focused-hard": true
+                                  , "default": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -208,6 +211,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "pressed": true
+                                  , "default": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -240,6 +244,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "disabled": true
+                                  , "default": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -363,6 +368,7 @@
                                 , "block": "button"
                                 , "mods":
                                   { "size": "m"
+                                  , "default": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -395,6 +401,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "hovered": true
+                                  , "default": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -427,6 +434,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "focused-hard": true
+                                  , "default": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -459,6 +467,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "pressed": true
+                                  , "default": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -491,6 +500,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "disabled": true
+                                  , "default": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -3751,6 +3761,539 @@
     , "default":
       { "size": "m"
       }
+    , "modName": "has-icon"
+    , "modVals": true
+    , "content":
+      [ { "block": "theme"
+        , "mods":
+          { "name": "alfa-on-color"
+          }
+        , "content":
+          [ { "elem": "name"
+            , "content":
+              { "block": "heading"
+              , "mods":
+                { "theme": "alfa-on-color"
+                }
+              , "lvl": 2
+              , "content": "alfa-on-color"
+              }
+            , "block": "theme"
+            , "elemMods": {}
+            , "mods": {}
+            , "__func3": true
+            }
+          , { "elem": "val"
+            , "content":
+              { "block": "mod"
+              , "mods":
+                { "theme": "alfa-on-color"
+                }
+              , "states":
+                [ ""
+                , "hovered"
+                , "focused-hard"
+                , "pressed"
+                , "disabled"
+                ]
+              , "content":
+                [ { "elem": "name"
+                  , "content":
+                    { "block": "heading"
+                    , "mods":
+                      { "theme": "alfa-on-color"
+                      }
+                    , "lvl": 3
+                    , "content": "has-icon"
+                    }
+                  , "block": "mod"
+                  , "elemMods": {}
+                  , "mods": {}
+                  , "__func5": true
+                  }
+                , { "elem": "items"
+                  , "content":
+                    [ { "elem": "val"
+                      , "content":
+                        { "block": "heading"
+                        , "mods":
+                          { "theme": "alfa-on-color"
+                          }
+                        , "lvl": 4
+                        }
+                      , "block": "mod"
+                      , "elemMods": {}
+                      , "mods":
+                        { "theme": "alfa-on-color"
+                        }
+                      }
+                    , { "elem": "instance"
+                      , "content":
+                        [ { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-color"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "default"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "text": "button"
+                                , "block": "button"
+                                , "mods":
+                                  { "size": "m"
+                                  , "has-icon": true
+                                  , "theme": "alfa-on-color"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-color"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "hovered"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "text": "button"
+                                , "block": "button"
+                                , "mods":
+                                  { "size": "m"
+                                  , "hovered": true
+                                  , "has-icon": true
+                                  , "theme": "alfa-on-color"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-color"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "focused-hard"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "text": "button"
+                                , "block": "button"
+                                , "mods":
+                                  { "size": "m"
+                                  , "focused-hard": true
+                                  , "has-icon": true
+                                  , "theme": "alfa-on-color"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-color"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "pressed"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "text": "button"
+                                , "block": "button"
+                                , "mods":
+                                  { "size": "m"
+                                  , "pressed": true
+                                  , "has-icon": true
+                                  , "theme": "alfa-on-color"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-color"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "disabled"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "text": "button"
+                                , "block": "button"
+                                , "mods":
+                                  { "size": "m"
+                                  , "disabled": true
+                                  , "has-icon": true
+                                  , "theme": "alfa-on-color"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        ]
+                      , "block": "mod"
+                      , "elemMods": {}
+                      , "mods":
+                        { "theme": "alfa-on-color"
+                        }
+                      }
+                    ]
+                  , "block": "mod"
+                  , "elemMods": {}
+                  , "mods":
+                    { "theme": "alfa-on-color"
+                    }
+                  , "__func6": true
+                  }
+                ]
+              , "__func4": true
+              }
+            , "block": "theme"
+            , "elemMods": {}
+            , "mods":
+              { "name": "alfa-on-color"
+              }
+            }
+          ]
+        , "__func2": true
+        }
+      , { "block": "theme"
+        , "mods":
+          { "name": "alfa-on-white"
+          }
+        , "content":
+          [ { "elem": "name"
+            , "content":
+              { "block": "heading"
+              , "mods":
+                { "theme": "alfa-on-white"
+                }
+              , "lvl": 2
+              , "content": "alfa-on-white"
+              }
+            , "block": "theme"
+            , "elemMods": {}
+            , "mods": {}
+            , "__func3": true
+            }
+          , { "elem": "val"
+            , "content":
+              { "block": "mod"
+              , "mods":
+                { "theme": "alfa-on-white"
+                }
+              , "states":
+                [ ""
+                , "hovered"
+                , "focused-hard"
+                , "pressed"
+                , "disabled"
+                ]
+              , "content":
+                [ { "elem": "name"
+                  , "content":
+                    { "block": "heading"
+                    , "mods":
+                      { "theme": "alfa-on-white"
+                      }
+                    , "lvl": 3
+                    , "content": "has-icon"
+                    }
+                  , "block": "mod"
+                  , "elemMods": {}
+                  , "mods": {}
+                  , "__func5": true
+                  }
+                , { "elem": "items"
+                  , "content":
+                    [ { "elem": "val"
+                      , "content":
+                        { "block": "heading"
+                        , "mods":
+                          { "theme": "alfa-on-white"
+                          }
+                        , "lvl": 4
+                        }
+                      , "block": "mod"
+                      , "elemMods": {}
+                      , "mods":
+                        { "theme": "alfa-on-white"
+                        }
+                      }
+                    , { "elem": "instance"
+                      , "content":
+                        [ { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-white"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "default"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "text": "button"
+                                , "block": "button"
+                                , "mods":
+                                  { "size": "m"
+                                  , "has-icon": true
+                                  , "theme": "alfa-on-white"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-white"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "hovered"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "text": "button"
+                                , "block": "button"
+                                , "mods":
+                                  { "size": "m"
+                                  , "hovered": true
+                                  , "has-icon": true
+                                  , "theme": "alfa-on-white"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-white"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "focused-hard"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "text": "button"
+                                , "block": "button"
+                                , "mods":
+                                  { "size": "m"
+                                  , "focused-hard": true
+                                  , "has-icon": true
+                                  , "theme": "alfa-on-white"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-white"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "pressed"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "text": "button"
+                                , "block": "button"
+                                , "mods":
+                                  { "size": "m"
+                                  , "pressed": true
+                                  , "has-icon": true
+                                  , "theme": "alfa-on-white"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-white"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "disabled"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "text": "button"
+                                , "block": "button"
+                                , "mods":
+                                  { "size": "m"
+                                  , "disabled": true
+                                  , "has-icon": true
+                                  , "theme": "alfa-on-white"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        ]
+                      , "block": "mod"
+                      , "elemMods": {}
+                      , "mods":
+                        { "theme": "alfa-on-white"
+                        }
+                      }
+                    ]
+                  , "block": "mod"
+                  , "elemMods": {}
+                  , "mods":
+                    { "theme": "alfa-on-white"
+                    }
+                  , "__func6": true
+                  }
+                ]
+              , "__func4": true
+              }
+            , "block": "theme"
+            , "elemMods": {}
+            , "mods":
+              { "name": "alfa-on-white"
+              }
+            }
+          ]
+        , "__func2": true
+        }
+      ]
+    , "mods": {}
+    , "__func1": true
+    }
+  , { "block": "example"
+    , "themes":
+      [ "alfa-on-color"
+      , "alfa-on-white"
+      ]
+    , "states":
+      [ "hovered"
+      , "focused-hard"
+      , "pressed"
+      , "disabled"
+      ]
+    , "default":
+      { "size": "m"
+      }
     , "modName": "icon"
     , "modVals": false
     , "content":
@@ -3844,6 +4387,7 @@
                                   }
                                 , "mods":
                                   { "size": "m"
+                                  , "icon": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -3882,6 +4426,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "hovered": true
+                                  , "icon": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -3920,6 +4465,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "focused-hard": true
+                                  , "icon": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -3958,6 +4504,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "pressed": true
+                                  , "icon": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -3996,6 +4543,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "disabled": true
+                                  , "icon": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -4125,6 +4673,7 @@
                                   }
                                 , "mods":
                                   { "size": "m"
+                                  , "icon": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -4163,6 +4712,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "hovered": true
+                                  , "icon": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -4201,6 +4751,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "focused-hard": true
+                                  , "icon": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -4239,6 +4790,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "pressed": true
+                                  , "icon": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -4277,6 +4829,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "disabled": true
+                                  , "icon": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -4427,6 +4980,7 @@
                                   }
                                 , "mods":
                                   { "size": "m"
+                                  , "spin": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -4465,6 +5019,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "hovered": true
+                                  , "spin": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -4503,6 +5058,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "focused-hard": true
+                                  , "spin": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -4541,6 +5097,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "pressed": true
+                                  , "spin": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -4579,6 +5136,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "disabled": true
+                                  , "spin": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -4708,6 +5266,7 @@
                                   }
                                 , "mods":
                                   { "size": "m"
+                                  , "spin": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -4746,6 +5305,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "hovered": true
+                                  , "spin": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -4784,6 +5344,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "focused-hard": true
+                                  , "spin": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -4822,6 +5383,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "pressed": true
+                                  , "spin": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -4860,6 +5422,7 @@
                                 , "mods":
                                   { "size": "m"
                                   , "disabled": true
+                                  , "spin": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
