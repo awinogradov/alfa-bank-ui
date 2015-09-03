@@ -1,13 +1,13 @@
 ({ "block": "page"
-, "title": "button"
+, "title": "input"
 , "head":
   [ { "elem": "css"
-    , "url": "button.min.css"
+    , "url": "input.min.css"
     }
   ]
 , "scripts":
   [ { "elem": "js"
-    , "url": "button.min.js"
+    , "url": "input.min.js"
     }
   ]
 , "content":
@@ -18,8 +18,7 @@
       ]
     , "states":
       [ "hovered"
-      , "focused-hard"
-      , "pressed"
+      , "focused"
       , "disabled"
       ]
     , "default":
@@ -56,8 +55,7 @@
               , "states":
                 [ ""
                 , "hovered"
-                , "focused-hard"
-                , "pressed"
+                , "focused"
                 , "disabled"
                 ]
               , "content":
@@ -108,8 +106,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "default": true
@@ -140,8 +138,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "hovered": true
@@ -164,7 +162,7 @@
                             }
                           , "content":
                             [ { "elem": "name"
-                              , "content": "focused-hard"
+                              , "content": "focused"
                               , "block": "state"
                               , "elemMods": {}
                               , "mods":
@@ -173,44 +171,11 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
-                                  , "focused-hard": true
-                                  , "default": true
-                                  , "theme": "alfa-on-color"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-color"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "mods":
-                                  { "size": "m"
-                                  , "pressed": true
+                                  , "focused": true
                                   , "default": true
                                   , "theme": "alfa-on-color"
                                   }
@@ -239,8 +204,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "disabled": true
@@ -312,8 +277,7 @@
               , "states":
                 [ ""
                 , "hovered"
-                , "focused-hard"
-                , "pressed"
+                , "focused"
                 , "disabled"
                 ]
               , "content":
@@ -364,8 +328,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "default": true
@@ -396,8 +360,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "hovered": true
@@ -420,7 +384,7 @@
                             }
                           , "content":
                             [ { "elem": "name"
-                              , "content": "focused-hard"
+                              , "content": "focused"
                               , "block": "state"
                               , "elemMods": {}
                               , "mods":
@@ -429,44 +393,11 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
-                                  , "focused-hard": true
-                                  , "default": true
-                                  , "theme": "alfa-on-white"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-white"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "mods":
-                                  { "size": "m"
-                                  , "pressed": true
+                                  , "focused": true
                                   , "default": true
                                   , "theme": "alfa-on-white"
                                   }
@@ -495,8 +426,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "disabled": true
@@ -551,8 +482,7 @@
       ]
     , "states":
       [ "hovered"
-      , "focused-hard"
-      , "pressed"
+      , "focused"
       , "disabled"
       ]
     , "default":
@@ -594,8 +524,7 @@
               , "states":
                 [ ""
                 , "hovered"
-                , "focused-hard"
-                , "pressed"
+                , "focused"
                 , "disabled"
                 ]
               , "content":
@@ -648,8 +577,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "s"
                                   , "theme": "alfa-on-color"
@@ -679,8 +608,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "s"
                                   , "hovered": true
@@ -702,7 +631,7 @@
                             }
                           , "content":
                             [ { "elem": "name"
-                              , "content": "focused-hard"
+                              , "content": "focused"
                               , "block": "state"
                               , "elemMods": {}
                               , "mods":
@@ -711,43 +640,11 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "s"
-                                  , "focused-hard": true
-                                  , "theme": "alfa-on-color"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-color"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "mods":
-                                  { "size": "s"
-                                  , "pressed": true
+                                  , "focused": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -775,8 +672,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "s"
                                   , "disabled": true
@@ -842,8 +739,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "theme": "alfa-on-color"
@@ -873,8 +770,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "hovered": true
@@ -896,7 +793,7 @@
                             }
                           , "content":
                             [ { "elem": "name"
-                              , "content": "focused-hard"
+                              , "content": "focused"
                               , "block": "state"
                               , "elemMods": {}
                               , "mods":
@@ -905,43 +802,11 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
-                                  , "focused-hard": true
-                                  , "theme": "alfa-on-color"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-color"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "mods":
-                                  { "size": "m"
-                                  , "pressed": true
+                                  , "focused": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -969,8 +834,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "disabled": true
@@ -1036,8 +901,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "l"
                                   , "theme": "alfa-on-color"
@@ -1067,8 +932,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "l"
                                   , "hovered": true
@@ -1090,7 +955,7 @@
                             }
                           , "content":
                             [ { "elem": "name"
-                              , "content": "focused-hard"
+                              , "content": "focused"
                               , "block": "state"
                               , "elemMods": {}
                               , "mods":
@@ -1099,43 +964,11 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "l"
-                                  , "focused-hard": true
-                                  , "theme": "alfa-on-color"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-color"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "mods":
-                                  { "size": "l"
-                                  , "pressed": true
+                                  , "focused": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -1163,8 +996,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "l"
                                   , "disabled": true
@@ -1230,8 +1063,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "xl"
                                   , "theme": "alfa-on-color"
@@ -1261,8 +1094,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "xl"
                                   , "hovered": true
@@ -1284,7 +1117,7 @@
                             }
                           , "content":
                             [ { "elem": "name"
-                              , "content": "focused-hard"
+                              , "content": "focused"
                               , "block": "state"
                               , "elemMods": {}
                               , "mods":
@@ -1293,43 +1126,11 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "xl"
-                                  , "focused-hard": true
-                                  , "theme": "alfa-on-color"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-color"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "mods":
-                                  { "size": "xl"
-                                  , "pressed": true
+                                  , "focused": true
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -1357,8 +1158,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "xl"
                                   , "disabled": true
@@ -1429,8 +1230,7 @@
               , "states":
                 [ ""
                 , "hovered"
-                , "focused-hard"
-                , "pressed"
+                , "focused"
                 , "disabled"
                 ]
               , "content":
@@ -1483,8 +1283,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "s"
                                   , "theme": "alfa-on-white"
@@ -1514,8 +1314,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "s"
                                   , "hovered": true
@@ -1537,7 +1337,7 @@
                             }
                           , "content":
                             [ { "elem": "name"
-                              , "content": "focused-hard"
+                              , "content": "focused"
                               , "block": "state"
                               , "elemMods": {}
                               , "mods":
@@ -1546,43 +1346,11 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "s"
-                                  , "focused-hard": true
-                                  , "theme": "alfa-on-white"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-white"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "mods":
-                                  { "size": "s"
-                                  , "pressed": true
+                                  , "focused": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -1610,8 +1378,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "s"
                                   , "disabled": true
@@ -1677,8 +1445,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "theme": "alfa-on-white"
@@ -1708,8 +1476,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "hovered": true
@@ -1731,7 +1499,7 @@
                             }
                           , "content":
                             [ { "elem": "name"
-                              , "content": "focused-hard"
+                              , "content": "focused"
                               , "block": "state"
                               , "elemMods": {}
                               , "mods":
@@ -1740,43 +1508,11 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
-                                  , "focused-hard": true
-                                  , "theme": "alfa-on-white"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-white"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "mods":
-                                  { "size": "m"
-                                  , "pressed": true
+                                  , "focused": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -1804,8 +1540,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "disabled": true
@@ -1871,8 +1607,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "l"
                                   , "theme": "alfa-on-white"
@@ -1902,8 +1638,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "l"
                                   , "hovered": true
@@ -1925,7 +1661,7 @@
                             }
                           , "content":
                             [ { "elem": "name"
-                              , "content": "focused-hard"
+                              , "content": "focused"
                               , "block": "state"
                               , "elemMods": {}
                               , "mods":
@@ -1934,43 +1670,11 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "l"
-                                  , "focused-hard": true
-                                  , "theme": "alfa-on-white"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-white"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "mods":
-                                  { "size": "l"
-                                  , "pressed": true
+                                  , "focused": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -1998,8 +1702,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "l"
                                   , "disabled": true
@@ -2065,8 +1769,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "xl"
                                   , "theme": "alfa-on-white"
@@ -2096,8 +1800,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "xl"
                                   , "hovered": true
@@ -2119,7 +1823,7 @@
                             }
                           , "content":
                             [ { "elem": "name"
-                              , "content": "focused-hard"
+                              , "content": "focused"
                               , "block": "state"
                               , "elemMods": {}
                               , "mods":
@@ -2128,43 +1832,11 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "xl"
-                                  , "focused-hard": true
-                                  , "theme": "alfa-on-white"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-white"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "mods":
-                                  { "size": "xl"
-                                  , "pressed": true
+                                  , "focused": true
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -2192,8 +1864,8 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "xl"
                                   , "disabled": true
@@ -2247,17 +1919,18 @@
       ]
     , "states":
       [ "hovered"
-      , "focused-hard"
-      , "pressed"
+      , "focused"
       , "disabled"
       ]
     , "default":
       { "size": "m"
       }
-    , "modName": "view"
+    , "modName": "type"
     , "modVals":
-      [ "action"
-      , "pseudo"
+      [ "card"
+      , "email"
+      , "money"
+      , "tel"
       ]
     , "content":
       [ { "block": "theme"
@@ -2288,8 +1961,7 @@
               , "states":
                 [ ""
                 , "hovered"
-                , "focused-hard"
-                , "pressed"
+                , "focused"
                 , "disabled"
                 ]
               , "content":
@@ -2300,7 +1972,7 @@
                       { "theme": "alfa-on-color"
                       }
                     , "lvl": 3
-                    , "content": "view"
+                    , "content": "type"
                     }
                   , "block": "mod"
                   , "elemMods": {}
@@ -2308,7 +1980,7 @@
                   , "__func5": true
                   }
                 , { "elem": "items"
-                  , "val": "action"
+                  , "val": "card"
                   , "content":
                     [ { "elem": "val"
                       , "content":
@@ -2317,7 +1989,7 @@
                           { "theme": "alfa-on-color"
                           }
                         , "lvl": 4
-                        , "content": "action"
+                        , "content": "card"
                         }
                       , "block": "mod"
                       , "elemMods": {}
@@ -2342,11 +2014,11 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
-                                  , "view": "action"
+                                  , "type": "card"
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -2374,12 +2046,12 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "hovered": true
-                                  , "view": "action"
+                                  , "type": "card"
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -2398,7 +2070,7 @@
                             }
                           , "content":
                             [ { "elem": "name"
-                              , "content": "focused-hard"
+                              , "content": "focused"
                               , "block": "state"
                               , "elemMods": {}
                               , "mods":
@@ -2407,45 +2079,12 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
-                                  , "focused-hard": true
-                                  , "view": "action"
-                                  , "theme": "alfa-on-color"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-color"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "mods":
-                                  { "size": "m"
-                                  , "pressed": true
-                                  , "view": "action"
+                                  , "focused": true
+                                  , "type": "card"
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -2473,12 +2112,12 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "disabled": true
-                                  , "view": "action"
+                                  , "type": "card"
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -2507,7 +2146,7 @@
                   , "__func6": true
                   }
                 , { "elem": "items"
-                  , "val": "pseudo"
+                  , "val": "email"
                   , "content":
                     [ { "elem": "val"
                       , "content":
@@ -2516,7 +2155,7 @@
                           { "theme": "alfa-on-color"
                           }
                         , "lvl": 4
-                        , "content": "pseudo"
+                        , "content": "email"
                         }
                       , "block": "mod"
                       , "elemMods": {}
@@ -2541,11 +2180,11 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
-                                  , "view": "pseudo"
+                                  , "type": "email"
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -2573,12 +2212,12 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "hovered": true
-                                  , "view": "pseudo"
+                                  , "type": "email"
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -2597,7 +2236,7 @@
                             }
                           , "content":
                             [ { "elem": "name"
-                              , "content": "focused-hard"
+                              , "content": "focused"
                               , "block": "state"
                               , "elemMods": {}
                               , "mods":
@@ -2606,45 +2245,12 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
-                                  , "focused-hard": true
-                                  , "view": "pseudo"
-                                  , "theme": "alfa-on-color"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-color"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "mods":
-                                  { "size": "m"
-                                  , "pressed": true
-                                  , "view": "pseudo"
+                                  , "focused": true
+                                  , "type": "email"
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -2672,12 +2278,344 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "disabled": true
-                                  , "view": "pseudo"
+                                  , "type": "email"
+                                  , "theme": "alfa-on-color"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        ]
+                      , "block": "mod"
+                      , "elemMods": {}
+                      , "mods":
+                        { "theme": "alfa-on-color"
+                        }
+                      }
+                    ]
+                  , "block": "mod"
+                  , "elemMods": {}
+                  , "mods":
+                    { "theme": "alfa-on-color"
+                    }
+                  , "__func6": true
+                  }
+                , { "elem": "items"
+                  , "val": "money"
+                  , "content":
+                    [ { "elem": "val"
+                      , "content":
+                        { "block": "heading"
+                        , "mods":
+                          { "theme": "alfa-on-color"
+                          }
+                        , "lvl": 4
+                        , "content": "money"
+                        }
+                      , "block": "mod"
+                      , "elemMods": {}
+                      , "mods":
+                        { "theme": "alfa-on-color"
+                        }
+                      }
+                    , { "elem": "instance"
+                      , "content":
+                        [ { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-color"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "default"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "val": "Value"
+                                , "block": "input"
+                                , "mods":
+                                  { "size": "m"
+                                  , "type": "money"
+                                  , "theme": "alfa-on-color"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-color"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "hovered"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "val": "Value"
+                                , "block": "input"
+                                , "mods":
+                                  { "size": "m"
+                                  , "hovered": true
+                                  , "type": "money"
+                                  , "theme": "alfa-on-color"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-color"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "focused"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "val": "Value"
+                                , "block": "input"
+                                , "mods":
+                                  { "size": "m"
+                                  , "focused": true
+                                  , "type": "money"
+                                  , "theme": "alfa-on-color"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-color"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "disabled"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "val": "Value"
+                                , "block": "input"
+                                , "mods":
+                                  { "size": "m"
+                                  , "disabled": true
+                                  , "type": "money"
+                                  , "theme": "alfa-on-color"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        ]
+                      , "block": "mod"
+                      , "elemMods": {}
+                      , "mods":
+                        { "theme": "alfa-on-color"
+                        }
+                      }
+                    ]
+                  , "block": "mod"
+                  , "elemMods": {}
+                  , "mods":
+                    { "theme": "alfa-on-color"
+                    }
+                  , "__func6": true
+                  }
+                , { "elem": "items"
+                  , "val": "tel"
+                  , "content":
+                    [ { "elem": "val"
+                      , "content":
+                        { "block": "heading"
+                        , "mods":
+                          { "theme": "alfa-on-color"
+                          }
+                        , "lvl": 4
+                        , "content": "tel"
+                        }
+                      , "block": "mod"
+                      , "elemMods": {}
+                      , "mods":
+                        { "theme": "alfa-on-color"
+                        }
+                      }
+                    , { "elem": "instance"
+                      , "content":
+                        [ { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-color"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "default"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "val": "Value"
+                                , "block": "input"
+                                , "mods":
+                                  { "size": "m"
+                                  , "type": "tel"
+                                  , "theme": "alfa-on-color"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-color"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "hovered"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "val": "Value"
+                                , "block": "input"
+                                , "mods":
+                                  { "size": "m"
+                                  , "hovered": true
+                                  , "type": "tel"
+                                  , "theme": "alfa-on-color"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-color"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "focused"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "val": "Value"
+                                , "block": "input"
+                                , "mods":
+                                  { "size": "m"
+                                  , "focused": true
+                                  , "type": "tel"
+                                  , "theme": "alfa-on-color"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-color"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "disabled"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-color"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "val": "Value"
+                                , "block": "input"
+                                , "mods":
+                                  { "size": "m"
+                                  , "disabled": true
+                                  , "type": "tel"
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -2745,8 +2683,7 @@
               , "states":
                 [ ""
                 , "hovered"
-                , "focused-hard"
-                , "pressed"
+                , "focused"
                 , "disabled"
                 ]
               , "content":
@@ -2757,7 +2694,7 @@
                       { "theme": "alfa-on-white"
                       }
                     , "lvl": 3
-                    , "content": "view"
+                    , "content": "type"
                     }
                   , "block": "mod"
                   , "elemMods": {}
@@ -2765,7 +2702,7 @@
                   , "__func5": true
                   }
                 , { "elem": "items"
-                  , "val": "action"
+                  , "val": "card"
                   , "content":
                     [ { "elem": "val"
                       , "content":
@@ -2774,7 +2711,7 @@
                           { "theme": "alfa-on-white"
                           }
                         , "lvl": 4
-                        , "content": "action"
+                        , "content": "card"
                         }
                       , "block": "mod"
                       , "elemMods": {}
@@ -2799,11 +2736,11 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
-                                  , "view": "action"
+                                  , "type": "card"
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -2831,12 +2768,12 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "hovered": true
-                                  , "view": "action"
+                                  , "type": "card"
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -2855,7 +2792,7 @@
                             }
                           , "content":
                             [ { "elem": "name"
-                              , "content": "focused-hard"
+                              , "content": "focused"
                               , "block": "state"
                               , "elemMods": {}
                               , "mods":
@@ -2864,45 +2801,12 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
-                                  , "focused-hard": true
-                                  , "view": "action"
-                                  , "theme": "alfa-on-white"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-white"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "mods":
-                                  { "size": "m"
-                                  , "pressed": true
-                                  , "view": "action"
+                                  , "focused": true
+                                  , "type": "card"
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -2930,12 +2834,12 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "disabled": true
-                                  , "view": "action"
+                                  , "type": "card"
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -2964,7 +2868,7 @@
                   , "__func6": true
                   }
                 , { "elem": "items"
-                  , "val": "pseudo"
+                  , "val": "email"
                   , "content":
                     [ { "elem": "val"
                       , "content":
@@ -2973,7 +2877,7 @@
                           { "theme": "alfa-on-white"
                           }
                         , "lvl": 4
-                        , "content": "pseudo"
+                        , "content": "email"
                         }
                       , "block": "mod"
                       , "elemMods": {}
@@ -2998,11 +2902,11 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
-                                  , "view": "pseudo"
+                                  , "type": "email"
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -3030,12 +2934,12 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "hovered": true
-                                  , "view": "pseudo"
+                                  , "type": "email"
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -3054,7 +2958,7 @@
                             }
                           , "content":
                             [ { "elem": "name"
-                              , "content": "focused-hard"
+                              , "content": "focused"
                               , "block": "state"
                               , "elemMods": {}
                               , "mods":
@@ -3063,45 +2967,12 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
-                                  , "focused-hard": true
-                                  , "view": "pseudo"
-                                  , "theme": "alfa-on-white"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-white"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "mods":
-                                  { "size": "m"
-                                  , "pressed": true
-                                  , "view": "pseudo"
+                                  , "focused": true
+                                  , "type": "email"
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -3129,12 +3000,344 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "disabled": true
-                                  , "view": "pseudo"
+                                  , "type": "email"
+                                  , "theme": "alfa-on-white"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        ]
+                      , "block": "mod"
+                      , "elemMods": {}
+                      , "mods":
+                        { "theme": "alfa-on-white"
+                        }
+                      }
+                    ]
+                  , "block": "mod"
+                  , "elemMods": {}
+                  , "mods":
+                    { "theme": "alfa-on-white"
+                    }
+                  , "__func6": true
+                  }
+                , { "elem": "items"
+                  , "val": "money"
+                  , "content":
+                    [ { "elem": "val"
+                      , "content":
+                        { "block": "heading"
+                        , "mods":
+                          { "theme": "alfa-on-white"
+                          }
+                        , "lvl": 4
+                        , "content": "money"
+                        }
+                      , "block": "mod"
+                      , "elemMods": {}
+                      , "mods":
+                        { "theme": "alfa-on-white"
+                        }
+                      }
+                    , { "elem": "instance"
+                      , "content":
+                        [ { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-white"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "default"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "val": "Value"
+                                , "block": "input"
+                                , "mods":
+                                  { "size": "m"
+                                  , "type": "money"
+                                  , "theme": "alfa-on-white"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-white"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "hovered"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "val": "Value"
+                                , "block": "input"
+                                , "mods":
+                                  { "size": "m"
+                                  , "hovered": true
+                                  , "type": "money"
+                                  , "theme": "alfa-on-white"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-white"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "focused"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "val": "Value"
+                                , "block": "input"
+                                , "mods":
+                                  { "size": "m"
+                                  , "focused": true
+                                  , "type": "money"
+                                  , "theme": "alfa-on-white"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-white"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "disabled"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "val": "Value"
+                                , "block": "input"
+                                , "mods":
+                                  { "size": "m"
+                                  , "disabled": true
+                                  , "type": "money"
+                                  , "theme": "alfa-on-white"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        ]
+                      , "block": "mod"
+                      , "elemMods": {}
+                      , "mods":
+                        { "theme": "alfa-on-white"
+                        }
+                      }
+                    ]
+                  , "block": "mod"
+                  , "elemMods": {}
+                  , "mods":
+                    { "theme": "alfa-on-white"
+                    }
+                  , "__func6": true
+                  }
+                , { "elem": "items"
+                  , "val": "tel"
+                  , "content":
+                    [ { "elem": "val"
+                      , "content":
+                        { "block": "heading"
+                        , "mods":
+                          { "theme": "alfa-on-white"
+                          }
+                        , "lvl": 4
+                        , "content": "tel"
+                        }
+                      , "block": "mod"
+                      , "elemMods": {}
+                      , "mods":
+                        { "theme": "alfa-on-white"
+                        }
+                      }
+                    , { "elem": "instance"
+                      , "content":
+                        [ { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-white"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "default"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "val": "Value"
+                                , "block": "input"
+                                , "mods":
+                                  { "size": "m"
+                                  , "type": "tel"
+                                  , "theme": "alfa-on-white"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-white"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "hovered"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "val": "Value"
+                                , "block": "input"
+                                , "mods":
+                                  { "size": "m"
+                                  , "hovered": true
+                                  , "type": "tel"
+                                  , "theme": "alfa-on-white"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-white"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "focused"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "val": "Value"
+                                , "block": "input"
+                                , "mods":
+                                  { "size": "m"
+                                  , "focused": true
+                                  , "type": "tel"
+                                  , "theme": "alfa-on-white"
+                                  }
+                                }
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            ]
+                          , "__func7": true
+                          }
+                        , { "block": "state"
+                          , "mods":
+                            { "theme": "alfa-on-white"
+                            }
+                          , "content":
+                            [ { "elem": "name"
+                              , "content": "disabled"
+                              , "block": "state"
+                              , "elemMods": {}
+                              , "mods":
+                                { "theme": "alfa-on-white"
+                                }
+                              }
+                            , { "elem": "instance"
+                              , "content":
+                                { "val": "Value"
+                                , "block": "input"
+                                , "mods":
+                                  { "size": "m"
+                                  , "disabled": true
+                                  , "type": "tel"
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -3185,14 +3388,13 @@
       ]
     , "states":
       [ "hovered"
-      , "focused-hard"
-      , "pressed"
+      , "focused"
       , "disabled"
       ]
     , "default":
       { "size": "m"
       }
-    , "modName": "type"
+    , "modName": "mode"
     , "modVals":
       [ "link"
       ]
@@ -3225,8 +3427,7 @@
               , "states":
                 [ ""
                 , "hovered"
-                , "focused-hard"
-                , "pressed"
+                , "focused"
                 , "disabled"
                 ]
               , "content":
@@ -3237,7 +3438,7 @@
                       { "theme": "alfa-on-color"
                       }
                     , "lvl": 3
-                    , "content": "type"
+                    , "content": "mode"
                     }
                   , "block": "mod"
                   , "elemMods": {}
@@ -3279,14 +3480,11 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "link":
-                                  { "url": "#"
-                                  }
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
-                                  , "type": "link"
+                                  , "mode": "link"
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -3314,15 +3512,12 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "link":
-                                  { "url": "#"
-                                  }
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "hovered": true
-                                  , "type": "link"
+                                  , "mode": "link"
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -3341,7 +3536,7 @@
                             }
                           , "content":
                             [ { "elem": "name"
-                              , "content": "focused-hard"
+                              , "content": "focused"
                               , "block": "state"
                               , "elemMods": {}
                               , "mods":
@@ -3350,51 +3545,12 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "link":
-                                  { "url": "#"
-                                  }
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
-                                  , "focused-hard": true
-                                  , "type": "link"
-                                  , "theme": "alfa-on-color"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-color"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "link":
-                                  { "url": "#"
-                                  }
-                                , "mods":
-                                  { "size": "m"
-                                  , "pressed": true
-                                  , "type": "link"
+                                  , "focused": true
+                                  , "mode": "link"
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -3422,15 +3578,12 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "link":
-                                  { "url": "#"
-                                  }
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "disabled": true
-                                  , "type": "link"
+                                  , "mode": "link"
                                   , "theme": "alfa-on-color"
                                   }
                                 }
@@ -3498,8 +3651,7 @@
               , "states":
                 [ ""
                 , "hovered"
-                , "focused-hard"
-                , "pressed"
+                , "focused"
                 , "disabled"
                 ]
               , "content":
@@ -3510,7 +3662,7 @@
                       { "theme": "alfa-on-white"
                       }
                     , "lvl": 3
-                    , "content": "type"
+                    , "content": "mode"
                     }
                   , "block": "mod"
                   , "elemMods": {}
@@ -3552,14 +3704,11 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "link":
-                                  { "url": "#"
-                                  }
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
-                                  , "type": "link"
+                                  , "mode": "link"
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -3587,15 +3736,12 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "link":
-                                  { "url": "#"
-                                  }
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "hovered": true
-                                  , "type": "link"
+                                  , "mode": "link"
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -3614,7 +3760,7 @@
                             }
                           , "content":
                             [ { "elem": "name"
-                              , "content": "focused-hard"
+                              , "content": "focused"
                               , "block": "state"
                               , "elemMods": {}
                               , "mods":
@@ -3623,51 +3769,12 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "link":
-                                  { "url": "#"
-                                  }
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
-                                  , "focused-hard": true
-                                  , "type": "link"
-                                  , "theme": "alfa-on-white"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-white"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "link":
-                                  { "url": "#"
-                                  }
-                                , "mods":
-                                  { "size": "m"
-                                  , "pressed": true
-                                  , "type": "link"
+                                  , "focused": true
+                                  , "mode": "link"
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -3695,15 +3802,12 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "link":
-                                  { "url": "#"
-                                  }
+                                { "val": "Value"
+                                , "block": "input"
                                 , "mods":
                                   { "size": "m"
                                   , "disabled": true
-                                  , "type": "link"
+                                  , "mode": "link"
                                   , "theme": "alfa-on-white"
                                   }
                                 }
@@ -3754,15 +3858,14 @@
       ]
     , "states":
       [ "hovered"
-      , "focused-hard"
-      , "pressed"
+      , "focused"
       , "disabled"
       ]
     , "default":
       { "size": "m"
       }
-    , "modName": "icon"
-    , "modVals": false
+    , "modName": "has-calendar"
+    , "modVals": true
     , "content":
       [ { "block": "theme"
         , "mods":
@@ -3792,8 +3895,7 @@
               , "states":
                 [ ""
                 , "hovered"
-                , "focused-hard"
-                , "pressed"
+                , "focused"
                 , "disabled"
                 ]
               , "content":
@@ -3804,7 +3906,7 @@
                       { "theme": "alfa-on-color"
                       }
                     , "lvl": 3
-                    , "content": "icon"
+                    , "content": "has-calendar"
                     }
                   , "block": "mod"
                   , "elemMods": {}
@@ -3844,19 +3946,16 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "icon"
-                                  , "mods":
-                                    { "tool": "search"
-                                    }
-                                  }
+                                { "val": "22.07.2015"
+                                , "block": "input"
                                 , "mods":
-                                  { "size": "m"
-                                  , "icon": true
+                                  { "has-addon": true
+                                  , "size": "m"
+                                  , "has-calendar": true
                                   , "theme": "alfa-on-color"
                                   }
+                                , "earlierLimit": "20.06.2015"
+                                , "laterLimit": "20.08.2015"
                                 }
                               , "block": "state"
                               , "elemMods": {}
@@ -3882,20 +3981,17 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "icon"
-                                  , "mods":
-                                    { "tool": "search"
-                                    }
-                                  }
+                                { "val": "22.07.2015"
+                                , "block": "input"
                                 , "mods":
-                                  { "size": "m"
+                                  { "has-addon": true
+                                  , "size": "m"
                                   , "hovered": true
-                                  , "icon": true
+                                  , "has-calendar": true
                                   , "theme": "alfa-on-color"
                                   }
+                                , "earlierLimit": "20.06.2015"
+                                , "laterLimit": "20.08.2015"
                                 }
                               , "block": "state"
                               , "elemMods": {}
@@ -3912,7 +4008,7 @@
                             }
                           , "content":
                             [ { "elem": "name"
-                              , "content": "focused-hard"
+                              , "content": "focused"
                               , "block": "state"
                               , "elemMods": {}
                               , "mods":
@@ -3921,59 +4017,17 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "icon"
-                                  , "mods":
-                                    { "tool": "search"
-                                    }
-                                  }
+                                { "val": "22.07.2015"
+                                , "block": "input"
                                 , "mods":
-                                  { "size": "m"
-                                  , "focused-hard": true
-                                  , "icon": true
+                                  { "has-addon": true
+                                  , "size": "m"
+                                  , "focused": true
+                                  , "has-calendar": true
                                   , "theme": "alfa-on-color"
                                   }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-color"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "icon"
-                                  , "mods":
-                                    { "tool": "search"
-                                    }
-                                  }
-                                , "mods":
-                                  { "size": "m"
-                                  , "pressed": true
-                                  , "icon": true
-                                  , "theme": "alfa-on-color"
-                                  }
+                                , "earlierLimit": "20.06.2015"
+                                , "laterLimit": "20.08.2015"
                                 }
                               , "block": "state"
                               , "elemMods": {}
@@ -3999,20 +4053,17 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "icon"
-                                  , "mods":
-                                    { "tool": "search"
-                                    }
-                                  }
+                                { "val": "22.07.2015"
+                                , "block": "input"
                                 , "mods":
-                                  { "size": "m"
+                                  { "has-addon": true
+                                  , "size": "m"
                                   , "disabled": true
-                                  , "icon": true
+                                  , "has-calendar": true
                                   , "theme": "alfa-on-color"
                                   }
+                                , "earlierLimit": "20.06.2015"
+                                , "laterLimit": "20.08.2015"
                                 }
                               , "block": "state"
                               , "elemMods": {}
@@ -4078,8 +4129,7 @@
               , "states":
                 [ ""
                 , "hovered"
-                , "focused-hard"
-                , "pressed"
+                , "focused"
                 , "disabled"
                 ]
               , "content":
@@ -4090,7 +4140,7 @@
                       { "theme": "alfa-on-white"
                       }
                     , "lvl": 3
-                    , "content": "icon"
+                    , "content": "has-calendar"
                     }
                   , "block": "mod"
                   , "elemMods": {}
@@ -4130,19 +4180,16 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "icon"
-                                  , "mods":
-                                    { "tool": "search"
-                                    }
-                                  }
+                                { "val": "22.07.2015"
+                                , "block": "input"
                                 , "mods":
-                                  { "size": "m"
-                                  , "icon": true
+                                  { "has-addon": true
+                                  , "size": "m"
+                                  , "has-calendar": true
                                   , "theme": "alfa-on-white"
                                   }
+                                , "earlierLimit": "20.06.2015"
+                                , "laterLimit": "20.08.2015"
                                 }
                               , "block": "state"
                               , "elemMods": {}
@@ -4168,20 +4215,17 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "icon"
-                                  , "mods":
-                                    { "tool": "search"
-                                    }
-                                  }
+                                { "val": "22.07.2015"
+                                , "block": "input"
                                 , "mods":
-                                  { "size": "m"
+                                  { "has-addon": true
+                                  , "size": "m"
                                   , "hovered": true
-                                  , "icon": true
+                                  , "has-calendar": true
                                   , "theme": "alfa-on-white"
                                   }
+                                , "earlierLimit": "20.06.2015"
+                                , "laterLimit": "20.08.2015"
                                 }
                               , "block": "state"
                               , "elemMods": {}
@@ -4198,7 +4242,7 @@
                             }
                           , "content":
                             [ { "elem": "name"
-                              , "content": "focused-hard"
+                              , "content": "focused"
                               , "block": "state"
                               , "elemMods": {}
                               , "mods":
@@ -4207,59 +4251,17 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "icon"
-                                  , "mods":
-                                    { "tool": "search"
-                                    }
-                                  }
+                                { "val": "22.07.2015"
+                                , "block": "input"
                                 , "mods":
-                                  { "size": "m"
-                                  , "focused-hard": true
-                                  , "icon": true
+                                  { "has-addon": true
+                                  , "size": "m"
+                                  , "focused": true
+                                  , "has-calendar": true
                                   , "theme": "alfa-on-white"
                                   }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-white"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "icon"
-                                  , "mods":
-                                    { "tool": "search"
-                                    }
-                                  }
-                                , "mods":
-                                  { "size": "m"
-                                  , "pressed": true
-                                  , "icon": true
-                                  , "theme": "alfa-on-white"
-                                  }
+                                , "earlierLimit": "20.06.2015"
+                                , "laterLimit": "20.08.2015"
                                 }
                               , "block": "state"
                               , "elemMods": {}
@@ -4285,613 +4287,17 @@
                               }
                             , { "elem": "instance"
                               , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "icon"
-                                  , "mods":
-                                    { "tool": "search"
-                                    }
-                                  }
+                                { "val": "22.07.2015"
+                                , "block": "input"
                                 , "mods":
-                                  { "size": "m"
+                                  { "has-addon": true
+                                  , "size": "m"
                                   , "disabled": true
-                                  , "icon": true
+                                  , "has-calendar": true
                                   , "theme": "alfa-on-white"
                                   }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        ]
-                      , "block": "mod"
-                      , "elemMods": {}
-                      , "mods":
-                        { "theme": "alfa-on-white"
-                        }
-                      }
-                    ]
-                  , "block": "mod"
-                  , "elemMods": {}
-                  , "mods":
-                    { "theme": "alfa-on-white"
-                    }
-                  , "__func6": true
-                  }
-                ]
-              , "__func4": true
-              }
-            , "block": "theme"
-            , "elemMods": {}
-            , "mods":
-              { "name": "alfa-on-white"
-              }
-            }
-          ]
-        , "__func2": true
-        }
-      ]
-    , "mods": {}
-    , "__func1": true
-    }
-  , { "block": "example"
-    , "themes":
-      [ "alfa-on-color"
-      , "alfa-on-white"
-      ]
-    , "states":
-      [ "hovered"
-      , "focused-hard"
-      , "pressed"
-      , "disabled"
-      ]
-    , "default":
-      { "size": "m"
-      }
-    , "modName": "spin"
-    , "modVals": false
-    , "content":
-      [ { "block": "theme"
-        , "mods":
-          { "name": "alfa-on-color"
-          }
-        , "content":
-          [ { "elem": "name"
-            , "content":
-              { "block": "heading"
-              , "mods":
-                { "theme": "alfa-on-color"
-                }
-              , "lvl": 2
-              , "content": "alfa-on-color"
-              }
-            , "block": "theme"
-            , "elemMods": {}
-            , "mods": {}
-            , "__func3": true
-            }
-          , { "elem": "val"
-            , "content":
-              { "block": "mod"
-              , "mods":
-                { "theme": "alfa-on-color"
-                }
-              , "states":
-                [ ""
-                , "hovered"
-                , "focused-hard"
-                , "pressed"
-                , "disabled"
-                ]
-              , "content":
-                [ { "elem": "name"
-                  , "content":
-                    { "block": "heading"
-                    , "mods":
-                      { "theme": "alfa-on-color"
-                      }
-                    , "lvl": 3
-                    , "content": "spin"
-                    }
-                  , "block": "mod"
-                  , "elemMods": {}
-                  , "mods": {}
-                  , "__func5": true
-                  }
-                , { "elem": "items"
-                  , "content":
-                    [ { "elem": "val"
-                      , "content":
-                        { "block": "heading"
-                        , "mods":
-                          { "theme": "alfa-on-color"
-                          }
-                        , "lvl": 4
-                        }
-                      , "block": "mod"
-                      , "elemMods": {}
-                      , "mods":
-                        { "theme": "alfa-on-color"
-                        }
-                      }
-                    , { "elem": "instance"
-                      , "content":
-                        [ { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-color"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "default"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "spin"
-                                  , "mods":
-                                    { "visible": true
-                                    }
-                                  }
-                                , "mods":
-                                  { "size": "m"
-                                  , "spin": true
-                                  , "theme": "alfa-on-color"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-color"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "hovered"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "spin"
-                                  , "mods":
-                                    { "visible": true
-                                    }
-                                  }
-                                , "mods":
-                                  { "size": "m"
-                                  , "hovered": true
-                                  , "spin": true
-                                  , "theme": "alfa-on-color"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-color"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "focused-hard"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "spin"
-                                  , "mods":
-                                    { "visible": true
-                                    }
-                                  }
-                                , "mods":
-                                  { "size": "m"
-                                  , "focused-hard": true
-                                  , "spin": true
-                                  , "theme": "alfa-on-color"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-color"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "spin"
-                                  , "mods":
-                                    { "visible": true
-                                    }
-                                  }
-                                , "mods":
-                                  { "size": "m"
-                                  , "pressed": true
-                                  , "spin": true
-                                  , "theme": "alfa-on-color"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-color"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "disabled"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "spin"
-                                  , "mods":
-                                    { "visible": true
-                                    }
-                                  }
-                                , "mods":
-                                  { "size": "m"
-                                  , "disabled": true
-                                  , "spin": true
-                                  , "theme": "alfa-on-color"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-color"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        ]
-                      , "block": "mod"
-                      , "elemMods": {}
-                      , "mods":
-                        { "theme": "alfa-on-color"
-                        }
-                      }
-                    ]
-                  , "block": "mod"
-                  , "elemMods": {}
-                  , "mods":
-                    { "theme": "alfa-on-color"
-                    }
-                  , "__func6": true
-                  }
-                ]
-              , "__func4": true
-              }
-            , "block": "theme"
-            , "elemMods": {}
-            , "mods":
-              { "name": "alfa-on-color"
-              }
-            }
-          ]
-        , "__func2": true
-        }
-      , { "block": "theme"
-        , "mods":
-          { "name": "alfa-on-white"
-          }
-        , "content":
-          [ { "elem": "name"
-            , "content":
-              { "block": "heading"
-              , "mods":
-                { "theme": "alfa-on-white"
-                }
-              , "lvl": 2
-              , "content": "alfa-on-white"
-              }
-            , "block": "theme"
-            , "elemMods": {}
-            , "mods": {}
-            , "__func3": true
-            }
-          , { "elem": "val"
-            , "content":
-              { "block": "mod"
-              , "mods":
-                { "theme": "alfa-on-white"
-                }
-              , "states":
-                [ ""
-                , "hovered"
-                , "focused-hard"
-                , "pressed"
-                , "disabled"
-                ]
-              , "content":
-                [ { "elem": "name"
-                  , "content":
-                    { "block": "heading"
-                    , "mods":
-                      { "theme": "alfa-on-white"
-                      }
-                    , "lvl": 3
-                    , "content": "spin"
-                    }
-                  , "block": "mod"
-                  , "elemMods": {}
-                  , "mods": {}
-                  , "__func5": true
-                  }
-                , { "elem": "items"
-                  , "content":
-                    [ { "elem": "val"
-                      , "content":
-                        { "block": "heading"
-                        , "mods":
-                          { "theme": "alfa-on-white"
-                          }
-                        , "lvl": 4
-                        }
-                      , "block": "mod"
-                      , "elemMods": {}
-                      , "mods":
-                        { "theme": "alfa-on-white"
-                        }
-                      }
-                    , { "elem": "instance"
-                      , "content":
-                        [ { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-white"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "default"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "spin"
-                                  , "mods":
-                                    { "visible": true
-                                    }
-                                  }
-                                , "mods":
-                                  { "size": "m"
-                                  , "spin": true
-                                  , "theme": "alfa-on-white"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-white"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "hovered"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "spin"
-                                  , "mods":
-                                    { "visible": true
-                                    }
-                                  }
-                                , "mods":
-                                  { "size": "m"
-                                  , "hovered": true
-                                  , "spin": true
-                                  , "theme": "alfa-on-white"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-white"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "focused-hard"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "spin"
-                                  , "mods":
-                                    { "visible": true
-                                    }
-                                  }
-                                , "mods":
-                                  { "size": "m"
-                                  , "focused-hard": true
-                                  , "spin": true
-                                  , "theme": "alfa-on-white"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-white"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "pressed"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "spin"
-                                  , "mods":
-                                    { "visible": true
-                                    }
-                                  }
-                                , "mods":
-                                  { "size": "m"
-                                  , "pressed": true
-                                  , "spin": true
-                                  , "theme": "alfa-on-white"
-                                  }
-                                }
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            ]
-                          , "__func7": true
-                          }
-                        , { "block": "state"
-                          , "mods":
-                            { "theme": "alfa-on-white"
-                            }
-                          , "content":
-                            [ { "elem": "name"
-                              , "content": "disabled"
-                              , "block": "state"
-                              , "elemMods": {}
-                              , "mods":
-                                { "theme": "alfa-on-white"
-                                }
-                              }
-                            , { "elem": "instance"
-                              , "content":
-                                { "text": "button"
-                                , "block": "button"
-                                , "icon":
-                                  { "block": "spin"
-                                  , "mods":
-                                    { "visible": true
-                                    }
-                                  }
-                                , "mods":
-                                  { "size": "m"
-                                  , "disabled": true
-                                  , "spin": true
-                                  , "theme": "alfa-on-white"
-                                  }
+                                , "earlierLimit": "20.06.2015"
+                                , "laterLimit": "20.08.2015"
                                 }
                               , "block": "state"
                               , "elemMods": {}
