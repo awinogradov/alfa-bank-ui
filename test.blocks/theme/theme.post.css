@@ -1,3 +1,13 @@
+.theme {
+    padding: 20px;
+}
+
+.theme__name {
+    font-family: 'Roboto';
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
 .theme_name_alfa-on-white {
     background: #fff;
 }
@@ -8,4 +18,8 @@
                       linear-gradient(to right, #223667 35%,#1F2E54 100%);
 
     background-attachment: fixed;
+
+    .theme__name {
+        color: #fff;
+    }
 }

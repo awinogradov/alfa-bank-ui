@@ -16,6 +16,12 @@ libs
 !*.bundles/*/*.bemjson.js
 *.bundles/*/_*.bemjson.js
 
+/*/button.examples
+/*/button.examples/*.bemjson.js
+/*/input.examples
+/*/input.examples/*.bemjson.js
+
+
 /coverage
 /coverage.json
 /gemini-report/

@@ -1,0 +1,19 @@
+.mod__name {
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.mod__val {
+    font-family: 'Roboto';
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.mod_theme_alfa-on-color {
+
+    .mod__val, .mod__name {
+        color: #fff;
+    }
+
+}
