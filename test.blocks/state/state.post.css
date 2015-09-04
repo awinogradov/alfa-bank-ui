@@ -1,0 +1,17 @@
+.state {
+    display: inline-block;
+    margin-right: 14px;
+}
+
+.state__name {
+    font-family: 'Roboto';
+    font-size: 11px;
+}
+
+.state_theme_alfa-on-color {
+
+    .state__name {
+        color: #fff;
+    }
+
+}

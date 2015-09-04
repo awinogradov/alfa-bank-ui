@@ -1,4 +1,11 @@
 [{
+    mustDeps: [
+        {
+            block: 'i-bem'
+        },
+        'calendar',
+        'objects'
+    ],
     shouldDeps: [
         {
             block: 'popup',
@@ -18,9 +25,7 @@
         },
         {
             elems: ['calendar']
-        },
-        'calendar',
-        'objects'
+        }
     ]
 },
 {

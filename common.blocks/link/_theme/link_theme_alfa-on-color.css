@@ -1,9 +1,0 @@
-.link_theme_alfa-on-color {
-    color: #fff;
-}
-.link_theme_alfa-on-color .link__text {
-    border-bottom-color: rgba(255,255,255,.5);
-}
-.link_theme_alfa-on-color.link_hovered {
-    opacity: .7;
-}

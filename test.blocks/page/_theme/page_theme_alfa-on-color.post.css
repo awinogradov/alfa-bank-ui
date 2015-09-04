@@ -1,7 +1,0 @@
-.page_theme_alfa-on-color {
-    background-image: radial-gradient(circle at -10% 20%, #1E4879, transparent 25%),
-                      radial-gradient(circle at 110% 55%, #3DA3A8, transparent 65%),
-                      linear-gradient(to right, #223667 35%,#1F2E54 100%);
-
-    background-attachment: fixed;
-}
