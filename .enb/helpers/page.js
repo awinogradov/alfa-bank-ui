@@ -88,8 +88,12 @@ module.exports = function(node, opts) {
 
         // build JavaScript for browsers
         [techs.js, {
-            target: '.tmp.pre.js',
+            target: '.tmp.browser.js',
             sourceSuffixes: ['vanilla.js', 'js', 'browser.js']
+        }],
+        [techs.files.merge, {
+            target: '.tmp.pre.js',
+            sources: ['.tmp.bemhtml.js', '.tmp.browser.js']
         }],
         [techs.ym, {
             source: '.tmp.pre.js',
