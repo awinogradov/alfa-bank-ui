@@ -6,6 +6,10 @@
 .state__name {
     font-family: 'Roboto';
     font-size: 11px;
+
+    opacity: .2;
+
+    margin-bottom: 5px;
 }
 
 .state_theme_alfa-on-color {

@@ -1,5 +1,5 @@
 :root {
-  --buttonRadius: 6px;
+  --buttonRadius: 4px;
 }
 
 .button {
@@ -43,11 +43,14 @@
     overflow: hidden;
     text-overflow:  ellipsis;
     vertical-align: top;
+
+    font-weight: 300;
 }
 
 .button__icon {
     position: relative;
     vertical-align: middle;
+    padding-right: 10px;
 }
 
 .button_type_link {
@@ -78,40 +81,37 @@
     padding-right: 0;
 }
 
-.button__icon {
-    padding-right: 10px;
-}
-
 .button_size_s {
     font-size: 12px;
-    height: 25px;
-    line-height: 23px;
+    height: 30px;
+    line-height: 12px;
 
-    padding: 0 20px;
+    padding: 8px 15px;
 }
 
 .button_size_m {
-    font-size: 12px;
-    height: 35px;
-    line-height: 33px;
+    font-size: 15px;
+    height: 38px;
 
-    padding: 0 30px;
+    line-height: 15px;
+
+    padding: 10px 20px;
 }
 
 .button_size_l {
-    font-size: 14px;
-    height: 45px;
-    line-height: 43px;
+    font-size: 18px;
+    height: 48px;
+    line-height: 18px;
 
-    padding: 0 40px;
+    padding: 14px 25px;
 }
 
 .button_size_xl {
-    font-size: 16px;
-    height: 55px;
-    line-height: 53px;
+    font-size: 20px;
+    height: 58px;
+    line-height: 20px;
 
-    padding: 0 50px;
+    padding: 18px 30px;
 }
 
 

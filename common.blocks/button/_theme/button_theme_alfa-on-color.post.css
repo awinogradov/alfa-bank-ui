@@ -1,14 +1,123 @@
 .button_theme_alfa-on-color {
-    color: rgba(255, 255, 255, .8);
+    color: rgba(255, 255, 255, .9);
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, .4);
 
     background: transparent;
 
-    border: 1px solid rgba(255, 255, 255, .5);
-
     &.button_hovered {
-        color: #fff;
+        border-color: rgba(255, 255, 255, .9);
+    }
 
-        border-color: #fff;
+    &.button_focused-hard {
+        border-color: rgba(255, 255, 255, .9);
+        box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, .9);
+
+        &.button_hovered {
+            box-shadow: none;
+            border-color: rgba(255, 255, 255, .9);
+        }
+    }
+
+    &.button_pressed {
+        border-color: rgba(255, 255, 255, .9);
+        background: rgba(0, 0, 0, .1);
+    }
+
+    &.button_view_action {
+        color: rgba(255, 255, 255, .9);
+
+        .button__text {
+            font-weight: 500;
+        }
+
+        border-color: transparent;
+        background: rgba(255, 255, 255, .2);
+
+        &.button_hovered {
+            background: rgba(255, 255, 255, .3);
+        }
+
+        &.button_focused-hard {
+            border-color: rgba(255, 255, 255, .9);
+
+            &.button_hovered {
+                border-color: transparent;
+            }
+        }
+
+        &.button_pressed {
+            background: rgba(255, 255, 255, .15);
+        }
+    }
+
+    &.button_view_extra {
+        background: rgba(178, 12, 0, .85);
+        border-color: rgba(178, 12, 0, .85);
+
+        color: rgba(255, 255, 255, 1);
+
+        .button__text {
+            font-weight: 500;
+        }
+
+        &.button_hovered {
+            background: rgba(178, 12, 0, 1);
+            border-color: rgba(178, 12, 0, 1);
+        }
+
+        &.button_focused-hard {
+            border-color: rgba(255, 255, 255, .9);
+
+            &.button_hovered {
+                border-color: rgba(178, 12, 0, 1);
+            }
+        }
+
+        &.button_pressed {
+            background: rgba(158, 12, 0, 1);
+            border-color: rgba(158, 12, 0, 1);
+        }
+    }
+
+    &.button_view_other {
+        background: rgba(80, 64, 218, .85);
+        border-color: rgba(80, 64, 218, .85);
+
+        color: rgba(255, 255, 255, 1);
+
+        .button__text {
+            font-weight: 500;
+        }
+
+        &.button_hovered {
+            background: rgba(71, 57, 195, .85);
+            border-color: rgba(71, 57, 195, .85);
+        }
+
+        &.button_focused-hard {
+            border-color: rgba(255, 255, 255, .9);
+
+            &.button_hovered {
+                border-color: rgba(71, 57, 195, .85);
+            }
+        }
+
+        &.button_pressed {
+            background: rgba(64, 51, 174, .85);
+            border-color: rgba(64, 51, 174, .85);
+        }
+    }
+
+    &.button_view_pseudo {
+        border-style: dashed;
+
+        &.button_focused-hard {
+            border-color: rgba(255, 255, 255, .9);
+            border-style: solid;
+        }
     }
 
     &.button_checked,
@@ -21,10 +130,10 @@
     &.button_disabled {
         border-color: transparent;
 
-        background: rgba(255, 255, 255, .1);
+        background: rgba(255, 255, 255, .05);
 
         .button__text {
-            color: rgba(255, 255, 255, .5)
+            color: rgba(255, 255, 255, .3)
         }
 
         &.button_checked {
@@ -34,29 +143,6 @@
                 color: #000;
             }
         }
-    }
-
-    &.button_focused-hard {
-        z-index: 1;
-
-        background: rgba(255, 255, 255, .4);
-    }
-
-    &.button_view_action {
-        border-color: transparent;
-
-        color: #fff;
-
-        background: rgba(255, 255, 255, .5);
-
-        &.button_hovered {
-            background: #fff;
-            background: rgba(255, 255, 255, .7);
-        }
-    }
-
-    &.button_view_pseudo {
-        border-style: dashed;
     }
 }
 

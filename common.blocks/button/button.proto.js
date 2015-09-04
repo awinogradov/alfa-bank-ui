@@ -2,7 +2,7 @@ module.exports = {
     themes: ['alfa-on-color', 'alfa-on-white'],
     states: ['hovered', 'focused-hard', 'pressed', 'disabled'],
     size: ['s', 'm', 'l', 'xl'],
-    view: ['action', 'pseudo'],
+    view: ['action', 'extra', 'other', 'pseudo'],
     type: ['link'],
     icon: false,
     spin: false,
@@ -14,5 +14,5 @@ module.exports = {
         spin: { icon: { block: 'spin', mods: { visible: true } } }
     },
     default: { size: 'm' },
-    data: { text: 'button' }
+    data: { text: 'Button' }
 };
