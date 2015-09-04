@@ -18,6 +18,9 @@ libs
 
 /*/button.examples
 /*/button.examples/*.bemjson.js
+/*/input.examples
+/*/input.examples/*.bemjson.js
+
 
 /coverage
 /coverage.json

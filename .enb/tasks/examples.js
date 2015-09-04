@@ -15,9 +15,9 @@ var path = require('path'),
  * @example Build examples for desktop platform
  * $ magic make desktop.examples
  */
-module.exports = function (project) {
+module.exports = function(project) {
     // load plugin
-    if(!project._modules['enb-bem-examples']) {
+    if (!project._modules['enb-bem-examples']) {
        project.includeConfig('enb-bem-examples');
     }
     var plugin = project.module('enb-bem-examples'),
@@ -25,16 +25,16 @@ module.exports = function (project) {
         // and get helper to configure it
         helper = plugin.createConfigurator('examples');
 
-    PLATFORMS.forEach(function (platform) {
+    PLATFORMS.forEach(function(platform) {
         var dirPattern = platform + '.examples/*/*';
 
         // configure BEMJSON files building
         configure(helper, platform);
 
         // configure pages building by BEMJSON files
-        project.nodes(dirPattern, function (node) {
+        project.nodes(dirPattern, function(node) {
             configurePage(node, {
-                platform : platform
+                platform: platform
             });
         });
     });
@@ -50,9 +50,9 @@ function configure(helper, platform) {
     var dir = platform + '.examples';
 
     helper.configure({
-        destPath : dir,
-        levels : config.levels(platform),
-        techSuffixes : ['examples'],
-        fileSuffixes : ['bemjson.js', 'title.txt']
+        destPath: dir,
+        levels: config.levels(platform),
+        techSuffixes: ['examples'],
+        fileSuffixes: ['bemjson.js', 'title.txt']
     });
 }

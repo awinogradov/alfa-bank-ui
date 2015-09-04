@@ -15,9 +15,9 @@ var path = require('path'),
  * @example Build examples for desktop platform
  * $ magic make desktop.docs/examples
  */
-module.exports = function (project) {
+module.exports = function(project) {
     // load plugin
-    if(!project._modules['enb-bem-examples']) {
+    if (!project._modules['enb-bem-examples']) {
        project.includeConfig('enb-bem-examples');
     }
     var plugin = project.module('enb-bem-examples'),
@@ -25,16 +25,16 @@ module.exports = function (project) {
         // and get helper to configure it
         helper = plugin.createConfigurator('__doc-examples__');
 
-    PLATFORMS.forEach(function (platform) {
+    PLATFORMS.forEach(function(platform) {
         var dirPattern = platform + '.doc-examples/*/*';
 
         // configure BEMJSON files building
         configure(helper, platform);
 
         // configure pages building by BEMJSON files
-        project.nodes(dirPattern, function (node) {
+        project.nodes(dirPattern, function(node) {
             configurePage(node, {
-                platform : platform
+                platform: platform
             });
         });
     });
@@ -50,22 +50,22 @@ function configure(helper, platform) {
     var dirname = path.join(platform + '.doc-examples');
 
     helper.configure({
-        destPath : dirname,
-        levels : config.levels(platform),
-        techSuffixes : [],
-        fileSuffixes : [],
-        inlineBemjson : true,
-        processInlineBemjson : wrapInPage
+        destPath: dirname,
+        levels: config.levels(platform),
+        techSuffixes: [],
+        fileSuffixes: [],
+        inlineBemjson: true,
+        processInlineBemjson: wrapInPage
     });
 }
 
 function wrapInPage(bemjson, meta) {
     var basename = path.basename(meta.filename, '.bemjson.js');
     return {
-        block : 'page',
-        title : naming.stringify(meta.notation),
-        head : [{ elem : 'css', url : basename + '.min.css' }],
-        scripts : [{ elem : 'js', url : basename + '.min.js' }],
-        content : bemjson
+        block: 'page',
+        title: naming.stringify(meta.notation),
+        head: [{ elem: 'css', url: basename + '.min.css' }],
+        scripts: [{ elem: 'js', url: basename + '.min.js' }],
+        content: bemjson
     };
 }

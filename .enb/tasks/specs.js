@@ -13,7 +13,7 @@ var techs = require('../techs'),
  * @example Run tests for desktop platform
  * $ magic make desktop.specs
  */
-module.exports = function (project) {
+module.exports = function(project) {
     // load plugin
     project.includeConfig('enb-bem-specs');
     var plugin = project.module('enb-bem-specs'),
@@ -21,7 +21,7 @@ module.exports = function (project) {
         // and get helper to configure it
         helper = plugin.createConfigurator('specs');
 
-    PLATFORMS.forEach(function (platform) {
+    PLATFORMS.forEach(function(platform) {
         configure(helper, platform);
     });
 };
@@ -36,11 +36,11 @@ function configure(helper, platform) {
     var dir = platform + '.specs';
 
     helper.configure({
-        destPath     : dir,
-        levels       : config.levels(platform),
-        sourceLevels : config.levels(platform, { specs : true }),
-        jsSuffixes   : ['vanilla.js', 'browser.js', 'js'],
-        specSuffixes : ['spec.js'],
-        depsTech     : techs.bem.deps
+        destPath: dir,
+        levels: config.levels(platform),
+        sourceLevels: config.levels(platform, { specs: true }),
+        jsSuffixes: ['vanilla.js', 'browser.js', 'js'],
+        specSuffixes: ['spec.js'],
+        depsTech: techs.bem.deps
     });
 }

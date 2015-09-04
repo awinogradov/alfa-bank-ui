@@ -12,21 +12,21 @@ var path = require('path'),
  * @example Build docs for desktop platform
  * $ magic make desktop.docs
  */
-module.exports = function (project) {
+module.exports = function(project) {
     // load service task configs
-    ['__docs__', '__doc-examples__'].forEach(function (name) {
+    ['__docs__', '__doc-examples__'].forEach(function(name) {
         var filename = path.join(__dirname, 'docs', name + '.js');
 
         project.includeConfig(filename);
     });
 
-    project.task('docs', function (task) {
+    project.task('docs', function(task) {
         var platform = task.getMakePlatform(),
             args = [].slice.call(arguments, 1),
-            exampleArgs = args.filter(function (arg) {
+            exampleArgs = args.filter(function(arg) {
                 return arg.indexOf('examples') !== -1;
             }),
-            docsArgs = args.filter(function (arg) {
+            docsArgs = args.filter(function(arg) {
                 return arg.indexOf('examples') === -1;
             });
 
