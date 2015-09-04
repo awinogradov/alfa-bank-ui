@@ -98,7 +98,7 @@
 ```bemjson
 {
     block : 'popup',
-    mods : { theme : 'alfa-on-white' }
+    mods : { theme : 'alfa-on-white' },
     content : 'On white background'
 }
 ```
@@ -106,7 +106,7 @@
 ```bemjson
 {
     block : 'popup',
-    mods : { theme : 'alfa-on-color' }
+    mods : { theme : 'alfa-on-color' },
     content : 'On dark background'
 }
 ```
@@ -144,7 +144,7 @@
 * `_hint` отображение подсказки с уголком.
 ```bemjson
 {
-    block : 'popup'
+    block : 'popup',
     mods : { view : 'hint' },
     content : 'Content'
 }
@@ -155,7 +155,7 @@
 Используется для подсказки с ошибкой:
 ```bemjson
 {
-    block : 'popup'
+    block : 'popup',
     mods : { view : 'hint', error : true },
     content : 'Content'
 }

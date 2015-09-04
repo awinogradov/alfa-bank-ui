@@ -47,7 +47,7 @@ module.exports = function(node, opts) {
 
     opts = opts || {};
 
-    if(!opts.platform) {
+    if (!opts.platform) {
         var error = new Error('platform to configure the `' + nodeUrl + '` node is not specified.');
         error.name = 'ConfigError';
 
@@ -58,7 +58,7 @@ module.exports = function(node, opts) {
         sublevels = [
             path.join(nodeDirname, '..', '.blocks'),
             path.join(nodeDirname, 'blocks')
-        ].filter(function (level) {
+        ].filter(function(level) {
             return fs.existsSync(level);
         }),
         levels = [].concat(
@@ -68,61 +68,42 @@ module.exports = function(node, opts) {
 
     node.addTechs([
         // get FileList
-        [techs.bem.levels, { levels : levels }],
-        [techs.bem.bemjsonToBemdecl, { target : '.tmp.bemdecl.js' }],
+        [techs.bem.levels, { levels: levels }],
+        [techs.bem.bemjsonToBemdecl, { target: '.tmp.bemdecl.js' }],
         [techs.bem.deps, {
-            target : '.tmp.deps.js',
-            bemdeclFile : '.tmp.bemdecl.js'
+            target: '.tmp.deps.js',
+            bemdeclFile: '.tmp.bemdecl.js'
         }],
         [techs.bem.files, {
-            depsFile : '.tmp.deps.js'
+            depsFile: '.tmp.deps.js'
         }],
 
         // build CSS
         [techs.postcss, {
-            sourceSuffixes : ['css', 'post.css'],
-            target : '.tmp.css',
+            sourceSuffixes: ['css', 'post.css'],
+            target: '.tmp.css',
             sourcemap: true,
             plugins: require('./postcss-plugins')
         }],
 
         // build JavaScript for browsers
         [techs.js, {
-            target : '.tmp.pre.js',
-            sourceSuffixes : ['vanilla.js', 'js', 'browser.js']
+            target: '.tmp.pre.js',
+            sourceSuffixes: ['vanilla.js', 'js', 'browser.js']
         }],
         [techs.ym, {
-            source : '.tmp.pre.js',
-            target : '.tmp.js'
+            source: '.tmp.pre.js',
+            target: '.tmp.js'
         }]
     ]);
 
-    if(BEM_TEMPLATE_ENGINE === 'BEMHTML') {
-        // build HTML using BEMJSON + BEMHTML
-        node.addTechs([
-            [techs.engines.bemhtml, { target : '.tmp.bemhtml.js' }],
-            [techs.html.bemhtml, {
-                target : '?.html',
-                bemhtmlFile : '.tmp.bemhtml.js'
-            }]
-        ]);
-    } else {
-        // build HTML using BEMJSON + BH
-        node.addTechs([
-            [techs.engines.bhCommonJS, {
-                target : '.tmp.bh.js',
-                devMode : false,
-                bhOptions : {
-                    jsAttrName : 'data-bem',
-                    jsAttrScheme : 'json'
-                }
-            }],
-            [techs.html.bh, {
-                target : '?.html',
-                bhFile : '.tmp.bh.js'
-            }]
-        ]);
-    }
+    node.addTechs([
+        [techs.engines.bemhtml, { target: '.tmp.bemhtml.js' }],
+        [techs.html.bemhtml, {
+            target: '?.html',
+            bemhtmlFile: '.tmp.bemhtml.js'
+        }]
+    ]);
 
     node.addTargets([
         '?.min.css', '?.min.js',
@@ -131,15 +112,15 @@ module.exports = function(node, opts) {
 
     node.mode('development', function() {
         node.addTechs([
-            [techs.files.copy, { source : '.tmp.css', target : '?.min.css' }],
-            [techs.files.copy, { source : '.tmp.js', target : '?.min.js' }]
+            [techs.files.copy, { source: '.tmp.css', target: '?.min.css' }],
+            [techs.files.copy, { source: '.tmp.js', target: '?.min.js' }]
         ]);
     });
 
     node.mode('production', function() {
         node.addTechs([
-            [techs.borschik, { source : '.tmp.css', target : '?.min.css', tech : 'cleancss' }],
-            [techs.borschik, { source : '.tmp.js', target : '?.min.js' }]
+            [techs.borschik, { source: '.tmp.css', target: '?.min.css', tech: 'cleancss' }],
+            [techs.borschik, { source: '.tmp.js', target: '?.min.js' }]
         ]);
     });
 };

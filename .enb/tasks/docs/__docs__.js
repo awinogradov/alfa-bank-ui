@@ -12,7 +12,7 @@ var config = require('../../config'),
  * @example Build docs for desktop platform
  * $ magic make desktop.docs
  */
-module.exports = function (project) {
+module.exports = function(project) {
     // load plugin
     project.includeConfig('enb-bem-docs');
     var plugin = project.module('enb-bem-docs'),
@@ -21,7 +21,7 @@ module.exports = function (project) {
         helper = plugin.createConfigurator('__docs__'),
         langs = project.getLanguages();
 
-    PLATFORMS.forEach(function (platform) {
+    PLATFORMS.forEach(function(platform) {
         configure(helper, platform, langs);
     });
 };
@@ -36,10 +36,10 @@ function configure(helper, platform, langs) {
     var dir = platform + '.docs';
 
     helper.configure({
-        destPath : dir,
-        levels : config.levels(platform),
-        exampleSets : [platform + '.examples', platform + '.doc-examples'],
-        langs : langs,
-        jsdoc : { suffixes : ['vanilla.js', 'browser.js', 'js'] }
+        destPath: dir,
+        levels: config.levels(platform),
+        exampleSets: [platform + '.examples', platform + '.doc-examples'],
+        langs: langs,
+        jsdoc: { suffixes: ['vanilla.js', 'browser.js', 'js'] }
     });
 }
