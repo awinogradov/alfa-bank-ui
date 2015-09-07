@@ -46,6 +46,7 @@
   "scripts": {
     "start": "enb server",
     "make": "magic make && npm run dist",
+    "protein": "node protein.js",
     "build": "magic make",
     "deps": "bower i",
     "test": "npm run lint && npm run build && npm run specs",

@@ -1,22 +1,17 @@
 :root {
-    --placeholderColorOnColor: rgba(255,255,255,0.5);
+    --placeholderColorOnColor: rgba(255, 255, 255, 0.5);
 }
 
 .input_theme_alfa-on-color {
     background: transparent;
-    color: #fff;
+    color: rgba(255, 255, 255, .9);
 
     border-width: 1px;
     border-style: solid;
-    border-color: #fff;
-    border-color: rgba(255,255,255,0.5);
-
-    &:before {
-        background: transparent;
-    }
+    border-color: rgba(255, 255, 255, .4);
 
     .input__control {
-        color: #fff;
+        color: rgba(255, 255, 255, .9);
 
         &::-webkit-input-placeholder {
             color: var(--placeholderColorOnColor);
@@ -36,7 +31,7 @@
     }
 
     &.input_has-addon .input__addon {
-        color: #fff;
+        color: rgba(255, 255, 255, .9);
 
         opacity: .6
     }
@@ -45,37 +40,34 @@
         border-color: transparent;
     }
 
-    &.input_mode_result .input__inner {
-        color: #fff;
-    }
-
     &.input_invalid {
-        border-color: #fc5c5e;
+        border-color: rgba(239, 49, 36, .85);
     }
 
     &.input_hovered {
-        border-color: rgba(255,255,255,1);
+        border-color: rgba(255, 255, 255, .9);
     }
 
     &.input_focused {
-        border-color: rgba(255,255,255,1);
+        border-color: rgba(255, 255, 255, .9);
+        box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, .9);
 
-        background-color: rgba(0,0,0,.3);
+        background-color: rgba(0, 0, 0, .15);
     }
 
     &.input_focused.input_invalid,
     &.input_hovered.input_invalid {
-        border-color: rgba(252, 92, 94, 1);
+        border-color: rgba(239, 49, 36, 1);
     }
 
     &.input_disabled {
         border-color: transparent;
 
-        background: rgba(255,255,255, 0.1);
+        background: rgba(255, 255, 255, .05);
 
         .input__box,
         .input__control {
-            color: rgba(255, 255, 255, 0.4);
+            color: rgba(255, 255, 255, .3)
         }
     }
 
