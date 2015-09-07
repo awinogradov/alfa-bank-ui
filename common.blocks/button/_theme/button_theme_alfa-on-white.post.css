@@ -120,7 +120,7 @@
             border-style: solid;
 
             &.button_hovered {
-                border-color: rgba(0, 0, 0, .9);
+                border-color: rgba(239, 49, 36, .5);
                 border-style: dashed;
             }
         }
