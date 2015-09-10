@@ -1,5 +1,5 @@
 module.exports = {
-    themes: ['alfa-on-color', 'alfa-on-white'],
+    default: { size: 'm', theme: ['alfa-on-color', 'alfa-on-white'] },
     states: ['hovered', 'focused', 'disabled'],
     size: ['s', 'm', 'l', 'xl'],
     type: ['card', 'email', 'money', 'tel'],
@@ -13,6 +13,5 @@ module.exports = {
             laterLimit: '20.08.2015'
         }
     },
-    default: { size: 'm' },
     data: { val: 'Value' }
 };

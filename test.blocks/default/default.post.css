@@ -1,25 +1,25 @@
-.theme {
+.default__mod {
     padding: 20px;
 }
 
-.theme__name {
+/*.default__name {
     font-family: 'Roboto';
     font-size: 20px;
     margin-bottom: 20px;
-}
+}*/
 
-.theme_name_alfa-on-white {
+.default__mod_theme_alfa-on-white {
     background: #fff;
 }
 
-.theme_name_alfa-on-color {
+.default__mod_theme_alfa-on-color {
     background-image: radial-gradient(circle at -10% 20%, #1E4879, transparent 25%),
                       radial-gradient(circle at 110% 55%, #3DA3A8, transparent 65%),
                       linear-gradient(to right, #223667 35%,#1F2E54 100%);
 
     background-attachment: fixed;
 
-    .theme__name {
+    /*.default__name {
         color: #fff;
-    }
+    }*/
 }
