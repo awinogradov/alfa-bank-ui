@@ -1,5 +1,5 @@
-block('button').content()(
-    function() {
+block('button')(
+    content()(function() {
         var ctx = this.ctx,
             content = [ctx.icon && { elem: 'icon', content: ctx.icon }];
         ctx.text && content.push({ elem: 'text', content: ctx.text });
@@ -7,5 +7,7 @@ block('button').content()(
     },
     match(function() { return typeof this.ctx.content !== 'undefined'; })(function() {
         return this.ctx.content;
-    })
+    })),
+
+    elem('icon').tag()('span')
 );

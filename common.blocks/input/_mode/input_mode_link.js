@@ -35,7 +35,7 @@ Input.decl({ block: this.name, modName: 'mode', modVal: 'link' }, {
                 this.elem('control').val(this.getVal()).focus();
             },
             '': function() {
-                this._trigger.setVal(this.getVal() || this.getPlaceholder());
+                this._setTriggerVal(this.getVal() || this.getPlaceholder());
                 this.emit('submit');
             }
         }
@@ -45,8 +45,12 @@ Input.decl({ block: this.name, modName: 'mode', modVal: 'link' }, {
         return this._placeholder;
     },
 
+    _setTriggerVal: function(val) {
+        this._trigger.elem('text').text(val);
+    },
+
     _onChange: function() {
-        this._trigger.setVal(this.getVal() || this.getPlaceholder());
+        this._setTriggerVal(this.getVal() || this.getPlaceholder());
         this.getVal() ? this.delMod('empty') : this.setMod('empty');
     },
 
