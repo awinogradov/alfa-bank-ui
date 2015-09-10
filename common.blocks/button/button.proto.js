@@ -1,5 +1,5 @@
 module.exports = {
-    themes: ['alfa-on-color', 'alfa-on-white'],
+    default: { size: 'm', theme: ['alfa-on-color', 'alfa-on-white'] },
     states: ['hovered', 'focused-hard', 'pressed', 'disabled'],
     size: ['s', 'm', 'l', 'xl'],
     view: ['action', 'extra', 'other', 'pseudo'],
@@ -13,6 +13,5 @@ module.exports = {
         icon: { icon: { block: 'icon', mods: { tool: 'search' } } },
         spin: { icon: { block: 'spin', mods: { visible: true } } }
     },
-    default: { size: 'm' },
     data: { text: 'Button' }
 };
