@@ -1,15 +1,6 @@
-[
-    {
-        shouldDeps: [
-            {
-                elems: ['text', 'icon']
-            }
-        ]
-    },
-    {
-        tech: 'spec.js',
-        shouldDeps: [
-            { tech: 'bemhtml', block: 'link' }
-        ]
-    }
-];
+[{
+    tech: 'spec.js',
+    shouldDeps: [
+        { tech: 'bemhtml', block: 'link' }
+    ]
+}];

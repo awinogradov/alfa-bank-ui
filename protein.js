@@ -34,7 +34,8 @@ protein.wrap(function (protein, content) {
                                             content: {
                                                 block: 'link',
                                                 mods: {
-                                                    theme: 'alfa-on-white'
+                                                    theme: 'alfa-on-white',
+                                                    view: 'pseudo'
                                                 },
                                                 url: '#' + modsArray[i],
                                                 text: modName

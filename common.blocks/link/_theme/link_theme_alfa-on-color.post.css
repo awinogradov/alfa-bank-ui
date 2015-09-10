@@ -1,11 +1,23 @@
 .link_theme_alfa-on-color {
-    color: #fff;
+    color: rgba(255, 255, 255, .9);
 
     .link__text {
-        border-bottom-color: rgba(255,255,255,.5);
+        border-color: rgba(255, 255, 255, .4);
     }
 
     &.link_hovered {
-        opacity: .7;
+        color: rgba(255, 255, 255, 1);
+
+        .link__text {
+            border-color: rgba(255, 255, 255, 1);
+        }
+    }
+
+    &.link_disabled {
+        color: rgba(255, 255, 255, .3);
+
+        .link__text {
+            border-color: transparent;
+        }
     }
 }

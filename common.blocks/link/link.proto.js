@@ -1,6 +1,6 @@
 module.exports = {
     default: { size: 'm', theme: ['alfa-on-color', 'alfa-on-white'] },
-    states: ['hovered', 'focused', 'disabled'],
+    states: ['hovered', 'disabled'],
     size: ['s', 'm', 'l', 'xl'],
     view: ['pseudo'],
     icon: false,

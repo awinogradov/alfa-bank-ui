@@ -3,7 +3,7 @@
     shouldDeps: [
         { block: 'keyboard', elem: 'codes' },
         { block: 'link' },
-        { block: 'link', mod: 'pseudo' }
+        { block: 'link', mods: { view: 'pseudo' } }
     ]
 },
 {
@@ -11,6 +11,6 @@
     mustDeps: [
         { tech: 'bemhtml', block: 'input', mods: { mode: 'link' } },
         { block: 'link' },
-        { block: 'link', mod: 'pseudo' }
+        { block: 'link', mods: { view: 'pseudo' } }
     ]
 }];

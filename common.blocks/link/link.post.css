@@ -4,7 +4,7 @@
 
     cursor: pointer;
 
-    transition: all 200ms ease-out;
+    transition: color 200ms ease-out;
 
     text-decoration: none;
 
@@ -15,28 +15,28 @@
     border-bottom-width: 1px;
     border-bottom-style: solid;
     padding-bottom: 1px;
+
+    transition: border-color 200ms ease-out;
 }
 
 .link_size_s {
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .link_size_m {
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .link_size_l {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .link_size_xl {
-    font-size: 35px;
+    font-size: 30px;
 }
 
-.link_pseudo {
-    .link__text {
-        border-bottom-style: dotted;
-    }
+.link_view_pseudo .link__text {
+    border-bottom-style: dotted;
 }
 
 .link_disabled {
