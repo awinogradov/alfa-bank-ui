@@ -9,7 +9,7 @@
 
 .radio__control {
     position: absolute;
-    z-index:  -1;
+    z-index: -1;
 
     margin: 0;
 
@@ -40,18 +40,6 @@
                     opacity .05s ease-out,
                     visibility 0s linear .05s;
     }
-}
-
-.radio_checked {
-
-    .radio__box:after {
-        visibility: visible;
-        opacity:    1;
-    }
-}
-
-.radio_disabled {
-    cursor: default;
 }
 
 .radio_size_m {
@@ -94,6 +82,18 @@
             height: 8px;
         }
     }
+}
+
+.radio_checked {
+
+    .radio__box:after {
+        visibility: visible;
+        opacity:    1;
+    }
+}
+
+.radio_disabled {
+    cursor: default;
 }
 
 .radio_type_button {

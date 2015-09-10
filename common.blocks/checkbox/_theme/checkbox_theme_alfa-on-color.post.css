@@ -1,24 +1,24 @@
 .checkbox_theme_alfa-on-color {
-    color: #fff;
+    color: rgba(255, 255, 255, .9);
 
     .checkbox__box {
         transition: all 200ms ease;
 
-        background: transparent;
-
         border-width: 1px;
         border-style: solid;
         border-color: rgba(255, 255, 255, 0.5);
-
-        &:after {
-            background-image: url(../__box/checkbox__box_theme_alfa-on-color.svg);
-        }
     }
 
     &.checkbox_checked {
 
         .checkbox__box {
-            border-color: #fff;
+            border-color: transparent;
+            background: rgba(178, 12, 0, .85);
+        }
+
+        &.checkbox_hovered .checkbox__box {
+            border-color: transparent;
+            background: rgba(178, 12, 0, 1);
         }
     }
 
@@ -26,29 +26,31 @@
     &.checkbox_hovered {
 
         .checkbox__box {
-            border-color: #fff;
-            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, .9);
         }
     }
 
-    &.checkbox_hovered {
-
-        &.checkbox_checked .checkbox__box {
-            background: rgba(255, 255, 255, 0.2);
-        }
+    &.checkbox_focused .radio__box {
+        box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, .9);
     }
 
     &.checkbox_disabled {
-        color: #fff;
-        color: rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, .3);
 
         .checkbox__box {
-            border-color: rgba(255, 255, 255, 0.2);
-            background: rgba(255, 255, 255, 0.1);
+            border-color: transparent;
+            background: rgba(255, 255, 255, 0.05);
         }
 
         &.checkbox_checked .checkbox__box:after {
-            opacity: 0.4;
+            background: rgba(255, 255, 255, 0.25);
+        }
+    }
+
+    &.checkbox_type_button {
+
+        .button_checked {
+            background: #ccc;
         }
     }
 }
