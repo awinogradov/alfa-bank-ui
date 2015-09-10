@@ -28,11 +28,6 @@
 
     &.button_view_action {
         color: rgba(255, 255, 255, .9);
-
-        .button__text {
-            font-weight: 500;
-        }
-
         border-color: transparent;
         background: rgba(255, 255, 255, .2);
 
@@ -59,10 +54,6 @@
 
         color: rgba(255, 255, 255, 1);
 
-        .button__text {
-            font-weight: 500;
-        }
-
         &.button_hovered {
             background: rgba(178, 12, 0, 1);
             border-color: rgba(178, 12, 0, 1);
@@ -87,10 +78,6 @@
         border-color: rgba(80, 64, 218, .85);
 
         color: rgba(255, 255, 255, 1);
-
-        .button__text {
-            font-weight: 500;
-        }
 
         &.button_hovered {
             background: rgba(71, 57, 195, .85);

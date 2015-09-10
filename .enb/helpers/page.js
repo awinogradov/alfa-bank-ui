@@ -1,8 +1,7 @@
 var fs = require('fs'),
     path = require('path'),
     config = require('../config'),
-    techs = require('../techs'),
-    BEM_TEMPLATE_ENGINE = process.env.BEM_TEMPLATE_ENGINE || 'BEMHTML';
+    techs = require('../techs');
 
 /**
  * Configures dir to build page.

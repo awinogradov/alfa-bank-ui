@@ -3,24 +3,12 @@
 
     position: relative;
     display:  inline-block;
-
-    border-radius: 6px;
-
     box-sizing: border-box;
+
+    border-radius: 4px;
 
     transition: all 200ms ease;
 
-    &:before {
-        position: absolute;
-        top:      1px;
-        right:    1px;
-        bottom:   1px;
-        left:     1px;
-
-        content: '';
-
-        border-radius: 5px;
-    }
 }
 
 .input__box {
@@ -38,6 +26,7 @@
 
     font:        inherit;
     line-height: inherit;
+    font-weight: 300;
 
     box-sizing: border-box;
 
@@ -147,10 +136,10 @@
 
 .input_size_s {
     font-size: 12px;
-    height: 25px;
+    height: 30px;
 
     .input__control {
-        padding: 4px 13px 5px 13px;
+        padding: 8px 10px 7px;
     }
 
     &.input_has-clear {
@@ -193,11 +182,11 @@
 }
 
 .input_size_m {
-    font-size: 12px;
-    height: 35px;
+    font-size: 15px;
+    height: 38px;
 
     .input__control {
-        padding: 9px 15px 10px 15px;
+        padding: 10px 12px 9px;
     }
 
     &.input_has-clear {
@@ -240,11 +229,11 @@
 }
 
 .input_size_l {
-    font-size: 15px;
-    height: 45px;
+    font-size: 18px;
+    height: 48px;
 
     .input__control {
-        padding: 12px 17px 13px 17px;
+        padding: 13px 15px 12px;
     }
 
     &.input_has-clear {
@@ -287,11 +276,11 @@
 }
 
 .input_size_xl {
-    font-size: 25px;
-    height: 55px;
+    font-size: 20px;
+    height: 58px;
 
     .input__control {
-        padding: 12px 19px 13px 19px;
+        padding: 16px 15px;
     }
 
     &.input_has-clear {

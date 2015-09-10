@@ -33,10 +33,6 @@
         border-color: transparent;
         color: rgba(0, 0, 0, .9);
 
-        .button__text {
-            font-weight: 500;
-        }
-
         &.button_hovered {
             background: rgba(0, 0, 0, .25);
         }
@@ -55,14 +51,9 @@
     }
 
     &.button_view_extra {
+        color: rgba(255, 255, 255, 1);
         background: rgba(178, 12, 0, .85);
         border-color: rgba(178, 12, 0, .85);
-
-        color: rgba(255, 255, 255, 1);
-
-        .button__text {
-            font-weight: 500;
-        }
 
         &.button_hovered {
             background: rgba(178, 12, 0, 1);
@@ -88,10 +79,6 @@
         border-color: rgba(80, 64, 218, .85);
 
         color: rgba(255, 255, 255, 1);
-
-        .button__text {
-            font-weight: 500;
-        }
 
         &.button_hovered {
             background: rgba(71, 57, 195, .85);

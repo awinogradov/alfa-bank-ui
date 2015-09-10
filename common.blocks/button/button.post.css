@@ -77,6 +77,12 @@
     }
 }
 
+.button_view_action .button__text,
+.button_view_extra .button__text,
+.button_view_other .button__text {
+    font-weight: 500;
+}
+
 .button > :last-child {
     padding-right: 0;
 }
