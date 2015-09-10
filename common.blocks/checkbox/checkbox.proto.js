@@ -1,24 +1,7 @@
 module.exports = {
-    themes: ['alfa-on-color', 'alfa-on-white'],
+    default: { size: 'm', theme: ['alfa-on-white', 'alfa-on-color'] },
     states: ['hovered', 'checked', ['hovered', 'checked'], 'focused', 'disabled', ['disabled', 'checked']],
     size: ['m', 'l'],
     type: ['button'],
-    options: {
-        default: {
-            name: 'default'
-        },
-        size: {
-            m: {
-                name: 'sizeM',
-            },
-            l: {
-                name: 'sizeL',
-            }
-        },
-        type: {
-            name: 'type'
-        }
-    },
-    default: { size: 'm' },
     data: { text: 'Checkbox' }
 };

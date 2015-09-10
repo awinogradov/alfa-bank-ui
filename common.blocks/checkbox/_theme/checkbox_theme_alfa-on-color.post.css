@@ -30,7 +30,7 @@
         }
     }
 
-    &.checkbox_focused .radio__box {
+    &.checkbox_focused .checkbox__box {
         box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, .9);
     }
 
@@ -43,7 +43,7 @@
         }
 
         &.checkbox_checked .checkbox__box:after {
-            background: rgba(255, 255, 255, 0.25);
+            opacity: .2;
         }
     }
 

@@ -26,11 +26,11 @@
     &.checkbox_hovered {
 
         .checkbox__box {
-            border-color: rgba(0, 0, 0, .4);
+            border-color: rgba(0, 0, 0, .9);
         }
     }
 
-    &.checkbox_focused .radio__box {
+    &.checkbox_focused .checkbox__box {
         box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, .9);
     }
 
@@ -43,7 +43,8 @@
         }
 
         &.checkbox_checked .checkbox__box:after {
-            opacity: 0.4;
+            background-image: url(../__box/checkbox__box_black.svg);
+            opacity: 0.15;
         }
     }
 
