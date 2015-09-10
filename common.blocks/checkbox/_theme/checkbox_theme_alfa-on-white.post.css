@@ -5,19 +5,20 @@
 
         background: rgba(255, 255, 255, .3);
 
-        border-width: 1px;
-        border-style: solid;
-        border-color: #ccc;
+        border: 1px solid rgba(0, 0, 0, .3);
 
-        &:after {
-            background-image: url(../__box/checkbox__box_theme_alfa-on-white.svg);
-        }
     }
 
     &.checkbox_checked {
 
         .checkbox__box {
-            border-color: rgba(0, 0, 0, .4);
+            border-color: transparent;
+            background: rgba(178, 12, 0, .85);
+        }
+
+        &.checkbox_hovered .checkbox__box {
+            border-color: transparent;
+            background: rgba(178, 12, 0, 1);
         }
     }
 
@@ -25,20 +26,25 @@
     &.checkbox_hovered {
 
         .checkbox__box {
-            border-color: rgba(0, 0, 0, .4);
+            border-color: rgba(0, 0, 0, .9);
         }
     }
 
+    &.checkbox_focused .checkbox__box {
+        box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, .9);
+    }
+
     &.checkbox_disabled {
-        color: #999;
+        color: rgba(0, 0, 0, .3);
 
         .checkbox__box {
             border-color: transparent;
-            background: rgba(0, 0, 0, 0.06);
+            background: rgba(0, 0, 0, 0.05);
         }
 
         &.checkbox_checked .checkbox__box:after {
-            opacity: 0.4;
+            background-image: url(../__box/checkbox__box_black.svg);
+            opacity: 0.15;
         }
     }
 
