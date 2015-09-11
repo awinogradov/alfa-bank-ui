@@ -1,33 +1,30 @@
 .select_theme_alfa-on-color {
 
-    .select__button {
-
-        /* FIXME: maybe remove cascade? */
-        &.button_disabled {
-
-            &.button_checked {
-                background: rgba(255,255,255,0.1);
-                color: #fff;
-
-                .button__text {
-                    color: #fff;
-                    color: rgba(255,255,255,0.5)
-                }
-            }
-        }
-    }
-
     .select__tick {
         background-image: url(../__tick/select__tick_theme_alfa-on-color.svg);
     }
 
-    &.select_size_s .select__tick,
-    &.select_size_m .select__tick {
-        background-size: 11px;
+    &.select_focused,
+    &.select_focused-hard,
+    &.select_opened {
+
+        .select__button {
+            border-color: rgba(255, 255, 255, .9);
+            box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, .9);
+
+            background-color: rgba(0, 0, 0, .15);
+        }
+
+        &.select_hovered {
+
+            .select__button {
+                background: transparent;
+                box-shadow: none;
+                border-color: rgba(255, 255, 255, .9);
+            }
+
+        }
+
     }
 
-    &.select_size_l .select__tick,
-    &.select_size_xl .select__tick {
-        background-size: 16px;
-    }
 }

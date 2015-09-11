@@ -1,3 +1,9 @@
 .spec {
     padding-bottom: 30px;
 }
+
+.spec__title {
+    font-family: 'Roboto';
+    font-size: 20px;
+    margin-bottom: 10px;
+}

@@ -3,19 +3,12 @@
     margin-right: 14px;
 }
 
-.state__name {
+.state__title {
+    font-weight: 300;
     font-family: 'Roboto';
     font-size: 11px;
 
     opacity: .2;
 
     margin-bottom: 5px;
-}
-
-.state_theme_alfa-on-color {
-
-    .state__name {
-        color: #fff;
-    }
-
 }

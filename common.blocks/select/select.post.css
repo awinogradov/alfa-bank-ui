@@ -1,85 +1,52 @@
 .select {
-    max-width: 100%;
-
     display: inline-block;
-
     vertical-align: top;
 }
 
 .select__button {
-    width: 100%;
-
     text-align: left;
     vertical-align: top;
+}
 
-    padding: 0;
+.select_hovered .select__tick {
+    opacity: 1;
+}
 
-    /* FIXME: maybe remove cascade? */
-    .button__text {
-        display: block;
-
-        &:empty:before {
-            content: '\00a0';
-        }
+.select_size_s, .select_size_m {
+    .select__tick {
+        width: 30px;
+        background-size: 8px;
     }
+}
 
-    &.button_hovered {
-
-        .select__tick {
-            opacity: 1;
-        }
+.select_size_s {
+    .select__button {
+        padding: 8px 30px 8px 10px;
     }
+}
 
-    &.button_size_s {
-
-        .button__text {
-            font-size: 12px;
-            padding-right: 27px;
-            margin-left: 12px;
-        }
-
-        .select__tick {
-            width: 28px;
-        }
+.select_size_m {
+    .select__button {
+        padding: 10px 30px 10px 12px;
     }
+}
 
-    &.button_size_m {
-
-        .button__text {
-            font-size: 12px;
-            padding-right: 28px;
-            margin-left: 14px;
-        }
-
-        .select__tick {
-            width: 29px;
-        }
+.select_size_l, .select_size_xl {
+    .select__tick {
+        width: 34px;
+        background-size: 10px;
     }
+}
 
-    &.button_size_l {
-
-        .button__text {
-            font-size: 15px;
-            padding-right: 32px;
-            margin-left: 16px;
-        }
-
-        .select__tick {
-            width: 33px;
-        }
+.select_size_l {
+    .select__button {
+        padding: 12px 35px 12px 15px;
     }
+}
 
-    &.button_size_xl {
-
-        .button__text {
-            font-size: 25px;
-            padding-right: 38px;
-            margin-left: 18px;
-        }
-
-        .select__tick {
-            width: 39px;
-        }
+.select_size_xl {
+    .select__button {
+        padding: 16px 35px 16px 15px;
     }
 }
 
@@ -90,19 +57,13 @@
 
     height: 100%;
 
+    background-repeat: no-repeat;
     background-position: center;
 
     transition: all 0.1s ease-out;
-    opacity: 0.3;
+    opacity: .9;
 }
 
-.select_disabled {
-
-    .button_hovered .select__tick {
-        opacity: 0.3;
-    }
-}
-
-.select_opened .select__tick {
-    transform: rotate(-180deg);
+.select_disabled .select__tick {
+    opacity: .3;
 }

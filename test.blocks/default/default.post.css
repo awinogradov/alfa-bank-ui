@@ -1,12 +1,14 @@
 .default__mod {
-    padding: 20px;
+    padding: 20px 20px 40px;
+    border-radius: 4px;
 }
 
-/*.default__name {
+.default__title {
     font-family: 'Roboto';
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 300;
     margin-bottom: 20px;
-}*/
+}
 
 .default__mod_theme_alfa-on-white {
     background: #fff;
@@ -19,7 +21,11 @@
 
     background-attachment: fixed;
 
-    /*.default__name {
+    .default__title {
         color: #fff;
-    }*/
+    }
+
+    .original__title, .state__title {
+        color: #fff;
+    }
 }

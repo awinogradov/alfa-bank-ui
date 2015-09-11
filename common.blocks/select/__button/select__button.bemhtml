@@ -8,7 +8,9 @@ block('select').elem('button')(
                 size: mods.size,
                 theme: mods.theme,
                 view: mods.view,
+                hovered: mods.hovered,
                 focused: mods.focused,
+                'focused-hard': mods['focused-hard'],
                 disabled: mods.disabled,
                 checked: mods.mode !== 'radio' && !!this._checkedOptions.length
             },
