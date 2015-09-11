@@ -1,5 +1,5 @@
 modules.define('popup', [], function(provide, Popup) {
-    provide(Popup.decl({ modName: 'height-available', modVal: true }, {
+    provide(Popup.decl({ modName: 'height', modVal: 'available' }, {
         getDefaultParams: function() {
             return {
                 mainOffset: 0,
