@@ -107,52 +107,18 @@
         }
     }
 
-    &.button_checked,
-    &.button_hovered.button_checked {
-        background: #fff;
-
-        color: #000;
-    }
-
     &.button_disabled {
         border-color: transparent;
 
-        background: rgba(255, 255, 255, .05);
+        background: rgba(255, 255, 255, .08);
 
         .button__text {
             color: rgba(255, 255, 255, .3)
-        }
-
-        &.button_checked {
-            background: rgba(255, 255, 255, .3);
-
-            .button__text {
-                color: #000;
-            }
         }
     }
 }
 
 .control-group {
-
-    .button_theme_alfa-on-color {
-        border-width: 1px;
-        border-style: solid;
-
-        border-right-color: transparent;
-
-        &.button_hovered {
-            background: rgba(255, 255, 255, .2);
-
-            border-right-color: transparent;
-
-            &.button_checked {
-                background: #fff;
-                color: #000;
-            }
-        }
-
-    }
 
     .checkbox_hovered + .checkbox_theme_alfa-on-color,
     .radio_hovered + .radio_theme_alfa-on-color {

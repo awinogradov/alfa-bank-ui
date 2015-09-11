@@ -1,0 +1,9 @@
+.guide {
+    .app__title, .app__menu, .app__content {
+        box-sizing: border-box;
+        width: 100%;
+        margin: auto;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}

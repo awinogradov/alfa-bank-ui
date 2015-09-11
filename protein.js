@@ -25,6 +25,7 @@ protein.wrap(function (protein, content) {
                                 mods: { theme: 'alfa-on-white', size: 'm', horizontal: true },
                                 content: (function () {
                                     var modsArray = Object.keys(protein.component.mods);
+                                    modsArray.unshift('default');
                                     return modsArray.map(function (modName, i) {
                                         return {
                                             block: 'menu-item',
