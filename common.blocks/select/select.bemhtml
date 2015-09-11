@@ -1,0 +1,8 @@
+block('select')(
+    content()(function() {
+        return [
+            { elem: 'button' },
+            { elem: 'popup', directions: this.ctx.directions }
+        ];
+    })
+);

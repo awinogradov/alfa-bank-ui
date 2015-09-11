@@ -26,21 +26,21 @@ block('input').mod('has-autocomplete', true)(
                 applyNext(),
                 {
                     block: 'popup',
+                    mix: { block: this._input.block, elem: 'popup' },
                     mods: {
                         target: 'anchor',
                         theme: this._input.mods.theme,
-                        size: this._input.mods.size,
-                        view: 'dropdown'
+                        size: this._input.mods.size
                     },
                     directions: ['bottom-left', 'bottom-right'],
                     content: [
                         {
                             block: 'menu',
+                            mix: { block: this._input.block, elem: 'menu' },
                             mods: {
                                 mode: 'radio-check',
                                 theme: this._input.mods.theme,
-                                size: this._input.mods.size,
-                                view: 'dropdown'
+                                size: this._input.mods.size
                             },
                             content: this._input.options.map(mapItems)
                         }

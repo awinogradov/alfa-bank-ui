@@ -1,0 +1,11 @@
+block('select').elem('popup')(
+    content()(function () {
+        return {
+            block: 'popup',
+            mix: { block: this.block, elem: this.elem },
+            mods: { target: 'anchor', theme: this.mods.theme, autoclosable: true },
+            directions: this.ctx.directions || ['bottom-left', 'bottom-right', 'top-left', 'top-right'],
+            content: { block: this.block, mods: this.mods, elem: 'menu' }
+        };
+    })
+);

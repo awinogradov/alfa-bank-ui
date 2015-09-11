@@ -7,5 +7,5 @@ module.exports = {
     options: {
         icon: { icon: { block: 'icon', mods: { tool: 'search' } } },
     },
-    data: { text: 'Link' },
+    data: { text: 'Link' }
 };
