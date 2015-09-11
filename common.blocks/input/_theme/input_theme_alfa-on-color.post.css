@@ -63,7 +63,7 @@
     &.input_disabled {
         border-color: transparent;
 
-        background: rgba(255, 255, 255, .05);
+        background: rgba(255, 255, 255, .08);
 
         .input__box,
         .input__control {

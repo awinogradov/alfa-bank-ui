@@ -4,7 +4,7 @@
 .input_theme_alfa-on-white {
 
     background: rgba(255, 255, 255, .3);
-    color: #000;
+    color: rgba(0, 0, 0, .9);
 
     border-width: 1px;
     border-style: solid;
@@ -13,7 +13,7 @@
     transition: all 200ms ease;
 
     .input__control {
-        color: #000;
+        color: rgba(0, 0, 0, .9);
         background: transparent;
 
         &::-webkit-input-placeholder {
@@ -34,7 +34,7 @@
     }
 
     &.input_has-addon .input__addon {
-        color: #000;
+        color: rgba(0, 0, 0, .9);
 
         opacity: .6
     }
@@ -52,17 +52,13 @@
         }
     }
 
-    &.input_mode_result .input__inner {
-        color: #000;
-    }
-
     &.input_invalid {
         border-color: rgba(239, 49, 36, .85);
     }
 
     &.input_hovered,
     &.input_focused {
-        border-color: rgba(0, 0, 0, .4);
+        border-color: rgba(0, 0, 0, .9);
     }
 
     &.input_focused {
@@ -74,13 +70,13 @@
 
     &.input_focused.input_invalid,
     &.input_hovered.input_invalid {
-        border-color: rgba(252, 92, 94, 1);
+        border-color: rgba(239, 49, 36, 1);
     }
 
     &.input_disabled {
         border-color: transparent;
 
-        background: rgba(0, 0, 0, .05);
+        background: rgba(0, 0, 0, .08);
 
         .input__box,
         .input__control {

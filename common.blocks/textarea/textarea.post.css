@@ -1,5 +1,6 @@
 .textarea {
     font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 
     box-sizing: border-box;
 
@@ -10,9 +11,10 @@
     margin: 0;
 
     vertical-align: top;
-    line-height: inherit;
 
-    border-radius: 6px;
+    border-radius: 4px;
+
+    min-height: 5em;
 
     outline:    none;
     background: none;
@@ -28,18 +30,6 @@
         opacity: 1;
     }
 
-    /* Decorative element (inner background) */
-    &:before {
-        position: absolute;
-        top:      1px;
-        right:    1px;
-        bottom:   1px;
-        left:     1px;
-
-        content: '';
-
-        border-radius: 5px;
-    }
 }
 
 .textarea_focused {
@@ -50,32 +40,24 @@
     cursor: default;
 
     resize: none;
-
-    &:before {
-        display: none;
-    }
 }
 
 .textarea_size_s {
-    font-size: 12px;
-    padding: 4px 13px;
-    min-height: 2em;
+    font-size: 13px;
+    padding: 8px 10px;
 }
 
 .textarea_size_m {
-    font-size: 12px;
-    padding: 4px 15px;
-    min-height: 4em;
+    font-size: 16px;
+    padding: 10px 12px;
 }
 
 .textarea_size_l {
-    font-size: 15px;
-    padding: 4px 17px;
-    min-height: 6em;
+    font-size: 18px;
+    padding: 12px 15px;
 }
 
 .textarea_size_xl {
-    font-size: 25px;
-    padding: 4px 19px;
-    min-height: 8em;
+    font-size: 20px;
+    padding: 14px 15px;
 }
