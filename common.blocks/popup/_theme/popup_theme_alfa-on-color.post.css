@@ -1,13 +1,7 @@
 .popup_theme_alfa-on-color {
-    color: #fff;
+    color: rgba(255, 255, 255, .9);
 
-    background-color: #000;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, .9);
 
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
-                0 10px 20px -5px rgba(0, 0, 0, 0.4);
-
-    &.popup_invalid {
-        background-color: #fc5c5e;
-    }
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2);
 }

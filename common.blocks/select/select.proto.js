@@ -16,6 +16,7 @@ module.exports = {
             { val: 1, text: 'Доклад' },
             { val: 2, text: 'Мастер-класс' },
             { val: 3, text: 'Круглый стол' }
-        ]
+        ],
+        directions: ['bottom-left']
     }
 };

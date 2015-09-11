@@ -1,6 +1,6 @@
 modules.define('spec', ['spec__utils', 'popup'], function(provide, utils) {
 
-    describe('popup_view_column', function() {
+    describe('popup_height-available', function() {
 
         it('should init', function() {
             var block, anchor;
@@ -8,7 +8,7 @@ modules.define('spec', ['spec__utils', 'popup'], function(provide, utils) {
             block = utils.buildBlock('popup', {
                 block: 'popup',
                 mods: {
-                    view: 'column',
+                    'height-available': true,
                     target: 'anchor'
                 },
                 content: 'some content'

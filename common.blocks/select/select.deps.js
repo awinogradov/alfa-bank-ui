@@ -1,6 +1,6 @@
 [{
     shouldDeps: [
-        { block: 'menu', mods: { view: 'dropdown' } },
+        { elem: 'popup' },
         { block: 'icon' }
     ]
 }];
