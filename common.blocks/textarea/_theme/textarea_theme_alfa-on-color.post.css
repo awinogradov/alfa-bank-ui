@@ -1,28 +1,35 @@
 .textarea_theme_alfa-on-color {
     background: transparent;
 
+    color: rgba(255, 255, 255, .9);
+
+    border: 1px solid rgba(255, 255, 255, .4);
+
     transition: all 200ms ease;
 
-    color: #fff;
+    &.textarea_hovered,
+    &.textarea_focused {
+        border-color: rgba(255, 255, 255, .9);
+    }
 
-    border: 1px solid rgba(255,255,255,0.5);
+    &.textarea_focused {
+        box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, .9);
+
+        background-color: rgba(0, 0, 0, .15);
+    }
+
+    &.textarea_invalid {
+        border-color: rgba(239, 49, 36, .85);
+
+        &.textarea_focused,
+        &.textarea_hovered {
+            border-color: rgba(239, 49, 36, 1);
+        }
+    }
 
     &.textarea_disabled {
         border-color: transparent;
         background: rgba(255,255,255,0.1);
         color: rgba(255,255,255,0.5);
-    }
-
-    &.textarea_hovered,
-    &.textarea_focused {
-        border-color: rgba(255,255,255,1);
-    }
-
-    &.textarea_focused {
-        background-color: rgba(0,0,0,.3);
-    }
-
-    &.textarea_invalid {
-        border-color: #fc5c5e;
     }
 }
