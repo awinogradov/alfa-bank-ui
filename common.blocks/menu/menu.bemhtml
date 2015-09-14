@@ -1,11 +1,7 @@
 block('menu')(
     def()(function() {
         applyNext({
-            _alfaMods: {
-                horizontal: this.mods.horizontal,
-                theme: this.mods.theme,
-                size: this.mods.size
-            }
+            _alfaMods: this.mods
         });
     })
 );

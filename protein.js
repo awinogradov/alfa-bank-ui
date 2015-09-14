@@ -22,25 +22,16 @@ protein.wrap(function (protein, content) {
                         content: [
                             {
                                 block: 'menu',
-                                mods: { theme: 'alfa-on-white', size: 'm', horizontal: true },
+                                mods: { theme: 'alfa-on-white', size: 'm', view: 'horizontal' },
                                 content: (function () {
                                     var modsArray = Object.keys(protein.component.mods);
                                     modsArray.unshift('default');
                                     return modsArray.map(function (modName, i) {
                                         return {
                                             block: 'menu-item',
-                                            mods: {
-                                                theme: 'alfa-on-white',
-                                            },
-                                            content: {
-                                                block: 'link',
-                                                mods: {
-                                                    theme: 'alfa-on-white',
-                                                    view: 'pseudo'
-                                                },
-                                                url: '#' + modsArray[i],
-                                                text: modName
-                                            }
+                                            mods: { type: 'link', view: 'pseudo' },
+                                            url: '#' + modsArray[i],
+                                            content: modName
                                         };
                                     });
                                 })()

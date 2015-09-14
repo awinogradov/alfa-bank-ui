@@ -35,5 +35,6 @@
 
 .popup_visible {
     visibility: visible;
+    overflow: auto;
     margin: 2px 0;
 }
