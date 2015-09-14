@@ -1,0 +1,44 @@
+.menu_theme_alfa-on-color {
+
+    .menu-item {
+        color: rgba(255, 255, 255, .9);
+    }
+
+    .menu-item_hovered {
+        background-color: rgba(255, 255, 255, 0.1);
+
+        &.menu-item_type_link, &.menu-item_type_dropdown {
+            background-color: transparent;
+        }
+    }
+
+    .menu-item_disabled {
+        color: rgba(255, 255, 255, .3);
+    }
+
+    &.menu_mode_check {
+        .menu-item_checked:before {
+            background-image: url(../_mode/menu_mode_check.menu_theme_alfa-on-color.svg);
+        }
+    }
+
+    &.menu_mode_radio, &.menu_mode_radio-check {
+        .menu-item_checked:before {
+            background-color: rgba(255, 255, 255, .9);
+        }
+    }
+
+    &.menu_mode_check, &.menu_mode_radio, &.menu_mode_radio-check {
+        .menu-item_disabled {
+            &.menu-item_checked:before {
+                opacity: .4;
+            }
+        }
+    }
+
+    .menu__group-title {
+        font-weight: 400;
+        color: rgba(255, 255, 255, .7);
+    }
+
+}

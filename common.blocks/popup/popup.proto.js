@@ -4,5 +4,5 @@ module.exports = {
     data: {
         content: 'Popup content <br> with two strings',
         attrs: { style: 'min-height: 50px;' }
-     }
+    }
 };

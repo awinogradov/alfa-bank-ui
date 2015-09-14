@@ -1,4 +1,4 @@
-block('menu-item').mod('type', 'link').match(this._alfaMods)(
+block('menu-item').mod('type', 'link')(
     content()(function() {
         return [{
             block: 'link',
@@ -6,7 +6,7 @@ block('menu-item').mod('type', 'link').match(this._alfaMods)(
             mods: {
                 theme: this.mods.theme || this._alfaMods.theme,
                 size: this.mods.size || this._alfaMods.size,
-                pseudo: this.mods.pseudo
+                view: this.mods.view
             },
             url: this.ctx.url,
             target: this.ctx.target,

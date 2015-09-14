@@ -80,18 +80,18 @@
 }
 
 .button_size_s {
-    font-size: 12px;
+    font-size: 13px;
     height: 30px;
-    line-height: 12px;
+    line-height: 13px;
 
     padding: 8px 15px;
 }
 
 .button_size_m {
-    font-size: 15px;
+    font-size: 16px;
     height: 40px;
 
-    line-height: 15px;
+    line-height: 16px;
 
     padding: 10px 20px;
 }

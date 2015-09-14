@@ -1,4 +1,4 @@
-block('menu-item').mod('type', 'dropdown').match(this._alfaMods)(
+block('menu-item').mod('type', 'dropdown')(
     content()(function() {
         return [{
             block: 'dropdown',
@@ -14,15 +14,16 @@ block('menu-item').mod('type', 'dropdown').match(this._alfaMods)(
                 mods: {
                     theme: this.mods.theme || this._alfaMods.theme,
                     size: this.mods.size || this._alfaMods.size,
-                    pseudo: true
+                    view: this.mods.view
                 },
                 text: this.ctx.content
             },
             popup: {
                 block: 'popup',
+                directions: ['top-left'],
                 mods: {
                     theme: this.mods.theme || this._alfaMods.theme,
-                    view: 'column'
+                    height: 'available'
                 },
                 content: this.ctx.popup
             }

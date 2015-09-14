@@ -43,7 +43,7 @@
         }
 
         &.checkbox_checked .checkbox__box:after {
-            background-image: url(../__box/checkbox__box_black.svg);
+            background-image: url(../__box/_disabled/checkbox__box_disabled.svg);
             opacity: 0.15;
         }
     }

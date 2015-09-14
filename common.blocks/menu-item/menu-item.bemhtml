@@ -1,17 +1,5 @@
 block('menu-item')(
     js()(function() {
         return { val: this.ctx.val, data: this.ctx.data };
-    }),
-    match(this._alfaMods).def()(function() {
-        var mods = this.mods;
-        mods.horizontal = mods.horizontal || this._alfaMods.horizontal;
-        mods.theme = mods.theme || this._alfaMods.theme;
-        mods.size = mods.size || this._alfaMods.size;
-        applyNext({
-            _alfaMods: {
-                theme: this.mods.theme,
-                size: this.mods.size
-            }
-        });
     })
 );
