@@ -27,7 +27,7 @@
         color: rgba(0, 0, 0, .9);
     }
 
-    &.button_view_action {
+    &.button_view_action, &.button_checked {
         background: rgba(0, 0, 0, .15);
         border-color: transparent;
         color: rgba(0, 0, 0, .9);
@@ -112,6 +112,14 @@
         }
     }
 
+    &.button_checked {
+        border-color: rgba(0, 0, 0, .3);
+
+        &.button_hovered {
+            border-color: rgba(0, 0, 0, .9);
+        }
+    }
+
     &.button_disabled {
         border-color: transparent;
         background: rgba(0, 0, 0, .08);
@@ -122,32 +130,67 @@
     }
 }
 
-.control-group
-{
-    .checkbox_hovered + .checkbox_theme_alfa-on-white,
-    .radio_hovered + .radio_theme_alfa-on-white {
+.control-group {
 
+    .button_theme_alfa-on-white {
+        &.button_checked {
+            border-right-color: transparent;
+        }
+
+        &.button_hovered {
+            border-right-color: rgba(0, 0, 0, .9);
+        }
+
+        &.button_disabled {
+            border-color: rgba(0, 0, 0, .08);
+            border-right-color: transparent;
+        }
+    }
+
+    .checkbox_hovered + .checkbox,
+    .radio_hovered + .radio {
         .button_theme_alfa-on-white {
-            border-left-color: rgba(0, 0, 0, .4);
+            border-left-color: transparent;
+        }
+    }
+
+    .checkbox_checked + .checkbox_disabled,
+    .radio_checked + .radio_disabled {
+        .button_theme_alfa-on-white.button_disabled {
+            border-left-color: rgba(0, 0, 0, .3);
+        }
+    }
+
+    .checkbox_checked.checkbox_disabled + .checkbox_disabled,
+    .radio_checked.radio_disabled + .radio_disabled {
+        .button_theme_alfa-on-white.button_disabled {
+            border-left-color: rgba(0, 0, 0, .15);
+        }
+    }
+
+    .checkbox_disabled + .checkbox_disabled,
+    .radio_disabled + .radio_disabled {
+        .button_theme_alfa-on-white.button_disabled {
+            border-left-color: rgba(0, 0, 0, .05);
+        }
+    }
+
+    .checkbox_hovered:last-child + .checkbox {
+        .button_theme_alfa-on-white {
+            border-right-color: rgba(0, 0, 0, .3);
         }
     }
 
     > :last-child {
-
         .button_theme_alfa-on-white {
-            border-right-color: #ccc;
+            border-right-color: rgba(0, 0, 0, .3);
 
             &.button_hovered {
-                border-right-color: rgba(0, 0, 0, .4);
+                border-right-color: rgba(0, 0, 0, .9);
             }
 
-            &.button_checked,
             &.button_disabled {
                 border-right-color: transparent;
-
-                &.button_hovered {
-                    border-right-color: rgba(0, 0, 0, .4);
-                }
             }
         }
     }
