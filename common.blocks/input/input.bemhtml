@@ -1,0 +1,5 @@
+block('input').def()(function() {
+    var ctx = this.ctx;
+    if (ctx.addon) ctx.mods['has-addon'] = true;
+    return applyCtx(ctx);
+});

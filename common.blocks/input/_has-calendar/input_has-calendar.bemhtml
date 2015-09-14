@@ -17,15 +17,6 @@ block('input')(
                     offDays: ctx.offDays
                 };
 
-            ctx.addon = {
-                block: 'icon',
-                mods: {
-                    theme: mods.theme,
-                    size: mods.size,
-                    tool: 'calendar'
-                }
-            };
-
             mods['has-mask'] = true;
             ctx.js = ctx.js || {};
             ctx.js.mask = '{{99}}.{{99}}.{{9999}}';

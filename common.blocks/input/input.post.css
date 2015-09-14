@@ -128,6 +128,10 @@
 
 .input_mode_link {
     padding-left: 0;
+
+    .input__trigger {
+        outline: none;
+    }
 }
 
 .input_hidden {
@@ -170,13 +174,12 @@
 
     &.input_mode_link {
         .input__box {
-            height: 23px;
-            padding-left: 13px;
-            margin-right: 13px;
+            height: 28px;
+            padding: 0 10px;
         }
 
         .input__trigger {
-            line-height: 23px;
+            line-height: 32px;
         }
     }
 }
@@ -217,13 +220,12 @@
 
     &.input_mode_link {
         .input__box {
-            height: 33px;
-            padding-left: 15px;
-            margin-right: 15px;
+            height: 38px;
+            padding: 0 12px;
         }
 
         .input__trigger {
-            line-height: 33px;
+            line-height: 40px;
         }
     }
 }
@@ -264,13 +266,12 @@
 
     &.input_mode_link {
         .input__box {
-            height: 43px;
-            padding-left: 17px;
-            margin-right: 17px;
+            height: 48px;
+            padding: 0 15px;
         }
 
         .input__trigger {
-            line-height: 43px;
+            line-height: 48px;
         }
     }
 }
@@ -311,13 +312,12 @@
 
     &.input_mode_link {
         .input__box {
-            height: 53px;
-            padding-left: 19px;
-            margin-right: 19px;
+            height: 58px;
+            padding: 0 15px;
         }
 
         .input__trigger {
-            line-height: 53px;
+            line-height: 56px;
         }
     }
 }
