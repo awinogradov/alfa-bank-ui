@@ -1,0 +1,12 @@
+block('input').mod('has-addon', true).def()(function() {
+    var mods = this.ctx.mods;
+
+    this.ctx.addon.block === 'icon' && (this.ctx.addon.mods = this.extend(
+        {
+            theme: mods.theme,
+            size: mods.size
+        },
+        this.ctx.addon.mods
+    ));
+    applyNext();
+});
