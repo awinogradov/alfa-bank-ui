@@ -47,11 +47,4 @@
             opacity: 0.15;
         }
     }
-
-    &.checkbox_type_button {
-
-        .button_checked {
-            background: #ccc;
-        }
-    }
 }

@@ -46,13 +46,7 @@
 
         &.radio_checked .radio__box:after {
             color: rgba(0, 0, 0, .4);
-        }
-    }
-
-    &.radio_type_button {
-
-        .button_checked {
-            background: #ccc;
+            background: rgba(0, 0, 0, .2);
         }
     }
 }

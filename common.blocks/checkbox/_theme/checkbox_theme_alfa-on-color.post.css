@@ -24,7 +24,6 @@
 
     &.checkbox_focused,
     &.checkbox_hovered {
-
         .checkbox__box {
             border-color: rgba(255, 255, 255, .9);
         }
@@ -44,13 +43,6 @@
 
         &.checkbox_checked .checkbox__box:after {
             opacity: .2;
-        }
-    }
-
-    &.checkbox_type_button {
-
-        .button_checked {
-            background: #ccc;
         }
     }
 }

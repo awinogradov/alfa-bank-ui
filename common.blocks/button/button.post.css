@@ -117,6 +117,7 @@
 {
     .button {
         border-radius: 0;
+        border-right-color: transparent;
     }
 
     > .button:first-child,
