@@ -1,8 +1,18 @@
-module.exports = {
-    default: { size: 'm', visible: true, theme: ['alfa-on-color', 'alfa-on-white'] },
-    size: ['s', 'm', 'l', 'xl'],
-    data: {
-        content: 'Popup content <br> with two strings',
-        attrs: { style: 'min-height: 50px;' }
+import { Component } from 'protein-kit';
+
+export default class Popup extends Component {
+    types() {
+        return {
+            size: ['s', 'm', 'l', 'xl']
+        };
     }
-};
+
+    default() {
+        return {
+            data: {
+                content: 'Popup content <br> with two strings',
+                attrs: { style: 'min-height: 50px;' }
+            }
+        };
+    }
+}

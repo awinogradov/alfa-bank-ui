@@ -16,6 +16,8 @@ libs
 !*.bundles/*/*.bemjson.js
 *.bundles/*/_*.bemjson.js
 
+.protein
+
 *.blocks/*/*.examples
 
 /coverage

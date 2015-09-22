@@ -1,11 +1,13 @@
-var protein = require('protein-kit');
+var protein = require('protein-kit').protein;
 
-protein.wrap(function (protein, content) {
+protein.watch('./common.blocks/**');
+
+protein.wrapper(function (component, json) {
     return {
         block: 'page',
-        title: protein.component.name,
-        head: [{ elem: 'css', url: protein.component.name + '.min.css' }],
-        scripts: [{ elem: 'js', url: protein.component.name + '.min.js' }],
+        title: component.name,
+        head: [{ elem: 'css', url: component.name + '.min.css' }],
+        scripts: [{ elem: 'js', url: component.name + '.min.js' }],
         content: [
             {
                 block: 'app',
@@ -14,7 +16,7 @@ protein.wrap(function (protein, content) {
                     {
                         elem: 'title',
                         content: [
-                            { block: 'heading', content: protein.component.name },
+                            { block: 'heading', content: component.name },
                         ]
                     },
                     {
@@ -24,13 +26,11 @@ protein.wrap(function (protein, content) {
                                 block: 'menu',
                                 mods: { theme: 'alfa-on-white', size: 'm', view: 'horizontal' },
                                 content: (function () {
-                                    var modsArray = Object.keys(protein.component.mods);
-                                    modsArray.unshift('default');
-                                    return modsArray.map(function (modName, i) {
+                                    return component.getTypesKeys().map(function (modName, i) {
                                         return {
                                             block: 'menu-item',
                                             mods: { type: 'link', view: 'pseudo' },
-                                            url: '#' + modsArray[i],
+                                            url: '#' + modName,
                                             content: modName
                                         };
                                     });
@@ -40,7 +40,7 @@ protein.wrap(function (protein, content) {
                     },
                     {
                         elem: 'content',
-                        content: content
+                        content: json
                     }
                 ]
             }
@@ -48,4 +48,6 @@ protein.wrap(function (protein, content) {
     };
 });
 
-protein.make();
+protein.default({
+    types: { size: 'm', theme: ['alfa-on-white', 'alfa-on-color'] },
+});

@@ -1,7 +1,21 @@
-module.exports = {
-    default: { size: 'm', theme: ['alfa-on-white', 'alfa-on-color'] },
-    states: ['hovered', 'checked', ['hovered', 'checked'], 'focused', 'disabled', ['disabled', 'checked']],
-    size: ['m', 'l'],
-    type: ['button'],
-    data: { text: 'Checkbox' }
-};
+import { Component } from 'protein-kit';
+
+export default class Checkbox extends Component {
+    types() {
+        return {
+            size: ['m', 'l'],
+            type: [{
+                'button': {
+                    types: { size: ['s', 'm', 'l', 'xl'] }
+                }
+            }]
+        };
+    }
+
+    default() {
+        return {
+            states: ['hovered', 'checked', ['hovered', 'checked'], 'focused', 'disabled', ['disabled', 'checked']],
+            data: { text: 'Checkbox' }
+        };
+    }
+}

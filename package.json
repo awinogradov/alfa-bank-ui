@@ -5,6 +5,7 @@
   "description": "NYC Public Library of UI components",
   "version": "4.0.2",
   "dependencies": {
+    "babel": "^5.8.23",
     "bem-environ": "1.4.0",
     "lodash": "^3.9.3",
     "vow": "^0.4.9",

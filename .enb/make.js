@@ -11,13 +11,11 @@ module.exports = function(project) {
         project.includeConfig(path.join(__dirname, 'tasks', name + '.js'));
     });
 
-    // build `common.bundles/index` page
-    // project.node('common.bundles/index', function (node) {
-    //     // provide BEMJSON file
-    //     node.addTech([techs.files.provide, { target : '?.bemjson.js' }]);
-    //
-    //     configurePage(node, {
-    //         platform : 'common'
-    //     });
-    // });
+    project.nodes('.protein/*', function (node) {
+        node.addTech([techs.files.provide, { target : '?.bemjson.js' }]);
+
+        configurePage(node, {
+            platform: 'common'
+        });
+    });
 };
