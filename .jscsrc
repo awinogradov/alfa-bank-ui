@@ -5,12 +5,16 @@
     "excludeFiles": [
         ".git/**",
         ".enb/tmp/**",
+        ".protein/**",
         "node_modules/**",
         "libs/**",
         "coverage/**",
+        "dist/**",
         "*.bundles/**",
         "*.examples/**",
         "*.specs/**",
+        "*.tmpl-specs/**",
+        "*.doc-examples/**",
         "**/*.bemdecl.js"
     ]
 }

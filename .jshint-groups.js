@@ -20,6 +20,13 @@ module.exports = {
     },
 
     groups: {
+        protojs: {
+            options: {
+                esnext: true
+            },
+            includes: ['*.blocks/**/*.proto.js']
+        },
+
         browserjs: {
             options: {
                 browser: true,
@@ -28,6 +35,7 @@ module.exports = {
             includes: ['*.blocks/**/*.js'],
             excludes: [
                 '*.blocks/**/*node.js',
+                '*.blocks/**/*.proto.js',
                 '**/*.i18n/*.js',
                 '**/*.bem/*.js',
                 '**/_*.js',

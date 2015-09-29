@@ -39,13 +39,13 @@ export default class Input extends Component {
                     ]
                 }
             },
-            'has-filter': {
-                data: {
-                    mods: {
-                        'has-autocomplete': true
-                    }
-                }
-            },
+            // 'has-filter': {
+            //     data: {
+            //         mods: {
+            //             'has-autocomplete': true
+            //         }
+            //     }
+            // },
             'has-addon': {
                 data: {
                     addon: { block: 'icon', mods: { tool: 'help' } }

@@ -11,8 +11,8 @@ module.exports = function(project) {
         project.includeConfig(path.join(__dirname, 'tasks', name + '.js'));
     });
 
-    project.nodes('.protein/*', function (node) {
-        node.addTech([techs.files.provide, { target : '?.bemjson.js' }]);
+    project.nodes('.protein/*', function(node) {
+        node.addTech([techs.files.provide, { target: '?.bemjson.js' }]);
 
         configurePage(node, {
             platform: 'common'
