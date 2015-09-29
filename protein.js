@@ -2,7 +2,7 @@ var protein = require('protein-kit').protein;
 
 protein.watch('./common.blocks/**');
 
-protein.wrapper(function (component, json) {
+protein.wrapper(function(component, json) {
     return {
         block: 'page',
         title: component.name,
@@ -25,8 +25,8 @@ protein.wrapper(function (component, json) {
                             {
                                 block: 'menu',
                                 mods: { theme: 'alfa-on-white', size: 'm', view: 'horizontal' },
-                                content: (function () {
-                                    return component.getTypesKeys().map(function (modName, i) {
+                                content: (function() {
+                                    return component.getTypesKeys().map(function(modName, i) {
                                         return {
                                             block: 'menu-item',
                                             mods: { type: 'link', view: 'pseudo' },

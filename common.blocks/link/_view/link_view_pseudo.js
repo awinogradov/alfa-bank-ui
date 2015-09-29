@@ -25,7 +25,7 @@ provide(Link.decl({ modName: 'view', modVal: 'pseudo' }, /** @lends link.prototy
         }
     },
 
-    _onPointerClick: function(e) {
+    _onPointerClick: function() {
         this.__base.apply(this, arguments);
     },
 

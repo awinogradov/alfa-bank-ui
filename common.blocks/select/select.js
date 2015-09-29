@@ -6,10 +6,10 @@ provide(Select.decl({
 
     onSetMod: {
         'hovered': {
-            'true': function () {
+            'true': function() {
                 this.bindTo('mouseleave', this._onButtonMouseLeave);
             },
-            '': function () {
+            '': function() {
                 this.unbindFrom('mouseleave', this._onButtonMouseLeave);
             }
         }
@@ -47,16 +47,16 @@ provide(Select.decl({
         this._menu.emit('change');
     },
 
-    _onButtonMouseOver: function () {
+    _onButtonMouseOver: function() {
         this.setMod('hovered');
     },
 
-    _onButtonMouseLeave: function () {
+    _onButtonMouseLeave: function() {
         this.delMod('hovered');
     }
 
 }, {
-    live : function() {
+    live: function() {
         return this
             .liveBindTo('button', 'mouseover', this.prototype._onButtonMouseOver)
             .__base.apply(this, arguments);

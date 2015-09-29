@@ -1,5 +1,4 @@
 var path = require('path'),
-    naming = require('bem-naming'),
     config = require('../config'),
     configurePage = require('../helpers/page'),
     PLATFORMS = config.platforms;
