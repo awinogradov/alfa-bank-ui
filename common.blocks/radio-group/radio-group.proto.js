@@ -4,7 +4,12 @@ export default class RadioGroup extends Component {
     types() {
         return {
             size: ['m', 'l'],
-            type: ['button', 'line']
+            type: [
+                { 'button': {
+                    types: { view: ['action', 'extra'] }
+                } },
+                'line'
+            ]
         };
     }
 
@@ -24,7 +29,7 @@ export default class RadioGroup extends Component {
                         val: 2
                     },
                     {
-                        text: 'Checked',
+                        text: 'Default',
                         name: 'radio3',
                         val: 3
                     },
@@ -45,7 +50,7 @@ export default class RadioGroup extends Component {
                         val: 6
                     },
                     {
-                        text: 'Checked',
+                        text: 'Default',
                         name: 'radio7',
                         val: 7
                     },
