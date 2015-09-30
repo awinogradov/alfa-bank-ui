@@ -8,6 +8,10 @@
     vertical-align: top;
 }
 
+.select__popup {
+    padding: 0;
+}
+
 .select_hovered .select__tick {
     opacity: 1;
 }

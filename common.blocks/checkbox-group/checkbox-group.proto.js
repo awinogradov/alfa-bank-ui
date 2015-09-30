@@ -4,15 +4,19 @@ export default class CheckboxGroup extends Component {
     types() {
         return {
             size: ['m', 'l'],
-            type: ['button', 'line']
+            type: [
+                { 'button': {
+                    types: { view: ['action', 'extra'] }
+                } },
+                'line'
+            ]
         };
     }
 
     default() {
         return {
-            states: ['hovered', 'checked', ['hovered', 'checked'], 'focused', 'disabled', ['disabled', 'checked']],
             data: {
-                val: [2, 3],
+                val: [2, 3, 7],
                 options: [
                     {
                         text: 'Default',
@@ -33,6 +37,28 @@ export default class CheckboxGroup extends Component {
                         text: 'Default',
                         name: 'checkbox4',
                         val: 4
+                    },
+                    {
+                        text: 'Disabled',
+                        name: 'checkbox5',
+                        disabled: true,
+                        val: 5
+                    },
+                    {
+                        text: 'Default',
+                        name: 'checkbox6',
+                        val: 6
+                    },
+                    {
+                        text: 'Checked',
+                        name: 'checkbox7',
+                        val: 7
+                    },
+                    {
+                        text: 'Disabled',
+                        name: 'checkbox8',
+                        // disabled: true,
+                        val: 8
                     }
                 ]
             }

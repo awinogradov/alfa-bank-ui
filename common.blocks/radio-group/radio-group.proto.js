@@ -10,7 +10,6 @@ export default class RadioGroup extends Component {
 
     default() {
         return {
-            states: ['hovered', 'checked', ['hovered', 'checked'], 'focused', 'disabled', ['disabled', 'checked']],
             data: {
                 val: 2,
                 options: [
@@ -32,8 +31,29 @@ export default class RadioGroup extends Component {
                     {
                         text: 'Default',
                         name: 'radio4',
-                        val: 4,
-                        disabled: true
+                        val: 4
+                    },
+                    {
+                        text: 'Disabled',
+                        name: 'radio5',
+                        disabled: true,
+                        val: 5
+                    },
+                    {
+                        text: 'Default',
+                        name: 'radio6',
+                        val: 6
+                    },
+                    {
+                        text: 'Checked',
+                        name: 'radio7',
+                        val: 7
+                    },
+                    {
+                        text: 'Disabled',
+                        name: 'radio8',
+                        disabled: true,
+                        val: 8
                     }
                 ]
             }
