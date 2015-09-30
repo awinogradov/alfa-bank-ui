@@ -1,53 +1,50 @@
-var protein = require('protein-kit').protein;
+import { Protein } from 'protein-kit';
 
-protein.watch('./common.blocks/**');
+export default class UI extends Protein {
+    watch() {
+        return './common.blocks/**';
+    }
 
-protein.wrapper(function (component, json) {
-    return {
-        block: 'page',
-        title: component.name,
-        head: [{ elem: 'css', url: component.name + '.min.css' }],
-        scripts: [{ elem: 'js', url: component.name + '.min.js' }],
-        content: [
-            {
+    wrapper() {
+        return function (component, json) {
+            let menu = component.getTypesKeys().map((modName, i) => {
+                return {
+                    block: 'menu-item',
+                    mods: { type: 'link', view: 'pseudo' },
+                    url: '#' + modName,
+                    content: modName
+                };
+            });
+
+            return {
                 block: 'app',
                 mix: { block: 'guide' },
                 content: [
                     {
                         elem: 'title',
-                        content: [
-                            { block: 'heading', content: component.name },
-                        ]
+                        content: { block: 'heading', content: component.name }
                     },
                     {
                         elem: 'menu',
-                        content: [
-                            {
-                                block: 'menu',
-                                mods: { theme: 'alfa-on-white', size: 'm', view: 'horizontal' },
-                                content: (function () {
-                                    return component.getTypesKeys().map(function (modName, i) {
-                                        return {
-                                            block: 'menu-item',
-                                            mods: { type: 'link', view: 'pseudo' },
-                                            url: '#' + modName,
-                                            content: modName
-                                        };
-                                    });
-                                })()
-                            }
-                        ]
+                        content: {
+                            block: 'menu',
+                            mods: { theme: 'alfa-on-white', size: 'm', view: 'horizontal' },
+                            content: menu
+                        }
                     },
-                    {
-                        elem: 'content',
-                        content: json
-                    }
+                    { elem: 'content', content: json }
                 ]
-            }
-        ]
-    };
-});
+            };
+        };
+    }
 
-protein.default({
-    types: { size: 'm', theme: ['alfa-on-white', 'alfa-on-color'] },
-});
+    // render() {
+    //     return require('protein-kit/lib/modules/protein-bemhtml');
+    // }
+
+    default() {
+        return {
+            types: { size: 'm', theme: ['alfa-on-white', 'alfa-on-color'] }
+        };
+    }
+}
