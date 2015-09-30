@@ -49,7 +49,7 @@
   "scripts": {
     "start": "magic server",
     "make": "magic make && npm run dist",
-    "protein": "node protein.js",
+    "protein": "protein preview",
     "build": "magic make",
     "deps": "bower i",
     "test": "npm run lint && npm run build && npm run specs",
