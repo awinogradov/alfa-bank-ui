@@ -6,10 +6,10 @@
     }
 
     &.link_hovered {
-        color: rgba(239, 49, 36, 1);
+        color: rgba(178, 12, 0, 1);
 
         .link__text {
-            border-color: rgba(239, 49, 36, 0.4);
+            border-color: rgba(178, 12, 0, .4);
         }
     }
 

@@ -26,7 +26,7 @@
         background: rgba(0, 0, 0, .1);
     }
 
-    &.button_view_action, &.button_checked {
+    &.button_view_action {
         color: rgba(255, 255, 255, .9);
         border-color: transparent;
         background: rgba(255, 255, 255, .2);
@@ -107,14 +107,6 @@
         }
     }
 
-    &.button_checked {
-        border-color: rgba(255, 255, 255, .4);
-
-        &.button_hovered {
-            border-color: rgba(255, 255, 255, .9);
-        }
-    }
-
     &.button_disabled {
         border-color: transparent;
         background: rgba(255, 255, 255, .08);
@@ -128,57 +120,103 @@
 .control-group {
 
     .button_theme_alfa-on-color {
-        &.button_checked {
-            border-right-color: transparent;
+        &.button_hovered {
+            border-color: rgba(255, 255, 255, .9);
         }
 
-        &.button_hovered {
-            border-right-color: rgba(255, 255, 255, .9);
+        &.button_checked {
+            border-right-color: rgba(255, 255, 255, .4);
         }
 
         &.button_disabled {
-            border-color: rgba(255, 255, 255, .1);
+            border-color: rgba(255, 255, 255, .3);
             border-right-color: transparent;
         }
     }
 
+    .checkbox_view_action,
+    .radio_view_action {
+        .button_theme_alfa-on-color {
+            &.button_checked {
+                color: rgba(255, 255, 255, .9);
+                background: rgba(255, 255, 255, .2);
+
+                &.button_hovered {
+                    background: rgba(255, 255, 255, .3);
+                    border-color: rgba(255, 255, 255, .9);
+                }
+            }
+        }
+    }
+
+    .checkbox_view_extra,
+    .radio_view_extra {
+        .button_theme_alfa-on-color {
+            &.button_checked {
+                color: rgba(255, 255, 255, 1);
+                background: rgba(178, 12, 0, .85);
+
+                &.button_hovered {
+                    background: rgba(178, 12, 0, 1);
+                    border-color: rgba(178, 12, 0, 1);
+                }
+            }
+        }
+    }
+
+    .checkbox_checked + .checkbox,
+    .radio_checked + .radio {
+        .button_theme_alfa-on-color {
+            border-left-color: transparent;
+
+            &.button_hovered {
+                border-left-color: rgba(255, 255, 255, .9);
+            }
+        }
+    }
+
     .checkbox_hovered + .checkbox,
-    .radio_hovered + .radio {
+    .radio_hovered + .radio,
+    .checkbox_hovered + .checkbox_checked,
+    .radio_hovered + .radio_checked {
         .button_theme_alfa-on-color {
             border-left-color: transparent;
         }
     }
 
+    .checkbox_hovered + .checkbox_disabled,
+    .radio_hovered + .radio_disabled,
     .checkbox_checked + .checkbox_disabled,
     .radio_checked + .radio_disabled {
         .button_theme_alfa-on-color.button_disabled {
-            border-left-color: rgba(255, 255, 255, .4);
+            border-left-color: transparent;
+        }
+    }
+
+    .checkbox_checked.checkbox_disabled + .checkbox_disabled,
+    .radio_checked.radio_disabled + .radio_disabled {
+        .button_theme_alfa-on-color.button_disabled {
+            border-left-color: rgba(255, 255, 255, .15);
         }
     }
 
     .checkbox_disabled + .checkbox_disabled,
     .radio_disabled + .radio_disabled {
         .button_theme_alfa-on-color.button_disabled {
-            border-left-color: rgba(255, 255, 255, .1);
-        }
-    }
-
-    .checkbox_hovered:last-child + .checkbox {
-        .button_theme_alfa-on-color {
-            border-right-color: rgba(255, 255, 255, .9);
+            border-left-color: rgba(255, 255, 255, .05);
         }
     }
 
     > :last-child {
         .button_theme_alfa-on-color {
-            border-right-color: rgba(255, 255, 255, .4);
+            border-right-color: rgba(255, 255, 255, .3);
 
             &.button_hovered {
-                border-right-color: rgba(255, 255, 255, .9);
+                border-color: rgba(255, 255, 255, .9) !important;
             }
 
             &.button_disabled {
-                border-right-color: rgba(255, 255, 255, .1);
+                border-right-color: rgba(255, 255, 255, .15);
             }
         }
     }

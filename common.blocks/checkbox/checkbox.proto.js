@@ -14,7 +14,15 @@ export default class Checkbox extends Component {
 
     default() {
         return {
-            states: ['hovered', 'checked', ['hovered', 'checked'], 'focused', 'disabled', ['disabled', 'checked']],
+            states: [
+                'hovered',
+                'checked',
+                ['hovered', 'checked'],
+                'focused',
+                ['focused', 'checked'],
+                'disabled',
+                ['disabled', 'checked']
+            ],
             data: { text: 'Checkbox' }
         };
     }
