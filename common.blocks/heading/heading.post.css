@@ -1,28 +1,26 @@
 .heading {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-top: 35px;
+    margin-bottom: 25px;
 
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-weight: 100;
 
+    line-height: 1.4;
 }
 
-.heading_lvl_1 {
-    font-size: 3.4rem;
-    line-height: 4.2rem;
+.heading_size_xl {
+    font-size: 3.750rem;
 }
 
-.heading_lvl_2 {
-    font-size: 2.6rem;
-    line-height: 3.6rem;
+.heading_size_l {
+    font-size: 2.375rem;
 }
 
-.heading_lvl_3 {
-    font-size: 2rem;
-    line-height: 2.4rem;
+.heading_size_m {
+    font-size: 1.875rem;
 }
 
-.heading_lvl_4 {
-    font-size: 1.8rem;
+.heading_size_s {
+    font-size: 1.375rem;
     line-height: 2.4rem;
 }

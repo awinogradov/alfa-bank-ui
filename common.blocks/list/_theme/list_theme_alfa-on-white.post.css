@@ -1,7 +1,7 @@
 .list_theme_alfa-on-white {
 
     .list__item:before {
-        color: #ef3124;
+        color: rgba(178, 12, 0, .85);
     }
 
 }
