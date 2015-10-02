@@ -1,5 +1,6 @@
 .header {
     width: 100%;
+    height: 80px;
 
     position: fixed;
 
@@ -12,35 +13,35 @@
     transition: all 200ms ease;
 }
 
-.header_fixed {
-    background-color: rgba(1,1,1,.6);
-}
-
 .header__inner {
-    width: 1250px;
-
-    padding-left: 28px;
-    margin: auto;
     box-sizing: border-box;
+    padding-left: 60px;
+    margin: auto;
+    width: 1100px; /* 100+(150+700+150) */
 }
 
 .header__logo {
+    width: 172px;
+    height: 80px;
     float: left;
     vertical-align: top;
     box-sizing: border-box;
 
-    padding: 25px 35px;
-    margin-right: 30px;
+    padding: 15px 0;
+
+    text-align: center;
+
+    margin-right: 20px;
 
     border: 0;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 4px 4px;
     background-color: #ef3124;
 
     outline: none;
 }
 
 .header__content {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .header__menu {
@@ -56,4 +57,9 @@
 
 .header__user {
     float: right;
+}
+
+.header__user,
+.header__support {
+    padding-top: 6px;
 }
