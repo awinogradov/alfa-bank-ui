@@ -1,13 +1,15 @@
 .radio-group {
     display: inline-block;
-}
 
-.radio_size_m {
-    margin-bottom: 10px;
-}
+    .radio_size_s,
+    .radio_size_m {
+        margin-bottom: 10px;
+    }
 
-.radio_size_l {
-    margin-bottom: 12px;
+    .radio_size_l,
+    .radio_size_xl {
+        margin-bottom: 12px;
+    }
 }
 
 .radio-group_type_button {
@@ -23,11 +25,13 @@
         margin-bottom: 0;
     }
 
+    .radio_size_s,
     .radio_size_m {
         margin-right: 13px;
     }
 
-    .radio_size_l {
+    .radio_size_l
+    .radio_size_xl {
         margin-right: 15px;
     }
 

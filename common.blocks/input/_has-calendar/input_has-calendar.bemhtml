@@ -23,7 +23,7 @@ block('input')(
             ctx.js.calendarParams = calendarParams;
             ctx.js.popupDirections = ctx.directions;
 
-            applyNext({
+            return applyNext({
                 _inputMods: mods,
                 _calendarParams: calendarParams,
                 _popupDirections: ctx.directions

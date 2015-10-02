@@ -5,9 +5,10 @@ block('button')(
         ctx.text && content.push({ elem: 'text', content: ctx.text });
         return content;
     },
+
+    elem('icon').tag()('span'),
+
     match(function() { return typeof this.ctx.content !== 'undefined'; })(function() {
         return this.ctx.content;
-    })),
-
-    elem('icon').tag()('span')
+    }))
 );

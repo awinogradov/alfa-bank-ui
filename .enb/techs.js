@@ -10,8 +10,7 @@ module.exports = {
     js: require('enb/techs/js'),
     ym: require('enb-modules/techs/prepend-modules'),
     engines: {
-        bemhtml: require('enb-bemxjst/techs/bemhtml'),
-        bemtree: require('enb-bemxjst/techs/bemtree')
+        bemhtml: require('enb-bemxjst-2/techs/bemhtml')
     },
     html: {
         bemhtml: require('enb-bemxjst/techs/bemjson-to-html'),

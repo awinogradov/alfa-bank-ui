@@ -1,6 +1,6 @@
 block('input').mod('has-autocomplete', true)(
     def()(function() {
-        applyNext({ _input: this.ctx });
+        return applyNext({ _input: this.ctx });
     }),
     elem('box')(
         content()(function() {

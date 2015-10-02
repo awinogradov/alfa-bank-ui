@@ -1,11 +1,20 @@
-.form_size_m {
-    padding-bottom: 60px;
+.form__footer {
+    padding-top: 50px;
+}
 
-    .form__header {
-        margin-bottom: 40px;
+.form_view_line {
+
+    &.form_size_s,
+    &.form_size_m {
+        .form__footer {
+            padding-left: 115px;
+        }
     }
 
-    .form__footer {
-        padding-top: 20px;
+    &.form_size_l,
+    &.form_size_xl {
+        .form__footer {
+            padding-left: 165px;
+        }
     }
 }
