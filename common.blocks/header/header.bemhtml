@@ -16,7 +16,7 @@ block('header')(
                                 block: 'logo',
                                 mods: {
                                     theme: 'alfa-on-color',
-                                    size: 's',
+                                    size: 'm',
                                     view: 'full'
                                 }
                             }
