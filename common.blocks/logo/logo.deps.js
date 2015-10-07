@@ -1,6 +1,5 @@
 ({
     shouldDeps: [
-        { elems: ['icon', 'text'] },
-        { mods: { bkg: ['color', 'white'], view: 'full' } }
+        { mods: { theme: ['alfa-on-color', 'alfa-on-white'], view: 'full' } }
     ]
 });
