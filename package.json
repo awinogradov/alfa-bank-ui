@@ -7,7 +7,9 @@
   "dependencies": {
     "babel": "^5.8.23",
     "bem-environ": "1.4.0",
+    "cssnext": "^1.8.4",
     "lodash": "^3.9.3",
+    "postcss-for": "^2.0.0",
     "vow": "^0.4.9",
     "vow-fs": "^0.3.4"
   },
@@ -38,12 +40,15 @@
     "jscs-alfa": "git+ssh://git@git/man/jscs-alfa.git#v0.3.0",
     "jshint": "^2.8.0",
     "jshint-groups": "^0.8.0",
+    "lost": "^6.6.2",
     "mversion": "^1.10.0",
     "postcss": "^5.0.3",
     "postcss-custom-properties": "^5.0.0",
     "postcss-each": "^0.6.0",
     "postcss-extend": "^1.0.0",
+    "postcss-mixins": "^1.0.1",
     "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^1.0.1",
     "postcss-url": "^4.0.0",
     "protein-kit": "git+ssh://git@git.theprotein.io:protein/kit.git"
   },

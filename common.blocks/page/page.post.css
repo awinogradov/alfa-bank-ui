@@ -22,8 +22,7 @@ html {
 }
 
 .page__content {
-    padding-left: 100px;
-    width: 1000px; /* 100+(150+700+150) */
+    max-width: 1000px; /* 100+(150+700+150) */
 
     margin: auto;
 
@@ -35,4 +34,16 @@ html {
     margin: auto;
     width: 1100px;
     height: 150px;
+}
+
+@media (--medium) {
+    .page__content {
+        width: 1000px;
+    }
+}
+
+@media (--large) {
+    .page__content {
+        padding-left: 100px;
+    }
 }
