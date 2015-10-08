@@ -1,9 +1,22 @@
 block('logo')(
+    tag()('span'),
     content()(function() {
         return [
             {
                 elem: 'icon'
             }
         ];
-    })
+    }),
+    mod('view', 'full')(
+        content()(function() {
+            return [
+                applyNext(),
+                {
+                    elem: 'text'
+                }
+            ];
+        })
+    ),
+    elem('icon').tag()('span'),
+    elem('text').tag()('span')
 );
