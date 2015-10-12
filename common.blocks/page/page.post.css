@@ -22,17 +22,28 @@ html {
 }
 
 .page__content {
-    padding-left: 100px;
-    width: 1000px; /* 100+(150+700+150) */
+    max-width: 1000px; /* 100+(150+700+150) */
 
     margin: auto;
 
     padding-top: 95px;
     padding-bottom: 40px;
+    box-sizing: border-box;
 }
 
 .page__footer {
     margin: auto;
-    width: 1100px;
     height: 150px;
+}
+
+@media (--large) {
+
+    .page__content {
+        padding-left: 100px;
+        width: 1000px;
+    }
+
+    .page__footer {
+        width: 1100px;
+    }
 }
