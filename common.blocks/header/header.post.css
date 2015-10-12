@@ -17,11 +17,10 @@
     box-sizing: border-box;
     padding-left: 60px;
     margin: auto;
-    width: 1100px; /* 100+(150+700+150) */
 }
 
 .header__logo {
-    width: 172px;
+    width: 72px;
     height: 80px;
     float: left;
     vertical-align: top;
@@ -62,4 +61,14 @@
 .header__user,
 .header__support {
     padding-top: 6px;
+}
+
+@media (--large) {
+    .header__logo {
+        width: 172px;
+    }
+
+    .header__inner {
+        width: 1100px; /* 100+(150+700+150) */
+    }
 }
