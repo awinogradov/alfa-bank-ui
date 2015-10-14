@@ -1,24 +1,55 @@
 .logo {
     display: inline-block;
     line-height: 0;
+}
 
+.logo__icon,
+.logo__text {
+    display: inline-block;
+    vertical-align: middle;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 }
 
 .logo_size_s {
 
+    padding: 7px 8px;
+    line-height: 24px;
+
     .logo__icon {
-        width: 22px;
-        height: 35px;
+        width: 15px;
+        height: 24px;
     }
 
     .logo__text {
-        width: 82px;
-        height: 34px;
-        margin-left: 8px;
+        width: 60px;
+        height: 11px;
+        margin-left: 7px;
     }
 }
 
 .logo_size_m {
+
+    padding: 11px 12px;
+    line-height: 36px;
+
+    .logo__icon {
+        width: 23px;
+        height: 37px;
+    }
+
+    .logo__text {
+        width: 89px;
+        height: 15px;
+        margin-left: 11px;
+    }
+}
+
+.logo_size_l {
+
+    padding: 14px 15px;
+    line-height: 48px;
 
     .logo__icon {
         width: 30px;
@@ -26,36 +57,31 @@
     }
 
     .logo__text {
-        width: 112px;
-        height: 47px;
-        margin-left: 12px;
-    }
-}
-
-.logo_size_l {
-
-    .logo__icon {
-        width: 40px;
-        height: 64px;
-    }
-
-    .logo__text {
-        width: 150px;
-        height: 63px;
-        margin-left: 16px;
+        width: 119px;
+        height: 20px;
+        margin-left: 15px;
     }
 }
 
 .logo_size_xl {
 
+    padding: 18px 19px;
+    line-height: 61px;
+
     .logo__icon {
-        width: 60px;
-        height: 96px;
+        width: 39px;
+        height: 61px;
     }
 
     .logo__text {
-        width: 225px;
-        height: 94px;
-        margin-left: 24px;
+        width: 148px;
+        height: 25px;
+        margin-left: 19px;
+    }
+}
+
+@media (--medium-only) {
+    .logo__text {
+        display: none;
     }
 }

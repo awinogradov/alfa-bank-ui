@@ -1,51 +1,54 @@
 block('footer')(
     content()(function() {
+        var ctx = this.ctx;
+
         return {
             elem: 'inner',
             content: [
-                this.ctx.menu && {
+                ctx.menu && {
                     elem: 'menu',
-                    content: this.ctx.menu
+                    content: ctx.menu
                 },
                 {
                     elem: 'additional',
-                    content: this.ctx.additional || 'Сделано в Альфа-Лаборатории'
+                    content: ctx.additional || 'Сделано в Альфа-Лаборатории'
                 },
                 {
                     elem: 'info',
-                    content: this.ctx.copyright || [
+                    content: [
                         {
                             block: 'social',
                             content: [
-                                { name: 'vk', url: 'https://vk.com/alfabank' },
-                                { name: 'facebook', url: 'https://facebook.com/alfabank' },
-                                { name: 'twitter', url: 'https://twitter.com/alfabank' }
-                            ].map(function (network) {
-                                return {
-                                    block: 'link',
-                                    mods: { theme: this.mods.theme },
-                                    url: network.url,
-                                    content: {
-                                        block: 'icon',
-                                        mods: {
-                                            network: network.name,
-                                            size: 's',
-                                            theme: this.mods.theme
+                                [
+                                    { name: 'vk', url: 'https://vk.com/alfabank' },
+                                    { name: 'facebook', url: 'https://facebook.com/alfabank' },
+                                    { name: 'twitter', url: 'https://twitter.com/alfabank' }
+                                ].map(function(network) {
+                                    return {
+                                        block: 'link',
+                                        mods: { theme: ctx.mods.theme, size: 's' },
+                                        url: network.url,
+                                        content: {
+                                            block: 'icon',
+                                            mods: {
+                                                network: network.name,
+                                                size: 's',
+                                                theme: ctx.mods.theme
+                                            }
                                         }
-                                    }
-                                };
-                            }).push({
+                                    };
+                                }),
                                 {
                                     block: 'link',
-                                    mods: { theme: this.mods.theme },
+                                    mods: { theme: ctx.mods.theme, size: 's' },
                                     url: '//alfabank.ru/internet/socmedia',
                                     text: 'Мы в соцмедиа'
                                 }
-                            })
+                            ]
                         },
                         {
                             block: 'copyright',
-                            mods: { theme: this.mods.theme }
+                            mods: { theme: ctx.mods.theme }
                         }
                     ]
                 }

@@ -4,7 +4,11 @@ export default class Logo extends Component {
     types() {
         return {
             size: ['s', 'm', 'l', 'xl'],
-            view: ['full']
+            view: [{
+                full: {
+                    types: { size: ['s', 'm', 'l', 'xl'] }
+                }
+            }]
         };
     }
 }
