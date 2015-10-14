@@ -1,0 +1,6 @@
+.message_theme_alfa-on-color {
+
+    &.message_type_text {
+        color: rgba(255, 255, 255, .9);
+    }
+}
