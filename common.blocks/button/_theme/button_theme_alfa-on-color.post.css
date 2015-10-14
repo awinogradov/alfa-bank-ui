@@ -117,6 +117,36 @@
     }
 }
 
+.checkbox_view_action,
+.radio_view_action {
+    .button_theme_alfa-on-color {
+        &.button_checked {
+            color: rgba(255, 255, 255, .9);
+            background: rgba(255, 255, 255, .2);
+
+            &.button_hovered {
+                background: rgba(255, 255, 255, .3);
+                border-color: rgba(255, 255, 255, .9);
+            }
+        }
+    }
+}
+
+.checkbox_view_extra,
+.radio_view_extra {
+    .button_theme_alfa-on-color {
+        &.button_checked {
+            color: rgba(255, 255, 255, 1);
+            background: rgba(178, 12, 0, .85);
+
+            &.button_hovered {
+                background: rgba(178, 12, 0, 1);
+                border-color: rgba(178, 12, 0, 1);
+            }
+        }
+    }
+}
+
 .control-group {
 
     .button_theme_alfa-on-color {
@@ -131,36 +161,6 @@
         &.button_disabled {
             border-color: rgba(255, 255, 255, .3);
             border-right-color: transparent;
-        }
-    }
-
-    .checkbox_view_action,
-    .radio_view_action {
-        .button_theme_alfa-on-color {
-            &.button_checked {
-                color: rgba(255, 255, 255, .9);
-                background: rgba(255, 255, 255, .2);
-
-                &.button_hovered {
-                    background: rgba(255, 255, 255, .3);
-                    border-color: rgba(255, 255, 255, .9);
-                }
-            }
-        }
-    }
-
-    .checkbox_view_extra,
-    .radio_view_extra {
-        .button_theme_alfa-on-color {
-            &.button_checked {
-                color: rgba(255, 255, 255, 1);
-                background: rgba(178, 12, 0, .85);
-
-                &.button_hovered {
-                    background: rgba(178, 12, 0, 1);
-                    border-color: rgba(178, 12, 0, 1);
-                }
-            }
         }
     }
 

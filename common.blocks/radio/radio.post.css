@@ -101,6 +101,12 @@
 .radio_type_button {
     display: inline-block;
 
+    .radio__control {
+        position: absolute;
+
+        visibility: hidden;
+    }
+
     /* FIXME: maybe remove cascade? */
     .button_checked {
         cursor: default;

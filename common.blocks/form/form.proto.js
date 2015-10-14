@@ -158,7 +158,7 @@ export default class Form extends Component {
                                         elem: 'control',
                                         content: {
                                             block: 'radio-group',
-                                            mods: { type: 'button' },
+                                            mods: { type: 'button', view: 'extra' },
                                             val: 2,
                                             options: [
                                                 {

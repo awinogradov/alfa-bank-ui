@@ -21,6 +21,7 @@
 }
 
 .radio-group_type_line {
+    
     .radio {
         margin-bottom: 0;
     }
@@ -30,7 +31,7 @@
         margin-right: 13px;
     }
 
-    .radio_size_l
+    .radio_size_l,
     .radio_size_xl {
         margin-right: 15px;
     }
