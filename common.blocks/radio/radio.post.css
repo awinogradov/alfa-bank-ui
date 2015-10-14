@@ -42,6 +42,7 @@
     }
 }
 
+.radio_size_s,
 .radio_size_m {
     font-size: 16px;
 
@@ -63,7 +64,8 @@
     }
 }
 
-.radio_size_l {
+.radio_size_l,
+.radio_size_xl {
     font-size: 22px;
 
     .radio__box
@@ -98,6 +100,12 @@
 
 .radio_type_button {
     display: inline-block;
+
+    .radio__control {
+        position: absolute;
+
+        visibility: hidden;
+    }
 
     /* FIXME: maybe remove cascade? */
     .button_checked {

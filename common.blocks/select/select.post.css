@@ -6,6 +6,8 @@
 .select__button {
     text-align: left;
     vertical-align: top;
+
+    min-width: 250px;
 }
 
 .select__popup {

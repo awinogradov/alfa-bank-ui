@@ -1,4 +1,4 @@
 block('radio').match(function() { return this._groupView; }).def()(function() {
     this.ctx.mods = this.extend(this.mods, { view: this._groupView });
-    applyNext();
+    return applyNext();
 });

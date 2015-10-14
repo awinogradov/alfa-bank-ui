@@ -1,0 +1,8 @@
+block('button').elem('text')(
+    match(function() { return this._mods; }).def()(function() {
+        this.ctx.mods.theme = false;
+        this.ctx.mods.size = false;
+        this.ctx.mods.togglable = false;
+        return applyNext();
+    })
+)

@@ -3,5 +3,8 @@
         'mq',
         { block: 'font', mods: { roboto: true } }
     ],
-    shouldDeps: { block: 'ua', elem: 'svg' }
+    shouldDeps: [
+        { block: 'ua', elem: 'svg' },
+        { block: 'magic-mods' }
+    ]
 });

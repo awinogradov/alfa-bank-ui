@@ -1,9 +1,11 @@
 block('form-field')(
-    js()(true),
-    def()(function() {
-        var formField = this.ctx;
-        formField.id = formField.id || this.generateId();
-        formField.mods.name = formField.name;
-        applyNext({ formField: formField });
+    match(function() { return this._mods && this._mods.view; }).def()(function() {
+        this.ctx.mods.view = this._mods.view;
+        return applyNext({
+            _mods: {
+                theme: this._mods.theme || this.mods.theme,
+                size: this._mods.size || this.mods.size
+            }
+        });
     })
 );

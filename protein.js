@@ -6,7 +6,7 @@ export default class UI extends Protein {
     }
 
     wrapper() {
-        return function (component, json) {
+        return function(component, json) {
             let menu = component.getTypesKeys().map((modName, i) => {
                 return {
                     block: 'menu-item',
@@ -37,10 +37,6 @@ export default class UI extends Protein {
             };
         };
     }
-
-    // render() {
-    //     return require('protein-kit/lib/modules/protein-bemhtml');
-    // }
 
     default() {
         return {

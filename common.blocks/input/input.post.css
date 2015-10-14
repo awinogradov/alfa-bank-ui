@@ -2,18 +2,19 @@
     font-family: 'Roboto', sans-serif;
 
     position: relative;
-    display:  inline-block;
+    display: inline-block;
     box-sizing: border-box;
 
     border-radius: 4px;
 
     transition: all 200ms ease;
 
+    min-width: 250px;
 }
 
 .input__box {
     position: relative;
-    display:  block;
+    display: block;
 
     -webkit-touch-callout: none;
 
@@ -22,24 +23,24 @@
 
 .input__control {
     position: relative;
-    display:  inline-block;
+    display: inline-block;
 
-    font:        inherit;
+    font: inherit;
     line-height: inherit;
     font-weight: 300;
 
     box-sizing: border-box;
 
-    padding:    0;
-    margin:     0;
+    padding: 0;
+    margin: 0;
 
-    width:      100%;
+    width: 100%;
 
-    border:     0;
-    outline:    none;
+    border: 0;
+    outline: none;
     background: none;
 
-    -webkit-appearance:          none;
+    -webkit-appearance: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     &::-webkit-search-decoration {
@@ -70,10 +71,10 @@
 
 .input__clear {
     position: absolute;
-    top:      50%;
-    right:    0;
+    top: 50%;
+    right: 0;
 
-    cursor:     text;
+    cursor: text;
     transition: opacity 0.1s ease-out;
 
     opacity: 0.3;

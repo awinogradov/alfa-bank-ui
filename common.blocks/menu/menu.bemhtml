@@ -1,6 +1,6 @@
 block('menu')(
     def()(function() {
-        applyNext({
+        return applyNext({
             _alfaMods: this.mods
         });
     })

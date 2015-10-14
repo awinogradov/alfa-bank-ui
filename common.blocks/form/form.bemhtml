@@ -1,0 +1,11 @@
+block('form')(
+    def()(function() {
+        return applyNext({
+            _mods: {
+                theme: this.mods.theme,
+                size: this.mods.size,
+                view: this.mods.view
+            }
+        });
+    })
+);
