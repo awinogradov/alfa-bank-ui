@@ -33,7 +33,12 @@ export default class Form extends Component {
                             {
                                 block: 'form-field',
                                 name: 'input1',
-                                mods: { type: 'input' },
+                                mods: {
+                                    type: 'input',
+                                    'has-validation': true,
+                                    required: true,
+                                    message: 'text'
+                                },
                                 content: [
                                     {
                                         elem: 'label',
