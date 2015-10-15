@@ -28,6 +28,8 @@ export default class Radio extends Component {
                 ['hovered', 'checked'],
                 'focused',
                 ['focused', 'checked'],
+                'invalid',
+                ['invalid', 'checked'],
                 'disabled',
                 ['disabled', 'checked']
             ],

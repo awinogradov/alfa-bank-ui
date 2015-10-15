@@ -10,7 +10,7 @@ export default class Textarea extends Component {
 
     default() {
         return {
-            states: ['hovered', 'focused', 'disabled'],
+            states: ['hovered', 'focused', 'invalid', 'disabled'],
             data: { val: 'Textarea', placeholder: 'Placeholder' }
         };
     }

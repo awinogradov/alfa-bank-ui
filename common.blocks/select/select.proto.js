@@ -20,7 +20,7 @@ export default class Select extends Component {
 
     default() {
         return {
-            states: ['hovered', 'focused-hard', 'opened', ['hovered', 'focused-hard'], 'disabled'],
+            states: ['hovered', 'focused-hard', 'opened', ['hovered', 'focused-hard'], 'invalid', 'disabled'],
             types: { mode: 'radio-check' },
             data: {
                 text: 'This is sparta!',
