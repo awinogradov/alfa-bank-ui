@@ -1,0 +1,32 @@
+block('dropdown')(
+    def()(function() {
+        return applyNext({
+            _mods: {
+                theme: this.mods.theme,
+                size: this.mods.size
+            }
+        });
+    }),
+
+    content()(function() {
+        var _this = this,
+            popup = this.ctx.popup,
+            switcher = this.ctx.switcher;
+
+
+        if(this.isSimple(popup) || popup.block !== 'popup') {
+            popup = { block: 'popup', content: popup };
+        }
+
+        var popupMods = popup.mods || (popup.mods = {});
+        popupMods.theme || (popupMods.theme = this.mods.theme);
+        popupMods.hasOwnProperty('autoclosable') || (popupMods.autoclosable = true);
+
+        popupMods.target = 'anchor';
+
+        popup.mix = this.extend(popup.mix || {}, { block: _this.block, elem: 'popup' });
+        switcher.mix = this.extend(switcher.mix || {}, { block: _this.block, elem: 'switcher' });
+
+        return [switcher, popup];
+    })
+);
