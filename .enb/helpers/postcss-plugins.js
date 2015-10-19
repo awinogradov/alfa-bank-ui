@@ -13,9 +13,6 @@ module.exports = [
     require('cssnext')(),
     require('postcss-custom-properties'),
     require('postcss-nested'),
-    require('postcss-url')({
-        url: 'rebase'
-    }),
     require('autoprefixer-core')({
         browsers: [
             'last 2 versions',

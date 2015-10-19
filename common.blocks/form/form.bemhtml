@@ -1,10 +1,11 @@
 block('form')(
     def()(function() {
+        var mods = this.ctx.mods || {};
         return applyNext({
             _mods: {
-                theme: this.mods.theme,
-                size: this.mods.size,
-                view: this.mods.view
+                theme: mods.theme,
+                size: mods.size,
+                view: mods.view
             }
         });
     })
