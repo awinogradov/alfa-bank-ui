@@ -8,7 +8,7 @@ export default class Link extends Component {
             icon: [
                 { false: {
                     data: {
-                        icon: { block: 'icon', mods: { tool: 'search' } },
+                        icon: { block: 'spin', mods: { visible: true, size: 'm' } },
                     }
                 } }
             ]

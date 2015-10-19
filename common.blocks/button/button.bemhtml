@@ -1,12 +1,19 @@
 block('button')(
+    def()(function() {
+        return applyNext({
+            _mods: {
+                theme: this._mods ? this._mods.theme : this.ctx.mods.theme,
+                size: this._mods ? this._mods.size : this.ctx.mods.size
+            }
+        });
+    }),
+
     content()(function() {
         var ctx = this.ctx,
             content = [ctx.icon && { elem: 'icon', content: ctx.icon }];
         ctx.text && content.push({ elem: 'text', content: ctx.text });
         return content;
     },
-
-    elem('icon').tag()('span'),
 
     match(function() { return typeof this.ctx.content !== 'undefined'; })(function() {
         return this.ctx.content;

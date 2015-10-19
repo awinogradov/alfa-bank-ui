@@ -24,6 +24,9 @@ export default class Button extends Component {
             ],
             spin: [
                 { false: {
+                    types: {
+                        size: ['s', 'm', 'l', 'xl']
+                    },
                     data: { icon: { block: 'spin', mods: { visible: true } } }
                 } }
             ]

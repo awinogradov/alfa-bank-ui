@@ -1,3 +1,6 @@
 .spin_theme_alfa-on-white {
-    background-image: url('spin_theme_alfa-on-white.svg');
+    &.spin_size_s { background-image: url('base64/w_s.png'); }
+    &.spin_size_m { background-image: url('base64/w_m.png'); }
+    &.spin_size_l { background-image: url('base64/w_l.png'); }
+    &.spin_size_xl { background-image: url('base64/w_xl.png'); }
 }
