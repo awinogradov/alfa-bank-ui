@@ -26,8 +26,7 @@
     "enb-bem-specs": "dragn/enb-bem-specs",
     "enb-bem-techs": "^2.0.1",
     "enb-bem-tmpl-specs": "^0.13.2",
-    "enb-bemxjst": "^2.0.2",
-    "enb-bemxjst-2": "tadatuta/enb-bemxjst#bem-xjst-2x",
+    "enb-bemxjst": "^2.1.0",
     "enb-bh": "^1.0.0",
     "enb-borschik": "^2.0.0",
     "enb-diverse-js": "~0.1.0",
@@ -49,7 +48,6 @@
     "postcss-mixins": "^1.0.1",
     "postcss-nested": "^1.0.0",
     "postcss-simple-vars": "^1.0.1",
-    "postcss-url": "^4.0.0",
     "protein-kit": "git+ssh://git@git.theprotein.io:protein/kit.git"
   },
   "scripts": {

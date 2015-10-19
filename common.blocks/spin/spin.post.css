@@ -1,7 +1,8 @@
 .spin {
     display: none;
     background-repeat: no-repeat;
-    background-position: 50%;
+    background-size: 100%;
+    animation: spin_animation .8s infinite linear;
 }
 
 .spin_visible {
@@ -9,22 +10,32 @@
 }
 
 .spin_size_s {
+    width: 16px;
+    height: 16px;
+}
+
+.spin_size_m {
+    width: 20px;
+    height: 20px;
+}
+
+.spin_size_l {
     width: 25px;
     height: 25px;
 }
 
-
-.spin_size_m {
-    width: 35px;
-    height: 35px;
-}
-
-.spin_size_l {
-    width: 45px;
-    height: 45px;
-}
-
 .spin_size_xl {
-    width: 55px;
-    height: 55px;
+    width: 30px;
+    height: 30px;
 }
+
+@keyframes spin_animation {
+    from {
+        transform: rotate(0)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+

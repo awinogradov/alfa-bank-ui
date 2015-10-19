@@ -1,5 +1,6 @@
 {
   "freeze_paths": {
-    "**/*": "dist/assets/"
+    "**/*": "dist/assets/",
+    "base64/**": ":base64:"
   }
 }

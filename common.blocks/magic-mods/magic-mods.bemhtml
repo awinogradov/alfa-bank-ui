@@ -1,11 +1,13 @@
 block('*')(
     match(function() { return this._mods; }).def()(function() {
-        this._theme = this.mods.theme || this._mods.theme;
-        this._size = this.mods.size || this._mods.size;
-        this.ctx.mods = this.extend(this.mods, {
-            theme: this._theme,
-            size: this._size
-        });
+        if (this.ctx.mods) {
+            this._theme = this.ctx.mods.theme || this._mods.theme;
+            this._size = this.ctx.mods.size || this._mods.size;
+            this.ctx.mods = this.extend(this.ctx.mods, {
+                theme: this._theme,
+                size: this._size
+            });
+        }
         return applyNext();
     })
 );

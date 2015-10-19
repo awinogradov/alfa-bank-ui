@@ -3,8 +3,8 @@ block('form-field')(
         this.ctx.mods.view = this._mods.view;
         return applyNext({
             _mods: {
-                theme: this._mods.theme || this.mods.theme,
-                size: this._mods.size || this.mods.size
+                theme: this._mods.theme || this.ctx.mods.theme,
+                size: this._mods.size || this.ctx.mods.size
             }
         });
     })
