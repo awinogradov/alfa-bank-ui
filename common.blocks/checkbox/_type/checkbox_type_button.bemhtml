@@ -1,7 +1,7 @@
 block('checkbox').mod('type', 'button')(
     content()(function() {
         var ctx = this.ctx,
-            mods = this.mods;
+            mods = ctx.mods;
 
         return [{
             block: 'button',
@@ -12,7 +12,8 @@ block('checkbox').mod('type', 'button')(
                 theme: mods.theme,
                 size: mods.size,
                 hovered: mods.hovered,
-                focused: mods.focused
+                focused: mods.focused,
+                view: mods.view
             },
             title: ctx.title,
             content: [

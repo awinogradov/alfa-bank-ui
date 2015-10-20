@@ -101,7 +101,10 @@ module.exports = function(node, opts) {
     ]);
 
     node.addTechs([
-        [techs.engines.bemhtml, { target: '.tmp.bemhtml.js' }],
+        [techs.engines.bemhtml, {
+            target: '.tmp.bemhtml.js',
+            sourceSuffixes: ['bemhtml', 'bemhtml.js']
+        }],
         [techs.html.bemhtml, {
             target: '?.html',
             bemhtmlFile: '.tmp.bemhtml.js'
