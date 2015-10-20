@@ -1,4 +1,4 @@
-block('checkbox').match(function() { return this._groupView; }).def()(function() {
-    this.ctx.mods = this.extend(this.mods, { view: this._groupView });
+block('checkbox').match(function() { return this._view; }).def()(function() {
+    this.ctx.mods = this.extend(this.ctx.mods, { view: this._view });
     return applyNext();
 });

@@ -28,11 +28,15 @@
 
     &.button_view_action {
         color: rgba(255, 255, 255, .9);
-        border-color: transparent;
+        border-color: rgba(255, 255, 255, .05);
         background: rgba(255, 255, 255, .2);
 
         &.button_hovered {
             background: rgba(255, 255, 255, .3);
+        }
+
+        &.button_checked {
+            background: rgba(255, 255, 255, .45);
         }
 
         &.button_focused-hard {
@@ -59,6 +63,10 @@
             border-color: rgba(178, 12, 0, 1);
         }
 
+        &.button_checked {
+            background: rgba(239, 49, 36, 1);
+        }
+
         &.button_focused-hard {
             border-color: rgba(255, 255, 255, .9);
 
@@ -82,6 +90,10 @@
         &.button_hovered {
             background: rgba(71, 57, 195, .85);
             border-color: rgba(71, 57, 195, .85);
+        }
+
+        &.button_checked {
+            background: rgba(71, 57, 195, .95);
         }
 
         &.button_focused-hard {
@@ -117,106 +129,44 @@
     }
 }
 
-.checkbox_view_action,
-.radio_view_action {
+.control-group
+{
     .button_theme_alfa-on-color {
-        &.button_checked {
-            color: rgba(255, 255, 255, .9);
-            background: rgba(255, 255, 255, .2);
 
-            &.button_hovered {
-                background: rgba(255, 255, 255, .3);
-                border-color: rgba(255, 255, 255, .9);
-            }
+        border-right-color: transparent;
+
+        .button__text {
+            font-weight: 300;
         }
-    }
-}
 
-.checkbox_view_extra,
-.radio_view_extra {
-    .button_theme_alfa-on-color {
-        &.button_checked {
-            color: rgba(255, 255, 255, 1);
-            background: rgba(178, 12, 0, .85);
-
-            &.button_hovered {
-                background: rgba(178, 12, 0, 1);
-                border-color: rgba(178, 12, 0, 1);
-            }
-        }
-    }
-}
-
-.control-group {
-
-    .button_theme_alfa-on-color {
         &.button_hovered {
             border-color: rgba(255, 255, 255, .9);
-        }
-
-        &.button_checked {
-            border-right-color: rgba(255, 255, 255, .4);
-        }
-
-        &.button_disabled {
-            border-color: rgba(255, 255, 255, .3);
             border-right-color: transparent;
         }
     }
 
-    .checkbox_checked + .checkbox,
-    .radio_checked + .radio {
+    .checkbox_hovered + .checkbox_theme_alfa-on-color,
+    .radio_hovered + .radio_theme_alfa-on-color {
+
         .button_theme_alfa-on-color {
-            border-left-color: transparent;
-
-            &.button_hovered {
-                border-left-color: rgba(255, 255, 255, .9);
-            }
-        }
-    }
-
-    .checkbox_hovered + .checkbox,
-    .radio_hovered + .radio,
-    .checkbox_hovered + .checkbox_checked,
-    .radio_hovered + .radio_checked {
-        .button_theme_alfa-on-color {
-            border-left-color: transparent;
-        }
-    }
-
-    .checkbox_hovered + .checkbox_disabled,
-    .radio_hovered + .radio_disabled,
-    .checkbox_checked + .checkbox_disabled,
-    .radio_checked + .radio_disabled {
-        .button_theme_alfa-on-color.button_disabled {
-            border-left-color: transparent;
-        }
-    }
-
-    .checkbox_checked.checkbox_disabled + .checkbox_disabled,
-    .radio_checked.radio_disabled + .radio_disabled {
-        .button_theme_alfa-on-color.button_disabled {
-            border-left-color: rgba(255, 255, 255, .15);
-        }
-    }
-
-    .checkbox_disabled + .checkbox_disabled,
-    .radio_disabled + .radio_disabled {
-        .button_theme_alfa-on-color.button_disabled {
-            border-left-color: rgba(255, 255, 255, .05);
+            border-left-color: rgba(255, 255, 255, .9);
         }
     }
 
     > :last-child {
-        .button_theme_alfa-on-color {
-            border-right-color: rgba(255, 255, 255, .3);
 
+        .button_theme_alfa-on-color {
             &.button_hovered {
-                border-color: rgba(255, 255, 255, .9) !important;
+                border-color: rgba(255, 255, 255, .9);
             }
 
+            &.button_checked,
             &.button_disabled {
-                border-right-color: rgba(255, 255, 255, .15);
+                border-right-color: transparent;
+
+                &.button_hovered {
+                    border-color: rgba(255, 255, 255, .9);
+                }
             }
         }
     }
