@@ -1,18 +1,17 @@
 block('dropdown')(
     def()(function() {
+        var mods = this._mods || this.ctx.mods || {};
         return applyNext({
             _mods: {
-                theme: this.mods.theme,
-                size: this.mods.size
+                theme: mods.theme,
+                size: mods.size
             }
         });
     }),
 
     content()(function() {
-        var _this = this,
-            popup = this.ctx.popup,
+        var popup = this.ctx.popup,
             switcher = this.ctx.switcher;
-
 
         if(this.isSimple(popup) || popup.block !== 'popup') {
             popup = { block: 'popup', content: popup };
@@ -20,13 +19,16 @@ block('dropdown')(
 
         var popupMods = popup.mods || (popup.mods = {});
         popupMods.theme || (popupMods.theme = this.mods.theme);
+        popupMods.view || (popupMods.view = this.mods.view);
         popupMods.hasOwnProperty('autoclosable') || (popupMods.autoclosable = true);
 
         popupMods.target = 'anchor';
 
-        popup.mix = this.extend(popup.mix || {}, { block: _this.block, elem: 'popup' });
-        switcher.mix = this.extend(switcher.mix || {}, { block: _this.block, elem: 'switcher' });
+        popup.directions = this.ctx.directions;
 
-        return [switcher, popup];
+        popup.mix = this.extend(popup.mix || {}, { block: this.block, elem: 'popup' });
+        switcher.mix = this.extend(switcher.mix || {}, { block: this.block, elem: 'switcher' });
+
+        return [{ elem: 'switcher', content: switcher }, popup];
     })
 );

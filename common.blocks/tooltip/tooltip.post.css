@@ -1,8 +1,3 @@
-.tooltip {
-    display: inline-block;
-
-    cursor: pointer;
-}
 
 /* FIXME: maybe remove cascade? */
 .popup.tooltip__popup {

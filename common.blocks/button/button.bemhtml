@@ -1,9 +1,10 @@
 block('button')(
     def()(function() {
+        var mods = this._mods || this.ctx.mods || {};
         return applyNext({
             _mods: {
-                theme: this._mods ? this._mods.theme : this.ctx.mods.theme,
-                size: this._mods ? this._mods.size : this.ctx.mods.size
+                theme: mods.theme,
+                size: mods.size
             }
         });
     }),

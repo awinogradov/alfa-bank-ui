@@ -1,7 +1,7 @@
 modules.define('dropdown',
     function(provide, Dropdown) {
 
-provide(Dropdown.decl({ modName: 'mode', modVal: 'hover' }, {
+provide(Dropdown.decl({ modName: 'mode', modVal: 'focus' }, {
     onSetMod: {
         'js': {
             'inited': function() {
@@ -11,7 +11,7 @@ provide(Dropdown.decl({ modName: 'mode', modVal: 'hover' }, {
                     switcher = this.getSwitcher(),
                     popup = this.getPopup();
 
-                switcher.on({ modName: 'hovered', modVal: '*' }, function(e, data) {
+                switcher.on({ modName: 'focused', modVal: '*' }, function(e, data) {
                     _this.setMod('opened', data.modVal);
                 });
             }

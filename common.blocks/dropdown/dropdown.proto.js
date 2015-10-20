@@ -11,6 +11,7 @@ export default class Dropdown extends Component {
                             block: 'button',
                             text: 'button'
                         },
+                        directions: ['right-top'],
                         popup: 'Some info from button'
                     }
                 } },
@@ -21,11 +22,12 @@ export default class Dropdown extends Component {
                             block: 'icon',
                             mods: { tool: 'help' }
                         },
-                        popup: 'Some info from button'
+                        popup: 'Some info from icon'
                     }
                 } }
             ],
-            mode: ['hover', 'focus']
+            mode: ['hover', 'focus'],
+            view: ['error']
         };
     }
 
@@ -38,7 +40,7 @@ export default class Dropdown extends Component {
                     mods: { view: 'pseudo' },
                     text: 'default'
                 },
-                popup: 'Some default info'
+                popup: 'Some default info from link'
             }
         };
     }

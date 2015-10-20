@@ -4,4 +4,9 @@
     background-color: rgba(0, 0, 0, .9);
 
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2);
+
+    &.popup_view_error {
+        background: rgba(248, 96, 101, .95);
+        color: rgba(255, 255, 255, .9);
+    }
 }
