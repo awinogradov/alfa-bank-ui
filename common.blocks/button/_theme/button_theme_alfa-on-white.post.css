@@ -1,7 +1,7 @@
 .button_theme_alfa-on-white {
     color: rgba(0, 0, 0, .9);
 
-    background: rgba(255, 255, 255, .3);
+    background: transparent;
 
     border-width: 1px;
     border-style: solid;
