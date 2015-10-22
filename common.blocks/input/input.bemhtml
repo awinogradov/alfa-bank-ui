@@ -1,4 +1,13 @@
 block('input')(
+    def()(function() {
+        var mods = this.ctx.mods || {};
+        return applyNext({
+            _mods: {
+                theme: mods.theme,
+                size: mods.size
+            }
+        });
+    }),
     match(function() { return this.ctx.addon; }).def()(function() {
         this.ctx.mods['has-addon'] = true;
         return applyNext();

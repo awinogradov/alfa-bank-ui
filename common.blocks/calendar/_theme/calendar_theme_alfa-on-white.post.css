@@ -1,0 +1,13 @@
+.calendar_theme_alfa-on-white {
+    color: rgba(0, 0, 0, .9);
+    background: rgba(243, 243, 243, .95);
+
+    .calendar__arrow_direction_left {
+        background-image: url(base64/arrow_wl.svg);
+    }
+
+    .calendar__arrow_direction_right {
+        background-image: url(base64/arrow_wr.svg);
+    }
+}
+

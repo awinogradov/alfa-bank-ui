@@ -3,9 +3,6 @@
         'i-bem'
     ],
     shouldDeps: [
-        {
-            elems: ['arrow', 'day', 'dayname']
-        },
         'moment'
     ]
 },
