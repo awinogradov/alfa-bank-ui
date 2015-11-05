@@ -25,9 +25,9 @@ export default class Input extends Component {
             width: ['available'],
             'has-calendar': {
                 data: {
-                    val: '22.07.2015',
-                    earlierLimit: '20.06.2015',
-                    laterLimit: '20.08.2015',
+                    earlierLimit: '12.10.2015',
+                    laterLimit: '20.11.2015',
+                    val: '22.10.2015',
                     addon: { block: 'icon', mods: { tool: 'calendar' } }
                 }
             },

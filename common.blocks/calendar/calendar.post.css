@@ -1,35 +1,17 @@
 .calendar {
-    color: #808080;
+    color: rgba(0, 0, 0, .9);
     background: #fff;
 
     display: inline-block;
 
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 
     padding: 0;
-
-    border: 1px solid #d9d9db;
-    border-radius: 6px;
+    border-radius: 4px;
 
     box-sizing: border-box;
-
-    &.popup_direction_bottom-right {
-        margin-top: 7px !important;
-        margin-left: 10px !important;
-    }
-
-    &.popup_direction_bottom-right:before {
-        margin-top: -29px;
-        right: 15px;
-
-        border-top: 7px solid transparent;
-        border-left: 7px solid transparent;
-        border-right: 7px solid transparent;
-        border-bottom: 7px solid rgba(0,0,0,0.9);
-        content: '';
-        position: absolute;
-    }
 }
 
 .calendar__name {
@@ -41,41 +23,67 @@
     border-collapse: separate;
 }
 
-.calendar__title,
-.calendar__layout {
-    padding: 12px;
+.calendar__title {
+    padding: 20px 15px 5px;
+    line-height: 20px;
+    vertical-align: middle;
 }
 
-.calendar__title {
-    border-bottom: 1px solid #d9d9db;
+.calendar__layout {
+    padding: 0 15px 15px;
+}
+
+.calendar__dayname,
+.calendar__day {
+    font-size: 13px;
 }
 
 .calendar__dayname {
     line-height: 34px;
     font-weight: 300;
 
+    font-size: 11px;
     cursor: default;
     text-align: center;
+    text-transform: uppercase;
 }
-
-.calendar__dayname_type_weekend {
-    color: rgba(242, 46, 21, 1);
-}
-
 
 .calendar__day {
-    line-height: 18px;
+    line-height: 30px;
 
-    width: 18px;
-    padding: 8px;
-
-    font-weight: 300;
+    width: 30px;
 
     text-align: center;
+}
+
+.calendar__inner {
+    cursor: pointer;
+}
+
+.calendar__arrow {
+    width: 18px;
+    height: 18px;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.calendar__arrow:hover {
+    opacity: 1;
+}
+
+.calendar__arrow_direction_left {
+    float: left;
+}
+
+.calendar__arrow_direction_right {
+    float: right;
 }
 
 .calendar__day_type_weekend {
-    color: #d00;
+    font-weight: bold;
 }
 
 .calendar__day_state_current {
@@ -92,6 +100,10 @@
     user-select: none;
 }
 
+.calendar__day_state_current:after {
+    background: rgba(178, 12, 0, 1);
+}
+
 .calendar__day_state_current:after,
 .calendar__day_state_current:before {
     position: absolute;
@@ -106,10 +118,10 @@
 }
 
 .calendar__day_state_current:after {
-    top: 3px;
-    right: 2px;
-    bottom: 3px;
-    left: 2px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
 }
 
 .calendar__day_state_current .calendar__inner {
@@ -118,25 +130,13 @@
 }
 
 .calendar__day_type_off .calendar__inner,
-.calendar__day_type_weekend-off .calendar__inner,
-.calendar__arrow_disabled,
-.calendar__arrow_disabled:hover {
+.calendar__day_type_weekend-off .calendar__inner {
     cursor: default;
     opacity: .3;
 }
 
-.calendar__inner {
-    cursor: pointer;
+.calendar__arrow_disabled {
+    visibility: hidden;
 }
 
-.ua_js_no .calendar__day_state_current:after,
-.ua_js_no .calendar__day_state_current:before {
-    display: none;
-}
-
-@media all and (min-width:0px) {
-    .calendar__day_state_current:after {
-        background: #b20c00;
-    }
-}
 
