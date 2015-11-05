@@ -1,8 +1,8 @@
 var path = require('path'),
     PROJECT_LEVELS = {
         common: ['common.blocks'],
-        desktop: ['common.blocks', 'desktop.blocks'],
-        mobile: ['common.blocks', 'mobile.blocks']
+        desktop: ['common.blocks', 'desktop.blocks']/*,
+        mobile: ['common.blocks', 'mobile.blocks']*/
     },
     SPEC_LEVEL = {
         path: path.join('libs', 'bem-pr', 'spec.blocks'),
