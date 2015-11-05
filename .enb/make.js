@@ -7,7 +7,7 @@ var path = require('path'),
 module.exports = function(project) {
     project.setLanguages(['ru', 'en']);
 
-    ['dist', 'specs', 'examples', 'docs'].forEach(function(name) {
+    ['dist', 'specs', 'examples'].forEach(function(name) {
         project.includeConfig(path.join(__dirname, 'tasks', name + '.js'));
     });
 
