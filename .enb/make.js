@@ -1,7 +1,6 @@
 var path = require('path'),
     env = process.env,
     techs = require('./techs'),
-    config = require('./config'),
     configurePage = require('./helpers/page');
 
 module.exports = function(project) {

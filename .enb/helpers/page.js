@@ -62,7 +62,9 @@ module.exports = function(node, opts) {
         }),
         levels = [].concat(
             config.levels(opts.platform),
-            sublevels
+            sublevels,
+            // ADD test.blocks for render example pages
+            { path: 'test.blocks', check: true }
         );
 
     node.addTechs([

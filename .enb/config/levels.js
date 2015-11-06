@@ -19,8 +19,7 @@ var path = require('path'),
 module.exports = function(platform, opts) {
     opts = opts || {};
     var projectLevels = [
-        { path: 'common.blocks', check: true },
-        { path: 'test.blocks', check: true }
+        { path: 'common.blocks', check: true }
     ];
 
     var levels = [

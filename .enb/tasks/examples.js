@@ -47,10 +47,10 @@ module.exports = function(project) {
  */
 function configure(helper, platform) {
     var dir = platform + '.examples';
-
     helper.configure({
         destPath: dir,
-        levels: config.levels(platform),
+        // ADD test.blocks for render example pages
+        levels: [].concat(config.levels(platform), { path: 'test.blocks', check: true }),
         techSuffixes: ['examples'],
         fileSuffixes: ['bemjson.js', 'title.txt']
     });
