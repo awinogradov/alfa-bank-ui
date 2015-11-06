@@ -37,7 +37,7 @@ function configure(helper, platform) {
 
     helper.configure({
         destPath: dir,
-        levels: config.levels(platform),
+        levels: config.levels(platform, { project: true }),
         sourceLevels: config.levels(platform, { specs: true }),
         jsSuffixes: ['vanilla.js', 'browser.js', 'js'],
         specSuffixes: ['spec.js'],
