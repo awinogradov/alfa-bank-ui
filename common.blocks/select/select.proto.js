@@ -9,10 +9,10 @@ export default class Select extends Component {
                     data: { val: [2, 3] }
                 } },
                 { radio: {
-                    data: { val: [2] }
+                    data: { val: 3 }
                 } },
                 { 'radio-check': {
-                    data: { val: [1] }
+                    data: { val: 3 }
                 } }
             ]
         };
@@ -24,6 +24,7 @@ export default class Select extends Component {
             types: { mode: 'radio-check' },
             data: {
                 text: 'This is sparta!',
+                val: 3,
                 options: [
                     { val: 1, text: 'Доклад' },
                     { val: 2, text: 'Мастер-класс', disabled: true },

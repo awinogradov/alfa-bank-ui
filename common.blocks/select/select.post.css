@@ -14,7 +14,7 @@
     padding: 0;
 }
 
-.select_hovered .select__tick {
+.select__button.button_hovered .select__tick {
     opacity: 1;
 }
 
