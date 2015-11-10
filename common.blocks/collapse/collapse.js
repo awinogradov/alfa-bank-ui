@@ -22,12 +22,12 @@ modules.define('collapse', ['i-bem__dom'], function(provide, BEMDOM) {
             'expanded': {
                 'true': function() {
                     this.__base.apply(this, arguments);
-                    this._link.setVal(this.params.expandedLabel);
+                    this._link.elem('text').text(this.params.expandedLabel);
                     this.elem('content').height(this._height);
                 },
                 '': function() {
                     this.__base.apply(this, arguments);
-                    this._link.setVal(this.params.collapsedLabel);
+                    this._link.elem('text').text(this.params.collapsedLabel);
                     this.elem('content').height(0);
                 }
             }

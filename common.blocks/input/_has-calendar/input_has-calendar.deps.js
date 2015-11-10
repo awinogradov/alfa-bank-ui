@@ -5,7 +5,7 @@
         },
         {
             block: 'calendar',
-            mods: { theme: ['alfa-on-color', 'alfa-on-white']}
+            mods: { theme: ['alfa-on-color', 'alfa-on-white'] }
         },
         'objects'
     ],

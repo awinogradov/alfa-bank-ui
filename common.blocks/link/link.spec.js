@@ -49,8 +49,8 @@ describe('link', function() {
             block = utils.buildBlock('link', bemjson);
 
             block.findElem('text')
-                .hasClass('link__text')
-                .should.be.true;
+                .text()
+                .should.be.equal('text');
         });
 
         it('mode icon', function() {

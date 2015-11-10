@@ -5,7 +5,7 @@
 },
 {
     tech: 'spec.js',
-    mustDeps: [
-        { tech: 'bemhtml', block: 'input', mods: { type: 'card' } }
+    shouldDeps: [
+        { tech: 'bemhtml', block: 'input', mods: { type: 'tel' } }
     ]
 }];

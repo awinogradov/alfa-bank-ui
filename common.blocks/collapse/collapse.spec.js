@@ -36,20 +36,18 @@ modules.define(
         });
 
         it('should set link label to `collapsedLabel` in collapsed state', function() {
-            block._link.should.not.be.null;
-            block._link.getVal().should.equal(cl);
+            block._link.domElem.text().should.equal(cl);
         });
 
         it('should set link label to `expandedLabel` in expanded state', function() {
             block.setMod('expanded', true);
-            block._link.should.not.be.null;
-            block._link.getVal().should.equal(el);
+            block._link.domElem.text().should.equal(el);
         });
 
         it('should set link label to `expandedLabel` when rendered with `expanded` mod', function() {
             bemjson.mods.expanded = true;
             block = utils.buildBlock('collapse', bemjson);
-            block._link.getVal().should.equal(el);
+            block._link.domElem.text().should.equal(el);
         });
 
         it('should toggle `expanded` mode on link click', function() {
