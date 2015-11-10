@@ -1,3 +1,4 @@
+/* istanbul ignore next text */
 modules.define('input',
     ['jquery__formatter'],
     function(provide, $, Input) {
