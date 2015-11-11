@@ -10,11 +10,10 @@
 node_modules
 libs
 
-*.bundles/*/*
-!*.bundles/.bem/*
-!*.bundles/*/blocks
-!*.bundles/*/*.bemjson.js
-*.bundles/*/_*.bemjson.js
+pages/*/*
+!pages/*/blocks
+!pages/*/*.bemjson.js
+pages/*/_*.bemjson.js
 
 .protein
 
