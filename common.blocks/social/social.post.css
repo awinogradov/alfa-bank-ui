@@ -1,0 +1,17 @@
+.social__list {
+    padding-bottom: 3px;
+}
+
+.social__item {
+    transition: .2s;
+}
+
+.social__item + .social__item {
+    margin-left: 10px;
+}
+
+.social__icon {
+    width: 20px;
+    height: 20px;
+}
+
