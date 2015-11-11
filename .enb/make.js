@@ -17,4 +17,12 @@ module.exports = function(project) {
             platform: 'common'
         });
     });
+
+    project.nodes('pages/*', function(node) {
+        node.addTech([techs.files.provide, { target: '?.bemjson.js' }]);
+
+        configurePage(node, {
+            platform: 'common'
+        });
+    });
 };
