@@ -1,0 +1,11 @@
+.social_theme_alfa-on-color {
+
+    .social__item {
+        opacity: .85;
+    }
+
+    .social__item.link_hovered {
+        opacity: 1;
+    }
+}
+

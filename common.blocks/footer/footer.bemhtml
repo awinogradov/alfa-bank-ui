@@ -18,36 +18,12 @@ block('footer')(
                     content: [
                         {
                             block: 'social',
-                            content: [
-                                [
-                                    { name: 'vk', url: 'https://vk.com/alfabank' },
-                                    { name: 'facebook', url: 'https://facebook.com/alfabank' },
-                                    { name: 'twitter', url: 'https://twitter.com/alfabank' }
-                                ].map(function(network) {
-                                    return {
-                                        block: 'link',
-                                        mods: { theme: ctx.mods.theme, size: 's' },
-                                        url: network.url,
-                                        content: {
-                                            block: 'icon',
-                                            mods: {
-                                                network: network.name,
-                                                size: 's',
-                                                theme: ctx.mods.theme
-                                            }
-                                        }
-                                    };
-                                }),
-                                {
-                                    block: 'link',
-                                    mods: { theme: ctx.mods.theme, size: 's' },
-                                    url: '//alfabank.ru/internet/socmedia',
-                                    text: 'Мы в соцмедиа'
-                                }
-                            ]
+                            mix: { block: this.block, elem: 'social' },
+                            mods: { theme: ctx.mods.theme }
                         },
                         {
                             block: 'copyright',
+                            mix: { block: this.block, elem: 'copyright' },
                             mods: { theme: ctx.mods.theme }
                         }
                     ]
