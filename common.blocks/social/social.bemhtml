@@ -29,7 +29,7 @@ block('social').content()(function() {
             })
         },
         {
-            elem: 'footer',
+            elem: 'info',
             content: [
                 {
                     block: 'link',
