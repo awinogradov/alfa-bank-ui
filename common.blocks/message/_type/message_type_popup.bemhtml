@@ -2,7 +2,7 @@ block('message').mod('type', 'popup')(
     def()(function() {
         var ctx = this.ctx;
 
-        applyCtx([
+        return applyCtx([
             {
                 block: 'popup',
                 directions: ['right-top'],
