@@ -1,0 +1,22 @@
+.social__list {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.social__info {
+    display: inline-block;
+}
+
+.social__item {
+    transition: .2s;
+}
+
+.social__item + .social__item {
+    margin-left: 10px;
+}
+
+.social__icon {
+    width: 20px;
+    height: 20px;
+}
+

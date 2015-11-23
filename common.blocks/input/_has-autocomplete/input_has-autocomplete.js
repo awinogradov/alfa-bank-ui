@@ -208,7 +208,7 @@ provide(Input.decl({ modName: 'has-autocomplete' }, {
     },
 
     _updateMenuWidth: function() {
-        this.getPopup().domElem.css('min-width', this.domElem.outerWidth());
+        this.getMenu().domElem.css('min-width', this.domElem.outerWidth());
         this.getPopup().redraw();
     },
 

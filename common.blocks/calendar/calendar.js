@@ -17,7 +17,6 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
         'js': {
             'inited': function() {
                 this._val = null;
-
                 this.params.val ?
                     this.setVal(this.params.val) :
                     this._month = moment(this._getToday()).set('date', 1).format();

@@ -12,14 +12,9 @@ export default class Button extends Component {
                 'other',
                 'pseudo'
             ],
-            type: [
-                { 'link': {
-                    data: { url: '#' }
-                } }
-            ],
             icon: [
                 { false: {
-                    data: { icon: { block: 'icon', mods: { tool: 'search' } } }
+                    data: { icon: { block: 'icon', mods: { tool: 'calendar' } } }
                 } }
             ],
             spin: [
@@ -35,7 +30,7 @@ export default class Button extends Component {
 
     default() {
         return {
-            states: ['hovered', 'focused-hard', ['hovered', 'focused-hard'], 'pressed', 'disabled'],
+            states: ['hovered', 'focused-hard', ['hovered', 'focused-hard'], 'pressed', 'disabled', 'checked'],
             data: { text: 'Button' }
         };
     }

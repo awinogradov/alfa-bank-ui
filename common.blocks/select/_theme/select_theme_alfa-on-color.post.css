@@ -15,20 +15,16 @@
             background-color: rgba(0, 0, 0, .15);
         }
 
-        &.select_hovered {
-
-            .select__button {
-                background: transparent;
-                box-shadow: none;
-                border-color: rgba(255, 255, 255, .9);
-            }
-
+        .select__button.button_hovered {
+            background: transparent;
+            box-shadow: none;
+            border-color: rgba(255, 255, 255, .9);
         }
 
     }
 
     &.select_invalid {
-        
+
         .select__button {
             border-color: rgba(248, 96, 101, .85);
         }

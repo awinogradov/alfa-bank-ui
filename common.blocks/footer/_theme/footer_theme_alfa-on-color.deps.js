@@ -1,10 +1,8 @@
-[{
+({
     shouldDeps: [
-        { block: 'copyright' },
-        { block: 'menu' },
-        { block: 'menu-item' }
-    ].map(function(block) {
-        block.mods = { theme: 'alfa-on-color' };
-        return block;
-    })
-}];
+        { block: 'copyright', mods: { theme: 'alfa-on-color' } },
+        { block: 'social', mods: { theme: 'alfa-on-color' } },
+        { block: 'menu', mods: { theme: 'alfa-on-color' } },
+        { block: 'menu-item', mods: { theme: 'alfa-on-color' } }
+    ]
+});

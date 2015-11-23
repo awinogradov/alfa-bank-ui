@@ -1,8 +1,8 @@
 var path = require('path'),
     PROJECT_LEVELS = {
         common: ['common.blocks'],
-        desktop: ['common.blocks', 'desktop.blocks'],
-        mobile: ['common.blocks', 'mobile.blocks']
+        desktop: ['common.blocks', 'desktop.blocks']/*,
+        mobile: ['common.blocks', 'mobile.blocks']*/
     },
     SPEC_LEVEL = {
         path: path.join('libs', 'bem-pr', 'spec.blocks'),
@@ -18,6 +18,9 @@ var path = require('path'),
  */
 module.exports = function(platform, opts) {
     opts = opts || {};
+    var projectLevels = [
+        { path: 'common.blocks', check: true }
+    ];
 
     var levels = [
         { path: path.join('libs', 'bem-core',  'common.blocks'), check: false },
@@ -26,10 +29,12 @@ module.exports = function(platform, opts) {
         { path: path.join('libs', 'bem-components', 'desktop.blocks'), check: false },
         { path: path.join('libs', 'bem-forms',  'common.blocks'), check: false },
         { path: path.join('libs', 'bem-grid', 'common.blocks'), check: false },
-        { path: path.join('libs', 'bem-typography', 'common.blocks'), check: false },
-        { path: 'common.blocks', check: true },
-        { path: 'test.blocks', check: true }
-    ];
+        { path: path.join('libs', 'bem-typography', 'common.blocks'), check: false }
+    ].concat(projectLevels);
+
+    if (opts.project) {
+        return projectLevels;
+    }
 
     if (opts.specs) {
         return [].concat(

@@ -7,4 +7,4 @@
     shouldDeps: [
         { tech: 'bemhtml', block: 'link' }
     ]
-})
+});

@@ -1,8 +1,0 @@
-block('icon')(
-
-    js()(true),
-
-    mix()(function() {
-        return { elem: 'control' };
-    })
-);

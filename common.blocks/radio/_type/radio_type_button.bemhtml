@@ -1,20 +1,19 @@
 block('radio').mod('type', 'button')(
     content()(function() {
         var ctx = this.ctx,
-            mods = this.mods;
+            mods = ctx.mods;
 
         return [{
             block: 'button',
             mods: {
-                togglable: mods.mode === 'radio-check'?
-                    'check':
-                    'radio',
+                togglable: mods.mode === 'radio-check' ? 'check' : 'radio',
                 checked: mods.checked,
                 disabled: mods.disabled,
                 theme: mods.theme,
                 size: mods.size,
                 hovered: mods.hovered,
-                focused: mods.focused
+                focused: mods.focused,
+                view: mods.view
             },
             title: ctx.title,
             content: [

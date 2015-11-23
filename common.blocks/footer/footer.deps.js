@@ -1,7 +1,8 @@
 ({
     shouldDeps: [
-        { block: 'copyright' },
+        'copyright',
+        'social',
         { block: 'menu', mods: { horizontal: true } },
-        { block: 'menu-item', type: 'link' }
+        { block: 'menu-item', mods: { type: 'link' } }
     ]
 });

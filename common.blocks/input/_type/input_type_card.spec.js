@@ -1,6 +1,6 @@
 modules.define('spec', ['spec__utils', 'jquery__formatter', 'input'], function(provide, utils) {
 
-    describe('input_has-mask', function() {
+    describe('input_type_card', function() {
 
         it('should init without errors', function() {
             var block = utils.buildBlock('input', {

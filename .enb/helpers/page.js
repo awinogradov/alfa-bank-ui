@@ -62,7 +62,9 @@ module.exports = function(node, opts) {
         }),
         levels = [].concat(
             config.levels(opts.platform),
-            sublevels
+            sublevels,
+            // ADD test.blocks for render example pages
+            { path: 'test.blocks', check: true }
         );
 
     node.addTechs([
@@ -101,7 +103,10 @@ module.exports = function(node, opts) {
     ]);
 
     node.addTechs([
-        [techs.engines.bemhtml, { target: '.tmp.bemhtml.js' }],
+        [techs.engines.bemhtml, {
+            target: '.tmp.bemhtml.js',
+            sourceSuffixes: ['bemhtml', 'bemhtml.js']
+        }],
         [techs.html.bemhtml, {
             target: '?.html',
             bemhtmlFile: '.tmp.bemhtml.js'

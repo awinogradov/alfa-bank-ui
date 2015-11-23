@@ -1,4 +1,4 @@
-modules.define('spec', ['dropdown', 'spec__utils'], function(provide, _, helper) {
+modules.define('spec', ['spec__utils', 'jquery', 'dropdown', 'link'], function(provide, helper, $) {
 
     describe('dropdown_mode_hover', function() {
         var dropdown,
@@ -6,7 +6,7 @@ modules.define('spec', ['dropdown', 'spec__utils'], function(provide, _, helper)
                 block: 'dropdown',
                 mods: { switcher: 'link', mode: 'hover' },
                 switcher: { block: 'link', content: 'dropdown link' },
-                content: { block: 'popup', content: 'popup content' }
+                popup: { block: 'popup', content: 'popup content' }
             };
 
         beforeEach(function() {
@@ -19,13 +19,13 @@ modules.define('spec', ['dropdown', 'spec__utils'], function(provide, _, helper)
 
         it('should add mod "opened" on hover', function() {
             dropdown.hasMod('opened').should.be.false;
-            dropdown.getSwitcher().domElem.mouseenter();
+            dropdown.getSwitcher().domElem.mouseover();
             dropdown.hasMod('opened').should.be.true;
         });
 
         it('should remove mod "opened" on mouseleave on popup', function() {
-            dropdown.setMod('opened', true);
-            dropdown.getPopup().domElem.mouseleave();
+            dropdown.getSwitcher().domElem.mouseover();
+            dropdown.getSwitcher().domElem.mouseleave();
             dropdown.hasMod('opened').should.be.false;
         });
     });

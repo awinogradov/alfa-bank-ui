@@ -4,6 +4,9 @@
 
     .radio__box {
         transition: all 200ms ease;
+
+        background: rgba(255, 255, 255, .9);
+
         border: 1px solid rgba(0, 0, 0, .3);
     }
 

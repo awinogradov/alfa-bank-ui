@@ -14,7 +14,7 @@ describe('input_has-calendar', function() {
     beforeEach(function() {
         bemjson = {
             block: 'input',
-            mods: { 'has-calendar': true, 'has-addon': true }
+            mods: { 'has-calendar': true }
         };
     });
 
@@ -22,23 +22,16 @@ describe('input_has-calendar', function() {
         helper.destruct(block);
     });
 
-    it('should have `control` and `box` elements', function() {
+    it('should add `calendar` block after init', function() {
         block = build('input', bemjson);
-        expect(block.elem('box')).to.not.be.null;
-        expect(block.elem('control')).to.not.be.null;
-    });
-
-    it('should add `calendar` block to `box` element', function() {
-        block = build('input', bemjson);
-        var calendar = block.findBlockInside('calendar');
-
-        expect(calendar).to.not.be.null;
+        block.elem('control').trigger('focus');
+        expect(block._calendar).to.not.be.null;
     });
 
     it('should pass `theme` mods to `calendar` end `popup`', function(done) {
         bemjson.mods.theme = 'xxx';
         block = build('input', bemjson);
-        block.showCalendar();
+        block.elem('control').trigger('focus');
         setTimeout(function() {
             block._calendar.getMod('theme').should.equal('xxx');
             block._popup.getMod('theme').should.equal('xxx');
@@ -48,7 +41,7 @@ describe('input_has-calendar', function() {
 
     it('should set popup`s anchor', function(done) {
         block = build('input', bemjson);
-        block.showCalendar();
+        block.elem('control').trigger('focus');
         setTimeout(function() {
             block._popup._anchor.should.equal(block.domElem);
             done();
@@ -77,8 +70,17 @@ describe('input_has-calendar', function() {
         }, 200);
     });
 
-    it('should toggle calendar when clicked switcher element', function(done) {
+    it('should be render calendar switcher elem id set has_addon mod', function(done) {
+        bemjson.mods['has-addon'] = true;
+        bemjson.addon = { block: 'icon', content: 'ok' };
+        block = build('input', bemjson);
+        block.findElem('calendar').text().should.be.equal('ok');
+        done();
+    });
 
+    it('should toggle calendar when clicked switcher element', function(done) {
+        bemjson.mods['has-addon'] = true;
+        bemjson.addon = { block: 'icon' };
         block = build('input', bemjson);
         block.findElem('calendar').click();
         setTimeout(function() {
@@ -92,7 +94,8 @@ describe('input_has-calendar', function() {
     it('should not open calendar when input disabled', function(done) {
         bemjson.mods.disabled = true;
         block = build('input', bemjson);
-        block.findElem('calendar').click();
+        block.domElem.click();
+        block.hasMod('js', 'inited').should.be.true;
         setTimeout(function() {
             block.isShownCalendar().should.be.false;
             done();
@@ -198,7 +201,6 @@ describe('input_has-calendar', function() {
 
     it('should not close the popup when user clicked on input', function(done) {
         block = build('input', bemjson);
-
         block.elem('control').focus();
         setTimeout(function() {
             block.isShownCalendar().should.be.true;
@@ -212,7 +214,6 @@ describe('input_has-calendar', function() {
             block.isShownCalendar().should.be.true;
             done();
         }, 200);
-
     });
 
     it('should emit `pick-date` event on calendar changed', function() {

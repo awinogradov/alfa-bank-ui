@@ -15,16 +15,7 @@ export default class Dropdown extends Component {
                         popup: 'Some info from button'
                     }
                 } },
-                'link',
-                { 'icon': {
-                    data: {
-                        switcher: {
-                            block: 'icon',
-                            mods: { tool: 'help' }
-                        },
-                        popup: 'Some info from icon'
-                    }
-                } }
+                'link'
             ],
             mode: ['hover', 'focus'],
             view: ['error']
