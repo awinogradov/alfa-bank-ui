@@ -13,13 +13,14 @@ block('dropdown')(
         var popup = this.ctx.popup,
             switcher = this.ctx.switcher;
 
-        if(this.isSimple(popup) || popup.block !== 'popup') {
+        if (this.isSimple(popup) || popup.block !== 'popup') {
             popup = { block: 'popup', content: popup };
         }
 
         var popupMods = popup.mods || (popup.mods = {});
         popupMods.theme || (popupMods.theme = this.mods.theme);
         popupMods.view || (popupMods.view = this.mods.view);
+        popupMods.type || (popupMods.type = this.mods.type);
         popupMods.hasOwnProperty('autoclosable') || (popupMods.autoclosable = true);
 
         popupMods.target = 'anchor';

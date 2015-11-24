@@ -15,10 +15,23 @@ export default class Dropdown extends Component {
                         popup: 'Some info from button'
                     }
                 } },
+                { 'button': {
+                    types: {
+                        type: 'tooltip'
+                    },
+                    data: {
+                        switcher: {
+                            block: 'button',
+                            text: 'button'
+                        },
+                        popup: 'Some info from button'
+                    }
+                } },
                 'link'
             ],
             mode: ['hover', 'focus'],
-            view: ['error']
+            view: ['error'],
+            type: ['tooltip']
         };
     }
 

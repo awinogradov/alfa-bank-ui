@@ -48,7 +48,7 @@
     "postcss-mixins": "^1.0.2",
     "postcss-nested": "^1.0.0",
     "postcss-simple-vars": "^1.0.1",
-    "protein-kit": "git+ssh://git@git.theprotein.io:protein/kit.git#0.0.2"
+    "protein-kit": "git+ssh://git@git.theprotein.io:protein/kit.git#v0.0.4-bank"
   },
   "scripts": {
     "start": "magic server",
