@@ -1,6 +1,6 @@
 ({
-    shouldDeps: {
+    shouldDeps: [{
         block: 'popup',
         mods: { type: 'tooltip' }
-    }
-})
+    }]
+});

@@ -1,6 +1,6 @@
 block('form')(
     def()(function() {
-        var mods = this.ctx.mods || {};
+        var mods = this.mods;
         return applyNext({
             _mods: {
                 theme: mods.theme,

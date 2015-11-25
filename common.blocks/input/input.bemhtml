@@ -1,6 +1,6 @@
 block('input')(
     def()(function() {
-        var mods = this.ctx.mods || {};
+        var mods = this.mods;
         return applyNext({
             _mods: {
                 theme: mods.theme,
@@ -9,7 +9,7 @@ block('input')(
         });
     }),
     match(function() { return this.ctx.addon; }).def()(function() {
-        this.ctx.mods['has-addon'] = true;
+        this.mods['has-addon'] = true;
         return applyNext();
     })
 );

@@ -1,7 +1,0 @@
-block('checkbox').elem('control')(
-    match(function() { return this._mods; }).def()(function() {
-        this.ctx.mods.theme = false;
-        this.ctx.mods.size = false;
-        return applyNext();
-    })
-);

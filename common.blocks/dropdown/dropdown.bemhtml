@@ -1,35 +1,21 @@
 block('dropdown')(
     def()(function() {
-        var mods = this._mods || this.ctx.mods || {};
+        var ctx = this.ctx;
+        var mods = this._mods || this.mods;
         return applyNext({
             _mods: {
                 theme: mods.theme,
                 size: mods.size
+            },
+            _popup: {
+                mods: {
+                    theme: mods.theme,
+                    size: mods.size,
+                    view: mods.view,
+                    type: mods.type
+                },
+                directions: ctx.directions
             }
         });
-    }),
-
-    content()(function() {
-        var popup = this.ctx.popup,
-            switcher = this.ctx.switcher;
-
-        if (this.isSimple(popup) || popup.block !== 'popup') {
-            popup = { block: 'popup', content: popup };
-        }
-
-        var popupMods = popup.mods || (popup.mods = {});
-        popupMods.theme || (popupMods.theme = this.mods.theme);
-        popupMods.view || (popupMods.view = this.mods.view);
-        popupMods.type || (popupMods.type = this.mods.type);
-        popupMods.hasOwnProperty('autoclosable') || (popupMods.autoclosable = true);
-
-        popupMods.target = 'anchor';
-
-        popup.directions = this.ctx.directions;
-
-        popup.mix = this.extend(popup.mix || {}, { block: this.block, elem: 'popup' });
-        switcher.mix = this.extend(switcher.mix || {}, { block: this.block, elem: 'switcher' });
-
-        return [{ elem: 'switcher', content: switcher }, popup];
     })
 );

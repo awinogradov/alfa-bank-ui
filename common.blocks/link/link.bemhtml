@@ -1,6 +1,6 @@
 block('link')(
     def()(function() {
-        var mods = this._mods || this.ctx.mods || {};
+        var mods = this._mods || this.mods;
         return applyNext({
             _mods: {
                 theme: mods.theme,

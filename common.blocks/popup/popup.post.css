@@ -15,17 +15,17 @@
 }
 
 .popup_size_s {
-    padding: 7.5px 12px;
+    padding: 7px 12px 8px;
     font-size: 13px;
 }
 
 .popup_size_m {
-    padding: 10.5px 14px;
+    padding: 10px 14px 11px;
     font-size: 16px;
 }
 
 .popup_size_l {
-    padding: 14.5px 18px;
+    padding: 14px 18px 15px;
     font-size: 18px;
 }
 

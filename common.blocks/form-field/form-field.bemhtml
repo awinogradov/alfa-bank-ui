@@ -1,10 +1,11 @@
 block('form-field')(
     match(function() { return this._mods && this._mods.view; }).def()(function() {
-        this.ctx.mods.view = this._mods.view;
+        var mods = this._mods || this.mods;
+        this.mods.view = mods.view;
         return applyNext({
             _mods: {
-                theme: this._mods.theme || this.ctx.mods.theme,
-                size: this._mods.size || this.ctx.mods.size
+                theme: mods.theme || mods.theme,
+                size: mods.size || mods.size
             }
         });
     })
