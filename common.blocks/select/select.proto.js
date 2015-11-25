@@ -6,15 +6,61 @@ export default class Select extends Component {
             size: ['s', 'm', 'l', 'xl'],
             mode: [
                 { check: {
-                    data: { val: [2, 3] }
+                    data: {
+                        val: [2, 3],
+                        options: [
+                            { val: 1, text: 'Доклад' },
+                            { val: 2, text: 'Мастер-класс', disabled: true },
+                            { val: 3, text: 'Круглый стол' },
+                            {
+                                title: 'Group',
+                                group: [
+                                    { val: 4, text: 'Доклад' },
+                                    { val: 5, text: 'Мастер-класс' },
+                                    { val: 6, text: 'Круглый стол' }
+                                ]
+                            }
+                        ]
+                    }
                 } },
                 { radio: {
-                    data: { val: 3 }
+                    data: {
+                        val: 3,
+                        options: [
+                            { val: 1, text: 'Доклад' },
+                            { val: 2, text: 'Мастер-класс', disabled: true },
+                            { val: 3, text: 'Круглый стол' },
+                            {
+                                title: 'Group',
+                                group: [
+                                    { val: 4, text: 'Доклад' },
+                                    { val: 5, text: 'Мастер-класс' },
+                                    { val: 6, text: 'Круглый стол' }
+                                ]
+                            }
+                        ]
+                    }
                 } },
                 { 'radio-check': {
-                    data: { val: 3 }
+                    data: {
+                        val: 3,
+                        options: [
+                            { val: 1, text: 'Доклад' },
+                            { val: 2, text: 'Мастер-класс', disabled: true },
+                            { val: 3, text: 'Круглый стол' },
+                            {
+                                title: 'Group',
+                                group: [
+                                    { val: 4, text: 'Доклад' },
+                                    { val: 5, text: 'Мастер-класс' },
+                                    { val: 6, text: 'Круглый стол' }
+                                ]
+                            }
+                        ]
+                    }
                 } }
-            ]
+            ],
+            width: ['avalable']
         };
     }
 
