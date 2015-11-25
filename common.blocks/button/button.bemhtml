@@ -1,10 +1,10 @@
 block('button')(
     def()(function() {
+        var mods = this._mods || this.mods;
         return applyNext({
             _mods: {
-                theme: this._mods ? this._mods.theme : this.ctx.mods.theme,
-                size: this._mods ? this._mods.size : this.ctx.mods.size,
-                view: this._mods ? this._mods.view : this.ctx.mods.view
+                theme: mods.theme,
+                size: mods.size
             }
         });
     }),

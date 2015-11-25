@@ -1,0 +1,1 @@
+block('dropdown').mod('mode', 'focus').js()({ live: false });

@@ -1,3 +1,3 @@
 block('checkbox-group').def()(function() {
-    return applyNext({ _view: this.ctx.mods.view });
+    return applyNext({ _view: this.mods.view });
 });

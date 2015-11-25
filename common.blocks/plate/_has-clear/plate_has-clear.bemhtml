@@ -2,7 +2,7 @@ block('plate').mod('has-clear', true)(
     js()(true),
     content()(function() {
         return [
-            this.ctx.content,
+            applyNext(),
             {
                 elem: 'clear',
                 content: {

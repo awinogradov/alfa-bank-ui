@@ -1,4 +1,4 @@
 block('link').mod('view', 'pseudo').def()(function() {
-    this.ctx.mods.pseudo = true;
+    this.mods.pseudo = true;
     return applyNext();
 });

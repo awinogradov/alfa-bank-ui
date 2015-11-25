@@ -11,30 +11,35 @@
 
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    line-height: 1.2;
 }
 
 .popup_size_s {
-    padding: 8px 12px;
+    padding: 7px 12px 8px;
     font-size: 13px;
 }
 
 .popup_size_m {
-    padding: 10px 14px;
+    padding: 10px 14px 11px;
     font-size: 16px;
 }
 
 .popup_size_l {
-    padding: 12px 18px;
+    padding: 14px 18px 15px;
     font-size: 18px;
 }
 
 .popup_size_xl {
-    padding: 14px 22px;
+    padding: 18px 22px;
     font-size: 20px;
 }
 
 .popup_visible {
     visibility: visible;
-    overflow: auto;
-    margin: 2px 0;
+    margin: 0;
+}
+
+.popup_view_error {
+    background: rgba(248, 96, 101, .95);
+    color: rgba(255, 255, 255, .9);
 }

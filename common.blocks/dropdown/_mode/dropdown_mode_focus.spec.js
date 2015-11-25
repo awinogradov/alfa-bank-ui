@@ -1,10 +1,10 @@
 modules.define('spec', ['spec__utils', 'jquery', 'dropdown', 'link'], function(provide, helper, $) {
 
-    describe('dropdown_mode_hover', function() {
+    describe('dropdown_mode_focus', function() {
         var dropdown,
             bemjson = {
                 block: 'dropdown',
-                mods: { switcher: 'link', mode: 'hover' },
+                mods: { switcher: 'link', mode: 'focus' },
                 switcher: { block: 'link', content: 'dropdown link' },
                 popup: { block: 'popup', content: 'popup content' }
             };
@@ -17,15 +17,15 @@ modules.define('spec', ['spec__utils', 'jquery', 'dropdown', 'link'], function(p
             helper.destruct(dropdown);
         });
 
-        it('should add mod "opened" on hover', function() {
+        it('should add mod "opened" on focus', function() {
             dropdown.hasMod('opened').should.be.false;
-            dropdown.getSwitcher().domElem.mouseover();
+            dropdown.getSwitcher().domElem.focus();
             dropdown.hasMod('opened').should.be.true;
         });
 
-        it('should remove mod "opened" on mouseleave on popup', function() {
-            dropdown.getSwitcher().domElem.mouseover();
-            dropdown.getSwitcher().domElem.mouseleave();
+        it('should remove mod "opened" on blur on popup', function() {
+            dropdown.getSwitcher().domElem.focus();
+            dropdown.getSwitcher().domElem.blur();
             dropdown.hasMod('opened').should.be.false;
         });
     });

@@ -10,7 +10,7 @@ export default class UI extends Protein {
             let menu = component.getTypesKeys().map((modName, i) => {
                 return {
                     block: 'menu-item',
-                    mods: { type: 'link', view: 'pseudo' },
+                    mods: { type: 'link' },
                     url: '#' + modName,
                     content: modName
                 };

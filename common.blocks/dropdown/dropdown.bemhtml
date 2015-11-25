@@ -1,0 +1,21 @@
+block('dropdown')(
+    def()(function() {
+        var ctx = this.ctx;
+        var mods = this._mods || this.mods;
+        return applyNext({
+            _mods: {
+                theme: mods.theme,
+                size: mods.size
+            },
+            _popup: {
+                mods: {
+                    theme: mods.theme,
+                    size: mods.size,
+                    view: mods.view,
+                    type: mods.type
+                },
+                directions: ctx.directions
+            }
+        });
+    })
+);

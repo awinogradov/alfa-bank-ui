@@ -6,9 +6,7 @@ block('radio').mod('type', 'button')(
         return [{
             block: 'button',
             mods: {
-                togglable: mods.mode === 'radio-check'?
-                    'check':
-                    'radio',
+                togglable: mods.mode === 'radio-check' ? 'check' : 'radio',
                 checked: mods.checked,
                 disabled: mods.disabled,
                 theme: mods.theme,

@@ -1,5 +1,5 @@
 block('user').content()(function() {
-    var mods = this.ctx.mods,
+    var mods = this.mods,
         icon = this.ctx.icon;
 
     icon && (icon.mix = { block: 'user', elem: 'icon' });

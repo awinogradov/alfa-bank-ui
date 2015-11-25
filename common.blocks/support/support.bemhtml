@@ -1,5 +1,5 @@
 block('support').content()(function() {
-    var mods = this.ctx.mods;
+    var mods = this.mods;
     return [
         {
             elem: 'city',
