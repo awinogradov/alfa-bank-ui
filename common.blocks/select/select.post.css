@@ -1,13 +1,13 @@
 .select {
     display: inline-block;
     vertical-align: top;
+    min-width: 100px;
 }
 
 .select__button {
+    width: 100%;
     text-align: left;
     vertical-align: top;
-
-    min-width: 100px;
 }
 
 .select__popup {

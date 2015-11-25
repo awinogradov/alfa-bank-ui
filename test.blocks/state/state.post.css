@@ -1,6 +1,7 @@
 .state {
     display: inline-block;
     margin-right: 14px;
+    min-width: 200px;
 }
 
 .state__title {

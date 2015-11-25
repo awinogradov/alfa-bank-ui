@@ -60,7 +60,7 @@ export default class Select extends Component {
                     }
                 } }
             ],
-            width: ['avalable']
+            width: ['available']
         };
     }
 
