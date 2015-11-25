@@ -14,48 +14,6 @@
     padding: 0;
 }
 
-.select__button.button_hovered .select__tick {
-    opacity: 1;
-}
-
-.select_size_s, .select_size_m {
-    .select__tick {
-        width: 30px;
-        background-size: 8px;
-    }
-}
-
-.select_size_s {
-    .select__button {
-        padding: 8px 30px 8px 10px;
-    }
-}
-
-.select_size_m {
-    .select__button {
-        padding: 10px 30px 10px 12px;
-    }
-}
-
-.select_size_l, .select_size_xl {
-    .select__tick {
-        width: 34px;
-        background-size: 10px;
-    }
-}
-
-.select_size_l {
-    .select__button {
-        padding: 12px 35px 12px 15px;
-    }
-}
-
-.select_size_xl {
-    .select__button {
-        padding: 16px 35px 16px 15px;
-    }
-}
-
 .select__tick {
     position: absolute;
     top: 0;
@@ -72,4 +30,32 @@
 
 .select_disabled .select__tick {
     opacity: .3;
+}
+
+.select_size_s .select__button,
+.select_size_m .select__button {
+    padding-right: 30px;
+    padding-left: 10px;
+}
+
+.select_size_l .select__button,
+.select_size_xl .select__button {
+    padding-right: 34px;
+    padding-left: 15px;
+}
+
+.select__button.button_hovered .select__tick {
+    opacity: 1;
+}
+
+.select_size_s .select__tick,
+.select_size_m .select__tick {
+    width: 30px;
+    background-size: 8px;
+}
+
+.select_size_l .select__tick,
+.select_size_xl .select__tick {
+    width: 34px;
+    background-size: 10px;
 }
