@@ -20,12 +20,6 @@
 
 .menu-item_checked {
     cursor: default;
-
-    &:before {
-        position: relative;
-        display: inline-block;
-        content: '';
-    }
 }
 
 .menu-item_hidden {
