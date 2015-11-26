@@ -14,6 +14,10 @@
     padding: 0;
 }
 
+.select__menu {
+    overflow: auto;
+}
+
 .select__tick {
     position: absolute;
     top: 0;
