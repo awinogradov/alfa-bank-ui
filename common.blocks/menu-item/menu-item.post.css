@@ -32,8 +32,4 @@
     .menu-item__link {
         outline: none;
     }
-
-    &.menu-item_checked:before {
-        display: none;
-    }
 }
