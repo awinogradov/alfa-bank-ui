@@ -71,7 +71,7 @@
 
 .input__clear {
     position: absolute;
-    top: 50%;
+    top: 0px;
     right: 0;
 
     cursor: text;
@@ -113,19 +113,20 @@
     text-overflow: clip;
 }
 
-.input_has-addon {
+.input_has-icon {
+
+    .input__icon {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        transition: all 200ms ease;
+    }
 
     .input__control {
-        padding-right: 0;
-    }
-
-    .input__addon {
-        transition: all 200ms ease;
-        top: -1px;
-        right: -1px;
+        text-overflow: ellipsis;
+        padding-right: 2px;
     }
 }
-
 
 .input_mode_link {
     padding-left: 0;
@@ -147,30 +148,15 @@
         padding: 8px 10px 7px;
     }
 
-    &.input_has-clear {
-        .input__box {
-            padding-right: 20px;
-        }
-
-        .input__clear {
-            width: 20px;
-            height: 20px;
-            margin-top: -10px;
-        }
+    &.input_has-clear .input__box,
+    &.input_has-icon .input__box {
+        padding-right: 28px; /* -2px borders */
     }
 
-    &.input_has-addon {
-        .input__box {
-            padding-right: 25px;
-        }
-
-        .input__addon {
-            width: 25px;
-            height: 25px;
-
-            line-height: 25px;
-            font-size: 12px;
-        }
+    &.input_has-clear .input__clear,
+    &.input_has-icon .input__icon { /* TODO: Maybe icon should not have set this width/height */
+        width: 28px;
+        height: 28px;
     }
 
     &.input_mode_link {
@@ -193,30 +179,15 @@
         padding: 10px 12px 9px;
     }
 
-    &.input_has-clear {
-        .input__box {
-            padding-right: 34px;
-        }
-
-        .input__clear {
-            width: 34px;
-            height: 34px;
-            margin-top: -17px;
-        }
+    &.input_has-clear .input__box,
+    &.input_has-icon .input__box {
+        padding-right: 38px;
     }
 
-    &.input_has-addon {
-        .input__box {
-            padding-right: 35px;
-        }
-
-        .input__addon {
-            width: 35px;
-            height: 35px;
-
-            line-height: 35px;
-            font-size: 14px;
-        }
+    &.input_has-clear .input__clear,
+    &.input_has-icon .input__icon {
+        width: 38px;
+        height: 38px;
     }
 
     &.input_mode_link {
@@ -239,30 +210,15 @@
         padding: 13px 15px 12px;
     }
 
-    &.input_has-clear {
-        .input__box {
-            padding-right: 38px;
-        }
-
-        .input__clear {
-            width: 38px;
-            height: 38px;
-            margin-top: -19px;
-        }
+    &.input_has-clear .input__box,
+    &.input_has-icon .input__box {
+        padding-right: 48px;
     }
 
-    &.input_has-addon {
-        .input__box {
-            padding-right: 45px;
-        }
-
-        .input__addon {
-            width: 45px;
-            height: 45px;
-
-            line-height: 45px;
-            font-size: 20px;
-        }
+    &.input_has-clear .input__clear,
+    &.input_has-icon .input__icon {
+        width: 48px;
+        height: 48px;
     }
 
     &.input_mode_link {
@@ -285,30 +241,15 @@
         padding: 16px 15px;
     }
 
-    &.input_has-clear {
-        .input__box {
-            padding-right: 42px;
-        }
-
-        .input__clear {
-            width: 42px;
-            height: 42px;
-            margin-top: -21px;
-        }
+    &.input_has-clear .input__box,
+    &.input_has-icon .input__box {
+        padding-right: 60px;
     }
 
-    &.input_has-addon {
-        .input__box {
-            padding-right: 55px;
-        }
-
-        .input__addon {
-            width: 55px;
-            height: 55px;
-
-            line-height: 55px;
-            font-size: 30px;
-        }
+    &.input_has-clear .input__clear,
+    &.input_has-icon .input__icon {
+        width: 58px;
+        height: 58px;
     }
 
     &.input_mode_link {

@@ -70,22 +70,13 @@ describe('input_has-calendar', function() {
         }, 200);
     });
 
-    it('should be render calendar switcher elem id set has_addon mod', function(done) {
-        bemjson.mods['has-addon'] = true;
-        bemjson.addon = { block: 'icon', content: 'ok' };
-        block = build('input', bemjson);
-        block.findElem('calendar').text().should.be.equal('ok');
-        done();
-    });
-
     it('should toggle calendar when clicked switcher element', function(done) {
-        bemjson.mods['has-addon'] = true;
-        bemjson.addon = { block: 'icon' };
+        bemjson.icon = { block: 'icon' };
         block = build('input', bemjson);
-        block.findElem('calendar').click();
+        block.findElem('icon').click();
         setTimeout(function() {
             block.isShownCalendar().should.be.true;
-            block.findElem('calendar').click();
+            block.findElem('icon').click();
             block.isShownCalendar().should.be.false;
             done();
         }, 200);

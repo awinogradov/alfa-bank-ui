@@ -1,5 +1,4 @@
 import { Component } from 'protein-kit';
-
 export default class Input extends Component {
     types() {
         return {
@@ -24,12 +23,19 @@ export default class Input extends Component {
             mode: ['link'],
             width: ['available'],
             'has-calendar': {
-                data: {
-                    earlierLimit: '12.10.2015',
-                    laterLimit: '20.11.2015',
-                    val: '22.10.2015',
-                    addon: { block: 'icon', mods: { tool: 'calendar' } }
-                }
+                data: [
+                    {
+                        earlierLimit: '12.10.2015',
+                        laterLimit: '20.11.2015',
+                        val: '22.10.2015'
+                    },
+                    {
+                        earlierLimit: '12.10.2015',
+                        laterLimit: '20.11.2015',
+                        val: '22.10.2015',
+                        icon: { block: 'icon', mods: { tool: 'calendar' } }
+                    }
+                ]
             },
             'has-autocomplete': {
                 data: {
@@ -39,20 +45,38 @@ export default class Input extends Component {
                     ]
                 }
             },
-            // 'has-filter': {
-            //     data: {
-            //         mods: {
-            //             'has-autocomplete': true
-            //         }
-            //     }
-            // },
-            'has-addon': {
+            'has-filter': {
+                types: {
+                    'has-autocomplete': true
+                },
                 data: {
-                    addon: { block: 'icon', mods: { tool: 'help' } }
+                    js: {
+                        mask: '{{99}}/{{99}}'
+                    },
+                    val: 'Value',
+                    placeholder: 'Placeholder',
+                    options: [
+                        { val: 'MSC', content: 'Moscow' },
+                        { val: 'NYC', content: 'New York' }
+                    ]
                 }
             },
-            'has-mask': true,
-            'has-filter': true
+            'has-icon': {
+                data: {
+                    val: 'Value',
+                    placeholder: 'Placeholder',
+                    icon: { block: 'icon', mods: { tool: 'help' } }
+                }
+            },
+            'has-mask': {
+                data: {
+                    js: {
+                        mask: '{{99}}/{{99}}'
+                    },
+                    placeholder: '66/77'
+                }
+            },
+            'has-clear': true
         };
     }
 

@@ -33,7 +33,7 @@
         background-image: url(../__clear/input__clear_white.svg);
     }
 
-    &.input_has-addon .input__addon {
+    &.input_has-icon .input__icon {
         color: rgba(0, 0, 0, .9);
 
         opacity: .6
