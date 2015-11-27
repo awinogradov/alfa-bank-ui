@@ -30,7 +30,7 @@ provide(Input.decl({ modName: 'has-calendar' }, /** @lends input.prototype */{
 
                 this.bindTo('control', 'focus click', this.showCalendar);
                 this.bindTo('control', 'blur', this._onControlBlur);
-                this.bindTo('calendar', 'click', this._onClickSwitcher);
+                this.bindTo('icon', 'click', this._onClickSwitcher);
                 this.bindToDoc('pointerdown', this._onDocPointerDown);
                 this.bindTo('keydown', this._handleKey.bind(this));
             }

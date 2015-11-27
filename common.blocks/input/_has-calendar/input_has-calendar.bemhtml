@@ -28,8 +28,6 @@ block('input')(
                 _calendarParams: calendarParams,
                 _popupDirections: ctx.directions
             });
-        }),
-
-        elem('addon').mix()({ block: 'input', elem: 'calendar' })
+        })
     )
 );

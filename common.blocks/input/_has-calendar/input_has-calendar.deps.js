@@ -1,4 +1,4 @@
-[{
+([{
     mustDeps: [
         {
             block: 'i-bem'
@@ -16,7 +16,7 @@
         },
         {
             block: 'input',
-            mods: { 'has-addon': true, 'has-mask': true }
+            mods: { 'has-mask': true }
         },
         {
             block: 'icon',
@@ -44,4 +44,4 @@
     mustDeps: [
         { tech: 'bemhtml', block: 'input', mods: { 'has-calendar': true } }
     ]
-}];
+}]);

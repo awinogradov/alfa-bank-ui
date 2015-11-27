@@ -8,8 +8,8 @@ block('input')(
             }
         });
     }),
-    match(function() { return this.ctx.addon; }).def()(function() {
-        this.mods['has-addon'] = true;
+    match(function() { return this.ctx.icon; }).def()(function() {
+        this.mods['has-icon'] = true;
         return applyNext();
     })
 );

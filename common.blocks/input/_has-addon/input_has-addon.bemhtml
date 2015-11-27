@@ -1,8 +1,0 @@
-block('input').mod('has-addon', true).elem('box').content()(function() {
-    var addon = this._input.addon;
-    if (this._mods && addon.mods) {
-        addon.mods.theme = addon.mods.theme || this._mods.theme;
-        addon.mods.size = addon.mods.size || this._mods.size;
-    }
-    return [applyNext(), { elem: 'addon', content: addon }];
-});
