@@ -6,27 +6,22 @@
     background-size: contain;
 }
 
-.icon_size_xs {
-    width: 11px;
-    height: 11px;
-}
-
 .icon_size_s {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
 }
 
 .icon_size_m {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
 }
 
 .icon_size_l {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
 }
 
 .icon_size_xl {
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
 }

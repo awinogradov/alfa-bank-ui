@@ -18,19 +18,31 @@
                     block: 'input',
                     mix: { block: 'test', elem: 'input' },
                     mods: { theme: 'alfa-on-color', size: 'm' },
-                    val: 'Input notiofication text'
+                    val: 'Input notification text'
+                },
+                {
+                    block: 'button',
+                    mix: { block: 'test', elem: 'default' },
+                    mods: { theme: 'alfa-on-color', size: 'm', view: 'action' },
+                    text: 'Show default notification'
                 },
                 {
                     block: 'button',
                     mix: { block: 'test', elem: 'ok' },
                     mods: { theme: 'alfa-on-color', size: 'm', view: 'action' },
-                    text: 'Show OK notiofication'
+                    text: 'Show OK notification'
                 },
                 {
                     block: 'button',
                     mix: { block: 'test', elem: 'fail' },
                     mods: { theme: 'alfa-on-color', size: 'm', view: 'action' },
-                    text: 'Show FAIL notiofication'
+                    text: 'Show FAIL notification'
+                },
+                {
+                    block: 'button',
+                    mix: { block: 'test', elem: 'theme' },
+                    mods: { theme: 'alfa-on-color', size: 'm' },
+                    text: 'Change theme'
                 }
             ],
         },
