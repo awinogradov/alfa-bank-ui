@@ -1,12 +1,9 @@
 ({
-    shouldDeps: [
-        {
-            block: 'plate',
-            mods: { theme: 'alfa-on-color' }
-        },
+    mustDeps: [
         {
             block: 'icon',
             mods: { theme: 'alfa-on-color' }
-        }
+        },
+        { block: 'popup', mods: { theme: 'alfa-on-color' } }
     ]
 });

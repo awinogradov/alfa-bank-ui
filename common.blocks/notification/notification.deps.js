@@ -1,7 +1,8 @@
-[{
-    mustDeps: ['i-bem'],
-    shouldDeps: [
-        { block: 'plate', mods: { 'has-clear': true } }
+([{
+    mustDeps: [
+        { block: 'i-bem', elem: 'dom' },
+        { block: 'icon' },
+        { block: 'popup', mods: { target: 'position' } }
     ]
 },
 {
@@ -9,4 +10,4 @@
     shouldDeps: [
         { tech: 'bemhtml', block: 'notification' }
     ]
-}];
+}]);

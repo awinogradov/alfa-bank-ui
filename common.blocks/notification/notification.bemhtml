@@ -1,36 +1,43 @@
 block('notification')(
-    js()(true),
-    content()(function() {
+    def()(function() {
         var mods = this.mods;
-        return [{
-            block: 'plate',
-            mix: { block: 'notification', elem: 'plate' },
-            mods: {
-                theme: mods.theme,
-                'has-clear': true
-            },
-            content: [{
-                block: 'notification',
-                elem: 'status',
-                mods: { type: this.ctx.status },
-                content: {
+        return applyCtx({
+            block: 'popup',
+            mods: this.extend(mods, { target: 'position', size: 'm' }),
+            mix: { block: this.block, mods: mods, js: true },
+            zIndexGroupLevel: 3,
+            content: [
+                {
                     block: 'icon',
+                    mix: { block: this.block, elem: 'icon' },
                     mods: {
                         theme: mods.theme,
-                        'action': this.ctx.status,
-                        size: 'l'
+                        'action': mods.status || this.ctx.status,
+                        size: 'm'
                     }
+                },
+                {
+                    elem: 'content',
+                    content: [
+                        // TODO: add title in next updage lib
+                        // {
+                        //     block: this.block,
+                        //     elem: 'title',
+                        //     content: 'Ssdfasdfa asdf asdf'
+                        // },
+                        {
+                            block: this.block,
+                            elem: 'message',
+                            content: this.ctx.message
+                        }
+                    ]
+                },
+                {
+                    block: 'icon',
+                    mix: { block: this.block, elem: 'close' },
+                    mods: { theme: mods.theme, size: 's', action: 'cross' }
                 }
-            },
-            {
-                elem: 'message',
-                mix: { block: 'notification', elem: 'message' },
-                content: [{
-                    block: 'notification',
-                    elem: 'inner',
-                    content: this.ctx.message
-                }]
-            }]
-        }];
+            ]
+        });
     })
 );

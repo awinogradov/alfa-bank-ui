@@ -12,9 +12,15 @@
         }
     }
 
-    @each $name in ok, fail, repeat, error {
+    @each $name in ok, fail, repeat, error, cross {
         &.icon_action_$(name) {
             background-image: url('../_action/icon_action_$(name).svg');
+        }
+    }
+
+    @each $name in cross {
+        &.icon_action_$(name) {
+            background-image: url('../_action/icon_action_$(name)-white.svg');
         }
     }
 
