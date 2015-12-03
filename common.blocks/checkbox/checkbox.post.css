@@ -97,6 +97,10 @@
 
 .checkbox_type_button {
     display: inline-block;
+
+    &.checkbox_checked .button__text {
+        font-weight: 300;
+    }
 }
 
 .checkbox_view_line {

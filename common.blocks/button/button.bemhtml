@@ -9,6 +9,20 @@ block('button')(
         });
     }),
 
+    match(function() {
+        return !this.mods.view && this.mods.checked;
+    }).def()(function() {
+        this.mods.view = this._view || 'action';
+        return applyNext();
+    }),
+
+    js()(function() {
+        return this.extend(
+            applyNext(),
+            { checkedView: this.mods.view || this._view || 'action' }
+        );
+    }),
+
     content()(function() {
         var ctx = this.ctx,
             content = [ctx.icon && { elem: 'icon', content: ctx.icon }];

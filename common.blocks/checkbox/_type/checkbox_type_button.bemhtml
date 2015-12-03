@@ -13,7 +13,7 @@ block('checkbox').mod('type', 'button')(
                 size: mods.size,
                 hovered: mods.hovered,
                 focused: mods.focused,
-                view: mods.view
+                view: mods.checked ? mods.view : false
             },
             title: ctx.title,
             content: [

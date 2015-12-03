@@ -4,7 +4,6 @@ export default class Link extends Component {
     types() {
         return {
             size: ['s', 'm', 'l', 'xl'],
-            view: ['pseudo'],
             icon: [
                 { false: {
                     data: {
@@ -18,7 +17,7 @@ export default class Link extends Component {
 
     default() {
         return {
-            states: ['hovered', 'disabled'],
+            states: ['hovered', 'disabled', 'pseudo'],
             data: { text: 'Link' }
         };
     }

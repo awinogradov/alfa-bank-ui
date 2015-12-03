@@ -1,4 +1,4 @@
-block('radio').match(function() { return this._view; }).def()(function() {
-    this.mods.view = this._view;
-    return applyNext();
+block('radio').def()(function() {
+    this.mods.view = this.mods.view || this._view;
+    return applyNext({ _view: this.mods.view });
 });
