@@ -1,0 +1,8 @@
+.input_has-calendar {
+    .input__icon {
+        cursor: pointer;
+    }
+
+    &.input_disabled .input__icon{ cursor: default; }
+}
+
