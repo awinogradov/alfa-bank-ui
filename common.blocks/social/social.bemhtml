@@ -1,6 +1,6 @@
 block('social').content()(function() {
     var ctx = this.ctx;
-
+    var mods = this.mods;
     if (Array.isArray(ctx.networks)) throw Error('Block can\'t use without networks array in mode networks');
 
     var networks = ctx.networks || [
@@ -22,7 +22,7 @@ block('social').content()(function() {
                         mix: { block: 'social', elem: 'icon' },
                         mods: {
                             network: network.name,
-                            theme: ctx.mods.theme
+                            theme: mods.theme
                         }
                     }
                 };
@@ -33,7 +33,7 @@ block('social').content()(function() {
             content: [
                 {
                     block: 'link',
-                    mods: { theme: ctx.mods.theme, size: 's' },
+                    mods: { theme: mods.theme, size: 's' },
                     url: '//alfabank.ru/internet/socmedia',
                     text: 'Мы в соцмедиа'
                 }

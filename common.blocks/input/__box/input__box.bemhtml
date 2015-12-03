@@ -2,10 +2,12 @@ block('input').elem('box')(
     content()(function() {
         var icon = this._input.icon;
         if (icon && icon.block !== 'icon') throw Error('input: Mode icon in input use only icon block.');
-        icon && (icon.mix = { block: this.block, elem: 'icon' });
         return [
             applyNext(),
-            icon
+            icon && {
+                elem: 'icon',
+                content: icon
+            }
         ];
     })
 );

@@ -8,7 +8,8 @@ export default class Link extends Component {
             icon: [
                 { false: {
                     data: {
-                        icon: { block: 'spin', mods: { visible: true, size: 'm' } },
+                        icon: { block: 'icon', mods: { tool: 'pr' } },
+                        text: 'Link'
                     }
                 } }
             ]

@@ -19,6 +19,13 @@
     transition: border-color 200ms ease-out;
 }
 
+.link__icon {
+    margin-right: 5px;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 0px;
+}
+
 .link_size_s {
     font-size: 13px;
 }
@@ -41,11 +48,7 @@
 
 .link_disabled {
     cursor: default;
-}
-
-.link__icon {
-    margin-right: 5px;
-    vertical-align: middle;
-    display: inline-block;
-    line-height: 0px;
+    .link__icon {
+        opacity: .3;
+    }
 }

@@ -14,7 +14,10 @@ export default class Button extends Component {
             ],
             icon: [
                 { false: {
-                    data: { icon: { block: 'icon', mods: { tool: 'calendar' } } }
+                    data: {
+                        icon: { block: 'icon', mods: { tool: 'calendar' } },
+                        text: 'Button'
+                    }
                 } }
             ],
             spin: [
@@ -22,7 +25,10 @@ export default class Button extends Component {
                     types: {
                         size: ['s', 'm', 'l', 'xl']
                     },
-                    data: { icon: { block: 'spin', mods: { visible: true } } }
+                    data: {
+                        icon: { block: 'spin', mods: { visible: true } },
+                        text: 'Button'
+                    }
                 } }
             ]
         };

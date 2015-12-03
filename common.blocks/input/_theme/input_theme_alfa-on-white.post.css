@@ -81,6 +81,10 @@
         .input__control {
             color: rgba(0, 0, 0, .3);
         }
+
+        .input__icon {
+            opacity: .3;
+        }
     }
 
     &.input_size_s .input__clear,
