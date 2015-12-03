@@ -1,7 +1,7 @@
 block('*')(
     match(function() { return this._mods; }).def()(function() {
-        this.mods.theme = this._mods.theme;
-        this.mods.size = this._mods.size;
+        this.mods.theme = this.mods.theme || this._mods.theme;
+        this.mods.size = this.mods.size || this._mods.size;
         return applyNext();
     })
 );
