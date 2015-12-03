@@ -4,8 +4,8 @@ block('menu-item').mod('type', 'link')(
             block: 'link',
             mix: { block: 'menu-item', elem: 'link' },
             mods: {
-                theme: this.mods.theme || this._alfaMods.theme,
-                size: this.mods.size || this._alfaMods.size,
+                theme: this.mods.theme || this._menuMods.theme,
+                size: this.mods.size || this._menuMods.size,
                 view: this.mods.view
             },
             url: this.ctx.url,

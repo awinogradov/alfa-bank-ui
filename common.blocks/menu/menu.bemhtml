@@ -1,7 +1,7 @@
 block('menu')(
     def()(function() {
         return applyNext({
-            _alfaMods: this.mods
+            _menuMods: this.mods
         });
     })
 );

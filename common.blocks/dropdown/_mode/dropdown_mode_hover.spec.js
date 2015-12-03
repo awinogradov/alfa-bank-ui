@@ -25,7 +25,7 @@ modules.define('spec', ['spec__utils', 'jquery', 'dropdown', 'link'], function(p
 
         it('should remove mod "opened" on mouseleave on popup', function() {
             dropdown.getSwitcher().domElem.mouseover();
-            dropdown.getSwitcher().domElem.mouseleave();
+            dropdown.getPopup().domElem.mouseleave();
             dropdown.hasMod('opened').should.be.false;
         });
     });

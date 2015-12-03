@@ -10,9 +10,13 @@ provide(Dropdown.decl({ modName: 'mode', modVal: 'hover' }, {
                 var switcher = this.getSwitcher(),
                     popup = this.getPopup();
 
-                switcher.on({ modName: 'hovered', modVal: '*' }, function(e, data) {
-                    this.setMod('opened', data.modVal);
+                switcher.on({ modName: 'hovered', modVal: true }, function() {
+                    this.setMod('opened', true);
                 }, this);
+
+                popup.bindTo('mouseleave', function() {
+                    this.setMod('opened', false);
+                }.bind(this));
             }
         }
     }
