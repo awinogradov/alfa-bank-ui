@@ -1,4 +1,0 @@
-block('link').mod('view', 'pseudo').def()(function() {
-    this.mods.pseudo = true;
-    return applyNext();
-});

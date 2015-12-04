@@ -41,7 +41,7 @@ export default class Dropdown extends Component {
             data: {
                 switcher: {
                     block: 'link',
-                    mods: { view: 'pseudo' },
+                    mods: { pseudo: true },
                     text: 'default'
                 },
                 popup: 'Some default info from link'

@@ -38,7 +38,7 @@ export default class Popup extends Component {
                 {
                     block: 'popup-test',
                     js: { anchor: 'link' },
-                    anchor: { block: 'link', mods: { view: 'pseudo' }, text: 'Anchor Link' },
+                    anchor: { block: 'link', mods: { pseudo: true }, text: 'Anchor Link' },
                     popup: {
                         block: 'popup',
                         mods: { target: 'anchor' },

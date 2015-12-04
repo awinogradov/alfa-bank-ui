@@ -10,14 +10,14 @@ let items = [
     },
     {
         block: 'menu-item',
-        mods: { type: 'link', view: 'pseudo' },
+        mods: { type: 'link', pseudo: true },
         val: 2,
         url: '#',
         content: 'Отпуск в горах'
     },
     {
         block: 'menu-item',
-        mods: { type: 'dropdown', view: 'pseudo' },
+        mods: { type: 'dropdown', pseudo: true },
         popup: 'dropdown content',
         content: 'Отпуск на море'
     },

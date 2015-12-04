@@ -1,4 +1,4 @@
-block('checkbox').match(function() { return this._view; }).def()(function() {
-    this.mods.view = this._view;
-    return applyNext();
+block('checkbox').def()(function() {
+    this.mods.view = this.mods.view || this._view;
+    return applyNext({ _view: this.mods.view });
 });

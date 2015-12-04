@@ -9,8 +9,7 @@ export default class Button extends Component {
                 { 'extra': {
                     data: { text: 'Extra' }
                 } },
-                'other',
-                'pseudo'
+                'other'
             ],
             icon: [
                 { false: {
@@ -36,7 +35,7 @@ export default class Button extends Component {
 
     default() {
         return {
-            states: ['hovered', 'focused-hard', ['hovered', 'focused-hard'], 'pressed', 'disabled', 'checked'],
+            states: ['hovered', 'focused-hard', ['hovered', 'focused-hard'], 'pressed', 'disabled', 'checked', 'pseudo'],
             data: { text: 'Button' }
         };
     }
