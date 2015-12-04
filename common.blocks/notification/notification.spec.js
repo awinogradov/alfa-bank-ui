@@ -1,4 +1,4 @@
-modules.define('spec', ['spec__utils', 'sinon', 'notification', 'popup'], function(provide, utils, sinon) {
+modules.define('spec', ['spec__utils'/*, 'sinon'*/, 'notification', 'popup'], function(provide, utils/*, sinon*/) {
 
     describe('notification', function() {
         var notification;

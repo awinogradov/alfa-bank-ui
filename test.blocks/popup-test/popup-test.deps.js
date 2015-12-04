@@ -9,4 +9,4 @@
             mods: { theme: ['alfa-on-color', 'alfa-on-white'], view: 'pseudo' }
         }
     ]
-})
+});

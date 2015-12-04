@@ -35,7 +35,15 @@ export default class Button extends Component {
 
     default() {
         return {
-            states: ['hovered', 'focused-hard', ['hovered', 'focused-hard'], 'pressed', 'disabled', 'checked', 'pseudo'],
+            states: [
+                'hovered',
+                'focused-hard',
+                ['hovered', 'focused-hard'],
+                'pressed',
+                'disabled',
+                'checked',
+                'pseudo'
+            ],
             data: { text: 'Button' }
         };
     }

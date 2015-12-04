@@ -3,7 +3,7 @@
         'link',
         {
             block: 'icon',
-            mods: { network: ['vk', 'facebook', 'twitter']}
+            mods: { network: ['vk', 'facebook', 'twitter'] }
         }
     ]
 });
