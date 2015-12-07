@@ -5,8 +5,8 @@ modules.define('spec', ['spec__utils', 'dropdown', 'link'], function(provide, he
             bemjson = {
                 block: 'dropdown',
                 mods: { switcher: 'link', mode: 'focus' },
-                switcher: { block: 'link', content: 'dropdown link' },
-                popup: { block: 'popup', content: 'popup content' }
+                switcher: 'dropdown link',
+                popup: 'popup'
             };
 
         beforeEach(function() {

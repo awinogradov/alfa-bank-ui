@@ -1,12 +1,11 @@
 {
-  "name": "nyc-public",
-  "version": "4.0.2",
-  "description": "NYC Public Library of UI components",
+  "name": "UI",
+  "version": "5.0.0-rc",
+  "description": "Alfa-Bank UI components",
   "repository": {
     "type": "git",
-    "url": "ssh://git@git/man/nyc-public.git"
+    "url": "git@gitlab.moscow.alfaintra.net:design/ui.git"
   },
-  "bugs": "",
   "ignore": [
     ".bem/cache",
     "node_modules",
