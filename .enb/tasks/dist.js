@@ -83,11 +83,6 @@ function configure(node, platform) {
     ]);
 
     node.addTargets([
-        '.dev.css',
-        '.dev.js',
-        '.dev.bemhtml.js',
-        '.dev.js+bemhtml.js',
-
         '.css',
         '.js',
         '.bemhtml.js',

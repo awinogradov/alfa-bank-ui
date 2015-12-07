@@ -23,7 +23,7 @@ pages/*/_*.bemjson.js
 /coverage.json
 /gemini-report/
 
-/dist
+
 /*.docs
 /*.examples
 /*.doc-examples
