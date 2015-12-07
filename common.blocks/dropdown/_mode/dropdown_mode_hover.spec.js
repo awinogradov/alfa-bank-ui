@@ -1,4 +1,4 @@
-modules.define('spec', ['spec__utils', 'jquery', 'dropdown', 'link'], function(provide, helper, $) {
+modules.define('spec', ['spec__utils', 'dropdown', 'link'], function(provide, helper) {
 
     describe('dropdown_mode_hover', function() {
         var dropdown,

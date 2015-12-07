@@ -10,7 +10,7 @@
         "libs/**",
         "coverage/**",
         "dist/**",
-        "*.bundles/**",
+        "pages/**",
         "*.examples/**",
         "*.specs/**",
         "*.tmpl-specs/**",

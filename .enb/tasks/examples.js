@@ -50,7 +50,7 @@ function configure(helper, platform) {
     helper.configure({
         destPath: dir,
         // ADD test.blocks for render example pages
-        levels: [].concat(config.levels(platform), { path: 'test.blocks', check: true }),
+        levels: [].concat(config.levels(platform, { project: true }), { path: 'test.blocks', check: true }),
         techSuffixes: ['examples'],
         fileSuffixes: ['bemjson.js', 'title.txt']
     });
