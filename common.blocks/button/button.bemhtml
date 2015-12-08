@@ -12,14 +12,14 @@ block('button')(
     match(function() {
         return !this.mods.view && this.mods.checked;
     }).def()(function() {
-        this.mods.view = this._view || 'action';
+        this.mods.view = this._view;
         return applyNext();
     }),
 
     js()(function() {
         return this.extend(
             applyNext(),
-            { checkedView: this.mods.view || this._view || 'action' }
+            { checkedView: this.mods.view || this._view }
         );
     }),
 

@@ -6,17 +6,9 @@ export default class Checkbox extends Component {
             size: ['m', 'l'],
             type: [{
                 'button': {
-                    types: { size: ['s', 'm', 'l', 'xl'] }
+                    types: { size: ['s', 'm', 'l', 'xl'], view: ['action', 'extra'] }
                 }
-            }],
-            view: [
-                { 'action': {
-                    types: { type: ['button'] }
-                } },
-                { 'extra': {
-                    types: { type: ['button'] }
-                } }
-            ]
+            }]
         };
     }
 

@@ -1,4 +1,8 @@
 block('checkbox').def()(function() {
     this.mods.view = this.mods.view || this._view;
+
+    if (this.mods.type === 'button' && !this.mods.view)
+        throw Error('checkbox_type_button: should has mod `view`');
+
     return applyNext({ _view: this.mods.view });
 });

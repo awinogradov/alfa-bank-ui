@@ -34,24 +34,6 @@ describe('button', function() {
     });
 
     describe('button_cheched', function() {
-        it('should set checkedView "action" in params by default', function() {
-            block.params.checkedView.should.be.equal('action');
-        });
-
-        it('should be set view_action by default if checked mod set', function() {
-            block.hasMod('view').should.be.false;
-            block.setMod('checked');
-            block.getMod('view').should.be.equal('action');
-        });
-
-        it('should be del view_action by default if checked mod delete', function() {
-            bemjson = { block: 'button', mods: { checked: true } };
-            block = utils.buildBlock('button', bemjson);
-            block.getMod('view').should.be.equal('action');
-            block.delMod('checked');
-            block.getMod('view').should.be.equal('');
-        });
-
         it('should be set view_* mod if checked mod set', function() {
             bemjson = { block: 'button', mods: { view: 'ololo' } };
             block = utils.buildBlock('button', bemjson);
