@@ -7,7 +7,6 @@ block('select').elem('button')(
             mods: {
                 size: mods.size,
                 theme: mods.theme,
-                view: mods.view,
                 hovered: mods.hovered,
                 focused: mods.focused,
                 'focused-hard': mods['focused-hard'],
