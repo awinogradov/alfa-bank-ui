@@ -24,13 +24,8 @@ pages/*/_*.bemjson.js
 /gemini-report/
 
 
-/*.docs
-/*.examples
-/*.doc-examples
-/*.specs
-/*.tests
-/*.sets
-/*.tmpl-specs
+examples
+specs
 
 *.log
 

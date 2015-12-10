@@ -1,7 +1,7 @@
 {
   "private": true,
   "author": "Anton Winogradov <winogradovaa@gmail.com>",
-  "name": "UI",
+  "name": "ui",
   "description": "Alfa-Bank UI components",
   "version": "5.0.0-rc2",
   "dependencies": {
@@ -50,17 +50,14 @@
     "protein-kit": "git+ssh://git@git.theprotein.io:protein/kit.git#v0.0.4-bank"
   },
   "scripts": {
-    "start": "magic server",
-    "make": "magic make && npm run dist",
+    "start": "enb server",
     "protein": "protein preview",
-    "build": "magic make",
     "deps": "bower i",
-    "test": "npm run clean-all && npm run lint && npm run build && npm run specs",
+    "test": "npm run clean-all && npm run lint && && npm run specs",
     "lint": "jshint-groups && jscs .",
-    "specs": "magic run specs",
-    "clean-dist": "find *.blocks -iname '*.css' | grep -v 'post.css' |  xargs rm",
-    "rm-examples": "rm -rf desktop.examples mobile.examples",
-    "rm-specs": "rm -rf desktop.specs mobile.specs",
+    "specs": "enb run specs",
+    "rm-examples": "rm -rf examples",
+    "rm-specs": "rm -rf specs",
     "rm-protein": "rm -rf .protein",
     "clean-all": "npm run clean-dist && npm run rm-examples && npm run rm-specs && npm run rm-protein",
     "dist": "npm run clean-dist && node distribute",

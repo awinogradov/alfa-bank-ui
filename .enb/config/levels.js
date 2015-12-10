@@ -1,47 +1,13 @@
 var path = require('path'),
-    PROJECT_LEVELS = {
-        common: ['common.blocks'],
-        desktop: ['common.blocks', 'desktop.blocks']/*,
-        mobile: ['common.blocks', 'mobile.blocks']*/
-    },
-    SPEC_LEVEL = {
-        path: path.join('libs', 'bem-pr', 'spec.blocks'),
-        check: false
-    };
+    rootDir = path.join(__dirname, '..', '..');
 
-/**
- * Returns list of levels for specified platform.
- *
- * @param {String} platform - platform name (desktop or touch)
- * @param {Object} [opts]
- * @param {Boolean} [opts.specs] — adds level for specs
- */
-module.exports = function(platform, opts) {
-    opts = opts || {};
-    var projectLevels = [
-        { path: 'common.blocks', check: true }
-    ];
-
-    var levels = [
-        { path: path.join('libs', 'bem-core',  'common.blocks'), check: false },
-        { path: path.join('libs', 'bem-core',  'desktop.blocks'), check: false },
-        { path: path.join('libs', 'bem-components', 'common.blocks'), check: false },
-        { path: path.join('libs', 'bem-components', 'desktop.blocks'), check: false },
-        { path: path.join('libs', 'bem-forms',  'common.blocks'), check: false },
-        { path: path.join('libs', 'bem-grid', 'common.blocks'), check: false },
-        { path: path.join('libs', 'bem-typography', 'common.blocks'), check: false }
-    ].concat(projectLevels);
-
-    if (opts.project) {
-        return projectLevels;
-    }
-
-    if (opts.specs) {
-        return [].concat(
-            SPEC_LEVEL,
-            levels
-        );
-    }
-
-    return levels;
-};
+module.exports = [
+    { path: path.join(rootDir, 'libs', 'bem-core',  'common.blocks'), check: false },
+    { path: path.join(rootDir, 'libs', 'bem-core',  'desktop.blocks'), check: false },
+    { path: path.join(rootDir, 'libs', 'bem-components', 'common.blocks'), check: false },
+    { path: path.join(rootDir, 'libs', 'bem-components', 'desktop.blocks'), check: false },
+    { path: path.join(rootDir, 'libs', 'bem-forms',  'common.blocks'), check: false },
+    { path: path.join(rootDir, 'libs', 'bem-grid', 'common.blocks'), check: false },
+    { path: path.join(rootDir, 'libs', 'bem-typography', 'common.blocks'), check: false },
+    { path: path.join(rootDir, 'common.blocks') }
+];
