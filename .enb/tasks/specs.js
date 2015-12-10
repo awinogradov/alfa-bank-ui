@@ -1,6 +1,6 @@
-var techs = require('../techs'),
-    config = require('../config'),
-    PLATFORMS = config.platforms;
+var path = require('path'),
+    techs = require('../config/techs'),
+    levels = require('../config/levels');
 
 /**
  * Creates `specs` task.
@@ -16,31 +16,19 @@ var techs = require('../techs'),
 module.exports = function(project) {
     // load plugin
     project.includeConfig('enb-bem-specs');
-    var plugin = project.module('enb-bem-specs'),
-        // create task with `specs` name
-        // and get helper to configure it
-        helper = plugin.createConfigurator('specs');
 
-    PLATFORMS.forEach(function(platform) {
-        configure(helper, platform);
-    });
+    var plugin = project.module('enb-bem-specs');
+
+    plugin
+        .createConfigurator('specs')
+        .configure({
+            destPath: 'specs', // TODO: можно будет и это упростить
+            levels: [{ path: 'common.blocks' }],
+            sourceLevels: [
+                { path: 'libs/bem-pr/spec.blocks', check: false },
+            ].concat(levels),
+            jsSuffixes: ['vanilla.js', 'browser.js', 'js'],
+            specSuffixes: ['spec.js'],
+            depsTech: techs.bem.deps
+        });
 };
-
-/**
- * Configures task for specified platform.
- *
- * @param {MagicHelper} helper - helper to configure task
- * @param {String} platform - platform name
- */
-function configure(helper, platform) {
-    var dir = platform + '.specs';
-
-    helper.configure({
-        destPath: dir,
-        levels: config.levels(platform, { project: true }),
-        sourceLevels: config.levels(platform, { specs: true }),
-        jsSuffixes: ['vanilla.js', 'browser.js', 'js'],
-        specSuffixes: ['spec.js'],
-        depsTech: techs.bem.deps
-    });
-}

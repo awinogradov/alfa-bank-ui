@@ -1,6 +1,6 @@
-var techs = require('../techs'),
-    config = require('../config'),
-    PLATFORMS = config.platforms,
+var techs = require('../config/techs'),
+    levels = require('../config/levels'),
+    postcssPlugins = require('../config/postcss-plugins'),
     LIB_NAME = 'ui';
 
 /**
@@ -15,79 +15,70 @@ var techs = require('../techs'),
  * $ magic make dist/desktop
  */
 module.exports = function(project) {
-    var dirs = PLATFORMS.map(function(platform) {
-        return 'dist/' + platform;
-    });
-
     project.task('dist', function(task) {
-        return task.buildTargets(dirs);
+        return task.buildTargets(['dist/desktop']);
     });
 
-    PLATFORMS.forEach(function(platform, i) {
-        var dir = dirs[i];
+    project.nodes(['dist/desktop'], function(node) {
+        node.addTechs([
+            // get FileList
+            [techs.bem.levels, { levels: levels }],
+            [techs.bem.levelsToBemdecl, { target: '.tmp.bemdecl.js' }],
+            [techs.bem.deps, { bemdeclFile: '.tmp.bemdecl.js', target: '.tmp.deps.js' }],
+            [techs.bem.files, { depsFile: '.tmp.deps.js' }],
 
-        project.node(dir, function(node) {
-            configure(node, platform);
-        });
+            // build dev CSS
+            [techs.postcss, {
+                target: '.tmp.css',
+                sourcemap: true,
+                plugins: postcssPlugins
+            }],
+            [techs.borschik, { source: '.tmp.css', target: LIB_NAME + '.css', freeze: true, minify: false }],
+            [techs.borschik, { source: '.tmp.css', target: LIB_NAME + '.min.css', freeze: true, minify: true }],
+
+            // build JavaScript for browsers
+            [techs.js, {
+                target: '.tmp.js',
+                sourceSuffixes: ['vanilla.js', 'browser.js', 'js']
+            }],
+            [techs.ym, {
+                source: '.tmp.js',
+                target: LIB_NAME + '.js'
+            }],
+            [techs.borschik, { source: LIB_NAME + '.js', target: LIB_NAME + '.min.js' }],
+
+            // build BEMHTML
+            [techs.engines.bemhtml, {
+                target: LIB_NAME + '.bemhtml.js',
+                sourceSuffixes: ['bemhtml', 'bemhtml.js']
+            }],
+            [techs.borschik, { source: LIB_NAME + '.bemhtml.js', target: LIB_NAME + '.min.bemhtml.js' }],
+
+            // merge JavaScript with BEMHTML
+            [techs.files.merge, {
+                target: '.tmp.js+bemhtml.js',
+                sources: ['.tmp.js', LIB_NAME + '.bemhtml.js']
+            }],
+            [techs.ym, {
+                source: '.tmp.js+bemhtml.js',
+                target: LIB_NAME + '.js+bemhtml.js'
+            }],
+            [techs.borschik, { source: LIB_NAME + '.js+bemhtml.js', target: LIB_NAME + '.min.js+bemhtml.js' }],
+
+        ]);
+
+        node.addTargets([
+            '.css',
+            '.min.css',
+            '.js',
+            '.min.js',
+            '.bemhtml.js',
+            '.min.bemhtml.js',
+            '.js+bemhtml.js',
+            '.min.js+bemhtml.js'
+        ].map(function(ext) {
+            return LIB_NAME + ext;
+        }));
     });
 };
 
-/**
- * Configures task for specified platform.
- *
- * @param {NodeConfig} node — instance for configure dir with dist for specified platform
- * @param {String} platform - platform name
- */
-function configure(node, platform) {
-    node.addTechs([
-        // get FileList
-        [techs.bem.levels, { levels: config.levels(platform) }],
-        [techs.bem.levelsToBemdecl, { target: '.tmp.bemdecl.js' }],
-        [techs.bem.deps, { bemdeclFile: '.tmp.bemdecl.js', target: '.tmp.deps.js' }],
-        [techs.bem.files, { depsFile: '.tmp.deps.js' }],
-
-        // build CSS
-        [techs.postcss, {
-            target: LIB_NAME + '.dev.css',
-            sourcemap: true,
-            plugins: require('../helpers/postcss-plugins')
-        }],
-        [techs.borschik, { source: LIB_NAME + '.dev.css', target: LIB_NAME + '.css' }],
-
-        // build JavaScript for browsers
-        [techs.js, {
-            target: '.tmp.js',
-            sourceSuffixes: ['vanilla.js', 'browser.js', 'js']
-        }],
-        [techs.ym, {
-            source: '.tmp.js',
-            target: LIB_NAME + '.dev.js'
-        }],
-        [techs.borschik, { source: LIB_NAME + '.dev.js', target: LIB_NAME + '.js' }],
-
-        // build BEMHTML
-        [techs.engines.bemhtml, { target: LIB_NAME + '.dev.bemhtml.js' }],
-        [techs.borschik, { source: LIB_NAME + '.dev.bemhtml.js', target: LIB_NAME + '.bemhtml.js' }],
-
-        // merge JavaScript with BEMHTML
-        [techs.files.merge, {
-            target: '.tmp.js+bemhtml.js',
-            sources: ['.tmp.js', LIB_NAME + '.dev.bemhtml.js']
-        }],
-        [techs.ym, {
-            source: '.tmp.js+bemhtml.js',
-            target: LIB_NAME + '.dev.js+bemhtml.js'
-        }],
-        [techs.borschik, { source: LIB_NAME + '.dev.js+bemhtml.js', target: LIB_NAME + '.js+bemhtml.js' }],
-
-    ]);
-
-    node.addTargets([
-        '.css',
-        '.js',
-        '.bemhtml.js',
-        '.js+bemhtml.js'
-    ].map(function(ext) {
-        return LIB_NAME + ext;
-    }));
-}
