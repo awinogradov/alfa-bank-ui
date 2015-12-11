@@ -3,7 +3,7 @@
   "author": "Anton Winogradov <winogradovaa@gmail.com>",
   "name": "ui",
   "description": "Alfa-Bank UI components",
-  "version": "5.0.0-rc2",
+  "version": "5.0.0-rc3",
   "dependencies": {
     "bem-environ": "1.4.0",
     "cssnext": "^1.8.4",
