@@ -5,7 +5,8 @@
         border-color: rgba(0, 0, 0, .4);
     }
 
-    &.link_hovered {
+    &.link_hovered,
+    &.link_focused {
         color: rgba(178, 12, 0, 1);
 
         .link__text {

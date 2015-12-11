@@ -8,6 +8,8 @@
 
     text-decoration: none;
 
+    outline: none;
+
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -48,6 +50,7 @@
 
 .link_disabled {
     cursor: default;
+    
     .link__icon {
         opacity: .3;
     }

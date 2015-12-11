@@ -6,7 +6,8 @@ block('menu-item').mod('type', 'link')(
             mods: {
                 theme: this.mods.theme || this._menuMods.theme,
                 size: this.mods.size || this._menuMods.size,
-                view: this.mods.view
+                view: this.mods.view,
+                disabled: this.mods.disabled
             },
             url: this.ctx.url,
             target: this.ctx.target,

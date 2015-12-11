@@ -30,18 +30,11 @@
 
 .footer__info {
     padding: 15px 0;
-    width: 200px;
+    width: 250px;
 
     float: right;
 }
 
 .footer__social {
-    margin-bottom: 15px;
-}
-
-.footer__copyright {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 1.6;
+    margin-bottom: 10px;
 }

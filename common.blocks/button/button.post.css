@@ -115,6 +115,7 @@
 
     .button__icon {
         margin-left: -12px;
+        min-width: 2px;
     }
 }
 
@@ -127,12 +128,12 @@
 
     .button__icon {
         margin-left: -16px;
+        min-width: 6px;
     }
 }
 
 
-.control-group
-{
+.control-group  {
     .button {
         border-radius: 0;
         border-right-color: transparent;
