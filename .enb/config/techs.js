@@ -5,9 +5,8 @@ module.exports = {
         merge: require('enb/techs/file-merge')
     },
     bem: require('enb-bem-techs'),
-    css: require('enb/techs/css'),
     postcss: require('enb-postcss/techs/enb-postcss'),
-    js: require('enb/techs/js'),
+    js: require('enb-js/techs/browser-js'),
     ym: require('enb-modules/techs/prepend-modules'),
     engines: {
         bemhtml: require('enb-bemxjst/techs/bemhtml')

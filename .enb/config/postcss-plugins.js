@@ -13,7 +13,7 @@ module.exports = [
     require('cssnext')(),
     require('postcss-custom-properties'),
     require('postcss-nested'),
-    require('autoprefixer-core')({
+    require('autoprefixer')({
         browsers: [
             'last 2 versions',
             'ie 10',

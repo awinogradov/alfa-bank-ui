@@ -11,8 +11,8 @@
         "coverage/**",
         "dist/**",
         "pages/**",
-        "*.examples/**",
-        "*.specs/**",
+        "examples/**",
+        "specs/**",
         "*.tmpl-specs/**",
         "*.doc-examples/**",
         "**/*.bemdecl.js"

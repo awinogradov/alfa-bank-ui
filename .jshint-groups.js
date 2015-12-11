@@ -34,7 +34,8 @@ module.exports = {
             },
             includes: ['*.blocks/**/*.js'],
             excludes: [
-                '*.blocks/**/*node.js',
+                '*.blocks/**/*.bemhtml.js',
+                '*.blocks/**/*.node.js',
                 '*.blocks/**/*.proto.js',
                 '**/*.i18n/*.js',
                 '**/*.bem/*.js',
@@ -86,7 +87,10 @@ module.exports = {
                     'tag'
                 ]
             },
-            includes: ['*.blocks/**/*.bemhtml'],
+            includes: [
+                '*.blocks/**/*.bemhtml',
+                '*.blocks/**/*.bemhtml.js'
+            ],
             excludes: ['test.blocks/**/*']
         },
 
@@ -95,18 +99,6 @@ module.exports = {
                 asi: true
             },
             includes: ['*.bundles/**/*.bemjson.js']
-        },
-
-        nodejs: {
-            options: {
-                node: true
-            },
-            includes: ['**/.bem/**/*.js'],
-            excludes: [
-                '.bem/cache/**',
-                'libs/**',
-                'node_modules/**'
-            ]
         }
     }
 };
