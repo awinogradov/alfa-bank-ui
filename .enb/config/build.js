@@ -1,8 +1,6 @@
 var fs = require('fs'),
     path = require('path'),
-    rootDir = path.resolve(__dirname, '..', '..'),
     levels = require(path.resolve(__dirname, '..', 'config', 'levels')),
-    postcssPlugins = require(path.resolve(__dirname, '..', 'config', 'postcss-plugins')),
     techs = require(path.resolve(__dirname, '..', 'config', 'techs'));
 
 module.exports = function(node) {
@@ -17,7 +15,7 @@ module.exports = function(node) {
         }],
 
         // build templates
-        [techs.engines.bemhtml, {
+        [techs.templates.bemhtml, {
             target: '.tmp.bemhtml.js',
             sourceSuffixes: ['bemhtml', 'bemhtml.js']
         }],
@@ -37,11 +35,11 @@ module.exports = function(node) {
         }],
 
         // build CSS
-        [techs.postcss, {
+        [techs.postcss.engine, {
             sourceSuffixes: ['css', 'post.css'],
             target: '.tmp.css',
             sourcemap: true,
-            plugins: postcssPlugins
+            plugins: techs.postcss.plugins
         }],
     ]);
 };

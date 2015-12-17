@@ -10,23 +10,23 @@
 .icon_size_s {
     width: 18px;
     height: 18px;
-    background-size: 16px;
+    background-size: 16px 16px;
 }
 
 .icon_size_m {
     width: 24px;
     height: 24px;
-    background-size: 20px;
+    background-size: 20px 20px;
 }
 
 .icon_size_l {
     width: 30px;
     height: 30px;
-    background-size: 24px;
+    background-size: 24px 24px;
 }
 
 .icon_size_xl {
     width: 36px;
     height: 36px;
-    background-size: 30px;
+    background-size: 30px 30px;
 }

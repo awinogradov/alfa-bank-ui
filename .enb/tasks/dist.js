@@ -1,6 +1,5 @@
 var techs = require('../config/techs'),
     levels = require('../config/levels'),
-    postcssPlugins = require('../config/postcss-plugins'),
     LIB_NAME = 'ui';
 
 /**
@@ -31,7 +30,7 @@ module.exports = function(project) {
             [techs.postcss, {
                 target: '.tmp.css',
                 sourcemap: true,
-                plugins: postcssPlugins
+                plugins: techs.postcss.plugins
             }],
             [techs.borschik, { source: '.tmp.css', target: LIB_NAME + '.css', freeze: true, minify: false }],
             [techs.borschik, { source: '.tmp.css', target: LIB_NAME + '.min.css', freeze: true, minify: true }],

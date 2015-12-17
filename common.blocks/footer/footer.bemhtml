@@ -23,7 +23,6 @@ block('footer')(
                         },
                         {
                             block: 'copyright',
-                            mix: { block: this.block, elem: 'copyright' },
                             mods: { theme: ctx.mods.theme }
                         }
                     ]

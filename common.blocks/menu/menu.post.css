@@ -19,6 +19,12 @@
     }
 }
 
+.menu_mode_nav {
+    .menu-item_checked {
+        opacity: .6;
+    }
+}
+
 .menu_mode_check,
 .menu_mode_radio,
 .menu_mode_radio-check {
