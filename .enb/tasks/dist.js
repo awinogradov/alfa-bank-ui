@@ -47,7 +47,7 @@ module.exports = function(project) {
             [techs.borschik, { source: LIB_NAME + '.js', target: LIB_NAME + '.min.js' }],
 
             // build BEMHTML
-            [techs.engines.bemhtml, {
+            [techs.templates.bemhtml, {
                 target: LIB_NAME + '.bemhtml.js',
                 sourceSuffixes: ['bemhtml', 'bemhtml.js']
             }],
