@@ -6,7 +6,7 @@
   "version": "5.0.0-rc3",
   "scripts": {
     "start": "enb server",
-    "protein": "protein preview",
+    "protein": "echo 'use protein-kit' && protein preview",
     "deps": "bower i",
     "test": "npm run clean-all && npm run lint && npm run specs",
     "lint": "jshint-groups && jscs .",
@@ -37,8 +37,7 @@
     "jscs-alfa": "git+ssh://git@git/man/jscs-alfa.git#v0.3.0",
     "jshint": "^2.8.0",
     "jshint-groups": "^0.8.0",
-    "mversion": "^1.10.1",
-    "protein-kit": "git+ssh://git@git.theprotein.io:protein/kit.git#v0.0.4-bank"
+    "mversion": "^1.10.1"
   },
   "dependencies": {
     "autoprefixer": "^6.1.2",
