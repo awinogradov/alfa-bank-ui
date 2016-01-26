@@ -27,7 +27,7 @@ module.exports = function(project) {
             [techs.bem.files, { depsFile: '.tmp.deps.js' }],
 
             // build dev CSS
-            [techs.postcss, {
+            [techs.postcss.engine, {
                 target: '.tmp.css',
                 sourcemap: true,
                 plugins: techs.postcss.plugins
@@ -62,7 +62,7 @@ module.exports = function(project) {
                 source: '.tmp.js+bemhtml.js',
                 target: LIB_NAME + '.js+bemhtml.js'
             }],
-            [techs.borschik, { source: LIB_NAME + '.js+bemhtml.js', target: LIB_NAME + '.min.js+bemhtml.js' }],
+            [techs.borschik, { source: LIB_NAME + '.js+bemhtml.js', target: LIB_NAME + '.min.js+bemhtml.js' }]
 
         ]);
 
