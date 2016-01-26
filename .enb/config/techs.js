@@ -36,8 +36,7 @@ module.exports = {
         ]
     },
     templates: {
-        bemhtml: require('enb-bemxjst/techs/bemhtml'),
-        bemtree: require('enb-bemxjst/techs/bemtree')
+        bemhtml: require('enb-bemxjst/techs/bemhtml')
     },
     html: {
         bemhtml: require('enb-bemxjst/techs/bemjson-to-html')

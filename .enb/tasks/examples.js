@@ -21,7 +21,7 @@ module.exports = function(project) {
     });
 
     // configure pages building by BEMJSON files
-    project.nodes('examples/*/*', function(node) {
+    project.nodes(['examples/*/*'], function(node) {
         configureBuild(node);
     });
 };
