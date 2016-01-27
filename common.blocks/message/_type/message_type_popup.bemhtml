@@ -1,19 +1,10 @@
 block('message').mod('type', 'popup')(
     def()(function() {
-        var ctx = this.ctx;
-
-        return applyCtx([
-            {
-                block: 'popup',
-                directions: ['right-top'],
-                mods: {
-                    target: 'anchor',
-                    theme: ctx.mods.theme,
-                    size: ctx.mods.size,
-                    view: 'hint'
-                },
-                mix: { block: ctx.block, mods: ctx.mods }
+        var _popupMods = (this._popup && this._popup.mods) || {};
+        return applyNext({
+            _popup: {
+                mods: this.extend(this.mods, _popupMods)
             }
-        ]);
+        });
     })
 );
