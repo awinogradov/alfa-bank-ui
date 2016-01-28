@@ -1,11 +1,9 @@
 block('popup')(
     match(function() { return this._popup; }).def()(function() {
         var mods = this._popup.mods;
-        this.mods.theme = mods.theme;
-        this.mods.size = mods.size;
-        this.mods.view = mods.view;
-        this.mods.type = mods.type;
-        this.ctx.directions = this.ctx.directions || this._popup.directions;
+        var ctx = this.ctx;
+        this.mods.type = ctx.mods.type || mods.type;
+        this.ctx.directions = ctx.directions || this._popup.directions;
 
         return applyNext();
     })

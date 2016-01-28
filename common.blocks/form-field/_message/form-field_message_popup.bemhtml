@@ -1,0 +1,10 @@
+block('form-field').mod('message', 'popup')(
+    def()(function() {
+        this.ctx.directions = ['right-top'];
+        this._popup ?
+            this._popup.mods.type = 'tooltip' :
+            this._popup = { mods: { type: 'tooltip' } };
+
+        return applyNext();
+    })
+);

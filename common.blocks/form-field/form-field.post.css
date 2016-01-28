@@ -58,12 +58,12 @@
 
     .form-field__label {
         padding-bottom: 15px;
-        width: 150px;
     }
 
     &.form-field_view_line {
         .form-field__label {
             padding-top: 15px;
+            width: 150px;
         }
 
         .form-field__control {
