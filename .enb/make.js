@@ -5,7 +5,7 @@ var fs = require('fs'),
     configureBuild = require('./config/build');
 
 module.exports = function(project) {
-    project.nodes(['.protein/*', 'pages/*'], function(node) {
+    project.nodes(['pages/*'], function(node) {
         var nodeDirname = node.getNodePath(),
             sublevels = [
                 path.join(nodeDirname, '..', '.blocks'),
