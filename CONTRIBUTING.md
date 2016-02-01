@@ -1,4 +1,4 @@
-Contribution Guide for Manhattan Project
+Contribution Guide for UI
 ========================================
 
 ## How To Release A Version
@@ -80,7 +80,6 @@ Following abbreviations should be used in PR merge comments:
 
 * `r+ {sha}`: review passed for all commits up to `{sha}`
 * `r-`: review revealed some errors, changes must be done to proceed
-* `r? @spanferov`: request for review from another user
-* `re-r? @spanferov`: request another user to do review again
-* `cc @spanferov, @smbd`: current message is also intended for...
-
+* `r? @awinogradov`: request for review from another user
+* `re-r? @awinogradov`: request another user to do review again
+* `cc @awinogradov, @voischev`: current message is also intended for...

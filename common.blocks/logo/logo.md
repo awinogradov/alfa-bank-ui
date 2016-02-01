@@ -1,8 +1,8 @@
 # Logo
 
-Логотип.
+OJSC Alfa-Bank logo.
 
-# Использование блока
+# Usage
 
 ``` js
 {
@@ -10,20 +10,9 @@
 }
 ```
 
-## Модификаторы блока
+## Block mods
 
-### _theme
-
-- логотип ОАО «Альфа-Банк» (alfa)
-
-``` js
-{
-    block : 'logo',
-    mods : { theme  : 'alfa-on-color' }
-}
-```
-
-- для белого фона (white)
+- light background (white)
 
 ``` js
 {
@@ -32,7 +21,7 @@
 }
 ```
 
-- для цветного фона (color)
+- colorful background (color)
 
 ``` js
 {
@@ -43,7 +32,7 @@
 
 ### _size
 
-- маленький (s)
+- small (s)
 
 ``` js
 {
@@ -52,7 +41,7 @@
 }
 ```
 
-- средний (m)
+- medium (m)
 
 ``` js
 {
@@ -61,7 +50,7 @@
 }
 ```
 
-- большой (l)
+- large (l)
 
 ``` js
 {
@@ -70,7 +59,7 @@
 }
 ```
 
-- самый большой (xl)
+- x large (xl)
 
 ``` js
 {
@@ -81,7 +70,7 @@
 
 ### _view
 
-- логотип с текстом (full)
+- logo with text (full)
 
 ``` js
 {
@@ -90,7 +79,7 @@
 }
 ```
 
-- только логотип (icon)
+- only letter (icon)
 
 ``` js
 {

@@ -1,7 +1,7 @@
 # App
 
-Блок реализует базовую обвзяку приложения.
- 
+Base service layout.
+
 ``` js
 {
     block : 'app',
@@ -12,8 +12,7 @@
             content : {
                 block : 'heading',
                 mods : { theme : 'alfa-on-color' },
-                lvl : 1,
-                content : 'Заголовок'
+                content : 'Title of service'
             }
         },
         {
@@ -30,7 +29,7 @@
                                 type : 'link'
                             },
                             url : '#',
-                            content : 'Раз'
+                            content : 'One'
                         },
                         {
                             block : 'menu-item',
@@ -39,7 +38,7 @@
                                 type : 'link'
                             },
                             url : '#',
-                            content : 'Два'
+                            content : 'Two'
                         }
                     ]
                 }
@@ -47,23 +46,23 @@
         },
         {
             elem : 'content',
-            content : 'Какой-то блок'
+            content : 'Service controls'
         }
     ]
 }
 ```
- 
- 
-## Элементы блока
+
+
+## Block elements
 
 ### __title
 
-Заголовок приожения
+Service title
 
 ### __menu
 
-Реализует меню из входного массива объектов.
+Service main menu
 
 ### __content
 
-Содержит рабочую область приложения
+Service workspace
