@@ -4,7 +4,7 @@
   "description": "Alfa-Bank UI components",
   "repository": {
     "type": "git",
-    "url": "git@gitlab.moscow.alfaintra.net:design/ui.git"
+    "url": "git@github.com:alfa-bank-dev/ui.git"
   },
   "ignore": [
     ".bem/cache",
