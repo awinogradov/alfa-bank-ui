@@ -4,3 +4,14 @@ node_js:
   - '0.12'
 
 sudo: false
+
+env:
+  global:
+    - secure: J6L6ZO6WVvzSFL0Iiw2xSkY3LSlJ1K/85Op0fEUZaKuhXmws1eGdG7nfl2KODIyA4fCMWzu04tJym7bovu3jpmQCjsMlKH96eXauUo6Zf1+ozKNnkwVQ9qCyqvsrBZbQM4Vv9sXqBP0YlzCUQBHEifp5U7cKSVBElp60Q9GVgnI=
+    - GH_REF: alfa-bank-dev/ui
+    - ISTANBUL_COVERAGE: yes
+
+after_success:
+  - npm install coveralls
+  - ./node_modules/.bin/istanbul report lcovonly
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && echo "Coverage data was sent to coveralls!"

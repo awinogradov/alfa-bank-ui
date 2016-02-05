@@ -25,4 +25,3 @@ provide(Button.decl({
 }));
 
 });
-
