@@ -15,17 +15,16 @@ pages/*/*
 !pages/*/*.bemjson.js
 pages/*/_*.bemjson.js
 
-.protein
-
 *.blocks/*/*.examples
 
-/coverage
-/coverage.json
-/gemini-report/
+coverage
+coverage.json
+gemini-report/
 
 
 examples
 specs
+dist
 
 *.log
 
