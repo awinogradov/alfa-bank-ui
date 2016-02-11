@@ -1,9 +1,13 @@
 {
-  "private": true,
+  "license": "MPL-2.0",
   "author": "Anton Winogradov <winogradovaa@gmail.com>",
   "name": "ui",
   "description": "Alfa-Bank UI components",
   "version": "5.0.0-rc3",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:alfa-bank-dev/ui.git"
+  },
   "scripts": {
     "start": "enb server",
     "deps": "bower i",

@@ -2,6 +2,9 @@
     mustDeps: [
         { block: 'i-bem' },
         { block: 'link', mods: { pseudo: true } }
+    ],
+    shouldDeps: [
+        { mods: { theme: ['alfa-on-color', 'alfa-on-white'] } }
     ]
 },
 {
