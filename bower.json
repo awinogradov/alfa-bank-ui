@@ -4,7 +4,7 @@
   "description": "Alfa-Bank UI components",
   "repository": {
     "type": "git",
-    "url": "git@github.com:alfa-bank-dev/ui.git"
+    "url": "https://github.com/alfa-bank-dev/ui.git"
   },
   "ignore": [
     ".bem/cache",
@@ -15,11 +15,11 @@
     "bem-core": "2.8.0",
     "bem-components": "2.4.0",
     "bem-typography": "1.1.0",
-    "bem-forms": "git@github.com:bem-contrib/bem-forms.git#v1.0.0",
+    "bem-forms": "https://github.com/bem-contrib/bem-forms.git#v1.0.0",
     "bem-grid": "2.1.0"
   },
   "devDependencies": {
-    "bem-pr": "git@github.com:alfa-bank-dev/bem-pr.git#28853d9"
+    "bem-pr": "https://github.com/alfa-bank-dev/bem-pr.git#28853d9"
   },
   "resolutions": {
     "bem-core": "2.8.0"
