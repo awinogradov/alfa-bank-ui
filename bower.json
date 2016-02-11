@@ -19,7 +19,7 @@
     "bem-grid": "2.1.0"
   },
   "devDependencies": {
-    "bem-pr": "ssh://git@git/man/bem-pr.git"
+    "bem-pr": "git@github.com:alfa-bank-dev/bem-pr.git#28853d9"
   },
   "resolutions": {
     "bem-core": "2.8.0"
