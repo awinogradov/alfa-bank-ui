@@ -33,7 +33,6 @@
     "git-hooks": "^1.0.2",
     "istanbul": "^0.4.1",
     "jscs": "^2.7.0",
-    "jscs-alfa": "git+ssh://git@git/man/jscs-alfa.git#v0.3.0",
     "jshint": "^2.8.0",
     "jshint-groups": "^0.8.0",
     "mversion": "^1.10.1"

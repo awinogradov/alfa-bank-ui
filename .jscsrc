@@ -1,7 +1,87 @@
 {
-    "plugins": ["./node_modules/jscs-alfa"],
-    "preset": "alfa",
     "requireMultipleVarDecl": null,
+    "requireParenthesesAroundIIFE": true,
+    "requireSpacesInForStatement": true,
+    "requireCurlyBraces": null,
+    "requireCommaBeforeLineBreak": true,
+    "requireSpaceBeforeBinaryOperators": true,
+    "requireSpaceAfterBinaryOperators": true,
+    "requireCamelCaseOrUpperCaseIdentifiers": true,
+    "requireCapitalizedConstructors": true,
+    "requireSpaceBeforeObjectValues": true,
+    "requireSpaceBetweenArguments": true,
+    "requireSpaceBeforeKeywords": ["else", "while", "catch"],
+    "requireSpacesInsideObjectBrackets": "all",
+    "requireSemicolons": null,
+    "requireSpaceAfterLineComment": true,
+    "requireLineFeedAtFileEnd": true,
+    "requireSemicolons": true,
+    "requireSpacesInFunctionExpression": {
+        "beforeOpeningCurlyBrace": true
+    },
+    "requireSpacesInFunctionDeclaration": {
+        "beforeOpeningCurlyBrace": true
+    },
+    "requireSpacesInConditionalExpression": {
+        "afterTest": true,
+        "beforeConsequent": true,
+        "afterConsequent": true,
+        "beforeAlternate": true
+    },
+    "requireSpaceAfterKeywords": [
+        "do",
+        "for",
+        "if",
+        "else",
+        "switch",
+        "case",
+        "try",
+        "catch",
+        "void",
+        "while",
+        "with",
+        "return",
+        "typeof"
+    ],
+
+    "disallowSpacesInsideParentheses": true,
+    "disallowEmptyBlocks": true,
+    "disallowMixedSpacesAndTabs": true,
+    "disallowSpacesInCallExpression": true,
+    "disallowTrailingWhitespace": true,
+    "disallowMultipleLineStrings": true,
+    "disallowYodaConditions": true,
+    "disallowSpacesInsideArrayBrackets": true,
+    "disallowMultipleLineBreaks": true,
+    "disallowSpaceAfterObjectKeys": true,
+    "disallowImplicitTypeConversion": null,
+    "disallowOperatorBeforeLineBreak": ["."],
+    "disallowSpaceAfterPrefixUnaryOperators": true,
+    "disallowSpacesInFunctionExpression": {
+        "beforeOpeningRoundBrace": true
+    },
+    "disallowSpacesInFunctionDeclaration": {
+        "beforeOpeningRoundBrace": true
+    },
+    "disallowSpaceBeforeBinaryOperators": [
+        ","
+    ],
+    "disallowKeywords": [
+        "with"
+    ],
+    "disallowKeywordsOnNewLine": [
+        "else",
+        "catch"
+    ],
+    "disallowSpaceBeforePostfixUnaryOperators": [
+        "++",
+        "--"
+    ],
+
+    "validateIndentation": null,
+    "validateQuoteMarks": { "mark": "'", "escape": true },
+    "validateLineBreaks": "LF",
+
     "excludeFiles": [
         ".git/**",
         ".enb/tmp/**",
