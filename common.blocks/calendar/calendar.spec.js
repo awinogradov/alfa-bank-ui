@@ -38,7 +38,7 @@ describe('calendar', function() {
 
     it('should setVal/getVal equal', function() {
         block = build('calendar', bemjson);
-        var date = new Date('Wed May 20 2015 00:00:00 GMT+0300 (MSK)');
+        var date = new Date('Wed May 20 2015 10:00:00 GMT+0300 (MSK)');
 
         block.setVal('');
         (block._val === null).should.be.true;
@@ -50,34 +50,31 @@ describe('calendar', function() {
 
     it('should be get formated date', function() {
         block = build('calendar', bemjson);
-        var date = '24.06.2015';
+        var date = new Date('Wed May 20 2015 10:00:00 GMT+0300 (MSK)');
         block.getFormatedDate().should.be.equal('');
         block.setVal(date);
-        block.getFormatedDate().should.be.equal(date);
+        block.getFormatedDate().should.be.equal('20.05.2015');
     });
 
     it('should be get readable date', function() {
         block = build('calendar', bemjson);
         block.getReadableDate().should.be.equal('');
-        block.setVal('24.06.2015');
-        block.getReadableDate().should.be.equal('24 июня 2015');
+        block.setVal(new Date('Wed May 20 2015 10:00:00 GMT+0300 (MSK)'));
+        block.getReadableDate().should.be.equal('20 мая 2015');
     });
 
     it('should be switch month `switchMonth function`', function() {
         block = build('calendar', bemjson);
 
-        block.setVal('25.06.2015');
+        block.setVal(new Date('Wed June 25 2015 10:00:00 GMT+0300 (MSK)'));
         block.switchMonth(1);
         (moment(block._month).month()).should.be.equal(6);
-        block.switchMonth(-1);
-        (moment(block._month).month()).should.be.equal(5);
-
     });
 
     it('should be switch month arrow clicked', function(done) {
         block = build('calendar', bemjson);
 
-        block.setVal('25.06.2015');
+        block.setVal(new Date('Wed June 25 2015 10:00:00 GMT+0300 (MSK)'));
         setTimeout(function() {
             block.findElem('arrow', 'direction', 'right').click();
             (moment(block._month).month()).should.be.equal(6);
@@ -87,37 +84,44 @@ describe('calendar', function() {
         }, 200);
     });
 
-    it('should not to switch month', function(done) {
-
+    it('should not to switch month left', function() {
         bemjson.js = {
             earlierLimit: '01.01.2015',
             laterLimit: '31.12.2015',
         };
 
         block = build('calendar', bemjson);
+        block.setVal(new Date('Wed February 02 2015 10:00:00 GMT+0300 (MSK)'));
+        block.findElem('arrow', 'direction', 'left').click();
 
-        block.setVal('02.02.2015');
+        (block.hasMod(block.findElem('arrow', 'direction', 'left'), 'disabled')).should.be.true;
 
-        setTimeout(function() {
-            block.findElem('arrow', 'direction', 'left').click();
-            (block.hasMod(block.findElem('arrow', 'direction', 'left'), 'disabled')).should.be.true;
-            block.findElem('arrow', 'direction', 'left').click();
-            (moment(block._month).month()).should.be.equal(0);
+        block.findElem('arrow', 'direction', 'left').click();
+        (moment(block._month).month()).should.be.equal(0);
+    });
 
-            block.setVal('30.12.2015');
+    it('should not to switch month right', function() {
+        bemjson.js = {
+            earlierLimit: '01.01.2015',
+            laterLimit: '31.12.2015',
+        };
 
-            setTimeout(function() {
-                (block.hasMod(block.findElem('arrow', 'direction', 'right'), 'disabled')).should.be.true;
-                block.findElem('arrow', 'direction', 'right').click();
-                (moment(block._month).month()).should.be.equal(11);
-                done();
-            }, 100);
-        }, 100);
+        block = build('calendar', bemjson);
+        block.setVal(new Date('Wed December 30 2015 10:00:00 GMT+0300 (MSK)'));
+        block.findElem('arrow', 'direction', 'right').click();
+
+        (block.hasMod(block.findElem('arrow', 'direction', 'right'), 'disabled')).should.be.true;
+
+        block.findElem('arrow', 'direction', 'right').click();
+        (moment(block._month).month()).should.be.equal(11);
     });
 
     it('should be set offDays', function() {
         block = build('calendar', bemjson);
-        var days = ['25.06.2015', '26.06.2015'];
+        var days = [
+            new Date('Wed June 25 2015 10:00:00 GMT+0300 (MSK)'),
+            new Date('Wed June 26 2015 10:00:00 GMT+0300 (MSK)')
+        ];
         block.setOffDays(days);
         (block.params.offDays).should.be.equal(days);
     });
@@ -136,8 +140,8 @@ describe('calendar', function() {
     it('should be formated date', function() {
         block = build('calendar', bemjson);
 
-        block._formatDate(new Date('2015-06-25T00:00:00+03:00')).should.be.equal('25.06.2015');
-        block._formatDate('2015-06-25T00:00:00+03:00').should.be.equal('25.06.2015');
+        block._formatDate(new Date('Wed June 25 2015 10:00:00 GMT+0300 (MSK)')).should.be.equal('25.06.2015');
+        block._formatDate('2015-06-25T10:00:00+03:00').should.be.equal('25.06.2015');
 
         block._formatDate(null).should.be.equal('');
         block._formatDate('ololo').should.be.equal('');
