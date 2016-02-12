@@ -3191,6 +3191,5 @@ modules.define('moment', function(provide) {
     /************************************
         Exposing Moment
     ************************************/
-
     provide(moment);
 });
