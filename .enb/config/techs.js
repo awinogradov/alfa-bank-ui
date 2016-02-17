@@ -10,19 +10,11 @@ module.exports = {
     postcss: {
         engine: require('enb-postcss/techs/enb-postcss'),
         plugins: [
-            require('postcss-mixins'),
+            require('postcss-import'),
+            require('postcss-url'),
             require('postcss-for'),
             require('postcss-each'),
-            require('postcss-simple-vars')({
-                variables: {
-                    gridMaxWidth: '1000px',
-                    gridGutter: '10px',
-                    gridFlex: 'flex'
-                }
-            }),
-            require('lost'),
-            require('cssnext')(),
-            require('postcss-custom-properties'),
+            require('postcss-cssnext'),
             require('postcss-nested'),
             require('autoprefixer')({
                 browsers: [
@@ -32,7 +24,9 @@ module.exports = {
                     'android 4',
                     'ios >= 5'
                 ]
-            })
+            }),
+            require('postcss-browser-reporter'),
+            require('postcss-reporter')
         ]
     },
     templates: {
