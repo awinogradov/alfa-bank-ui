@@ -54,7 +54,6 @@ module.exports = function(project) {
 
     });
 
-    // include tasks
     ['dist', 'specs', 'examples'].forEach(function(name) {
         project.includeConfig(path.join(__dirname, 'tasks', name + '.js'));
     });
