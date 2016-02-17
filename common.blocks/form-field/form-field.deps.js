@@ -1,4 +1,8 @@
 ([{
+    mustDeps: [
+        { block: 'mq' }
+    ]
+},{
     tech: 'spec.js',
     shouldDeps: [
         { tech: 'js', block: 'validation' },
