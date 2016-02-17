@@ -151,8 +151,8 @@
                                     content: [
                                         {
                                             block: 'heading',
-                                            mods: { theme: 'alfa-on-color', size: 'm' },
-                                            content: 'Первая часть'
+                                            mods: { theme: 'alfa-on-color', size: 'l' },
+                                            content: 'Заголовок формы'
                                         },
                                         {
                                             block: 'form',
@@ -206,43 +206,111 @@
                                                             ]
                                                         },
                                                         {
-                                                            block: 'form-field',
-                                                            mods: {
-                                                                theme: 'alfa-on-color',
-                                                                size: 'm',
-                                                                type: 'input',
-                                                                'has-validation': true,
-                                                                required: true,
-                                                                message: 'popup'
-                                                            },
-                                                            name: 'test2',
-                                                            js: {
-                                                                required: {
-                                                                    message: 'Обязательное поле'
-                                                                }
-                                                            },
-                                                            content: [
+                                                            block: 'fieldset',
+                                                            mods: { view: 'line' },
+                                                            legend: [
+                                                                // {
+                                                                //     block: 'link',
+                                                                //     mods: { theme: 'alfa-on-color', size: 'l' },
+                                                                //     text: 'Первая часть'
+                                                                // },
+                                                                // { tag: 'br' },
+                                                                // { tag: 'br' },
                                                                 {
-                                                                    elem: 'label',
-                                                                    content: {
-                                                                        block: 'label',
-                                                                        mods: {
-                                                                            theme: 'alfa-on-color',
-                                                                            size: 'm'
-                                                                        },
-                                                                        content: 'Лейбл'
-                                                                    }
+                                                                    block: 'heading',
+                                                                    mods: { theme: 'alfa-on-color', size: 's' },
+                                                                    content: 'Первая часть'
                                                                 },
                                                                 {
-                                                                    elem: 'control',
-                                                                    content: {
-                                                                        block: 'input',
-                                                                        mods: {
-                                                                            theme: 'alfa-on-color',
-                                                                            size: 'm',
-                                                                            width: 'available'
+                                                                    block: 'paragraph',
+                                                                    mods: { theme: 'alfa-on-color' },
+                                                                    content: [
+                                                                        'Какой-то подсказочный текст можно написать'
+                                                                    ]
+                                                                }
+                                                            ],
+                                                            content: [
+                                                                {
+                                                                    block: 'form-field',
+                                                                    mods: {
+                                                                        theme: 'alfa-on-color',
+                                                                        size: 'm',
+                                                                        type: 'input',
+                                                                        'has-validation': true,
+                                                                        required: true,
+                                                                        message: 'popup'
+                                                                    },
+                                                                    name: 'test2',
+                                                                    js: {
+                                                                        required: {
+                                                                            message: 'Обязательное поле'
                                                                         }
-                                                                    }
+                                                                    },
+                                                                    content: [
+                                                                        {
+                                                                            elem: 'label',
+                                                                            content: {
+                                                                                block: 'label',
+                                                                                mods: {
+                                                                                    theme: 'alfa-on-color',
+                                                                                    size: 'm'
+                                                                                },
+                                                                                content: 'Лейбл'
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            elem: 'control',
+                                                                            content: {
+                                                                                block: 'input',
+                                                                                mods: {
+                                                                                    theme: 'alfa-on-color',
+                                                                                    size: 'm',
+                                                                                    width: 'available'
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    block: 'form-field',
+                                                                    mods: {
+                                                                        theme: 'alfa-on-color',
+                                                                        size: 'm',
+                                                                        type: 'input',
+                                                                        'has-validation': true,
+                                                                        required: true,
+                                                                        message: 'popup'
+                                                                    },
+                                                                    name: 'test3',
+                                                                    js: {
+                                                                        required: {
+                                                                            message: 'Обязательное поле'
+                                                                        }
+                                                                    },
+                                                                    content: [
+                                                                        {
+                                                                            elem: 'label',
+                                                                            content: {
+                                                                                block: 'label',
+                                                                                mods: {
+                                                                                    theme: 'alfa-on-color',
+                                                                                    size: 'm'
+                                                                                },
+                                                                                content: 'Лейбл'
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            elem: 'control',
+                                                                            content: {
+                                                                                block: 'input',
+                                                                                mods: {
+                                                                                    theme: 'alfa-on-color',
+                                                                                    size: 'm',
+                                                                                    width: 'available'
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    ]
                                                                 }
                                                             ]
                                                         }
@@ -283,11 +351,6 @@
                                             ]
                                         },
                                         {
-                                            block: 'heading',
-                                            mods: { theme: 'alfa-on-color', size: 'm' },
-                                            content: 'Вторая часть'
-                                        },
-                                        {
                                             block: 'form',
                                             mods: {
                                                 'has-vaidation': true,
@@ -298,86 +361,96 @@
                                                     elem: 'content',
                                                     content: [
                                                         {
-                                                            block: 'form-field',
-                                                            mods: {
-                                                                theme: 'alfa-on-color',
-                                                                size: 'm',
-                                                                type: 'input',
-                                                                view: 'line',
-                                                                'has-validation': true,
-                                                                required: true,
-                                                                message: 'popup'
-                                                            },
-                                                            name: 'test',
-                                                            js: {
-                                                                required: {
-                                                                    message: 'Обязательное поле'
-                                                                }
+                                                            block: 'fieldset',
+                                                            legend: {
+                                                                block: 'heading',
+                                                                mods: { theme: 'alfa-on-color', size: 'm' },
+                                                                content: 'Вторая часть'
                                                             },
                                                             content: [
                                                                 {
-                                                                    elem: 'label',
-                                                                    content: {
-                                                                        block: 'label',
-                                                                        mods: {
-                                                                            theme: 'alfa-on-color',
-                                                                            size: 'm'
+                                                                    block: 'form-field',
+                                                                    mods: {
+                                                                        theme: 'alfa-on-color',
+                                                                        size: 'm',
+                                                                        type: 'input',
+                                                                        view: 'line',
+                                                                        'has-validation': true,
+                                                                        required: true,
+                                                                        message: 'popup'
+                                                                    },
+                                                                    name: 'test',
+                                                                    js: {
+                                                                        required: {
+                                                                            message: 'Обязательное поле'
+                                                                        }
+                                                                    },
+                                                                    content: [
+                                                                        {
+                                                                            elem: 'label',
+                                                                            content: {
+                                                                                block: 'label',
+                                                                                mods: {
+                                                                                    theme: 'alfa-on-color',
+                                                                                    size: 'm'
+                                                                                },
+                                                                                content: 'Лейбл'
+                                                                            }
                                                                         },
-                                                                        content: 'Лейбл'
-                                                                    }
+                                                                        {
+                                                                            elem: 'control',
+                                                                            content: {
+                                                                                block: 'input',
+                                                                                mods: {
+                                                                                    theme: 'alfa-on-color',
+                                                                                    size: 'm',
+                                                                                    width: 'available'
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    ]
                                                                 },
                                                                 {
-                                                                    elem: 'control',
-                                                                    content: {
-                                                                        block: 'input',
-                                                                        mods: {
-                                                                            theme: 'alfa-on-color',
-                                                                            size: 'm',
-                                                                            width: 'available'
+                                                                    block: 'form-field',
+                                                                    mods: {
+                                                                        theme: 'alfa-on-color',
+                                                                        size: 'm',
+                                                                        type: 'input',
+                                                                        view: 'line',
+                                                                        'has-validation': true,
+                                                                        required: true,
+                                                                        message: 'popup'
+                                                                    },
+                                                                    name: 'test2',
+                                                                    js: {
+                                                                        required: {
+                                                                            message: 'Обязательное поле'
                                                                         }
-                                                                    }
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            block: 'form-field',
-                                                            mods: {
-                                                                theme: 'alfa-on-color',
-                                                                size: 'm',
-                                                                type: 'input',
-                                                                view: 'line',
-                                                                'has-validation': true,
-                                                                required: true,
-                                                                message: 'popup'
-                                                            },
-                                                            name: 'test2',
-                                                            js: {
-                                                                required: {
-                                                                    message: 'Обязательное поле'
-                                                                }
-                                                            },
-                                                            content: [
-                                                                {
-                                                                    elem: 'label',
-                                                                    content: {
-                                                                        block: 'label',
-                                                                        mods: {
-                                                                            theme: 'alfa-on-color',
-                                                                            size: 'm'
+                                                                    },
+                                                                    content: [
+                                                                        {
+                                                                            elem: 'label',
+                                                                            content: {
+                                                                                block: 'label',
+                                                                                mods: {
+                                                                                    theme: 'alfa-on-color',
+                                                                                    size: 'm'
+                                                                                },
+                                                                                content: 'Лейбл'
+                                                                            }
                                                                         },
-                                                                        content: 'Лейбл'
-                                                                    }
-                                                                },
-                                                                {
-                                                                    elem: 'control',
-                                                                    content: {
-                                                                        block: 'input',
-                                                                        mods: {
-                                                                            theme: 'alfa-on-color',
-                                                                            size: 'm',
-                                                                            width: 'available'
+                                                                        {
+                                                                            elem: 'control',
+                                                                            content: {
+                                                                                block: 'input',
+                                                                                mods: {
+                                                                                    theme: 'alfa-on-color',
+                                                                                    size: 'm',
+                                                                                    width: 'available'
+                                                                                }
+                                                                            }
                                                                         }
-                                                                    }
+                                                                    ]
                                                                 }
                                                             ]
                                                         }

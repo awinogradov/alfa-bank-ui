@@ -1,7 +1,4 @@
 .heading {
-    margin-top: 35px;
-    margin-bottom: 25px;
-
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
 
@@ -10,18 +7,26 @@
 
 .heading_size_xl {
     font-size: 3.5625rem;
+    margin-top: 35px;
+    margin-bottom: 30px;
 }
 
 .heading_size_l {
     font-size: 2.375rem;
+    margin-top: 30px;
+    margin-bottom: 25px;
 }
 
 .heading_size_m {
     font-size: 1.875rem;
     line-height: 1.4;
+    margin-top: 25px;
+    margin-bottom: 20px;
 }
 
 .heading_size_s {
     font-size: 1.375rem;
     line-height: 1.4;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }

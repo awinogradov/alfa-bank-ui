@@ -12,21 +12,6 @@
     .form-field__label {
         padding-bottom: 12px;
     }
-
-    &.form-field_view_line {
-        .form-field__label {
-            padding-top: 5px;
-            width: 100px;
-        }
-
-        .form-field__control {
-            padding-left: 115px;
-
-            & > .radio, & > .radio-group {
-                padding-top: 8px;
-            }
-        }
-    }
 }
 
 .form-field_size_m {
@@ -34,21 +19,6 @@
 
     .form-field__label {
         padding-bottom: 10px;
-    }
-
-    &.form-field_view_line {
-        .form-field__label {
-            padding-top: 10px;
-            width: 100px;
-        }
-
-        .form-field__control {
-            padding-left: 115px;
-
-            & > .radio, & > .radio-group {
-                padding-top: 13px;
-            }
-        }
     }
 }
 
@@ -59,37 +29,58 @@
     .form-field__label {
         padding-bottom: 15px;
     }
-
-    &.form-field_view_line {
-        .form-field__label {
-            padding-top: 15px;
-            width: 150px;
-        }
-
-        .form-field__control {
-            padding-left: 165px;
-
-            & > .radio, & > .radio-group {
-                padding-top: 18px;
-            }
-        }
-    }
 }
 
-.form-field_view_line {
+@media (--large) {
 
-    .form-field__label {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding-bottom: 0!important;
-    }
+    .form-field_view_line {
+        .form-field__label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-bottom: 0!important;
+        }
 
-    &.form-field_view_line {
+        &.form-field_size_s {
+            .form-field__label {
+                padding-top: 5px;
+                width: 100px;
+                left: -100px;
+            }
 
-        .form-field__control {
-            & > .radio-group_type_button {
-                padding-top: 0;
+            .form-field__control {
+                & > .radio, & > .radio-group {
+                    padding-top: 8px;
+                }
+            }
+        }
+
+        &.form-field_size_m {
+            .form-field__label {
+                padding-top: 10px;
+                width: 100px;
+                left: -100px;
+            }
+
+            .form-field__control {
+                & > .radio, & > .radio-group {
+                    padding-top: 13px;
+                }
+            }
+        }
+
+        &.form-field_size_l,
+        &.form-field_size_xl {
+            .form-field__label {
+                padding-top: 15px;
+                width: 150px;
+                left: -150px;
+            }
+
+            .form-field__control {
+                & > .radio, & > .radio-group {
+                    padding-top: 18px;
+                }
             }
         }
     }
