@@ -268,7 +268,7 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
                             content: day ? moment(day).date() : ''
                         },
                         attrs: {},
-                        mods: {}
+                        elemMods: {}
                     };
 
                 if (day && !off) {
@@ -276,11 +276,11 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
                 }
 
                 if (off || weekend) {
-                    dayElem.mods.type = weekend ? (off ? 'weekend-off' : 'weekend') : 'off';
+                    dayElem.elemMods.type = weekend ? (off ? 'weekend-off' : 'weekend') : 'off';
                 }
 
                 if (day && val && moment(day).isSame(val, 'day')) {
-                    dayElem.mods.state = 'current';
+                    dayElem.elemMods.state = 'current';
                 }
 
                 row.push(dayElem);
@@ -302,7 +302,7 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
             };
 
             if (i > 4) {
-                dayname.mods = { type: 'weekend' };
+                dayname.elemMods = { type: 'weekend' };
             }
 
             row.push(dayname);
@@ -320,14 +320,14 @@ provide(BEMDOM.decl({ block: this.name }, /** @lends calendar.prototype */{
             content: [
                 {
                     elem: 'arrow',
-                    mods: {
+                    elemMods: {
                         direction: 'left',
                         disabled: !prevMonth
                     }
                 },
                 {
                     elem: 'arrow',
-                    mods: {
+                    elemMods: {
                         direction: 'right',
                         disabled: !nextMonth
                     }

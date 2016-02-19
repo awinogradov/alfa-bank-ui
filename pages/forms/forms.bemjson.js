@@ -302,12 +302,25 @@
                                                                         {
                                                                             elem: 'control',
                                                                             content: {
-                                                                                block: 'input',
-                                                                                mods: {
+                                                                                block : 'input',
+                                                                                mods : {
                                                                                     theme: 'alfa-on-color',
-                                                                                    size: 'm',
-                                                                                    width: 'available'
+                                                                                    size : 'm',
+                                                                                    'has-calendar' : true,
+                                                                                    'readable-date' : true
+                                                                                },
+                                                                                earlierLimit : '20.03.2015',
+                                                                                laterLimit : '20.06.2015',
+                                                                                offDays : ['21.05.2015', '22-05-2015', '2015.05.23', '2015-05-24', '2015-05-25'],
+                                                                                icon: {
+                                                                                    block: 'icon',
+                                                                                    mods: {
+                                                                                        theme: 'alfa-on-color',
+                                                                                        size: 'm',
+                                                                                        tool: 'calendar'
+                                                                                    }
                                                                                 }
+
                                                                             }
                                                                         }
                                                                     ]
