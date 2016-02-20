@@ -2,4 +2,4 @@
     mustDeps: [
         { block: 'mq' }
     ]
-})
+});
