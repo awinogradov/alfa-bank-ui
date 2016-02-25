@@ -3,6 +3,7 @@
     font-weight: 300;
 
     display: inline-block;
+    position: relative;
 
     cursor: pointer;
 
@@ -19,8 +20,8 @@
 }
 
 .checkbox__box {
-    position: relative;
     display: inline-block;
+    position: absolute;
 
     border-radius: 3px;
 
@@ -44,6 +45,10 @@
     }
 }
 
+.checkbox__text {
+    display: inline-block;
+}
+
 .checkbox_size_m {
     font-size: 16px;
 
@@ -59,6 +64,10 @@
             width: 13px;
             height: 13px;
         }
+    }
+
+    .checkbox__text {
+        padding-left: 20px;
     }
 }
 
@@ -77,6 +86,10 @@
             width: 17px;
             height: 16px;
         }
+    }
+
+    .checkbox__text {
+        padding-left: 28px;
     }
 }
 
