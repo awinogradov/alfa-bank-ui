@@ -25,15 +25,17 @@
     margin-right: 5px;
     vertical-align: middle;
     display: inline-block;
-    line-height: 0px;
+    line-height: 0;
 }
 
 .link_size_s {
     font-size: 13px;
+    line-height: 1.5;
 }
 
 .link_size_m {
     font-size: 16px;
+    line-height: 1.5;
 }
 
 .link_size_l {
@@ -50,7 +52,7 @@
 
 .link_disabled {
     cursor: default;
-    
+
     .link__icon {
         opacity: .3;
     }
