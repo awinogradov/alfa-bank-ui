@@ -3,10 +3,10 @@
 
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    line-height: 1.5;
 }
 
 .hint_size_m {
-    font-size: 16px;
-
+    font-size: 13px; // from link_size_s
     padding-top: 15px;
 }

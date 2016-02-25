@@ -5,10 +5,12 @@
 
 .label_size_s {
     font-size: 13px;
+    line-height: 1.5;
 }
 
 .label_size_m {
     font-size: 16px;
+    line-height: 1.5;
 }
 
 .label_size_l {
