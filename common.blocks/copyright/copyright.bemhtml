@@ -1,8 +1,13 @@
 block('copyright')(
+    elem('no-wrap')(
+        tag()('span')
+    ),
     content()(function() {
         return [
-            ' Генеральная лицензия <nobr>Банка России</nobr> №1326 ',
-            '<nobr>от 16 января 2015 г.</nobr>'
+            ' Генеральная лицензия ',
+            { elem: 'no-wrap', content: 'Банка России' },
+            ' №1326 ',
+            { elem: 'no-wrap', content: 'от 16 января 2015 г.' }
         ];
     })
 );
