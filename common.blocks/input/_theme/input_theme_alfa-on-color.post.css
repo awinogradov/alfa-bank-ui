@@ -52,16 +52,6 @@
         background-color: rgba(0, 0, 0, .15);
     }
 
-    &.input_invalid {
-        border-color: rgba(248, 96, 101, .85);
-
-        &.input_focused {
-            border-color: rgba(248, 96, 101, .85);
-            box-shadow: 0px 0px 0px 1px rgba(248, 96, 101, .85);
-            background: rgba(248, 96, 101, .08);
-        }
-    }
-
     &.input_disabled {
         border-color: transparent;
 

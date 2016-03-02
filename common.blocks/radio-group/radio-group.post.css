@@ -12,6 +12,11 @@
     }
 }
 
+.radio-group_invalid {
+    border-left: 1px solid rgba(248, 96, 101, .85);
+    padding-left: 10px;
+}
+
 .radio-group_type_button {
     white-space: nowrap;
 
@@ -21,7 +26,7 @@
 }
 
 .radio-group_type_line {
-    
+
     .radio {
         margin-bottom: 0;
     }
