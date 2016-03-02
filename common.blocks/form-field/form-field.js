@@ -12,13 +12,15 @@ FormField.decl(this.name, {
         'focused': {
             'true': function() {
                 this.__base.apply(this, arguments);
-                if (this.hasMod('invalid')) {
+                if (this.getMessage() && this.hasMod('invalid')) {
                     this.getMessage().show();
                 }
             },
             '': function() {
                 this.__base.apply(this, arguments);
-                this.getMessage().hide();
+                if (this.getMessage()) {
+                    this.getMessage().hide();
+                }
             }
         }
     }
