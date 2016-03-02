@@ -1,12 +1,12 @@
 block('social').content()(function() {
     var ctx = this.ctx;
     var mods = this.mods;
-    if (Array.isArray(ctx.networks)) throw Error('Block can\'t use without networks array in mode networks');
+    if (!Array.isArray(ctx.networks)) throw Error('Block can\'t use without networks array in mode networks');
 
     var networks = ctx.networks || [
         { name: 'vk', url: 'https://vk.com/alfabank' },
         { name: 'facebook', url: 'https://facebook.com/alfabank' },
-        { name: 'twitter', url: 'https://twitter.com/alfabank' }
+        { name: 'twitter', url: 'https://twitter.com/alfa_bank' }
     ];
 
     return [
