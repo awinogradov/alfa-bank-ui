@@ -19,7 +19,8 @@ block('footer')(
                         {
                             block: 'social',
                             mix: { block: this.block, elem: 'social' },
-                            mods: { theme: ctx.mods.theme }
+                            mods: { theme: ctx.mods.theme },
+                            networks: this.ctx.networks
                         },
                         {
                             block: 'copyright',
