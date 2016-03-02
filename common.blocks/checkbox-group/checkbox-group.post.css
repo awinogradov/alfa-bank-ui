@@ -2,6 +2,11 @@
     display: inline-block;
 }
 
+.checkbox-group_invalid {
+    border-left: 1px solid rgba(248, 96, 101, .85);
+    padding-left: 10px;
+}
+
 .checkbox_size_m {
     margin-bottom: 10px;
 }
