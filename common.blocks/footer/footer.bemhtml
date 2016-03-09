@@ -1,7 +1,6 @@
 block('footer')(
     content()(function() {
         var ctx = this.ctx;
-
         return {
             elem: 'inner',
             content: [
@@ -9,7 +8,7 @@ block('footer')(
                     elem: 'menu',
                     content: ctx.menu
                 },
-                {
+                (typeof ctx.additional === 'boolean' && !ctx.additional) || {
                     elem: 'additional',
                     content: ctx.additional || 'Сделано в Альфа-Лаборатории'
                 },
