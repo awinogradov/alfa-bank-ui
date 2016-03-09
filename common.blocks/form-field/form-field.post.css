@@ -37,15 +37,15 @@
         .form-field__label {
             position: absolute;
             top: 0;
-            left: 0;
-            padding-bottom: 0!important;
+            left: -172px;
+            width: 152px;
+            text-align: right;
+            padding-bottom: 0;
         }
 
         &.form-field_size_s {
             .form-field__label {
-                padding-top: 5px;
-                width: 100px;
-                left: -100px;
+                padding-top: 6px;
             }
 
             .form-field__control {
@@ -57,9 +57,7 @@
 
         &.form-field_size_m {
             .form-field__label {
-                padding-top: 10px;
-                width: 100px;
-                left: -100px;
+                padding-top: 9px;
             }
 
             .form-field__control {
@@ -69,12 +67,21 @@
             }
         }
 
-        &.form-field_size_l,
+        &.form-field_size_l {
+            .form-field__label {
+                padding-top: 12px;
+            }
+
+            .form-field__control {
+                & > .radio, & > .radio-group {
+                    padding-top: 18px;
+                }
+            }
+        }
+
         &.form-field_size_xl {
             .form-field__label {
-                padding-top: 15px;
-                width: 150px;
-                left: -150px;
+                padding-top: 17px;
             }
 
             .form-field__control {

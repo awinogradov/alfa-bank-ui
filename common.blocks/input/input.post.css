@@ -135,11 +135,11 @@
 }
 
 .input_size_s {
-    font-size: 13px;
     height: 30px;
+    font-size: 13px;
 
     .input__control {
-        padding: 8px 10px 7px;
+        padding: 7px 10px 6px;
     }
 
     &.input_has-clear .input__box,
@@ -192,7 +192,7 @@
     height: 50px;
 
     .input__control {
-        padding: 13px 15px 12px;
+        padding: 14px 15px 13px;
     }
 
     &.input_has-clear .input__box,
@@ -213,7 +213,7 @@
     height: 60px;
 
     .input__control {
-        padding: 16px 15px;
+        padding: 17px 15px 16px;
     }
 
     &.input_has-clear .input__box,
