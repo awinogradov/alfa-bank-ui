@@ -15,8 +15,9 @@
     .fieldset_view_line {
         .fieldset__legend {
             position: absolute;
-            width: 172px; /* header__logo width */
+            width: 162px;
             left: -172px;
+            padding-bottom: 0;
 
             & > .heading,
             & > .link,
