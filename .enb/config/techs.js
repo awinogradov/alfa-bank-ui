@@ -14,17 +14,8 @@ module.exports = {
             require('postcss-url'),
             require('postcss-for'),
             require('postcss-each'),
-            require('postcss-cssnext'),
             require('postcss-nested'),
-            require('autoprefixer')({
-                browsers: [
-                    'last 2 versions',
-                    'ie 10',
-                    'ff 24',
-                    'android 4',
-                    'ios >= 5'
-                ]
-            }),
+            require('postcss-cssnext'),
             require('postcss-browser-reporter'),
             require('postcss-reporter')
         ]

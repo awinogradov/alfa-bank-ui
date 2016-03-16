@@ -29,7 +29,6 @@ module.exports = function(project) {
             // build dev CSS
             [techs.postcss.engine, {
                 target: '.tmp.css',
-                sourcemap: true,
                 plugins: techs.postcss.plugins
             }],
             [techs.borschik, { source: '.tmp.css', target: LIB_NAME + '.css', freeze: true, minify: false }],
