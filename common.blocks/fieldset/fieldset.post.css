@@ -15,9 +15,10 @@
     .fieldset_view_line {
         .fieldset__legend {
             position: absolute;
-            width: 162px;
+            width: 152px;
             left: -172px;
             padding-bottom: 0;
+            text-align: right;
 
             & > .heading,
             & > .link,
@@ -27,17 +28,18 @@
                 margin-top: 0;
             }
 
-            & > .paragraph {
-                top: -2px;
-            }
-
             & > .heading {
-                top: -7px;
+                top: -5px;
             }
 
             & > .link {
-                top: -5px;
+                top: -2px;
             }
+
+            & > .paragraph {
+                top: 1px;
+            }
+
         }
     }
 
