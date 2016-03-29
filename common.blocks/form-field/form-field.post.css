@@ -1,9 +1,5 @@
 .form-field {
     position: relative;
-
-    &:last-child {
-        padding-bottom: 0;
-    }
 }
 
 .form-field_size_s {
