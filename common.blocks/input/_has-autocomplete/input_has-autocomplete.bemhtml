@@ -1,6 +1,11 @@
 block('input').mod('has-autocomplete', true)(
     def()(function() {
-        return applyNext({ _input: this.ctx });
+        var ctx = this.ctx;
+
+        if (!ctx.options)
+            throw Error('input_has-autocomlele: should has mode `options`');
+
+        return applyNext({ _input: ctx });
     }),
     elem('box')(
         content()(function() {
