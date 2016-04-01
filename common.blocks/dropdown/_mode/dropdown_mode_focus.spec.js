@@ -24,7 +24,9 @@ modules.define('spec', ['spec__utils', 'dropdown', 'link'], function(provide, he
         });
 
         it('should remove mod "opened" on blur on popup', function() {
+            dropdown.hasMod('opened').should.be.false;
             dropdown.getSwitcher().domElem.focus();
+            dropdown.getSwitcher().hasMod('focused').should.be.true;
             dropdown.getSwitcher().domElem.blur();
             dropdown.hasMod('opened').should.be.false;
         });
