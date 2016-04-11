@@ -11,7 +11,7 @@
     "libs"
   ],
   "dependencies": {
-    "bem-components": "2.4.0",
+    "bem-components": "2.5.0",
     "bem-typography": "1.1.0",
     "bem-forms": "https://github.com/bem-contrib/bem-forms.git#v1.0.0",
     "bem-grid": "^2.3.2"
@@ -20,6 +20,7 @@
     "bem-pr": "https://github.com/alfa-bank-dev/bem-pr.git#28853d9"
   },
   "resolutions": {
-    "bem-core": "2.8.0"
+    "bem-components": "2.5.0",
+    "bem-core": "2.9.0"
   }
 }
