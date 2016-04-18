@@ -20,8 +20,4 @@ module.exports = function(project) {
         fileSuffixes: ['bemjson.js', 'title.txt']
     });
 
-    // configure pages building by BEMJSON files
-    project.nodes(['examples/*/*'], function(node) {
-        configureBuild(node);
-    });
 };
