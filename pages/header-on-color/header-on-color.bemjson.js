@@ -2,8 +2,8 @@
     block: 'page',
     title: 'Header on Color',
     mods: { theme: 'alfa-on-color' },
-    head: [{ elem: 'css', url: 'on-color.min.css' }],
-    scripts: [{ elem: 'js', url: 'on-color.min.js' }],
+    head: [{ elem: 'css', url: 'header-on-color.min.css' }],
+    scripts: [{ elem: 'js', url: 'header-on-color.min.js' }],
     content: [
         {
             block: 'header',
@@ -13,7 +13,7 @@
                 mods: {
                     theme: 'alfa-on-color',
                     size: 'm',
-                    horizontal: true
+                    view: 'horizontal'
                 },
                 content: [
                     {
@@ -30,10 +30,6 @@
                     },
                     {
                         title: 'Банкоматы',
-                        url: '#'
-                    },
-                    {
-                        title: 'Интернет-банк',
                         url: '#',
                         items: [
                             {
@@ -45,6 +41,10 @@
                                 url: '#'
                             }
                         ]
+                    },
+                    {
+                        title: 'Интернет-банк',
+                        url: '#'
                     }
                 ].map(function(item) {
                     if (item.items){

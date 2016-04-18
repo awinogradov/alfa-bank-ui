@@ -2,8 +2,8 @@
     block: 'page',
     title: 'Message',
     mods: { theme: 'alfa-on-color' },
-    head: [{ elem: 'css', url: 'default.min.css' }],
-    scripts: [{ elem: 'js', url: 'default.min.js' }],
+    head: [{ elem: 'css', url: 'message.min.css' }],
+    scripts: [{ elem: 'js', url: 'message.min.js' }],
     content: [
         {
             block: 'example-header',

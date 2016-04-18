@@ -2,8 +2,8 @@
     block: 'page',
     title: 'Collapse',
     mods: { theme: 'alfa-on-color' },
-    head: [{ elem: 'css', url: 'index.min.css' }],
-    scripts: [{ elem: 'js', url: 'index.min.js' }],
+    head: [{ elem: 'css', url: 'collapse.min.css' }],
+    scripts: [{ elem: 'js', url: 'collapse.min.js' }],
     content: [
         {
             block: 'example-section',
