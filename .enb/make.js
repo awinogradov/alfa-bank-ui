@@ -5,7 +5,7 @@ var fs = require('fs'),
     configureBuild = require('./config/build');
 
 module.exports = function(project) {
-    project.nodes(['pages/*', 'examples/*/*'], function(node) {
+    project.nodes(['pages/*'], function(node) {
         var nodeDirname = node.getNodePath(),
             sublevels = [
                 path.join(nodeDirname, '..', '.blocks'),
@@ -14,14 +14,8 @@ module.exports = function(project) {
                 return fs.existsSync(level);
             });
 
-        // resolve targets for default build and build examples
-        if (process.argv[3] !== 'examples') {
-            node.addTechs([
-                [techs.files.provide, { target: '?.bemjson.js' }]
-            ]);
-        }
-
         node.addTechs([
+            [techs.files.provide, { target: '?.bemjson.js' }],
             [techs.bem.levels, { levels: [].concat(
                 sublevels,
                 levels,
@@ -60,7 +54,7 @@ module.exports = function(project) {
 
     });
 
-    ['dist', 'specs', 'examples'].forEach(function(name) {
+    ['dist', 'specs'].forEach(function(name) {
         project.includeConfig(path.join(__dirname, 'tasks', name + '.js'));
     });
 };

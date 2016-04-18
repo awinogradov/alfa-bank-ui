@@ -2,8 +2,8 @@
     block: 'page',
     title: 'Attach',
     mods: { theme: 'alfa-on-color' },
-    head: [{ elem: 'css', url: 'index.min.css' }],
-    scripts: [{ elem: 'js', url: 'index.min.js' }],
+    head: [{ elem: 'css', url: 'attach.min.css' }],
+    scripts: [{ elem: 'js', url: 'attach.min.js' }],
     content: [
         {
             block: 'example-section',

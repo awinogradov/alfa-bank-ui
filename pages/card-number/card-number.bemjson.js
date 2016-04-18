@@ -2,8 +2,8 @@
     block: 'page',
     title: 'Card Number',
     mods: { theme: 'alfa-on-color' },
-    head: [{ elem: 'css', url: 'index.min.css' }],
-    scripts: [{ elem: 'js', url: 'index.min.js' }],
+    head: [{ elem: 'css', url: 'card-number.min.css' }],
+    scripts: [{ elem: 'js', url: 'card-number.min.js' }],
     content: [
         {
             block: 'example-section',

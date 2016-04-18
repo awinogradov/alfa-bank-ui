@@ -8,6 +8,7 @@
 .menu_view_horizontal {
     .menu-item {
         display: inline-block;
+        vertical-align: top;
 
         &:first-child {
             padding-left: 0;

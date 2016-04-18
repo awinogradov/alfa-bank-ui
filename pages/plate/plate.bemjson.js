@@ -2,8 +2,8 @@
     block: 'page',
     title: 'Plate',
     mods: { theme: 'alfa-on-color' },
-    head: [{ elem: 'css', url: 'index.min.css' }],
-    scripts: [{ elem: 'js', url: 'index.min.js' }],
+    head: [{ elem: 'css', url: 'plate.min.css' }],
+    scripts: [{ elem: 'js', url: 'plate.min.js' }],
     content: [
         {
             block: 'example-section',

@@ -2,8 +2,8 @@
     block: 'page',
     title: 'Highlight',
     mods: { theme: 'alfa-on-color' },
-    head: [{ elem: 'css', url: 'index.min.css' }],
-    scripts: [{ elem: 'js', url: 'index.min.js' }],
+    head: [{ elem: 'css', url: 'highlight.min.css' }],
+    scripts: [{ elem: 'js', url: 'highlight.min.js' }],
     content: [
         {
             block: 'example-header',
