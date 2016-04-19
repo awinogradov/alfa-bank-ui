@@ -10,13 +10,19 @@
         display: inline-block;
         vertical-align: top;
 
-        &:first-child {
+        &.menu-item_type_link:first-child {
             padding-left: 0;
         }
 
-        &:last-child {
+        &.menu-item_type_link:last-child {
             padding-right: 0;
         }
+    }
+    .menu-item:first-child {
+        border-radius: 4px 0 0 4px;
+    }
+    .menu-item:last-child {
+        border-radius: 0 4px 4px 0;
     }
 }
 
@@ -57,7 +63,7 @@
 
     .menu-item {
         font-size: 13px;
-        padding: 8px 10px;
+        padding: 6px 10px;
     }
 
     &.menu_mode_check {
@@ -65,7 +71,7 @@
             width: 11px;
             height: 11px;
 
-            top: 11px;
+            top: 9px;
             margin-left: -16px;
         }
     }
@@ -75,7 +81,7 @@
             width: 5px;
             height: 5px;
 
-            top: 14px;
+            top: 12px;
             margin-left: -14px;
         }
     }
@@ -86,12 +92,12 @@
 
     .menu__group-title {
         font-size: 16px;
-        padding: 10px 12px;
+        padding: 8px 12px;
     }
 
     .menu-item {
         font-size: 16px;
-        padding: 10px 12px;
+        padding: 9px 12px;
     }
 
     &.menu_mode_check {
@@ -99,7 +105,7 @@
             width: 14px;
             height: 14px;
 
-            top: 13px;
+            top: 12px;
             margin-left: -17px;
         }
     }
@@ -109,7 +115,7 @@
             width: 6px;
             height: 6px;
 
-            top: 18px;
+            top: 17px;
             margin-left: -14px;
         }
     }
@@ -124,7 +130,7 @@
 
     .menu-item {
         font-size: 18px;
-        padding: 12px 15px;
+        padding: 12px 15px 13px;
     }
 
     &.menu_mode_check {
@@ -132,7 +138,7 @@
             width: 17px;
             height: 16px;
 
-            top: 15px;
+            top: 16px;
             margin-left: -23px
         }
     }
@@ -142,7 +148,7 @@
             width: 8px;
             height: 8px;
 
-            top: 20px;
+            top: 21px;
             margin-left: -21px;
         }
     }
@@ -157,7 +163,7 @@
 
     .menu-item {
         font-size: 20px;
-        padding: 16px 15px;
+        padding: 11px 15px;
     }
 
     &.menu_mode_check {
@@ -165,7 +171,7 @@
             width: 21px;
             height: 20px;
 
-            top: 18px;
+            top: 14px;
             margin-left: -25px;
         }
     }
@@ -175,7 +181,7 @@
             width: 10px;
             height: 10px;
 
-            top: 25px;
+            top: 21px;
             margin-left: -22px;
         }
     }

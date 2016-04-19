@@ -6,14 +6,6 @@
     transition: background 200ms ease;
 }
 
-.menu-item:first-child {
-    border-radius: 4px 4px 0 0;
-}
-
-.menu-item:last-child {
-    border-radius: 0 0 4px 4px;
-}
-
 .menu-item_disabled {
     cursor: default;
 }
