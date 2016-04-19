@@ -40,7 +40,7 @@
 }
 
 .header__content {
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 .header__menu {
@@ -60,7 +60,7 @@
 
 .header__user,
 .header__support {
-    padding-top: 6px;
+    padding-top: 10px;
 }
 
 @media (--large) {
