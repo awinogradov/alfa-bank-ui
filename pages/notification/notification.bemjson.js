@@ -34,9 +34,9 @@
                 },
                 {
                     block: 'button',
-                    mix: { block: 'test', elem: 'fail' },
+                    mix: { block: 'test', elem: 'error' },
                     mods: { theme: 'alfa-on-color', size: 'm', view: 'action' },
-                    text: 'Show FAIL notification'
+                    text: 'Show ERROR notification'
                 },
                 {
                     block: 'button',

@@ -1,7 +1,7 @@
 ([{
     mustDeps: [
         { block: 'i-bem', elem: 'dom' },
-        { block: 'icon' },
+        { block: 'icon', mods: { theme: 'alfa-on-colored' } },
         { block: 'popup', mods: { target: 'position' } }
     ]
 },

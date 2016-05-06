@@ -22,14 +22,12 @@
 .notification__icon,
 .notification__close {
     position: absolute;
-    background-size: 50%;
-    background-position: center;
 }
 
 .notification__icon {
     display: none;
-    top: 4px;
-    left: 11px;
+    top: 10px;
+    left: 18px;
 }
 
 .notification__close {
@@ -49,7 +47,7 @@
 }
 
 .notification_status_ok,
-.notification_status_fail {
+.notification_status_error {
     width: 350px;
     padding-left: 60px;
 

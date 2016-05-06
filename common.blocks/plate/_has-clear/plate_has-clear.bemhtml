@@ -8,8 +8,9 @@ block('plate').mod('has-clear', true)(
                 content: {
                     block: 'icon',
                     mods: {
-                       theme: 'alfa-on-color',
-                       tool: 'close'
+                       theme: 'alfa-on-white',
+                       tool: 'close',
+                       size: 'm'
                     }
                 }
             }

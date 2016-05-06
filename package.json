@@ -28,6 +28,8 @@
     "node": ">=0.10"
   },
   "devDependencies": {
+    "borschik": "^1.6.0",
+    "borschik-tech-cleancss": "^2.1.0",
     "bower": "^1.7.9",
     "conventional-changelog": "^1.1.0",
     "conventional-changelog-cli": "^1.1.1",

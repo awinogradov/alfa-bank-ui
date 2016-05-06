@@ -16,9 +16,12 @@
         color: rgba(255, 255, 255, .3);
     }
 
-    &.menu_mode_check {
-        .menu-item_checked:before {
-            background-image: url(../_mode/menu_mode_check.menu_theme_alfa-on-color.svg);
+
+    @each $size in s, m, l, xl {
+        &.menu_mode_check.menu_size_$(size) {
+            .menu-item_checked:before {
+                background-image: url('../_mode/menu_mode_check.menu_theme_alfa-on-color__$(size).svg');
+            }
         }
     }
 

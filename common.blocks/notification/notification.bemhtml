@@ -11,8 +11,8 @@ block('notification')(
                     block: 'icon',
                     mix: { block: this.block, elem: 'icon' },
                     mods: {
-                        theme: mods.theme,
-                        'action': mods.status || this.ctx.status,
+                        theme: 'alfa-on-colored',
+                        action: mods.status || this.ctx.status,
                         size: 'm'
                     }
                 },
@@ -35,7 +35,7 @@ block('notification')(
                 {
                     block: 'icon',
                     mix: { block: this.block, elem: 'close' },
-                    mods: { theme: mods.theme, size: 's', action: 'cross' }
+                    mods: { theme: mods.theme, size: 'm', tool: 'close' }
                 }
             ]
         });

@@ -18,13 +18,13 @@ provide(BEMDOM.decl(this.name, {
             'inited': function() {
                 this._defaultButton = this.findBlockInside('default', 'button');
                 this._okButton = this.findBlockInside('ok', 'button');
-                this._failButton = this.findBlockInside('fail', 'button');
+                this._errorButton = this.findBlockInside('error', 'button');
                 this._themeButton = this.findBlockInside('theme', 'button');
                 this._notification = this.findBlockInside('notification');
                 this._page = this.findBlockOutside('page');
                 this._input = this.findBlockInside('input', 'input');
 
-                ['ok', 'fail'].forEach(function(status) {
+                ['ok', 'error'].forEach(function(status) {
                     this['_' + status + 'Button'].bindTo('click', function() {
 
                         this._pushMessage(this._input.getVal(), status);
@@ -42,7 +42,7 @@ provide(BEMDOM.decl(this.name, {
                         this._page,
                         this._defaultButton,
                         this._okButton,
-                        this._failButton,
+                        this._errorButton,
                         this._themeButton,
                         this._input
                     ].forEach(function(block) {

@@ -80,14 +80,14 @@
             user: {
                 block: 'user',
                 mods: { theme: 'alfa-on-white', size: 'm' },
-                url: '/logout',
+                url: '#',
                 text: 'User Name',
                 icon: {
                     block: 'icon',
                     mods: {
                         theme: 'alfa-on-white',
                         size: 's',
-                        user: 'out'
+                        user: 'body'
                     }
                 }
             },

@@ -45,7 +45,6 @@
 .menu_mode_check {
     .menu-item_checked:before {
         background-repeat: no-repeat;
-        background-size: contain;
     }
 }
 
@@ -56,6 +55,7 @@
 }
 
 .menu_size_s {
+
     .menu__group-title {
         font-size: 16px;
         padding: 10px 12px;
@@ -68,11 +68,12 @@
 
     &.menu_mode_check {
         .menu-item_checked:before {
-            width: 11px;
-            height: 11px;
+            width: 18px;
+            height: 18px;
 
-            top: 9px;
-            margin-left: -16px;
+            top: 50%;
+            margin-top: -9px;
+            margin-left: -21px;
         }
     }
 
@@ -86,110 +87,6 @@
         }
     }
 
-}
-
-.menu_size_m {
-
-    .menu__group-title {
-        font-size: 16px;
-        padding: 8px 12px;
-    }
-
-    .menu-item {
-        font-size: 16px;
-        padding: 9px 12px;
-    }
-
-    &.menu_mode_check {
-        .menu-item_checked:before {
-            width: 14px;
-            height: 14px;
-
-            top: 12px;
-            margin-left: -17px;
-        }
-    }
-
-    &.menu_mode_radio, &.menu_mode_radio-check {
-        .menu-item_checked:before {
-            width: 6px;
-            height: 6px;
-
-            top: 17px;
-            margin-left: -14px;
-        }
-    }
-
-}
-
-.menu_size_l {
-    .menu__group-title {
-        font-size: 15px;
-        padding: 10px 17px;
-    }
-
-    .menu-item {
-        font-size: 18px;
-        padding: 12px 15px 13px;
-    }
-
-    &.menu_mode_check {
-        .menu-item_checked:before {
-            width: 17px;
-            height: 16px;
-
-            top: 16px;
-            margin-left: -23px
-        }
-    }
-
-    &.menu_mode_radio, &.menu_mode_radio-check {
-        .menu-item_checked:before {
-            width: 8px;
-            height: 8px;
-
-            top: 21px;
-            margin-left: -21px;
-        }
-    }
-
-}
-
-.menu_size_xl {
-    .menu__group-title {
-        font-size: 20px;
-        padding: 12px 19px;
-    }
-
-    .menu-item {
-        font-size: 20px;
-        padding: 11px 15px;
-    }
-
-    &.menu_mode_check {
-        .menu-item_checked:before {
-            width: 21px;
-            height: 20px;
-
-            top: 14px;
-            margin-left: -25px;
-        }
-    }
-
-    &.menu_mode_radio, &.menu_mode_radio-check {
-        .menu-item_checked:before {
-            width: 10px;
-            height: 10px;
-
-            top: 21px;
-            margin-left: -22px;
-        }
-    }
-
-}
-
-.menu_size_s,
-.menu_size_m {
     &.menu_mode_check,
     &.menu_mode_radio,
     &.menu_mode_radio-check {
@@ -206,8 +103,89 @@
     }
 }
 
-.menu_size_l,
-.menu_size_xl {
+.menu_size_m {
+
+    .menu__group-title {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .menu-item {
+        font-size: 16px;
+        padding: 9px 12px;
+    }
+
+    &.menu_mode_check {
+        .menu-item_checked:before {
+            width: 24px;
+            height: 24px;
+
+            top: 50%;
+            margin-top: -12px;
+            margin-left: -28px;
+        }
+    }
+
+    &.menu_mode_radio, &.menu_mode_radio-check {
+        .menu-item_checked:before {
+            width: 6px;
+            height: 6px;
+
+            top: 17px;
+            margin-left: -14px;
+        }
+    }
+
+    &.menu_mode_check,
+    &.menu_mode_radio,
+    &.menu_mode_radio-check {
+        .menu-item,
+        .menu__group-title {
+            padding-left: 30px;
+        }
+    }
+
+    .menu__group {
+        .menu-item {
+            padding-left: 48px;
+        }
+    }
+
+}
+
+.menu_size_l {
+
+    .menu__group-title {
+        font-size: 15px;
+        padding: 10px 17px;
+    }
+
+    .menu-item {
+        font-size: 18px;
+        padding: 12px 15px 13px;
+    }
+
+    &.menu_mode_check {
+        .menu-item_checked:before {
+            width: 30px;
+            height: 30px;
+
+            top: 50%;
+            margin-top: -15px;
+            margin-left: -33px;
+        }
+    }
+
+    &.menu_mode_radio, &.menu_mode_radio-check {
+        .menu-item_checked:before {
+            width: 8px;
+            height: 8px;
+
+            top: 21px;
+            margin-left: -21px;
+        }
+    }
+
     &.menu_mode_check,
     &.menu_mode_radio,
     &.menu_mode_radio-check {
@@ -222,6 +200,57 @@
             padding-left: 56px;
         }
     }
+
+}
+
+.menu_size_xl {
+
+    .menu__group-title {
+        font-size: 20px;
+        padding: 12px 19px;
+    }
+
+    .menu-item {
+        font-size: 20px;
+        padding: 11px 15px;
+    }
+
+    &.menu_mode_check {
+        .menu-item_checked:before {
+            width: 36px;
+            height: 36px;
+
+            top: 50%;
+            margin-top: -18px;
+            margin-left: -40px;
+        }
+    }
+
+    &.menu_mode_radio, &.menu_mode_radio-check {
+        .menu-item_checked:before {
+            width: 10px;
+            height: 10px;
+
+            top: 21px;
+            margin-left: -22px;
+        }
+    }
+
+    &.menu_mode_check,
+    &.menu_mode_radio,
+    &.menu_mode_radio-check {
+        .menu-item,
+        .menu__group-title {
+            padding-left: 44px;
+        }
+    }
+
+    .menu__group {
+        .menu-item {
+            padding-left: 56px;
+        }
+    }
+
 }
 
 .menu__group {

@@ -1,20 +1,9 @@
 block('user').content()(function() {
-    var mods = this.mods,
-        icon = this.ctx.icon;
-
-    icon && (icon.mix = { block: 'user', elem: 'icon' });
-
     return {
         block: 'link',
-        mods: mods,
+        mods: this.mods,
         url: this.ctx.url,
-        content: [
-            {
-                elem: 'text',
-                mix: { block: 'user', elem: 'text' },
-                content: this.ctx.text
-            },
-            icon
-        ]
+        icon: this.ctx.icon,
+        text: this.ctx.text
     };
 });

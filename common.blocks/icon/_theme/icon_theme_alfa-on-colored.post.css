@@ -1,0 +1,26 @@
+.icon_theme_alfa-on-colored {
+
+    @each $size in s, m, l, xl {
+        &.icon_size_$(size) {
+
+            @each $name in belkart, maestro, mastercard, visa, visaelectron {
+                &.icon_card_$(name) {
+                    background-image: url('../_card/icon_card_$(name)__$(size)__colored.svg');
+                }
+            }
+
+            @each $name in 10223,1309,1415,1490,1516,2377,2449,244,256,285,3001,3308,351,404,4267,439,4924,5030,5475,6415,7311,7686,7687,8967,9908 {
+                &.icon_bank_$(name) {
+                    background-image: url('../_bank/icon_bank_$(name)__$(size)__colored.svg');
+                }
+            }
+
+            @each $name in error, ok {
+                &.icon_action_$(name) {
+                    background-image: url('../_action/icon_action_$(name)__$(size)__colored.svg');
+                }
+            }
+
+        }
+    }
+}

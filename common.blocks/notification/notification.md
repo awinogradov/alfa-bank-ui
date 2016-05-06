@@ -30,5 +30,5 @@
 
 ### js
 
-`notify.push(status, message)` - show notification. Status can be `ok` and `fail`.
+`notify.push(status, message)` - show notification. Status can be `ok` and `error`.
 Message is String.

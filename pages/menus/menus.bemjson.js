@@ -100,14 +100,14 @@ module.exports = {
                             user: {
                                 block: 'user',
                                 mods: { theme: themeSwitcher, size: 'm' },
-                                url: '/logout',
+                                url: '#',
                                 text: 'User Name',
                                 icon: {
                                     block: 'icon',
                                     mods: {
                                         theme: themeSwitcher,
                                         size: 's',
-                                        user: 'out'
+                                        user: 'body'
                                     }
                                 }
                             },
@@ -172,26 +172,33 @@ module.exports = {
                                             mods: { theme: themeSwitcher, size: 'm' },
                                             content: 'Select + Menu'
                                         },
-                                        {
-                                            block: 'select',
-                                            mods: { theme: themeSwitcher, size: 'm', mode: 'radio' },
-                                            val: 1,
-                                            options: [
-                                                { val: 1, text: 'Доклад' },
-                                                { val: 2, text: 'Мастер-класс' },
-                                                { val: 3, text: 'Круглый стол' }
-                                            ]
-                                        },
-                                        {
-                                            block: 'select',
-                                            mods: { theme: themeSwitcher, size: 'm', mode: 'check' },
-                                            val: [3],
-                                            options: [
-                                                { val: 1, text: 'Доклад' },
-                                                { val: 2, text: 'Мастер-класс' },
-                                                { val: 3, text: 'Круглый стол' }
-                                            ]
-                                        },
+                                        ['s', 'm', 'l', 'xl'].map(function(size) {
+                                            return [
+                                                {
+                                                    block: 'select',
+                                                    mods: { theme: themeSwitcher, size: size, mode: 'radio' },
+                                                    attrs: { style: 'margin-right: 10px;' },
+                                                    val: 1,
+                                                    options: [
+                                                        { val: 1, text: 'Доклад' },
+                                                        { val: 2, text: 'Мастер-класс' },
+                                                        { val: 3, text: 'Круглый стол' }
+                                                    ]
+                                                },
+                                                {
+                                                    block: 'select',
+                                                    mods: { theme: themeSwitcher, size: size, mode: 'check' },
+                                                    val: [3],
+                                                    options: [
+                                                        { val: 1, text: 'Доклад' },
+                                                        { val: 2, text: 'Мастер-класс' },
+                                                        { val: 3, text: 'Круглый стол' }
+                                                    ]
+                                                },
+                                                { tag: 'br' },
+                                                { tag: 'br' }
+                                            ];
+                                        }),
                                         {
                                             block: 'heading',
                                             mods: { theme: themeSwitcher, size: 'm' },

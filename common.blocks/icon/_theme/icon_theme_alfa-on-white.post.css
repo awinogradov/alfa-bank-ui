@@ -1,56 +1,56 @@
 .icon_theme_alfa-on-white {
+    @each $size in s, m, l, xl {
+        &.icon_size_$(size) {
+            @each $name in chf, eur, gbp, jpy, rub, usd {
+                &.icon_currency_$(name) {
+                    background-image: url('../_currency/icon_currency_$(name)__$(size)__white.svg');
+                }
+            }
 
-    @each $name in rub {
-        &.icon_currency_$(name) {
-            background-image: url('../_currency/icon_currency_$(name)-white.svg');
+            @each $name in csv, doc, pdf, png, ppt, sketch, svg, txt, xls, xml, 1c {
+                &.icon_format_$(name) {
+                    background-image: url('../_format/icon_format_$(name)__$(size)__white.svg');
+                }
+            }
+
+            @each $name in calendar, close, email, help, helpfilled, info, printer, search {
+                &.icon_tool_$(name) {
+                    background-image: url('../_tool/icon_tool_$(name)__$(size)__white.svg');
+                }
+            }
+
+            @each $name in belkart, maestro, mastercard, visa, visaelectron {
+                &.icon_card_$(name) {
+                    background-image: url('../_card/icon_card_$(name)__$(size)__white.svg');
+                }
+            }
+
+            @each $name in 10223,1309,1415,1490,1516,2377,2449,244,256,285,3001,3308,351,404,4267,439,4924,5030,5475,6415,7311,7686,7687,8967,9908 {
+                &.icon_bank_$(name) {
+                    background-image: url('../_bank/icon_bank_$(name)__$(size)__white.svg');
+                }
+            }
+
+            @each $name in check,down,error,fail,left,ok,repeat,right,up {
+                &.icon_action_$(name) {
+                    background-image: url('../_action/icon_action_$(name)__$(size)__white.svg');
+                }
+            }
+
+            @each $name in body,logout {
+                &.icon_user_$(name) {
+                    background-image: url('../_user/icon_user_$(name)__$(size)__white.svg');
+                }
+            }
         }
     }
-
-    @each $name in visa, visaelectron, mastercard, maestro {
-        &.icon_card_$(name) {
-            background-image: url('../_card/icon_card_$(name)-white.svg');
-        }
-    }
-
-    @each $name in ok, fail, repeat, error, cross {
-        &.icon_action_$(name) {
-            background-image: url('../_action/icon_action_$(name).svg');
-        }
-    }
-
-    @each $name in cross {
-        &.icon_action_$(name) {
-            background-image: url('../_action/icon_action_$(name)-white.svg');
-        }
-    }
-
-    @each $name in twitter, vk, facebook {
-        &.icon_network_$(name) {
-            background-image: url('../_network/icon_network_$(name)-on-white.svg');
-        }
-    }
-
-    @each $name in pdf, pr, email, close, calendar, search, help {
-        &.icon_tool_$(name) {
-            background-image: url('../_tool/icon_tool_$(name)-white.svg');
-        }
-    }
-
-    @each $name in left, right, up, down {
-        &.icon_arrow_$(name) {
-            background-image: url('../_arrow/icon_arrow_$(name).svg');
-        }
-    }
-
-    @each $name in out {
-        &.icon_user_$(name) {
-            background-image: url('../_user/icon_user_$(name).svg');
-        }
-    }
-
-    @each $name in 2449, 3308, 5475, 285, 10223, 439, 9908, 3001, 1490, 4267, 7311, 1516, 1309, 8967, 351, 6415, 4924, 5030, 256, 1415, 2377, 7687, 7686, 244, 404 {
-        &.icon_bank_$(name) {
-            background-image: url('../_bank/icon_bank_$(name)-white.svg');
+    @each $size in s, m {
+        &.icon_size_$(size) {
+            @each $name in facebook, twitter, vk {
+                &.icon_network_$(name) {
+                    background-image: url('../_network/icon_network_$(name)__$(size)__white.svg');
+                }
+            }
         }
     }
 }

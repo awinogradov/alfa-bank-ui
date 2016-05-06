@@ -82,14 +82,14 @@
                             user: {
                                 block: 'user',
                                 mods: { theme: 'alfa-on-color', size: 'm' },
-                                url: '/logout',
+                                url: '#',
                                 text: 'User Name',
                                 icon: {
                                     block: 'icon',
                                     mods: {
                                         theme: 'alfa-on-color',
                                         size: 's',
-                                        user: 'out'
+                                        user: 'body'
                                     }
                                 }
                             },

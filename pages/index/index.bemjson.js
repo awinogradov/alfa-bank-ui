@@ -1,4 +1,4 @@
-({
+module.exports = {
     block: 'page',
     title: 'App',
     mods: { theme: 'alfa-on-color' },
@@ -82,14 +82,14 @@
                             user: {
                                 block: 'user',
                                 mods: { theme: 'alfa-on-color', size: 'm' },
-                                url: '/logout',
+                                url: '#',
                                 text: 'User Name',
                                 icon: {
                                     block: 'icon',
                                     mods: {
                                         theme: 'alfa-on-color',
                                         size: 's',
-                                        user: 'out'
+                                        user: 'body'
                                     }
                                 }
                             },
@@ -148,7 +148,9 @@
                                 },
                                 {
                                     elem: 'content',
-                                    content: 'Какой-то блок'
+                                    content: [
+                                        'Какой-то блок'
+                                    ]
                                 }
                             ]
                         }
@@ -195,4 +197,4 @@
             ]
         }
     ]
-});
+};

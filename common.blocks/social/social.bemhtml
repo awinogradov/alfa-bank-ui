@@ -23,7 +23,8 @@ block('social').content()(function() {
                         mix: { block: 'social', elem: 'icon' },
                         mods: {
                             network: network.name,
-                            theme: mods.theme
+                            theme: mods.theme,
+                            size: 's'
                         }
                     }
                 };
