@@ -1,3 +1,63 @@
+<a name="5.0.0"></a>
+# [5.0.0](https://github.com/alfa-bank-dev/ui/compare/v5.0.0-rc3...v5.0.0) (2016-05-12)
+
+
+### Bug Fixes
+
+* fix bocshick version([72ce689](https://github.com/alfa-bank-dev/ui/commit/72ce689))
+* fix lint error([46b245e](https://github.com/alfa-bank-dev/ui/commit/46b245e))
+* fox mods key name for elem in bemjson([34df35f](https://github.com/alfa-bank-dev/ui/commit/34df35f))
+* line height([17716ef](https://github.com/alfa-bank-dev/ui/commit/17716ef))
+* pretty fixes([09bd997](https://github.com/alfa-bank-dev/ui/commit/09bd997))
+* update invalid styles([a4d118e](https://github.com/alfa-bank-dev/ui/commit/a4d118e))
+* **build:** fix examples build([31cf0fe](https://github.com/alfa-bank-dev/ui/commit/31cf0fe))
+* **button:** add width 100% to button__text element([8ee7ab0](https://github.com/alfa-bank-dev/ui/commit/8ee7ab0))
+* **checkbox:** multiline text in checkbox([19a4d0c](https://github.com/alfa-bank-dev/ui/commit/19a4d0c))
+* **checkbox:** paddings([f3fb1df](https://github.com/alfa-bank-dev/ui/commit/f3fb1df))
+* **dist:** fix make dist([14d57db](https://github.com/alfa-bank-dev/ui/commit/14d57db))
+* **dropdown_mode_*:** Init dropdown if switcher inited. Fix tests.([4efaff6](https://github.com/alfa-bank-dev/ui/commit/4efaff6))
+* **footer:** additional: false not render elem additional([3bd8d26](https://github.com/alfa-bank-dev/ui/commit/3bd8d26))
+* **form-field:** check message before hide and show([900db9a](https://github.com/alfa-bank-dev/ui/commit/900db9a))
+* **form-field, fildset:** fix label/legend paddings([71f294d](https://github.com/alfa-bank-dev/ui/commit/71f294d))
+* **header:** fix header padding([7ae0241](https://github.com/alfa-bank-dev/ui/commit/7ae0241))
+* **hint:** remove bad comment([aa7cf19](https://github.com/alfa-bank-dev/ui/commit/aa7cf19))
+* **jscs:** update config, remove alfa private([605df38](https://github.com/alfa-bank-dev/ui/commit/605df38))
+* **make:** fix template engine([aa4767b](https://github.com/alfa-bank-dev/ui/commit/aa4767b))
+* **menu:** add example page + fix menu style([37c4571](https://github.com/alfa-bank-dev/ui/commit/37c4571))
+* **select:** fix border-radius for menu-item([fccb3f9](https://github.com/alfa-bank-dev/ui/commit/fccb3f9))
+* **social:** fix margin([43a9e25](https://github.com/alfa-bank-dev/ui/commit/43a9e25))
+* **social:** fix twitter url([8f7fe66](https://github.com/alfa-bank-dev/ui/commit/8f7fe66))
+* **specs:** fix tests for travis([fb7cec4](https://github.com/alfa-bank-dev/ui/commit/fb7cec4))
+* **travis:** fix config([35733b6](https://github.com/alfa-bank-dev/ui/commit/35733b6))
+
+
+### Features
+
+* add badge to readme([66176d3](https://github.com/alfa-bank-dev/ui/commit/66176d3))
+* Add LICENSE([6cb4540](https://github.com/alfa-bank-dev/ui/commit/6cb4540))
+* add test.bloks([8d93359](https://github.com/alfa-bank-dev/ui/commit/8d93359))
+* configure jscs([0411c67](https://github.com/alfa-bank-dev/ui/commit/0411c67))
+* delete dist folder([5265d9b](https://github.com/alfa-bank-dev/ui/commit/5265d9b))
+* do not use <nobr/> in copyright block([af1fa0b](https://github.com/alfa-bank-dev/ui/commit/af1fa0b))
+* move urls bem-incubator to bem-contrib([82b387f](https://github.com/alfa-bank-dev/ui/commit/82b387f))
+* remove *.examples folder in blocks([bb6de29](https://github.com/alfa-bank-dev/ui/commit/bb6de29))
+* remove protein([417e784](https://github.com/alfa-bank-dev/ui/commit/417e784))
+* upd bem-fomrs. add test fomrs page([19e6341](https://github.com/alfa-bank-dev/ui/commit/19e6341))
+* upd deps([e75d2a1](https://github.com/alfa-bank-dev/ui/commit/e75d2a1))
+* **calendar:** add md file([1354638](https://github.com/alfa-bank-dev/ui/commit/1354638))
+* **changelog:** update generation process([9783d0d](https://github.com/alfa-bank-dev/ui/commit/9783d0d))
+* **collapse:** add theme shouldDeps property([e0049e6](https://github.com/alfa-bank-dev/ui/commit/e0049e6))
+* **fieldset:** add alfa styles([73cad26](https://github.com/alfa-bank-dev/ui/commit/73cad26))
+* **header:** add deps([31a5d69](https://github.com/alfa-bank-dev/ui/commit/31a5d69))
+* **hint:** new hint block([0df38a9](https://github.com/alfa-bank-dev/ui/commit/0df38a9))
+* **label:** disabled([24da54c](https://github.com/alfa-bank-dev/ui/commit/24da54c))
+* **pages:** add fieldset demo pages([2e70eef](https://github.com/alfa-bank-dev/ui/commit/2e70eef))
+* **plate:** add plate_has-clear depts([e8a077e](https://github.com/alfa-bank-dev/ui/commit/e8a077e))
+* **radio-group:** multiline radio([c7a4fd9](https://github.com/alfa-bank-dev/ui/commit/c7a4fd9))
+* **travis:** add config([eac2822](https://github.com/alfa-bank-dev/ui/commit/eac2822))
+
+
+
 <a name"5.0.0-rc"></a>
 ## 5.0.0-rc (2015-12-07)
 
