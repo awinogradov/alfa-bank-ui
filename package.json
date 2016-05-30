@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "enb server",
-    "deps": "bower i",
+    "deps": "bower i --allow-root",
     "test": "npm run clean-all && npm run lint && npm run specs",
     "lint": "jshint-groups && jscs .",
     "specs": "enb make specs",
