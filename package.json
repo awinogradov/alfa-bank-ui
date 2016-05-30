@@ -3,7 +3,7 @@
   "author": "Anton Winogradov <winogradovaa@gmail.com>",
   "name": "ui",
   "description": "Alfa-Bank UI components",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/alfa-bank-dev/ui.git"
